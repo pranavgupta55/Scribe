@@ -87,7 +87,7 @@ def get_pca_positions(topic_slugs):
 
     arr = np.array(embeddings, dtype=float)
     coords = pca_2d(arr)
-    span = coords.ptp(axis=0).max() or 1
+    span = (coords.max(axis=0) - coords.min(axis=0)).max() or 1
     coords = (coords - coords.mean(axis=0)) * (500.0 / span)
 
     return {s: [round(float(x), 1), round(float(y), 1)]
