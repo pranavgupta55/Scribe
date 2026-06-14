@@ -7,6 +7,10 @@ from tqdm import tqdm
 import torch
 from transformers import pipeline
 
+# whisper-large-v3-turbo: ~1.6 GB, natively supported, ~8-12x realtime on Apple Silicon
+# Switch to Qwen/Qwen3-ASR-1.7B once transformers adds native qwen3_asr support
+ASR_MODEL = "openai/whisper-large-v3-turbo"
+
 AUDIO_EXTS = {".mp3", ".mp4", ".wav", ".m4a", ".ogg", ".flac", ".aac", ".webm"}
 
 def setup_and_run():
@@ -25,9 +29,7 @@ def setup_and_run():
     else:
         output_file = os.path.splitext(input_file)[0] + ".txt"
 
-    # Use a temp WAV alongside the input unless input is already 16kHz WAV
     wav_file = os.path.splitext(input_file)[0] + "_16k.wav"
-    cleanup_wav = True
 
     print(f"🎬 Converting to 16 kHz WAV...")
     subprocess.run([
@@ -43,12 +45,12 @@ def setup_and_run():
     audio_duration = float(dur_cmd.stdout.strip())
     print(f"🎵 Audio length: {audio_duration / 60:.2f} minutes")
 
-    print("🧠 Loading Qwen3-ASR-1.7B onto Apple Silicon (MPS)...")
+    print(f"🧠 Loading {ASR_MODEL} onto Apple Silicon (MPS)...")
     device = "mps" if torch.backends.mps.is_available() else "cpu"
 
     asr_pipeline = pipeline(
         "automatic-speech-recognition",
-        model="Qwen/Qwen3-ASR-1.7B",
+        model=ASR_MODEL,
         device=device,
         torch_dtype=torch.float16,
         chunk_length_s=30,
@@ -56,11 +58,15 @@ def setup_and_run():
     )
 
     print("✍️  Transcribing...")
-    estimated_processing_time = audio_duration / 12.0
+    estimated_processing_time = audio_duration / 10.0
     result_container = []
 
     def run_inference():
-        res = asr_pipeline(wav_file, return_timestamps=False)
+        res = asr_pipeline(
+            wav_file,
+            return_timestamps=False,
+            generate_kwargs={"language": "english"},
+        )
         result_container.append(res)
 
     thread = threading.Thread(target=run_inference)
@@ -81,7 +87,7 @@ def setup_and_run():
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(transcript_text.strip())
 
-    if cleanup_wav and os.path.exists(wav_file):
+    if os.path.exists(wav_file):
         os.remove(wav_file)
 
     print(f"\n✅ Transcript saved to: {output_file}")
