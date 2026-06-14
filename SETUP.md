@@ -33,7 +33,7 @@ source ~/.zshrc
 | Shell env vars | `SCRIBE_HOME`, `SCRIBE_REPO`, `HF_HOME`, `OLLAMA_MODELS`, `PATH` | instant |
 
 All models land inside the Scribe folder under `models/` and are gitignored.
-The ASR model (3.4 GB) downloads automatically on first `scribe.sh` run into `models/hf/`.
+The ASR model (`whisper-large-v3-turbo`, ~1.6 GB) downloads automatically on first `scribe.sh` run into `models/hf/`.
 
 **Total install time:** ~10 min, mostly waiting on PyTorch.
 
@@ -49,7 +49,7 @@ scribe.sh https://www.youtube.com/watch?v=... my-filename   # explicit name
 # 2. Process new transcripts into the knowledge base → pushes knowledge/ to GitHub
 updateDB.sh
 
-# 3. Explore the knowledge graph in your browser
+# 3. Explore the knowledge graph + chat with your knowledge base
 serve.sh
 ```
 
@@ -94,9 +94,10 @@ Check it's running: `ollama list`
 | `gh` push auth error | `gh auth login` |
 | `yt-dlp: command not found` | `pip3 install yt-dlp` |
 | `ffmpeg: command not found` | `brew install ffmpeg` |
-| ASR model download hangs | First run downloads ~3.4 GB to `models/hf/` |
+| ASR model download hangs | First run downloads ~1.6 GB to `models/hf/` |
 | `Ollama is not running` | `ollama serve` (needs `OLLAMA_MODELS` set in env) |
 | `Missing Ollama model` | `OLLAMA_MODELS=./models/ollama ollama pull qwen3:1.7b` |
 | MPS not available | Requires Apple Silicon + macOS 12.3+ |
 | ChromaDB empty on new machine | `updateDB.sh --rebuild` |
 | Graph shows "No knowledge graph yet" | Run `updateDB.sh` first, then `serve.sh` |
+| Chat says "knowledge base unavailable" | Start Ollama (`ollama serve`) and run `updateDB.sh` at least once |

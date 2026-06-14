@@ -17,9 +17,6 @@ const detailTitle  = document.getElementById('detail-title');
 const detailMeta   = document.getElementById('detail-meta');
 const detailDesc   = document.getElementById('detail-desc');
 const detailChips  = document.getElementById('detail-chips');
-const summaryWrap        = document.getElementById('detail-summary-wrap');
-const detailSummary      = document.getElementById('detail-summary');
-const summaryResizeHandle= document.getElementById('summary-resize-handle');
 const tooltip      = document.getElementById('tooltip');
 const legendEl     = document.getElementById('legend');
 const emptyState   = document.getElementById('empty-state');
@@ -76,9 +73,10 @@ function renderLegend() {
   for (const [name, color] of entries) {
     const row = document.createElement('div');
     row.className = 'legend-row';
-    // Trim .txt extension for display
+    // Trim .txt extension for display. Swatch uses the source-hub colour so it
+    // matches the actual purple source node in the graph (not the topic colour).
     const label = name.replace(/\.txt$/, '');
-    row.innerHTML = `<span class="legend-swatch" style="background:${color}"></span>${label}`;
+    row.innerHTML = `<span class="legend-swatch" style="background:${STANDALONE_HUB}"></span>${label}`;
     legendEl.appendChild(row);
   }
 }
@@ -100,7 +98,7 @@ function nodeColor(n) {
 }
 
 function nodeRadius(d) {
-  return cfg.nodeSize + Math.sqrt(d.degree || 0) * 1.8;
+  return cfg.nodeSize + Math.sqrt(d.degree || 0) * 0.7;
 }
 
 function screenToWorld(sx, sy) {
@@ -141,7 +139,7 @@ requestAnimationFrame(resizeCanvas);
 
 // ─── Controls ────────────────────────────────────────────────────────────────
 
-let cfg = { repulsion: 300, linkDist: 90, momentum: 8, nodeSize: 5 };
+let cfg = { repulsion: 400, linkDist: 120, momentum: 8, nodeSize: 4 };
 
 ['repulsion', 'linkDist', 'momentum', 'nodeSize'].forEach(k => {
   document.getElementById(k).addEventListener('input', e => {
@@ -221,15 +219,7 @@ function selectNode(n, panTo = false) {
   detailCol.classList.add('open');
   detailTitle.textContent = n.id;
   detailMeta.textContent = `${home} · ${deg} connection${deg !== 1 ? 's' : ''}`;
-  detailDesc.textContent = n.description || 'No description available.';
-
-  if (n.summary) {
-    summaryWrap.style.display = 'block';
-    detailSummary.textContent = n.summary;
-    resetSummaryHeight();
-  } else {
-    summaryWrap.style.display = 'none';
-  }
+  detailDesc.innerHTML = renderMarkdown(n.description || 'No description available.');
 
   detailChips.innerHTML = '';
   neighborsOf(n).forEach(({ node: neighbor, weight }) => {
@@ -380,10 +370,10 @@ function draw() {
 
     const showLabel = isSelected || isHover || isDrag || scale > 0.9;
     if (showLabel) {
-      ctx.font = `${(isSelected || isHover) ? 600 : 400} ${12 / scale}px -apple-system, sans-serif`;
+      ctx.font = `${(isSelected || isHover) ? 600 : 400} ${9 / scale}px -apple-system, sans-serif`;
       ctx.fillStyle = isSelected ? '#d8d0ff' : (isHover ? COLORS.text : COLORS.textDim);
       ctx.textAlign = 'center';
-      ctx.fillText(n.id, n.x, n.y - r - 6 / scale);
+      ctx.fillText(n.id, n.x, n.y - r - 5 / scale);
     }
   });
 
@@ -512,29 +502,229 @@ canvas.addEventListener('wheel', e => {
   draw();
 }, { passive: false });
 
-// ─── Summary resize handle ───────────────────────────────────────────────────
+// ─── Markdown rendering (lightweight) ─────────────────────────────────────────
 
-const SUMMARY_MIN_H = 108;
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
 
-summaryResizeHandle.addEventListener('mousedown', e => {
-  e.preventDefault();
-  const startY = e.clientY;
-  const startH = detailSummary.offsetHeight;
-
-  function onMove(ev) {
-    const h = Math.max(SUMMARY_MIN_H, startH + (ev.clientY - startY));
-    detailSummary.style.maxHeight = h + 'px';
+// Minimal Markdown → HTML: paragraphs, bullet lists, **bold**, `code`, _italic_.
+function renderMarkdown(md) {
+  const blocks = md.split(/\n{2,}/);
+  const html = [];
+  for (let block of blocks) {
+    const lines = block.split('\n');
+    const isList = lines.every(l => /^\s*[-*]\s+/.test(l) || !l.trim());
+    if (isList && lines.some(l => /^\s*[-*]\s+/.test(l))) {
+      const items = lines.filter(l => l.trim()).map(l =>
+        `<li>${inline(l.replace(/^\s*[-*]\s+/, ''))}</li>`).join('');
+      html.push(`<ul>${items}</ul>`);
+    } else {
+      html.push(`<p>${inline(escapeHtml(block).replace(/\n/g, '<br/>'))}</p>`);
+    }
   }
-  function onUp() {
-    document.removeEventListener('mousemove', onMove);
-    document.removeEventListener('mouseup', onUp);
+  return html.join('');
+
+  function inline(text) {
+    // text may already be escaped (paragraph path) or raw (list path)
+    let t = text.includes('&lt;') || text.includes('&amp;') ? text : escapeHtml(text);
+    t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+    t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    t = t.replace(/(^|[^_])_([^_]+)_/g, '$1<em>$2</em>');
+    return t;
   }
-  document.addEventListener('mousemove', onMove);
-  document.addEventListener('mouseup', onUp);
+}
+
+// ─── View toggle: Graph | Chat ────────────────────────────────────────────────
+
+const viewToggle  = document.getElementById('view-toggle');
+const btnGraph    = document.getElementById('toggle-graph');
+const btnChat     = document.getElementById('toggle-chat');
+const chatPanel   = document.getElementById('chat-panel');
+const controlsEl  = document.getElementById('controls');
+const centerBtn   = document.getElementById('center-btn');
+const hintEl      = document.getElementById('hint');
+
+function setView(view) {
+  const chat = view === 'chat';
+  viewToggle.classList.toggle('chat', chat);
+  btnGraph.classList.toggle('active', !chat);
+  btnChat.classList.toggle('active', chat);
+  chatPanel.classList.toggle('show', chat);
+  // Graph-only chrome hides in chat mode
+  [canvas, controlsEl, centerBtn, hintEl].forEach(el => {
+    if (el) el.style.display = chat ? 'none' : '';
+  });
+  if (chat) chatInput.focus();
+}
+
+btnGraph.addEventListener('click', () => setView('graph'));
+btnChat.addEventListener('click', () => setView('chat'));
+
+// ─── Chat (RAG over the knowledge base) ───────────────────────────────────────
+
+const chatMessages = document.getElementById('chat-messages');
+const chatScroll    = document.getElementById('chat-scroll');
+const chatEmpty     = document.getElementById('chat-empty');
+const chatInput     = document.getElementById('chat-input');
+const chatSend      = document.getElementById('chat-send');
+
+let chatBusy = false;
+
+function selectNodeById(id) {
+  const target = id.trim().toLowerCase();
+  const node = nodes.find(n => n.id.toLowerCase() === target);
+  if (node) selectNode(node, false);
+}
+
+function autoGrow() {
+  chatInput.style.height = 'auto';
+  chatInput.style.height = Math.min(chatInput.scrollHeight, 160) + 'px';
+}
+chatInput.addEventListener('input', autoGrow);
+chatInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
 });
+chatSend.addEventListener('click', sendChat);
 
-function resetSummaryHeight() {
-  detailSummary.style.maxHeight = SUMMARY_MIN_H + 'px';
+function addUserMessage(text) {
+  if (chatEmpty) chatEmpty.style.display = 'none';
+  const el = document.createElement('div');
+  el.className = 'msg user';
+  el.innerHTML = `<div class="msg-role">You</div><div class="msg-body"></div>`;
+  el.querySelector('.msg-body').textContent = text;
+  chatMessages.appendChild(el);
+  scrollToBottom();
+}
+
+function addAssistantShell() {
+  const el = document.createElement('div');
+  el.className = 'msg assistant';
+  el.innerHTML = `
+    <div class="msg-role">Scribe</div>
+    <div class="retrieval">
+      <div class="retrieval-head searching"><span class="dot"></span>Searching knowledge base…</div>
+      <div class="retrieval-nodes"></div>
+    </div>
+    <div class="msg-body"><span class="typing-cursor"></span></div>`;
+  chatMessages.appendChild(el);
+  scrollToBottom();
+  return {
+    head:  el.querySelector('.retrieval-head'),
+    nodes: el.querySelector('.retrieval-nodes'),
+    body:  el.querySelector('.msg-body'),
+    retrieval: el.querySelector('.retrieval'),
+  };
+}
+
+function renderNodeChips(container, names) {
+  container.innerHTML = '';
+  if (!names.length) {
+    container.innerHTML = `<span style="font-size:11px;color:#4a4560">No matching topics</span>`;
+    return;
+  }
+  names.forEach(name => {
+    const chip = document.createElement('span');
+    chip.className = 'retrieval-chip';
+    chip.textContent = name;
+    chip.addEventListener('click', () => selectNodeById(name));
+    container.appendChild(chip);
+  });
+}
+
+// Replace [[Node Title]] references in streamed text with clickable links
+function linkifyNodes(html) {
+  return html.replace(/\[\[([^\]]+)\]\]/g, (_, name) =>
+    `<a class="node-link" data-node="${name.replace(/"/g, '&quot;')}">${name}</a>`);
+}
+
+function bindNodeLinks(bodyEl) {
+  bodyEl.querySelectorAll('a.node-link').forEach(a => {
+    if (a._bound) return;
+    a._bound = true;
+    a.addEventListener('click', () => selectNodeById(a.dataset.node));
+  });
+}
+
+function scrollToBottom() {
+  chatScroll.scrollTop = chatScroll.scrollHeight;
+}
+
+async function sendChat() {
+  const text = chatInput.value.trim();
+  if (!text || chatBusy) return;
+  chatBusy = true;
+  chatSend.disabled = true;
+  chatInput.value = '';
+  autoGrow();
+
+  addUserMessage(text);
+  const ui = addAssistantShell();
+  let answer = '';
+
+  const finishBody = () => {
+    ui.body.innerHTML = linkifyNodes(renderMarkdown(answer || '_No response._'));
+    bindNodeLinks(ui.body);
+    scrollToBottom();
+  };
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: text }),
+    });
+    if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      let sep;
+      while ((sep = buffer.indexOf('\n\n')) !== -1) {
+        const raw = buffer.slice(0, sep);
+        buffer = buffer.slice(sep + 2);
+        const line = raw.split('\n').find(l => l.startsWith('data:'));
+        if (!line) continue;
+        let evt;
+        try { evt = JSON.parse(line.slice(5).trim()); } catch { continue; }
+
+        if (evt.type === 'nodes') {
+          ui.head.classList.remove('searching');
+          ui.head.innerHTML = `<span class="dot"></span>Consulted ${evt.nodes.length} topic${evt.nodes.length !== 1 ? 's' : ''}`;
+          renderNodeChips(ui.nodes, evt.nodes);
+        } else if (evt.type === 'token') {
+          answer += evt.text;
+          ui.body.innerHTML = linkifyNodes(renderMarkdown(answer)) +
+            '<span class="typing-cursor"></span>';
+          bindNodeLinks(ui.body);
+          scrollToBottom();
+        } else if (evt.type === 'error') {
+          answer = answer || `⚠️ ${evt.message}`;
+          if (ui.head.classList.contains('searching')) {
+            ui.head.classList.remove('searching');
+            ui.head.innerHTML = `<span class="dot" style="background:#d36f8f"></span>Retrieval error`;
+          }
+        } else if (evt.type === 'done') {
+          // handled after loop
+        }
+      }
+    }
+  } catch (err) {
+    answer = answer || `⚠️ Could not reach the knowledge server. Is \`serve.sh\` running with \`server.py\`?\n\n_${err.message}_`;
+    ui.head.classList.remove('searching');
+    ui.head.innerHTML = `<span class="dot" style="background:#d36f8f"></span>Connection error`;
+  } finally {
+    finishBody();
+    chatBusy = false;
+    chatSend.disabled = false;
+    chatInput.focus();
+  }
 }
 
 // ─── Boot ──────────────────────────────────────────────────────────────────

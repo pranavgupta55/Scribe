@@ -368,6 +368,191 @@
       display: none;
       z-index: 20;
     }
+
+    /* ── Top-right: Graph | Chat toggle ── */
+    #view-toggle {
+      position: absolute;
+      top: 16px;
+      right: 96px;
+      display: flex;
+      align-items: center;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 7px;
+      padding: 3px;
+      z-index: 11;
+      user-select: none;
+    }
+    #view-toggle .toggle-pill {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: calc(50% - 3px);
+      height: calc(100% - 6px);
+      background: #2a2550;
+      border-radius: 5px;
+      transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 0;
+    }
+    #view-toggle.chat .toggle-pill { transform: translateX(100%); }
+    #view-toggle button {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+      border: none;
+      color: #777;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 5px 14px;
+      cursor: pointer;
+      transition: color 0.18s;
+    }
+    #view-toggle button.active { color: #c8bdff; }
+
+    /* ── Chat panel (swaps in for the canvas) ── */
+    #chat-panel {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      background: #0d0d0d;
+      z-index: 5;
+    }
+    #chat-panel.show { display: flex; }
+
+    #chat-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 70px 0 24px;
+      scrollbar-width: thin;
+      scrollbar-color: #2a2a2a transparent;
+    }
+    #chat-scroll::-webkit-scrollbar { width: 6px; }
+    #chat-scroll::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+
+    .chat-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .msg { display: flex; flex-direction: column; gap: 8px; }
+    .msg-role {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4a4475;
+    }
+    .msg.user .msg-role { color: #6b6490; }
+    .msg-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #d2cee8;
+    }
+    .msg.user .msg-body {
+      background: #16142a;
+      border: 1px solid #221f3d;
+      border-radius: 10px;
+      padding: 12px 15px;
+      color: #cfc9ec;
+    }
+    .msg-body p { margin: 0 0 10px; }
+    .msg-body p:last-child { margin-bottom: 0; }
+    .msg-body strong { color: #e6e1ff; font-weight: 650; }
+    .msg-body ul { margin: 6px 0 10px; padding-left: 20px; }
+    .msg-body li { margin: 3px 0; }
+    .msg-body code {
+      background: #1a1730; color: #a89aff;
+      border-radius: 4px; padding: 1px 5px; font-size: 12.5px;
+    }
+    .msg-body a.node-link {
+      color: #a89aff; text-decoration: none;
+      border-bottom: 1px dotted #5a4fa0; cursor: pointer;
+    }
+    .msg-body a.node-link:hover { color: #c8bdff; border-bottom-color: #c8bdff; }
+
+    /* Retrieval trace */
+    .retrieval {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding: 11px 13px;
+      background: #100f1c;
+      border: 1px solid #1d1b33;
+      border-radius: 9px;
+    }
+    .retrieval-head {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 10.5px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #5a5480;
+    }
+    .retrieval-head .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #7c6af7;
+    }
+    .retrieval-head.searching .dot { animation: pulse 1s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 0.35; } 50% { opacity: 1; } }
+    .retrieval-nodes { display: flex; flex-wrap: wrap; gap: 5px; }
+    .retrieval-chip {
+      font-size: 11px; color: #9a8fe0;
+      background: #1a1730; border: 1px solid #261f47;
+      border-radius: 5px; padding: 2px 8px; cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .retrieval-chip:hover { background: #251f4a; color: #c8bdff; }
+
+    .typing-cursor {
+      display: inline-block; width: 7px; height: 14px;
+      background: #7c6af7; margin-left: 2px; vertical-align: text-bottom;
+      animation: blink 1s steps(2) infinite;
+    }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* Composer */
+    #chat-composer {
+      flex-shrink: 0;
+      padding: 14px 24px 22px;
+      background: linear-gradient(to top, #0d0d0d 70%, transparent);
+    }
+    .composer-inner {
+      max-width: 720px; margin: 0 auto;
+      display: flex; align-items: flex-end; gap: 8px;
+      background: #15131f;
+      border: 1px solid #2a2545;
+      border-radius: 14px;
+      padding: 8px 8px 8px 16px;
+      transition: border-color 0.15s;
+    }
+    .composer-inner:focus-within { border-color: #4a3f9f; }
+    #chat-input {
+      flex: 1;
+      background: transparent; border: none; outline: none; resize: none;
+      color: #ddd; font-family: inherit; font-size: 14px; line-height: 1.5;
+      max-height: 160px; padding: 6px 0;
+    }
+    #chat-input::placeholder { color: #4a4560; }
+    #chat-send {
+      flex-shrink: 0;
+      width: 32px; height: 32px; border-radius: 9px; border: none;
+      background: #5a4fc0; color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s, opacity 0.15s;
+    }
+    #chat-send:hover { background: #6b5ee0; }
+    #chat-send:disabled { opacity: 0.35; cursor: default; }
+
+    .chat-empty {
+      text-align: center; color: #4a4560; margin-top: 12vh;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+    }
+    .chat-empty .ce-title { font-size: 16px; font-weight: 600; color: #8a82c0; }
+    .chat-empty .ce-sub { font-size: 12.5px; line-height: 1.7; max-width: 360px; }
   </style>
 </head>
 <body>
@@ -378,11 +563,11 @@
       <h2>Graph Controls</h2>
       <div class="control-row">
         <label>Repulsion</label>
-        <input type="range" id="repulsion" min="50" max="800" value="300" />
+        <input type="range" id="repulsion" min="50" max="1500" value="400" />
       </div>
       <div class="control-row">
         <label>Link dist</label>
-        <input type="range" id="linkDist" min="20" max="200" value="90" />
+        <input type="range" id="linkDist" min="20" max="600" value="120" />
       </div>
       <div class="control-row">
         <label>Momentum</label>
@@ -390,7 +575,7 @@
       </div>
       <div class="control-row">
         <label>Node size</label>
-        <input type="range" id="nodeSize" min="2" max="12" value="5" />
+        <input type="range" id="nodeSize" min="1" max="12" value="4" />
       </div>
       <div id="legend">
         <div id="legend-title">Sources</div>
@@ -399,6 +584,12 @@
     </div>
 
     <div id="hint">Scroll to zoom · Drag to pan · Click to select · Drag nodes</div>
+
+    <div id="view-toggle">
+      <div class="toggle-pill"></div>
+      <button id="toggle-graph" class="active">Graph</button>
+      <button id="toggle-chat">Chat</button>
+    </div>
 
     <button id="center-btn" title="Fit all nodes in view">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -418,6 +609,33 @@
         <code>updateDB.sh</code> then <code>serve.sh</code>
       </div>
     </div>
+
+    <!-- Chat panel (swaps in for the canvas) -->
+    <div id="chat-panel">
+      <div id="chat-scroll">
+        <div class="chat-inner" id="chat-messages">
+          <div class="chat-empty" id="chat-empty">
+            <div class="ce-title">Ask your knowledge base</div>
+            <div class="ce-sub">
+              Answers are grounded only in your transcribed sources. The topics
+              consulted for each answer appear as chips you can click to open in
+              the panel on the right.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="chat-composer">
+        <div class="composer-inner">
+          <textarea id="chat-input" rows="1" placeholder="Ask about your sources…"></textarea>
+          <button id="chat-send" title="Send">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="right">
@@ -431,11 +649,6 @@
         <div id="detail-title"></div>
         <div id="detail-meta"></div>
         <div id="detail-desc"></div>
-        <div id="detail-summary-wrap" style="display:none">
-          <div class="detail-subhead">Knowledge Note</div>
-          <div id="detail-summary"></div>
-          <div id="summary-resize-handle"></div>
-        </div>
         <div id="detail-connections">
           <h4>Connections</h4>
           <div id="detail-chips"></div>

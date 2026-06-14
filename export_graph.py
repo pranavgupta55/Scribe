@@ -39,12 +39,13 @@ def slug(text):
 
 
 def read_topic_md(path):
-    """Return (first_paragraph, full_body) stripping H1 and Sources footer."""
+    """Return (headline, full_body) stripping H1 and Sources footer."""
     text = path.read_text(encoding="utf-8").strip()
     text = re.sub(r"^#[^\n]+\n+", "", text)             # remove H1
     text = re.sub(r"\n---\n.*$", "", text, flags=re.DOTALL).strip()  # remove footer
     paras = [p.strip() for p in text.split("\n\n") if p.strip()]
     first = paras[0] if paras else ""
+    first = re.sub(r"^>\s*", "", first)                 # strip leading blockquote marker
     return first, text
 
 
@@ -134,8 +135,8 @@ def build_graph():
     for tf in topic_files:
         s = tf.stem
         first_para, full = read_topic_md(tf)
-        fact_count = sum(
-            meta.get("fact_count", 0)
+        claim_count = sum(
+            meta.get("claim_count", meta.get("fact_count", 0))
             for src, meta in sources.items()
             if s in {slug(t) for t in meta.get("topics", [])}
         )
@@ -143,9 +144,7 @@ def build_graph():
             "id":          topic_display[s],
             "plugin":      dominant.get(s),          # source filename → colour
             "version":     "1.0",
-            "description": (first_para[:200] if first_para
-                            else f"{fact_count} extracted facts"),
-            "summary":     full[:2000],
+            "description": full if full else f"{claim_count} extracted claims",
         }
         if s in pca_pos:
             node["pos"] = pca_pos[s]
@@ -153,12 +152,18 @@ def build_graph():
 
     for src, meta in sorted(sources.items()):
         topic_list = ", ".join(meta.get("topics", [])[:6])
+        claim_n   = meta.get("claim_count", meta.get("fact_count", 0))
+        section_n = meta.get("section_count", meta.get("chunk_count", 0))
+        summary   = meta.get("video_summary", "")
+        desc = f"**{claim_n} claims · {section_n} sections**"
+        if summary:
+            desc += f"\n\n{summary}"
+        desc += f"\n\nTopics: {topic_list or '—'}"
         nodes.append({
             "id":          src,
             "plugin":      None,                     # hub colour
             "version":     "1.0",
-            "description": f"{meta.get('fact_count',0)} facts · {meta.get('chunk_count',0)} chunks",
-            "summary":     f"Topics: {topic_list or '—'}",
+            "description": desc,
         })
 
     # ------------------------------------------------------------------ edges

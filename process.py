@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """
-Scribe knowledge pipeline.
+Scribe knowledge pipeline (two-pass, whole-document).
 
-Chunks transcript .txt files, extracts facts/entities/topics with a local LLM
-(Ollama), stores embeddings in ChromaDB, and maintains human-readable Markdown
-topic notes. The ChromaDB collections are the primary output for RAG queries.
+Pass A — SEGMENT: the whole transcript is read in one LLM call to produce an
+outline (5-10 sections, each with premise + conclusion) and a SMALL canonical
+set of topic labels (4-8) for the entire video.
 
-Collections:
-  chunks — full transcript chunks, rich context for retrieval
-  facts  — individual extracted claims, precise semantic search
+Pass B — EXTRACT: each section is processed individually to pull atomic, grounded
+claims (tagged with one canonical topic), named entities, and subject-predicate-
+object relationship triples — extracted directly from the text, never invented.
+
+Storage:
+  chunks — transcript SECTIONS (rich context for RAG retrieval)
+  facts  — atomic CLAIMS (precise semantic search; one canonical topic each)
+Topic notes (knowledge/topics/*.md) are assembled DETERMINISTICALLY from the
+stored claims — no free-text synthesis call, so nothing is re-explained or
+truncated.
 
 Usage:
     python3 process.py <transcript.txt>    # process a single file
@@ -37,12 +44,24 @@ TRANSCRIPTS_DIR = SCRIPT_DIR / "transcripts"
 EXTRACT_MODEL = "qwen3:1.7b"
 EMBED_MODEL   = "nomic-embed-text"
 
-# Sliding window parameters
-CHUNK_WORDS   = 400
-OVERLAP_WORDS = 80
+# Sectioning targets (Pass A)
+MIN_SECTIONS = 5
+MAX_SECTIONS = 10
+MAX_TOPICS   = 10
+MIN_TOPICS   = 1
 
-# Cosine distance below which two facts are flagged as related/confirming
+# Cosine distance below which two claims are flagged as related/confirming
 CONNECTION_THRESHOLD = 0.20
+
+# Ollama option sets (num_ctx is set explicitly so input is never silently truncated)
+SEGMENT_OPTS = {
+    "num_ctx": 16384, "num_predict": 2048,
+    "temperature": 0.2, "top_p": 0.8, "top_k": 20, "repeat_penalty": 1.05,
+}
+EXTRACT_OPTS = {
+    "num_ctx": 8192, "num_predict": 1536,
+    "temperature": 0.2, "top_p": 0.8, "top_k": 20, "repeat_penalty": 1.05,
+}
 
 
 # ---------------------------------------------------------------------------
@@ -66,126 +85,253 @@ def check_ollama():
 
 
 # ---------------------------------------------------------------------------
-# Chunking — sliding window, sentence-boundary aware
+# LLM prompts — thinking disabled via /no_think (kept compact for json mode)
 # ---------------------------------------------------------------------------
 
-def chunk_text(text):
-    """
-    Split text into overlapping windows of ~CHUNK_WORDS words.
-    Boundaries respect sentence endings; each chunk carries OVERLAP_WORDS
-    words from the previous chunk so context is not lost at seams.
-    """
-    sentences = re.split(r'(?<=[.!?])\s+', text.strip())
-    chunks, current = [], []
-
-    for sentence in sentences:
-        words = sentence.split()
-        if len(current) + len(words) > CHUNK_WORDS and current:
-            chunks.append(" ".join(current))
-            # carry over tail as overlap
-            current = current[-OVERLAP_WORDS:] + words
-        else:
-            current.extend(words)
-
-    if current:
-        chunks.append(" ".join(current))
-
-    return chunks
-
-
-# ---------------------------------------------------------------------------
-# LLM — extraction and synthesis via Ollama
-# ---------------------------------------------------------------------------
-
-_EXTRACT_SYSTEM = (
-    "You are a precise knowledge extraction assistant. "
-    "Respond only with valid JSON. No markdown fences, no explanations."
+_SEGMENT_SYSTEM = (
+    "/no_think\n"
+    "You are a precise transcript analyst. You read an entire video transcript and "
+    "break it into its natural sections. You output ONLY valid JSON — no markdown, no "
+    "commentary, no code fences. Every field must be grounded in what the transcript "
+    "actually says. Do not add outside knowledge. Do not explain general concepts."
 )
 
-_EXTRACT_TMPL = """Extract structured knowledge from this transcript excerpt.
+_SEGMENT_TMPL = """Here is the full transcript of a video.
 
-Text:
-{chunk}
+TRANSCRIPT:
+{transcript}
 
-Return exactly this JSON (no other text):
+Break this video into its {min_s} to {max_s} natural sections in the order they occur.
+For the whole video, also choose a SHORT list of {min_t} to {max_t} canonical topic
+labels. Merge synonyms into ONE label (e.g. do not list both "Lead Generation" and
+"Getting Leads"). Topic labels are 1-3 words, Title Case.
+
+Return EXACTLY this JSON and nothing else:
 {{
-  "facts": ["specific verifiable claim", "another claim"],
-  "entities": [{{"name": "Name", "type": "person|org|place|product|concept", "description": "one sentence"}}],
-  "topics": ["short topic label"]
+  "video_summary": "one sentence: what specific thing this video teaches or argues",
+  "topics": ["Topic A", "Topic B"],
+  "sections": [
+    {{
+      "title": "short section title",
+      "start_marker": "first 8 words of this section, copied verbatim from the transcript",
+      "premise": "the specific setup/claim the speaker makes to OPEN this section (one sentence, from the transcript)",
+      "conclusion": "the specific takeaway the speaker lands on to CLOSE this section (one sentence, from the transcript)"
+    }}
+  ]
 }}
 
-Constraints:
-- facts: atomic, standalone, verifiable claims (max 8)
-- entities: named things explicitly mentioned (max 6)
-- topics: 1-3 word subject labels covering the main themes (max 4)
+Rules:
+- premise and conclusion must be SPECIFIC to this video, quoting concrete numbers,
+  names, and steps the speaker gives. Never write generic definitions.
+- topics: max {max_t}, deduplicated, no near-synonyms.
+- sections: between {min_s} and {max_s}.
 """
 
-_SYNTH_TMPL = """Write a concise knowledge note about the topic "{topic}".
+_EXTRACT_SYSTEM = (
+    "/no_think\n"
+    "You extract specific, factual knowledge from a transcript section. You output ONLY "
+    "valid JSON — no markdown, no commentary, no code fences. Extract ONLY what is stated "
+    "in the text. Never add general background, definitions, or explanations the speaker "
+    "did not give. If the section contains no concrete claim, return empty arrays."
+)
 
-Supporting facts (with source files):
-{facts_block}
+_EXTRACT_TMPL = """This is one section of a video titled "{title}".
+The video's canonical topics are: {topic_list}.
 
-Write 2-3 paragraphs of Markdown prose that:
-1. Summarises what is known about this topic across all sources
-2. Flags any contradictions or tensions between sources
-3. Cites source filenames inline where it adds clarity
+SECTION TEXT:
+{section}
 
-Start directly with the content — no headers, no preamble."""
+Extract the SPECIFIC knowledge stated in this section.
+
+Return EXACTLY this JSON and nothing else:
+{{
+  "claims": [
+    {{
+      "claim": "one specific, standalone, verifiable statement made in the text (include concrete numbers, names, steps)",
+      "topic": "the single best-fitting label from the canonical topics above"
+    }}
+  ],
+  "entities": [
+    {{"name": "Name", "type": "person|org|product|tool|method|metric", "mention": "the exact phrase the transcript uses it in"}}
+  ],
+  "triples": [
+    {{"subject": "X", "predicate": "verb phrase", "object": "Y"}}
+  ]
+}}
+
+Rules:
+- claims: atomic (one fact each), decontextualized (understandable alone), max 6.
+  Each claim MUST be something THIS speaker actually said — quote the specifics.
+- Do NOT write definitions of common terms. Do NOT explain what AI/marketing/etc. are.
+- topic for each claim MUST be exactly one of: {topic_list}.
+- entities: only things explicitly named in this section, max 6.
+- triples: subject-predicate-object derived from the claims, max 6. Keep subject/object
+  short (the actual named thing), predicate a short verb phrase.
+"""
 
 
-def llm_extract(chunk):
-    """Return {facts, entities, topics} extracted from a text chunk."""
+def _chat_json(system, user, options):
+    """One Ollama chat call in JSON mode, thinking-stripped, parsed. None on failure."""
     import ollama
-    prompt = _EXTRACT_TMPL.format(chunk=chunk)
     for attempt in range(3):
         try:
             resp = ollama.chat(
                 model=EXTRACT_MODEL,
-                messages=[
-                    {"role": "system", "content": _EXTRACT_SYSTEM},
-                    {"role": "user",   "content": prompt},
-                ],
+                messages=[{"role": "system", "content": system},
+                          {"role": "user",   "content": user}],
                 format="json",
-                options={"temperature": 0.1, "num_predict": 600},
+                options=options,
             )
             raw = re.sub(r"<think>.*?</think>", "", resp["message"]["content"],
                          flags=re.DOTALL).strip()
-            data = json.loads(raw)
-            return {
-                "facts":    [f for f in data.get("facts",    []) if isinstance(f, str)][:8],
-                "entities": [e for e in data.get("entities", []) if isinstance(e, dict)][:6],
-                "topics":   [t for t in data.get("topics",   []) if isinstance(t, str)][:4],
-            }
+            return json.loads(raw)
         except (json.JSONDecodeError, KeyError):
             if attempt == 2:
-                return {"facts": [], "entities": [], "topics": []}
+                return None
             time.sleep(1)
 
 
-def llm_synthesize(topic, facts_with_sources):
-    """Synthesize a Markdown paragraph from a list of (fact, source) pairs."""
-    import ollama
-    facts_block = "\n".join(f"- {f}  [{s}]" for f, s in facts_with_sources)
-    prompt = _SYNTH_TMPL.format(topic=topic, facts_block=facts_block)
-    try:
-        resp = ollama.chat(
-            model=EXTRACT_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            options={"temperature": 0.3, "num_predict": 700},
-        )
-        content = resp["message"]["content"]
-        return re.sub(r"<think>.*?</think>", "", content, flags=re.DOTALL).strip()
-    except Exception as e:
-        return f"_Synthesis failed: {e}_"
+def llm_segment(full_text):
+    """Pass A — whole transcript → {video_summary, topics, sections}."""
+    user = _SEGMENT_TMPL.format(
+        transcript=full_text,
+        min_s=MIN_SECTIONS, max_s=MAX_SECTIONS,
+        min_t=4, max_t=8,
+    )
+    data = _chat_json(_SEGMENT_SYSTEM, user, SEGMENT_OPTS) or {}
+
+    topics = [t.strip() for t in data.get("topics", [])
+              if isinstance(t, str) and t.strip()]
+    # dedupe (case-insensitive), clamp
+    seen, uniq = set(), []
+    for t in topics:
+        if t.lower() not in seen:
+            seen.add(t.lower())
+            uniq.append(t)
+    topics = uniq[:MAX_TOPICS]
+
+    sections = [s for s in data.get("sections", []) if isinstance(s, dict)]
+    if len(sections) > MAX_SECTIONS:
+        sections = sections[:MAX_SECTIONS]
+
+    return {
+        "video_summary": (data.get("video_summary") or "").strip(),
+        "topics": topics,
+        "sections": sections,
+    }
+
+
+def llm_extract(section_text, section_title, topic_list):
+    """Pass B — one section → {claims:[{claim,topic}], entities, triples}."""
+    user = _EXTRACT_TMPL.format(
+        title=section_title,
+        topic_list=", ".join(topic_list) if topic_list else "(none)",
+        section=section_text,
+    )
+    data = _chat_json(_EXTRACT_SYSTEM, user, EXTRACT_OPTS) or {}
+
+    allowed = {t.lower(): t for t in topic_list}
+    claims = []
+    for c in data.get("claims", [])[:6]:
+        if not isinstance(c, dict):
+            continue
+        text = (c.get("claim") or "").strip()
+        if not text:
+            continue
+        topic = (c.get("topic") or "").strip()
+        # snap topic to the canonical list; default to first topic if unknown
+        topic = allowed.get(topic.lower())
+        if not topic:
+            topic = topic_list[0] if topic_list else "General"
+        claims.append({"claim": text, "topic": topic})
+
+    entities = [e for e in data.get("entities", []) if isinstance(e, dict)][:6]
+
+    # Triples from a 1.7B model are noisy: drop echoed template placeholders and
+    # malformed entries where a whole claim sentence leaked into subject/object.
+    JUNK_PRED = {"verb phrase", "predicate", "", "is", "are", "was", "were"}
+    triples = []
+    for t in data.get("triples", []):
+        if not isinstance(t, dict):
+            continue
+        s = str(t.get("subject", "")).strip()
+        p = str(t.get("predicate", "")).strip()
+        o = str(t.get("object", "")).strip()
+        if not (s and p and o):
+            continue
+        if p.lower() in JUNK_PRED:
+            continue
+        if len(s.split()) > 6 or len(o.split()) > 6:
+            continue
+        triples.append({"subject": s, "predicate": p, "object": o})
+    triples = triples[:6]
+
+    return {"claims": claims, "entities": entities, "triples": triples}
+
+
+# ---------------------------------------------------------------------------
+# Section splitting — anchor on start_marker, fall back to equal slices
+# ---------------------------------------------------------------------------
+
+def _equal_slices(text, outline_sections):
+    n = max(1, min(len(outline_sections), MAX_SECTIONS) or 1)
+    words = text.split()
+    per = max(1, len(words) // n)
+    out = []
+    for i in range(n):
+        seg = words[i * per:] if i == n - 1 else words[i * per:(i + 1) * per]
+        body = " ".join(seg).strip()
+        if body:
+            meta = outline_sections[i] if i < len(outline_sections) else {}
+            out.append({**meta, "text": body})
+    return out
+
+
+def split_into_sections(text, outline_sections):
+    """Split raw transcript into sections using each section's start_marker."""
+    if not outline_sections:
+        return _equal_slices(text, [{}])
+
+    lower = text.lower()
+    pairs = []
+    for i, s in enumerate(outline_sections):
+        marker = " ".join((s.get("start_marker") or "").split()[:8]).lower()
+        idx = lower.find(marker) if marker else -1
+        if idx != -1:
+            pairs.append((i, idx))
+
+    # keep strictly increasing anchor points
+    inc, last = [], -1
+    for i, idx in sorted(pairs, key=lambda p: p[1]):
+        if idx > last:
+            inc.append((i, idx))
+            last = idx
+
+    if len(inc) < 2:
+        return _equal_slices(text, outline_sections)
+
+    out = []
+    for j, (i, idx) in enumerate(inc):
+        start = idx if j > 0 else 0
+        end = inc[j + 1][1] if j + 1 < len(inc) else len(text)
+        body = text[start:end].strip()
+        if body:
+            out.append({**outline_sections[i], "text": body})
+    return out
 
 
 # ---------------------------------------------------------------------------
 # Embeddings
 # ---------------------------------------------------------------------------
 
+# nomic-embed-text has a 2048-token window; cap input so long sections don't 500.
+EMBED_MAX_CHARS = 6000
+
+
 def embed(text):
     import ollama
-    return ollama.embeddings(model=EMBED_MODEL, prompt=text)["embedding"]
+    return ollama.embeddings(model=EMBED_MODEL,
+                             prompt=text[:EMBED_MAX_CHARS])["embedding"]
 
 
 # ---------------------------------------------------------------------------
@@ -232,30 +378,77 @@ def topic_slug(topic):
 
 
 def update_topic_file(topic, facts_col):
-    """Re-synthesize the Markdown note for a topic from the live ChromaDB."""
+    """Deterministically assemble a topic note from stored claims. No LLM call.
+
+    Returns True if a note was written (topic had ≥1 claim), else False.
+    """
     slug = topic_slug(topic)
-    topic_file = TOPICS_DIR / f"{slug}.md"
+    try:
+        res = facts_col.get(where={"topic": topic},
+                            include=["documents", "metadatas"])
+    except Exception:
+        return False
 
-    results = safe_query(facts_col, query_embeddings=[embed(topic)], n_results=25)
-    docs, metas = results["documents"][0], results["metadatas"][0]
+    docs  = res.get("documents") or []
+    metas = res.get("metadatas") or []
     if not docs:
-        return
+        return False
 
-    facts_with_sources = [(doc, meta.get("source", "?")) for doc, meta in zip(docs, metas)]
-    body = llm_synthesize(topic, facts_with_sources)
-    source_list = sorted({m.get("source", "") for m in metas})
+    claims = list(zip(docs, metas))
 
-    topic_file.write_text(
-        f"# {topic.title()}\n\n"
-        f"{body}\n\n"
-        f"---\n"
-        f"_Sources: {', '.join(source_list)}_\n"
-    )
+    # Headline (graph node description): shortest substantive claim, else first
+    eligible = [d for d, _ in claims if len(d.split()) >= 8]
+    headline = min(eligible, key=lambda d: len(d.split())) if eligible else docs[0]
+
+    lines = [f"# {topic}", "", f"> {headline}", "", "## Claims"]
+    sources_set = set()
+    for d, m in claims:
+        src  = m.get("source", "?")
+        sect = m.get("section_title", "")
+        sources_set.add(src)
+        cite = f'[{src} § "{sect}"]' if sect else f"[{src}]"
+        lines.append(f"- {d} — {cite}")
+
+    # Relationships from triples — keep only those grounded in THIS topic's claims
+    # (a section's triples are shared by all its claims, so filter by relevance to
+    # avoid bleeding unrelated relationships into every topic).
+    claims_blob = " ".join(d.lower() for d, _ in claims)
+    triples, seen = [], set()
+    for _, m in claims:
+        try:
+            for t in json.loads(m.get("triples", "[]") or "[]"):
+                subj = t.get("subject", "")
+                obj  = t.get("object", "")
+                key = (subj.lower(), t.get("predicate", "").lower(), obj.lower())
+                if not all(key) or key in seen:
+                    continue
+                if subj.lower() in claims_blob or obj.lower() in claims_blob:
+                    seen.add(key)
+                    triples.append(t)
+        except (json.JSONDecodeError, TypeError):
+            continue
+
+    if triples:
+        lines += ["", "## Relationships"]
+        for t in triples[:8]:
+            lines.append(f"- {t['subject']} → {t['predicate']} → {t['object']}")
+
+    lines += [
+        "",
+        "---",
+        f"_Topic appears in {len(sources_set)} source(s) · "
+        f"{len(claims)} claim(s) · {len(triples)} relationship(s)_",
+        f"_Sources: {', '.join(sorted(sources_set))}_",
+        "",
+    ]
+
+    (TOPICS_DIR / f"{slug}.md").write_text("\n".join(lines))
+    return True
 
 
 def rebuild_index():
     sources = load_json(SOURCES_FILE, {})
-    topic_files = sorted(TOPICS_DIR.glob("*.md"))
+    topic_files = sorted(TOPICS_DIR.glob("*.md")) if TOPICS_DIR.exists() else []
 
     lines = [
         "# Scribe Knowledge Index\n\n",
@@ -269,12 +462,14 @@ def rebuild_index():
     lines.append("\n## Sources\n\n")
     for fname, meta in sorted(sources.items()):
         topics_str = ", ".join(meta.get("topics", [])) or "—"
-        lines.append(
-            f"- **{fname}** — "
-            f"{meta.get('fact_count','?')} facts · "
-            f"{meta.get('chunk_count','?')} chunks · "
-            f"topics: {topics_str}\n"
-        )
+        claim_n   = meta.get("claim_count", meta.get("fact_count", "?"))
+        section_n = meta.get("section_count", meta.get("chunk_count", "?"))
+        summary   = meta.get("video_summary", "")
+        line = (f"- **{fname}** — {claim_n} claims · {section_n} sections · "
+                f"topics: {topics_str}")
+        if summary:
+            line += f"\n  - _{summary}_"
+        lines.append(line + "\n")
 
     INDEX_FILE.write_text("".join(lines))
 
@@ -300,77 +495,92 @@ def process_transcript(transcript_path, force=False):
         print(f"  ⚠️  {name} is empty — skipping.")
         return
 
-    chunks = chunk_text(text)
-    print(f"\n📄 {name} — {len(chunks)} chunks "
-          f"({CHUNK_WORDS}-word window, {OVERLAP_WORDS}-word overlap)")
+    word_count = len(text.split())
+    print(f"\n📄 {name} — {word_count} words")
+
+    # ── Pass A: SEGMENT (whole transcript) ──
+    print("  🧭 Pass A — segmenting whole transcript...", end="\r")
+    outline = llm_segment(text)
+    topics  = outline["topics"]
+    sections = split_into_sections(text, outline["sections"])
+    if MIN_TOPICS <= len(topics) <= MAX_TOPICS:
+        pass
+    else:
+        print(f"  ⚠️  topic count {len(topics)} outside target — proceeding with {topics}")
+    print(f"  🧭 Pass A — {len(sections)} sections · {len(topics)} canonical topics: "
+          f"{', '.join(topics)}" + " " * 8)
 
     facts_col, chunks_col = get_collections()
     connections = load_json(CONNECTIONS_FILE, {"connections": []})
 
-    all_topics = set()
-    fact_count = 0
+    used_topics = set()
+    claim_count = 0
     entity_count = 0
 
-    for idx, chunk in enumerate(chunks):
-        print(f"  [{idx + 1:>2}/{len(chunks)}] extracting...", end="\r")
+    # ── Pass B: EXTRACT (per section) ──
+    for i, sec in enumerate(sections):
+        title = (sec.get("title") or f"Section {i + 1}").strip()
+        body  = sec["text"]
+        print(f"  [{i + 1:>2}/{len(sections)}] extracting · {title[:40]}...", end="\r")
 
-        extraction = llm_extract(chunk)
-        topics_here = extraction["topics"]
-        all_topics.update(topics_here)
-        entity_count += len(extraction["entities"])
-
-        # Embed and store the full chunk for RAG context retrieval
+        # Store the section as a retrieval chunk
         chunks_col.upsert(
-            ids=[f"{name}__c{idx}"],
-            documents=[chunk],
-            embeddings=[embed(chunk)],
-            metadatas=[{"source": name, "chunk_idx": idx}],
+            ids=[f"{name}__s{i}"],
+            documents=[body],
+            embeddings=[embed(body)],
+            metadatas=[{
+                "source":        name,
+                "section_idx":   i,
+                "section_title": title,
+                "premise":       (sec.get("premise") or "")[:500],
+                "conclusion":    (sec.get("conclusion") or "")[:500],
+            }],
         )
 
-        # Embed and store each extracted fact
-        for f_idx, fact in enumerate(extraction["facts"]):
-            if not fact.strip():
-                continue
+        extraction = llm_extract(body, title, topics)
+        triples_json = json.dumps(extraction["triples"])
+        entity_count += len(extraction["entities"])
 
-            fact_emb = embed(fact)
+        for c_idx, claim in enumerate(extraction["claims"]):
+            ctext  = claim["claim"]
+            ctopic = claim["topic"]
+            used_topics.add(ctopic)
+            c_emb = embed(ctext)
 
             # Cross-source connection detection
             similar = safe_query(
-                facts_col,
-                query_embeddings=[fact_emb],
-                n_results=3,
+                facts_col, query_embeddings=[c_emb], n_results=3,
                 where={"source": {"$ne": name}},
             )
             for sim_doc, sim_meta, dist in zip(
-                similar["documents"][0],
-                similar["metadatas"][0],
-                similar["distances"][0],
+                similar["documents"][0], similar["metadatas"][0], similar["distances"][0]
             ):
                 if dist < CONNECTION_THRESHOLD:
-                    conn_type = "confirms" if dist < 0.10 else "related"
                     connections["connections"].append({
-                        "type":             conn_type,
-                        "distance":         round(dist, 4),
-                        "fact_new":         fact,
-                        "source_new":       name,
-                        "fact_existing":    sim_doc,
-                        "source_existing":  sim_meta.get("source", "?"),
+                        "type":            "confirms" if dist < 0.10 else "related",
+                        "distance":        round(dist, 4),
+                        "fact_new":        ctext,
+                        "source_new":      name,
+                        "fact_existing":   sim_doc,
+                        "source_existing": sim_meta.get("source", "?"),
                     })
 
             facts_col.upsert(
-                ids=[f"{name}__c{idx}__f{f_idx}"],
-                documents=[fact],
-                embeddings=[fact_emb],
+                ids=[f"{name}__s{i}__c{c_idx}"],
+                documents=[ctext],
+                embeddings=[c_emb],
                 metadatas=[{
-                    "source":    name,
-                    "chunk_idx": idx,
-                    "topics":    json.dumps(topics_here),
+                    "source":        name,
+                    "section_idx":   i,
+                    "section_title": title,
+                    "topic":         ctopic,
+                    "triples":       triples_json,
                 }],
             )
-            fact_count += 1
+            claim_count += 1
 
-    print(f"  ✓ {fact_count} facts · {entity_count} entities · "
-          f"{len(all_topics)} topics" + " " * 20)
+    print(f"  ✓ {claim_count} claims · {entity_count} entities · "
+          f"{len(used_topics)} topics" + " " * 30)
 
     save_json(CONNECTIONS_FILE, connections)
     new_conns = [c for c in connections["connections"] if c["source_new"] == name]
@@ -379,18 +589,24 @@ def process_transcript(transcript_path, force=False):
         related  = sum(1 for c in new_conns if c["type"] == "related")
         print(f"  🔗 Cross-source connections: {confirms} confirming, {related} related")
 
-    # Synthesize/update topic Markdown files
-    print(f"  → Synthesising {len(all_topics)} topic file(s)...")
-    for topic in sorted(all_topics):
-        update_topic_file(topic, facts_col)
+    # Assemble topic notes deterministically (only topics that produced claims)
+    final_topics = sorted(used_topics)
+    print(f"  → Assembling {len(final_topics)} topic note(s)...")
+    written = [t for t in final_topics if update_topic_file(t, facts_col)]
 
-    # Record in sources registry
     sources[name] = {
-        "processed_at": datetime.now().isoformat(),
-        "chunk_count":  len(chunks),
-        "fact_count":   fact_count,
-        "entity_count": entity_count,
-        "topics":       sorted(all_topics),
+        "processed_at":  datetime.now().isoformat(),
+        "video_summary": outline["video_summary"],
+        "section_count": len(sections),
+        "claim_count":   claim_count,
+        "entity_count":  entity_count,
+        "topics":        written,
+        "sections":      [
+            {"title": (s.get("title") or f"Section {i+1}").strip(),
+             "premise": (s.get("premise") or "").strip(),
+             "conclusion": (s.get("conclusion") or "").strip()}
+            for i, s in enumerate(sections)
+        ],
     }
     save_json(SOURCES_FILE, sources)
     rebuild_index()
@@ -417,10 +633,18 @@ def process_all(force=False):
 
 
 def do_rebuild():
-    """Wipe ChromaDB and sources.json, then reprocess everything from scratch."""
+    """Wipe ChromaDB, topic notes, connections, and sources, then reprocess all."""
     print("🗑  Clearing ChromaDB index...")
     if CHROMA_DIR.exists():
         shutil.rmtree(CHROMA_DIR)
+
+    if TOPICS_DIR.exists():
+        for f in TOPICS_DIR.glob("*.md"):
+            f.unlink()
+        print("   cleared knowledge/topics/")
+
+    CONNECTIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    save_json(CONNECTIONS_FILE, {"connections": []})
 
     if SOURCES_FILE.exists():
         bak = SOURCES_FILE.with_suffix(".json.bak")
