@@ -19,28 +19,39 @@ brew install ffmpeg --quiet
 echo "🐍 Installing Python packages..."
 pip3 install --quiet torch torchaudio transformers accelerate tqdm yt-dlp
 
-# 3. Make scribe.sh executable
+# 3. GitHub CLI
+if ! command -v gh &>/dev/null; then
+  echo "📦 Installing GitHub CLI..."
+  brew install gh --quiet
+fi
+if ! gh auth status &>/dev/null; then
+  echo ""
+  echo "⚠️  GitHub CLI is not authenticated. Run the following, then re-run setup.sh:"
+  echo "    gh auth login"
+  exit 1
+fi
+
+# 4. Make scripts executable
 chmod +x "${REPO_DIR}/scribe.sh"
 
-# 4. Write SCRIBE_HOME and PATH entry to shell rc (idempotent)
+# 5. Write env vars to shell rc (idempotent)
 if ! grep -q "SCRIBE_HOME" "$SHELL_RC" 2>/dev/null; then
   {
     echo ""
     echo "# Scribe — YouTube transcription tool"
     echo "export SCRIBE_HOME=\"${REPO_DIR}\""
+    echo "export SCRIBE_REPO=\"pranavgupta55/Scribe\""
     echo "export PATH=\"\$PATH:\$SCRIBE_HOME\""
   } >> "$SHELL_RC"
-  echo "✅ Added SCRIBE_HOME and PATH to ${SHELL_RC}"
+  echo "✅ Added SCRIBE_HOME, SCRIBE_REPO, and PATH to ${SHELL_RC}"
 else
   echo "ℹ️  SCRIBE_HOME already set in ${SHELL_RC} — skipping"
 fi
 
 echo ""
-echo "✅ Setup complete!"
+echo "✅ Setup complete! Reload your shell:"
+echo "    source ~/.zshrc"
 echo ""
-echo "Reload your shell, then run:"
-echo "  scribe.sh <youtube_url> [output_dir_relative_to_home]"
-echo ""
-echo "Example:"
-echo "  scribe.sh https://youtube.com/watch?v=... Videos/transcripts"
-echo "  scribe.sh https://youtube.com/watch?v=...          # saves to ~/Desktop"
+echo "Usage:"
+echo "    scribe.sh <youtube_url>                  # filename derived from video title"
+echo "    scribe.sh <youtube_url> my-filename      # explicit filename"
