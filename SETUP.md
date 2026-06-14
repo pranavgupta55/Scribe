@@ -1,7 +1,5 @@
 # Scribe — Setup Guide
 
-Full setup for the transcription + knowledge base pipeline. Designed to be completed in one terminal session.
-
 ---
 
 ## Prerequisites
@@ -17,52 +15,47 @@ Full setup for the transcription + knowledge base pipeline. Designed to be compl
 ```bash
 git clone https://github.com/pranavgupta55/Scribe.git
 cd Scribe
-gh auth login          # authenticate GitHub CLI (browser flow, one-time)
+gh auth login          # browser OAuth — authenticate GitHub CLI (one-time)
 bash setup.sh
 source ~/.zshrc
 ```
 
-**What `setup.sh` does:**
+**What `setup.sh` installs and configures:**
 
-| Step | What | Size/Time |
+| Step | What | Size / Time |
 |---|---|---|
 | `brew install ffmpeg` | Audio extraction | ~150 MB |
 | `brew install ollama` | Local LLM runtime | ~200 MB |
-| `pip3 install ...` | Python packages | ~2 GB (PyTorch + deps) |
-| `pip3 install chromadb ollama` | Knowledge base libs | ~50 MB |
-| `ollama pull qwen3:1.7b` | Extraction model | ~1.1 GB, ~1.5 min |
-| `ollama pull nomic-embed-text` | Embedding model | ~274 MB, ~25 sec |
-| Shell env vars | `SCRIBE_HOME`, `SCRIBE_REPO`, `PATH` | instant |
+| `pip3 install torch torchaudio transformers ...` | ML stack | ~2 GB, ~5 min |
+| `pip3 install chromadb ollama yt-dlp numpy` | Knowledge base + downloader | ~150 MB |
+| `ollama pull qwen3:1.7b` | Extraction model → `models/ollama/` | **1.4 GB**, ~2 min |
+| `ollama pull nomic-embed-text` | Embedding model → `models/ollama/` | **274 MB**, ~30 sec |
+| Shell env vars | `SCRIBE_HOME`, `SCRIBE_REPO`, `HF_HOME`, `OLLAMA_MODELS`, `PATH` | instant |
 
-The ASR model (3.4 GB) downloads automatically on your **first** `scribe.sh` run.
+All models land inside the Scribe folder under `models/` and are gitignored.
+The ASR model (3.4 GB) downloads automatically on first `scribe.sh` run into `models/hf/`.
 
-**Total install time:** ~10–15 min on fast internet, mostly waiting on PyTorch.
+**Total install time:** ~10 min, mostly waiting on PyTorch.
 
 ---
 
 ## Workflow
 
-### Step 1 — Transcribe a video
-
 ```bash
-# Filename derived from video title
+# 1. Transcribe a video → pushes transcript to GitHub
 scribe.sh https://www.youtube.com/watch?v=...
+scribe.sh https://www.youtube.com/watch?v=... my-filename   # explicit name
 
-# Explicit filename (no extension needed)
-scribe.sh https://www.youtube.com/watch?v=... my-interview
-```
-
-This downloads audio, transcribes on-device, and pushes `transcripts/<filename>.txt` to GitHub. Nothing is saved locally. The **first run** pauses ~5 min to download the ASR model.
-
-### Step 2 — Update the knowledge base
-
-```bash
+# 2. Process new transcripts into the knowledge base → pushes knowledge/ to GitHub
 updateDB.sh
+
+# 3. Explore the knowledge graph in your browser
+serve.sh
 ```
 
-Pulls the latest transcripts from GitHub, processes any new ones (chunk → extract → embed → synthesise), and pushes the updated `knowledge/` directory. Run this after one or more `scribe.sh` calls.
+---
 
-### Setting up on a second machine
+## Setting up on a second machine
 
 ```bash
 git clone https://github.com/pranavgupta55/Scribe.git
@@ -71,24 +64,24 @@ gh auth login
 bash setup.sh
 source ~/.zshrc
 
-# Rebuild ChromaDB from the existing transcripts
+# Repopulate local ChromaDB from existing transcripts
 updateDB.sh --rebuild
 ```
 
-`--rebuild` wipes the local `.chroma/` index and reprocesses all transcripts in the repo, repopulating the vector store from scratch. Required once per new machine since ChromaDB is not stored in git.
+`--rebuild` wipes `.chroma/` and reprocesses all transcripts already in the repo. Required once per new machine since the vector index is not stored in git.
 
 ---
 
 ## Ollama
 
-Ollama must be running for `updateDB.sh` to work. Start it with:
+Ollama must be running for `updateDB.sh` and `serve.sh` to work.
 
 ```bash
-ollama serve          # runs in the foreground
-# or open the Ollama app from Applications
+ollama serve          # start in foreground
+# or: brew services start ollama   (runs as a background daemon)
 ```
 
-To check it's running: `ollama list` (should show your installed models).
+Check it's running: `ollama list`
 
 ---
 
@@ -98,12 +91,12 @@ To check it's running: `ollama list` (should show your installed models).
 |---|---|
 | `scribe.sh: command not found` | `source ~/.zshrc` |
 | `gh: command not found` | `brew install gh` |
-| `gh` auth error on push | `gh auth login` |
+| `gh` push auth error | `gh auth login` |
 | `yt-dlp: command not found` | `pip3 install yt-dlp` |
 | `ffmpeg: command not found` | `brew install ffmpeg` |
-| ASR model download hangs | Check internet; download is ~3.4 GB |
-| `Ollama is not running` | `ollama serve` or open Ollama app |
-| `Missing Ollama model` | `ollama pull qwen3:1.7b && ollama pull nomic-embed-text` |
+| ASR model download hangs | First run downloads ~3.4 GB to `models/hf/` |
+| `Ollama is not running` | `ollama serve` (needs `OLLAMA_MODELS` set in env) |
+| `Missing Ollama model` | `OLLAMA_MODELS=./models/ollama ollama pull qwen3:1.7b` |
 | MPS not available | Requires Apple Silicon + macOS 12.3+ |
 | ChromaDB empty on new machine | `updateDB.sh --rebuild` |
-| Wrong facts in topic files | `updateDB.sh --rebuild` re-extracts everything |
+| Graph shows "No knowledge graph yet" | Run `updateDB.sh` first, then `serve.sh` |
