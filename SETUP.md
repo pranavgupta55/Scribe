@@ -1,14 +1,14 @@
 # Scribe — Setup Guide
 
-Transcribe any YouTube video locally in one command. Transcript is pushed directly to GitHub — no local files left behind.
+Full setup for the transcription + knowledge base pipeline. Designed to be completed in one terminal session.
 
 ---
 
 ## Prerequisites
 
 - macOS with Apple Silicon (M1 or later)
-- [Homebrew](https://brew.sh) installed
-- Python 3.10+
+- [Homebrew](https://brew.sh) — if missing: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+- Python 3.10+ — check with `python3 --version`
 
 ---
 
@@ -17,54 +17,78 @@ Transcribe any YouTube video locally in one command. Transcript is pushed direct
 ```bash
 git clone https://github.com/pranavgupta55/Scribe.git
 cd Scribe
-gh auth login          # authenticate GitHub CLI (one-time)
+gh auth login          # authenticate GitHub CLI (browser flow, one-time)
 bash setup.sh
 source ~/.zshrc
 ```
 
-`setup.sh` handles everything:
-- Installs `ffmpeg` and the GitHub CLI (`gh`) via Homebrew
-- Installs `torch`, `transformers`, `yt-dlp`, and other Python deps
-- Sets `SCRIBE_HOME`, `SCRIBE_REPO`, and adds `scribe.sh` to your PATH in `~/.zshrc`
+**What `setup.sh` does:**
+
+| Step | What | Size/Time |
+|---|---|---|
+| `brew install ffmpeg` | Audio extraction | ~150 MB |
+| `brew install ollama` | Local LLM runtime | ~200 MB |
+| `pip3 install ...` | Python packages | ~2 GB (PyTorch + deps) |
+| `pip3 install chromadb ollama` | Knowledge base libs | ~50 MB |
+| `ollama pull qwen3:1.7b` | Extraction model | ~1.1 GB, ~1.5 min |
+| `ollama pull nomic-embed-text` | Embedding model | ~274 MB, ~25 sec |
+| Shell env vars | `SCRIBE_HOME`, `SCRIBE_REPO`, `PATH` | instant |
+
+The ASR model (3.4 GB) downloads automatically on your **first** `scribe.sh` run.
+
+**Total install time:** ~10–15 min on fast internet, mostly waiting on PyTorch.
 
 ---
 
-## Usage
+## Workflow
 
-```bash
-scribe.sh <youtube_url> [output_filename]
-```
-
-`output_filename` is optional — defaults to a sanitised version of the video title. The `.txt` extension is added automatically. The transcript is uploaded to `transcripts/` in the GitHub repo; nothing is saved locally.
-
-### Examples
+### Step 1 — Transcribe a video
 
 ```bash
 # Filename derived from video title
-scribe.sh https://www.youtube.com/watch?v=dQw4w9WgXcQ
+scribe.sh https://www.youtube.com/watch?v=...
 
-# Explicit filename
-scribe.sh https://www.youtube.com/watch?v=dQw4w9WgXcQ my-interview
+# Explicit filename (no extension needed)
+scribe.sh https://www.youtube.com/watch?v=... my-interview
 ```
 
+This downloads audio, transcribes on-device, and pushes `transcripts/<filename>.txt` to GitHub. Nothing is saved locally. The **first run** pauses ~5 min to download the ASR model.
+
+### Step 2 — Update the knowledge base
+
+```bash
+updateDB.sh
+```
+
+Pulls the latest transcripts from GitHub, processes any new ones (chunk → extract → embed → synthesise), and pushes the updated `knowledge/` directory. Run this after one or more `scribe.sh` calls.
+
+### Setting up on a second machine
+
+```bash
+git clone https://github.com/pranavgupta55/Scribe.git
+cd Scribe
+gh auth login
+bash setup.sh
+source ~/.zshrc
+
+# Rebuild ChromaDB from the existing transcripts
+updateDB.sh --rebuild
+```
+
+`--rebuild` wipes the local `.chroma/` index and reprocesses all transcripts in the repo, repopulating the vector store from scratch. Required once per new machine since ChromaDB is not stored in git.
+
 ---
 
-## What happens when you run it
+## Ollama
 
-1. **Download** — `yt-dlp` fetches the audio stream as MP3 into a temp folder (no video, much faster).
-2. **Convert** — `ffmpeg` converts it to 16 kHz mono WAV (optimal for the ASR model).
-3. **Transcribe** — Qwen3-ASR-1.7B runs on-device via Apple MPS (Metal) in float16, in 30-second chunks with a 5-second stride to prevent word cutoffs.
-4. **Upload** — The transcript is pushed directly to `transcripts/<filename>.txt` in the GitHub repo via the API. All temp files are deleted.
+Ollama must be running for `updateDB.sh` to work. Start it with:
 
-**First run only:** model weights (~3 GB) download from Hugging Face and cache at `~/.cache/huggingface/`. All future runs load instantly.
+```bash
+ollama serve          # runs in the foreground
+# or open the Ollama app from Applications
+```
 
-**Speed:** ~12× real-time on M5 — a 60-minute video takes ~5 minutes.
-
----
-
-## Syncing across machines
-
-Because transcripts live in GitHub, syncing is automatic. On any machine with the repo cloned and `setup.sh` run, `scribe.sh` uploads and any other machine can `git pull` to get new transcripts.
+To check it's running: `ollama list` (should show your installed models).
 
 ---
 
@@ -72,10 +96,14 @@ Because transcripts live in GitHub, syncing is automatic. On any machine with th
 
 | Problem | Fix |
 |---|---|
-| `scribe.sh: command not found` | Run `source ~/.zshrc` |
-| `gh: command not found` | Run `brew install gh` |
-| `gh` auth error | Run `gh auth login` |
-| `yt-dlp: command not found` | Run `pip3 install yt-dlp` |
-| `ffmpeg: command not found` | Run `brew install ffmpeg` |
-| Model download hangs | Check internet connection; first download is ~3 GB |
-| MPS not available | Requires Apple Silicon and macOS 12.3+ |
+| `scribe.sh: command not found` | `source ~/.zshrc` |
+| `gh: command not found` | `brew install gh` |
+| `gh` auth error on push | `gh auth login` |
+| `yt-dlp: command not found` | `pip3 install yt-dlp` |
+| `ffmpeg: command not found` | `brew install ffmpeg` |
+| ASR model download hangs | Check internet; download is ~3.4 GB |
+| `Ollama is not running` | `ollama serve` or open Ollama app |
+| `Missing Ollama model` | `ollama pull qwen3:1.7b && ollama pull nomic-embed-text` |
+| MPS not available | Requires Apple Silicon + macOS 12.3+ |
+| ChromaDB empty on new machine | `updateDB.sh --rebuild` |
+| Wrong facts in topic files | `updateDB.sh --rebuild` re-extracts everything |
