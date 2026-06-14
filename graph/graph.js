@@ -673,6 +673,29 @@ const chatEmpty     = document.getElementById('chat-empty');
 const chatInput     = document.getElementById('chat-input');
 const chatSend      = document.getElementById('chat-send');
 
+// Dev / Debug panel (left side of chat view)
+const devSystem     = document.getElementById('dev-system');
+const devContext    = document.getElementById('dev-context');
+const devPrompt     = document.getElementById('dev-prompt');
+const devResponse   = document.getElementById('dev-response');
+
+// Write text into a Dev <pre>; empty/undefined shows a placeholder.
+function setDevField(el, text) {
+  if (!el) return;
+  if (text == null || text === '') {
+    el.innerHTML = '<span class="dev-empty">— empty —</span>';
+  } else {
+    el.textContent = text; // monospaced, exact, un-rendered
+  }
+}
+
+function resetDevPanel() {
+  setDevField(devSystem, '');
+  setDevField(devContext, '');
+  setDevField(devPrompt, '');
+  setDevField(devResponse, '');
+}
+
 let chatBusy = false;
 
 function selectNodeById(id) {
@@ -740,10 +763,23 @@ function renderNodeChips(container, names) {
   });
 }
 
-// Replace [[Node Title]] references in streamed text with clickable links
+// Replace [[Node Title]] references in streamed text with clickable links —
+// but ONLY when the name matches a real graph node id (case-insensitive).
+// Gemini wraps plenty of non-topics in [[...]] (e.g. "AI agency"); those are
+// rendered as plain text with the brackets stripped (no link, no bolding).
 function linkifyNodes(html) {
-  return html.replace(/\[\[([^\]]+)\]\]/g, (_, name) =>
-    `<a class="node-link" data-node="${name.replace(/"/g, '&quot;')}">${name}</a>`);
+  return html.replace(/\[\[([^\]]+)\]\]/g, (_, name) => {
+    const trimmed = name.trim();
+    if (nodeExists(trimmed)) {
+      return `<a class="node-link" data-node="${trimmed.replace(/"/g, '&quot;')}">${trimmed}</a>`;
+    }
+    return trimmed; // unknown topic → plain text, brackets stripped
+  });
+}
+
+function nodeExists(name) {
+  const target = name.trim().toLowerCase();
+  return nodes.some(n => n.id.toLowerCase() === target);
 }
 
 function bindNodeLinks(bodyEl) {
@@ -751,9 +787,8 @@ function bindNodeLinks(bodyEl) {
     if (a._bound) return;
     a._bound = true;
     a.addEventListener('click', () => {
-      // Topic/source links open the node in the graph detail panel, which is
-      // only visible in graph view — switch there (no-op if already there).
-      setView('graph');
+      // Update the #right detail sidebar (visible in both views) WITHOUT
+      // switching away from Chat — the user stays where they are.
       selectNodeById(a.dataset.node);
     });
   });
@@ -776,13 +811,16 @@ async function sendChat() {
   // Phase 1 → 2 → 3: searching · consulted N topics · generating.
   // Until the first token arrives, show the animated "Thinking…" indicator.
   ui.body.innerHTML = THINKING_HTML;
-  let answer = '';
+  // Dev panel reflects THIS turn's round-trip; clear the previous one.
+  resetDevPanel();
+  let answer = '';        // raw model markdown (un-rendered) — also feeds Dev
   let gotToken = false;
   let reader = null;
 
   const finishBody = () => {
     ui.body.innerHTML = linkifyNodes(renderMarkdown(answer || '*No response.*'));
     bindNodeLinks(ui.body);
+    setDevField(devResponse, answer); // final raw markdown
     scrollToBottom();
   };
 
@@ -820,6 +858,11 @@ async function sendChat() {
           // Phase 3: waiting on the model — keep the Thinking indicator visible.
           if (!gotToken) ui.body.innerHTML = THINKING_HTML;
           scrollToBottom();
+        } else if (evt.type === 'debug') {
+          // Exact round-trip sent to the model (after retrieval, pre-generation)
+          setDevField(devSystem, evt.system);
+          setDevField(devContext, evt.context);
+          setDevField(devPrompt, evt.prompt);
         } else if (evt.type === 'token') {
           gotToken = true;
           answer += evt.text;
@@ -827,6 +870,7 @@ async function sendChat() {
           ui.body.innerHTML = linkifyNodes(renderMarkdown(answer)) +
             '<span class="typing-cursor"></span>';
           bindNodeLinks(ui.body);
+          setDevField(devResponse, answer); // raw markdown, live
           scrollToBottom();
         } else if (evt.type === 'error') {
           answer = answer || `⚠️ ${evt.message}`;

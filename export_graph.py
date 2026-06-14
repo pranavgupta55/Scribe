@@ -7,8 +7,13 @@ Nodes:
   - Sources (from knowledge/sources.json) — hub style (no plugin)
 
 Edges:
-  - Topic ↔ Source  : topic appears in that source
-  - Topic ↔ Topic   : co-occurrence in the same source
+  - Topic ↔ Source  : topic appears in that source (weight 0.5)
+  - Topic ↔ Topic   : ONLY the meaningful relationships found by the LLM connection
+                      analysis (Pass D, knowledge/connections.json). The old all-pairs
+                      shared-source Jaccard edges are gone — they made the graph complete
+                      and added no information (intra-source closeness is already shown by
+                      every topic linking to its source node). Cross-source edges are now
+                      the interesting part.
 
 PCA layout (optional):
   If ChromaDB is populated and Ollama is running, topic embeddings are
@@ -36,6 +41,27 @@ EMBED_MODEL = "nomic-embed-text"
 
 def slug(text):
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")
+
+
+def fmt_hms(seconds):
+    """Format seconds as H:MM:SS (e.g. 13105.9 -> 3:38:25)."""
+    if seconds is None:
+        return "?"
+    s = int(round(float(seconds)))
+    h, rem = divmod(s, 3600)
+    m, sec = divmod(rem, 60)
+    return f"{h}:{m:02d}:{sec:02d}"
+
+
+def fmt_mins(seconds):
+    """Format a processing/transcription duration compactly (e.g. 1098 -> '18 min 18 s')."""
+    if seconds is None:
+        return "?"
+    s = int(round(float(seconds)))
+    if s < 60:
+        return f"{s} s"
+    m, sec = divmod(s, 60)
+    return f"{m} min {sec} s" if sec else f"{m} min"
 
 
 def read_topic_md(path):
@@ -155,9 +181,22 @@ def build_graph():
         claim_n   = meta.get("claim_count", meta.get("fact_count", 0))
         section_n = meta.get("section_count", meta.get("chunk_count", 0))
         summary   = meta.get("video_summary", "")
+
+        # task 4 — enrich source node: YouTube link, video length, transcription + processing
+        # times (read from the .meta.json sidecar at process time), plus the existing counts.
+        url   = meta.get("url", "")
+        length_str = fmt_hms(meta.get("duration_seconds"))
+
         desc = f"**{claim_n} claims · {section_n} sections**"
         if summary:
             desc += f"\n\n{summary}"
+        if url:
+            desc += f"\n\n[Watch on YouTube]({url})"
+        desc += (
+            f"\n\n- **Video length:** {length_str}"
+            f"\n- **Transcription time:** {fmt_mins(meta.get('transcribe_seconds'))}"
+            f"\n- **Extraction time:** {fmt_mins(meta.get('process_seconds'))}"
+        )
         desc += f"\n\nTopics: {topic_list or '—'}"
         nodes.append({
             "id":          src,
@@ -175,30 +214,43 @@ def build_graph():
             seen.add(key)
             links.append({"source": a, "target": b, "weight": round(w, 3)})
 
-    # Topic ↔ Source
+    # Topic ↔ Source (every topic links to the source it appears in)
     for src, slugs in source_topic_slugs.items():
         for s in slugs:
             if s in topic_display:
                 add(topic_display[s], src, 0.5)
 
-    # Topic ↔ Topic (co-occurrence, weight = Jaccard similarity of source sets)
-    slug_list = [s for s in topic_slugs if topic_display.get(s)]
-    for i in range(len(slug_list)):
-        for j in range(i + 1, len(slug_list)):
-            a, b = slug_list[i], slug_list[j]
-            sa = source_topic_slugs and set(
-                src for src, slugs in source_topic_slugs.items() if a in slugs)
-            sb = set(src for src, slugs in source_topic_slugs.items() if b in slugs)
-            union = sa | sb
-            if not union:
-                continue
-            jaccard = len(sa & sb) / len(union)
-            if jaccard > 0:
-                add(topic_display[a], topic_display[b], max(0.15, jaccard))
+    # Topic ↔ Topic — ONLY the meaningful relationships from the LLM connection analysis
+    # (Pass D). The old all-pairs Jaccard edges are gone (they made the graph complete).
+    # Edge weight is by relationship strength/type; contradictions and cross-source links
+    # are emphasised because they are the most informative.
+    KIND_WEIGHT = {"contradiction": 1.0, "builds-on": 0.8, "agreement": 0.7, "related": 0.6}
+    conn_edges = []
+    if CONNECTIONS_FILE.exists():
+        try:
+            conn_edges = json.loads(CONNECTIONS_FILE.read_text()).get("edges", [])
+        except Exception:
+            conn_edges = []
+
+    topic_edge_n = 0
+    cross_edge_n = 0
+    for e in conn_edges:
+        a_slug, b_slug = slug(e.get("a", "")), slug(e.get("b", ""))
+        if a_slug not in topic_display or b_slug not in topic_display:
+            continue
+        w = KIND_WEIGHT.get((e.get("kind") or "related").lower(), 0.6)
+        if e.get("cross_source"):
+            w = min(1.0, w + 0.15)        # nudge cross-source links up — the interesting ones
+            cross_edge_n += 1
+        before = len(links)
+        add(topic_display[a_slug], topic_display[b_slug], w)
+        if len(links) > before:
+            topic_edge_n += 1
 
     GRAPH_DIR.mkdir(exist_ok=True)
     GRAPH_FILE.write_text(json.dumps({"nodes": nodes, "links": links}, indent=2))
-    print(f"✅ graph/graph.json → {len(nodes)} nodes · {len(links)} edges")
+    print(f"✅ graph/graph.json → {len(nodes)} nodes · {len(links)} edges "
+          f"({topic_edge_n} topic↔topic from Pass D, {cross_edge_n} cross-source)")
 
 
 if __name__ == "__main__":

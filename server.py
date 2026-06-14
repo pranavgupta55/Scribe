@@ -7,6 +7,7 @@ Serves the static graph viewer AND a RAG chat endpoint over the knowledge base.
   GET  /<anything>   → static files (graph viewer, etc.)
   POST /api/chat     → Server-Sent Events stream:
                          {"type":"nodes","nodes":[...]}   topics consulted
+                         {"type":"debug",...}             system/context/prompt
                          {"type":"token","text":"..."}    streamed answer
                          {"type":"done"}                  end of turn
                          {"type":"error","message":"..."} failure
@@ -124,13 +125,18 @@ def _gemini_client():
     return genai.Client(api_key=api_key)
 
 
+def build_prompt(query, context):
+    """The exact user prompt sent to Gemini (also surfaced in the Dev panel)."""
+    return (f"Context from the knowledge base:\n\n{context}\n\n"
+            f"Question: {query}\n\nAnswer:")
+
+
 def generate_stream(client, query, context):
     """Yield generated text chunks from Gemini, trying the primary model then
     the fallback. Raises on hard failure (after the fallback also fails)."""
     from google.genai import types
 
-    prompt = (f"Context from the knowledge base:\n\n{context}\n\n"
-              f"Question: {query}\n\nAnswer:")
+    prompt = build_prompt(query, context)
     config = types.GenerateContentConfig(
         system_instruction=_SYSTEM,
         temperature=0.2,
@@ -202,6 +208,12 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         self._sse({"type": "nodes", "nodes": topics})
+
+        # ── Debug round-trip (Dev panel): the exact strings we send ──
+        self._sse({"type": "debug",
+                   "system": _SYSTEM,
+                   "context": context,
+                   "prompt": build_prompt(query, context)})
 
         if not context:
             self._sse({"type": "token",

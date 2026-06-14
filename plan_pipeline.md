@@ -159,3 +159,49 @@ compressed into the B1 draft and B2 verify prompts.
 - Residual (model-inherent, isolated): occasional non-numeric phrasing slips the verifier
   can't catch (e.g. "GBT (Generative Business Tool)" expansion; one 62% phrasing inversion
   in missed_call_text_back). Acceptable for a 1.7B model; tightening further risks the gains.
+
+---
+
+# Pipeline v2 — long transcripts + LLM connections (sub-agent P: tasks 0-5)
+
+Three transcripts now exist, two of them multi-hour (40-56k words / ~60-65k tokens), which
+overflow qwen3:1.7b's 40960-token window. Five changes:
+
+## Task 0 — Windowed (hierarchical map-reduce) Pass A
+`llm_segment` no longer feeds the whole transcript in one call. `_windows()` splits it into
+~6000-word windows (`WINDOW_WORDS`) with 400-word overlap (`WINDOW_OVERLAP_WORDS`) — a 6k clip
+= 1 window, a 56k video = 10. MAP: per window run A0 plan -> A1 topics -> A2 sections
+(per-window targets 4-8 topics / 3-6 sections). REDUCE: A3 merges all per-window topics
+(with frequencies) into one canonical deduped global set (`_reduce_topics`, falls back to a
+frequency dedupe), and the ordered per-window sections are concatenated. `split_into_sections`
+locates each section's marker starting at its window's char offset so a recurring phrase
+anchors correctly. Counts scale with length (course: 9 win/36 sec/38 topics; sales: 10/37/28;
+lazy: 2/6/9).
+
+## Task 1 — A CoT plan/think micro-step inside every pass
+Each pass opens with a tightly-scoped planning call that scaffolds the producer:
+A0 (`covers`/`shifts` outline) -> A1/A2; B0 (`facts`/`skip` plan) -> B1 draft -> B2 verify;
+C0 (which catalog section types are supported) -> C1 fill; D0 (reason about relationships)
+-> D1 write. The small model plans how it will write before writing.
+
+## Task 2 — Pass D: LLM connection analysis (the substance of the graph)
+After all claims/embeddings exist, `analyze_connections`: builds a per-topic centroid from its
+claim embeddings (`_topic_profiles`), greedily clusters topics within `SUITE_DISTANCE` cosine
+into "suites" (cross-source neighbours favoured, `SUITE_MAX_SIZE`), then per suite runs D0
+(reason about agreement / builds-on / contradiction, CoT) and D1 (write each as ONE plain
+natural-language sentence, verb inline). Arrow-triple junk and re-emitted arrows are rejected.
+Stored in `connections.json` as `{per_topic, edges}` and rendered as a `## Connections` section
+(replacing the old `## Relationships` arrow-triples). Runs after all sources are in (so it sees
+cross-source links); re-runnable via `python3 process.py --connect`.
+
+## Task 3 — Graph edges from real relationships (export_graph.py)
+Dropped the all-pairs shared-source Jaccard topic<->topic edges (they made the graph complete
+and were redundant with topic->source edges). Topic<->topic edges now come ONLY from Pass D's
+connection edges, weighted by kind (contradiction 1.0 > builds-on 0.8 > agreement 0.7) with a
++0.15 nudge for cross-source. Topic<->source edges (0.5) kept.
+
+## Task 4 — Enriched source nodes (export_graph.py)
+Source-node description now includes the YouTube link (Markdown), video length (`H:MM:SS` from
+`duration_seconds`), transcription time, and extraction time (`process_seconds`, recorded as
+wall-clock in `process_transcript`), read from `transcripts/<base>.meta.json`. Claims/sections
+counts kept.

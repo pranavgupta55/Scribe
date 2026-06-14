@@ -1,39 +1,59 @@
 #!/usr/bin/env python3
 """
-Scribe knowledge pipeline (chained, whole-document).
+Scribe knowledge pipeline (chained, windowed, with LLM connection analysis).
 
 The pipeline is decomposed into many short single-objective LLM calls because the
 local model (qwen3:1.7b) is tiny and does far better with one job per call plus an
-explicit verify-against-source step than with one big extraction prompt.
+explicit verify-against-source step than with one big extraction prompt. Each pass
+now opens with a short single-objective PLAN/THINK call that scaffolds the producing
+call (the model plans how it will write before it writes).
 
-Pass A — SEGMENT (2 chained calls):
-  A1 topics   : whole transcript -> 10-16 canonical topic labels (deduped).
-  A2 sections : whole transcript + topics -> video_summary + 8-14 sections
-                (each premise + conclusion); retries once if it under-segments.
+Pass A — SEGMENT (WINDOWED / hierarchical map-reduce):
+  A 40-50k-word (~3-5 h) transcript is ~55-65k tokens and does NOT fit in qwen3:1.7b's
+  40960-token window, so Pass A is windowed:
+    * split the transcript into ~6k-word windows with small overlap (WINDOW_WORDS /
+      WINDOW_OVERLAP_WORDS);
+    * per window: A0 plan (CoT outline) -> A1 topics -> A2 sections;
+    * REDUCE: merge + dedupe per-window topics into a global canonical topic set
+      (A3, LLM-assisted) and concatenate the ordered per-window sections.
+  Topic/section counts scale with transcript length, so a 4-hour course gets many
+  more nodes than a 6-minute clip.
 
-Pass B — EXTRACT (2 chained calls per section):
-  B1 draft    : section -> up to 8 candidate claims + entities + triples (few-shot).
+Pass B — EXTRACT (3 chained calls per section):
+  B0 plan     : section -> a short list of the concrete facts worth extracting (CoT).
+  B1 draft    : section + plan -> up to 8 candidate claims + entities + triples.
   B2 verify   : section + drafts -> apply a 5-point rubric, drop/rewrite to grounded,
                 specific, standalone CONCLUSIONS (self-refine against the transcript).
 
-Pass C — STRUCTURE (1 call per topic, inside note assembly):
-  C1 structure: topic claims -> pick up to N section types from a catalog
-                (Key Takeaway / Key Numbers / How-To / Evidence / Why It Works / ...)
-                and fill them ONLY from the claims. Bullets that introduce a number
-                absent from every claim are dropped (anti-hallucination guard).
-The few-shot bank and rubric live in evals/claim_evals.md; design in plan_pipeline.md.
+Pass C — STRUCTURE (2 calls per topic, inside note assembly):
+  C0 plan     : topic claims -> which catalog section types the claims support (CoT).
+  C1 structure: topic claims + plan -> fill the chosen section types ONLY from the
+                claims. Bullets that introduce a number absent from every claim are
+                dropped (anti-hallucination guard).
+
+Pass D — CONNECT (LLM-based cross-node relationship analysis, the graph's substance):
+  After all topics/claims/embeddings exist, cluster topics by embedding similarity into
+  "suites" of related nodes (especially ACROSS the three sources). Per suite:
+    D0 plan   : list the genuine points of agreement / building-on / contradiction (CoT);
+    D1 write  : turn the plan into plain natural-language CONNECTION SENTENCES (verb
+                inline, NOT arrow-triples, NOT hyper-specific fact dumps).
+  Results are stored in knowledge/connections.json keyed by topic, rendered into each
+  note's `## Connections` section, AND drive the topic<->topic graph edges.
 
 Storage:
   chunks — transcript SECTIONS (rich context for RAG retrieval)
   facts  — atomic CLAIMS (precise semantic search; one canonical topic each)
-Topic notes (knowledge/topics/*.md) are assembled DETERMINISTICALLY from the
-stored claims — no free-text synthesis call, so nothing is re-explained or
-truncated.
+Topic notes (knowledge/topics/*.md) are assembled DETERMINISTICALLY from the stored
+claims + the Pass-D connection sentences — no free-text synthesis of the claims
+themselves, so nothing is re-explained or truncated.
+
+The few-shot bank and rubric live in evals/claim_evals.md; design in plan_pipeline.md.
 
 Usage:
     python3 process.py <transcript.txt>    # process a single file
     python3 process.py --all               # process all unprocessed transcripts
     python3 process.py --rebuild           # clear ChromaDB and reprocess everything
+    python3 process.py --connect           # (re)run Pass D connection analysis only
     python3 process.py --rebuild-index     # regenerate knowledge/_index.md only
 """
 
@@ -57,26 +77,54 @@ TRANSCRIPTS_DIR = SCRIPT_DIR / "transcripts"
 EXTRACT_MODEL = "qwen3:1.7b"
 EMBED_MODEL   = "nomic-embed-text"
 
-# Sectioning targets (Pass A) — raised: 5 topics was too few for a ~25-min video.
-MIN_SECTIONS = 8
-MAX_SECTIONS = 14
-MAX_TOPICS   = 16
-MIN_TOPICS   = 1
-TARGET_TOPICS_LOW  = 10
-TARGET_TOPICS_HIGH = 16
+# --- Windowing (Pass A, task 0) ----------------------------------------------------
+# A 40-50k-word transcript is ~55-65k tokens and overflows qwen3:1.7b's 40960-token
+# window, so Pass A runs over context-safe word windows with small overlap. ~6k words
+# (~8k tokens) sits comfortably inside the 16384-token segment context with room for the
+# prompt scaffolding. Overlap keeps an idea that straddles a boundary from being lost.
+WINDOW_WORDS         = 6000
+WINDOW_OVERLAP_WORDS = 400
 
-# Cosine distance below which two claims are flagged as related/confirming
+# Per-window sectioning/topic targets. The GLOBAL counts scale with length because a long
+# transcript simply has more windows (a 6k-word clip = 1 window; a 50k-word video = ~9).
+WIN_MIN_SECTIONS = 3
+WIN_MAX_SECTIONS = 6
+WIN_TOPICS_LOW   = 4
+WIN_TOPICS_HIGH  = 8
+
+# Global caps after the REDUCE step — generous so length can scale, but bounded so the
+# graph stays legible. A near-synonym merge keeps the set meaningful.
+MAX_TOPICS_GLOBAL   = 60
+MAX_SECTIONS_GLOBAL = 80
+MIN_TOPICS = 1
+
+# Cosine distance below which two claims are flagged as related/confirming (legacy
+# claim-level cosine log; Pass D now produces the meaningful node-level relationships).
 CONNECTION_THRESHOLD = 0.20
 
+# --- Pass D (LLM connection analysis, task 2) --------------------------------------
+# Topics whose embedding cosine distance is below this are candidates for the same
+# "suite" fed to the LLM to reason about (kept loose; the LLM is the real filter).
+SUITE_DISTANCE      = 0.45
+SUITE_MAX_SIZE      = 6     # cap nodes per suite so the prompt stays in-context
+SUITE_MIN_SIZE      = 2     # a suite needs >=2 nodes to have a relationship
+
 # Ollama option sets (num_ctx is set explicitly so input is never silently truncated).
-# The pipeline is now CHAINED: many short single-objective calls beat one big call for a
-# 1.7B model (see plan_pipeline.md). Each step gets its own tuned options.
+# The pipeline is CHAINED: many short single-objective calls beat one big call for a
+# 1.7B model (see plan_pipeline.md). Each step gets its own tuned options. Each pass now
+# also has a small *_PLAN_OPTS step that scaffolds the producing call (task 1).
 _BASE_SAMPLING = {"top_p": 0.8, "top_k": 20, "repeat_penalty": 1.05}
-TOPICS_OPTS   = {"num_ctx": 16384, "num_predict": 1024, "temperature": 0.2, **_BASE_SAMPLING}
-SECTIONS_OPTS = {"num_ctx": 16384, "num_predict": 2048, "temperature": 0.2, **_BASE_SAMPLING}
-DRAFT_OPTS    = {"num_ctx": 8192,  "num_predict": 1536, "temperature": 0.2, **_BASE_SAMPLING}
-VERIFY_OPTS   = {"num_ctx": 8192,  "num_predict": 1536, "temperature": 0.1, **_BASE_SAMPLING}
-STRUCTURE_OPTS= {"num_ctx": 8192,  "num_predict": 1536, "temperature": 0.3, **_BASE_SAMPLING}
+PLAN_OPTS      = {"num_ctx": 16384, "num_predict": 768,  "temperature": 0.3, **_BASE_SAMPLING}
+TOPICS_OPTS    = {"num_ctx": 16384, "num_predict": 1024, "temperature": 0.2, **_BASE_SAMPLING}
+SECTIONS_OPTS  = {"num_ctx": 16384, "num_predict": 2048, "temperature": 0.2, **_BASE_SAMPLING}
+REDUCE_OPTS    = {"num_ctx": 16384, "num_predict": 1536, "temperature": 0.1, **_BASE_SAMPLING}
+DRAFT_PLAN_OPTS= {"num_ctx": 8192,  "num_predict": 768,  "temperature": 0.3, **_BASE_SAMPLING}
+DRAFT_OPTS     = {"num_ctx": 8192,  "num_predict": 1536, "temperature": 0.2, **_BASE_SAMPLING}
+VERIFY_OPTS    = {"num_ctx": 8192,  "num_predict": 1536, "temperature": 0.1, **_BASE_SAMPLING}
+STRUCT_PLAN_OPTS={"num_ctx": 8192,  "num_predict": 512,  "temperature": 0.3, **_BASE_SAMPLING}
+STRUCTURE_OPTS = {"num_ctx": 8192,  "num_predict": 1536, "temperature": 0.3, **_BASE_SAMPLING}
+CONNECT_PLAN_OPTS={"num_ctx":12288, "num_predict": 1024, "temperature": 0.3, **_BASE_SAMPLING}
+CONNECT_OPTS   = {"num_ctx": 12288, "num_predict": 1024, "temperature": 0.3, **_BASE_SAMPLING}
 
 
 # ---------------------------------------------------------------------------
@@ -149,75 +197,165 @@ _FEWSHOT = (
     "the video, no concrete payload)\n"
 )
 
-# ---- Pass A1: topics only -----------------------------------------------------------
-_TOPICS_SYSTEM = (
+# ---- Pass A0: per-window PLAN (CoT scaffold, task 1) --------------------------------
+_AWIN_PLAN_SYSTEM = (
     "/no_think\n"
-    "You are a precise knowledge-graph topic designer. You read an ENTIRE video "
-    "transcript and produce the canonical set of topic labels that organize its ideas.\n"
+    "You are a transcript analyst sketching a quick outline of ONE excerpt of a longer "
+    "video before formally segmenting it. Think out loud, briefly, in JSON.\n"
     + _GROUNDING_LAWS
 )
 
-_TOPICS_TMPL = """Below is the FULL transcript of a video, wrapped in markers.
+_AWIN_PLAN_TMPL = """Below is ONE EXCERPT (part {idx} of {total}) of a longer video.
 
-<<<TRANSCRIPT_START>>>
+<<<EXCERPT_START>>>
 {transcript}
-<<<TRANSCRIPT_END>>>
+<<<EXCERPT_END>>>
 
-TASK: choose the canonical TOPIC LABELS for this video — the distinct ideas a reader
+TASK (planning only — do NOT write final labels yet): jot down the distinct things the
+speaker covers in THIS excerpt, so the next step can name topics and split sections well.
+
+Return EXACTLY this JSON and nothing else:
+{{
+  "covers": ["a short phrase for each distinct idea/method/tool/example actually discussed here"],
+  "shifts": ["a short phrase marking each point where the speaker clearly moves to a new idea"]
+}}
+
+RULES:
+- Each entry grounded in THIS excerpt only. 4-10 entries in "covers".
+- No final formatting; this is a scratch outline for the next step.
+"""
+
+# ---- Pass A1: topics for ONE window -------------------------------------------------
+_TOPICS_SYSTEM = (
+    "/no_think\n"
+    "You are a precise knowledge-graph topic designer. You read ONE excerpt of a video "
+    "transcript and produce the canonical topic labels that organize its ideas.\n"
+    + _GROUNDING_LAWS
+)
+
+_TOPICS_TMPL = """Below is ONE EXCERPT (part {idx} of {total}) of a longer video, wrapped in markers.
+
+<<<EXCERPT_START>>>
+{transcript}
+<<<EXCERPT_END>>>
+
+A scratch outline of what this excerpt covers (from the previous step):
+{plan}
+
+TASK: choose the canonical TOPIC LABELS for THIS EXCERPT — the distinct ideas a reader
 would want as nodes in a knowledge graph.
 
-Think about the distinct things the speaker actually discusses: each named method or
+Think about the distinct things the speaker actually discusses here: each named method or
 tool, each distinct strategy, each distinct problem, the supporting proof/examples.
-This video is dense — aim for {lo} to {hi} topics. Too few topics buries ideas together.
+Aim for {lo} to {hi} topics for this excerpt. Too few buries ideas together.
 
 RULES:
 - {lo}-{hi} labels, each 1-3 words, Title Case.
-- Each label names something the speaker REALLY discusses (grounded).
-- DEDUPLICATE: merge synonyms into ONE label (never list both "Lead Generation" and
-  "Getting Leads"). No near-synonyms, no overlapping pairs.
+- Each label names something the speaker REALLY discusses in this excerpt (grounded).
+- DEDUPLICATE within this excerpt: merge synonyms into ONE label (never list both
+  "Lead Generation" and "Getting Leads"). No near-synonyms, no overlapping pairs.
 - Order from most to least central.
 
 Return EXACTLY this JSON and nothing else:
 {{"topics": ["Topic A", "Topic B", "..."]}}
 """
 
-# ---- Pass A2: sections (given topics) -----------------------------------------------
+# ---- Pass A2: sections for ONE window (given that window's topics) ------------------
 _SECTIONS_SYSTEM = (
     "/no_think\n"
-    "You are a precise transcript analyst. You split an ENTIRE transcript into the "
+    "You are a precise transcript analyst. You split ONE excerpt of a transcript into the "
     "natural sections in which the speaker actually moves through ideas.\n"
     + _GROUNDING_LAWS
 )
 
-_SECTIONS_TMPL = """Below is the FULL transcript of a video, wrapped in markers.
+_SECTIONS_TMPL = """Below is ONE EXCERPT (part {idx} of {total}) of a longer video, wrapped in markers.
 
-<<<TRANSCRIPT_START>>>
+<<<EXCERPT_START>>>
 {transcript}
-<<<TRANSCRIPT_END>>>
+<<<EXCERPT_END>>>
 
-The canonical topics already chosen for this video are: {topic_list}
+The canonical topics chosen for THIS EXCERPT are: {topic_list}
 
-TASK: split the video into {min_s} to {max_s} natural sections IN ORDER, and write a
-one-sentence summary of the whole video.
+TASK: split THIS EXCERPT into {min_s} to {max_s} natural sections IN ORDER, and write a
+one-sentence summary of what this excerpt teaches or argues.
 
 Return EXACTLY this JSON and nothing else:
 {{
-  "video_summary": "one sentence: the specific thing this video teaches or argues",
+  "video_summary": "one sentence: the specific thing this excerpt teaches or argues",
   "sections": [
     {{
       "title": "short section title",
-      "start_marker": "the first 8 words of this section, copied VERBATIM from the transcript",
-      "premise": "the specific setup the speaker makes to OPEN this section (one sentence, from the transcript)",
-      "conclusion": "the specific takeaway the speaker lands on to CLOSE this section (one sentence, from the transcript)"
+      "start_marker": "the first 8 words of this section, copied VERBATIM from the excerpt",
+      "premise": "the specific setup the speaker makes to OPEN this section (one sentence, from the excerpt)",
+      "conclusion": "the specific takeaway the speaker lands on to CLOSE this section (one sentence, from the excerpt)"
     }}
   ]
 }}
 
 RULES:
 - {min_s}-{max_s} sections.
-- start_marker MUST be copied verbatim from the transcript (it is used to locate the
+- start_marker MUST be copied verbatim from THIS EXCERPT (it is used to locate the
   section). Use the actual first words where that idea begins.
 - premise and conclusion quote concrete numbers, names, and steps. Never generic.
+"""
+
+# ---- Pass A3: REDUCE — merge per-window topics into one canonical set ---------------
+_REDUCE_SYSTEM = (
+    "/no_think\n"
+    "You are a knowledge-graph editor consolidating topic labels gathered from many "
+    "excerpts of ONE long video into a single canonical, deduplicated set.\n"
+    + _GROUNDING_LAWS
+)
+
+_REDUCE_TMPL = """These topic labels were collected from {n_win} consecutive excerpts of ONE long
+video. Because the excerpts overlap and the same idea recurs, there are DUPLICATES and
+NEAR-SYNONYMS that must be merged.
+
+RAW TOPIC LABELS (with how many excerpts each appeared in):
+{raw_block}
+
+TASK: produce the CANONICAL topic set for the whole video.
+
+RULES:
+- MERGE synonyms and near-synonyms into ONE label (e.g. "Lead Generation" + "Getting
+  Leads" + "Lead Gen" -> "Lead Generation"). Keep the clearest 1-3 word Title Case form.
+- KEEP genuinely distinct ideas separate — a long video legitimately has many topics, so
+  do NOT over-merge unrelated things. Aim to preserve the real breadth.
+- Drop labels that are too vague to be a node on their own ("Tips", "Overview").
+- Order from most to least central (frequency is a hint, not a rule).
+- Return up to {max_t} labels.
+
+Return EXACTLY this JSON and nothing else:
+{{"topics": ["Canonical Topic A", "Canonical Topic B", "..."]}}
+"""
+
+# ---- Pass B0: draft PLAN (CoT scaffold, task 1) ------------------------------------
+_DRAFT_PLAN_SYSTEM = (
+    "/no_think\n"
+    "You are a transcript analyst noting which concrete facts in ONE section are worth "
+    "extracting, BEFORE writing the final claims. Think briefly, in JSON.\n"
+    + _GROUNDING_LAWS
+)
+
+_DRAFT_PLAN_TMPL = """This is ONE section of a video, titled "{title}".
+
+<<<SECTION_START>>>
+{section}
+<<<SECTION_END>>>
+
+TASK (planning only): list the concrete, extractable facts in this section — the
+numbers, named people/companies/tools, the mechanisms, the outcomes — that a good claim
+would be built around. Do NOT write the final claims yet.
+
+Return EXACTLY this JSON and nothing else:
+{{
+  "facts": ["a short phrase naming each concrete fact worth a claim (with its number/name/mechanism)"],
+  "skip":  ["a short phrase for anything here that is mere narration, filler, or a common-term definition to AVOID"]
+}}
+
+RULES:
+- Every entry in "facts" must be grounded in THIS section. 3-8 entries.
+- This is a scratch plan; the next step writes the actual claims from it.
 """
 
 # ---- Pass B1: draft claims ----------------------------------------------------------
@@ -237,8 +375,12 @@ The video's canonical topics are: {topic_list}
 {section}
 <<<SECTION_END>>>
 
-TASK: draft the specific knowledge stated in THIS section. Over-generate slightly; a
-later step will verify and trim. For each claim, prefer a useful CONCLUSION with the
+The facts worth extracting here (from the previous planning step) are:
+{plan}
+
+TASK: draft the specific knowledge stated in THIS section, building on the planned facts
+above. Over-generate slightly; a later step will verify and trim. For each claim, prefer
+a useful CONCLUSION with the
 surrounding context the speaker gives (numbers, named people/companies, the mechanism)
 — but pull that context ONLY from the section above.
 
@@ -324,11 +466,39 @@ SECTION_TYPE_CATALOG = [
     ("Notable Quotes",        "a verbatim memorable line — include if a quotable line exists"),
 ]
 
+# ---- Pass C0: structure PLAN (CoT scaffold, task 1) --------------------------------
+_STRUCT_PLAN_SYSTEM = (
+    "/no_think\n"
+    "You decide which note SECTION TYPES a set of topic claims can support, BEFORE the "
+    "note is filled in. You pick only what the claims genuinely back. Think briefly, JSON.\n"
+    + _GROUNDING_LAWS
+)
+
+_STRUCT_PLAN_TMPL = """TOPIC: "{topic}"
+
+CLAIMS gathered for this topic:
+{claims_block}
+
+SECTION TYPE CATALOG (name — when to include):
+{catalog}
+
+TASK (planning only): decide which section types these claims actually support. For each
+one you would include, name it and say in a few words which claim(s) back it. Do NOT
+write the bullets yet. Skip any section you would have to INVENT content to fill.
+
+Return EXACTLY this JSON and nothing else:
+{{"plan": [{{"type": "exact catalog name", "why": "which claim(s) support it"}}]}}
+
+RULES:
+- Choose at most {max_sec} section types. Fewer well-grounded beats padding.
+- "type" MUST match a catalog name exactly.
+"""
+
 _STRUCTURE_SYSTEM = (
     "/no_think\n"
-    "You are a knowledge-note editor. Given the claims gathered for ONE topic, you select "
-    "the 3-5 most applicable SECTION TYPES from a fixed catalog and fill each ONLY from "
-    "those claims. You add structure and synthesis; you never add new facts.\n"
+    "You are a knowledge-note editor. Given the claims gathered for ONE topic and a plan "
+    "of which SECTION TYPES they support, you fill each chosen section ONLY from those "
+    "claims. You add structure and synthesis; you never add new facts.\n"
     + _GROUNDING_LAWS
 )
 
@@ -337,12 +507,15 @@ _STRUCTURE_TMPL = """TOPIC: "{topic}"
 CLAIMS gathered for this topic (each is grounded in the transcript):
 {claims_block}
 
+The section types you decided these claims support (from the planning step):
+{plan}
+
 SECTION TYPE CATALOG (name — when to include):
 {catalog}
 
 TASK:
-1. SELECT UP TO {max_sec} section types from the catalog that these claims actually
-   support. It is BETTER to return fewer well-grounded sections than to pad.
+1. Use the planned section types (correct yourself only if a planned one is clearly
+   unsupported). Use AT MOST {max_sec} section types. Fewer well-grounded beats padding.
    Skip any section you would have to INVENT content to fill.
 2. FILL each selected section with 1-4 short bullet points, drawn ONLY from the claims
    above (you may rephrase/synthesize, never add new facts or numbers).
@@ -363,6 +536,93 @@ RULES:
 - CRITICAL: every number, percentage, dollar amount, name, and company in a bullet MUST
   appear in the claims above. Do NOT introduce ANY number or example that is not there.
   Inventing a statistic or a case study is the worst possible error.
+"""
+
+# ---- Pass D0: connection PLAN (CoT scaffold, task 1 + 2) ---------------------------
+_CONNECT_PLAN_SYSTEM = (
+    "/no_think\n"
+    "You are an analyst comparing several related knowledge-graph topics — often drawn "
+    "from DIFFERENT source videos — to find how their ideas genuinely relate. You reason "
+    "step by step about agreement, building-on, and especially CONTRADICTION. Think in JSON.\n"
+    + _GROUNDING_LAWS
+)
+
+_CONNECT_PLAN_TMPL = """Below are {n} related topics. Each shows its source video and its key claims.
+Topics may come from the SAME or DIFFERENT source videos.
+
+{suite_block}
+
+TASK (planning only — reason, do NOT write final sentences yet): compare these topics
+and identify the GENUINE, MEANINGFUL relationships between them — the kind an analyst
+would find insightful, not trivial restatements. Look hardest for:
+- AGREEMENT: two topics (especially from different videos) making the same core argument.
+- BUILDS-ON: one topic extends, enables, or is a prerequisite for another.
+- CONTRADICTION / TENSION: topics that disagree or recommend opposing things.
+
+Return EXACTLY this JSON and nothing else:
+{{
+  "relationships": [
+    {{
+      "topics": ["Topic A", "Topic B"],
+      "kind": "agreement|builds-on|contradiction",
+      "cross_source": true,
+      "note": "one short phrase: what specifically connects them"
+    }}
+  ]
+}}
+
+RULES:
+- "topics" must be EXACTLY two of the topic names shown above.
+- Only include a relationship that is real and substantive. It is fine to return an empty
+  list if these topics are merely adjacent and share nothing insightful.
+- Prefer cross-source relationships; they are the most valuable.
+- Grounded: base every relationship on the claims shown, never outside knowledge.
+"""
+
+# ---- Pass D1: connection WRITE — natural-language sentences (task 2) ----------------
+_CONNECT_WRITE_SYSTEM = (
+    "/no_think\n"
+    "You turn an analyst's notes about how topics relate into clear, natural-language "
+    "CONNECTION SENTENCES that a chatbot could reason from. Each sentence is plain English "
+    "with the relationship verb INLINE — never an arrow-triple, never a hyper-specific "
+    "fact dump.\n"
+    + _GROUNDING_LAWS
+)
+
+_CONNECT_WRITE_TMPL = """Below are {n} related topics with their claims, and an analyst's notes on how they relate.
+
+{suite_block}
+
+ANALYST'S RELATIONSHIP NOTES (JSON):
+{plan}
+
+TASK: write each relationship as ONE plain-English CONNECTION SENTENCE that captures the
+insight, so a reader (or chatbot) can extrapolate from it.
+
+STYLE — imitate these (the verb is INLINE, the insight is general enough to be useful):
+GOOD: "Both the lazy-system video and the sales-call video argue that fast AI follow-up is the single biggest conversion lever."
+GOOD: "This builds on the niche-selection idea: picking a high-ticket niche is what makes the database-reactivation play worth automating."
+GOOD: "This contradicts the cold-outreach approach, which claims paid ads are unnecessary when referrals compound on their own."
+NEVER produce junk like these:
+BAD: "Ad set budget optimization -> dictates -> daily spend"  (arrow syntax, no insight)
+BAD: "GBT -> generates -> 25 million dollars"  (hyper-specific fact dump, not a connection)
+
+Return EXACTLY this JSON and nothing else:
+{{
+  "connections": [
+    {{
+      "topics": ["Topic A", "Topic B"],
+      "kind": "agreement|builds-on|contradiction",
+      "sentence": "one natural-language sentence, verb inline, capturing the connection"
+    }}
+  ]
+}}
+
+RULES:
+- "topics" must be exactly two of the topic names shown above.
+- sentence: ONE sentence, plain Markdown prose, no arrows, no triple syntax, no bare
+  number dumps. State the relationship as an insight, not as a fact about one node.
+- Only emit connections grounded in the claims above. Empty list is allowed.
 """
 
 
@@ -396,40 +656,143 @@ def _dedupe_topics(topics):
     return uniq
 
 
-def llm_segment(full_text):
-    """Pass A — CHAINED: A1 topics, then A2 sections. → {video_summary, topics, sections}."""
-    # A1 — topics only
+def _windows(full_text):
+    """Split text into ~WINDOW_WORDS-word windows with WINDOW_OVERLAP_WORDS overlap.
+
+    Windowing is what lets a 40-50k-word (~60k-token) transcript be processed by a model
+    with a 40960-token window without truncation. Overlap keeps an idea straddling a
+    boundary from being dropped. A short transcript yields a single window (no overlap).
+    """
+    words = full_text.split()
+    if len(words) <= WINDOW_WORDS:
+        return [full_text]
+    step = WINDOW_WORDS - WINDOW_OVERLAP_WORDS
+    out = []
+    i = 0
+    while i < len(words):
+        out.append(" ".join(words[i:i + WINDOW_WORDS]))
+        if i + WINDOW_WORDS >= len(words):
+            break
+        i += step
+    return out
+
+
+def _fmt_plan(plan):
+    """Render an A0/B0 plan dict into a compact bullet block for the next prompt."""
+    if not isinstance(plan, dict):
+        return "(no plan)"
+    lines = []
+    for key in ("covers", "shifts", "facts", "skip"):
+        vals = [str(v).strip() for v in (plan.get(key) or []) if str(v).strip()]
+        if vals:
+            label = {"covers": "covers", "shifts": "topic shifts",
+                     "facts": "extractable facts", "skip": "avoid"}[key]
+            lines.append(f"{label}: " + "; ".join(vals[:10]))
+    return "\n".join(lines) or "(no plan)"
+
+
+def _segment_window(win_text, idx, total):
+    """A0 plan -> A1 topics -> A2 sections for ONE window. Returns (topics, sections, summary)."""
+    # A0 — plan (CoT scaffold)
+    plan = _chat_json(
+        _AWIN_PLAN_SYSTEM,
+        _AWIN_PLAN_TMPL.format(transcript=win_text, idx=idx, total=total),
+        PLAN_OPTS,
+    ) or {}
+    plan_block = _fmt_plan(plan)
+
+    # A1 — topics for this window
     a1 = _chat_json(
         _TOPICS_SYSTEM,
-        _TOPICS_TMPL.format(transcript=full_text,
-                            lo=TARGET_TOPICS_LOW, hi=TARGET_TOPICS_HIGH),
+        _TOPICS_TMPL.format(transcript=win_text, idx=idx, total=total, plan=plan_block,
+                            lo=WIN_TOPICS_LOW, hi=WIN_TOPICS_HIGH),
         TOPICS_OPTS,
     ) or {}
-    topics = _dedupe_topics(a1.get("topics", []))[:MAX_TOPICS]
+    win_topics = _dedupe_topics(a1.get("topics", []))[:WIN_TOPICS_HIGH + 2]
 
-    # A2 — sections, conditioned on the chosen topics. The 1.7B model under-segments a
-    # dense video unpredictably; retry once if it returns fewer than MIN_SECTIONS, since
-    # finer sections give more topics a chance to collect claims in Pass B.
+    # A2 — sections for this window, conditioned on its topics (retry once if under-segmented)
     best_sections, best_summary = [], ""
     for _ in range(2):
         a2 = _chat_json(
             _SECTIONS_SYSTEM,
-            _SECTIONS_TMPL.format(transcript=full_text,
-                                  topic_list=", ".join(topics) if topics else "(none)",
-                                  min_s=MIN_SECTIONS, max_s=MAX_SECTIONS),
+            _SECTIONS_TMPL.format(transcript=win_text, idx=idx, total=total,
+                                  topic_list=", ".join(win_topics) if win_topics else "(none)",
+                                  min_s=WIN_MIN_SECTIONS, max_s=WIN_MAX_SECTIONS),
             SECTIONS_OPTS,
         ) or {}
-        secs = [s for s in a2.get("sections", []) if isinstance(s, dict)][:MAX_SECTIONS]
+        secs = [s for s in a2.get("sections", []) if isinstance(s, dict)][:WIN_MAX_SECTIONS]
         if len(secs) > len(best_sections):
             best_sections = secs
             best_summary = (a2.get("video_summary") or "").strip() or best_summary
-        if len(best_sections) >= MIN_SECTIONS:
+        if len(best_sections) >= WIN_MIN_SECTIONS:
             break
+    return win_topics, best_sections, best_summary
 
+
+def _reduce_topics(topic_counts, n_win):
+    """A3 REDUCE — merge per-window topics (with frequencies) into a canonical global set.
+
+    Falls back to a plain frequency-ordered dedupe if the LLM reduce fails.
+    """
+    ordered = sorted(topic_counts.items(), key=lambda kv: (-kv[1], kv[0].lower()))
+    if n_win == 1 or len(ordered) <= 1:
+        return _dedupe_topics([t for t, _ in ordered])[:MAX_TOPICS_GLOBAL]
+
+    raw_block = "\n".join(f'- "{t}" (in {c} excerpt{"s" if c != 1 else ""})'
+                          for t, c in ordered)
+    data = _chat_json(
+        _REDUCE_SYSTEM,
+        _REDUCE_TMPL.format(n_win=n_win, raw_block=raw_block, max_t=MAX_TOPICS_GLOBAL),
+        REDUCE_OPTS,
+    ) or {}
+    merged = _dedupe_topics(data.get("topics", []))[:MAX_TOPICS_GLOBAL]
+    # Guard: if the model collapsed too aggressively (or failed), keep the frequency list.
+    if len(merged) < max(2, len(ordered) // 4):
+        return _dedupe_topics([t for t, _ in ordered])[:MAX_TOPICS_GLOBAL]
+    return merged
+
+
+def llm_segment(full_text):
+    """Pass A — WINDOWED map-reduce. → {video_summary, topics, sections}.
+
+    MAP: per ~6k-word window, A0 plan -> A1 topics -> A2 sections.
+    REDUCE: A3 merges per-window topics into a canonical global set; the ordered per-window
+    sections are concatenated into the global ordered section list. Counts scale with
+    length because a longer transcript simply has more windows.
+    """
+    windows = _windows(full_text)
+    n_win = len(windows)
+    print(f"  🪟 Pass A — {n_win} window(s) "
+          f"(~{WINDOW_WORDS}w each, {WINDOW_OVERLAP_WORDS}w overlap)" + " " * 12)
+
+    topic_counts = {}
+    all_sections = []
+    summaries = []
+    for wi, win in enumerate(windows, start=1):
+        print(f"  🪟 Pass A — window {wi}/{n_win}: planning + segmenting...", end="\r")
+        win_topics, win_sections, win_summary = _segment_window(win, wi, n_win)
+        for t in win_topics:
+            topic_counts[t] = topic_counts.get(t, 0) + 1
+        # tag each section with its window so split_into_sections can locate the marker
+        # within the right window (markers may repeat across a long transcript)
+        for s in win_sections:
+            all_sections.append({**s, "_window": wi - 1})
+        if win_summary:
+            summaries.append(win_summary)
+    all_sections = all_sections[:MAX_SECTIONS_GLOBAL]
+
+    topics = _reduce_topics(topic_counts, n_win)
+    # Video summary: the first window's summary is the best whole-video opener; if windowed,
+    # note that the rest follows. (Kept to one sentence per the schema/renderer contract.)
+    video_summary = summaries[0] if summaries else ""
+
+    print(f"  🪟 Pass A — REDUCE: {len(topic_counts)} raw -> {len(topics)} canonical "
+          f"topics · {len(all_sections)} sections" + " " * 8)
     return {
-        "video_summary": best_summary,
+        "video_summary": video_summary,
         "topics": topics,
-        "sections": best_sections,
+        "sections": all_sections,
+        "n_windows": n_win,
     }
 
 
@@ -473,10 +836,19 @@ def llm_extract(section_text, section_title, topic_list):
     """
     tl = ", ".join(topic_list) if topic_list else "(none)"
 
-    # B1 — draft candidates (up to 8)
+    # B0 — plan: which concrete facts are worth extracting (CoT scaffold)
+    plan = _chat_json(
+        _DRAFT_PLAN_SYSTEM,
+        _DRAFT_PLAN_TMPL.format(title=section_title, section=section_text),
+        DRAFT_PLAN_OPTS,
+    ) or {}
+    plan_block = _fmt_plan(plan)
+
+    # B1 — draft candidates (up to 8), building on the plan
     draft = _chat_json(
         _DRAFT_SYSTEM,
-        _DRAFT_TMPL.format(title=section_title, topic_list=tl, section=section_text),
+        _DRAFT_TMPL.format(title=section_title, topic_list=tl, section=section_text,
+                           plan=plan_block),
         DRAFT_OPTS,
     ) or {}
     draft_claims = _snap_claims(draft.get("claims", []), topic_list, limit=8)
@@ -530,10 +902,23 @@ def llm_structure(topic, claim_texts):
     valid_types = {name for name, _ in SECTION_TYPE_CATALOG}
     allowed_nums = set().union(*(_numbers_in(c) for c in claim_texts)) if claim_texts else set()
 
+    # C0 — plan: which catalog section types these claims support (CoT scaffold)
+    plan_data = _chat_json(
+        _STRUCT_PLAN_SYSTEM,
+        _STRUCT_PLAN_TMPL.format(topic=topic, claims_block=claims_block, catalog=catalog,
+                                 max_sec=max_sec),
+        STRUCT_PLAN_OPTS,
+    ) or {}
+    planned = [p for p in plan_data.get("plan", []) if isinstance(p, dict)
+               and (p.get("type") or "").strip() in valid_types]
+    plan_block = ("\n".join(f"- {p['type'].strip()} — {(p.get('why') or '').strip()}"
+                            for p in planned) or "(plan unavailable — choose from the catalog)")
+
+    # C1 — fill the chosen section types from the claims only
     data = _chat_json(
         _STRUCTURE_SYSTEM,
         _STRUCTURE_TMPL.format(topic=topic, claims_block=claims_block, catalog=catalog,
-                               max_sec=max_sec, n_claims=len(claim_texts)),
+                               plan=plan_block, max_sec=max_sec, n_claims=len(claim_texts)),
         STRUCTURE_OPTS,
     )
     if not data:
@@ -581,8 +966,29 @@ def _equal_slices(text, outline_sections):
     return out
 
 
+def _window_char_offset(text, window_idx):
+    """Approximate char offset where window `window_idx` begins, so a section marker is
+    located near its own window rather than at the first (possibly repeated) match in a
+    long transcript. Best-effort; 0 for the first window / unknown."""
+    if not window_idx:
+        return 0
+    words = text.split()
+    step = WINDOW_WORDS - WINDOW_OVERLAP_WORDS
+    word_start = min(window_idx * step, max(0, len(words) - 1))
+    if word_start <= 0:
+        return 0
+    # locate the start word's char position by re-joining the prefix
+    prefix = " ".join(words[:word_start])
+    return len(prefix)
+
+
 def split_into_sections(text, outline_sections):
-    """Split raw transcript into sections using each section's start_marker."""
+    """Split raw transcript into sections using each section's start_marker.
+
+    Sections carry a `_window` index (from the windowed Pass A). The marker is searched
+    starting from that window's approximate char offset so a phrase that recurs across a
+    long transcript still anchors to the right place. Falls back to equal slices.
+    """
     if not outline_sections:
         return _equal_slices(text, [{}])
 
@@ -590,7 +996,12 @@ def split_into_sections(text, outline_sections):
     pairs = []
     for i, s in enumerate(outline_sections):
         marker = " ".join((s.get("start_marker") or "").split()[:8]).lower()
-        idx = lower.find(marker) if marker else -1
+        if not marker:
+            continue
+        win_off = _window_char_offset(text, s.get("_window", 0))
+        idx = lower.find(marker, win_off)
+        if idx == -1:                      # fall back to a global search
+            idx = lower.find(marker)
         if idx != -1:
             pairs.append((i, idx))
 
@@ -671,8 +1082,23 @@ def topic_slug(topic):
     return re.sub(r"[^a-z0-9]+", "_", topic.lower()).strip("_")
 
 
-def update_topic_file(topic, facts_col):
-    """Deterministically assemble a topic note from stored claims. No LLM call.
+def _read_meta(transcript_path):
+    """Read the <base>.meta.json sidecar (url/title/duration/transcribe time). {} if absent."""
+    meta_path = Path(transcript_path).with_suffix(".meta.json")
+    try:
+        return json.loads(meta_path.read_text())
+    except Exception:
+        return {}
+
+
+def update_topic_file(topic, facts_col, topic_connections=None):
+    """Assemble a topic note from stored claims + Pass-D connection sentences.
+
+    `topic_connections` maps topic name -> list of connection dicts
+    {sentence, kind, with, cross_source}; rendered as a `## Connections` section of plain
+    natural-language sentences (NOT arrow-triples). When omitted (e.g. during the extract
+    phase before Pass D runs), the Connections section is simply left out and filled in on
+    the connect pass.
 
     Returns True if a note was written (topic had ≥1 claim), else False.
     """
@@ -719,35 +1145,27 @@ def update_topic_file(topic, facts_col):
         cite = f'[{src} § "{sect}"]' if sect else f"[{src}]"
         lines.append(f"- {d} — {cite}")
 
-    # Relationships from triples — keep only those grounded in THIS topic's claims
-    # (a section's triples are shared by all its claims, so filter by relevance to
-    # avoid bleeding unrelated relationships into every topic).
-    claims_blob = " ".join(d.lower() for d, _ in claims)
-    triples, seen = [], set()
-    for _, m in claims:
-        try:
-            for t in json.loads(m.get("triples", "[]") or "[]"):
-                subj = t.get("subject", "")
-                obj  = t.get("object", "")
-                key = (subj.lower(), t.get("predicate", "").lower(), obj.lower())
-                if not all(key) or key in seen:
-                    continue
-                if subj.lower() in claims_blob or obj.lower() in claims_blob:
-                    seen.add(key)
-                    triples.append(t)
-        except (json.JSONDecodeError, TypeError):
-            continue
+    # Connections — plain natural-language sentences from the LLM Pass-D analysis. These
+    # replace the old arrow-triple `## Relationships` block (too specific, no insight, wrong
+    # syntax). Each sentence puts the verb inline and captures a real cross/intra-source
+    # relationship a chatbot can extrapolate from.
+    conns = (topic_connections or {}).get(topic, [])
+    if conns:
+        lines += ["", "## Connections"]
+        for c in conns:
+            sent = (c.get("sentence") or "").strip()
+            if not sent:
+                continue
+            other = (c.get("with") or "").strip()
+            tag = f" _(connects to: {other})_" if other else ""
+            lines.append(f"- {sent}{tag}")
 
-    if triples:
-        lines += ["", "## Relationships"]
-        for t in triples[:8]:
-            lines.append(f"- {t['subject']} → {t['predicate']} → {t['object']}")
-
+    n_conn = len([c for c in conns if (c.get("sentence") or "").strip()])
     lines += [
         "",
         "---",
         f"_Topic appears in {len(sources_set)} source(s) · "
-        f"{len(claims)} claim(s) · {len(triples)} relationship(s)_",
+        f"{len(claims)} claim(s) · {n_conn} connection(s)_",
         f"_Sources: {', '.join(sorted(sources_set))}_",
         "",
     ]
@@ -785,6 +1203,191 @@ def rebuild_index():
 
 
 # ---------------------------------------------------------------------------
+# Pass D — LLM connection analysis across nodes (task 2)
+# ---------------------------------------------------------------------------
+
+def _topic_profiles(facts_col):
+    """Return {topic: {"claims": [...], "sources": set, "centroid": np.array}} for every
+    topic in the facts collection. The centroid is the mean of the topic's claim
+    embeddings — a single vector representing the node for similarity clustering."""
+    import numpy as np
+    res = facts_col.get(include=["documents", "metadatas", "embeddings"])
+    docs   = res.get("documents") or []
+    metas  = res.get("metadatas") or []
+    embs   = res.get("embeddings")
+    embs   = embs if embs is not None else []
+    profiles = {}
+    for i, (doc, meta) in enumerate(zip(docs, metas)):
+        topic = (meta.get("topic") or "").strip()
+        if not topic:
+            continue
+        p = profiles.setdefault(topic, {"claims": [], "sources": set(), "_embs": []})
+        p["claims"].append({"text": doc, "source": meta.get("source", "?")})
+        p["sources"].add(meta.get("source", "?"))
+        if i < len(embs) and embs[i] is not None and len(embs[i]):
+            p["_embs"].append(np.asarray(embs[i], dtype=float))
+    for t, p in profiles.items():
+        if p["_embs"]:
+            c = np.mean(np.stack(p["_embs"]), axis=0)
+            n = np.linalg.norm(c)
+            p["centroid"] = c / n if n else c
+        else:
+            p["centroid"] = None
+        del p["_embs"]
+    return profiles
+
+
+def _build_suites(profiles):
+    """Greedy clusters of related topics by centroid cosine distance.
+
+    Each topic seeds a suite of its nearest neighbours within SUITE_DISTANCE (cosine),
+    capped at SUITE_MAX_SIZE. Cross-source pairs are favoured by sorting neighbours so
+    different-source topics come first. Duplicate suites (same member set) are dropped.
+    """
+    import numpy as np
+    names = [t for t, p in profiles.items() if p.get("centroid") is not None]
+    if len(names) < SUITE_MIN_SIZE:
+        return []
+    cents = {t: profiles[t]["centroid"] for t in names}
+
+    def cos_dist(a, b):
+        return 1.0 - float(np.dot(cents[a], cents[b]))
+
+    suites, seen_keys = [], set()
+    for seed in names:
+        neighbours = []
+        for other in names:
+            if other == seed:
+                continue
+            d = cos_dist(seed, other)
+            if d <= SUITE_DISTANCE:
+                cross = bool(profiles[seed]["sources"] & profiles[other]["sources"]) is False
+                # sort key: cross-source first (0), then nearer
+                neighbours.append((0 if cross else 1, d, other))
+        if not neighbours:
+            continue
+        neighbours.sort()
+        members = [seed] + [n[2] for n in neighbours[:SUITE_MAX_SIZE - 1]]
+        key = frozenset(members)
+        if len(members) < SUITE_MIN_SIZE or key in seen_keys:
+            continue
+        seen_keys.add(key)
+        suites.append(members)
+    return suites
+
+
+def _suite_block(members, profiles, max_claims=5):
+    """Render a suite of topics + their claims (with source tags) for the Pass-D prompt."""
+    out = []
+    for t in members:
+        p = profiles[t]
+        srcs = ", ".join(sorted(p["sources"]))
+        out.append(f'TOPIC "{t}"  (source: {srcs})')
+        for c in p["claims"][:max_claims]:
+            out.append(f"  - {c['text']}")
+    return "\n".join(out)
+
+
+def analyze_connections(facts_col):
+    """Pass D — cluster topics into suites and use the LLM (CoT) to produce natural-language
+    connection sentences between nodes, especially across sources.
+
+    Returns (per_topic, edges):
+      per_topic : {topic: [{sentence, kind, with, cross_source}, ...]}
+      edges     : [{a, b, kind, cross_source, sentence}, ...]  (one per topic pair)
+    """
+    profiles = _topic_profiles(facts_col)
+    suites = _build_suites(profiles)
+    print(f"  🔎 Pass D — {len(profiles)} topics → {len(suites)} candidate suite(s)")
+
+    per_topic = {}
+    edges = []
+    edge_seen = set()
+
+    for si, members in enumerate(suites, start=1):
+        print(f"  🔎 Pass D — suite {si}/{len(suites)} "
+              f"({len(members)} nodes): reasoning...", end="\r")
+        block = _suite_block(members, profiles)
+
+        # D0 — plan the genuine relationships (CoT)
+        plan = _chat_json(
+            _CONNECT_PLAN_SYSTEM,
+            _CONNECT_PLAN_TMPL.format(n=len(members), suite_block=block),
+            CONNECT_PLAN_OPTS,
+        ) or {}
+        rels = [r for r in plan.get("relationships", []) if isinstance(r, dict)]
+        if not rels:
+            continue
+        plan_json = json.dumps(rels, ensure_ascii=False)
+
+        # D1 — write each relationship as a natural-language sentence
+        written = _chat_json(
+            _CONNECT_WRITE_SYSTEM,
+            _CONNECT_WRITE_TMPL.format(n=len(members), suite_block=block, plan=plan_json),
+            CONNECT_OPTS,
+        ) or {}
+
+        for c in written.get("connections", []):
+            if not isinstance(c, dict):
+                continue
+            pair = [str(x).strip() for x in (c.get("topics") or []) if str(x).strip()]
+            sentence = (c.get("sentence") or "").strip()
+            kind = (c.get("kind") or "related").strip().lower()
+            if len(pair) != 2 or not sentence:
+                continue
+            # snap topic names to the real ones in this suite (case-insensitive)
+            snapped = []
+            for name in pair:
+                match = next((m for m in members if m.lower() == name.lower()), None)
+                snapped.append(match)
+            if not all(snapped) or snapped[0] == snapped[1]:
+                continue
+            a, b = snapped
+            # reject lingering arrow-triple junk
+            if "→" in sentence or "->" in sentence:
+                continue
+            cross = not (profiles[a]["sources"] & profiles[b]["sources"])
+            ekey = frozenset((a, b))
+            if ekey in edge_seen:
+                continue
+            edge_seen.add(ekey)
+            edges.append({"a": a, "b": b, "kind": kind,
+                          "cross_source": cross, "sentence": sentence})
+            per_topic.setdefault(a, []).append(
+                {"sentence": sentence, "kind": kind, "with": b, "cross_source": cross})
+            per_topic.setdefault(b, []).append(
+                {"sentence": sentence, "kind": kind, "with": a, "cross_source": cross})
+
+    n_cross = sum(1 for e in edges if e["cross_source"])
+    print(f"  🔗 Pass D — {len(edges)} connection(s) "
+          f"({n_cross} cross-source)" + " " * 20)
+    return per_topic, edges
+
+
+def run_connection_pass():
+    """Run Pass D over the existing knowledge base and rewrite notes + connections.json."""
+    facts_col, _ = get_collections()
+    if facts_col.count() == 0:
+        print("⚠️  facts collection is empty — nothing to connect. Process transcripts first.")
+        return
+    per_topic, edges = analyze_connections(facts_col)
+
+    save_json(CONNECTIONS_FILE, {
+        "generated_at": datetime.now().isoformat(),
+        "per_topic": per_topic,
+        "edges": edges,
+    })
+
+    # Rewrite every topic note so the new `## Connections` section is filled in.
+    topics = sorted({(m.get("topic") or "").strip()
+                     for m in (facts_col.get(include=["metadatas"])["metadatas"] or [])
+                     if (m.get("topic") or "").strip()})
+    rewritten = sum(1 for t in topics if update_topic_file(t, facts_col, per_topic))
+    rebuild_index()
+    print(f"  ✅ Pass D complete — {len(edges)} edges, {rewritten} note(s) updated")
+
+
+# ---------------------------------------------------------------------------
 # Core pipeline
 # ---------------------------------------------------------------------------
 
@@ -807,21 +1410,18 @@ def process_transcript(transcript_path, force=False):
 
     word_count = len(text.split())
     print(f"\n📄 {name} — {word_count} words")
+    t_start = time.time()
 
-    # ── Pass A: SEGMENT (whole transcript) ──
-    print("  🧭 Pass A — segmenting whole transcript...", end="\r")
+    # ── Pass A: SEGMENT (WINDOWED map-reduce — handles multi-hour transcripts) ──
     outline = llm_segment(text)
     topics  = outline["topics"]
     sections = split_into_sections(text, outline["sections"])
-    if MIN_TOPICS <= len(topics) <= MAX_TOPICS:
-        pass
-    else:
+    if not (MIN_TOPICS <= len(topics) <= MAX_TOPICS_GLOBAL):
         print(f"  ⚠️  topic count {len(topics)} outside target — proceeding with {topics}")
     print(f"  🧭 Pass A — {len(sections)} sections · {len(topics)} canonical topics: "
-          f"{', '.join(topics)}" + " " * 8)
+          f"{', '.join(topics[:12])}{' …' if len(topics) > 12 else ''}" + " " * 8)
 
     facts_col, chunks_col = get_collections()
-    connections = load_json(CONNECTIONS_FILE, {"connections": []})
 
     used_topics = set()
     claim_count = 0
@@ -857,24 +1457,6 @@ def process_transcript(transcript_path, force=False):
             used_topics.add(ctopic)
             c_emb = embed(ctext)
 
-            # Cross-source connection detection
-            similar = safe_query(
-                facts_col, query_embeddings=[c_emb], n_results=3,
-                where={"source": {"$ne": name}},
-            )
-            for sim_doc, sim_meta, dist in zip(
-                similar["documents"][0], similar["metadatas"][0], similar["distances"][0]
-            ):
-                if dist < CONNECTION_THRESHOLD:
-                    connections["connections"].append({
-                        "type":            "confirms" if dist < 0.10 else "related",
-                        "distance":        round(dist, 4),
-                        "fact_new":        ctext,
-                        "source_new":      name,
-                        "fact_existing":   sim_doc,
-                        "source_existing": sim_meta.get("source", "?"),
-                    })
-
             facts_col.upsert(
                 ids=[f"{name}__s{i}__c{c_idx}"],
                 documents=[ctext],
@@ -892,26 +1474,31 @@ def process_transcript(transcript_path, force=False):
     print(f"  ✓ {claim_count} claims · {entity_count} entities · "
           f"{len(used_topics)} topics" + " " * 30)
 
-    save_json(CONNECTIONS_FILE, connections)
-    new_conns = [c for c in connections["connections"] if c["source_new"] == name]
-    if new_conns:
-        confirms = sum(1 for c in new_conns if c["type"] == "confirms")
-        related  = sum(1 for c in new_conns if c["type"] == "related")
-        print(f"  🔗 Cross-source connections: {confirms} confirming, {related} related")
-
-    # Assemble topic notes deterministically (only topics that produced claims)
+    # Assemble topic notes (only topics that produced claims). The `## Connections` section
+    # is left empty here and filled by Pass D (run after all sources are in, so it can find
+    # cross-source relationships). Notes are rewritten by run_connection_pass().
     final_topics = sorted(used_topics)
     print(f"  → Assembling {len(final_topics)} topic note(s)...")
     written = [t for t in final_topics if update_topic_file(t, facts_col)]
 
+    process_seconds = round(time.time() - t_start, 1)
+    meta = _read_meta(path)
     sources[name] = {
-        "processed_at":  datetime.now().isoformat(),
-        "video_summary": outline["video_summary"],
-        "section_count": len(sections),
-        "claim_count":   claim_count,
-        "entity_count":  entity_count,
-        "topics":        written,
-        "sections":      [
+        "processed_at":      datetime.now().isoformat(),
+        "video_summary":     outline["video_summary"],
+        "word_count":        word_count,
+        "window_count":      outline.get("n_windows", 1),
+        "section_count":     len(sections),
+        "claim_count":       claim_count,
+        "entity_count":      entity_count,
+        # task 4 — enrich source nodes: link, lengths, times
+        "url":               meta.get("url", ""),
+        "title":             meta.get("title", ""),
+        "duration_seconds":  meta.get("duration_seconds"),
+        "transcribe_seconds":meta.get("transcribe_seconds"),
+        "process_seconds":   process_seconds,
+        "topics":            written,
+        "sections":          [
             {"title": (s.get("title") or f"Section {i+1}").strip(),
              "premise": (s.get("premise") or "").strip(),
              "conclusion": (s.get("conclusion") or "").strip()}
@@ -921,7 +1508,7 @@ def process_transcript(transcript_path, force=False):
     save_json(SOURCES_FILE, sources)
     rebuild_index()
 
-    print(f"  ✅ {name} complete")
+    print(f"  ✅ {name} complete — {process_seconds}s")
 
 
 def process_all(force=False):
@@ -941,6 +1528,10 @@ def process_all(force=False):
     for t in pending:
         process_transcript(t, force=force)
 
+    # Pass D — runs AFTER every source is in so it can find cross-source relationships.
+    print("\n🔗 Pass D — analyzing connections across all nodes...")
+    run_connection_pass()
+
 
 def do_rebuild():
     """Wipe ChromaDB, topic notes, connections, and sources, then reprocess all."""
@@ -954,7 +1545,7 @@ def do_rebuild():
         print("   cleared knowledge/topics/")
 
     CONNECTIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    save_json(CONNECTIONS_FILE, {"connections": []})
+    save_json(CONNECTIONS_FILE, {"per_topic": {}, "edges": []})
 
     if SOURCES_FILE.exists():
         bak = SOURCES_FILE.with_suffix(".json.bak")
@@ -986,6 +1577,8 @@ def main():
         do_rebuild()
     elif arg == "--all":
         process_all()
+    elif arg == "--connect":
+        run_connection_pass()
     else:
         p = Path(arg)
         if not p.exists():
