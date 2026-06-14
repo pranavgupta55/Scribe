@@ -1,16 +1,20 @@
 # Scribe Knowledge Index
 
-_1 source(s) · 5 topic(s)_
+_1 source(s) · 9 topic(s)_
 
 ## Topics
 
-- [Ai Agency Strategy](topics/ai_agency_strategy.md)
+- [Ad Optimization](topics/ad_optimization.md)
 - [Ai Workers](topics/ai_workers.md)
-- [Lazy System](topics/lazy_system.md)
-- [Lead Generation](topics/lead_generation.md)
-- [Reviews Referrals](topics/reviews_referrals.md)
+- [Franchise Owner Referrals](topics/franchise_owner_referrals.md)
+- [Lead Generation Methods](topics/lead_generation_methods.md)
+- [Missed Call Text Back](topics/missed_call_text_back.md)
+- [Outreach Specialist](topics/outreach_specialist.md)
+- [Reviews And Referrals](topics/reviews_and_referrals.md)
+- [Targeting Franchise Owners](topics/targeting_franchise_owners.md)
+- [Website Lead Nurturing](topics/website_lead_nurturing.md)
 
 ## Sources
 
-- **the_lazy_way_i_make_money_with_ai_2026.txt** — 24 claims · 5 sections · topics: AI Agency Strategy, AI Workers, Lazy System, Lead Generation, Reviews/Referrals
-  - _The video teaches how to build an AI agency with a lazy system by leveraging AI to automate tasks, focus on low-hanging fruit like lead generation and reviews, and hire five AI workers to handle outreach, referrals, lead nurturing, missed calls, and marketing._
+- **the_lazy_way_i_make_money_with_ai_2026.txt** — 22 claims · 9 sections · topics: AI Workers, Ad Optimization, Franchise Owner Referrals, Lead Generation Methods, Missed Call Text Back, Outreach Specialist, Reviews and Referrals, Targeting Franchise Owners, Website Lead Nurturing
+  - _The video teaches how to build an AI-driven business model that eliminates the need for manual effort through automation, personalized outreach, and strategic use of AI workers._

@@ -18,7 +18,14 @@ cd Scribe
 gh auth login          # browser OAuth — authenticate GitHub CLI (one-time)
 bash setup.sh
 source ~/.zshrc
+
+# RAG chat uses Google Gemini (free tier). Create a key at
+# https://aistudio.google.com/apikey then:
+echo 'export GEMINI_API_KEY="AIza..."' >> ~/.zshrc && source ~/.zshrc
 ```
+
+> Only the interactive chat needs `GEMINI_API_KEY`. Transcription, knowledge
+> extraction, and retrieval all run locally and work without it.
 
 **What `setup.sh` installs and configures:**
 
@@ -27,7 +34,7 @@ source ~/.zshrc
 | `brew install ffmpeg` | Audio extraction | ~150 MB |
 | `brew install ollama` | Local LLM runtime | ~200 MB |
 | `pip3 install torch torchaudio transformers ...` | ML stack | ~2 GB, ~5 min |
-| `pip3 install chromadb ollama yt-dlp numpy` | Knowledge base + downloader | ~150 MB |
+| `pip3 install chromadb ollama yt-dlp numpy google-genai` | Knowledge base + downloader + Gemini chat SDK | ~150 MB |
 | `ollama pull qwen3:1.7b` | Extraction model → `models/ollama/` | **1.4 GB**, ~2 min |
 | `ollama pull nomic-embed-text` | Embedding model → `models/ollama/` | **274 MB**, ~30 sec |
 | Shell env vars | `SCRIBE_HOME`, `SCRIBE_REPO`, `HF_HOME`, `OLLAMA_MODELS`, `PATH` | instant |
@@ -101,3 +108,4 @@ Check it's running: `ollama list`
 | ChromaDB empty on new machine | `updateDB.sh --rebuild` |
 | Graph shows "No knowledge graph yet" | Run `updateDB.sh` first, then `serve.sh` |
 | Chat says "knowledge base unavailable" | Start Ollama (`ollama serve`) and run `updateDB.sh` at least once |
+| Chat says "GEMINI_API_KEY is not set" | Create a free key at https://aistudio.google.com/apikey and `export GEMINI_API_KEY=...` |

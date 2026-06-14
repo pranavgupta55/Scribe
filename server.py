@@ -13,10 +13,13 @@ Serves the static graph viewer AND a RAG chat endpoint over the knowledge base.
 
 Retrieval is grounded entirely in the local ChromaDB collections produced by
 process.py (`facts` for precise claims + consulted-topic surfacing, `chunks`
-for full-context passages). Generation uses the same local qwen3:1.7b model.
+for full-context passages). Retrieval (query embedding + vector search) stays
+fully local via Ollama `nomic-embed-text`; only generation is delegated to
+Google Gemini (free tier) via the `google-genai` SDK.
 """
 
 import json
+import os
 import re
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -25,15 +28,17 @@ SCRIPT_DIR  = Path(__file__).parent.resolve()
 CHROMA_DIR  = SCRIPT_DIR / ".chroma"
 PORT        = 8765
 
-EXTRACT_MODEL = "qwen3:1.7b"
 EMBED_MODEL   = "nomic-embed-text"
+# Gemini generation models (primary, then fallback if the primary is unavailable).
+GEMINI_MODEL          = "gemini-2.5-flash"
+GEMINI_MODEL_FALLBACK = "gemini-2.0-flash"
+GEMINI_API_KEY_ENV    = "GEMINI_API_KEY"
 
 N_FACTS  = 10    # facts retrieved (precise grounding + consulted-topic surfacing)
 N_CHUNKS = 5     # full-context passages for the answer
 MAX_TOPICS = 8
 
 _SYSTEM = (
-    "/no_think\n"
     "You are Scribe, a retrieval assistant answering ONLY from the user's "
     "personal knowledge base. Use the provided context passages and facts as "
     "ground truth. Rules:\n"
@@ -106,6 +111,48 @@ def retrieve(query):
     return topics, "\n".join(parts)
 
 
+def _gemini_client():
+    """Build a Gemini client. Raises RuntimeError with a user-facing message
+    if the API key is missing, ImportError if the SDK isn't installed."""
+    api_key = os.environ.get(GEMINI_API_KEY_ENV)
+    if not api_key:
+        raise RuntimeError(
+            f"{GEMINI_API_KEY_ENV} is not set. Get a free key at "
+            f"https://aistudio.google.com/apikey then run: "
+            f"export {GEMINI_API_KEY_ENV}=your_key_here")
+    from google import genai
+    return genai.Client(api_key=api_key)
+
+
+def generate_stream(client, query, context):
+    """Yield generated text chunks from Gemini, trying the primary model then
+    the fallback. Raises on hard failure (after the fallback also fails)."""
+    from google.genai import types
+
+    prompt = (f"Context from the knowledge base:\n\n{context}\n\n"
+              f"Question: {query}\n\nAnswer:")
+    config = types.GenerateContentConfig(
+        system_instruction=_SYSTEM,
+        temperature=0.2,
+        max_output_tokens=1024,
+    )
+
+    last_err = None
+    for model in (GEMINI_MODEL, GEMINI_MODEL_FALLBACK):
+        try:
+            stream = client.models.generate_content_stream(
+                model=model, contents=prompt, config=config)
+            for chunk in stream:
+                text = getattr(chunk, "text", None)
+                if text:
+                    yield text
+            return  # success
+        except Exception as e:  # noqa: BLE001 — try the fallback model next
+            last_err = e
+            continue
+    raise RuntimeError(str(last_err) if last_err else "Gemini generation failed.")
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(SCRIPT_DIR), **kwargs)
@@ -129,10 +176,14 @@ class Handler(SimpleHTTPRequestHandler):
         except json.JSONDecodeError:
             query = ""
 
+        # Close the connection when the handler returns. Without this the
+        # keep-alive socket stays open, the browser's stream reader never
+        # resolves `done`, and the chat UI gets stuck after one question.
+        self.close_connection = True
         self.send_response(200)
         self.send_header("Content-Type", "text/event-stream")
         self.send_header("Cache-Control", "no-cache")
-        self.send_header("Connection", "keep-alive")
+        self.send_header("Connection", "close")
         self.end_headers()
 
         if not query:
@@ -159,28 +210,28 @@ class Handler(SimpleHTTPRequestHandler):
             self._sse({"type": "done"})
             return
 
-        # ── Generate (streamed) ──
+        # ── Generate (streamed via Gemini) ──
         try:
-            import ollama
-            prompt = (f"Context from the knowledge base:\n\n{context}\n\n"
-                      f"Question: {query}\n\nAnswer:")
-            stream = ollama.chat(
-                model=EXTRACT_MODEL,
-                messages=[
-                    {"role": "system", "content": _SYSTEM},
-                    {"role": "user",   "content": prompt},
-                ],
-                stream=True,
-                options={"temperature": 0.2, "num_ctx": 8192, "num_predict": 800},
-            )
-            for part in stream:
-                tok = part.get("message", {}).get("content", "")
-                if tok:
-                    self._sse({"type": "token", "text": tok})
+            client = _gemini_client()
+        except RuntimeError as e:
+            # Missing API key — clear, actionable message.
+            self._sse({"type": "error", "message": str(e)})
+            self._sse({"type": "done"})
+            return
+        except ImportError:
+            self._sse({"type": "error",
+                       "message": "The google-genai SDK is not installed. "
+                                  "Run: pip3 install google-genai"})
+            self._sse({"type": "done"})
+            return
+
+        try:
+            for tok in generate_stream(client, query, context):
+                self._sse({"type": "token", "text": tok})
         except BrokenPipeError:
             return  # client navigated away
         except Exception as e:
-            self._sse({"type": "error", "message": f"Generation failed: {e}"})
+            self._sse({"type": "error", "message": f"Gemini generation failed: {e}"})
 
         self._sse({"type": "done"})
 

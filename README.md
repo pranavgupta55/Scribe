@@ -30,6 +30,9 @@ cd Scribe
 gh auth login        # one-time GitHub CLI auth (browser flow)
 bash setup.sh
 source ~/.zshrc
+
+# For the RAG chat: a free Google Gemini key (https://aistudio.google.com/apikey)
+echo 'export GEMINI_API_KEY="AIza..."' >> ~/.zshrc && source ~/.zshrc
 ```
 
 See [SETUP.md](SETUP.md) for full details and troubleshooting.
@@ -42,17 +45,19 @@ See [SETUP.md](SETUP.md) for full details and troubleshooting.
 Downloads audio from any YouTube URL with `yt-dlp`, transcribes it locally using `whisper-large-v3-turbo` on Apple Silicon (MPS), and pushes the `.txt` to `transcripts/` in this repo via the GitHub API. Nothing saved locally.
 
 ### Stage 2 — Knowledge extraction (`updateDB.sh`)
-A **two-pass, whole-document** pipeline (`process.py`) — it understands the whole video first, then extracts only specifics that were actually said:
+A **chained, multi-step** pipeline (`process.py`) running entirely on local `qwen3:1.7b`. Rather than one big call per stage, it decomposes each pass into short, single-objective calls — a "thinking" scaffold that lifts a 1.7B model well above its single-shot quality:
 
-1. **Pass A — Segment.** The entire transcript is read in one `qwen3:1.7b` call (`num_ctx` 16k) to produce a 5–10 section outline (each with premise + conclusion) and a small **canonical topic set (4–8 labels)** for the whole video. Because the model sees everything at once, it merges synonyms instead of exploding into dozens of near-duplicate topics.
-2. **Pass B — Extract.** Each section is processed individually for **atomic, grounded claims** (each tagged with one canonical topic), named entities, and subject–predicate–object **relationship triples**. The prompt forbids generic definitions — only what the speaker actually stated, with concrete numbers/names/steps.
-3. **Embeds** every section (→ `chunks`) and claim (→ `facts`) with `nomic-embed-text` into ChromaDB.
-4. **Detects connections** — claims from different sources within cosine distance 0.20 are logged to `knowledge/connections.json` as `confirms` or `related`.
-5. **Assembles topic notes deterministically** — `knowledge/topics/*.md` are built directly from the stored claims (bulleted, section-cited, with a relationships block). **No free-text synthesis call**, so nothing is re-explained or truncated.
-6. **Pushes** updated `knowledge/` to GitHub.
+1. **Pass A — Segment.** `A1` reads the whole transcript (`num_ctx` 16k) and names a **canonical topic set (10–16 labels)**, merging synonyms instead of exploding into duplicates; `A2` splits the video into **8–14 sections** conditioned on those topics (retries if it under-segments).
+2. **Pass B — Extract + verify.** Per section, `B1` over-drafts candidate claims, then `B2` **verifies/refines each against the transcript** with a rubric — dropping vague or model-invented statements, never inverting the source. Each surviving claim is grounded, specific, and tagged with one canonical topic.
+3. **Pass C — Structure.** Per topic, the model selects **3–5 of an 11-section catalog** (Key Takeaway, Key Numbers, How-To, Why It Works, Implications, Contradictions, Caveats, …) by explicit criteria and fills them **only** from that topic's claims. A guard drops any bullet containing a number absent from the claims, blocking fabrication.
+4. **Embeds** every section (→ `chunks`) and claim (→ `facts`) with `nomic-embed-text` into ChromaDB.
+5. **Detects connections** — claims from different sources within cosine distance 0.20 are logged to `knowledge/connections.json` as `confirms` or `related`.
+6. **Assembles topic notes deterministically** from the structured output (section-cited, no free-text re-explanation) and **pushes** `knowledge/` to GitHub.
+
+The grading rubric and few-shot bank live in `evals/claim_evals.md`.
 
 ### Stage 3 — Graph + RAG chat (`serve.sh`)
-Generates `graph/graph.json` and serves an Obsidian-style interactive graph (topics + sources as nodes, PCA-seeded from embeddings). A **Graph | Chat** toggle swaps in a RAG chatbot that answers strictly from your knowledge base — it streams the answer and shows which topic nodes it consulted in real time, each clickable to open in the detail panel.
+Generates `graph/graph.json` and serves an Obsidian-style interactive graph (topics + sources as nodes, PCA-seeded from embeddings). A **Graph | Chat** toggle swaps in a RAG chatbot: retrieval stays **local** (nomic embeddings + ChromaDB) and surfaces which topic nodes were consulted in real time (clickable), while generation streams from **Google Gemini Flash** (free tier) for a sharp, grounded answer. Requires `GEMINI_API_KEY` (see Setup).
 
 ---
 
@@ -61,10 +66,11 @@ Generates `graph/graph.json` and serves an Obsidian-style interactive graph (top
 | Model | Purpose | Size | Storage |
 |---|---|---|---|
 | `whisper-large-v3-turbo` | Speech-to-text | **~1.6 GB** (float16) | `models/hf/` — auto-downloads on first `scribe.sh` |
-| `qwen3:1.7b` | Segment + claim extraction + chat | **1.4 GB** (Q4_K_M) | `models/ollama/` — pulled by `setup.sh` |
-| `nomic-embed-text` | Semantic embeddings | **274 MB** | `models/ollama/` — pulled by `setup.sh` |
+| `qwen3:1.7b` | Segment + claim extraction (local) | **1.4 GB** (Q4_K_M) | `models/ollama/` — pulled by `setup.sh` |
+| `nomic-embed-text` | Semantic embeddings (local) | **274 MB** | `models/ollama/` — pulled by `setup.sh` |
+| `gemini-2.5-flash` | RAG chat generation | — (cloud, free tier) | Google AI Studio — needs `GEMINI_API_KEY` |
 
-All models are stored inside the Scribe repo folder under `models/` and are gitignored.
+The three local models are stored inside the Scribe repo folder under `models/` and are gitignored. Only the interactive chat calls the cloud; transcription, extraction, and retrieval all run on-device.
 
 **Total first-run download: ~3.3 GB**
 

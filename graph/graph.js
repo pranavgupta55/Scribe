@@ -220,6 +220,7 @@ function selectNode(n, panTo = false) {
   detailTitle.textContent = n.id;
   detailMeta.textContent = `${home} · ${deg} connection${deg !== 1 ? 's' : ''}`;
   detailDesc.innerHTML = renderMarkdown(n.description || 'No description available.');
+  bindNodeLinks(detailDesc);
 
   detailChips.innerHTML = '';
   neighborsOf(n).forEach(({ node: neighbor, weight }) => {
@@ -502,37 +503,140 @@ canvas.addEventListener('wheel', e => {
   draw();
 }, { passive: false });
 
-// ─── Markdown rendering (lightweight) ─────────────────────────────────────────
+// ─── Markdown rendering ───────────────────────────────────────────────────────
 
 function escapeHtml(s) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-// Minimal Markdown → HTML: paragraphs, bullet lists, **bold**, `code`, _italic_.
-function renderMarkdown(md) {
-  const blocks = md.split(/\n{2,}/);
-  const html = [];
-  for (let block of blocks) {
-    const lines = block.split('\n');
-    const isList = lines.every(l => /^\s*[-*]\s+/.test(l) || !l.trim());
-    if (isList && lines.some(l => /^\s*[-*]\s+/.test(l))) {
-      const items = lines.filter(l => l.trim()).map(l =>
-        `<li>${inline(l.replace(/^\s*[-*]\s+/, ''))}</li>`).join('');
-      html.push(`<ul>${items}</ul>`);
-    } else {
-      html.push(`<p>${inline(escapeHtml(block).replace(/\n/g, '<br/>'))}</p>`);
-    }
-  }
-  return html.join('');
+// Inline formatting. Input MUST already be HTML-escaped (we never escape twice).
+// Order: code → bold → italic (asterisk only). Underscore italics are NOT
+// supported on purpose — they break filenames like the_lazy_way_..._2026.txt.
+function renderInline(escaped) {
+  let t = escaped;
+  t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
+  t = t.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
+  // single *italic* — require non-space immediately inside, and not part of **
+  t = t.replace(/(^|[^*])\*(?!\s)([^*\n]+?)(?<!\s)\*(?!\*)/g, '$1<em>$2</em>');
+  t = applySourceShorthand(t);
+  return t;
+}
 
-  function inline(text) {
-    // text may already be escaped (paragraph path) or raw (list path)
-    let t = text.includes('&lt;') || text.includes('&amp;') ? text : escapeHtml(text);
-    t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
-    t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-    t = t.replace(/(^|[^_])_([^_]+)_/g, '$1<em>$2</em>');
-    return t;
+// Robust Markdown → HTML. Escapes exactly once, up front. Handles headings
+// (#…######), blockquotes (>), unordered lists (- or *), horizontal rules
+// (---), and paragraphs with real <br/> line breaks. General Markdown — not a
+// fixed note schema (sub-agent A keeps adding ## section types).
+function renderMarkdown(md) {
+  if (md == null) return '';
+  const escaped = escapeHtml(String(md));
+  return renderBlocks(escaped.split(/\n{2,}/)).join('');
+}
+
+// `>` is &gt; after escaping; bullets are - or *; headings are #… (unescaped).
+const RE_QUOTE   = /^\s*&gt;\s?/;
+const RE_BULLET  = /^\s*[-*]\s+/;
+const RE_HEADING = /^\s*(#{1,6})\s+(.*)$/;
+
+function renderBlocks(blocks) {
+  const out = [];
+  for (const block of blocks) {
+    const lines = block.split('\n');
+    const nonEmpty = lines.filter(l => l.trim());
+    if (!nonEmpty.length) continue;
+
+    // Horizontal rule
+    if (nonEmpty.length === 1 && /^\s*-{3,}\s*$/.test(nonEmpty[0])) {
+      out.push('<hr/>');
+      continue;
+    }
+
+    // Heading-led block: emit the heading, then render the remaining lines as
+    // their own block (notes pack "## Claims\n- a\n- b" with single newlines).
+    const h = nonEmpty[0].match(RE_HEADING);
+    if (h) {
+      const level = Math.min(h[1].length + 2, 6); // ## → <h4>, clamp to <h6>
+      out.push(`<h${level}>${renderInline(h[2].trim())}</h${level}>`);
+      const rest = lines.slice(lines.indexOf(nonEmpty[0]) + 1).join('\n').trim();
+      if (rest) out.push(...renderBlocks([rest]));
+      continue;
+    }
+
+    // Blockquote: every non-empty line starts with >
+    if (nonEmpty.every(l => RE_QUOTE.test(l))) {
+      const inner = nonEmpty
+        .map(l => renderInline(l.replace(RE_QUOTE, '')))
+        .join('<br/>');
+      out.push(`<blockquote>${inner}</blockquote>`);
+      continue;
+    }
+
+    // Unordered list: every non-empty line is a bullet
+    if (nonEmpty.every(l => RE_BULLET.test(l))) {
+      const items = nonEmpty
+        .map(l => `<li>${renderInline(l.replace(RE_BULLET, ''))}</li>`)
+        .join('');
+      out.push(`<ul>${items}</ul>`);
+      continue;
+    }
+
+    // Paragraph (real line breaks preserved)
+    out.push(`<p>${renderInline(lines.join('\n')).replace(/\n/g, '<br/>')}</p>`);
   }
+  return out;
+}
+
+// ─── Source shorthand ─────────────────────────────────────────────────────────
+// Long source filenames (the_lazy_way_i_make_money_with_ai_2026.txt) are
+// replaced at RENDER time with a short bold, clickable label. The pipeline
+// keeps full filenames; mapping is derived deterministically from the source
+// node list (nodes with plugin === null; their id IS the filename).
+
+const SOURCE_STOPWORDS = new Set([
+  'the', 'a', 'an', 'and', 'or', 'of', 'to', 'with', 'for', 'in', 'on', 'my',
+  'i', 'you', 'your', 'how', 'way', 'is', 'are', 'this', 'that', 'it',
+]);
+
+let sourceLabels = {};        // filename → short label (e.g. "Lazy Money AI")
+let _sourceRegex = null;      // matches any known filename in escaped text
+
+function shortLabelFor(filename) {
+  const base = filename.replace(/\.txt$/i, '').replace(/_\d{4}$/, '');
+  const words = base.split(/[_\s]+/).filter(Boolean);
+  const salient = words.filter(w => !SOURCE_STOPWORDS.has(w.toLowerCase()));
+  const pick = (salient.length ? salient : words).slice(0, 3);
+  return pick
+    .map(w => w.length <= 3 ? w.toUpperCase() : w[0].toUpperCase() + w.slice(1))
+    .join(' ');
+}
+
+function buildSourceLabels(rawNodes) {
+  sourceLabels = {};
+  const used = new Set();
+  rawNodes
+    .filter(n => n.plugin == null && /\.txt$/i.test(n.id))
+    .forEach(n => {
+      let label = shortLabelFor(n.id);
+      let candidate = label, k = 2;
+      while (used.has(candidate.toLowerCase())) candidate = `${label} ${k++}`;
+      used.add(candidate.toLowerCase());
+      sourceLabels[n.id] = candidate;
+    });
+
+  const names = Object.keys(sourceLabels)
+    .sort((a, b) => b.length - a.length)        // longest-first so prefixes don't shadow
+    .map(n => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  _sourceRegex = names.length ? new RegExp(names.join('|'), 'g') : null;
+}
+
+// Replace any known source filename in already-escaped text with a clickable
+// bold short label that opens the corresponding source node.
+function applySourceShorthand(escaped) {
+  if (!_sourceRegex) return escaped;
+  return escaped.replace(_sourceRegex, (fn) => {
+    const label = sourceLabels[fn] || fn;
+    const safe = fn.replace(/"/g, '&quot;');
+    return `<strong class="src-ref node-link" data-node="${safe}">${label}</strong>`;
+  });
 }
 
 // ─── View toggle: Graph | Chat ────────────────────────────────────────────────
@@ -597,6 +701,10 @@ function addUserMessage(text) {
   scrollToBottom();
 }
 
+const THINKING_HTML =
+  '<span class="thinking"><span class="thinking-label">Thinking</span>' +
+  '<span class="thinking-dots"><i></i><i></i><i></i></span></span>';
+
 function addAssistantShell() {
   const el = document.createElement('div');
   el.className = 'msg assistant';
@@ -606,7 +714,7 @@ function addAssistantShell() {
       <div class="retrieval-head searching"><span class="dot"></span>Searching knowledge base…</div>
       <div class="retrieval-nodes"></div>
     </div>
-    <div class="msg-body"><span class="typing-cursor"></span></div>`;
+    <div class="msg-body"></div>`;
   chatMessages.appendChild(el);
   scrollToBottom();
   return {
@@ -639,10 +747,15 @@ function linkifyNodes(html) {
 }
 
 function bindNodeLinks(bodyEl) {
-  bodyEl.querySelectorAll('a.node-link').forEach(a => {
+  bodyEl.querySelectorAll('.node-link').forEach(a => {
     if (a._bound) return;
     a._bound = true;
-    a.addEventListener('click', () => selectNodeById(a.dataset.node));
+    a.addEventListener('click', () => {
+      // Topic/source links open the node in the graph detail panel, which is
+      // only visible in graph view — switch there (no-op if already there).
+      setView('graph');
+      selectNodeById(a.dataset.node);
+    });
   });
 }
 
@@ -660,10 +773,15 @@ async function sendChat() {
 
   addUserMessage(text);
   const ui = addAssistantShell();
+  // Phase 1 → 2 → 3: searching · consulted N topics · generating.
+  // Until the first token arrives, show the animated "Thinking…" indicator.
+  ui.body.innerHTML = THINKING_HTML;
   let answer = '';
+  let gotToken = false;
+  let reader = null;
 
   const finishBody = () => {
-    ui.body.innerHTML = linkifyNodes(renderMarkdown(answer || '_No response._'));
+    ui.body.innerHTML = linkifyNodes(renderMarkdown(answer || '*No response.*'));
     bindNodeLinks(ui.body);
     scrollToBottom();
   };
@@ -676,11 +794,12 @@ async function sendChat() {
     });
     if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
 
-    const reader = res.body.getReader();
+    reader = res.body.getReader();
     const decoder = new TextDecoder();
     let buffer = '';
+    let finished = false;
 
-    while (true) {
+    while (!finished) {
       const { value, done } = await reader.read();
       if (done) break;
       buffer += decoder.decode(value, { stream: true });
@@ -696,22 +815,29 @@ async function sendChat() {
 
         if (evt.type === 'nodes') {
           ui.head.classList.remove('searching');
-          ui.head.innerHTML = `<span class="dot"></span>Consulted ${evt.nodes.length} topic${evt.nodes.length !== 1 ? 's' : ''}`;
+          ui.head.innerHTML = `<span class="dot generating"></span>Consulted ${evt.nodes.length} topic${evt.nodes.length !== 1 ? 's' : ''}`;
           renderNodeChips(ui.nodes, evt.nodes);
+          // Phase 3: waiting on the model — keep the Thinking indicator visible.
+          if (!gotToken) ui.body.innerHTML = THINKING_HTML;
+          scrollToBottom();
         } else if (evt.type === 'token') {
+          gotToken = true;
           answer += evt.text;
+          ui.head.querySelector('.dot')?.classList.remove('generating');
           ui.body.innerHTML = linkifyNodes(renderMarkdown(answer)) +
             '<span class="typing-cursor"></span>';
           bindNodeLinks(ui.body);
           scrollToBottom();
         } else if (evt.type === 'error') {
           answer = answer || `⚠️ ${evt.message}`;
-          if (ui.head.classList.contains('searching')) {
-            ui.head.classList.remove('searching');
-            ui.head.innerHTML = `<span class="dot" style="background:#d36f8f"></span>Retrieval error`;
-          }
+          ui.head.classList.remove('searching');
+          ui.head.innerHTML = `<span class="dot" style="background:#d36f8f"></span>Error`;
         } else if (evt.type === 'done') {
-          // handled after loop
+          // Authoritative end-of-turn: stop reading immediately so a hung
+          // keep-alive socket can never wedge the UI (the "stuck after one
+          // question" bug). The server also sends Connection: close.
+          finished = true;
+          break;
         }
       }
     }
@@ -720,6 +846,7 @@ async function sendChat() {
     ui.head.classList.remove('searching');
     ui.head.innerHTML = `<span class="dot" style="background:#d36f8f"></span>Connection error`;
   } finally {
+    if (reader) { try { await reader.cancel(); } catch { /* ignore */ } }
     finishBody();
     chatBusy = false;
     chatSend.disabled = false;
@@ -737,6 +864,7 @@ async function sendChat() {
   }
 
   pluginColors = buildPluginColors(data.nodes);
+  buildSourceLabels(data.nodes);
   renderLegend();
 
   nodes = data.nodes.map(n => {

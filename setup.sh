@@ -21,7 +21,7 @@ brew install ollama --quiet
 # 3. Python packages
 echo "🐍 Installing Python packages..."
 pip3 install --quiet torch torchaudio transformers accelerate tqdm \
-  yt-dlp chromadb ollama numpy
+  yt-dlp chromadb ollama numpy google-genai
 
 # 4. GitHub CLI
 if ! command -v gh &>/dev/null; then
@@ -69,7 +69,12 @@ echo ""
 echo "✅ Setup complete! Reload your shell:"
 echo "    source ~/.zshrc"
 echo ""
+echo "🔑 The graph's RAG chat uses Google Gemini (free tier). Add a key:"
+echo "    1. Create one at https://aistudio.google.com/apikey"
+echo "    2. echo 'export GEMINI_API_KEY=\"AIza...\"' >> ~/.zshrc && source ~/.zshrc"
+echo "   (Transcription + knowledge extraction run locally and need no key.)"
+echo ""
 echo "Commands:"
 echo "    scribe.sh <youtube_url> [filename]   # transcribe + push to GitHub"
 echo "    updateDB.sh                          # pull + process into knowledge base"
-echo "    serve.sh                             # open knowledge graph in browser"
+echo "    serve.sh                             # open knowledge graph + RAG chat in browser"
