@@ -1,70 +1,33 @@
 # Scribe
 
-A personal knowledge pipeline that runs entirely on-device. Transcribe YouTube videos, extract structured knowledge with a local LLM, and store it as vector embeddings for RAG queries — all free, all offline after the first model download.
-
-```
-scribe.sh <url>   →   transcript pushed to GitHub
-updateDB.sh       →   new facts extracted + embedded, knowledge base updated
-```
+A personal knowledge pipeline that runs entirely on-device. Transcribe YouTube videos, extract structured knowledge with a local LLM, store it as vector embeddings for RAG, and explore it as an interactive graph.
 
 ---
 
-## What it does
+## Commands
 
-### Stage 1 — Transcription (`scribe.sh`)
-Downloads the audio from any YouTube URL with `yt-dlp`, transcribes it locally using Qwen3-ASR-1.7B on Apple Silicon (MPS), and pushes the `.txt` file directly to the `transcripts/` folder in this GitHub repo. Nothing is saved locally.
-
-### Stage 2 — Knowledge extraction (`updateDB.sh`)
-Pulls the latest transcripts, then for each unprocessed file:
-
-1. **Chunks** the transcript into ~400-word sliding windows with an 80-word overlap so no context is lost at chunk boundaries
-2. **Extracts** facts, named entities, and topic labels from each chunk using `qwen3:1.7b` via Ollama, returning structured JSON
-3. **Embeds** each extracted fact and each full chunk using `nomic-embed-text` and stores them in ChromaDB (two collections: `facts` for precise queries, `chunks` for full-context RAG)
-4. **Detects connections** — for each new fact, queries existing facts from other sources; facts with cosine distance < 0.20 are logged to `knowledge/connections.json` as `confirms` or `related`
-5. **Synthesises topic notes** — queries all facts related to each topic and asks the LLM to write a 2-3 paragraph Markdown summary, noting contradictions across sources
-6. **Pushes** the updated `knowledge/` directory to GitHub for cross-machine sync
-
----
-
-## Models
-
-| Model | Purpose | Size | Where |
-|---|---|---|---|
-| `Qwen3-ASR-1.7B` | Speech-to-text | **3.4 GB** (float16) | HuggingFace, auto-downloads on first `scribe.sh` run |
-| `qwen3:1.7b` | Fact extraction + synthesis | **1.1 GB** (Q4_K_M via Ollama) | `ollama pull qwen3:1.7b` |
-| `nomic-embed-text` | Semantic embeddings | **274 MB** (via Ollama) | `ollama pull nomic-embed-text` |
-
-**Total first-run download: ~4.8 GB**
-
-Download times (approximate, at 100 Mbps):
-- ASR model: ~5 min
-- Extraction model: ~1.5 min
-- Embedding model: ~25 sec
-
-Subsequent runs load all models from local cache — no re-download.
-
----
-
-## Speed (Apple M5)
-
-| Step | Speed |
+| Command | What it does |
 |---|---|
-| Audio download | ~5–15 sec (audio only, no video) |
-| Transcription | ~12× real-time — **60-min video ≈ 5 min** |
-| Extraction per chunk (~400 words) | ~3–5 sec |
-| Embedding per text | ~0.3 sec |
-| Full `updateDB.sh` on a 1-hr transcript | **~15–20 min** |
+| `scribe.sh <url> [name]` | Download + transcribe a YouTube video, push transcript to GitHub |
+| `updateDB.sh` | Pull new transcripts, extract knowledge, update GitHub |
+| `updateDB.sh --rebuild` | Wipe ChromaDB and reprocess everything from scratch |
+| `serve.sh` | Generate graph data and open the knowledge graph in your browser |
 
-The 15-min processing window is one-time per transcript. Once embedded, RAG queries are instant.
+**Typical workflow:**
+```bash
+scribe.sh https://www.youtube.com/watch?v=...   # transcribe
+updateDB.sh                                      # process into knowledge base
+serve.sh                                         # explore the graph
+```
 
 ---
 
-## Quick start
+## Setup
 
 ```bash
 git clone https://github.com/pranavgupta55/Scribe.git
 cd Scribe
-gh auth login        # one-time GitHub CLI auth
+gh auth login        # one-time GitHub CLI auth (browser flow)
 bash setup.sh
 source ~/.zshrc
 ```
@@ -73,19 +36,52 @@ See [SETUP.md](SETUP.md) for full details and troubleshooting.
 
 ---
 
-## Usage
+## What it does
 
-```bash
-# 1. Transcribe a video (uploads to GitHub, nothing saved locally)
-scribe.sh https://www.youtube.com/watch?v=...
-scribe.sh https://www.youtube.com/watch?v=... my-custom-name   # explicit filename
+### Stage 1 — Transcription (`scribe.sh`)
+Downloads audio from any YouTube URL with `yt-dlp`, transcribes it locally using Qwen3-ASR-1.7B on Apple Silicon (MPS), and pushes the `.txt` to `transcripts/` in this repo via the GitHub API. Nothing saved locally.
 
-# 2. Process into knowledge base (run after one or more transcriptions)
-updateDB.sh
+### Stage 2 — Knowledge extraction (`updateDB.sh`)
+For each unprocessed transcript:
+1. **Chunks** into ~400-word sliding windows with 80-word overlap (sentence-boundary aware)
+2. **Extracts** facts, entities, and topic labels per chunk with `qwen3:1.7b` via Ollama
+3. **Embeds** each fact and full chunk using `nomic-embed-text` into ChromaDB (`facts` and `chunks` collections)
+4. **Detects connections** — facts from different sources within cosine distance 0.20 are logged to `knowledge/connections.json` as `confirms` or `related`
+5. **Synthesises topic notes** — queries all facts per topic, LLM writes a Markdown summary noting contradictions across sources
+6. **Pushes** updated `knowledge/` to GitHub
 
-# 3. Rebuild everything from scratch on a new machine
-updateDB.sh --rebuild
-```
+### Stage 3 — Graph explorer (`serve.sh`)
+Generates `graph/graph.json` from the knowledge base and serves an Obsidian-style interactive graph. Topics and sources are nodes; edges are co-occurrence and semantic connections. Nodes are PCA-seeded from their embedding positions when ChromaDB is populated.
+
+---
+
+## Models
+
+| Model | Purpose | Size | Storage |
+|---|---|---|---|
+| `Qwen3-ASR-1.7B` | Speech-to-text | **3.4 GB** (float16) | `models/hf/` — auto-downloads on first `scribe.sh` |
+| `qwen3:1.7b` | Fact extraction + synthesis | **1.1 GB** (Q4_K_M) | `models/ollama/` — pulled by `setup.sh` |
+| `nomic-embed-text` | Semantic embeddings | **274 MB** | `models/ollama/` — pulled by `setup.sh` |
+
+All models are stored inside the Scribe repo folder under `models/` and are gitignored.
+
+**Total first-run download: ~4.8 GB**
+
+Download times at 100 Mbps:
+- ASR model (HuggingFace): ~5 min (on first `scribe.sh` run)
+- Ollama models: ~2 min (during `setup.sh`)
+
+---
+
+## Speed (Apple M5)
+
+| Step | Speed |
+|---|---|
+| Audio download (yt-dlp) | ~5–15 sec |
+| Transcription (ASR) | **~12× real-time** — 60-min video ≈ 5 min |
+| Extraction per chunk (~400 words) | ~3–5 sec |
+| Embedding per text | ~0.3 sec |
+| Full `updateDB.sh` on a 1-hr transcript | **~15–20 min** |
 
 ---
 
@@ -93,22 +89,26 @@ updateDB.sh --rebuild
 
 ```
 transcripts/
-  video-title.txt          ← raw transcript (synced via GitHub)
+  video-title.txt          ← raw transcripts (synced via GitHub)
 
 knowledge/
   _index.md                ← auto-generated topic map
   sources.json             ← processing metadata per transcript
-  connections.json         ← cross-source fact matches (confirms / related)
+  connections.json         ← cross-source fact matches
   topics/
     machine_learning.md    ← LLM-synthesised note per topic
-    ...
 
-.chroma/                   ← local ChromaDB (gitignored, rebuilt with --rebuild)
-  chunks/                  ← full transcript chunks for RAG context
-  facts/                   ← individual extracted claims
+graph/
+  graph.json               ← generated by serve.sh / export_graph.py
+  index.html               ← interactive graph viewer
+  graph.js                 ← force-directed graph engine
+
+models/                    ← all model weights (gitignored)
+  hf/                      ← HuggingFace / ASR model cache
+  ollama/                  ← Ollama model store
+
+.chroma/                   ← local ChromaDB (gitignored, rebuild with --rebuild)
 ```
-
-`knowledge/` is committed to GitHub and syncs across machines. `.chroma/` is local-only; run `updateDB.sh --rebuild` on a new machine to repopulate it.
 
 ---
 
@@ -119,15 +119,25 @@ import chromadb
 
 client = chromadb.PersistentClient(path=".chroma")
 
-# Retrieve relevant context for a question
+# Full-context retrieval (best for answering questions)
 chunks = client.get_collection("chunks")
 results = chunks.query(query_texts=["your question here"], n_results=5)
 for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
     print(f"[{meta['source']}]\n{doc}\n")
 
-# Or query individual extracted facts directly
+# Precise fact lookup
 facts = client.get_collection("facts")
 results = facts.query(query_texts=["your question here"], n_results=10)
 ```
 
-Pass the retrieved chunks as context to any LLM to answer questions grounded in your transcript archive.
+Pass retrieved chunks as context to any LLM to answer questions grounded in your archive.
+
+---
+
+## Syncing across machines
+
+Transcripts and the `knowledge/` directory live in GitHub. On any machine:
+```bash
+git pull                 # get latest transcripts + knowledge
+updateDB.sh --rebuild    # repopulate local ChromaDB from existing transcripts
+```

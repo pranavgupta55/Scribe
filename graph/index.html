@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scribe Knowledge Graph</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      background: #0d0d0d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #ccc;
+    }
+
+    /* ── Left: graph canvas ── */
+    #left {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    #canvas {
+      display: block;
+      cursor: grab;
+    }
+    #canvas.dragging { cursor: grabbing; }
+
+    #controls {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 14px 16px;
+      min-width: 200px;
+      font-size: 12px;
+      z-index: 10;
+      user-select: none;
+    }
+
+    #controls h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e0e0e0;
+      margin-bottom: 4px;
+      letter-spacing: 0.03em;
+    }
+
+    .control-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .control-row label { color: #888; flex-shrink: 0; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100px;
+      height: 3px;
+      border-radius: 2px;
+      background: #333;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #7c6af7;
+      cursor: pointer;
+    }
+
+    /* Legend (source → colour) */
+    #legend {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 6px;
+      padding-top: 10px;
+      border-top: 1px solid #2a2a2a;
+    }
+    #legend-title {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 2px;
+    }
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      color: #888;
+    }
+    .legend-swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    #hint {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      color: #383838;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    #center-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 7px;
+      color: #888;
+      font-size: 11px;
+      font-family: inherit;
+      padding: 6px 10px;
+      cursor: pointer;
+      z-index: 10;
+      transition: color 0.15s, border-color 0.15s;
+      user-select: none;
+    }
+    #center-btn:hover { color: #c0b8f0; border-color: #4a3f9f; }
+
+    /* Empty / error state */
+    #empty-state {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      padding: 40px;
+      z-index: 30;
+      background: #0d0d0d;
+    }
+    #empty-state.show { display: flex; }
+    #empty-state .es-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #c0b8f0;
+    }
+    #empty-state .es-sub {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+    }
+    #empty-state code {
+      background: #1a1730;
+      color: #a89aff;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 12px;
+    }
+
+    /* ── Right: two-column panel ── */
+    #right {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;
+      background: #111;
+      border-left: 1px solid #1e1e1e;
+    }
+
+    /* Column 1: node list */
+    #node-list-col {
+      width: 160px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 12px 0 12px;
+      scrollbar-width: thin;
+      scrollbar-color: #2a2a2a transparent;
+    }
+    #node-list-col::-webkit-scrollbar { width: 4px; }
+    #node-list-col::-webkit-scrollbar-track { background: transparent; }
+    #node-list-col::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+
+    #list-header {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #444;
+      padding: 0 14px 10px;
+    }
+
+    .node-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 14px;
+      cursor: pointer;
+      border-radius: 0;
+      transition: background 0.1s;
+      gap: 6px;
+    }
+    .node-item:hover { background: #1a1a1a; }
+    .node-item.active {
+      background: #1e1a38;
+      border-left: 2px solid #7c6af7;
+      padding-left: 12px;
+    }
+
+    .node-item-name {
+      font-size: 11px;
+      color: #999;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+      min-width: 0;
+    }
+    .node-item.active .node-item-name { color: #c0b8f0; }
+
+    .node-item-degree {
+      font-size: 10px;
+      color: #3a3660;
+      background: #1e1a38;
+      border-radius: 8px;
+      padding: 1px 5px;
+      flex-shrink: 0;
+    }
+    .node-item.active .node-item-degree { color: #7c6af7; background: #2a2550; }
+
+    /* Column 2: detail (initially minimized) */
+    #node-detail-col {
+      width: 0;
+      overflow: hidden;
+      transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border-left: 1px solid #1e1e1e;
+      background: #0f0f0f;
+      flex-shrink: 0;
+    }
+    #node-detail-col.open { width: 400px; }
+
+    #detail-inner {
+      width: 400px;
+      padding: 20px 16px;
+      height: 100%;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #2a2a2a transparent;
+    }
+
+    #detail-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #d0c8ff;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    #detail-meta {
+      font-size: 10px;
+      color: #4a4475;
+      margin-bottom: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    #detail-desc {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.7;
+    }
+
+    .detail-subhead {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #444;
+      margin: 16px 0 6px;
+    }
+
+    #detail-summary-wrap {
+      position: relative;
+    }
+
+    #detail-summary {
+      font-size: 12px;
+      color: #6f6f80;
+      line-height: 1.65;
+      font-style: italic;
+      overflow: hidden;
+      max-height: 108px;
+    }
+
+    #summary-resize-handle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 14px;
+      margin-top: 4px;
+      cursor: ns-resize;
+      user-select: none;
+    }
+    #summary-resize-handle::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      border-radius: 2px;
+      background: #2a2a3a;
+      transition: background 0.15s;
+    }
+    #summary-resize-handle:hover::before { background: #5a5480; }
+
+    #detail-connections {
+      margin-top: 18px;
+    }
+
+    #detail-connections h4 {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .conn-chip {
+      display: inline-block;
+      font-size: 11px;
+      color: #7c6af7;
+      background: #1a1730;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin: 2px 3px 2px 0;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .conn-chip:hover { background: #251f4a; color: #a89aff; }
+
+    /* Tooltip */
+    #tooltip {
+      position: fixed;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #ccc;
+      pointer-events: none;
+      display: none;
+      z-index: 20;
+    }
+  </style>
+</head>
+<body>
+  <div id="left">
+    <canvas id="canvas"></canvas>
+
+    <div id="controls">
+      <h2>Graph Controls</h2>
+      <div class="control-row">
+        <label>Repulsion</label>
+        <input type="range" id="repulsion" min="50" max="800" value="300" />
+      </div>
+      <div class="control-row">
+        <label>Link dist</label>
+        <input type="range" id="linkDist" min="20" max="200" value="90" />
+      </div>
+      <div class="control-row">
+        <label>Momentum</label>
+        <input type="range" id="momentum" min="1" max="20" value="8" />
+      </div>
+      <div class="control-row">
+        <label>Node size</label>
+        <input type="range" id="nodeSize" min="2" max="12" value="5" />
+      </div>
+      <div id="legend">
+        <div id="legend-title">Sources</div>
+        <!-- populated by graph.js -->
+      </div>
+    </div>
+
+    <div id="hint">Scroll to zoom · Drag to pan · Click to select · Drag nodes</div>
+
+    <button id="center-btn" title="Fit all nodes in view">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="10" y="1" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="1" y="10" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="10" y="10" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="7" cy="7" r="1.5" fill="currentColor"/>
+      </svg>
+      Center
+    </button>
+
+    <div id="empty-state">
+      <div class="es-title">No knowledge graph yet</div>
+      <div class="es-sub">
+        Add transcripts and process them first:<br/>
+        <code>updateDB.sh</code> then <code>serve.sh</code>
+      </div>
+    </div>
+  </div>
+
+  <div id="right">
+    <div id="node-list-col">
+      <div id="list-header">Topics</div>
+      <!-- populated by graph.js -->
+    </div>
+
+    <div id="node-detail-col">
+      <div id="detail-inner">
+        <div id="detail-title"></div>
+        <div id="detail-meta"></div>
+        <div id="detail-desc"></div>
+        <div id="detail-summary-wrap" style="display:none">
+          <div class="detail-subhead">Knowledge Note</div>
+          <div id="detail-summary"></div>
+          <div id="summary-resize-handle"></div>
+        </div>
+        <div id="detail-connections">
+          <h4>Connections</h4>
+          <div id="detail-chips"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tooltip"></div>
+
+  <script type="module" src="graph.js"></script>
+</body>
+</html>
