@@ -863,6 +863,12 @@ async function sendChat() {
           setDevField(devSystem, evt.system);
           setDevField(devContext, evt.context);
           setDevField(devPrompt, evt.prompt);
+        } else if (evt.type === 'notice') {
+          // Non-fatal status (e.g. Gemini rate-limited → local qwen fallback)
+          ui.head.classList.remove('searching');
+          ui.head.innerHTML = `<span class="dot generating"></span>${evt.text}`;
+          if (!gotToken) ui.body.innerHTML = THINKING_HTML;
+          scrollToBottom();
         } else if (evt.type === 'token') {
           gotToken = true;
           answer += evt.text;

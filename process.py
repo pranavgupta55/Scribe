@@ -57,6 +57,7 @@ Usage:
     python3 process.py --rebuild-index     # regenerate knowledge/_index.md only
 """
 
+import os
 import sys
 import json
 import re
@@ -76,6 +77,18 @@ TRANSCRIPTS_DIR = SCRIPT_DIR / "transcripts"
 
 EXTRACT_MODEL = "qwen3:1.7b"
 EMBED_MODEL   = "nomic-embed-text"
+
+# --- Gemini (preferred LLM backend, free tier; qwen is the local fallback) ----------
+# All non-embedding LLM calls flow through llm_json(), which prefers Gemini when a key is
+# present and Gemini isn't in a rate-limit cooldown, and falls back to local qwen otherwise.
+# Embeddings stay LOCAL (see embed()) — the stored vector space + server.py retrieval
+# depend on nomic-embed-text, and embeddings are the highest-volume calls.
+GEMINI_API_KEY_ENV    = "GEMINI_API_KEY"
+GEMINI_MODEL          = "gemini-2.5-flash"   # primary
+GEMINI_MODEL_FALLBACK = "gemini-2.0-flash"   # if the primary is unavailable
+# If a 429 wants us idle longer than this, fall straight back to qwen instead of sleeping.
+GEMINI_MAX_SLEEP_S    = 15
+GEMINI_COOLDOWN_CAP_S = 3600  # never cool down longer than an hour before re-probing
 
 # --- Windowing (Pass A, task 0) ----------------------------------------------------
 # A 40-50k-word transcript is ~55-65k tokens and overflows qwen3:1.7b's 40960-token
@@ -327,6 +340,57 @@ RULES:
 
 Return EXACTLY this JSON and nothing else:
 {{"topics": ["Canonical Topic A", "Canonical Topic B", "..."]}}
+"""
+
+# ---- Pass A (Gemini whole-transcript): segment the FULL transcript in ONE call ------
+# Gemini's ~1M-token context holds an entire multi-hour transcript, so when Gemini is the
+# backend we skip windowing entirely and ask for the canonical topics + ordered sections
+# for the whole video at once (same output schema as the windowed map-reduce, minus the
+# per-window bookkeeping). The qwen fallback keeps the windowed flow (its 40960-ctx can't
+# hold a 50k-word transcript).
+_WHOLE_SEGMENT_SYSTEM = (
+    "You are a precise knowledge-graph designer and transcript analyst. You read an ENTIRE "
+    "video transcript and produce (1) the canonical topic labels that organize its ideas "
+    "and (2) the ordered natural sections the speaker moves through.\n"
+    + _GROUNDING_LAWS
+)
+
+_WHOLE_SEGMENT_TMPL = """Below is the COMPLETE transcript of one video, wrapped in markers.
+
+<<<TRANSCRIPT_START>>>
+{transcript}
+<<<TRANSCRIPT_END>>>
+
+TASK: analyze the WHOLE transcript and return:
+1. video_summary — one sentence: the specific thing this video teaches or argues.
+2. topics — the canonical TOPIC LABELS (knowledge-graph nodes) for the whole video.
+3. sections — the natural sections IN ORDER in which the speaker moves through ideas.
+
+RULES for topics:
+- {lo_t}-{hi_t} labels (scale with length: a long video has more), each 1-3 words, Title Case.
+- Each label names something the speaker REALLY discusses (grounded).
+- DEDUPLICATE: merge synonyms/near-synonyms into ONE label. Order most→least central.
+- Drop labels too vague to be a node ("Tips", "Overview").
+
+RULES for sections:
+- {lo_s}-{hi_s} sections IN ORDER across the whole transcript.
+- start_marker MUST be the first 8 words of the section copied VERBATIM from the transcript
+  (it is used to locate the section in the raw text). Use the actual words where the idea begins.
+- premise/conclusion quote concrete numbers, names, and steps. Never generic.
+
+Return EXACTLY this JSON and nothing else:
+{{
+  "video_summary": "one sentence: the specific thing this video teaches or argues",
+  "topics": ["Topic A", "Topic B", "..."],
+  "sections": [
+    {{
+      "title": "short section title",
+      "start_marker": "the first 8 words of this section, copied VERBATIM from the transcript",
+      "premise": "the specific setup that OPENS this section (one sentence, from the transcript)",
+      "conclusion": "the specific takeaway that CLOSES this section (one sentence, from the transcript)"
+    }}
+  ]
+}}
 """
 
 # ---- Pass B0: draft PLAN (CoT scaffold, task 1) ------------------------------------
@@ -626,8 +690,193 @@ RULES:
 """
 
 
+# ---------------------------------------------------------------------------
+# Unified LLM layer — Gemini-first, qwen fallback (task 1)
+#
+# Every non-embedding LLM call in the pipeline goes through llm_json(). It prefers Gemini
+# (free tier, much stronger, ~1M-token context so long transcripts need no windowing) and
+# falls back to local Ollama qwen3:1.7b whenever:
+#   * GEMINI_API_KEY is unset (qwen-only, original behaviour preserved), or
+#   * Gemini is in a rate-limit cooldown (a prior 429 asked us to wait too long), or
+#   * a Gemini call fails outright for this request.
+# On a 429/RESOURCE_EXHAUSTED we parse the suggested retry delay: if <=15s we sleep+retry
+# once, otherwise (or on unknown/daily-quota) we set a module-level cooldown and fall back
+# to qwen immediately instead of sitting idle.
+# ---------------------------------------------------------------------------
+
+# Module-level Gemini state. time.time() is fine here (plain script, not a workflow).
+_gemini_client_obj   = None        # cached genai.Client (None until first use / disabled)
+_gemini_client_tried = False       # have we attempted to build the client yet?
+_gemini_cooldown_until = 0.0       # epoch secs; while now() < this, all calls go to qwen
+_llm_stats = {"gemini": 0, "qwen": 0, "qwen_fallback": 0}  # call accounting for the summary
+
+
+def _gemini_available():
+    """Build (once) and return a Gemini client, or None if unavailable/disabled.
+
+    Returns None when the API key is absent or the SDK isn't installed. Cooldown is checked
+    separately by the caller so we can log the cooldown→qwen transition distinctly.
+    """
+    global _gemini_client_obj, _gemini_client_tried
+    if _gemini_client_tried:
+        return _gemini_client_obj
+    _gemini_client_tried = True
+    api_key = os.environ.get(GEMINI_API_KEY_ENV)
+    if not api_key:
+        print("  ⚙️  GEMINI_API_KEY not set — using local qwen for all LLM calls.")
+        return None
+    try:
+        from google import genai
+        _gemini_client_obj = genai.Client(api_key=api_key)
+        print(f"  ⚙️  Gemini enabled ({GEMINI_MODEL}, fallback {GEMINI_MODEL_FALLBACK}); "
+              f"qwen is the rate-limit fallback.")
+    except Exception as e:  # noqa: BLE001 — SDK missing or client build failed
+        print(f"  ⚙️  Gemini unavailable ({e}) — using local qwen for all LLM calls.")
+        _gemini_client_obj = None
+    return _gemini_client_obj
+
+
+def _gemini_thinking_config():
+    """Return a ThinkingConfig disabling thinking, or None if the SDK lacks it."""
+    try:
+        from google.genai import types
+        return types.ThinkingConfig(thinking_budget=0)
+    except Exception:  # noqa: BLE001 — old SDK; omit and let the model think
+        return None
+
+
+def _parse_retry_delay(err):
+    """Best-effort extract of the suggested retry delay (seconds) from a Gemini 429 error.
+
+    Looks for the RetryInfo `retryDelay: "32s"` hint Gemini returns. None if not present.
+    """
+    msg = str(err)
+    m = re.search(r"retry[\s_]*delay['\"]?\s*[:={]\s*['\"]?(\d+(?:\.\d+)?)\s*s", msg, re.I)
+    if m:
+        return float(m.group(1))
+    m = re.search(r"['\"]?seconds['\"]?\s*[:=]\s*(\d+)", msg, re.I)
+    if m:
+        return float(m.group(1))
+    return None
+
+
+def _is_rate_limit(err):
+    msg = str(err).lower()
+    return ("429" in msg or "resource_exhausted" in msg or "resource exhausted" in msg
+            or "rate limit" in msg or "quota" in msg or "too many requests" in msg)
+
+
+def _gemini_json(client, system, user, *, max_tokens, temperature):
+    """One Gemini generate_content call in JSON mode, parsed. Returns dict.
+
+    Raises on failure (rate-limit or otherwise) so the caller can decide fallback/cooldown.
+    """
+    from google.genai import types
+    cfg_kwargs = dict(
+        system_instruction=system,
+        temperature=temperature,
+        max_output_tokens=max_tokens,
+        response_mime_type="application/json",
+    )
+    tcfg = _gemini_thinking_config()
+    if tcfg is not None:
+        cfg_kwargs["thinking_config"] = tcfg
+    config = types.GenerateContentConfig(**cfg_kwargs)
+
+    last_err = None
+    for model in (GEMINI_MODEL, GEMINI_MODEL_FALLBACK):
+        try:
+            resp = client.models.generate_content(
+                model=model, contents=user, config=config)
+            raw = (getattr(resp, "text", None) or "").strip()
+            if not raw:
+                raise ValueError("empty Gemini response")
+            return json.loads(raw)
+        except Exception as e:  # noqa: BLE001
+            last_err = e
+            # On a rate-limit, don't waste the fallback model (same quota bucket) — surface
+            # it immediately so the caller can cool down / fall back to qwen.
+            if _is_rate_limit(e):
+                raise
+            continue
+    raise last_err if last_err else RuntimeError("Gemini call failed")
+
+
+def llm_json(system, user, *, max_tokens, temperature=0.2, qwen_options=None):
+    """Unified JSON LLM call: Gemini when available + not cooling down, else qwen.
+
+    `qwen_options` is the Ollama options dict used for the fallback path (num_ctx etc.).
+    Returns a parsed dict, or None if every backend failed.
+    """
+    global _gemini_cooldown_until
+    qwen_options = qwen_options or DRAFT_OPTS
+    client = _gemini_available()
+
+    if client is not None:
+        now = time.time()
+        if now >= _gemini_cooldown_until:
+            if _gemini_cooldown_until:           # cooldown just expired — re-probe Gemini
+                print("  ⚙️  Gemini cooldown elapsed — re-probing Gemini." + " " * 20)
+                _gemini_cooldown_until = 0.0
+            try:
+                out = _gemini_json(client, system, user,
+                                   max_tokens=max_tokens, temperature=temperature)
+                _llm_stats["gemini"] += 1
+                return out
+            except Exception as e:  # noqa: BLE001
+                if _is_rate_limit(e):
+                    delay = _parse_retry_delay(e)
+                    if delay is not None and delay <= GEMINI_MAX_SLEEP_S:
+                        # Short wait — sleep then retry Gemini once before giving up.
+                        print(f"  ⚙️  Gemini rate-limited; retry in {delay:.0f}s "
+                              f"(<= {GEMINI_MAX_SLEEP_S}s), waiting." + " " * 12)
+                        time.sleep(delay + 0.5)
+                        try:
+                            out = _gemini_json(client, system, user,
+                                               max_tokens=max_tokens, temperature=temperature)
+                            _llm_stats["gemini"] += 1
+                            return out
+                        except Exception as e2:  # noqa: BLE001
+                            e = e2  # fall through to cooldown + qwen
+                    # Long / unknown / daily-quota delay → cool down + fall back to qwen.
+                    cd = delay if (delay and delay > GEMINI_MAX_SLEEP_S) else GEMINI_COOLDOWN_CAP_S
+                    cd = min(cd, GEMINI_COOLDOWN_CAP_S)
+                    _gemini_cooldown_until = time.time() + cd
+                    print(f"  ⚙️  Gemini rate-limited (retry ~{int(cd)}s) — cooling down, "
+                          f"falling back to qwen." + " " * 8)
+                else:
+                    print(f"  ⚙️  Gemini call failed ({str(e)[:80]}) — falling back to qwen "
+                          f"for this call." + " " * 8)
+                _llm_stats["qwen_fallback"] += 1
+                return _chat_json(system, user, qwen_options)
+        else:
+            # In cooldown — straight to qwen, no idle wait.
+            _llm_stats["qwen_fallback"] += 1
+            return _chat_json(system, user, qwen_options)
+
+    # No Gemini at all — qwen-only path (original behaviour).
+    _llm_stats["qwen"] += 1
+    return _chat_json(system, user, qwen_options)
+
+
+def _llm_summary():
+    g = _llm_stats["gemini"]
+    qf = _llm_stats["qwen_fallback"]
+    q = _llm_stats["qwen"]
+    parts = [f"{g} Gemini"]
+    if qf:
+        parts.append(f"{qf} qwen (fallback)")
+    if q:
+        parts.append(f"{q} qwen")
+    print(f"\n  📊 LLM calls: {', '.join(parts)}  (total {g + qf + q})")
+
+
 def _chat_json(system, user, options):
-    """One Ollama chat call in JSON mode, thinking-stripped, parsed. None on failure."""
+    """One Ollama chat call in JSON mode, thinking-stripped, parsed. None on failure.
+
+    This is the qwen fallback implementation used by llm_json(); it preserves the original
+    /no_think + <think>-stripping + retry behaviour.
+    """
     import ollama
     for attempt in range(3):
         try:
@@ -645,6 +894,16 @@ def _chat_json(system, user, options):
             if attempt == 2:
                 return None
             time.sleep(1)
+
+
+def _llm(system, user, opts):
+    """Convenience wrapper: route a pass through llm_json, deriving Gemini's max_tokens /
+    temperature from the qwen options dict (num_predict / temperature) so call sites read
+    the same as before. Gemini gets a roomier token budget since it has no tiny context."""
+    max_tokens = max(int(opts.get("num_predict", 1024)), 1024)
+    temperature = float(opts.get("temperature", 0.2))
+    return llm_json(system, user, max_tokens=max_tokens, temperature=temperature,
+                    qwen_options=opts)
 
 
 def _dedupe_topics(topics):
@@ -694,7 +953,7 @@ def _fmt_plan(plan):
 def _segment_window(win_text, idx, total):
     """A0 plan -> A1 topics -> A2 sections for ONE window. Returns (topics, sections, summary)."""
     # A0 — plan (CoT scaffold)
-    plan = _chat_json(
+    plan = _llm(
         _AWIN_PLAN_SYSTEM,
         _AWIN_PLAN_TMPL.format(transcript=win_text, idx=idx, total=total),
         PLAN_OPTS,
@@ -702,7 +961,7 @@ def _segment_window(win_text, idx, total):
     plan_block = _fmt_plan(plan)
 
     # A1 — topics for this window
-    a1 = _chat_json(
+    a1 = _llm(
         _TOPICS_SYSTEM,
         _TOPICS_TMPL.format(transcript=win_text, idx=idx, total=total, plan=plan_block,
                             lo=WIN_TOPICS_LOW, hi=WIN_TOPICS_HIGH),
@@ -713,7 +972,7 @@ def _segment_window(win_text, idx, total):
     # A2 — sections for this window, conditioned on its topics (retry once if under-segmented)
     best_sections, best_summary = [], ""
     for _ in range(2):
-        a2 = _chat_json(
+        a2 = _llm(
             _SECTIONS_SYSTEM,
             _SECTIONS_TMPL.format(transcript=win_text, idx=idx, total=total,
                                   topic_list=", ".join(win_topics) if win_topics else "(none)",
@@ -740,7 +999,7 @@ def _reduce_topics(topic_counts, n_win):
 
     raw_block = "\n".join(f'- "{t}" (in {c} excerpt{"s" if c != 1 else ""})'
                           for t, c in ordered)
-    data = _chat_json(
+    data = _llm(
         _REDUCE_SYSTEM,
         _REDUCE_TMPL.format(n_win=n_win, raw_block=raw_block, max_t=MAX_TOPICS_GLOBAL),
         REDUCE_OPTS,
@@ -752,14 +1011,65 @@ def _reduce_topics(topic_counts, n_win):
     return merged
 
 
-def llm_segment(full_text):
-    """Pass A — WINDOWED map-reduce. → {video_summary, topics, sections}.
+def _segment_whole_gemini(full_text):
+    """Pass A (Gemini) — segment the WHOLE transcript in ONE call. None if it fails.
 
-    MAP: per ~6k-word window, A0 plan -> A1 topics -> A2 sections.
-    REDUCE: A3 merges per-window topics into a canonical global set; the ordered per-window
-    sections are concatenated into the global ordered section list. Counts scale with
-    length because a longer transcript simply has more windows.
+    Returns {video_summary, topics, sections, n_windows:1} with sections tagged _window=0
+    so split_into_sections() (a global marker search) still works. Topic/section counts
+    scale with transcript length (more words ⇒ ask for more nodes), capped at the globals.
     """
+    n_words = len(full_text.split())
+    # Scale targets with length, bounded by the global caps. Roughly: ~1 topic / 1k words
+    # and ~1 section / 800 words, within sane floors/ceilings.
+    hi_t = max(WIN_TOPICS_HIGH, min(MAX_TOPICS_GLOBAL, n_words // 1000))
+    lo_t = max(WIN_TOPICS_LOW, hi_t // 2)
+    hi_s = max(WIN_MAX_SECTIONS, min(MAX_SECTIONS_GLOBAL, n_words // 800))
+    lo_s = max(WIN_MIN_SECTIONS, hi_s // 2)
+
+    # Give Gemini a generous output budget — many sections + premises/conclusions.
+    data = llm_json(
+        _WHOLE_SEGMENT_SYSTEM,
+        _WHOLE_SEGMENT_TMPL.format(transcript=full_text, lo_t=lo_t, hi_t=hi_t,
+                                   lo_s=lo_s, hi_s=hi_s),
+        max_tokens=8192, temperature=0.2, qwen_options=SECTIONS_OPTS,
+    )
+    if not data:
+        return None
+    topics = _dedupe_topics(data.get("topics", []))[:MAX_TOPICS_GLOBAL]
+    sections = [{**s, "_window": 0} for s in data.get("sections", [])
+                if isinstance(s, dict)][:MAX_SECTIONS_GLOBAL]
+    if not topics or not sections:
+        return None
+    return {
+        "video_summary": (data.get("video_summary") or "").strip(),
+        "topics": topics,
+        "sections": sections,
+        "n_windows": 1,
+    }
+
+
+def llm_segment(full_text):
+    """Pass A — Gemini whole-transcript (single call) when available, else WINDOWED qwen.
+
+    Gemini path: send the ENTIRE transcript in ONE call (no windowing — Gemini handles
+    ~1M tokens). qwen fallback path (below): map-reduce over ~6k-word windows because
+    qwen3:1.7b's 40960-token window can't hold a 50k-word transcript.
+      MAP: per window, A0 plan -> A1 topics -> A2 sections.
+      REDUCE: A3 merges per-window topics into a canonical global set; ordered per-window
+      sections are concatenated. Counts scale with length (a longer transcript = more windows).
+    """
+    # Prefer a single whole-transcript Gemini call when Gemini is live and not cooling down.
+    if _gemini_available() is not None and time.time() >= _gemini_cooldown_until:
+        print("  🪟 Pass A — Gemini whole-transcript (single call, no windowing)..."
+              + " " * 6, end="\r")
+        whole = _segment_whole_gemini(full_text)
+        if whole:
+            print(f"  🧠 Pass A — Gemini whole-transcript: {len(whole['topics'])} topics · "
+                  f"{len(whole['sections'])} sections" + " " * 12)
+            return whole
+        print("  ⚠️  Pass A — Gemini whole-transcript failed; using windowed fallback."
+              + " " * 6)
+
     windows = _windows(full_text)
     n_win = len(windows)
     print(f"  🪟 Pass A — {n_win} window(s) "
@@ -837,7 +1147,7 @@ def llm_extract(section_text, section_title, topic_list):
     tl = ", ".join(topic_list) if topic_list else "(none)"
 
     # B0 — plan: which concrete facts are worth extracting (CoT scaffold)
-    plan = _chat_json(
+    plan = _llm(
         _DRAFT_PLAN_SYSTEM,
         _DRAFT_PLAN_TMPL.format(title=section_title, section=section_text),
         DRAFT_PLAN_OPTS,
@@ -845,7 +1155,7 @@ def llm_extract(section_text, section_title, topic_list):
     plan_block = _fmt_plan(plan)
 
     # B1 — draft candidates (up to 8), building on the plan
-    draft = _chat_json(
+    draft = _llm(
         _DRAFT_SYSTEM,
         _DRAFT_TMPL.format(title=section_title, topic_list=tl, section=section_text,
                            plan=plan_block),
@@ -858,7 +1168,7 @@ def llm_extract(section_text, section_title, topic_list):
     # B2 — verify + refine against the transcript section (self-refine step)
     claims = draft_claims
     if draft_claims:
-        verified = _chat_json(
+        verified = _llm(
             _VERIFY_SYSTEM,
             _VERIFY_TMPL.format(
                 title=section_title, topic_list=tl, section=section_text,
@@ -903,7 +1213,7 @@ def llm_structure(topic, claim_texts):
     allowed_nums = set().union(*(_numbers_in(c) for c in claim_texts)) if claim_texts else set()
 
     # C0 — plan: which catalog section types these claims support (CoT scaffold)
-    plan_data = _chat_json(
+    plan_data = _llm(
         _STRUCT_PLAN_SYSTEM,
         _STRUCT_PLAN_TMPL.format(topic=topic, claims_block=claims_block, catalog=catalog,
                                  max_sec=max_sec),
@@ -915,7 +1225,7 @@ def llm_structure(topic, claim_texts):
                             for p in planned) or "(plan unavailable — choose from the catalog)")
 
     # C1 — fill the chosen section types from the claims only
-    data = _chat_json(
+    data = _llm(
         _STRUCTURE_SYSTEM,
         _STRUCTURE_TMPL.format(topic=topic, claims_block=claims_block, catalog=catalog,
                                plan=plan_block, max_sec=max_sec, n_claims=len(claim_texts)),
@@ -1310,7 +1620,7 @@ def analyze_connections(facts_col):
         block = _suite_block(members, profiles)
 
         # D0 — plan the genuine relationships (CoT)
-        plan = _chat_json(
+        plan = _llm(
             _CONNECT_PLAN_SYSTEM,
             _CONNECT_PLAN_TMPL.format(n=len(members), suite_block=block),
             CONNECT_PLAN_OPTS,
@@ -1321,7 +1631,7 @@ def analyze_connections(facts_col):
         plan_json = json.dumps(rels, ensure_ascii=False)
 
         # D1 — write each relationship as a natural-language sentence
-        written = _chat_json(
+        written = _llm(
             _CONNECT_WRITE_SYSTEM,
             _CONNECT_WRITE_TMPL.format(n=len(members), suite_block=block, plan=plan_json),
             CONNECT_OPTS,
@@ -1531,6 +1841,7 @@ def process_all(force=False):
     # Pass D — runs AFTER every source is in so it can find cross-source relationships.
     print("\n🔗 Pass D — analyzing connections across all nodes...")
     run_connection_pass()
+    _llm_summary()
 
 
 def do_rebuild():
@@ -1579,6 +1890,7 @@ def main():
         process_all()
     elif arg == "--connect":
         run_connection_pass()
+        _llm_summary()
     else:
         p = Path(arg)
         if not p.exists():
@@ -1589,6 +1901,7 @@ def main():
                 print(f"❌ File not found: {arg}")
                 sys.exit(1)
         process_transcript(p)
+        _llm_summary()
 
 
 if __name__ == "__main__":

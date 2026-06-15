@@ -34,6 +34,9 @@ EMBED_MODEL   = "nomic-embed-text"
 GEMINI_MODEL          = "gemini-2.5-flash"
 GEMINI_MODEL_FALLBACK = "gemini-2.0-flash"
 GEMINI_API_KEY_ENV    = "GEMINI_API_KEY"
+# Local fallback model — used when Gemini is rate-limited / unavailable so the
+# chat always answers instead of erroring out.
+QWEN_MODEL    = "qwen3:1.7b"
 
 N_FACTS  = 10    # facts retrieved (precise grounding + consulted-topic surfacing)
 N_CHUNKS = 5     # full-context passages for the answer
@@ -159,6 +162,26 @@ def generate_stream(client, query, context):
     raise RuntimeError(str(last_err) if last_err else "Gemini generation failed.")
 
 
+def qwen_stream(query, context):
+    """Local fallback generation — stream from Ollama qwen3:1.7b. Used when Gemini
+    is rate-limited or unavailable so the chat still answers."""
+    import ollama
+    import re as _re
+    prompt = build_prompt(query, context)
+    stream = ollama.chat(
+        model=QWEN_MODEL,
+        messages=[{"role": "system", "content": "/no_think\n" + _SYSTEM},
+                  {"role": "user",   "content": prompt}],
+        stream=True,
+        options={"temperature": 0.2, "num_ctx": 8192, "num_predict": 1024},
+    )
+    for part in stream:
+        tok = part.get("message", {}).get("content", "")
+        if tok:
+            # /no_think keeps reasoning out; strip any stray tags defensively
+            yield _re.sub(r"</?think>", "", tok)
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(SCRIPT_DIR), **kwargs)
@@ -222,28 +245,44 @@ class Handler(SimpleHTTPRequestHandler):
             self._sse({"type": "done"})
             return
 
-        # ── Generate (streamed via Gemini) ──
+        # ── Generate: prefer Gemini, fall back to local qwen so the chat always
+        #    answers (e.g. when the Gemini free-tier quota is exhausted) ──
+        client = None
         try:
             client = _gemini_client()
-        except RuntimeError as e:
-            # Missing API key — clear, actionable message.
-            self._sse({"type": "error", "message": str(e)})
-            self._sse({"type": "done"})
-            return
-        except ImportError:
-            self._sse({"type": "error",
-                       "message": "The google-genai SDK is not installed. "
-                                  "Run: pip3 install google-genai"})
-            self._sse({"type": "done"})
-            return
+        except (RuntimeError, ImportError):
+            client = None  # no key / SDK → straight to qwen
 
         try:
-            for tok in generate_stream(client, query, context):
+            yielded = False
+            if client is not None:
+                try:
+                    for tok in generate_stream(client, query, context):
+                        yielded = True
+                        self._sse({"type": "token", "text": tok})
+                    if yielded:
+                        self._sse({"type": "done"})
+                        return
+                    # Gemini returned nothing → fall through to qwen
+                except BrokenPipeError:
+                    return  # client navigated away
+                except Exception as e:  # noqa: BLE001 — rate limit / API error
+                    if yielded:
+                        # partial answer already sent; don't switch mid-stream
+                        self._sse({"type": "done"})
+                        return
+                    note = ("Gemini rate-limited" if "429" in str(e)
+                            or "RESOURCE_EXHAUSTED" in str(e) else "Gemini unavailable")
+                    self._sse({"type": "notice",
+                               "text": f"{note} — answering with local qwen3:1.7b."})
+
+            # Local fallback
+            for tok in qwen_stream(query, context):
                 self._sse({"type": "token", "text": tok})
         except BrokenPipeError:
-            return  # client navigated away
+            return
         except Exception as e:
-            self._sse({"type": "error", "message": f"Gemini generation failed: {e}"})
+            self._sse({"type": "error", "message": f"Generation failed: {e}"})
 
         self._sse({"type": "done"})
 
