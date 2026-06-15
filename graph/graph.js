@@ -680,6 +680,38 @@ const devPrompt     = document.getElementById('dev-prompt');
 const devResponse   = document.getElementById('dev-response');
 
 // Write text into a Dev <pre>; empty/undefined shows a placeholder.
+// ─── Copy-to-clipboard (dev blocks + chat) ────────────────────────────────────
+
+function copyText(text, btn) {
+  const done = () => {
+    if (!btn) return;
+    const old = btn.textContent;
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = old; btn.classList.remove('copied'); }, 1200);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); } catch {}
+  document.body.removeChild(ta);
+}
+
+// Dev-block copy buttons (delegated; copy the linked <pre>'s exact text)
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.copy-btn[data-copy]');
+  if (!btn) return;
+  const el = document.getElementById(btn.dataset.copy);
+  if (el) copyText(el.textContent, btn);
+});
+
 function setDevField(el, text) {
   if (!el) return;
   if (text == null || text === '') {
@@ -732,7 +764,7 @@ function addAssistantShell() {
   const el = document.createElement('div');
   el.className = 'msg assistant';
   el.innerHTML = `
-    <div class="msg-role">Scribe</div>
+    <div class="msg-role"><span>Scribe</span><button class="copy-btn msg-copy">Copy</button></div>
     <div class="retrieval">
       <div class="retrieval-head searching"><span class="dot"></span>Searching knowledge base…</div>
       <div class="retrieval-nodes"></div>
@@ -741,10 +773,11 @@ function addAssistantShell() {
   chatMessages.appendChild(el);
   scrollToBottom();
   return {
-    head:  el.querySelector('.retrieval-head'),
-    nodes: el.querySelector('.retrieval-nodes'),
-    body:  el.querySelector('.msg-body'),
+    head:    el.querySelector('.retrieval-head'),
+    nodes:   el.querySelector('.retrieval-nodes'),
+    body:    el.querySelector('.msg-body'),
     retrieval: el.querySelector('.retrieval'),
+    copyBtn: el.querySelector('.msg-copy'),
   };
 }
 
@@ -808,6 +841,8 @@ async function sendChat() {
 
   addUserMessage(text);
   const ui = addAssistantShell();
+  // Copy button yields the raw markdown answer accumulated so far
+  if (ui.copyBtn) ui.copyBtn.addEventListener('click', () => copyText(answer, ui.copyBtn));
   // Phase 1 → 2 → 3: searching · consulted N topics · generating.
   // Until the first token arrives, show the animated "Thinking…" indicator.
   ui.body.innerHTML = THINKING_HTML;

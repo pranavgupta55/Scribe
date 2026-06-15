@@ -462,7 +462,31 @@
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: #4a4475;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
     }
+
+    /* Copy buttons (dev blocks + chat) */
+    .copy-btn {
+      flex-shrink: 0;
+      background: #1a1730;
+      border: 1px solid #2a2545;
+      color: #8a82c0;
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 5px;
+      padding: 2px 8px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      user-select: none;
+    }
+    .copy-btn:hover { background: #251f4a; color: #c8bdff; border-color: #4a3f9f; }
+    .copy-btn.copied { color: #73c990; border-color: #2f5a3f; background: #14241a; }
     .dev-body {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 11.5px;
@@ -519,8 +543,14 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #4a4475;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
     }
     .msg.user .msg-role { color: #6b6490; }
+    /* Copy button only meaningful on assistant turns once there's an answer */
+    .msg.user .msg-copy { display: none; }
     .msg-body {
       font-size: 14px;
       line-height: 1.7;
@@ -747,19 +777,19 @@
         <div id="dev-header">Dev · last round-trip</div>
         <div id="dev-scroll">
           <section class="dev-section">
-            <div class="dev-label">System prompt</div>
+            <div class="dev-label"><span>System prompt</span><button class="copy-btn" data-copy="dev-system">Copy</button></div>
             <pre class="dev-body" id="dev-system"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label">RAG context (retrieved passages + facts)</div>
+            <div class="dev-label"><span>RAG context (retrieved passages + facts)</span><button class="copy-btn" data-copy="dev-context">Copy</button></div>
             <pre class="dev-body" id="dev-context"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label">Full user prompt (as sent)</div>
+            <div class="dev-label"><span>Full user prompt (as sent)</span><button class="copy-btn" data-copy="dev-prompt">Copy</button></div>
             <pre class="dev-body" id="dev-prompt"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label">Raw model response (un-rendered Markdown)</div>
+            <div class="dev-label"><span>Raw model response (un-rendered Markdown)</span><button class="copy-btn" data-copy="dev-response">Copy</button></div>
             <pre class="dev-body" id="dev-response"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
         </div>
