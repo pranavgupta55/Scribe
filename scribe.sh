@@ -22,7 +22,7 @@ SCRIPT_DIR="${SCRIBE_HOME:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
 REPO="${SCRIBE_REPO:-pranavgupta55/Scribe}"
 
 echo "🔍 Fetching video info..."
-RAW_TITLE=$(yt-dlp --print title "$YOUTUBE_URL" 2>/dev/null || echo "")
+RAW_TITLE=$(yt-dlp --retries 5 --extractor-retries 5 --print title "$YOUTUBE_URL" 2>/dev/null || echo "")
 
 # Resolve output filename
 if [ -n "${2:-}" ]; then
@@ -45,6 +45,7 @@ yt-dlp \
   --extract-audio \
   --audio-format mp3 \
   --audio-quality 0 \
+  --retries 10 --extractor-retries 5 --fragment-retries 10 --sleep-requests 1 \
   --output "$TMPDIR_PATH/audio.%(ext)s" \
   --quiet --progress \
   "$YOUTUBE_URL"
