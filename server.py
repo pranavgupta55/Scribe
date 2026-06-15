@@ -101,18 +101,33 @@ def retrieve(query):
             topics.append(disp)
     topics = topics[:MAX_TOPICS]
 
-    # Context block: full-context passages first, then precise facts
-    parts = []
-    if chunk_docs:
-        parts.append("PASSAGES:")
-        for doc, meta in zip(chunk_docs, chunk_metas):
-            parts.append(f"[{meta.get('source', '?')}] {doc}")
-    if fact_docs:
-        parts.append("\nFACTS:")
-        for doc, meta in zip(fact_docs, fact_metas):
-            parts.append(f"- {doc}  [{meta.get('source', '?')}]")
+    # Context block — grouped BY SOURCE so the model (and the Dev panel) sees a
+    # clear boundary between videos instead of one undifferentiated wall of text.
+    from collections import OrderedDict
+    by_src = OrderedDict()
+    for doc, meta in zip(chunk_docs, chunk_metas):
+        s = meta.get("source", "?")
+        by_src.setdefault(s, {"passages": [], "facts": []})
+        by_src[s]["passages"].append((meta.get("section_title", ""), doc))
+    for doc, meta in zip(fact_docs, fact_metas):
+        s = meta.get("source", "?")
+        by_src.setdefault(s, {"passages": [], "facts": []})
+        by_src[s]["facts"].append(doc)
 
-    return topics, "\n".join(parts)
+    parts = []
+    for i, (s, blk) in enumerate(by_src.items(), 1):
+        parts.append(f"===== SOURCE {i}: {s} =====")
+        if blk["passages"]:
+            parts.append("Passages:")
+            for title, doc in blk["passages"]:
+                hdr = f"[§ {title}] " if title else ""
+                parts.append(f"{hdr}{doc}")
+        if blk["facts"]:
+            parts.append("\nKey facts from this source:")
+            parts.extend(f"- {f}" for f in blk["facts"])
+        parts.append("")  # blank line between sources
+
+    return topics, "\n".join(parts).strip()
 
 
 def _gemini_client():
@@ -140,15 +155,21 @@ def generate_stream(client, query, context):
     from google.genai import types
 
     prompt = build_prompt(query, context)
-    config = types.GenerateContentConfig(
-        system_instruction=_SYSTEM,
-        temperature=0.2,
-        max_output_tokens=1024,
-    )
 
     last_err = None
     for model in (GEMINI_MODEL, GEMINI_MODEL_FALLBACK):
         try:
+            kwargs = dict(system_instruction=_SYSTEM, temperature=0.2,
+                          max_output_tokens=2048)
+            # Disable "thinking" on 2.5-flash — otherwise it can spend the entire
+            # output budget reasoning and return ZERO visible text (the empty-reply
+            # bug). 2.0-flash has no thinking, so leave it untouched.
+            if model == GEMINI_MODEL:
+                try:
+                    kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+                except Exception:
+                    pass
+            config = types.GenerateContentConfig(**kwargs)
             stream = client.models.generate_content_stream(
                 model=model, contents=prompt, config=config)
             for chunk in stream:
@@ -173,7 +194,7 @@ def qwen_stream(query, context):
         messages=[{"role": "system", "content": "/no_think\n" + _SYSTEM},
                   {"role": "user",   "content": prompt}],
         stream=True,
-        options={"temperature": 0.2, "num_ctx": 8192, "num_predict": 1024},
+        options={"temperature": 0.2, "num_ctx": 32768, "num_predict": 1024},
     )
     for part in stream:
         tok = part.get("message", {}).get("content", "")
