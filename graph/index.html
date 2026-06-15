@@ -36,23 +36,59 @@
       left: 16px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0;
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
       border-radius: 10px;
-      padding: 14px 16px;
+      padding: 0;
       min-width: 200px;
       font-size: 12px;
       z-index: 10;
       user-select: none;
     }
 
-    #controls h2 {
+    #controls-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px 11px 16px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background 0.12s;
+    }
+    #controls-header:hover { background: #222; }
+    #controls-header h2 {
       font-size: 13px;
       font-weight: 600;
       color: #e0e0e0;
-      margin-bottom: 4px;
       letter-spacing: 0.03em;
+      margin: 0;
+    }
+    #controls-chevron {
+      font-size: 11px;
+      color: #555;
+      transition: transform 0.2s;
+      line-height: 1;
+    }
+    #controls.collapsed #controls-chevron { transform: rotate(-90deg); }
+
+    #controls-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 4px 16px 14px;
+      overflow: hidden;
+      transition: max-height 0.22s cubic-bezier(0.4,0,0.2,1),
+                  opacity 0.18s ease,
+                  padding 0.18s ease;
+      max-height: 600px;
+      opacity: 1;
+    }
+    #controls.collapsed #controls-body {
+      max-height: 0;
+      opacity: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     .control-row {
@@ -84,10 +120,17 @@
     #legend {
       display: flex;
       flex-direction: column;
-      gap: 5px;
-      margin-top: 6px;
+      gap: 0;
+      margin-top: 4px;
       padding-top: 10px;
       border-top: 1px solid #2a2a2a;
+    }
+    #legend-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding-bottom: 4px;
     }
     #legend-title {
       font-size: 10px;
@@ -95,7 +138,34 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #444;
-      margin-bottom: 2px;
+    }
+    #legend-chevron {
+      font-size: 9px;
+      color: #444;
+      transition: transform 0.18s;
+      line-height: 1;
+    }
+    #legend.legend-collapsed #legend-chevron { transform: rotate(-90deg); }
+    #legend-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      max-height: 140px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #2a2a2a transparent;
+      transition: max-height 0.2s cubic-bezier(0.4,0,0.2,1),
+                  opacity 0.15s ease;
+      opacity: 1;
+    }
+    #legend-list::-webkit-scrollbar { width: 4px; }
+    #legend-list::-webkit-scrollbar-track { background: transparent; }
+    #legend-list::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+    #legend.legend-collapsed #legend-list {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
     }
     .legend-row {
       display: flex;
@@ -713,6 +783,84 @@
     }
     .chat-empty .ce-title { font-size: 16px; font-weight: 600; color: #8a82c0; }
     .chat-empty .ce-sub { font-size: 12.5px; line-height: 1.7; max-width: 360px; }
+
+    /* ── Chat header bar (status pill + Gemini-only toggle) ── */
+    #chat-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 10px 24px 10px;
+      background: linear-gradient(to bottom, #0d0d0d 70%, transparent);
+      z-index: 4;
+      pointer-events: none;
+    }
+    #chat-header > * { pointer-events: auto; }
+
+    /* Status pill */
+    #status-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 500;
+      color: #777;
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 20px;
+      padding: 4px 10px;
+      letter-spacing: 0.02em;
+      user-select: none;
+      min-width: 110px;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: #555;
+    }
+    .status-dot.green  { background: #4caf6e; box-shadow: 0 0 5px rgba(76,175,110,0.5); }
+    .status-dot.amber  { background: #d4882a; box-shadow: 0 0 5px rgba(212,136,42,0.4); }
+    .status-dot.grey   { background: #555; }
+
+    /* Gemini-only toggle */
+    #gemini-only-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 500;
+      font-family: inherit;
+      color: #666;
+      background: #161616;
+      border: 1px solid #252525;
+      border-radius: 20px;
+      padding: 4px 10px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      user-select: none;
+    }
+    #gemini-only-btn:hover { color: #c0b8f0; border-color: #3a3060; }
+    #gemini-only-btn.on {
+      color: #c0b8f0;
+      background: #1a1630;
+      border-color: #4a3f9f;
+    }
+    .go-indicator {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: #333;
+      transition: background 0.15s;
+    }
+    #gemini-only-btn.on .go-indicator { background: #7c6af7; }
   </style>
 </head>
 <body>
@@ -720,26 +868,36 @@
     <canvas id="canvas"></canvas>
 
     <div id="controls">
-      <h2>Graph Controls</h2>
-      <div class="control-row">
-        <label>Repulsion</label>
-        <input type="range" id="repulsion" min="50" max="1500" value="400" />
+      <div id="controls-header">
+        <h2>Graph Controls</h2>
+        <span id="controls-chevron">▾</span>
       </div>
-      <div class="control-row">
-        <label>Link dist</label>
-        <input type="range" id="linkDist" min="20" max="600" value="120" />
-      </div>
-      <div class="control-row">
-        <label>Momentum</label>
-        <input type="range" id="momentum" min="1" max="20" value="8" />
-      </div>
-      <div class="control-row">
-        <label>Node size</label>
-        <input type="range" id="nodeSize" min="1" max="12" value="4" />
-      </div>
-      <div id="legend">
-        <div id="legend-title">Sources</div>
-        <!-- populated by graph.js -->
+      <div id="controls-body">
+        <div class="control-row">
+          <label>Repulsion</label>
+          <input type="range" id="repulsion" min="50" max="1500" value="400" />
+        </div>
+        <div class="control-row">
+          <label>Link dist</label>
+          <input type="range" id="linkDist" min="20" max="600" value="120" />
+        </div>
+        <div class="control-row">
+          <label>Momentum</label>
+          <input type="range" id="momentum" min="1" max="20" value="8" />
+        </div>
+        <div class="control-row">
+          <label>Node size</label>
+          <input type="range" id="nodeSize" min="1" max="12" value="4" />
+        </div>
+        <div id="legend">
+          <div id="legend-header">
+            <div id="legend-title">Sources</div>
+            <span id="legend-chevron">▾</span>
+          </div>
+          <div id="legend-list">
+            <!-- populated by graph.js -->
+          </div>
+        </div>
       </div>
     </div>
 
@@ -797,6 +955,17 @@
 
       <!-- Right: the chatbot -->
       <div id="chat-main">
+        <!-- Header: backend status pill + Gemini-only toggle -->
+        <div id="chat-header">
+          <div id="status-pill">
+            <span class="status-dot grey" id="status-dot"></span>
+            <span id="status-label">—</span>
+          </div>
+          <button id="gemini-only-btn" title="Only use Gemini; error instead of falling back to local model">
+            <span class="go-indicator"></span>
+            Gemini only
+          </button>
+        </div>
         <div id="chat-scroll">
           <div class="chat-inner" id="chat-messages">
             <div class="chat-empty" id="chat-empty">

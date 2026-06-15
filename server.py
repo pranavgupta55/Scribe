@@ -5,11 +5,14 @@ Scribe local server.
 Serves the static graph viewer AND a RAG chat endpoint over the knowledge base.
 
   GET  /<anything>   → static files (graph viewer, etc.)
+  GET  /api/status   → JSON Gemini/qwen backend status
   POST /api/chat     → Server-Sent Events stream:
                          {"type":"nodes","nodes":[...]}   topics consulted
                          {"type":"debug",...}             system/context/prompt
+                         {"type":"backend","backend":"gemini"|"qwen"}  which engine
                          {"type":"token","text":"..."}    streamed answer
                          {"type":"done"}                  end of turn
+                         {"type":"notice",...}            non-fatal status note
                          {"type":"error","message":"..."} failure
 
 Retrieval is grounded entirely in the local ChromaDB collections produced by
@@ -22,6 +25,7 @@ Google Gemini (free tier) via the `google-genai` SDK.
 import json
 import os
 import re
+import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -53,6 +57,79 @@ _SYSTEM = (
     "- When you reference one of the listed topics, wrap its name in [[double "
     "brackets]] so the UI can link it."
 )
+
+# ── Module-level Gemini backend state ────────────────────────────────────────
+# Tracks whether Gemini is in a rate-limit cooldown so the UI can show a live
+# countdown.  All fields are written under the GIL (CPython) — no explicit lock
+# needed for simple reads/writes.
+
+_gemini_cooldown_until: float = 0.0   # epoch seconds; 0 means not in cooldown
+_gemini_retry_known: bool = False      # True when we parsed a real retry delay
+_gemini_last_backend: str | None = None  # "gemini" | "qwen" | None
+
+
+def _parse_retry_seconds(exc_str: str) -> int | None:
+    """Try to extract a retry delay (seconds) from a Gemini error message.
+
+    Google returns retryDelay in protobuf/JSON form, e.g.:
+        retryDelay: "30s"
+        "retryDelay":"60s"
+        retry in 30s
+    Returns None if no delay can be parsed.
+    """
+    # Pattern 1: retryDelay":"30s" or retryDelay: "30s" or retryDelay=30s
+    m = re.search(r'retryDelay"?\s*[:=]\s*"?(\d+)s', exc_str, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    # Pattern 2: "retry in 30s" / "retry in 30 seconds"
+    m = re.search(r'retry\s+in\s+(\d+)', exc_str, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    return None
+
+
+def _record_gemini_success():
+    global _gemini_cooldown_until, _gemini_retry_known, _gemini_last_backend
+    _gemini_cooldown_until = 0.0
+    _gemini_retry_known = False
+    _gemini_last_backend = "gemini"
+
+
+def _record_gemini_ratelimit(exc_str: str):
+    global _gemini_cooldown_until, _gemini_retry_known, _gemini_last_backend
+    delay = _parse_retry_seconds(exc_str)
+    if delay is not None:
+        _gemini_cooldown_until = time.time() + delay
+        _gemini_retry_known = True
+    else:
+        # Daily quota or unknown — don't fabricate a timer
+        _gemini_cooldown_until = time.time() + 1   # just marks "in cooldown"
+        _gemini_retry_known = False
+    _gemini_last_backend = "qwen"
+
+
+def _record_qwen_used():
+    global _gemini_last_backend
+    _gemini_last_backend = "qwen"
+
+
+def _gemini_status() -> dict:
+    """Return the dict emitted by GET /api/status."""
+    has_key = bool(os.environ.get(GEMINI_API_KEY_ENV))
+    now = time.time()
+    in_cooldown = _gemini_cooldown_until > now
+    remaining: int | None = None
+    if in_cooldown and _gemini_retry_known:
+        remaining = max(0, int(_gemini_cooldown_until - now))
+    gemini_ok = has_key and not in_cooldown
+    return {
+        "has_key": has_key,
+        "gemini_ok": gemini_ok,
+        "in_cooldown": in_cooldown,
+        "cooldown_remaining": remaining,
+        "retry_known": _gemini_retry_known,
+        "last_backend": _gemini_last_backend,
+    }
 
 
 def _slug(text):
@@ -214,6 +291,21 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(f"data: {json.dumps(obj)}\n\n".encode())
         self.wfile.flush()
 
+    def _json_response(self, obj, status=200):
+        body = json.dumps(obj).encode()
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-cache")
+        self.end_headers()
+        self.wfile.write(body)
+
+    def do_GET(self):
+        if self.path == "/api/status":
+            self._json_response(_gemini_status())
+            return
+        super().do_GET()
+
     def do_POST(self):
         if self.path != "/api/chat":
             self.send_error(404)
@@ -223,8 +315,10 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             body = json.loads(self.rfile.read(length) or b"{}")
             query = (body.get("query") or "").strip()
+            gemini_only = bool(body.get("gemini_only", False))
         except json.JSONDecodeError:
             query = ""
+            gemini_only = False
 
         # Close the connection when the handler returns. Without this the
         # keep-alive socket stays open, the browser's stream reader never
@@ -266,40 +360,112 @@ class Handler(SimpleHTTPRequestHandler):
             self._sse({"type": "done"})
             return
 
-        # ── Generate: prefer Gemini, fall back to local qwen so the chat always
-        #    answers (e.g. when the Gemini free-tier quota is exhausted) ──
+        # ── Generate: prefer Gemini, fall back to local qwen unless gemini_only ──
         client = None
         try:
             client = _gemini_client()
         except (RuntimeError, ImportError):
-            client = None  # no key / SDK → straight to qwen
+            client = None  # no key / SDK → straight to qwen (or error if gemini_only)
 
+        # Check if we're currently in a Gemini rate-limit cooldown.
+        now = time.time()
+        in_cooldown = _gemini_cooldown_until > now
+
+        if client is None or in_cooldown:
+            # Gemini is unavailable or rate-limited right now.
+            if gemini_only:
+                # Build a user-facing message with the real wait if known.
+                if in_cooldown and _gemini_retry_known:
+                    remaining = max(0, int(_gemini_cooldown_until - now))
+                    msg = f"Gemini is rate-limited. Retry in {remaining}s."
+                elif in_cooldown:
+                    msg = "Gemini is rate-limited — retry time unknown (Gemini quota exhausted)."
+                else:
+                    msg = ("Gemini is unavailable (no API key or SDK not installed). "
+                           "Disable 'Gemini only' to use the local model.")
+                self._sse({"type": "error", "message": msg})
+                self._sse({"type": "done"})
+                return
+            else:
+                if in_cooldown:
+                    if _gemini_retry_known:
+                        remaining = max(0, int(_gemini_cooldown_until - now))
+                        note = f"Gemini rate-limited (retry in {remaining}s) — answering with local qwen3:1.7b."
+                    else:
+                        note = "Gemini rate-limited — retry time unknown (quota exhausted) — answering with local qwen3:1.7b."
+                    self._sse({"type": "notice", "text": note})
+                self._sse({"type": "backend", "backend": "qwen"})
+                _record_qwen_used()
+                try:
+                    for tok in qwen_stream(query, context):
+                        self._sse({"type": "token", "text": tok})
+                except BrokenPipeError:
+                    return
+                except Exception as e:
+                    self._sse({"type": "error", "message": f"Local generation failed: {e}"})
+                self._sse({"type": "done"})
+                return
+
+        # Gemini is available — attempt it.
         try:
             yielded = False
-            if client is not None:
-                try:
-                    for tok in generate_stream(client, query, context):
-                        yielded = True
-                        self._sse({"type": "token", "text": tok})
-                    if yielded:
+            try:
+                self._sse({"type": "backend", "backend": "gemini"})
+                for tok in generate_stream(client, query, context):
+                    yielded = True
+                    self._sse({"type": "token", "text": tok})
+                if yielded:
+                    _record_gemini_success()
+                    self._sse({"type": "done"})
+                    return
+                # Gemini returned nothing → fall through to qwen
+                _record_gemini_success()  # no error, just empty
+            except BrokenPipeError:
+                return  # client navigated away
+            except Exception as e:  # noqa: BLE001 — rate limit / API error
+                if yielded:
+                    # partial answer already sent; don't switch mid-stream
+                    self._sse({"type": "done"})
+                    return
+                exc_str = str(e)
+                is_ratelimit = "429" in exc_str or "RESOURCE_EXHAUSTED" in exc_str
+                if is_ratelimit:
+                    _record_gemini_ratelimit(exc_str)
+                    if gemini_only:
+                        now2 = time.time()
+                        in_cd = _gemini_cooldown_until > now2
+                        if in_cd and _gemini_retry_known:
+                            remaining = max(0, int(_gemini_cooldown_until - now2))
+                            msg = f"Gemini is rate-limited. Retry in {remaining}s."
+                        elif in_cd:
+                            msg = "Gemini is rate-limited — retry time unknown (Gemini quota exhausted)."
+                        else:
+                            msg = "Gemini rate-limited."
+                        self._sse({"type": "error", "message": msg})
                         self._sse({"type": "done"})
                         return
-                    # Gemini returned nothing → fall through to qwen
-                except BrokenPipeError:
-                    return  # client navigated away
-                except Exception as e:  # noqa: BLE001 — rate limit / API error
-                    if yielded:
-                        # partial answer already sent; don't switch mid-stream
+                    # Fall back to qwen
+                    if _gemini_retry_known:
+                        remaining = max(0, int(_gemini_cooldown_until - time.time()))
+                        note = f"Gemini rate-limited (retry in {remaining}s) — answering with local qwen3:1.7b."
+                    else:
+                        note = "Gemini rate-limited — retry time unknown (quota exhausted) — answering with local qwen3:1.7b."
+                    self._sse({"type": "notice", "text": note})
+                else:
+                    if gemini_only:
+                        self._sse({"type": "error",
+                                   "message": f"Gemini unavailable: {exc_str}"})
                         self._sse({"type": "done"})
                         return
-                    note = ("Gemini rate-limited" if "429" in str(e)
-                            or "RESOURCE_EXHAUSTED" in str(e) else "Gemini unavailable")
                     self._sse({"type": "notice",
-                               "text": f"{note} — answering with local qwen3:1.7b."})
+                               "text": f"Gemini unavailable — answering with local qwen3:1.7b."})
 
-            # Local fallback
-            for tok in qwen_stream(query, context):
-                self._sse({"type": "token", "text": tok})
+            if not gemini_only:
+                # Local fallback after Gemini empty/error
+                self._sse({"type": "backend", "backend": "qwen"})
+                _record_qwen_used()
+                for tok in qwen_stream(query, context):
+                    self._sse({"type": "token", "text": tok})
         except BrokenPipeError:
             return
         except Exception as e:

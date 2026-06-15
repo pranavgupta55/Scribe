@@ -38,7 +38,11 @@ let pluginColors = {}; // plugin name -> hex
 
 // ─── Data load ──────────────────────────────────────────────────────────────
 
-const PALETTE = ['#5fa8d3', '#e0a458', '#73c990', '#d36f8f', '#c3a6e0', '#5bc8c8', '#d3b85f'];
+const PALETTE = [
+  '#5fa8d3', '#e0a458', '#73c990', '#d36f8f', '#c3a6e0', '#5bc8c8', '#d3b85f',
+  '#e07070', '#7ec8a0', '#d4a0d8', '#63b8e8', '#e8b85a', '#88d8b0', '#e898b0',
+  '#8ab4f8', '#f0c070',
+];
 const STANDALONE_COLOR = '#4a3f9f';
 const STANDALONE_HUB = '#7c6af7';
 
@@ -63,7 +67,8 @@ function buildPluginColors(rawNodes) {
 }
 
 function renderLegend() {
-  legendEl.querySelectorAll('.legend-row').forEach(el => el.remove());
+  const listEl = document.getElementById('legend-list');
+  if (listEl) listEl.querySelectorAll('.legend-row').forEach(el => el.remove());
   const entries = Object.entries(pluginColors);
   if (entries.length === 0) {
     legendEl.style.display = 'none';
@@ -77,7 +82,8 @@ function renderLegend() {
     // matches the actual purple source node in the graph (not the topic colour).
     const label = name.replace(/\.txt$/, '');
     row.innerHTML = `<span class="legend-swatch" style="background:${STANDALONE_HUB}"></span>${label}`;
-    legendEl.appendChild(row);
+    if (listEl) listEl.appendChild(row);
+    else legendEl.appendChild(row);
   }
 }
 
@@ -649,6 +655,25 @@ const controlsEl  = document.getElementById('controls');
 const centerBtn   = document.getElementById('center-btn');
 const hintEl      = document.getElementById('hint');
 
+// ─── Collapsible graph controls ───────────────────────────────────────────────
+
+const controlsHeader = document.getElementById('controls-header');
+if (controlsHeader) {
+  controlsHeader.addEventListener('click', () => {
+    controlsEl.classList.toggle('collapsed');
+  });
+}
+
+// ─── Collapsible + scrollable legend ─────────────────────────────────────────
+
+const legendHeader = document.getElementById('legend-header');
+if (legendHeader) {
+  legendHeader.addEventListener('click', (e) => {
+    e.stopPropagation(); // don't bubble to controls-header
+    legendEl.classList.toggle('legend-collapsed');
+  });
+}
+
 function setView(view) {
   const chat = view === 'chat';
   viewToggle.classList.toggle('chat', chat);
@@ -659,7 +684,12 @@ function setView(view) {
   [canvas, controlsEl, centerBtn, hintEl].forEach(el => {
     if (el) el.style.display = chat ? 'none' : '';
   });
-  if (chat) chatInput.focus();
+  if (chat) {
+    chatInput.focus();
+    startStatusPoll();
+  } else {
+    stopStatusPoll();
+  }
 }
 
 btnGraph.addEventListener('click', () => setView('graph'));
@@ -672,6 +702,90 @@ const chatScroll    = document.getElementById('chat-scroll');
 const chatEmpty     = document.getElementById('chat-empty');
 const chatInput     = document.getElementById('chat-input');
 const chatSend      = document.getElementById('chat-send');
+
+// ── Status pill ──────────────────────────────────────────────────────────────
+const statusDot    = document.getElementById('status-dot');
+const statusLabel  = document.getElementById('status-label');
+
+// ── Gemini-only toggle ────────────────────────────────────────────────────────
+const geminiOnlyBtn = document.getElementById('gemini-only-btn');
+let geminiOnly = false;
+
+if (geminiOnlyBtn) {
+  geminiOnlyBtn.addEventListener('click', () => {
+    geminiOnly = !geminiOnly;
+    geminiOnlyBtn.classList.toggle('on', geminiOnly);
+  });
+}
+
+function updateStatusPill(status) {
+  if (!statusDot || !statusLabel) return;
+  if (!status) {
+    statusDot.className = 'status-dot grey';
+    statusLabel.textContent = 'server offline';
+    return;
+  }
+  if (status.gemini_ok) {
+    statusDot.className = 'status-dot green';
+    statusLabel.textContent = 'Gemini';
+  } else {
+    statusDot.className = 'status-dot amber';
+    let txt = 'Local (qwen)';
+    if (status.in_cooldown) {
+      if (status.retry_known && status.cooldown_remaining != null) {
+        txt += ` · retry in ${status.cooldown_remaining}s`;
+      } else {
+        txt += ' · retry time unknown';
+      }
+    }
+    statusLabel.textContent = txt;
+  }
+}
+
+// Also update from per-turn backend event
+function updateStatusFromBackend(backend) {
+  if (!statusDot || !statusLabel) return;
+  if (backend === 'gemini') {
+    statusDot.className = 'status-dot green';
+    statusLabel.textContent = 'Gemini';
+  } else if (backend === 'qwen') {
+    statusDot.className = 'status-dot amber';
+    // Don't overwrite cooldown info — re-poll will fix it shortly
+    if (!statusLabel.textContent.startsWith('Local')) {
+      statusLabel.textContent = 'Local (qwen)';
+    }
+  }
+}
+
+// Poll /api/status while chat view is active
+let _statusPollInterval = null;
+
+async function pollStatus() {
+  try {
+    const res = await fetch('/api/status');
+    if (res.ok) {
+      const data = await res.json();
+      updateStatusPill(data);
+    } else {
+      updateStatusPill(null);
+    }
+  } catch {
+    updateStatusPill(null);
+  }
+}
+
+function startStatusPoll() {
+  pollStatus(); // immediate
+  if (!_statusPollInterval) {
+    _statusPollInterval = setInterval(pollStatus, 8000);
+  }
+}
+function stopStatusPoll() {
+  if (_statusPollInterval) {
+    clearInterval(_statusPollInterval);
+    _statusPollInterval = null;
+  }
+}
 
 // Dev / Debug panel (left side of chat view)
 const devSystem     = document.getElementById('dev-system');
@@ -863,7 +977,7 @@ async function sendChat() {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: text }),
+      body: JSON.stringify({ query: text, gemini_only: geminiOnly }),
     });
     if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
 
@@ -898,6 +1012,11 @@ async function sendChat() {
           setDevField(devSystem, evt.system);
           setDevField(devContext, evt.context);
           setDevField(devPrompt, evt.prompt);
+        } else if (evt.type === 'backend') {
+          // Which engine is answering this turn
+          updateStatusFromBackend(evt.backend);
+          // Schedule a poll shortly after the turn ends to sync cooldown state
+          setTimeout(pollStatus, 1500);
         } else if (evt.type === 'notice') {
           // Non-fatal status (e.g. Gemini rate-limited → local qwen fallback)
           ui.head.classList.remove('searching');
