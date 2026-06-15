@@ -20,8 +20,6 @@
 - Reach out to every member every 14 days via text or messenger with personalized praise and problem-solving; no-response within 24 hours signals cancellation risk requiring escalation — [gym_launch_secrets.txt]
 - Handwritten card referral system: divide members into groups, trainers write cards with P.S. incentive, follow up with video text of trainer + member, then trainer closes referral from prospect's phone — [gym_launch_secrets.txt]
 
-## Connections
-- Reach Out Communication Systems contact members every 14 days with personalized praise via trainers, supporting Member Lifecycle Management's Connect-Refer-Testify-Ascend progression with systematic touchpoints. _(connects to: Member Lifecycle Management)_
 
 ---
 _Source: gym_launch_secrets.txt · 2 claim(s)_

@@ -23,8 +23,9 @@
 ## Claims
 - Referral programs work best with dual-sided incentives like Dropbox and PayPal used: reward both referrer and referred friend; offer 10-20% of annual affiliate revenue as training/certification cost — [100m_leads.txt]
 
+
 ## Connections
-- Referrals show high conversion (92% on reviews/referrals manager) and structured feedback loops, while Customer Referral Programs recommend dual-sided incentives rewarding both referrer and referred. _(connects to: Referrals)_
+- Structured referral systems with incentives turn happy customers into lead generators at scale. _(connects to: Referrals)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

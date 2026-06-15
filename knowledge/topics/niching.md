@@ -18,9 +18,10 @@
 - You should commit to one niche; the grass is never greener, and switching niches forces you to start over from the beginning each time. — [100m_offers.txt]
 - The same time management product can be priced at $19 (generic), $99 (for sales professionals), $499 (for B2B outbound reps), or $1000-2000 (for power tools sales reps)—a 100x price difference for similar content. — [100m_offers.txt]
 
+
 ## Connections
-- Niching allows 100x higher pricing for the same product, and Market Selection reveals why: you must pick markets that are growing with pain and purchasing power, otherwise nothing in the offer model works. _(connects to: Market Selection)_
-- Commoditization destroys margins through price-driven purchases, while Niching breaks this cycle by specializing in a narrow market, enabling value-driven purchases and premium pricing. _(connects to: Commodity Problem)_
+- Niching enables 100x higher pricing for same product; higher prices signal quality and improve conversion. _(connects to: Pricing Psychology)_
+- Specializing allows 100x higher pricing while improving conversion; most profit exists at high end. _(connects to: Profit Concentration)_
 
 ---
 _Source: 100m_offers.txt · 2 claim(s)_

@@ -30,8 +30,11 @@
 - 41 leads for $90 — [the_lazy_way_i_make_money_with_ai_2026.txt § "Lead Generation Example"]
 
 
+
 ## Connections
-- Cold Email Campaigns using Cloud Code and Instantly.ai automate 90% of the client acquisition process, while Lead Generation provides B2B lead lists from TrustedLeads.io to fuel those campaigns. _(connects to: Cold Email Campaigns)_
+- AI nurtures leads cost-effectively; combines efficient generation with engagement to reduce CAC. _(connects to: Ai Driven Lead Nurturing)_
+- Lead generation efficiency improves via single-channel focus matching team skill, not by spreading effort across many channels. _(connects to: Lead Generation And Sales Strategy)_
+- Efficient lead generation requires cost-effective tools and AI-driven follow-ups to maximize conversion from initial contact to sale. _(connects to: Lead Follow Up)_
 
 ---
 _Topic appears in 2 source(s) · 10 claim(s) · 3 connection(s)_

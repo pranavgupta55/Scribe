@@ -23,8 +23,6 @@
 ## Claims
 - Decoy Offers present a basic free or discounted version alongside a premium option, getting 8 out of 10 people to take the $399 premium option in the described gym example. — [100m_money_models.txt]
 
-## Connections
-- Both Anchor Upsell and Decoy Offers use price perception manipulation: Anchor presents a premium option first to reset expectations, while Decoy presents cheap and premium side-by-side to highlight the value difference. _(connects to: Anchor Upsell)_
 
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

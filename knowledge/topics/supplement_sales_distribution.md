@@ -16,8 +16,6 @@
 ## Claims
 - Sell 85% of new customers on $200 supplement autoship with 40-50% margin; 23% attrition on recurring supplements creates $25k/month revenue from 126 active subscribers at equilibrium — [gym_launch_secrets.txt]
 
-## Connections
-- Supplement Sales reaches $25k/month recurring revenue at scale with 40-50% margins, forming the third tier of the Wedding Cake Profit Model stacking large group, semi-privates, and supplements for $100k+/month. _(connects to: Wedding Cake Profit Model)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

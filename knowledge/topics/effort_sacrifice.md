@@ -17,8 +17,9 @@
 ## Claims
 - Effort & sacrifice includes tangible costs (time, money) and intangible costs (fear, embarrassment); liposuction commands 25x price over fitness due to lower effort. — [100m_offers.txt]
 
+
 ## Connections
-- Effort Sacrifice (time, money, fear, embarrassment costs) determines the bottom half of the Value Equation, while Premium Pricing increases emotional investment and perceived value despite the same effort, making high-ticket offers feel justified. _(connects to: Premium Pricing)_
+- All paths require equal suffering; the choice is what tangible and intangible costs you pay and what you gain for them. _(connects to: Suffering Fixed Cost)_
 
 ---
 _Source: 100m_offers.txt · 1 claim(s)_

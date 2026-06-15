@@ -32,8 +32,6 @@
 - The client's current approach fails to convert leads within five minutes, leading to stagnant revenue and a need for process optimization and AI-driven reactivation strategies. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Reactivation Strategies and 21-Day Process"]
 
 
-## Connections
-- Both Process Gaps and CRM Limitations reveal that database leads go unworked: Process Gaps show 1,000-4,000 leads in non-implemented reactivation systems while CRM Limitations highlight 100+ leads in databases with no follow-up process. _(connects to: Crm Limitations And Manual Follow Ups)_
 
 ---
 _Topic appears in 1 source(s) · 7 claim(s) · 5 connection(s)_

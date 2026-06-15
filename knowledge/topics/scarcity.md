@@ -23,9 +23,6 @@
 - Three types of scarcity: limited supply of seats/slots, limited supply of bonuses, and never available again. — [100m_offers.txt]
 - George, a jewelry CEO, cut ticket supply at Arnold's fundraiser from $15k to $25k, raising an extra $1M in one night by creating perceived scarcity. — [100m_offers.txt]
 
-## Connections
-- Scarcity creates FOMO through limited supply of slots, bonuses, or exclusive access, while Urgency creates time-limited access, and together they generate the highest conversion rates (50-60% in final 4 hours). _(connects to: Urgency)_
-- Supply and Demand reveals that desire only exists for things you cannot have, making Scarcity (keeping supply below demand) the mechanism to perpetually increase desire and price. _(connects to: Supply And Demand)_
 
 ---
 _Source: 100m_offers.txt · 3 claim(s)_

@@ -15,8 +15,10 @@
 ## Claims
 - 30 new large-group clients at 65% conversion and 8% attrition build to 243 recurring members at $167/month = $40,581/month recurring revenue from single $15k upfront front-end cash — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Large Group Training generates $40k/month recurring from high-volume low-price memberships, forming the base tier of Wedding Cake Profit Model supporting the complete revenue architecture. _(connects to: Wedding Cake Profit Model)_
+- Daily training keeps sales sharp; large-group monetization via spaced conversion attempts yields revenue without hard selling. _(connects to: Group Role Play Sales Training)_
+- Monetize large groups via spaced conversion attempts; daily role-play keeps team sharp at scale. _(connects to: Sales Training At Scale)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

@@ -22,8 +22,10 @@
 ## Claims
 - Document-Demonstrate-Duplicate training method: write checklist of exact steps, demonstrate while narrating, have employee repeat in front of you until replicable; enables scalable teams — [100m_leads.txt]
 
+
 ## Connections
-- Employee Training And Leverage uses Document-Demonstrate-Duplicate method for scalable teams, while Communication Cycles Meetings establish daily huddles, weekly team meetings, and one-on-ones to maintain pulse on training implementation. _(connects to: Communication Cycles Meetings)_
+- Document-demonstrate-duplicate scales teams; systematize sales intuition for replication. _(connects to: Hiring And Training Systematization)_
+- Both use daily group role-play and training to scale teams; Document-Demonstrate-Duplicate and rotating through script components. _(connects to: Group Role Play Sales Training)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

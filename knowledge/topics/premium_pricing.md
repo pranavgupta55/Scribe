@@ -24,11 +24,16 @@
 - Charge a premium price because higher prices increase emotional investment, perceived value, client results, and margins for better service delivery. — [100m_offers.txt]
 - In a blind wine taste test, the same wine rated differently based on visible price—proving higher prices directly increase perceived value. — [100m_offers.txt]
 
+
 ## Connections
-- Higher prices increase emotional investment and commitment, which Guarantees amplify by removing buyer risk and increasing conversion rates 2-4x. _(connects to: Guarantees)_
-- Effort Sacrifice (time, money, fear, embarrassment costs) determines the bottom half of the Value Equation, while Premium Pricing increases emotional investment and perceived value despite the same effort, making high-ticket offers feel justified. _(connects to: Effort Sacrifice)_
-- Dream Outcome (status increase in social/professional group) motivates purchases more than other desires, which Premium Pricing amplifies by increasing perceived value and emotional investment. _(connects to: Dream Outcome)_
-- Perceived Likelihood increases when customers see proven track records and social proof, which Premium Pricing enables by allowing better service delivery and higher client commitment from larger margins. _(connects to: Perceived Likelihood)_
+- Higher prices increase perceived value and client commitment; guarantee-backed pricing filters for better customers. _(connects to: Pricing And Premium Offers)_
+- Both concepts relate to prices and higher. _(connects to: Pricing Leverage)_
+- Both concepts relate to increase and better. _(connects to: Premium Pricing Power)_
+- Both concepts relate to prices and higher. _(connects to: Pricing Psychology)_
+- Higher prices increase perceived value and filter better customers; customers earn higher results. _(connects to: Pricing Strategy Value Stacking)_
+- Higher prices create virtuous cycle: margins, talent, service, reputation, demand, higher prices. _(connects to: The Pricing Virtuous Cycle)_
+- Premium offers need 3-5x higher prices to justify their 5-10x higher CAC. _(connects to: Premium Offers)_
+- Premium prices only work when offer is defensible and perception aligns with cost; positioning precedes pricing power. _(connects to: Market Positioning And Differentiation)_
 
 ---
 _Source: 100m_offers.txt · 2 claim(s)_

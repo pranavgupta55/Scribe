@@ -17,8 +17,6 @@
 ## Claims
 - Weekly attendance tracking by Wednesday identifies 2-visits-or-less members as red-flag; aggressive reach-out intercepts cancellations and cuts churn from 9% to under 3% in 1-3 months — [gym_launch_secrets.txt]
 
-## Connections
-- Attendance Tracking identifies 2-visits-or-less members as cancellation-bound by Wednesday, enabling Retention Attrition Reduction through aggressive reach-out that cuts churn from 9% to under 3% within 3 months. _(connects to: Retention Attrition Reduction)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

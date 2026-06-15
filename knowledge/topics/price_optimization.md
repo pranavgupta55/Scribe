@@ -20,8 +20,13 @@
 ## Claims
 - Raise prices from $118/month unlimited to $39-49/week (3x per week sessions at $167-225/month) and switch billing to 28-day cycles to increase profit 64% without adding overhead — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Overhead Management targets 80% service margin by cutting unprofitable sessions, while Price Optimization moves from commodity unlimited ($99-150/month) to tiered billing ($167-225/month), both increasing profit without adding overhead. _(connects to: Overhead Management)_
+- High close rate (80%) signals room for 3-4x price increases; move away from commodity pricing. _(connects to: Close Rate Analysis And Price Optimization)_
+- Compete on defensible offer, not price; stop commodity pricing with tiered premium tiers. _(connects to: Market Positioning And Differentiation)_
+- Moving from commodity to tiered pricing shifts mindset from competitor to value provider, unlocking premium positioning. _(connects to: Value Vs Price Positioning)_
+- Move from commodity pricing via tiering with premium features; base-plus-usage aligns cost with consumption and prevents slow-month churn. _(connects to: Pricing Tier Restructure)_
+- Low prices signal low value in luxury; premium positioning requires 5-10X pricing jumps. _(connects to: Luxury Positioning Pricing Power)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

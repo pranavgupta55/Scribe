@@ -22,9 +22,6 @@
 - Completely Unaware audience: Use curiosity-driven hooks like 'The hidden danger in your daily routine' — [100m_playbook_goated_ads.txt]
 - Memes or meme-like content attract the largest percentage of audience and work especially well for culture-specific groups — [100m_playbook_goated_ads.txt]
 
-## Connections
-- Hook Writing Strategy allocates 80% of effort to hooks paired with the five Ad Creative Formats (Demonstration, Testimonial, Education, Story, Faceless), enabling rapid production of variations without constant hook reinvention. _(connects to: Ad Creative Formats)_
-- Call Out Techniques use labels, yes-questions, if-then statements, ridiculous results, and contrast to cut through noise, all supported by Hook Writing Strategy's 80% emphasis on hooks being the ad's foundation. _(connects to: Call Out Techniques)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 7 claim(s)_

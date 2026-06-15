@@ -17,8 +17,6 @@
 ## Claims
 - Open-to-goal work model commits to specific outcomes daily (e.g., 5 customers) regardless of time, unlike rule of 100 which is time-based; this unlocks unseen effort levels — [100m_leads.txt]
 
-## Connections
-- Open-to-Goal Work commits to specific outcomes daily (e.g., 5 customers) regardless of time, providing the commitment mechanism to overcome Business Excitement Curve's valley where 95% give up at $200/month. _(connects to: Business Excitement Curve)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

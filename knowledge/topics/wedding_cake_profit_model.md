@@ -18,9 +18,6 @@
 ## Claims
 - Wedding Cake Model stacks three revenue tiers—large group ($40k/mo recurring), semi-privates ($27k/mo recurring), supplements ($25k/mo recurring)—plus internal plays for $108k+/month total — [gym_launch_secrets.txt]
 
-## Connections
-- Supplement Sales reaches $25k/month recurring revenue at scale with 40-50% margins, forming the third tier of the Wedding Cake Profit Model stacking large group, semi-privates, and supplements for $100k+/month. _(connects to: Supplement Sales Distribution)_
-- Large Group Training generates $40k/month recurring from high-volume low-price memberships, forming the base tier of Wedding Cake Profit Model supporting the complete revenue architecture. _(connects to: Large Group Training Revenue)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

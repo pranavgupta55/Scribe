@@ -19,8 +19,11 @@
 - The speaker mentions collecting payment for an agreement with the client, involving refining the sales process and leveraging existing leads through an onboarding call. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Business Partner Management and Follow-Up Calls"]
 - The $1,700, $1,800 list is used to refine the sales process and ensure the prospect's business partner is engaged — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Follow-Up Calls & Sales Process"]
 
+
 ## Connections
-- Sales Process Refinement emphasizes structured follow-up and leveraging lists, while Follow Up Calls show exact steps (booking calls, processing payment, signing agreement, onboarding) implementing that refinement. _(connects to: Follow Up Calls)_
+- Improve close rate first via in-person selling before raising prices; refining process order of operations unlocks hidden margin. _(connects to: Sales Motion Fundamentals)_
+- Process design and training consistency matter more than raw talent; structured follow-up and leverage lists refine execution. _(connects to: Sales Training Process)_
+- Three-phase script (intro, discovery, pitch, sale) provides framework; refine with structured follow-up. _(connects to: Sales Process Framework)_
 
 ---
 _Topic appears in 1 source(s) · 3 claim(s) · 0 connection(s)_

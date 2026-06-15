@@ -30,8 +30,10 @@
 - A call should focus on the current problems a client faces and the promised savings, rather than emphasizing AI features or pricing. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Selling Value, Not AI Features"]
 
 
+
 ## Connections
-- Sustaining Business Growth emphasizes reaching $2,000-3,000 monthly stability through happy clients and low churn, which Pricing AI Services enables through 5x ROI-focused tiered models that incentivize long-term partnerships. _(connects to: Sustaining The Business)_
+- AI is a leverage tool, not an industry; it compounds existing business advantages. _(connects to: Ai Driven Marketing)_
+- AI-driven websites boost revenue via personalized ads and funnels; pricing AI services uses tiered ROI-focused models. _(connects to: Ai Driven Website)_
 
 ---
 _Topic appears in 1 source(s) · 9 claim(s) · 4 connection(s)_

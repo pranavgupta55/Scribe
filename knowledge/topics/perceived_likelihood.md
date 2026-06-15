@@ -17,8 +17,9 @@
 ## Claims
 - Perceived likelihood of achievement is critical—people pay more for the 10,000th patient of a surgeon than the first, even if the service is identical. — [100m_offers.txt]
 
+
 ## Connections
-- Perceived Likelihood increases when customers see proven track records and social proof, which Premium Pricing enables by allowing better service delivery and higher client commitment from larger margins. _(connects to: Premium Pricing)_
+- Conviction in outcome comes from social proof, guarantees, and track record; one-on-one delivery increases perceived success versus scalable alternatives. _(connects to: Perceived Likelihood Of Achievement)_
 
 ---
 _Source: 100m_offers.txt · 1 claim(s)_

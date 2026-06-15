@@ -19,8 +19,6 @@
 - API key setup and MDM run are steps to deploy the workflow locally before cloud deployment — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying Automations to Production"]
 
 
-## Connections
-- Building Framework requires creating GitHub repos and setting up Vercel projects for front-end deployment, with GitHub Integration providing step-by-step setup including account creation and repo configuration. _(connects to: Building Framework)_
 
 ---
 _Topic appears in 1 source(s) · 3 claim(s) · 2 connection(s)_

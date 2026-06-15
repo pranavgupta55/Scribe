@@ -14,8 +14,6 @@
 - Apply lint tool to fix errors in the code — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Refining the Dashboard Design"]
 - The framework for building anything using cloud code involves stages like build plan and implementation, which are critical for successful AI project development. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Pricing AI Services: The 5x ROI Rule"]
 
-## Connections
-- Claude Code Installation involves Visual Studio and API keys, while AI Operating System Setup specifies creating a Shiny folder and installing skills to build the complete AI infrastructure. _(connects to: Claude Code Installation)_
 
 ---
 _Topic appears in 1 source(s) · 6 claim(s) · 0 connection(s)_

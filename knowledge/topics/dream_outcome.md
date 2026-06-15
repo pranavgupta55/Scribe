@@ -17,9 +17,6 @@
 ## Claims
 - The dream outcome is the gap between current reality and dreams; status-driven desires motivate purchases more than other desires. — [100m_offers.txt]
 
-## Connections
-- Dream Outcome (status increase in social/professional group) motivates purchases more than other desires, which Premium Pricing amplifies by increasing perceived value and emotional investment. _(connects to: Premium Pricing)_
-- Offer Naming uses the M-A-G-I-C formula where Avatar and Goal directly reference the Dream Outcome, ensuring the offer name attracts the right buyers seeking the right status increase. _(connects to: Offer Naming)_
 
 ---
 _Source: 100m_offers.txt · 1 claim(s)_

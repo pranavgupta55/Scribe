@@ -13,8 +13,10 @@
 ## Claims
 - Testimonial ad variations: user-generated content, founder direct-to-camera, podcast style, raw iPhone testimonials, walk-n-talk rants, parade of proof group testimonials, lifecycle ads, influencer collabs — [100m_playbook_goated_ads.txt]
 
+
 ## Connections
-- Both Testimonial Ads (user-generated, founder, podcast style) and Demonstration Ads (product demos, before-after, hero ads) overcome skepticism through proof, one via social validation and one via product evidence. _(connects to: Demonstration Ads)_
+- Real user testimonials overcome skepticism through proof; paying-client proof is stronger than free-client assertions. _(connects to: Testimonials As Currency)_
+- Real user testimonials convert more than sales pitches; build proof pipeline before scaling ads. _(connects to: Proof Testimonial Acquisition)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 1 claim(s)_

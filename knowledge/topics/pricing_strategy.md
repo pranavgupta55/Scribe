@@ -1,22 +1,21 @@
 # Pricing Strategy
 
-> Set prices based on value delivered and margin requirements, not competitor pricing or cost-plus models.
+> More friction at the application stage increases ROAS and sales efficiency despite higher cost per lead
 
-## How-To / Method
-- Identify the value the client receives in dollars or time saved
-- Price at 10-100x the direct cost of fulfillment
-- Use value equation to justify premium pricing to skeptical buyers
-- Test pricing at higher levels; most entrepreneurs underprice
+## Framework
+- Doubling cost per call from $200 to $500 with tighter qualification can raise ROAS from 3x to 6x
+- Sales efficiency doubles or triples because you close more deals with smaller team
 
-## Key Numbers
-- Gym Launch charged $16,000 vs $500 competitor (32x), with better results
-- Average gym owner makes $35,280/year; charged half their annual income
-- Achieved $239,000 annual revenue increase for clients at $42,000/year fee
-- Client lifetime value analysis: $4,500+ in 5 months justifies premium pricing
+## Why It Works
+- Better qualified prospects mean less sales spin required
+- Reduces operational drag and allows easier scaling
 
 ## Claims
-- At Gym Launch, charging $16,000 (32x higher than low competitors, 3x higher than previous premium) while doing less work created explosive growth and better results for clients. — [100m_offers.txt]
-- The virtuous cycle of price: raising prices increases emotional investment, perceived value, client results, and attracts better clients while improving margins. — [100m_offers.txt]
+- Adding good friction (qualifications) to a $10k offer increased cost per call from $200 to $500 but ROAS from 3x to 6x, with sales efficiency doubling or tripling — [we_have_more_demand_than_we_can_handle_how_do_i_get_to_10m_lCmdlNNJkBw.txt]
+
+## Connections
+- Close rate reveals optimal pricing; high rates signal underpricing while low rates indicate offer or qualification problems requiring different solutions. _(connects to: Close Rate Analysis And Price Optimization)_
+- Higher prices signal quality and improve conversion; more friction at application increases ROAS. _(connects to: Pricing Psychology)_
 
 ---
-_Source: 100m_offers.txt · 2 claim(s)_
+_Source: we_have_more_demand_than_we_can_handle_how_do_i_get_to_10m_lCmdlNNJkBw.txt · 1 claim(s)_

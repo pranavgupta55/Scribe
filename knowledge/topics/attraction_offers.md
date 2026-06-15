@@ -7,8 +7,10 @@
 - Freebies sit on a continuum from 100% discount (free) to discounted to full price
 - Goal: cover cost of getting customer and delivering product within 30 days
 
+
 ## Connections
-- Attraction Offers reduce initial purchase friction through discounts or free offers to turn strangers into customers, with Discount Offers proving that massive (50%+) discounts generate volume while marginal ones just cut margin. _(connects to: Discount Offers)_
+- Use discounted offers to reduce purchase friction; bundle into defined-end programs that feel exclusive and risk-free. _(connects to: Irresistible Offers)_
+- Free or discounted offers reduce purchase friction and reveal deeper problems your premium core offer solves for qualified buyers. _(connects to: Lead Magnets And Offers)_
 
 ---
 _Source: 100m_money_models.txt · 0 claim(s)_

@@ -18,8 +18,6 @@
 ## Claims
 - Ad call-outs should harness the cocktail party effect using labels, yes-questions, if-then statements, ridiculous results, contrast, likeness, or scene-setting to cut through noise — [100m_leads.txt]
 
-## Connections
-- Call Out Techniques use labels, yes-questions, if-then statements, ridiculous results, and contrast to cut through noise, all supported by Hook Writing Strategy's 80% emphasis on hooks being the ad's foundation. _(connects to: Hook Writing Strategy)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

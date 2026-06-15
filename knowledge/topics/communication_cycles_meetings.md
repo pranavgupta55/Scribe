@@ -21,8 +21,6 @@
 ## Claims
 - Three-meeting communication cycle: daily huddles (10 min, sales/cancels/wins), weekly team meetings (scripted roles, 45 min), weekly one-on-ones (30 min, open questions—'what's going well?') — [gym_launch_secrets.txt]
 
-## Connections
-- Employee Training And Leverage uses Document-Demonstrate-Duplicate method for scalable teams, while Communication Cycles Meetings establish daily huddles, weekly team meetings, and one-on-ones to maintain pulse on training implementation. _(connects to: Employee Training And Leverage)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

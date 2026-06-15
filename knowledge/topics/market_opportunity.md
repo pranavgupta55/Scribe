@@ -27,8 +27,9 @@
 - 30% of US small businesses lack a website by 2026, driving a $10 million market opportunity — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Building High-Converting AI-Generated Websites"]
 
 
+
 ## Connections
-- AI Adoption Rates showing that learning AI should be priority are enabled by Market Opportunity identifying the massive gap (84% never used AI) creating opportunity for the 0.04% of advanced users. _(connects to: Ai Adoption Rates)_
+- Both concepts relate to adoption. _(connects to: Ai Adoption Urgency)_
 
 ---
 _Topic appears in 1 source(s) · 9 claim(s) · 6 connection(s)_

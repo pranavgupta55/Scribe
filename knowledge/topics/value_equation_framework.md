@@ -17,8 +17,9 @@
 ## Claims
 - The Value Equation has four elements: Dream Outcome, Perceived Likelihood of Achievement, Time Delay, and Effort/Sacrifice; maximizing first two and minimizing last two drives conversions — [100m_leads.txt]
 
+
 ## Connections
-- Both 100M Offers and 100M Leads teach the same four-lever model (dream outcome, perceived likelihood, time delay, effort/sacrifice) as the foundation for pricing and positioning. _(connects to: Value Equation)_
+- Four levers shape perceived offer value: dream outcome, likelihood, delay, and effort; all four must align to convert. _(connects to: Value Equation)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

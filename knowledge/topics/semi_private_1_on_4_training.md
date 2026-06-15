@@ -16,8 +16,6 @@
 ## Claims
 - Sell high-ticket 12-week semi-private programs at $2,000-3,000 via two-step sales (setter + closer); downsell to $550/month recurring after 12 weeks to maintain 100% back-end retention — [gym_launch_secrets.txt]
 
-## Connections
-- Semi-Private training at $2,000-3,000 front-end with $550/month downsell creates the premium tier, paired with Membership Structuring's two-tier model ($199 large group, $600 semi-private) that avoids pricing dead zones. _(connects to: Membership Structuring)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

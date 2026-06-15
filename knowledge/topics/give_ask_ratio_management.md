@@ -19,8 +19,6 @@
 ## Claims
 - The give-ask ratio should be 3.5:1 minimum for content marketing; growing platforms use 10:1 ratios (give much more, ask rarely) to maximize audience growth — [100m_leads.txt]
 
-## Connections
-- Give Ask Ratio Management prescribes 3.5:1 minimum or 10:1 for aggressive growth, which operationalizes Free Content Creation by defining how much free value must be provided before requesting customer actions. _(connects to: Free Content Creation)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

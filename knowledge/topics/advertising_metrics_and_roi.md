@@ -14,8 +14,9 @@
 ## Claims
 - The 3:1 LTGP-to-CAC ratio (lifetime gross profit to customer acquisition cost) is the minimum threshold for profitable scaling; above 3:1 focus on increasing LTGP over decreasing CAC — [100m_leads.txt]
 
+
 ## Connections
-- Client Financed Acquisition achieves negative CAC by selling high-ticket offers generating immediate profit, aligning with the 3:1 LTGP-to-CAC minimum ratio threshold in Advertising Metrics and ROI. _(connects to: Client Financed Acquisition)_
+- Ad revenue is a quality metric, not primary income; books, courses, and affiliates drive real revenue. _(connects to: Revenue Models Monetization)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

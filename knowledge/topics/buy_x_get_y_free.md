@@ -23,8 +23,10 @@
 ## Claims
 - Buy X Get Y Free reframes discounts as free items; offering 'Buy 1 Get 2 Free' generates more interest than a 33% discount on the same products. — [100m_money_models.txt]
 
+
 ## Connections
-- Both Bonuses and Buy X Get Y Free reframe pricing as bundle value: Bonuses stack additional items to expand price-to-value discrepancy, while Buy X Get Y Free reframes discounts as free items. _(connects to: Bonuses)_
+- Both use price anchoring and strategic discounting to guide customers toward high-margin bundled packages. _(connects to: Bundle Strategy)_
+- Bundle free items with raised base price; free generates 9x volume and compounds with higher anchors. _(connects to: Free Offers)_
 
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

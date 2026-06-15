@@ -17,8 +17,6 @@
 ## Claims
 - Two-tier programming with regressive tier 2 workouts (goblet squats instead of barbell back squats) lets new members train with OGs without segregation, reducing onboarding cost to zero — [gym_launch_secrets.txt]
 
-## Connections
-- Exercise Selection Programming with two-tier regressive workouts lets new members train alongside experienced ones with zero onboarding cost, which Capacity Maximization leverages to serve 3x the members in the same space. _(connects to: Capacity Maximization)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

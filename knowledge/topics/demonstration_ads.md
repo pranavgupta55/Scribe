@@ -10,8 +10,9 @@
 ## Claims
 - Demonstration ads include: product demos, unboxing, before-and-after comparisons, and high production hero ads like Dollar Shave Club and Old Spice — [100m_playbook_goated_ads.txt]
 
+
 ## Connections
-- Both Testimonial Ads (user-generated, founder, podcast style) and Demonstration Ads (product demos, before-after, hero ads) overcome skepticism through proof, one via social validation and one via product evidence. _(connects to: Testimonial Ads)_
+- Show product in action to build credibility; fill pipeline with testimonials before scaling ads. _(connects to: Proof Testimonial Acquisition)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 1 claim(s)_

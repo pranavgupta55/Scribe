@@ -16,9 +16,10 @@
 ## Claims
 - Anchor Upsells present a premium offer at 5-10x the price first, expecting customer hesitation ('the gasp'), then offering a moderately-priced alternative that appears as a better deal. — [100m_money_models.txt]
 
+
 ## Connections
-- Both Anchor Upsell and Decoy Offers use price perception manipulation: Anchor presents a premium option first to reset expectations, while Decoy presents cheap and premium side-by-side to highlight the value difference. _(connects to: Decoy Offers)_
-- Giveaways advertise $5,000-12,000 prizes to generate leads, then offer everyone else the prize at discount, using the Anchor Upsell principle of presenting premium option first to reset price expectations. _(connects to: Giveaways)_
+- Both concepts relate to offer. _(connects to: Anchor Pricing)_
+- Offer stacking with 5-10x price jumps anchors perception and maximizes lifetime value. _(connects to: Offer Stacking Upsells)_
 
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

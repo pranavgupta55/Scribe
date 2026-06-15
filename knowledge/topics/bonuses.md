@@ -25,8 +25,11 @@
 - Bonuses should each address a specific concern, be named with benefits, come with scarcity/urgency, and their total value should eclipse the core offer. — [100m_offers.txt]
 - Bonuses can include other businesses' products/services negotiated for free, creating win-win affiliate relationships and commission revenue. — [100m_offers.txt]
 
+
 ## Connections
-- Both Bonuses and Buy X Get Y Free reframe pricing as bundle value: Bonuses stack additional items to expand price-to-value discrepancy, while Buy X Get Y Free reframes discounts as free items. _(connects to: Buy X Get Y Free)_
+- Stack high-value tools and checklists as bonuses; separate skill-building from consumables in pricing. _(connects to: Value Stacking)_
+- Bonuses stack perceived value; each bonus should exceed offer cost; tools and checklists outperform trainings. _(connects to: Offers And Bonuses)_
+- Stack items to expand price-value gap; separate skills from consumables to align churn with value. _(connects to: Churn Reduction In Subscription Models)_
 
 ---
 _Source: 100m_offers.txt · 2 claim(s)_

@@ -16,5 +16,13 @@
 ## Claims
 - Org structure scales by EFT thresholds: 0-100 EFTs (owner + 1 trainer), 100-175 (add operations manager), 175-250 (add challenge manager), 250-325 (add retention manager), 400+ (add sales manager) — [gym_launch_secrets.txt]
 
+## Connections
+- Hire lean and add roles as workload demands; different role types need different recruiting strategies. _(connects to: Recruiting Leverage)_
+- Scaling from owner-operator to teams requires volume hiring when ROI is proven. _(connects to: Volume Based Hiring)_
+- Both emphasize lean hiring that scales from solo operator to multi-person teams only when workload demonstrates genuine need. _(connects to: Team Scaling)_
+- Hire one leadership role by urgency; add team roles only when workload demands, not proactively. _(connects to: Leadership Hiring Strategy)_
+- Hire as workload demands; build parallel talent funnel mirroring customer acquisition funnel. _(connects to: Recruitment Framework)_
+- Hire lean scaling from owner-operator to multi-role teams; sales directors train 10-15, not manage 3+ clients. _(connects to: Team Management Structure)_
+
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

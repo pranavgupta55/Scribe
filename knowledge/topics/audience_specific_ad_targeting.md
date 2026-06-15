@@ -15,8 +15,6 @@
 - The speaker uses a 2-mile radius for initial ad targeting, then transitions to a 4-mile radius after the first week with a new template, enhancing conversion rates by targeting fresh audiences. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Audience-Specific Ad Targeting"]
 
 
-## Connections
-- Audience Targeting uses lookalike audiences and demographic filters to narrow cold audiences, while Audience-Specific Ad Targeting leverages the Decagon Matrix to create 10 distinct audience segments from existing assets. _(connects to: Audience Targeting)_
 
 ---
 _Topic appears in 1 source(s) · 2 claim(s) · 1 connection(s)_

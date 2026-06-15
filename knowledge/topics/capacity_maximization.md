@@ -17,9 +17,6 @@
 ## Claims
 - Three capacity levers: limited membership (3x/week vs unlimited), partner exercises (doubles capacity with spotting), and 45-minute back-to-back sessions with 15-min breaks create 33% capacity gain — [gym_launch_secrets.txt]
 
-## Connections
-- Capacity Maximization uses limited membership (3x/week) and partner exercises to increase capacity, while Session Duration (45-minute back-to-back) further splits peak times to serve more clients in the same space. _(connects to: Session Duration Structure)_
-- Exercise Selection Programming with two-tier regressive workouts lets new members train alongside experienced ones with zero onboarding cost, which Capacity Maximization leverages to serve 3x the members in the same space. _(connects to: Exercise Selection Programming)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

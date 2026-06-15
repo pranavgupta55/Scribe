@@ -20,5 +20,12 @@
 - C-L-O-S-E-R sales framework: Clarify goals, Label problem, Overview past failures, Sell vacation (not features), Explain objections, Reinforce decision—closes 85%+ of cold traffic — [gym_launch_secrets.txt]
 - Halfway sale ('Abandon Hope') closes 95% of 6-week clients by applying $600 front-end cost as credit toward lifetime rate, positioning $49/week recurring as a discounted upgrade — [gym_launch_secrets.txt]
 
+## Connections
+- Fix close rate via in-person closing first; C-L-O-S-E-R framework systematizes prospect belief shifts. _(connects to: Sales Motion Fundamentals)_
+- VSL, qualification, and training cadence enable C-L-O-S-E-R framework to close 85%+ of cold appointments. _(connects to: Sales Motion Architecture)_
+- CLOSER framework moves cold leads through belief shifts; fixing sales process mechanics lifts close rates from 10% toward 85%. _(connects to: Sales Process Redesign)_
+- 10% close rate signals sales process failure; C-L-O-S-E-R framework and in-person closing reach 35-40%. _(connects to: Close Rate Optimization)_
+- Consultative sales discovery framework combined with CLOSER process systematically moves skeptical prospects toward belief and 85%+ closes. _(connects to: Sales Framework)_
+
 ---
 _Source: gym_launch_secrets.txt · 2 claim(s)_

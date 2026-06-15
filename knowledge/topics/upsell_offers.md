@@ -14,8 +14,13 @@
 - Current customers buy more readily than strangers
 - Timing is everything: offer solution at moment customer realizes they need it
 
+
 ## Connections
-- Upsell Offers present whatever comes next after purchase (typically generating majority profit), while Internal Plays launch 6-week bootcamp challenges every 6 weeks to existing members at 25% engagement. _(connects to: Internal Plays Upsells)_
+- Two-step sales (discount offer, upsell) increase close rates and generate majority of profit per customer. _(connects to: Two Step Sales)_
+- Massive discounts generate lead volume upfront; upsells via card-on-file capture majority of profit per customer downstream. _(connects to: Discount Offers)_
+- Stacking high-value bonuses and creating multiple pricing tiers drives majority of per-customer profit through upsells. _(connects to: Offer Stacking Upsells)_
+- Both strategies anchor perception and revenue: high-end upsells justify base offer and generate majority of profit per customer. _(connects to: Anchor Pricing)_
+- Promise meaningful help and deliver satisfaction; upsells of what comes next typically generate majority of profit per customer. _(connects to: Sales Fundamentals)_
 
 ---
 _Source: 100m_money_models.txt · 0 claim(s)_

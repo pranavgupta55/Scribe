@@ -19,9 +19,9 @@
 - If you can make the bottom part of the Value Equation equal to zero (no time delay or effort), you achieve infinite value. — [100m_offers.txt]
 - Perception is reality—prospects must perceive increases in likelihood and decreases in time/effort, not just experience them logically. — [100m_offers.txt]
 
+
 ## Connections
-- Both 100M Offers and 100M Leads teach the same four-lever model (dream outcome, perceived likelihood, time delay, effort/sacrifice) as the foundation for pricing and positioning. _(connects to: Value Equation Framework)_
-- Problem Solution Framework identifies all buyer problems and converts them to solutions, directly addressing all four Value Equation levers (dream outcome, perceived likelihood, time delay, effort/sacrifice). _(connects to: Problem Solution Framework)_
+- Four levers shape perceived offer value: dream outcome, likelihood, delay, and effort; all four must align to convert. _(connects to: Value Equation Framework)_
 
 ---
 _Source: 100m_offers.txt · 3 claim(s)_

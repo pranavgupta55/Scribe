@@ -20,8 +20,6 @@
 ## Claims
 - Exit interviews save 25% of cancellations: use C-L-O-S-E-R to re-clarify goals, re-label problems, re-overview obstacles, offer creative solutions (freeze, payment plans, schedule adjustment) — [gym_launch_secrets.txt]
 
-## Connections
-- Exit Interviews using C-L-O-S-E-R framework save 25% of cancellations by uncovering true obstacles and offering creative solutions, contributing to the broader Retention Attrition Reduction goal of reaching 3-4% churn. _(connects to: Retention Attrition Reduction)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

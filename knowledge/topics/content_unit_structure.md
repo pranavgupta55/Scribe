@@ -14,9 +14,6 @@
 ## Claims
 - Content units have three components: Hook (grab attention), Retain (keep watching), Reward (satisfy the promise); lists, steps, and stories are primary retention methods — [100m_leads.txt]
 
-## Connections
-- Free Content Creation is enabled by the Content Unit Structure (Hook, Retain, Reward) which provides the three-component formula that works across any platform or medium. _(connects to: Free Content Creation)_
-- Content Unit Structure provides Hook-Retain-Reward framework, while Winning Hooks emphasizes reusing proven hooks from prior ads, winning free content, and other sources before creating new ones. _(connects to: Winning Hooks From Existing Content)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

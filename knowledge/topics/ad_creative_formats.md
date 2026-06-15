@@ -17,9 +17,10 @@
 - Five major ad formats that work across all industries: Demonstration, Testimonial, Education, Story, and Faceless ads — [100m_playbook_goated_ads.txt]
 - Creative meat rotates less frequently than hooks because fewer people see the body of the ad, so 3-5 meat variations per week is sufficient — [100m_playbook_goated_ads.txt]
 
+
 ## Connections
-- Hook Writing Strategy allocates 80% of effort to hooks paired with the five Ad Creative Formats (Demonstration, Testimonial, Education, Story, Faceless), enabling rapid production of variations without constant hook reinvention. _(connects to: Hook Writing Strategy)_
-- Faceless Ads scale production by removing on-camera talent and using screenshots, text, animations, directly enabling Ad Creative Formats to rotate meat variations weekly without talent constraints. _(connects to: Faceless Ads)_
+- Five proven ad formats work universally; more creative tests beat perfection—volume of ideas outweighs execution precision. _(connects to: Creative Production)_
+- Five proven ad formats work across industries; scrambling variations beats hiring expensive creative agencies. _(connects to: Lead Generation Marketing)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 2 claim(s)_

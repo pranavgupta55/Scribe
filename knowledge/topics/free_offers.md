@@ -17,9 +17,13 @@
 - Free offers cost 5-10x less per lead than premium offers while maintaining same close rates per split tests across gyms — [100m_leads_2_bonus_chapters.txt]
 - Free is the recommended starting offer when entering a new market because it builds proof, testimonials, and conviction before monetizing — [100m_leads_2_bonus_chapters.txt]
 
+
 ## Connections
-- Discount Offers and Free Offers sit at opposite ends of the lead-generation spectrum, with Free Offers generating 9x more responses than paid offers but Free Offers requiring higher subsequent pricing to justify CAC differences. _(connects to: Discount Offers)_
-- Free Offers generate 9x more responses than paid offers, while Friction Qualification shows that adding friction (qualifications, forms, forced consumption) increases lead quality without dramatically reducing volume. _(connects to: Friction Qualification)_
+- Both concepts relate to free and paid. _(connects to: Free Content Monetization Psychology)_
+- Free offers generate 9x more responses than paid; upsell to paid systems after free engagement to scale solo. _(connects to: Solo Business Scaling)_
+- Free generates 9x responses and works at scale (Facebook, Netflix); free work is fastest path to proof and experience. _(connects to: Starting For Free)_
+- Free generates 9x volume; bundle it with paid exclusivity and risk-reversal to create irresistible conversion. _(connects to: Irresistible Offers)_
+- Bundle free items with raised base price; free generates 9x volume and compounds with higher anchors. _(connects to: Buy X Get Y Free)_
 
 ---
 _Source: 100m_leads_2_bonus_chapters.txt · 3 claim(s)_

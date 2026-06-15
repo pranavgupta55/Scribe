@@ -17,5 +17,8 @@
 ## Claims
 - A lead magnet is a valuable, narrow solution you give away free that creates problems your core offer solves; it should be so good customers feel stupid saying no — [100m_leads.txt]
 
+## Connections
+- Free or discounted offers reduce purchase friction and reveal deeper problems your premium core offer solves for qualified buyers. _(connects to: Attraction Offers)_
+
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

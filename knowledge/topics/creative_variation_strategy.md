@@ -22,8 +22,9 @@
 - Don't get bored repeating ads—new customers enter market daily and it will be their first time seeing it; focus on variations to test different segments — [100m_playbook_goated_ads.txt]
 - Once winning ads are identified, double down on what works by reusing same hooks to create more variations — [100m_playbook_goated_ads.txt]
 
+
 ## Connections
-- The Ad Assembly Line Process operationalizes Creative Variation Strategy by chunking ad production into hooks, meat, and CTAs so teams can test hundreds of variations weekly instead of constantly inventing new ideas. _(connects to: Ad Assembly Line Process)_
+- Test hundreds weekly; double down on winners via filters and remakes. _(connects to: Kaleidoscope Creative Variations)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 3 claim(s)_

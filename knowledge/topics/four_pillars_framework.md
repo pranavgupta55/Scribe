@@ -11,8 +11,6 @@
 ## Claims
 - Show rates increased from 50% to 90%+ by implementing four pillars; a 20-40% increase in show rates translates to 2-3x profit improvement in year one with 20% margins — [100m_playbook_lead_nurture.txt]
 
-## Connections
-- Availability Scheduling emphasizes 7 days/week extended hours as the biggest predictor of show rate, which aligns with Four Pillars Framework that measures Availability, Speed, Personalization, and Volume as data-driven levers on show rates. _(connects to: Availability Scheduling)_
 
 ---
 _Source: 100m_playbook_lead_nurture.txt · 1 claim(s)_

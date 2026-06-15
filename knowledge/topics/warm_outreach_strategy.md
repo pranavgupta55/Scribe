@@ -24,8 +24,10 @@
 ## Claims
 - Warm outreach via calls, texts, emails with 100 reach-outs per day for 100 days straight yields approximately 1-2 customers per 100 attempts through building trust with known contacts — [100m_leads.txt]
 
+
 ## Connections
-- Cold Outreach requires scraped lists, personalization, and big fast value to overcome stranger distrust, while Warm Outreach leverages known contacts where trust is already established, both achieving 1-2 customers per 100 attempts. _(connects to: Cold Outreach Execution)_
+- Cold sales process can apply to warm leads by reframing through relationship, then delivering structured close within existing trust. _(connects to: Cold Process On Warm Leads)_
+- Warm referrals lose close rate from casualness; apply full sales process to warm contacts like cold leads. _(connects to: Warm Lead Underestimation Problem)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

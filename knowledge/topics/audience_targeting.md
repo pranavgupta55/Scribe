@@ -13,8 +13,10 @@
 ## Claims
 - Use lookalike audiences based on best customers, then add demographic/interest filters; start specific to burn through smaller audiences profitably before expanding — [100m_leads.txt]
 
+
 ## Connections
-- Audience Targeting uses lookalike audiences and demographic filters to narrow cold audiences, while Audience-Specific Ad Targeting leverages the Decagon Matrix to create 10 distinct audience segments from existing assets. _(connects to: Audience Specific Ad Targeting)_
+- Both concepts relate to audience. _(connects to: Target Audience Qualification)_
+- Both narrow to highest-probability buyers via platform-native targeting and interest-based algorithms. _(connects to: Platform Algorithm Targeting)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

@@ -25,8 +25,11 @@
 ## Claims
 - Affiliate payout structure: 25% CAC for tier 1 (anyone who signs up), 50% CAC for tier 2 (activated), 100% CAC for tier 3 (sustained); blended payout stays below maximum allowable CAC — [100m_leads.txt]
 
+
 ## Connections
-- Affiliate Program Building with tiered payouts (25% tier 1, 50% tier 2, 100% tier 3) becomes a scalable Lead Getter Integration mechanism where one super-affiliate recruiting agencies creates 2,500+ leads monthly. _(connects to: Lead Getter Integration)_
+- Recruiting affiliate army scales lead generation; independent businesses selling your offer provides highest-leverage growth. _(connects to: Affiliate Model)_
+- Launch with initial affiliates, integrate into onboarding; affiliate army is highest-leverage lead source at scale. _(connects to: Affiliate Integration)_
+- Partner-driven lead generation works at scale when recruiting independent businesses to sell and promote your offer directly to their audiences. _(connects to: Affiliate Partnership Model)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

@@ -19,8 +19,13 @@
 - Starving Crowd (market) > Offer Strength > Persuasion Skills in order of importance for business success. — [100m_offers.txt]
 - Newspapers declined 25% annually; Lloyd's software business failed despite great product and offer because the market was dying. — [100m_offers.txt]
 
+
 ## Connections
-- Niching allows 100x higher pricing for the same product, and Market Selection reveals why: you must pick markets that are growing with pain and purchasing power, otherwise nothing in the offer model works. _(connects to: Niching)_
+- Picking right market matters more than offer; growing markets with pain, purchasing power, and targeting ease compound. _(connects to: Market Positioning And Differentiation)_
+- Picking the largest, richest market with growth and purchasing power matters more than offer or persuasion skills. _(connects to: Us Market Priority)_
+- Dominating one market completely requires choosing growing markets with pain, purchasing power, and targeting ease. _(connects to: Market Dominance Strategy)_
+- Market selection matters more than offer; growing existing markets beats chasing new ones; focus where pain, money, and targeting converge. _(connects to: Market Share Vs New Markets)_
+- Market saturation claims often mask execution problems; comparable locations succeed where others fail with same market. _(connects to: Market Saturation Myth)_
 
 ---
 _Source: 100m_offers.txt · 3 claim(s)_

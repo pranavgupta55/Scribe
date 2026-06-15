@@ -19,8 +19,6 @@
 - A CrossFit gym in Alexandria, Virginia, generated $7,190 in sales from 26 appointments without paying for ads, using AI-driven lead generation. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "AI-Driven Lead Generation Without Ads"]
 
 
-## Connections
-- AI-Driven Lead Generation generates leads efficiently from existing databases without ads, while AI-Driven Lead Nurturing integrates AI into the database to enable segmentation and remarketing of those leads. _(connects to: Ai Driven Lead Nurturing)_
 
 ---
 _Topic appears in 1 source(s) · 2 claim(s) · 1 connection(s)_

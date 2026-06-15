@@ -22,9 +22,9 @@
 ## Claims
 - The Classic Upsell solves the problem revealed by the previous offer immediately; rental car agencies go from $19/day to $100/day through sequential upsells. — [100m_money_models.txt]
 
+
 ## Connections
-- Two-Step Sales increase upsell close rates by removing friction through a micro-purchase decision, while the Classic Upsell solves the next discovered problem, together creating a sequential conversion machine. _(connects to: Two Step Sales)_
-- Rollover Upsells apply 50% of previous purchase toward 12-month memberships, converting one-time payers to recurring, while Classic Upsell solves the next problem, together creating deeper customer lifecycle monetization. _(connects to: Rollover Upsell)_
+- Solve next problem immediately after first purchase; micro-purchase removes friction for upsell. _(connects to: Two Step Sales)_
 
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

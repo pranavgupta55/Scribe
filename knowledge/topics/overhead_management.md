@@ -16,8 +16,6 @@
 ## Claims
 - Target 80% service margin on training: cut oversubscribed sessions from 163/month to 99/month and align trainer pay at $15-18/hr to increase owner profit by $25k+/year — [gym_launch_secrets.txt]
 
-## Connections
-- Overhead Management targets 80% service margin by cutting unprofitable sessions, while Price Optimization moves from commodity unlimited ($99-150/month) to tiered billing ($167-225/month), both increasing profit without adding overhead. _(connects to: Price Optimization)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

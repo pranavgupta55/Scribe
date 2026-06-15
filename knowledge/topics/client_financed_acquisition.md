@@ -16,9 +16,13 @@
 ## Claims
 - Client-financed acquisition creates negative cost of customer acquisition: spending $100 on ads generates $1,200 in 6-week challenge sales, yielding 12-to-1 ROI — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Client Financed Acquisition achieves negative CAC by selling high-ticket offers generating immediate profit, aligning with the 3:1 LTGP-to-CAC minimum ratio threshold in Advertising Metrics and ROI. _(connects to: Advertising Metrics And Roi)_
-- Client Financed Acquisition demonstrates negative CAC by selling high-ticket offers with immediate profit, while Premium Offers require 3-5x higher prices to justify 5-10x higher CAC. _(connects to: Premium Offers)_
+- Make money faster than ad spend by selling high-ticket; testimonials as proof convert better than pitch. _(connects to: Proof Testimonial Acquisition)_
+- Make money faster than you spend on ads via high-ticket offers; local service businesses mix paid ads short-term with long-term content. _(connects to: Multi Channel Acquisition Strategy)_
+- Profiting immediately on sales funds acquisition; arbitrage vendor discounts or buyer spreads to cover customer cost. _(connects to: Customer Acquisition Arbitrage)_
+- Immediate profitability on each sale reveals true unit economics; easy acquisition via cheap ads masks the bad fundamentals. _(connects to: Profitability Proof)_
+- Activate existing resources for quick revenue with beta clients; high-ticket offers generate immediate profit covering all acquisition costs. _(connects to: Fast Cash Play)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

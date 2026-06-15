@@ -33,6 +33,9 @@
 - AI handles outbound follow-ups for re-engaged leads, converting 40-80 of the 2,000 leads with a training-specific offer — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Lead Acquisition Process"]
 
 
+## Connections
+- AI is a leverage tool, not an industry; it compounds existing business advantages. _(connects to: Email Reactivation Campaigns)_
+
 ---
 _Topic appears in 1 source(s) · 7 claim(s) · 3 connection(s)_
 _Sources: watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt_

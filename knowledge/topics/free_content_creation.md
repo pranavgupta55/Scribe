@@ -26,9 +26,10 @@
 - Make content for strangers (no inside jokes); loyal audience won't mind reminders
 - Manually posting beats pre-scheduling due to feedback loop pressure to maintain quality
 
+
 ## Connections
-- Free Content Creation is enabled by the Content Unit Structure (Hook, Retain, Reward) which provides the three-component formula that works across any platform or medium. _(connects to: Content Unit Structure)_
-- Give Ask Ratio Management prescribes 3.5:1 minimum or 10:1 for aggressive growth, which operationalizes Free Content Creation by defining how much free value must be provided before requesting customer actions. _(connects to: Give Ask Ratio Management)_
+- Content provides highest leverage for education; one-to-many reaches millions vs one-to-one. _(connects to: Content Creation Brand Building)_
+- Free high-volume content builds audiences that support premium paid offers without cannibalizing sales. _(connects to: Free Content Monetization Psychology)_
 
 ---
 _Source: 100m_leads.txt · 0 claim(s)_

@@ -36,8 +36,13 @@
 - AI is integrated with all active members, enabling follow-up with new sign-ups and existing members — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Remarketing with Database and Reactivation"]
 
 
+
 ## Connections
-- AI-Driven Lead Generation generates leads efficiently from existing databases without ads, while AI-Driven Lead Nurturing integrates AI into the database to enable segmentation and remarketing of those leads. _(connects to: Ai Driven Lead Generation Without Ads)_
+- AI nurtures leads cost-effectively; combines efficient generation with engagement to reduce CAC. _(connects to: Lead Generation)_
+- AI channels (nurturing, websites) personalize experience; both boost revenue without paid ads. _(connects to: Ai Driven Website)_
+- AI amplifies sales workflows when applied to lead nurturing, turning skill and strategy into scalable automated leverage. _(connects to: Ai Business Opportunities)_
+- AI-first companies achieve millions per employee by automating support from day one, boosting revenue without hiring. _(connects to: Revenue Per Employee Leverage)_
+- AI tools enable one-person companies to nurture leads and handle customer engagement without hiring. _(connects to: One Person Company)_
 
 ---
 _Topic appears in 1 source(s) · 10 claim(s) · 6 connection(s)_

@@ -15,8 +15,12 @@
 - A monthly cost of $1,500 is required to remove guesswork and set up a profitable marketing system, including AI-driven lead nurturing. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Social Media Reviews & Marketing Investment"]
 
 
+
 ## Connections
-- Both Financial Structure and Service Pricing discuss specific price points: Financial Structure mentions $1,500/month investment costs while Service Pricing offers $1,600/month packages including ads and assistants. _(connects to: Service Pricing)_
+- AI automation achieves millions per employee; structure for leverage from day one. _(connects to: Revenue Per Employee Leverage)_
+- AI-driven websites and lead nurturing boost revenue through personalization and structured funnels. _(connects to: Ai Driven Website)_
+- AI operating leverage enables revenue uplifts comparable to historical computing booms through automated lead nurturing. _(connects to: Ai First Strategy)_
+- AI skill development unlocks revenue uplifts via automated lead nurturing and operational leverage. _(connects to: Ai Business Opportunities)_
 
 ---
 _Topic appears in 1 source(s) · 2 claim(s) · 1 connection(s)_

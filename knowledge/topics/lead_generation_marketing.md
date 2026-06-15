@@ -16,8 +16,12 @@
 ## Claims
 - Lead Gen Scrambler: test 150+ ad combinations from headlines, copy, images, and videos to find 5 home runs per market without expensive agencies — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Roadmap for AI Business shows landing first clients takes 2 weeks, while Lead Generation Marketing demonstrates rapid ad-variation testing (150+ combinations) to accelerate that initial customer acquisition. _(connects to: Roadmap For Ai Business)_
+- Testing volume of creative variations beats optimizing existing ads; winners emerge from quantity of ideas, not quality of execution. _(connects to: Creative Production)_
+- Content production at scale with ad distribution beats traditional copywriting; endless ad variations from scrambling headlines, angles, and formats. _(connects to: Content Led Sales Strategy)_
+- Scrambling ad variations as baseline; weekly production prevents saturation and maintains creative freshness vs. monthly batches. _(connects to: Scaling Ad Production)_
+- Five proven ad formats work across industries; scrambling variations beats hiring expensive creative agencies. _(connects to: Ad Creative Formats)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

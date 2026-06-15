@@ -20,8 +20,6 @@
 ## Claims
 - Win Your Money Back offers let customers get money back or store credit if they hit specified goals or complete actions, generating over $1 billion in sales industry-wide. — [100m_money_models.txt]
 
-## Connections
-- Both Trial with Penalty and Win Your Money Back offer money-back or credit incentives when customers meet goals or complete actions, using financial penalties/rewards to drive accountability. _(connects to: Trial With Penalty)_
 
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

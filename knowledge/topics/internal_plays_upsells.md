@@ -16,9 +16,6 @@
 ## Claims
 - Internal plays (6-week bootcamps/challenges) generate 25% member engagement at $150-199, with 90% margins; feed 25-35% upgrades into semi-privates and supplement upsells — [gym_launch_secrets.txt]
 
-## Connections
-- Member Lifecycle Management guides members through Connect-Refer-Testify-Ascend milestones, with Internal Plays like 6-week bootcamp challenges serving as leverage points for upselling at 25% member engagement. _(connects to: Member Lifecycle Management)_
-- Upsell Offers present whatever comes next after purchase (typically generating majority profit), while Internal Plays launch 6-week bootcamp challenges every 6 weeks to existing members at 25% engagement. _(connects to: Upsell Offers)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

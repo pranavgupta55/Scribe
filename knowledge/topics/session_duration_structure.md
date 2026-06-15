@@ -8,8 +8,6 @@
 - Sell as: 'We added more times so you don't fight for parking' or 'More focus, less dilly-dallying in between'
 - For small facilities (≤15 cap): Use 30-minute sessions instead; capacity jumps to 24 people/hour from 16
 
-## Connections
-- Capacity Maximization uses limited membership (3x/week) and partner exercises to increase capacity, while Session Duration (45-minute back-to-back) further splits peak times to serve more clients in the same space. _(connects to: Capacity Maximization)_
 
 ---
 _Source: gym_launch_secrets.txt · 0 claim(s)_

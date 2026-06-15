@@ -26,5 +26,9 @@
 - Confusing advertising problem (low response) with sales problem (low conversion)
 - Not budgeting long enough to find winner; need 2-3 months per platform to break even
 
+## Connections
+- Paid advertising reaches cold audiences; close rates spike when targeting only people with actual buying power. _(connects to: Target Audience Qualification)_
+- Paid advertising reaches cold audiences at scale; TikTok monetization is poor, real revenue from Google/Meta ads. _(connects to: Platform Monetization)_
+
 ---
 _Source: 100m_leads.txt · 0 claim(s)_

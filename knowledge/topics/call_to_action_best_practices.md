@@ -24,8 +24,6 @@
 - Effective CTA must show and tell what to do, how to do it, when to do it, what they get, and what happens next; demonstrate the next steps visually — [100m_playbook_goated_ads.txt]
 - Make only 1-3 CTAs per recording session; once one works, stick with it rather than constantly testing — [100m_playbook_goated_ads.txt]
 
-## Connections
-- Landing Pages must match ads visually and verbally while Call to Action Best Practices emphasize clarity over cleverness, showing exactly what to do, how, when, what they get, and what happens next. _(connects to: Landing Pages And Ctas)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 3 claim(s)_

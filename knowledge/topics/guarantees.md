@@ -26,9 +26,10 @@
 - Service guarantees (keep working free until result achieved) are most powerful; conditional guarantees tied to client actions work best. — [100m_offers.txt]
 - Performance/revshare models (only pay if results achieved) align incentives perfectly and are among the most desirable guarantees. — [100m_offers.txt]
 
+
 ## Connections
-- Higher prices increase emotional investment and commitment, which Guarantees amplify by removing buyer risk and increasing conversion rates 2-4x. _(connects to: Premium Pricing)_
-- Satisfaction Guarantees on website builds ($1,000 upfront with full refund if unsatisfied) operationalize the Guarantees principle that reversing buyer risk increases conversions 2-4x by removing purchase friction. _(connects to: Satisfaction Guarantee)_
+- Reverse buyer risk to increase conversions 2-4x; service guarantees and premium pricing filter for better customers. _(connects to: Pricing And Premium Offers)_
+- Risk reversal via guarantees unlocks conversion gains when paired with proven sales process and deep audience understanding. _(connects to: Sales Process Conversion)_
 
 ---
 _Source: 100m_offers.txt · 4 claim(s)_

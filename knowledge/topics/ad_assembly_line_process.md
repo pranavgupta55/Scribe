@@ -25,9 +25,6 @@
 - 90% of ad creation time should be spent on preparation and hook writing, only 10% on actual recording — [100m_playbook_goated_ads.txt]
 - Process took 13 years to develop; used for Acquisition.com, Skool.com and portfolio companies running paid ads — [100m_playbook_goated_ads.txt]
 
-## Connections
-- The Ad Assembly Line Process operationalizes Creative Variation Strategy by chunking ad production into hooks, meat, and CTAs so teams can test hundreds of variations weekly instead of constantly inventing new ideas. _(connects to: Creative Variation Strategy)_
-- Both Scaling Ad Production and Ad Assembly Line Process advocate moving from monthly batches to weekly production, with process preventing ad fatigue and confusing competition by running 600+ ads monthly. _(connects to: Scaling Ad Production)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 4 claim(s)_

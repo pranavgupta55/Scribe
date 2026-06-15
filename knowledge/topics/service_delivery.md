@@ -35,8 +35,9 @@
 - The system escalates issues but requires manual refreshes for proper functionality — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
 
 
+
 ## Connections
-- Implementation of Training-Focused Marketing involves collaboration between marketing and tech leads in onboarding, while Service Delivery emphasizes automation through contextual listening during meetings. _(connects to: Implementation Of Training Focused Marketing)_
+- Service automation through systems and listening scales delivery; most low-price services can't scale without automation. _(connects to: Service Vs Automation)_
 
 ---
 _Topic appears in 1 source(s) · 11 claim(s) · 5 connection(s)_

@@ -13,8 +13,6 @@
 ## Claims
 - Landing pages must match ads visually and verbally to maintain consistency from click to conversion; consistency thinking increases second-action completion rates — [100m_leads.txt]
 
-## Connections
-- Landing Pages must match ads visually and verbally while Call to Action Best Practices emphasize clarity over cleverness, showing exactly what to do, how, when, what they get, and what happens next. _(connects to: Call To Action Best Practices)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

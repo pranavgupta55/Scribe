@@ -37,8 +37,6 @@
 - The client's CRM and lead flow systems are underutilized, with limited effectiveness in converting leads to revenue. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Client's Marketing Inefficiencies"]
 
 
-## Connections
-- Both Process Gaps and CRM Limitations reveal that database leads go unworked: Process Gaps show 1,000-4,000 leads in non-implemented reactivation systems while CRM Limitations highlight 100+ leads in databases with no follow-up process. _(connects to: Process Gaps)_
 
 ---
 _Topic appears in 1 source(s) · 12 claim(s) · 6 connection(s)_

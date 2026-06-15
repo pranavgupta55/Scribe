@@ -23,8 +23,6 @@
 ## Claims
 - Giveaways with grand prizes advertised at $5,000-$12,000 value followed by discounted promotional offers convert more leads when limited to 7-day timeframes or capped entry numbers. — [100m_money_models.txt]
 
-## Connections
-- Giveaways advertise $5,000-12,000 prizes to generate leads, then offer everyone else the prize at discount, using the Anchor Upsell principle of presenting premium option first to reset price expectations. _(connects to: Anchor Upsell)_
 
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

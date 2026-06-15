@@ -19,8 +19,11 @@
 ## Claims
 - More, Better, New escalates the Core Four: do 10x volume first, then test constraints to improve efficiency, then expand to new platforms/placements/methods only when returns diminish — [100m_leads.txt]
 
+
 ## Connections
-- Both 100M Leads and the Business Scaling Roadmap teach the same three-step progression: do 10x volume first (More), test constraints to improve efficiency (Better), then expand to new platforms/methods (New). _(connects to: Business Scaling Roadmap)_
+- Three-step scaling framework: increase volume, improve efficiency, then test new platforms once core channel is optimized. _(connects to: Marketing Volume)_
+- Dominate single source before adding others; use three-step framework of more volume, improved efficiency, new platforms. _(connects to: Compounding Growth Through One Channel)_
+- Increase volume 3-5x before declaring saturation; networking compounds when applied with volume strategy. _(connects to: Networking At Scale)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

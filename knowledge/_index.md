@@ -1,196 +1,1485 @@
 # Scribe Knowledge Index
 
-_10 source(s) · 184 topic(s)_
+_204 source(s) · 1471 topic(s)_
 
 ## Topics
 
+- [18 Month Opportunity Window](topics/18_month_opportunity_window.md)
+- [20 Hour Competence](topics/20_hour_competence.md)
+- [30 Day Cash Collected](topics/30_day_cash_collected.md)
+- [Academic Sales Hiring](topics/academic_sales_hiring.md)
+- [Accessibility As Differentiation](topics/accessibility_as_differentiation.md)
+- [Accountability Systems](topics/accountability_systems.md)
+- [Accounts Receivable Financing](topics/accounts_receivable_financing.md)
+- [Acq Network](topics/acq_network.md)
+- [Acquisition Channels](topics/acquisition_channels.md)
+- [Acquisition Strategy](topics/acquisition_strategy.md)
+- [Acquisition Strategy M A](topics/acquisition_strategy_m_a.md)
+- [Acquisition Structure](topics/acquisition_structure.md)
+- [Acquisition Vs Organic Growth](topics/acquisition_vs_organic_growth.md)
+- [Action Decoupled From Feeling](topics/action_decoupled_from_feeling.md)
+- [Action Over Narrative](topics/action_over_narrative.md)
+- [Action Per Unit Time](topics/action_per_unit_time.md)
+- [Activation Friction Removal](topics/activation_friction_removal.md)
+- [Activation Incentives](topics/activation_incentives.md)
+- [Active Vs Passive Assets](topics/active_vs_passive_assets.md)
+- [Ad Agency Business Model](topics/ad_agency_business_model.md)
 - [Ad Assembly Line Process](topics/ad_assembly_line_process.md)
+- [Ad Channel Effectiveness](topics/ad_channel_effectiveness.md)
 - [Ad Creative Formats](topics/ad_creative_formats.md)
+- [Ad Spend Scalability](topics/ad_spend_scalability.md)
+- [Ad Spend Scaling](topics/ad_spend_scaling.md)
+- [Ad Spend Testing](topics/ad_spend_testing.md)
+- [Ad Spend Vs Retention Roi](topics/ad_spend_vs_retention_roi.md)
+- [Adaptability Factor](topics/adaptability_factor.md)
+- [Adaptability Growth From Adversity](topics/adaptability_growth_from_adversity.md)
 - [Advertising Metrics And Roi](topics/advertising_metrics_and_roi.md)
+- [Advertising Vs Branding](topics/advertising_vs_branding.md)
+- [Advisory Practice Tiers](topics/advisory_practice_tiers.md)
+- [Affiliate Channel Strategy](topics/affiliate_channel_strategy.md)
+- [Affiliate Commission Structure](topics/affiliate_commission_structure.md)
+- [Affiliate Integration](topics/affiliate_integration.md)
+- [Affiliate Model](topics/affiliate_model.md)
+- [Affiliate Partnership Model](topics/affiliate_partnership_model.md)
 - [Affiliate Program Building](topics/affiliate_program_building.md)
+- [Agency Avatar Problem](topics/agency_avatar_problem.md)
+- [Agency Churn Root Cause](topics/agency_churn_root_cause.md)
 - [Agency Partnerships](topics/agency_partnerships.md)
+- [Agent Recruitment](topics/agent_recruitment.md)
 - [Ai Adoption Rates](topics/ai_adoption_rates.md)
+- [Ai Adoption Urgency](topics/ai_adoption_urgency.md)
+- [Ai Agent Training](topics/ai_agent_training.md)
+- [Ai And Business Fundamentals](topics/ai_and_business_fundamentals.md)
+- [Ai As Cost Advantage Not Feature](topics/ai_as_cost_advantage_not_feature.md)
+- [Ai As Tool Not Industry](topics/ai_as_tool_not_industry.md)
 - [Ai Business Opportunities](topics/ai_business_opportunities.md)
+- [Ai Disruption By Creator Type](topics/ai_disruption_by_creator_type.md)
 - [Ai Driven Lead Generation Without Ads](topics/ai_driven_lead_generation_without_ads.md)
 - [Ai Driven Lead Nurturing](topics/ai_driven_lead_nurturing.md)
 - [Ai Driven Marketing](topics/ai_driven_marketing.md)
 - [Ai Driven Review Referral Systems](topics/ai_driven_review_referral_systems.md)
 - [Ai Driven Website](topics/ai_driven_website.md)
+- [Ai First Strategy](topics/ai_first_strategy.md)
 - [Ai Generated Websites](topics/ai_generated_websites.md)
+- [Ai Implementation Pitfalls](topics/ai_implementation_pitfalls.md)
 - [Ai Operating System Setup](topics/ai_operating_system_setup.md)
+- [Ai Safety And Risk](topics/ai_safety_and_risk.md)
+- [Ai Skillset Requirements](topics/ai_skillset_requirements.md)
 - [Ai Tools](topics/ai_tools.md)
+- [Ai Training Methodology](topics/ai_training_methodology.md)
+- [Aligned Incentives](topics/aligned_incentives.md)
+- [Alternative Education Path](topics/alternative_education_path.md)
+- [Alternative Mortgage Models](topics/alternative_mortgage_models.md)
+- [Alternative Partnership Strategy](topics/alternative_partnership_strategy.md)
+- [Alumni Earnings Documentation](topics/alumni_earnings_documentation.md)
+- [Ambition Based Founder Screening](topics/ambition_based_founder_screening.md)
+- [Analysis Paralysis](topics/analysis_paralysis.md)
+- [Anchor Pricing](topics/anchor_pricing.md)
 - [Anchor Upsell](topics/anchor_upsell.md)
+- [Annual Plans](topics/annual_plans.md)
+- [Application Page Scoring](topics/application_page_scoring.md)
+- [Arbitrage In Delayed Rewards](topics/arbitrage_in_delayed_rewards.md)
 - [Attendance Tracking Follow Up](topics/attendance_tracking_follow_up.md)
+- [Attention To Conversion](topics/attention_to_conversion.md)
 - [Attraction Offers](topics/attraction_offers.md)
+- [Attribution Challenge](topics/attribution_challenge.md)
+- [Attribution Data Problems](topics/attribution_data_problems.md)
+- [Attribution Expansion](topics/attribution_expansion.md)
+- [Attribution Modeling](topics/attribution_modeling.md)
+- [Attribution Tracking](topics/attribution_tracking.md)
+- [Attribution Tracking And Input Output Equations](topics/attribution_tracking_and_input_output_equations.md)
+- [Audience Assumption Errors](topics/audience_assumption_errors.md)
 - [Audience Awareness Pyramid](topics/audience_awareness_pyramid.md)
+- [Audience Building](topics/audience_building.md)
+- [Audience Quality Vs Size](topics/audience_quality_vs_size.md)
 - [Audience Specific Ad Targeting](topics/audience_specific_ad_targeting.md)
 - [Audience Targeting](topics/audience_targeting.md)
+- [Audience Targeting Messaging](topics/audience_targeting_messaging.md)
+- [Authenticity Context](topics/authenticity_context.md)
+- [Authenticity In Communication](topics/authenticity_in_communication.md)
+- [Authenticity Personal Brand](topics/authenticity_personal_brand.md)
+- [Authenticity Premium](topics/authenticity_premium.md)
+- [Authenticity Vs Imitation](topics/authenticity_vs_imitation.md)
+- [Automation Prioritization](topics/automation_prioritization.md)
 - [Availability Scheduling](topics/availability_scheduling.md)
+- [Avatar Clarity](topics/avatar_clarity.md)
+- [Avatar Clarity From Insurance Constraints](topics/avatar_clarity_from_insurance_constraints.md)
+- [Avatar Focus](topics/avatar_focus.md)
+- [Avatar Segmentation](topics/avatar_segmentation.md)
+- [Avatar Selection Pain Articulation](topics/avatar_selection_pain_articulation.md)
+- [Avatar Targeting](topics/avatar_targeting.md)
+- [Avatar Targeting Strategy](topics/avatar_targeting_strategy.md)
+- [Avoiding The Direct Response Doom Loop](topics/avoiding_the_direct_response_doom_loop.md)
+- [B2B High Ticket Creators](topics/b2b_high_ticket_creators.md)
+- [B2B Partnership Integration](topics/b2b_partnership_integration.md)
+- [B2B Sales Motion](topics/b2b_sales_motion.md)
+- [B2C Entertainment And Educators](topics/b2c_entertainment_and_educators.md)
+- [Back Office Automation](topics/back_office_automation.md)
+- [Bait And Switch Prevention](topics/bait_and_switch_prevention.md)
 - [Bamfam Method](topics/bamfam_method.md)
+- [Bandwidth Constraint Vs Financial Constraint](topics/bandwidth_constraint_vs_financial_constraint.md)
+- [Barbell Strategy For Future](topics/barbell_strategy_for_future.md)
+- [Before After Operationalization](topics/before_after_operationalization.md)
+- [Before After Proof And Social Proof](topics/before_after_proof_and_social_proof.md)
+- [Beginner Sales Skill Development](topics/beginner_sales_skill_development.md)
+- [Behavior Change Framing](topics/behavior_change_framing.md)
+- [Behavior Change Requirement](topics/behavior_change_requirement.md)
+- [Behavior Codification](topics/behavior_codification.md)
+- [Behavior Pattern Recognition](topics/behavior_pattern_recognition.md)
+- [Behavior Prediction](topics/behavior_prediction.md)
+- [Behavioral Change](topics/behavioral_change.md)
+- [Behavioral Change Scale](topics/behavioral_change_scale.md)
+- [Behavioral Consistency](topics/behavioral_consistency.md)
+- [Behavioral Flexibility](topics/behavioral_flexibility.md)
+- [Behavioral Reinforcement Loops](topics/behavioral_reinforcement_loops.md)
+- [Belief Proof](topics/belief_proof.md)
+- [Belief Systems Of Wealthy Vs Poor](topics/belief_systems_of_wealthy_vs_poor.md)
+- [Best Person Duplication](topics/best_person_duplication.md)
+- [Betrayal Consequences](topics/betrayal_consequences.md)
 - [Billing Cycles](topics/billing_cycles.md)
+- [Biological Factors In Mental Resilience](topics/biological_factors_in_mental_resilience.md)
+- [Black Box Thinking](topics/black_box_thinking.md)
+- [Blue Ocean Strategy](topics/blue_ocean_strategy.md)
+- [Boiler Room Method](topics/boiler_room_method.md)
+- [Bonus Tier Structure](topics/bonus_tier_structure.md)
 - [Bonuses](topics/bonuses.md)
+- [Book Series Architecture](topics/book_series_architecture.md)
+- [Bootstrap Scaling](topics/bootstrap_scaling.md)
+- [Bootstrapped Business Model](topics/bootstrapped_business_model.md)
+- [Bootstrapping Without Debt](topics/bootstrapping_without_debt.md)
+- [Brand As Competitive Advantage](topics/brand_as_competitive_advantage.md)
+- [Brand Building](topics/brand_building.md)
+- [Brand Building And Competitive Moats](topics/brand_building_and_competitive_moats.md)
+- [Brand Building Strategy](topics/brand_building_strategy.md)
+- [Brand Credibility](topics/brand_credibility.md)
+- [Brand Loyalty](topics/brand_loyalty.md)
+- [Brand Measurement Metrics](topics/brand_measurement_metrics.md)
+- [Brand Narrative And Anchoring](topics/brand_narrative_and_anchoring.md)
+- [Brand Play Investment](topics/brand_play_investment.md)
+- [Brand Risk Perception](topics/brand_risk_perception.md)
+- [Branded Search Term Defense](topics/branded_search_term_defense.md)
+- [Branding Definition](topics/branding_definition.md)
+- [Branding Economics Pricing Power](topics/branding_economics_pricing_power.md)
+- [Branding Touchpoints](topics/branding_touchpoints.md)
+- [Bridge Pages And Customer Awareness Levels](topics/bridge_pages_and_customer_awareness_levels.md)
 - [Build Plan](topics/build_plan.md)
 - [Building Framework](topics/building_framework.md)
+- [Building In Public](topics/building_in_public.md)
 - [Building Trust](topics/building_trust.md)
+- [Building Under Uncertainty](topics/building_under_uncertainty.md)
+- [Bundle Strategy](topics/bundle_strategy.md)
+- [Business Cash Flow](topics/business_cash_flow.md)
 - [Business Excitement Curve](topics/business_excitement_curve.md)
+- [Business Focus And Constraints](topics/business_focus_and_constraints.md)
+- [Business Focused Content Strategy](topics/business_focused_content_strategy.md)
+- [Business Growth Constraints](topics/business_growth_constraints.md)
+- [Business Leverage More Better New](topics/business_leverage_more_better_new.md)
+- [Business Model Bifurcation](topics/business_model_bifurcation.md)
+- [Business Model Innovation](topics/business_model_innovation.md)
+- [Business Model Refinement](topics/business_model_refinement.md)
+- [Business Model Selection](topics/business_model_selection.md)
+- [Business Model Sustainability](topics/business_model_sustainability.md)
+- [Business Owner Mindset Shift](topics/business_owner_mindset_shift.md)
+- [Business Partnerships And Legal](topics/business_partnerships_and_legal.md)
+- [Business Rollup Strategy](topics/business_rollup_strategy.md)
 - [Business Scaling Roadmap](topics/business_scaling_roadmap.md)
+- [Business Stage Diagnosis](topics/business_stage_diagnosis.md)
+- [Business Swamp Constraints](topics/business_swamp_constraints.md)
 - [Buy X Get Y Free](topics/buy_x_get_y_free.md)
+- [Buying Access For Learning](topics/buying_access_for_learning.md)
+- [Byoa Business Model](topics/byoa_business_model.md)
+- [Cac And Margin Dynamics](topics/cac_and_margin_dynamics.md)
+- [Cac Ltv Ratio](topics/cac_ltv_ratio.md)
+- [Cac Vs Ltv Math](topics/cac_vs_ltv_math.md)
+- [Cac Vs Product](topics/cac_vs_product.md)
+- [Cac Vs True Cac](topics/cac_vs_true_cac.md)
+- [Calendar Utilization](topics/calendar_utilization.md)
 - [Call Out Techniques](topics/call_out_techniques.md)
 - [Call To Action Best Practices](topics/call_to_action_best_practices.md)
+- [Capacity Building](topics/capacity_building.md)
+- [Capacity Expansion](topics/capacity_expansion.md)
 - [Capacity Maximization](topics/capacity_maximization.md)
+- [Capital Allocation](topics/capital_allocation.md)
+- [Capital Efficiency](topics/capital_efficiency.md)
+- [Capital Efficiency Mindset](topics/capital_efficiency_mindset.md)
+- [Capital Equipment Investment](topics/capital_equipment_investment.md)
+- [Capital Intensive Business](topics/capital_intensive_business.md)
+- [Capital Leverage And Returns](topics/capital_leverage_and_returns.md)
+- [Capital Raising Channels](topics/capital_raising_channels.md)
+- [Capital Requirements For Scale](topics/capital_requirements_for_scale.md)
+- [Career Ladder Design](topics/career_ladder_design.md)
+- [Career Path Decisions](topics/career_path_decisions.md)
+- [Career Placement Economics](topics/career_placement_economics.md)
+- [Caring As Competitive Advantage](topics/caring_as_competitive_advantage.md)
+- [Case Study Close](topics/case_study_close.md)
+- [Cash Flow Management](topics/cash_flow_management.md)
+- [Cash Flow Model Testing](topics/cash_flow_model_testing.md)
+- [Cash Flow Prioritization](topics/cash_flow_prioritization.md)
+- [Center Of Influence Partnerships](topics/center_of_influence_partnerships.md)
+- [Centers Of Influence](topics/centers_of_influence.md)
+- [Ceo Involvement In Hiring](topics/ceo_involvement_in_hiring.md)
+- [Channel Prioritization](topics/channel_prioritization.md)
+- [Channel Roi Analysis](topics/channel_roi_analysis.md)
+- [Channel Selection Criteria](topics/channel_selection_criteria.md)
+- [Channel Strategy](topics/channel_strategy.md)
+- [Character And Vision In Team Building](topics/character_and_vision_in_team_building.md)
+- [Choosing Your Regrets](topics/choosing_your_regrets.md)
+- [Churn And Cohort Dynamics](topics/churn_and_cohort_dynamics.md)
+- [Churn And Retention](topics/churn_and_retention.md)
+- [Churn As A Leaky Bucket](topics/churn_as_a_leaky_bucket.md)
+- [Churn As Growth Ceiling](topics/churn_as_growth_ceiling.md)
+- [Churn Prevention](topics/churn_prevention.md)
+- [Churn Problem](topics/churn_problem.md)
+- [Churn Reduction](topics/churn_reduction.md)
+- [Churn Reduction In Subscription Models](topics/churn_reduction_in_subscription_models.md)
+- [Churn Root Cause Analysis](topics/churn_root_cause_analysis.md)
+- [Churn Vs Recurring Revenue](topics/churn_vs_recurring_revenue.md)
 - [Classic Upsell](topics/classic_upsell.md)
 - [Claude Code](topics/claude_code.md)
 - [Claude Code Installation](topics/claude_code_installation.md)
 - [Claude Skills](topics/claude_skills.md)
+- [Clear Vs Vague Packaging](topics/clear_vs_vague_packaging.md)
 - [Client Acquisition Strategies](topics/client_acquisition_strategies.md)
 - [Client Case Studies And Results](topics/client_case_studies_and_results.md)
+- [Client Centric Framing](topics/client_centric_framing.md)
 - [Client Financed Acquisition](topics/client_financed_acquisition.md)
 - [Client S Current Marketing Inefficiencies](topics/client_s_current_marketing_inefficiencies.md)
+- [Client Transition Risk](topics/client_transition_risk.md)
+- [Close Rate Analysis And Price Optimization](topics/close_rate_analysis_and_price_optimization.md)
+- [Close Rate As Pricing Signal](topics/close_rate_as_pricing_signal.md)
+- [Close Rate Optimization](topics/close_rate_optimization.md)
+- [Close Rate Vs Pricing](topics/close_rate_vs_pricing.md)
+- [Cloud To Dirt Knowledge](topics/cloud_to_dirt_knowledge.md)
+- [Coaching As Moat](topics/coaching_as_moat.md)
+- [Coaching Product Scaling](topics/coaching_product_scaling.md)
+- [Cobblers Shoes Problem](topics/cobblers_shoes_problem.md)
+- [Cohort Analysis Time Based Churn](topics/cohort_analysis_time_based_churn.md)
+- [Cohort Based Pricing](topics/cohort_based_pricing.md)
 - [Cold Email Campaigns](topics/cold_email_campaigns.md)
+- [Cold Email Vs Paid Ads Roi](topics/cold_email_vs_paid_ads_roi.md)
+- [Cold Lead Conversion Framework](topics/cold_lead_conversion_framework.md)
+- [Cold Lead Math](topics/cold_lead_math.md)
 - [Cold Outreach Execution](topics/cold_outreach_execution.md)
+- [Cold Outreach For Executives](topics/cold_outreach_for_executives.md)
 - [Cold Outreach Referral Growth](topics/cold_outreach_referral_growth.md)
+- [Cold Process On Warm Leads](topics/cold_process_on_warm_leads.md)
+- [Comfort As Constraint](topics/comfort_as_constraint.md)
+- [Commission Based Pricing](topics/commission_based_pricing.md)
 - [Commitment To Business](topics/commitment_to_business.md)
 - [Commodity Problem](topics/commodity_problem.md)
+- [Communication Cadence](topics/communication_cadence.md)
+- [Communication Clarity](topics/communication_clarity.md)
 - [Communication Cycles Meetings](topics/communication_cycles_meetings.md)
+- [Communication Of Expectations](topics/communication_of_expectations.md)
+- [Community Building Asset](topics/community_building_asset.md)
+- [Community Design](topics/community_design.md)
+- [Community Parasocial Relationships](topics/community_parasocial_relationships.md)
+- [Community Retention](topics/community_retention.md)
+- [Community Value](topics/community_value.md)
+- [Comparing Early Vs Late Chapters](topics/comparing_early_vs_late_chapters.md)
+- [Compassion Through Context](topics/compassion_through_context.md)
+- [Compensation Structure](topics/compensation_structure.md)
+- [Competitive Advantage Through Persistence](topics/competitive_advantage_through_persistence.md)
+- [Competitive Moats Differentiation](topics/competitive_moats_differentiation.md)
+- [Competitive Moats Fear Inversions](topics/competitive_moats_fear_inversions.md)
+- [Complexity Reduction](topics/complexity_reduction.md)
+- [Compliance And Law](topics/compliance_and_law.md)
 - [Composio Authentication](topics/composio_authentication.md)
+- [Compound Work](topics/compound_work.md)
+- [Compounding Development](topics/compounding_development.md)
+- [Compounding Effort](topics/compounding_effort.md)
+- [Compounding Growth Through One Channel](topics/compounding_growth_through_one_channel.md)
+- [Compounding Returns From Early Work](topics/compounding_returns_from_early_work.md)
+- [Conference And Events Strategy](topics/conference_and_events_strategy.md)
+- [Conscious Vs Unconscious Trades](topics/conscious_vs_unconscious_trades.md)
+- [Consequence Mapping](topics/consequence_mapping.md)
+- [Consistency As Rare Competitive Advantage](topics/consistency_as_rare_competitive_advantage.md)
+- [Constraint Management](topics/constraint_management.md)
+- [Consumable Media](topics/consumable_media.md)
+- [Consumable Products](topics/consumable_products.md)
+- [Consumer Vs Business Pricing Tiers](topics/consumer_vs_business_pricing_tiers.md)
+- [Content And Creative Strategy](topics/content_and_creative_strategy.md)
+- [Content As Lead Nurture](topics/content_as_lead_nurture.md)
+- [Content At Scale Vs Capturing Reality](topics/content_at_scale_vs_capturing_reality.md)
+- [Content Audience Misalignment](topics/content_audience_misalignment.md)
+- [Content Cadence Basics](topics/content_cadence_basics.md)
+- [Content Consistency](topics/content_consistency.md)
+- [Content Consumption Trap](topics/content_consumption_trap.md)
+- [Content Creation Brand Building](topics/content_creation_brand_building.md)
+- [Content Creation From Truth](topics/content_creation_from_truth.md)
+- [Content Creation With Ai](topics/content_creation_with_ai.md)
+- [Content Creator Burnout](topics/content_creator_burnout.md)
+- [Content Driven Ad Funnel](topics/content_driven_ad_funnel.md)
+- [Content Engineering For Proof](topics/content_engineering_for_proof.md)
+- [Content Enjoyment](topics/content_enjoyment.md)
+- [Content Format Production](topics/content_format_production.md)
+- [Content Led Sales Strategy](topics/content_led_sales_strategy.md)
+- [Content Marketing](topics/content_marketing.md)
+- [Content Marketing For Investors](topics/content_marketing_for_investors.md)
+- [Content Meat And Production](topics/content_meat_and_production.md)
+- [Content Production Scale](topics/content_production_scale.md)
+- [Content Reframing](topics/content_reframing.md)
+- [Content Strategy](topics/content_strategy.md)
+- [Content Strategy Declarative Vs Procedural Knowledge](topics/content_strategy_declarative_vs_procedural_knowledge.md)
+- [Content Strategy Entertainment Vs Education](topics/content_strategy_entertainment_vs_education.md)
+- [Content Strategy For Healthcare](topics/content_strategy_for_healthcare.md)
+- [Content Surface Area Math](topics/content_surface_area_math.md)
+- [Content To Avatar Congruence](topics/content_to_avatar_congruence.md)
 - [Content Unit Structure](topics/content_unit_structure.md)
 - [Continuity Bonus Offers](topics/continuity_bonus_offers.md)
 - [Continuity Discount Offers](topics/continuity_discount_offers.md)
+- [Continuity Revenue Model](topics/continuity_revenue_model.md)
+- [Continuity Upsell](topics/continuity_upsell.md)
+- [Continuous Improvement Vs Outcome Fixation](topics/continuous_improvement_vs_outcome_fixation.md)
+- [Contractor Vs Full Time Hiring](topics/contractor_vs_full_time_hiring.md)
+- [Contrarian Conviction](topics/contrarian_conviction.md)
+- [Control Relinquishment](topics/control_relinquishment.md)
+- [Conversion Funnel](topics/conversion_funnel.md)
+- [Conversion Funnel Design](topics/conversion_funnel_design.md)
+- [Conversion Metrics Tracking](topics/conversion_metrics_tracking.md)
+- [Conversion Rate Assumptions](topics/conversion_rate_assumptions.md)
+- [Conversion Rate Benchmarks](topics/conversion_rate_benchmarks.md)
+- [Conversion Rate Optimization](topics/conversion_rate_optimization.md)
+- [Core Business Focus](topics/core_business_focus.md)
+- [Core Economic Arbitrage](topics/core_economic_arbitrage.md)
+- [Corporate Client Leverage](topics/corporate_client_leverage.md)
+- [Cost Benefit Analysis In Relationships](topics/cost_benefit_analysis_in_relationships.md)
+- [Cost Elimination](topics/cost_elimination.md)
+- [Cost Of Change Framework](topics/cost_of_change_framework.md)
+- [Cost Of Talent Vs Roi](topics/cost_of_talent_vs_roi.md)
+- [Cost Plus Vs Value Based Pricing](topics/cost_plus_vs_value_based_pricing.md)
+- [Courage And Fear](topics/courage_and_fear.md)
+- [Courage Risk Interval](topics/courage_risk_interval.md)
+- [Court Filter Observable Language](topics/court_filter_observable_language.md)
+- [Creative Optimization](topics/creative_optimization.md)
+- [Creative Production](topics/creative_production.md)
 - [Creative Variation Strategy](topics/creative_variation_strategy.md)
+- [Creative Volume Demand](topics/creative_volume_demand.md)
+- [Creator Burnout From Wrong Audience](topics/creator_burnout_from_wrong_audience.md)
+- [Creator Community Network Effects](topics/creator_community_network_effects.md)
+- [Creator Influencer Power](topics/creator_influencer_power.md)
+- [Creator Sustainability](topics/creator_sustainability.md)
+- [Credibility Building](topics/credibility_building.md)
+- [Cringe As Status Play](topics/cringe_as_status_play.md)
 - [Critical Thinking For Closing Deals](topics/critical_thinking_for_closing_deals.md)
+- [Criticism From Mediocrity](topics/criticism_from_mediocrity.md)
 - [Crm Limitations And Manual Follow Ups](topics/crm_limitations_and_manual_follow_ups.md)
+- [Crm Offer Positioning](topics/crm_offer_positioning.md)
+- [Cross Platform Retargeting](topics/cross_platform_retargeting.md)
+- [Cultural Foundation Team Setup](topics/cultural_foundation_team_setup.md)
+- [Culture Definition And Codification](topics/culture_definition_and_codification.md)
+- [Culture Execution](topics/culture_execution.md)
+- [Custom Order Strategy Positioning](topics/custom_order_strategy_positioning.md)
+- [Customer Acquisition](topics/customer_acquisition.md)
+- [Customer Acquisition Arbitrage](topics/customer_acquisition_arbitrage.md)
+- [Customer Acquisition Cost](topics/customer_acquisition_cost.md)
+- [Customer Acquisition Cost Optimization](topics/customer_acquisition_cost_optimization.md)
+- [Customer Activation](topics/customer_activation.md)
+- [Customer Avatar And Systematization](topics/customer_avatar_and_systematization.md)
+- [Customer Avatar Refinement Selection](topics/customer_avatar_refinement_selection.md)
+- [Customer Behavior Change](topics/customer_behavior_change.md)
+- [Customer Churn](topics/customer_churn.md)
+- [Customer Commitment](topics/customer_commitment.md)
+- [Customer Concentration](topics/customer_concentration.md)
+- [Customer Education](topics/customer_education.md)
+- [Customer Experience](topics/customer_experience.md)
+- [Customer Feedback Loops](topics/customer_feedback_loops.md)
+- [Customer Lifetime Value](topics/customer_lifetime_value.md)
+- [Customer Lifetime Value Leverage](topics/customer_lifetime_value_leverage.md)
+- [Customer Ltv Leverage](topics/customer_ltv_leverage.md)
+- [Customer Qualification Requirements](topics/customer_qualification_requirements.md)
 - [Customer Referral Programs](topics/customer_referral_programs.md)
+- [Customer Retention Mechanics](topics/customer_retention_mechanics.md)
+- [Customer Retention Through Transparency](topics/customer_retention_through_transparency.md)
+- [Customer Segmentation](topics/customer_segmentation.md)
+- [Customer Segmentation Market Focus](topics/customer_segmentation_market_focus.md)
+- [Customer Segmentation Strategy](topics/customer_segmentation_strategy.md)
+- [Customer Support Ai](topics/customer_support_ai.md)
+- [Customer Wealth Distribution](topics/customer_wealth_distribution.md)
+- [Daily Execution Vs Celebration](topics/daily_execution_vs_celebration.md)
+- [Daily Practice Skill Building](topics/daily_practice_skill_building.md)
+- [Damaging Admissions Framework](topics/damaging_admissions_framework.md)
+- [Data Architecture](topics/data_architecture.md)
+- [Data First And Ai Ready Architecture](topics/data_first_and_ai_ready_architecture.md)
+- [Data Tracking During Transition](topics/data_tracking_during_transition.md)
+- [Day To Day Exit](topics/day_to_day_exit.md)
+- [Deal Flow Acquisition](topics/deal_flow_acquisition.md)
+- [Deal Flow And Proprietary Advantage](topics/deal_flow_and_proprietary_advantage.md)
+- [Deal Flow Consistency](topics/deal_flow_consistency.md)
+- [Deal Flow Generation](topics/deal_flow_generation.md)
+- [Deal Flow Problem](topics/deal_flow_problem.md)
+- [Deal Flow Systemization](topics/deal_flow_systemization.md)
+- [Deal Mechanics](topics/deal_mechanics.md)
+- [Deal Structure Analysis](topics/deal_structure_analysis.md)
+- [Death Creates Clarity Reverse Eulogy](topics/death_creates_clarity_reverse_eulogy.md)
+- [Debt Covenants](topics/debt_covenants.md)
+- [Debt Fear](topics/debt_fear.md)
+- [Debt Management](topics/debt_management.md)
+- [Debt Types And Trade Offs](topics/debt_types_and_trade_offs.md)
 - [Decagon Matrix Marketing](topics/decagon_matrix_marketing.md)
+- [Decision Limbo And Purgatory](topics/decision_limbo_and_purgatory.md)
+- [Decision Making Frameworks](topics/decision_making_frameworks.md)
+- [Decision Theory](topics/decision_theory.md)
 - [Decoy Offers](topics/decoy_offers.md)
+- [Definition And Clarity](topics/definition_and_clarity.md)
+- [Delayed Gratification](topics/delayed_gratification.md)
+- [Delayed Profit](topics/delayed_profit.md)
+- [Delegation And Key Person Risk](topics/delegation_and_key_person_risk.md)
+- [Delegation Of Clinical Role](topics/delegation_of_clinical_role.md)
+- [Delegation Priority Delivery First](topics/delegation_priority_delivery_first.md)
+- [Deliberate Pairing](topics/deliberate_pairing.md)
+- [Deliberate Practice And Commitment](topics/deliberate_practice_and_commitment.md)
+- [Delivery Capacity](topics/delivery_capacity.md)
+- [Delivery Model](topics/delivery_model.md)
+- [Delivery Model Redesign](topics/delivery_model_redesign.md)
+- [Delivery Ratio Economics](topics/delivery_ratio_economics.md)
+- [Demand Generation Strategy](topics/demand_generation_strategy.md)
+- [Demand Problem](topics/demand_problem.md)
+- [Demand Unlocking](topics/demand_unlocking.md)
+- [Demand Vs Supply Constraint](topics/demand_vs_supply_constraint.md)
 - [Demonstration Ads](topics/demonstration_ads.md)
+- [Deprivation And Drive](topics/deprivation_and_drive.md)
+- [Difficulty Curve](topics/difficulty_curve.md)
+- [Diminishing Returns](topics/diminishing_returns.md)
+- [Direct Response Doom Loop](topics/direct_response_doom_loop.md)
+- [Direct Response Vs Brand Building](topics/direct_response_vs_brand_building.md)
+- [Directional Approach](topics/directional_approach.md)
+- [Discipline Vs Liking What You Do](topics/discipline_vs_liking_what_you_do.md)
+- [Discount Messaging](topics/discount_messaging.md)
 - [Discount Offers](topics/discount_offers.md)
+- [Discount Plus Fee Structure](topics/discount_plus_fee_structure.md)
+- [Disproportionate Effort](topics/disproportionate_effort.md)
+- [Distribution And Marketing Strategy](topics/distribution_and_marketing_strategy.md)
+- [Distribution Channels](topics/distribution_channels.md)
+- [Distribution Layer Strategy](topics/distribution_layer_strategy.md)
+- [Distribution Layers](topics/distribution_layers.md)
+- [Dm Setter Bottleneck](topics/dm_setter_bottleneck.md)
+- [Documentation Of Struggle](topics/documentation_of_struggle.md)
+- [Door To Door Scaling](topics/door_to_door_scaling.md)
+- [Door To Door Vs Ads](topics/door_to_door_vs_ads.md)
+- [Downside Capped Upside Uncapped](topics/downside_capped_upside_uncapped.md)
+- [Downside Tolerance Framework](topics/downside_tolerance_framework.md)
 - [Dream Outcome](topics/dream_outcome.md)
+- [Dso Consolidation](topics/dso_consolidation.md)
+- [Dual Business Model](topics/dual_business_model.md)
+- [Dual Revenue Model](topics/dual_revenue_model.md)
+- [Dual Sided Revenue Models](topics/dual_sided_revenue_models.md)
+- [E Commerce Business Model](topics/e_commerce_business_model.md)
+- [E Commerce Scaling Bottlenecks](topics/e_commerce_scaling_bottlenecks.md)
+- [Early Acquisition Signals](topics/early_acquisition_signals.md)
+- [Early Career Foundation](topics/early_career_foundation.md)
+- [Early Mover Advantage](topics/early_mover_advantage.md)
+- [Early Stage Motivation And Passion Protection](topics/early_stage_motivation_and_passion_protection.md)
+- [Early Traction](topics/early_traction.md)
+- [Early Wins Build Confidence](topics/early_wins_build_confidence.md)
+- [Earning Your Stripes Through Mastery](topics/earning_your_stripes_through_mastery.md)
 - [Education Ads](topics/education_ads.md)
+- [Education And Info Media Business](topics/education_and_info_media_business.md)
+- [Education Business Model](topics/education_business_model.md)
+- [Education Product Limitations](topics/education_product_limitations.md)
+- [Education Vs Studio](topics/education_vs_studio.md)
+- [Educational Content Strategy](topics/educational_content_strategy.md)
+- [Effective Visuals Vs Razzle](topics/effective_visuals_vs_razzle.md)
+- [Efficiency Based Value Prop](topics/efficiency_based_value_prop.md)
 - [Effort Sacrifice](topics/effort_sacrifice.md)
+- [Effort Scaling](topics/effort_scaling.md)
+- [Eisenhower Matrix](topics/eisenhower_matrix.md)
+- [Eliminating Secondary Business Lines](topics/eliminating_secondary_business_lines.md)
+- [Email Nurture Long Term Retention](topics/email_nurture_long_term_retention.md)
+- [Email Reactivation Campaigns](topics/email_reactivation_campaigns.md)
+- [Emotional Anchoring Before Price Drop](topics/emotional_anchoring_before_price_drop.md)
+- [Emotional Authenticity](topics/emotional_authenticity.md)
+- [Emotional Rigidity And Change](topics/emotional_rigidity_and_change.md)
+- [Empire Building Delusion](topics/empire_building_delusion.md)
 - [Employee Training And Leverage](topics/employee_training_and_leverage.md)
 - [Engaged Leads Definition](topics/engaged_leads_definition.md)
+- [Engagement Optimization](topics/engagement_optimization.md)
+- [Enrollment Funnel](topics/enrollment_funnel.md)
+- [Enterprise Vs Smb Pricing Strategy](topics/enterprise_vs_smb_pricing_strategy.md)
+- [Entertainment Vs Education Audiences](topics/entertainment_vs_education_audiences.md)
+- [Entrepreneurial Mindset And Opportunity Cost](topics/entrepreneurial_mindset_and_opportunity_cost.md)
+- [Entrepreneurial Trajectory](topics/entrepreneurial_trajectory.md)
+- [Entrepreneurship Personal Development](topics/entrepreneurship_personal_development.md)
+- [Environmental Design](topics/environmental_design.md)
+- [Equity Dilution And Control](topics/equity_dilution_and_control.md)
+- [Equity Incentive Structure](topics/equity_incentive_structure.md)
+- [Equity Vs Alternatives](topics/equity_vs_alternatives.md)
+- [Equity Vs Stake Distinction](topics/equity_vs_stake_distinction.md)
+- [Event Based Revenue Model Optimization](topics/event_based_revenue_model_optimization.md)
+- [Event Planning Logistics](topics/event_planning_logistics.md)
+- [Event Strategy And Upselling](topics/event_strategy_and_upselling.md)
+- [Evidence Over Emotion](topics/evidence_over_emotion.md)
+- [Evolutionary Bias Toward Pessimism](topics/evolutionary_bias_toward_pessimism.md)
+- [Excuse Responsibility](topics/excuse_responsibility.md)
+- [Execution Over Planning](topics/execution_over_planning.md)
+- [Execution Rapid Iteration](topics/execution_rapid_iteration.md)
+- [Executive Titling Levels](topics/executive_titling_levels.md)
 - [Exercise Selection Programming](topics/exercise_selection_programming.md)
+- [Existing Vehicle Optimization](topics/existing_vehicle_optimization.md)
+- [Exit Difficulty](topics/exit_difficulty.md)
 - [Exit Interviews Objection Handling](topics/exit_interviews_objection_handling.md)
 - [Expansion Hooks For New Markets](topics/expansion_hooks_for_new_markets.md)
+- [Expansion Without Dilution](topics/expansion_without_dilution.md)
+- [Expectation Management](topics/expectation_management.md)
+- [Expectation Setting](topics/expectation_setting.md)
+- [Exponential Returns](topics/exponential_returns.md)
+- [Facebook Ads Optimization](topics/facebook_ads_optimization.md)
 - [Faceless Ads](topics/faceless_ads.md)
+- [Facility Planning](topics/facility_planning.md)
+- [Family Time Vs Growth](topics/family_time_vs_growth.md)
+- [Fast Cash Play](topics/fast_cash_play.md)
+- [Fast Cash Plays](topics/fast_cash_plays.md)
+- [Fear And Risk Taking](topics/fear_and_risk_taking.md)
+- [Fear As Illusion](topics/fear_as_illusion.md)
 - [Feature Downsells](topics/feature_downsells.md)
+- [Fee Psychology](topics/fee_psychology.md)
+- [Feedback Loop Optimization](topics/feedback_loop_optimization.md)
+- [Feedback Loops Reinforcement](topics/feedback_loops_reinforcement.md)
+- [Feelings Vs Actions](topics/feelings_vs_actions.md)
+- [Financial Discipline](topics/financial_discipline.md)
+- [Financial Modeling](topics/financial_modeling.md)
 - [Financial Structure](topics/financial_structure.md)
+- [Finite Productive Years](topics/finite_productive_years.md)
+- [First Party Data And Iteration](topics/first_party_data_and_iteration.md)
+- [First Party Data Learning](topics/first_party_data_learning.md)
+- [First Rule Of Entrepreneurship](topics/first_rule_of_entrepreneurship.md)
+- [First Touch Analysis](topics/first_touch_analysis.md)
 - [Five Ai Workers](topics/five_ai_workers.md)
+- [Focus And Avatar Conflict](topics/focus_and_avatar_conflict.md)
+- [Focus And Distractions Idea Management](topics/focus_and_distractions_idea_management.md)
+- [Focus As Daily Practice](topics/focus_as_daily_practice.md)
+- [Focus Over Resources](topics/focus_over_resources.md)
+- [Focus Through Subtraction](topics/focus_through_subtraction.md)
+- [Focus Tradeoff](topics/focus_tradeoff.md)
+- [Follow The Leader Model](topics/follow_the_leader_model.md)
 - [Follow Up Calls](topics/follow_up_calls.md)
+- [Fortitude Behavior Control](topics/fortitude_behavior_control.md)
+- [Fortitude Definition](topics/fortitude_definition.md)
+- [Founder Control](topics/founder_control.md)
+- [Founder Delegation](topics/founder_delegation.md)
+- [Founder Dependencies And Task Delegation](topics/founder_dependencies_and_task_delegation.md)
+- [Founder Dependency](topics/founder_dependency.md)
+- [Founder Dependency In Spas](topics/founder_dependency_in_spas.md)
+- [Founder Desperation](topics/founder_desperation.md)
+- [Founder Driven Sales](topics/founder_driven_sales.md)
+- [Founder Fulfillment Vs Business Growth](topics/founder_fulfillment_vs_business_growth.md)
+- [Founder Magic Decay](topics/founder_magic_decay.md)
+- [Founder Optimization](topics/founder_optimization.md)
+- [Founder Over Delivery](topics/founder_over_delivery.md)
+- [Founder Psychology](topics/founder_psychology.md)
+- [Founder Reality](topics/founder_reality.md)
+- [Founder Removal Test](topics/founder_removal_test.md)
+- [Founder Replacement Economics](topics/founder_replacement_economics.md)
+- [Founder Sales Dependency](topics/founder_sales_dependency.md)
+- [Founder Selection Bias](topics/founder_selection_bias.md)
+- [Founding Vs Joining Playbooks](topics/founding_vs_joining_playbooks.md)
 - [Four Pillars Framework](topics/four_pillars_framework.md)
+- [Framing Life As Happening For You](topics/framing_life_as_happening_for_you.md)
+- [Franchise And Payment Control](topics/franchise_and_payment_control.md)
 - [Franchise Referrals](topics/franchise_referrals.md)
+- [Franchise Vs Done For You](topics/franchise_vs_done_for_you.md)
+- [Franchisee Recruitment](topics/franchisee_recruitment.md)
+- [Franchising Strategy](topics/franchising_strategy.md)
+- [Free Attraction With Paid Upsell](topics/free_attraction_with_paid_upsell.md)
 - [Free Content Creation](topics/free_content_creation.md)
+- [Free Content Monetization Psychology](topics/free_content_monetization_psychology.md)
 - [Free Offers](topics/free_offers.md)
+- [Free Trial Plus Penalty Model](topics/free_trial_plus_penalty_model.md)
+- [Free Work Strategy](topics/free_work_strategy.md)
+- [Friction Elimination](topics/friction_elimination.md)
+- [Friction In Funnel Design](topics/friction_in_funnel_design.md)
 - [Friction Qualification](topics/friction_qualification.md)
+- [Fulfillment Bottleneck](topics/fulfillment_bottleneck.md)
 - [Full Ai Systems](topics/full_ai_systems.md)
+- [Fund Management Path](topics/fund_management_path.md)
+- [Fund Vs Operations](topics/fund_vs_operations.md)
+- [Fundraising Strategy](topics/fundraising_strategy.md)
+- [Funnel Conversion Rate Optimization](topics/funnel_conversion_rate_optimization.md)
+- [Funnel Friction Design](topics/funnel_friction_design.md)
+- [Funnel Myth Debunking](topics/funnel_myth_debunking.md)
+- [Funnel Optimization](topics/funnel_optimization.md)
+- [Future Casting Your Narrative](topics/future_casting_your_narrative.md)
+- [Future Talent Allocation](topics/future_talent_allocation.md)
+- [Future Ux Shift](topics/future_ux_shift.md)
+- [Gap Between Stimulus And Response](topics/gap_between_stimulus_and_response.md)
+- [Gatekeeper Strategy](topics/gatekeeper_strategy.md)
 - [Gbt Training Data](topics/gbt_training_data.md)
+- [General Manager Profit Share Structure](topics/general_manager_profit_share_structure.md)
+- [Generalization Across Domains](topics/generalization_across_domains.md)
+- [Genetic Baseline And Effort](topics/genetic_baseline_and_effort.md)
+- [Geographic Expansion](topics/geographic_expansion.md)
+- [Geographic Signaling](topics/geographic_signaling.md)
 - [Github Integration](topics/github_integration.md)
 - [Give Ask Ratio Management](topics/give_ask_ratio_management.md)
 - [Giveaways](topics/giveaways.md)
+- [Goal Clarity](topics/goal_clarity.md)
+- [Goal Worth Suffering For](topics/goal_worth_suffering_for.md)
+- [Golden Goose Principle](topics/golden_goose_principle.md)
+- [Good Vs Bad Branding](topics/good_vs_bad_branding.md)
+- [Goodwill Based Upsells](topics/goodwill_based_upsells.md)
+- [Google Ads Optimization](topics/google_ads_optimization.md)
 - [Google Business Page Optimization](topics/google_business_page_optimization.md)
 - [Google My Business Optimization](topics/google_my_business_optimization.md)
+- [Grand Opening Strategy](topics/grand_opening_strategy.md)
 - [Grand Slam Offer](topics/grand_slam_offer.md)
 - [Grand Slam Offers](topics/grand_slam_offers.md)
+- [Grass Is Greener Bias](topics/grass_is_greener_bias.md)
+- [Gratification Timing](topics/gratification_timing.md)
+- [Gross Margins](topics/gross_margins.md)
+- [Gross Margins Economics](topics/gross_margins_economics.md)
+- [Group Role Play Sales Training](topics/group_role_play_sales_training.md)
+- [Growth Through Adversity](topics/growth_through_adversity.md)
+- [Growth Vs Safety](topics/growth_vs_safety.md)
 - [Guarantees](topics/guarantees.md)
+- [Gym Launch Comparison](topics/gym_launch_comparison.md)
+- [Health And Longevity Benefits](topics/health_and_longevity_benefits.md)
+- [Hedgehog Concept](topics/hedgehog_concept.md)
+- [Hedonic Adaptation](topics/hedonic_adaptation.md)
+- [High End Pricing Strategy](topics/high_end_pricing_strategy.md)
+- [High Fortitude Examples](topics/high_fortitude_examples.md)
+- [High Leverage Fundraising](topics/high_leverage_fundraising.md)
+- [High Margin Business Model](topics/high_margin_business_model.md)
+- [High Ticket Biz Op Risk](topics/high_ticket_biz_op_risk.md)
+- [High Ticket One On One Selling](topics/high_ticket_one_on_one_selling.md)
+- [High Ticket Sales Funnel](topics/high_ticket_sales_funnel.md)
+- [High Ticket Sales Pricing](topics/high_ticket_sales_pricing.md)
+- [High Value Customer Service](topics/high_value_customer_service.md)
+- [High Vs Low Resilience](topics/high_vs_low_resilience.md)
+- [Hiring And Recruiting Militancy](topics/hiring_and_recruiting_militancy.md)
+- [Hiring And Talent Acquisition](topics/hiring_and_talent_acquisition.md)
+- [Hiring And Training Systematization](topics/hiring_and_training_systematization.md)
+- [Hiring Leverage](topics/hiring_leverage.md)
+- [Holistic Sales Approach](topics/holistic_sales_approach.md)
 - [Hook Writing Strategy](topics/hook_writing_strategy.md)
+- [Hotline Workflow Example](topics/hotline_workflow_example.md)
+- [Humanoid Robots](topics/humanoid_robots.md)
+- [Hyper Successful Traits](topics/hyper_successful_traits.md)
+- [Ideal Audience Alignment](topics/ideal_audience_alignment.md)
+- [Ideal Customer Avatar](topics/ideal_customer_avatar.md)
+- [Identifying Your True Strength](topics/identifying_your_true_strength.md)
+- [Identity As Behavior Aggregation](topics/identity_as_behavior_aggregation.md)
+- [Identity Reinforcement Through Behavior](topics/identity_reinforcement_through_behavior.md)
+- [Identity Shift To Trainer](topics/identity_shift_to_trainer.md)
+- [Identity Through Actions](topics/identity_through_actions.md)
+- [Ignorance As Evil](topics/ignorance_as_evil.md)
+- [Implementation Mechanism](topics/implementation_mechanism.md)
 - [Implementation Of Training Focused Marketing](topics/implementation_of_training_focused_marketing.md)
+- [Implementation Timeline And Priority](topics/implementation_timeline_and_priority.md)
+- [In Person Sales Closing](topics/in_person_sales_closing.md)
+- [Income Diversification](topics/income_diversification.md)
+- [Income Growth As Primary Lever](topics/income_growth_as_primary_lever.md)
+- [Income Plateaus](topics/income_plateaus.md)
+- [Income Vs Lifestyle Discipline](topics/income_vs_lifestyle_discipline.md)
+- [Independent Thinking And Agency](topics/independent_thinking_and_agency.md)
+- [Industry Averages](topics/industry_averages.md)
+- [Industry Standards Trap](topics/industry_standards_trap.md)
+- [Inflation And Future Dollar Value](topics/inflation_and_future_dollar_value.md)
+- [Influence And Branding Framework Spcl](topics/influence_and_branding_framework_spcl.md)
+- [Influence Stack](topics/influence_stack.md)
+- [Influencer Leverage Strategy](topics/influencer_leverage_strategy.md)
+- [Influencer Type Categories](topics/influencer_type_categories.md)
+- [Information Based Decision Making](topics/information_based_decision_making.md)
+- [Information Vs Curation](topics/information_vs_curation.md)
+- [Input Output Equations](topics/input_output_equations.md)
+- [Instagram Monetization Paths](topics/instagram_monetization_paths.md)
+- [Insurance And Risk Transfer](topics/insurance_and_risk_transfer.md)
+- [Insurance Industry Disruption](topics/insurance_industry_disruption.md)
+- [Insurance Industry Economics](topics/insurance_industry_economics.md)
+- [Integrity Over Opportunity](topics/integrity_over_opportunity.md)
+- [Intelligence As Learning Rate](topics/intelligence_as_learning_rate.md)
+- [Intelligence As Rate](topics/intelligence_as_rate.md)
+- [Intelligence As Speed](topics/intelligence_as_speed.md)
 - [Internal Plays Upsells](topics/internal_plays_upsells.md)
+- [Intrinsic Meaning](topics/intrinsic_meaning.md)
+- [Investing Path](topics/investing_path.md)
 - [Investment Costs For Initial Month](topics/investment_costs_for_initial_month.md)
+- [Investor Confidence](topics/investor_confidence.md)
+- [Invisible Difficulty](topics/invisible_difficulty.md)
 - [Irresistible Offers](topics/irresistible_offers.md)
+- [Iteration Vectors](topics/iteration_vectors.md)
+- [Iterative Improvement Process](topics/iterative_improvement_process.md)
+- [Kaleidoscope Creative Variations](topics/kaleidoscope_creative_variations.md)
+- [Key Man Dependency](topics/key_man_dependency.md)
+- [Key Man Risk And Business Scaling](topics/key_man_risk_and_business_scaling.md)
+- [Knowledge Types](topics/knowledge_types.md)
+- [Landing Page Optimization](topics/landing_page_optimization.md)
 - [Landing Pages And Ctas](topics/landing_pages_and_ctas.md)
+- [Language As Behavior](topics/language_as_behavior.md)
+- [Language Clarity Objectivism](topics/language_clarity_objectivism.md)
+- [Language Optimization](topics/language_optimization.md)
 - [Large Group Training Revenue](topics/large_group_training_revenue.md)
 - [Launch Strategies](topics/launch_strategies.md)
+- [Law Firm Capacity Constraints](topics/law_firm_capacity_constraints.md)
 - [Lazy System](topics/lazy_system.md)
 - [Lead Follow Up](topics/lead_follow_up.md)
+- [Lead Gen Channels](topics/lead_gen_channels.md)
+- [Lead Gen To Coaching Transition](topics/lead_gen_to_coaching_transition.md)
 - [Lead Generation](topics/lead_generation.md)
+- [Lead Generation And Sales Strategy](topics/lead_generation_and_sales_strategy.md)
+- [Lead Generation Channels And Content Strategy](topics/lead_generation_channels_and_content_strategy.md)
 - [Lead Generation Marketing](topics/lead_generation_marketing.md)
+- [Lead Generation Scaling](topics/lead_generation_scaling.md)
+- [Lead Generation Strategy](topics/lead_generation_strategy.md)
+- [Lead Generation Volume](topics/lead_generation_volume.md)
 - [Lead Getter Integration](topics/lead_getter_integration.md)
 - [Lead Magnets And Offers](topics/lead_magnets_and_offers.md)
+- [Lead Nurture](topics/lead_nurture.md)
 - [Lead Nurture Definition](topics/lead_nurture_definition.md)
+- [Lead Qualification Bant Method](topics/lead_qualification_bant_method.md)
+- [Lead Qualification Frameworks](topics/lead_qualification_frameworks.md)
+- [Lead Qualification Funnel](topics/lead_qualification_funnel.md)
+- [Lead Qualification Speed](topics/lead_qualification_speed.md)
+- [Lead Quality Over Quantity](topics/lead_quality_over_quantity.md)
+- [Lead Quality Vs Lead Form Trade Offs](topics/lead_quality_vs_lead_form_trade_offs.md)
+- [Lead Response Time](topics/lead_response_time.md)
+- [Lead Scoring](topics/lead_scoring.md)
 - [Lead Scoring Qualification](topics/lead_scoring_qualification.md)
+- [Lead Source Concentration Risk](topics/lead_source_concentration_risk.md)
+- [Leader As Standard Holder](topics/leader_as_standard_holder.md)
+- [Leadership Alignment](topics/leadership_alignment.md)
+- [Leadership And Founder Capacity](topics/leadership_and_founder_capacity.md)
+- [Leadership By Example](topics/leadership_by_example.md)
+- [Leadership Hiring Strategy](topics/leadership_hiring_strategy.md)
+- [Leadership Quality](topics/leadership_quality.md)
+- [Learning Behavior Change](topics/learning_behavior_change.md)
+- [Learning Budget And Experimentation](topics/learning_budget_and_experimentation.md)
+- [Learning Definition](topics/learning_definition.md)
+- [Learning Definition And Intelligence](topics/learning_definition_and_intelligence.md)
+- [Learning Strategy](topics/learning_strategy.md)
+- [Learning Through Action](topics/learning_through_action.md)
+- [Learning Through Iteration](topics/learning_through_iteration.md)
+- [Learning Vs Earning Mode](topics/learning_vs_earning_mode.md)
+- [Legal Compliance](topics/legal_compliance.md)
+- [Legal Talent Acquisition](topics/legal_talent_acquisition.md)
+- [Leverage Mechanics](topics/leverage_mechanics.md)
+- [Leverage Through Risk](topics/leverage_through_risk.md)
+- [Liability At Scale](topics/liability_at_scale.md)
+- [Licensing Model](topics/licensing_model.md)
+- [Licensing Vs Direct Service](topics/licensing_vs_direct_service.md)
+- [Licensing Vs Franchising](topics/licensing_vs_franchising.md)
+- [Life Stage Evolution](topics/life_stage_evolution.md)
+- [Lifestyle Design](topics/lifestyle_design.md)
+- [Likeness And Audience](topics/likeness_and_audience.md)
+- [Limiting Beliefs And Business Constraints](topics/limiting_beliefs_and_business_constraints.md)
+- [Live Launch Execution](topics/live_launch_execution.md)
+- [Livestock Branding History](topics/livestock_branding_history.md)
+- [Local Market Domination Before Expansion](topics/local_market_domination_before_expansion.md)
+- [Location Economics Sequencing](topics/location_economics_sequencing.md)
+- [Location Expansion Dynamics](topics/location_expansion_dynamics.md)
+- [Location Scaling](topics/location_scaling.md)
+- [Long Form Content](topics/long_form_content.md)
+- [Long Tail Distribution In Business](topics/long_tail_distribution_in_business.md)
+- [Long Term Growth Path](topics/long_term_growth_path.md)
+- [Long Term Learning Strategy](topics/long_term_learning_strategy.md)
+- [Long Term Strategy](topics/long_term_strategy.md)
+- [Long Term Thinking](topics/long_term_thinking.md)
+- [Long Term Thinking In Ai](topics/long_term_thinking_in_ai.md)
+- [Long Term Value](topics/long_term_value.md)
+- [Long Term Vision](topics/long_term_vision.md)
+- [Loss And Capability](topics/loss_and_capability.md)
+- [Low Fortitude Examples](topics/low_fortitude_examples.md)
+- [Low Ticket Products As Relationship Shifters](topics/low_ticket_products_as_relationship_shifters.md)
+- [Low Trust Environment Conversion](topics/low_trust_environment_conversion.md)
+- [Ltv Cac Economics](topics/ltv_cac_economics.md)
+- [Ltv To Cac Ratio](topics/ltv_to_cac_ratio.md)
+- [Ltv To Cac Validation](topics/ltv_to_cac_validation.md)
+- [Luck Surface Area](topics/luck_surface_area.md)
+- [Luxury Positioning Pricing Power](topics/luxury_positioning_pricing_power.md)
+- [Macro Opportunities](topics/macro_opportunities.md)
+- [Magical Product Experiences](topics/magical_product_experiences.md)
+- [Maintaining Behavior Under Stress](topics/maintaining_behavior_under_stress.md)
+- [Maker Vs Manager Mindset](topics/maker_vs_manager_mindset.md)
+- [Manufacturing Consolidation](topics/manufacturing_consolidation.md)
+- [Margin Analysis](topics/margin_analysis.md)
+- [Margin Compression](topics/margin_compression.md)
+- [Margin Degradation](topics/margin_degradation.md)
+- [Margin Expansion](topics/margin_expansion.md)
+- [Margin Improvement](topics/margin_improvement.md)
+- [Margin Improvement Vs Revenue Growth](topics/margin_improvement_vs_revenue_growth.md)
+- [Margin Optimization](topics/margin_optimization.md)
+- [Margin Protection](topics/margin_protection.md)
+- [Margins](topics/margins.md)
+- [Margins And Metrics](topics/margins_and_metrics.md)
+- [Margins Compression](topics/margins_compression.md)
+- [Market Distribution](topics/market_distribution.md)
+- [Market Dominance Strategy](topics/market_dominance_strategy.md)
+- [Market Driven Vs Strategy Driven Pricing](topics/market_driven_vs_strategy_driven_pricing.md)
+- [Market Economics At Scale](topics/market_economics_at_scale.md)
+- [Market Expansion And Geographic Scaling](topics/market_expansion_and_geographic_scaling.md)
+- [Market Expansion Growth Tailwinds](topics/market_expansion_growth_tailwinds.md)
+- [Market Expansion Sequencing](topics/market_expansion_sequencing.md)
 - [Market Gap Analysis And Client Transformation](topics/market_gap_analysis_and_client_transformation.md)
 - [Market Opportunity](topics/market_opportunity.md)
+- [Market Positioning And Differentiation](topics/market_positioning_and_differentiation.md)
+- [Market Saturation Myth](topics/market_saturation_myth.md)
+- [Market Segmentation](topics/market_segmentation.md)
 - [Market Selection](topics/market_selection.md)
+- [Market Share Vs New Markets](topics/market_share_vs_new_markets.md)
+- [Market Shift Response](topics/market_shift_response.md)
+- [Market Timing](topics/market_timing.md)
+- [Market Timing And Land Grabs](topics/market_timing_and_land_grabs.md)
+- [Market Vs Model Issues](topics/market_vs_model_issues.md)
+- [Marketing Ad Management](topics/marketing_ad_management.md)
+- [Marketing Automation](topics/marketing_automation.md)
+- [Marketing Clarity](topics/marketing_clarity.md)
+- [Marketing Distraction](topics/marketing_distraction.md)
+- [Marketing Filtration Vs Education](topics/marketing_filtration_vs_education.md)
+- [Marketing Metrics](topics/marketing_metrics.md)
 - [Marketing Strategy](topics/marketing_strategy.md)
+- [Marketing Volume](topics/marketing_volume.md)
+- [Marketing Vs Delivery Time Split](topics/marketing_vs_delivery_time_split.md)
+- [Mass Market Economics](topics/mass_market_economics.md)
+- [Mastering Rejection Shame](topics/mastering_rejection_shame.md)
+- [Mastery Depth](topics/mastery_depth.md)
+- [Measuring Tolerance](topics/measuring_tolerance.md)
+- [Media Buying Integration](topics/media_buying_integration.md)
 - [Member Lifecycle Management](topics/member_lifecycle_management.md)
+- [Membership Model Pitfalls](topics/membership_model_pitfalls.md)
 - [Membership Structuring](topics/membership_structuring.md)
+- [Memory Driven Value Framing](topics/memory_driven_value_framing.md)
+- [Mental Spending Barrier](topics/mental_spending_barrier.md)
+- [Mental Toughness](topics/mental_toughness.md)
 - [Menu Upsell](topics/menu_upsell.md)
+- [Messaging Framework](topics/messaging_framework.md)
+- [Messaging Positioning](topics/messaging_positioning.md)
 - [Million Verifier](topics/million_verifier.md)
+- [Model Pivot](topics/model_pivot.md)
+- [Modeling High Performers](topics/modeling_high_performers.md)
+- [Monetization Funnel](topics/monetization_funnel.md)
 - [Money Model Framework](topics/money_model_framework.md)
+- [Money Savings](topics/money_savings.md)
+- [Monopolistic Levers](topics/monopolistic_levers.md)
 - [More Better New Scaling](topics/more_better_new_scaling.md)
+- [Motivated Buyer Strategy](topics/motivated_buyer_strategy.md)
+- [Motivation Definition](topics/motivation_definition.md)
+- [Mountain Climbing Metaphor](topics/mountain_climbing_metaphor.md)
+- [Multi Business Focus](topics/multi_business_focus.md)
+- [Multi Channel Acquisition Strategy](topics/multi_channel_acquisition_strategy.md)
+- [Multi Product Vs Single Product Strategy](topics/multi_product_vs_single_product_strategy.md)
+- [Multi Stage Business Scaling Roadmap](topics/multi_stage_business_scaling_roadmap.md)
+- [Multi Tiered Offer Strategy](topics/multi_tiered_offer_strategy.md)
+- [Multi Touch Complexity](topics/multi_touch_complexity.md)
+- [Multiple Arbitrage](topics/multiple_arbitrage.md)
+- [Multiple Attack Vectors](topics/multiple_attack_vectors.md)
+- [Multiple Location Expansion](topics/multiple_location_expansion.md)
+- [Nail It Then Scale It Framework](topics/nail_it_then_scale_it_framework.md)
+- [Narrative Adaptation](topics/narrative_adaptation.md)
+- [Narrative Transparency](topics/narrative_transparency.md)
+- [Network Community](topics/network_community.md)
+- [Network Expansion](topics/network_expansion.md)
+- [Networking And Headhunters](topics/networking_and_headhunters.md)
+- [Networking At Scale](topics/networking_at_scale.md)
+- [New Market Entry Strategy](topics/new_market_entry_strategy.md)
+- [New Service Launch](topics/new_service_launch.md)
 - [Next Js Frontend](topics/next_js_frontend.md)
+- [Niche Down To Scale Up](topics/niche_down_to_scale_up.md)
 - [Niching](topics/niching.md)
+- [No Based Close](topics/no_based_close.md)
+- [Nonprofit Advantage](topics/nonprofit_advantage.md)
+- [Objection Handling](topics/objection_handling.md)
+- [Observable Behavior Specification](topics/observable_behavior_specification.md)
+- [Observable Reality Framework](topics/observable_reality_framework.md)
+- [Observational Learning](topics/observational_learning.md)
+- [Offer Architecture And Bundling](topics/offer_architecture_and_bundling.md)
+- [Offer Bifurcation Strategy](topics/offer_bifurcation_strategy.md)
+- [Offer Flexibility](topics/offer_flexibility.md)
 - [Offer Naming](topics/offer_naming.md)
 - [Offer Positioning](topics/offer_positioning.md)
+- [Offer Productization](topics/offer_productization.md)
+- [Offer Qualification](topics/offer_qualification.md)
+- [Offer Stacking](topics/offer_stacking.md)
+- [Offer Stacking Upsells](topics/offer_stacking_upsells.md)
+- [Offer Structure](topics/offer_structure.md)
+- [Offers And Bonuses](topics/offers_and_bonuses.md)
+- [Offshore Staffing](topics/offshore_staffing.md)
+- [On Target Earnings Reverse Engineering](topics/on_target_earnings_reverse_engineering.md)
+- [Onboarding Activation](topics/onboarding_activation.md)
 - [One Person Company](topics/one_person_company.md)
+- [One Time Setup Fees](topics/one_time_setup_fees.md)
+- [Ongoing Revenue Share Vs Upfront Spiff](topics/ongoing_revenue_share_vs_upfront_spiff.md)
 - [Open To Goal Work Framework](topics/open_to_goal_work_framework.md)
+- [Operating Leverage](topics/operating_leverage.md)
+- [Operational Complexity](topics/operational_complexity.md)
+- [Operational Efficiency](topics/operational_efficiency.md)
+- [Operational Efficiency And Redundancy](topics/operational_efficiency_and_redundancy.md)
+- [Operational Excellence](topics/operational_excellence.md)
+- [Operational Leverage And Logistics](topics/operational_leverage_and_logistics.md)
+- [Operational Leverage Scalability](topics/operational_leverage_scalability.md)
+- [Operational Scalability](topics/operational_scalability.md)
+- [Operational Scaling Roadmap](topics/operational_scaling_roadmap.md)
+- [Operationalization](topics/operationalization.md)
+- [Operations And Margin Compression](topics/operations_and_margin_compression.md)
+- [Operator Partnerships](topics/operator_partnerships.md)
+- [Operator Recruitment Strategy](topics/operator_recruitment_strategy.md)
+- [Opportunity Cost](topics/opportunity_cost.md)
+- [Opportunity Cost Framework](topics/opportunity_cost_framework.md)
+- [Opportunity Cost Of Caution](topics/opportunity_cost_of_caution.md)
+- [Opportunity Recognition](topics/opportunity_recognition.md)
+- [Order Of Magnitude Thinking](topics/order_of_magnitude_thinking.md)
+- [Organic Audience Monetization Mistakes](topics/organic_audience_monetization_mistakes.md)
+- [Organic Growth Model](topics/organic_growth_model.md)
+- [Organizational Scope](topics/organizational_scope.md)
 - [Organizational Structure Hiring](topics/organizational_structure_hiring.md)
+- [Outbound Sales For Capital](topics/outbound_sales_for_capital.md)
+- [Outcome Based Compensation](topics/outcome_based_compensation.md)
+- [Outcome Vs Process Orientation](topics/outcome_vs_process_orientation.md)
+- [Outsized Returns From Contrarian Bets](topics/outsized_returns_from_contrarian_bets.md)
+- [Overestimating Downside Risk](topics/overestimating_downside_risk.md)
+- [Overexpansion Risk](topics/overexpansion_risk.md)
 - [Overhead Management](topics/overhead_management.md)
+- [Overwhelm Reduction](topics/overwhelm_reduction.md)
+- [Owner Accountability](topics/owner_accountability.md)
+- [Owner Presence Culture](topics/owner_presence_culture.md)
+- [Ownership Equity Incentive Structure](topics/ownership_equity_incentive_structure.md)
+- [Paid Ads Vs Organic Growth Foundation](topics/paid_ads_vs_organic_growth_foundation.md)
+- [Paid Advertising For Investors](topics/paid_advertising_for_investors.md)
 - [Paid Advertising Fundamentals](topics/paid_advertising_fundamentals.md)
+- [Paid Content Amplification](topics/paid_content_amplification.md)
+- [Paid Media Arbitrage Scaling Limits](topics/paid_media_arbitrage_scaling_limits.md)
+- [Paid Partnerships Collaborations](topics/paid_partnerships_collaborations.md)
+- [Pairing Products With Customer Values](topics/pairing_products_with_customer_values.md)
+- [Pareto Pricing Tiers](topics/pareto_pricing_tiers.md)
+- [Pareto Principle And Profit Concentration](topics/pareto_principle_and_profit_concentration.md)
+- [Partner Channel Model](topics/partner_channel_model.md)
+- [Partner Quality](topics/partner_quality.md)
+- [Partner Recruitment](topics/partner_recruitment.md)
+- [Partnership Requirements Framework](topics/partnership_requirements_framework.md)
+- [Passion Myth](topics/passion_myth.md)
+- [Passion Vs Purpose](topics/passion_vs_purpose.md)
+- [Passive Vs Active Income Management](topics/passive_vs_active_income_management.md)
+- [Path Optimization](topics/path_optimization.md)
+- [Patience As Action](topics/patience_as_action.md)
+- [Patience As Behavior](topics/patience_as_behavior.md)
+- [Pay As You Go Model](topics/pay_as_you_go_model.md)
 - [Pay Less Now Or Pay More Later](topics/pay_less_now_or_pay_more_later.md)
+- [Pay Then Work Model](topics/pay_then_work_model.md)
+- [Payback Period](topics/payback_period.md)
+- [Payment Checkout Infrastructure](topics/payment_checkout_infrastructure.md)
 - [Payment Plan Downsells](topics/payment_plan_downsells.md)
 - [Perceived Likelihood](topics/perceived_likelihood.md)
+- [Perceived Likelihood Of Achievement](topics/perceived_likelihood_of_achievement.md)
+- [Performance Based Business Models](topics/performance_based_business_models.md)
+- [Performance Marketing Doom Loop](topics/performance_marketing_doom_loop.md)
+- [Perks As Retention](topics/perks_as_retention.md)
+- [Perseverance Vs Quitting](topics/perseverance_vs_quitting.md)
+- [Persistence Over Talent](topics/persistence_over_talent.md)
+- [Personal Growth Philosophy](topics/personal_growth_philosophy.md)
+- [Personal Standard Setting](topics/personal_standard_setting.md)
 - [Personalization Tactics](topics/personalization_tactics.md)
+- [Phantom Equity Exit Incentives](topics/phantom_equity_exit_incentives.md)
+- [Physics Based Goals](topics/physics_based_goals.md)
+- [Pick Your Price Offer Mechanics](topics/pick_your_price_offer_mechanics.md)
+- [Pivot Timing](topics/pivot_timing.md)
+- [Platform Algorithm Targeting](topics/platform_algorithm_targeting.md)
+- [Platform Monetization](topics/platform_monetization.md)
+- [Podcast Reach Limitations](topics/podcast_reach_limitations.md)
+- [Portfolio Company Scaling Challenges](topics/portfolio_company_scaling_challenges.md)
+- [Portfolio Vs Single Brand](topics/portfolio_vs_single_brand.md)
+- [Positioning And Value Proposition](topics/positioning_and_value_proposition.md)
+- [Positioning For Premium Markets](topics/positioning_for_premium_markets.md)
+- [Positive Vs Negative Outcomes](topics/positive_vs_negative_outcomes.md)
+- [Post Acquisition Integration](topics/post_acquisition_integration.md)
+- [Power Through Say Do](topics/power_through_say_do.md)
+- [Ppc Lead Generation](topics/ppc_lead_generation.md)
+- [Pre Framing Friction](topics/pre_framing_friction.md)
+- [Pre Work Over Post Production](topics/pre_work_over_post_production.md)
 - [Premium Offers](topics/premium_offers.md)
+- [Premium Positioning](topics/premium_positioning.md)
 - [Premium Pricing](topics/premium_pricing.md)
+- [Premium Pricing Power](topics/premium_pricing_power.md)
+- [Preparation And Readiness](topics/preparation_and_readiness.md)
+- [Prepayment And Cash Flow](topics/prepayment_and_cash_flow.md)
+- [Price Anchoring](topics/price_anchoring.md)
+- [Price As Market Signal](topics/price_as_market_signal.md)
+- [Price Multiplier Strategy](topics/price_multiplier_strategy.md)
 - [Price Optimization](topics/price_optimization.md)
+- [Price Raise Implementation](topics/price_raise_implementation.md)
 - [Pricing Ai Services](topics/pricing_ai_services.md)
+- [Pricing And Gross Margins](topics/pricing_and_gross_margins.md)
+- [Pricing And Ltv Cac Dynamics For Smbs](topics/pricing_and_ltv_cac_dynamics_for_smbs.md)
+- [Pricing And Premium Offers](topics/pricing_and_premium_offers.md)
+- [Pricing Leverage](topics/pricing_leverage.md)
+- [Pricing Power In Established Markets](topics/pricing_power_in_established_markets.md)
+- [Pricing Psychology](topics/pricing_psychology.md)
+- [Pricing Psychology Anchoring](topics/pricing_psychology_anchoring.md)
+- [Pricing Recurring Content](topics/pricing_recurring_content.md)
 - [Pricing Strategy](topics/pricing_strategy.md)
+- [Pricing Strategy Anchoring](topics/pricing_strategy_anchoring.md)
+- [Pricing Strategy And Tiered Offers](topics/pricing_strategy_and_tiered_offers.md)
+- [Pricing Strategy Value Stacking](topics/pricing_strategy_value_stacking.md)
+- [Pricing Tier Restructure](topics/pricing_tier_restructure.md)
+- [Pricing Tiers](topics/pricing_tiers.md)
+- [Pricing Tiers And Jumps](topics/pricing_tiers_and_jumps.md)
+- [Pricing Trial Structure](topics/pricing_trial_structure.md)
+- [Private Equity Growth Problems](topics/private_equity_growth_problems.md)
+- [Problem Definition](topics/problem_definition.md)
 - [Problem Solution Framework](topics/problem_solution_framework.md)
 - [Process Gaps](topics/process_gaps.md)
+- [Process Mapping](topics/process_mapping.md)
+- [Process Over Player Philosophy](topics/process_over_player_philosophy.md)
+- [Product Avatar Diversity](topics/product_avatar_diversity.md)
+- [Product Bundling](topics/product_bundling.md)
+- [Product Defensibility](topics/product_defensibility.md)
+- [Product Market Fit](topics/product_market_fit.md)
 - [Product Market Goodwill](topics/product_market_goodwill.md)
+- [Product Positioning](topics/product_positioning.md)
+- [Product Simplification](topics/product_simplification.md)
+- [Profit As Unnatural](topics/profit_as_unnatural.md)
+- [Profit Concentration](topics/profit_concentration.md)
+- [Profit Optimization](topics/profit_optimization.md)
+- [Profit Share Pool Structure](topics/profit_share_pool_structure.md)
+- [Profit Share Structure](topics/profit_share_structure.md)
+- [Profit Vs Volume](topics/profit_vs_volume.md)
+- [Profitability Proof](topics/profitability_proof.md)
+- [Program Based Pricing](topics/program_based_pricing.md)
+- [Promotion Velocity](topics/promotion_velocity.md)
+- [Proof And Credibility](topics/proof_and_credibility.md)
+- [Proof As Competitive Moat](topics/proof_as_competitive_moat.md)
+- [Proof Methodology](topics/proof_methodology.md)
+- [Proof Problem](topics/proof_problem.md)
+- [Proof Promise Plan Framework](topics/proof_promise_plan_framework.md)
+- [Proof Testimonial Acquisition](topics/proof_testimonial_acquisition.md)
+- [Proprietary Technology](topics/proprietary_technology.md)
+- [Providing Value](topics/providing_value.md)
+- [Psychological Nature Of Failure](topics/psychological_nature_of_failure.md)
+- [Psychological Principles In Sales](topics/psychological_principles_in_sales.md)
+- [Qualitative Attribution](topics/qualitative_attribution.md)
+- [Quality Of Life Variables](topics/quality_of_life_variables.md)
+- [R D Budget Model](topics/r_d_budget_model.md)
+- [Raising Capital Path](topics/raising_capital_path.md)
+- [Rare Pleasure Principle](topics/rare_pleasure_principle.md)
+- [Ray Dalio Fallacy](topics/ray_dalio_fallacy.md)
 - [Reach Out Communication Systems](topics/reach_out_communication_systems.md)
 - [Reactivation Campaign](topics/reactivation_campaign.md)
+- [Real Estate Agent Arbitrage](topics/real_estate_agent_arbitrage.md)
+- [Real Estate Agent Pricing Strategy](topics/real_estate_agent_pricing_strategy.md)
+- [Real Estate Arm](topics/real_estate_arm.md)
+- [Real Time Demonstration Vs Accomplishments](topics/real_time_demonstration_vs_accomplishments.md)
+- [Reciprocity Psychology](topics/reciprocity_psychology.md)
+- [Record Breaking Execution](topics/record_breaking_execution.md)
+- [Recovery Time](topics/recovery_time.md)
+- [Recruiting Economics](topics/recruiting_economics.md)
+- [Recruiting High Leverage Talent](topics/recruiting_high_leverage_talent.md)
+- [Recruiting Leverage](topics/recruiting_leverage.md)
+- [Recruitment Framework](topics/recruitment_framework.md)
+- [Recurring Revenue](topics/recurring_revenue.md)
+- [Recurring Revenue Architecture](topics/recurring_revenue_architecture.md)
+- [Recurring Revenue Model](topics/recurring_revenue_model.md)
+- [Recurring Service Monetization](topics/recurring_service_monetization.md)
+- [Reference Group Association](topics/reference_group_association.md)
+- [Reference Groups](topics/reference_groups.md)
 - [Referrals](topics/referrals.md)
+- [Reframing Burnout](topics/reframing_burnout.md)
+- [Reframing Difficulty](topics/reframing_difficulty.md)
+- [Reframing Hardship As Competitive Advantage](topics/reframing_hardship_as_competitive_advantage.md)
+- [Regrets As Inevitable](topics/regrets_as_inevitable.md)
+- [Regulatory Compliance](topics/regulatory_compliance.md)
+- [Regulatory Uncertainty](topics/regulatory_uncertainty.md)
+- [Reinforcement And Behavior](topics/reinforcement_and_behavior.md)
+- [Reinvestment Strategy](topics/reinvestment_strategy.md)
+- [Relationship Context Building](topics/relationship_context_building.md)
+- [Replicate Before Iterate](topics/replicate_before_iterate.md)
+- [Resilience As Leverage](topics/resilience_as_leverage.md)
+- [Resilience Building](topics/resilience_building.md)
+- [Resilience Definition](topics/resilience_definition.md)
+- [Resilience Recovery Time](topics/resilience_recovery_time.md)
+- [Resilience Trauma](topics/resilience_trauma.md)
+- [Restaurant Profitability](topics/restaurant_profitability.md)
 - [Retention Attrition Reduction](topics/retention_attrition_reduction.md)
+- [Retention Benchmarks](topics/retention_benchmarks.md)
+- [Retention Vs Growth Mindset](topics/retention_vs_growth_mindset.md)
+- [Revenue Channels](topics/revenue_channels.md)
+- [Revenue Model Transition](topics/revenue_model_transition.md)
+- [Revenue Models Monetization](topics/revenue_models_monetization.md)
 - [Revenue Models Through Recurring Revenue](topics/revenue_models_through_recurring_revenue.md)
+- [Revenue Per Employee Leverage](topics/revenue_per_employee_leverage.md)
+- [Revenue Redeployment](topics/revenue_redeployment.md)
+- [Revenue Retention And Stickiness](topics/revenue_retention_and_stickiness.md)
+- [Revenue Retention Stickiness](topics/revenue_retention_stickiness.md)
+- [Revenue Roller Coaster Problem](topics/revenue_roller_coaster_problem.md)
+- [Revenue Scaling](topics/revenue_scaling.md)
+- [Revenue Vs Unit Economics](topics/revenue_vs_unit_economics.md)
 - [Review Process Gaps](topics/review_process_gaps.md)
 - [Reviews And Ai Integration](topics/reviews_and_ai_integration.md)
+- [Rfp Frame Strategy](topics/rfp_frame_strategy.md)
+- [Rich Client Dynamics](topics/rich_client_dynamics.md)
+- [Rich Mindset Vs Poor Mindset Pricing](topics/rich_mindset_vs_poor_mindset_pricing.md)
+- [Risk Arbitrage And Mispricing](topics/risk_arbitrage_and_mispricing.md)
+- [Risk Assessment](topics/risk_assessment.md)
+- [Risk Identification Mitigation](topics/risk_identification_mitigation.md)
+- [Risk Perception And Overestimation](topics/risk_perception_and_overestimation.md)
+- [Risk Prevention Outcomes](topics/risk_prevention_outcomes.md)
+- [Risk Reduction](topics/risk_reduction.md)
+- [Risk Reduction With Ai](topics/risk_reduction_with_ai.md)
+- [Risk Vs Reward Distribution](topics/risk_vs_reward_distribution.md)
 - [Roadmap For Ai Business](topics/roadmap_for_ai_business.md)
+- [Roi On Time Freedom](topics/roi_on_time_freedom.md)
+- [Role Based To Workflow Based Thinking](topics/role_based_to_workflow_based_thinking.md)
 - [Rollover Upsell](topics/rollover_upsell.md)
+- [Romanticization Problem](topics/romanticization_problem.md)
+- [Royalties And Revenue Share](topics/royalties_and_revenue_share.md)
+- [Rpm As Quality Metric](topics/rpm_as_quality_metric.md)
+- [Rule Of 100](topics/rule_of_100.md)
+- [Saas And Software Business](topics/saas_and_software_business.md)
+- [Saas Misconceptions And Validation](topics/saas_misconceptions_and_validation.md)
+- [Saas Valuation Multiples](topics/saas_valuation_multiples.md)
+- [Sales Academy Model](topics/sales_academy_model.md)
+- [Sales Ai Application](topics/sales_ai_application.md)
+- [Sales And Fulfillment Misalignment](topics/sales_and_fulfillment_misalignment.md)
+- [Sales Behavior Analysis](topics/sales_behavior_analysis.md)
 - [Sales Call Strategy](topics/sales_call_strategy.md)
+- [Sales Channel Expansion](topics/sales_channel_expansion.md)
+- [Sales Channel Focus](topics/sales_channel_focus.md)
+- [Sales Conviction](topics/sales_conviction.md)
+- [Sales Culture And Consistency](topics/sales_culture_and_consistency.md)
+- [Sales Culture Volatility](topics/sales_culture_volatility.md)
+- [Sales Dialer Efficiency](topics/sales_dialer_efficiency.md)
+- [Sales Director Hiring](topics/sales_director_hiring.md)
+- [Sales Framework](topics/sales_framework.md)
+- [Sales Fundamentals](topics/sales_fundamentals.md)
+- [Sales Funnel And Sales Academy Build Out](topics/sales_funnel_and_sales_academy_build_out.md)
+- [Sales Funnel Friction](topics/sales_funnel_friction.md)
+- [Sales Hiring And Scaling](topics/sales_hiring_and_scaling.md)
+- [Sales Leadership Transition](topics/sales_leadership_transition.md)
+- [Sales Management And Leadership](topics/sales_management_and_leadership.md)
+- [Sales Messaging](topics/sales_messaging.md)
+- [Sales Motion](topics/sales_motion.md)
+- [Sales Motion Architecture](topics/sales_motion_architecture.md)
+- [Sales Motion Building](topics/sales_motion_building.md)
+- [Sales Motion Changes With Cold Traffic](topics/sales_motion_changes_with_cold_traffic.md)
+- [Sales Motion Components](topics/sales_motion_components.md)
+- [Sales Motion Fundamentals](topics/sales_motion_fundamentals.md)
+- [Sales Motion Systematization](topics/sales_motion_systematization.md)
+- [Sales Operations Training](topics/sales_operations_training.md)
+- [Sales Position Types](topics/sales_position_types.md)
 - [Sales Process Closing](topics/sales_process_closing.md)
 - [Sales Process Conversion](topics/sales_process_conversion.md)
+- [Sales Process Design](topics/sales_process_design.md)
+- [Sales Process Design Closing Mechanics](topics/sales_process_design_closing_mechanics.md)
+- [Sales Process Framework](topics/sales_process_framework.md)
+- [Sales Process Optimization](topics/sales_process_optimization.md)
+- [Sales Process Overhaul](topics/sales_process_overhaul.md)
+- [Sales Process Redesign](topics/sales_process_redesign.md)
 - [Sales Process Refinement](topics/sales_process_refinement.md)
+- [Sales Process Structure](topics/sales_process_structure.md)
+- [Sales Qualification And Avatar Targeting](topics/sales_qualification_and_avatar_targeting.md)
+- [Sales Reframing](topics/sales_reframing.md)
+- [Sales Response Time](topics/sales_response_time.md)
+- [Sales Role Compensation](topics/sales_role_compensation.md)
+- [Sales Scalability](topics/sales_scalability.md)
+- [Sales Skills Vs Business Skills](topics/sales_skills_vs_business_skills.md)
+- [Sales Speed](topics/sales_speed.md)
+- [Sales Targeting And Lead Qualification](topics/sales_targeting_and_lead_qualification.md)
+- [Sales Team Management](topics/sales_team_management.md)
+- [Sales Team Structure And Compensation](topics/sales_team_structure_and_compensation.md)
+- [Sales Timing And Deprivation](topics/sales_timing_and_deprivation.md)
 - [Sales To Fulfillment Continuum](topics/sales_to_fulfillment_continuum.md)
+- [Sales Training](topics/sales_training.md)
+- [Sales Training And Behavioral Language](topics/sales_training_and_behavioral_language.md)
+- [Sales Training And Script Execution](topics/sales_training_and_script_execution.md)
+- [Sales Training At Scale](topics/sales_training_at_scale.md)
+- [Sales Training Model](topics/sales_training_model.md)
+- [Sales Training Process](topics/sales_training_process.md)
+- [Sales Volume Vs Close Rate](topics/sales_volume_vs_close_rate.md)
+- [Sales Vs Operations](topics/sales_vs_operations.md)
 - [Satisfaction Guarantee](topics/satisfaction_guarantee.md)
+- [Saving Vs Spending](topics/saving_vs_spending.md)
+- [Saying No](topics/saying_no.md)
 - [Scaling Ad Production](topics/scaling_ad_production.md)
+- [Scaling Beyond The Record](topics/scaling_beyond_the_record.md)
+- [Scaling Constraints And Growth Challenges](topics/scaling_constraints_and_growth_challenges.md)
+- [Scaling Discipline](topics/scaling_discipline.md)
+- [Scaling Existing Channels](topics/scaling_existing_channels.md)
+- [Scaling Limitations](topics/scaling_limitations.md)
+- [Scaling Media Buying And Keywords](topics/scaling_media_buying_and_keywords.md)
+- [Scaling Roadmap](topics/scaling_roadmap.md)
+- [Scaling Supply Constraints](topics/scaling_supply_constraints.md)
+- [Scaling Through Delegation](topics/scaling_through_delegation.md)
+- [Scaling Through Others](topics/scaling_through_others.md)
 - [Scarcity](topics/scarcity.md)
+- [Scientific Attribution](topics/scientific_attribution.md)
+- [Script Design](topics/script_design.md)
+- [Script Discipline](topics/script_discipline.md)
+- [Script Enforcement](topics/script_enforcement.md)
+- [Script Optimization](topics/script_optimization.md)
+- [Seasonal Marketing Angles](topics/seasonal_marketing_angles.md)
+- [Self Awareness And Constraint Identification](topics/self_awareness_and_constraint_identification.md)
+- [Self Judgment Through Action](topics/self_judgment_through_action.md)
+- [Self Linking Business Loops](topics/self_linking_business_loops.md)
+- [Self Reinforcing Patterns](topics/self_reinforcing_patterns.md)
+- [Seller Psychology](topics/seller_psychology.md)
+- [Selling By Value Ratio](topics/selling_by_value_ratio.md)
 - [Semi Private 1 On 4 Training](topics/semi_private_1_on_4_training.md)
+- [Separation Of Feeling And Action](topics/separation_of_feeling_and_action.md)
+- [Service As Differentiation](topics/service_as_differentiation.md)
+- [Service Business Churn Patterns](topics/service_business_churn_patterns.md)
+- [Service Business Economics](topics/service_business_economics.md)
+- [Service Business Model](topics/service_business_model.md)
+- [Service Business Reinvestment Strategy](topics/service_business_reinvestment_strategy.md)
+- [Service Business Scaling Model](topics/service_business_scaling_model.md)
+- [Service Character As Life Values](topics/service_character_as_life_values.md)
 - [Service Delivery](topics/service_delivery.md)
+- [Service Line Prioritization](topics/service_line_prioritization.md)
 - [Service Pricing](topics/service_pricing.md)
+- [Service Quality And Premium Margins](topics/service_quality_and_premium_margins.md)
+- [Service To Continuity Model](topics/service_to_continuity_model.md)
+- [Service Vs Automation](topics/service_vs_automation.md)
+- [Service Vs Passive Income Management](topics/service_vs_passive_income_management.md)
 - [Session Duration Structure](topics/session_duration_structure.md)
+- [Shame As Fuel](topics/shame_as_fuel.md)
+- [Shame Vs Guilt Vs Cringe](topics/shame_vs_guilt_vs_cringe.md)
+- [Shared Knowledge Exposure](topics/shared_knowledge_exposure.md)
+- [Shiny Object Syndrome](topics/shiny_object_syndrome.md)
+- [Shop Level Decentralization](topics/shop_level_decentralization.md)
+- [Short Form Repurposing](topics/short_form_repurposing.md)
+- [Short Form To Long Form Conversion](topics/short_form_to_long_form_conversion.md)
+- [Short Form Vs Long Form Content](topics/short_form_vs_long_form_content.md)
+- [Short Form Vs Long Form Strategy](topics/short_form_vs_long_form_strategy.md)
+- [Situational Ethics](topics/situational_ethics.md)
+- [Skill Accumulation](topics/skill_accumulation.md)
+- [Skill Acquisition As Bridge Building](topics/skill_acquisition_as_bridge_building.md)
+- [Skill As Chained Behaviors](topics/skill_as_chained_behaviors.md)
+- [Skill Compounding](topics/skill_compounding.md)
+- [Skill Deconstruction](topics/skill_deconstruction.md)
+- [Skill Duplication](topics/skill_duplication.md)
+- [Skill Investment Roi](topics/skill_investment_roi.md)
+- [Skill Monetization](topics/skill_monetization.md)
+- [Skill Requirements For Opportunity](topics/skill_requirements_for_opportunity.md)
+- [Skill Selection](topics/skill_selection.md)
+- [Skill Stacking](topics/skill_stacking.md)
+- [Skill Transposition](topics/skill_transposition.md)
+- [Skills Over Outcomes](topics/skills_over_outcomes.md)
+- [Skin In The Game](topics/skin_in_the_game.md)
+- [Sku Optimization](topics/sku_optimization.md)
+- [Sleep Schedule Leverage](topics/sleep_schedule_leverage.md)
+- [Small Bets And Iteration](topics/small_bets_and_iteration.md)
+- [Smb Customer Volatility Problem](topics/smb_customer_volatility_problem.md)
+- [Smb Market Dangers](topics/smb_market_dangers.md)
+- [Social Profile Credibility](topics/social_profile_credibility.md)
+- [Social Proof Testimonial Acquisition](topics/social_proof_testimonial_acquisition.md)
+- [Soft Handoff](topics/soft_handoff.md)
+- [Software Economics](topics/software_economics.md)
+- [Solo Business Scaling](topics/solo_business_scaling.md)
+- [Spcl Framework](topics/spcl_framework.md)
+- [Specialization Vs Diversification](topics/specialization_vs_diversification.md)
+- [Speed Latency As Leverage](topics/speed_latency_as_leverage.md)
+- [Speed Of Learning Over Starting Point](topics/speed_of_learning_over_starting_point.md)
 - [Speed To Contact](topics/speed_to_contact.md)
+- [Spending As Skill](topics/spending_as_skill.md)
+- [Spending Discipline And Opportunity Cost](topics/spending_discipline_and_opportunity_cost.md)
+- [Spending Skill Gap](topics/spending_skill_gap.md)
+- [Staffing Constraints](topics/staffing_constraints.md)
+- [Standard Elevation](topics/standard_elevation.md)
+- [Standards And Business Success](topics/standards_and_business_success.md)
+- [Starting For Free](topics/starting_for_free.md)
+- [State Expansion Dynamics](topics/state_expansion_dynamics.md)
+- [Status Definition](topics/status_definition.md)
 - [Story Ads](topics/story_ads.md)
+- [Strategic Spending](topics/strategic_spending.md)
 - [Structured Processes For Reviews Referrals Lead Re Engagement](topics/structured_processes_for_reviews_referrals_lead_re_engagement.md)
+- [Subcontractor Scalability](topics/subcontractor_scalability.md)
+- [Subscription Vs One Time Model](topics/subscription_vs_one_time_model.md)
+- [Success Metrics And Quantification](topics/success_metrics_and_quantification.md)
+- [Suffering As Fixed Cost](topics/suffering_as_fixed_cost.md)
+- [Suffering Fixed Cost](topics/suffering_fixed_cost.md)
 - [Supplement Sales Distribution](topics/supplement_sales_distribution.md)
+- [Supplier Terms Negotiation](topics/supplier_terms_negotiation.md)
 - [Supply And Demand](topics/supply_and_demand.md)
+- [Supply Chain Constraints](topics/supply_chain_constraints.md)
+- [Supply Chain Risks](topics/supply_chain_risks.md)
+- [Supply Constraint](topics/supply_constraint.md)
+- [Supply Vs Demand Constraints](topics/supply_vs_demand_constraints.md)
+- [Survival Mode Motivation](topics/survival_mode_motivation.md)
+- [Survivorship Bias](topics/survivorship_bias.md)
 - [Sustaining The Business](topics/sustaining_the_business.md)
+- [Talent Acquisition And Management](topics/talent_acquisition_and_management.md)
+- [Talent Acquisition Economics](topics/talent_acquisition_economics.md)
+- [Talent Acquisition Funnel](topics/talent_acquisition_funnel.md)
+- [Talent Acquisition Standards](topics/talent_acquisition_standards.md)
+- [Talent Hiring Levels](topics/talent_hiring_levels.md)
+- [Talent Pattern Recognition](topics/talent_pattern_recognition.md)
+- [Talent Quality Multiplier](topics/talent_quality_multiplier.md)
+- [Talent Recruitment And Training](topics/talent_recruitment_and_training.md)
+- [Talent Retention](topics/talent_retention.md)
+- [Talent Retention Strategy](topics/talent_retention_strategy.md)
+- [Talent Screening And Onboarding](topics/talent_screening_and_onboarding.md)
+- [Talent Selection](topics/talent_selection.md)
+- [Target Audience Qualification](topics/target_audience_qualification.md)
+- [Target Avatar Selection](topics/target_avatar_selection.md)
+- [Task Automation Framework](topics/task_automation_framework.md)
+- [Task Delegation And Vas](topics/task_delegation_and_vas.md)
+- [Tattoo Business Model](topics/tattoo_business_model.md)
+- [Teaching Authority](topics/teaching_authority.md)
+- [Team Capacity Constraints](topics/team_capacity_constraints.md)
 - [Team Compensation Incentives](topics/team_compensation_incentives.md)
+- [Team Hiring Strategy](topics/team_hiring_strategy.md)
+- [Team Management Structure](topics/team_management_structure.md)
+- [Team Personal Life](topics/team_personal_life.md)
+- [Team Scaling](topics/team_scaling.md)
+- [Technical Co Founder Strategy](topics/technical_co_founder_strategy.md)
+- [Telehealth Positioning](topics/telehealth_positioning.md)
+- [Tenant Vs Buyer Specialization](topics/tenant_vs_buyer_specialization.md)
 - [Testimonial Ads](topics/testimonial_ads.md)
+- [Testimonials As Currency](topics/testimonials_as_currency.md)
+- [The 4 4 4 Time Split](topics/the_4_4_4_time_split.md)
+- [The 5 Problem](topics/the_5_problem.md)
+- [The Core Economic Driver](topics/the_core_economic_driver.md)
 - [The Core Four Methods](topics/the_core_four_methods.md)
+- [The Cost Of Distinctiveness](topics/the_cost_of_distinctiveness.md)
+- [The Danger Of Uncertainty Tolerance](topics/the_danger_of_uncertainty_tolerance.md)
+- [The Decision To Go Pro](topics/the_decision_to_go_pro.md)
+- [The Execution Gap Why Entrepreneurs Get Stuck](topics/the_execution_gap_why_entrepreneurs_get_stuck.md)
+- [The Exponential Payoff Paradox](topics/the_exponential_payoff_paradox.md)
+- [The First High Ticket Sale](topics/the_first_high_ticket_sale.md)
+- [The Hero S Journey Mindset](topics/the_hero_s_journey_mindset.md)
+- [The Lonely Chapter](topics/the_lonely_chapter.md)
+- [The Management Diamond](topics/the_management_diamond.md)
+- [The Money Belief Gap](topics/the_money_belief_gap.md)
+- [The Pricing Virtuous Cycle](topics/the_pricing_virtuous_cycle.md)
+- [The Q4 Tax Season Bottleneck](topics/the_q4_tax_season_bottleneck.md)
+- [The Risk Continuum For Creators](topics/the_risk_continuum_for_creators.md)
+- [The Swamp 1 3M Revenue Range](topics/the_swamp_1_3m_revenue_range.md)
+- [The Value Of Struggle](topics/the_value_of_struggle.md)
+- [The Who Game And Leadership Levels](topics/the_who_game_and_leadership_levels.md)
+- [Third Party Credibility Signals](topics/third_party_credibility_signals.md)
+- [Thoughts As Unreliable](topics/thoughts_as_unreliable.md)
+- [Three Content Buckets](topics/three_content_buckets.md)
+- [Three Levels Of Salesmanship](topics/three_levels_of_salesmanship.md)
+- [Thumbnail Headline Clarity](topics/thumbnail_headline_clarity.md)
+- [Tier Design](topics/tier_design.md)
+- [Tiered Offer Architecture](topics/tiered_offer_architecture.md)
+- [Tiktok Shop Opportunity](topics/tiktok_shop_opportunity.md)
+- [Time And Cash Flow Constraints](topics/time_and_cash_flow_constraints.md)
+- [Time And Resource Allocation](topics/time_and_resource_allocation.md)
+- [Time As Capital](topics/time_as_capital.md)
 - [Time Delay](topics/time_delay.md)
+- [Time Horizon And Vision](topics/time_horizon_and_vision.md)
+- [Time Leverage Tradeoffs](topics/time_leverage_tradeoffs.md)
+- [Time Management](topics/time_management.md)
+- [Time Optimization](topics/time_optimization.md)
+- [Time To Value](topics/time_to_value.md)
+- [Time Value Of Money In Wealth Building](topics/time_value_of_money_in_wealth_building.md)
+- [Time Vs Money Earning](topics/time_vs_money_earning.md)
+- [Toads To Kiss](topics/toads_to_kiss.md)
+- [Tolerance As A Mental Toughness Component](topics/tolerance_as_a_mental_toughness_component.md)
+- [Tolerance Emotional Threshold](topics/tolerance_emotional_threshold.md)
+- [Tone And Belief](topics/tone_and_belief.md)
+- [Top Down Business Strategy](topics/top_down_business_strategy.md)
+- [Top Down Market Positioning](topics/top_down_market_positioning.md)
+- [Track Record Verification](topics/track_record_verification.md)
+- [Trade Off Reality](topics/trade_off_reality.md)
+- [Trade Offs And Constraints](topics/trade_offs_and_constraints.md)
+- [Trade Offs And Goal Clarity](topics/trade_offs_and_goal_clarity.md)
+- [Trade Show Lead Generation](topics/trade_show_lead_generation.md)
 - [Trainer Motivation Culture](topics/trainer_motivation_culture.md)
+- [Training And Coaching](topics/training_and_coaching.md)
+- [Training Precision](topics/training_precision.md)
+- [Trait Development](topics/trait_development.md)
+- [Traits As Continuums](topics/traits_as_continuums.md)
+- [Trauma Definition](topics/trauma_definition.md)
+- [Trauma Permanent Behavior Change](topics/trauma_permanent_behavior_change.md)
+- [Trial To Activation Problem](topics/trial_to_activation_problem.md)
 - [Trial With Penalty](topics/trial_with_penalty.md)
 - [Trigger Dev Automations](topics/trigger_dev_automations.md)
+- [Trust Building](topics/trust_building.md)
+- [Trust Framework](topics/trust_framework.md)
+- [Trustworthiness Maintenance](topics/trustworthiness_maintenance.md)
+- [Turnkey Vs Done For You Positioning](topics/turnkey_vs_done_for_you_positioning.md)
+- [Two Business Problem](topics/two_business_problem.md)
 - [Two Step Sales](topics/two_step_sales.md)
+- [Ugc Content Loop](topics/ugc_content_loop.md)
+- [Uncertainty As Fuel](topics/uncertainty_as_fuel.md)
+- [Understanding Over Judgment](topics/understanding_over_judgment.md)
+- [Unit Economics](topics/unit_economics.md)
+- [Unit Economics And Roi](topics/unit_economics_and_roi.md)
+- [Unit Economics Optimization](topics/unit_economics_optimization.md)
+- [University Exclusivity Strategy](topics/university_exclusivity_strategy.md)
+- [Unreasonable Ambition](topics/unreasonable_ambition.md)
+- [Upsell Architecture](topics/upsell_architecture.md)
 - [Upsell Offers](topics/upsell_offers.md)
 - [Upselling And Referrals](topics/upselling_and_referrals.md)
+- [Upselling To High Ticket Customers](topics/upselling_to_high_ticket_customers.md)
+- [Upside Asymmetry](topics/upside_asymmetry.md)
+- [Upside In Uncertainty](topics/upside_in_uncertainty.md)
 - [Upwork Freelancing](topics/upwork_freelancing.md)
 - [Upwork Profile Optimization](topics/upwork_profile_optimization.md)
 - [Urgency](topics/urgency.md)
+- [Urgency Momentum](topics/urgency_momentum.md)
+- [Us Market Priority](topics/us_market_priority.md)
+- [Vague Terminology Problem](topics/vague_terminology_problem.md)
+- [Valuation Narrative](topics/valuation_narrative.md)
+- [Value Based Vs Cost Plus Pricing](topics/value_based_vs_cost_plus_pricing.md)
+- [Value Creation Frames](topics/value_creation_frames.md)
+- [Value Creation Through Pre Work](topics/value_creation_through_pre_work.md)
 - [Value Equation](topics/value_equation.md)
 - [Value Equation Framework](topics/value_equation_framework.md)
+- [Value Perception And Pricing Psychology](topics/value_perception_and_pricing_psychology.md)
+- [Value Proposition Design](topics/value_proposition_design.md)
+- [Value Proposition Repositioning](topics/value_proposition_repositioning.md)
+- [Value Stacking](topics/value_stacking.md)
+- [Value Vs Price Positioning](topics/value_vs_price_positioning.md)
+- [Venture Backed Scaling Illusion](topics/venture_backed_scaling_illusion.md)
+- [Venture Capital Strategy](topics/venture_capital_strategy.md)
+- [Vertical Integration](topics/vertical_integration.md)
+- [Vertical Integration Vs Partnerships](topics/vertical_integration_vs_partnerships.md)
+- [Victim Mindset Vs Agency](topics/victim_mindset_vs_agency.md)
+- [Video Sales Letter Framework](topics/video_sales_letter_framework.md)
+- [Virtual Lead Gen](topics/virtual_lead_gen.md)
+- [Visibility Of Work](topics/visibility_of_work.md)
+- [Vision Vs Plan Clarity](topics/vision_vs_plan_clarity.md)
+- [Volume Based Hiring](topics/volume_based_hiring.md)
 - [Volume Follow Up](topics/volume_follow_up.md)
+- [Volume Over Salary](topics/volume_over_salary.md)
+- [Volume Underestimation](topics/volume_underestimation.md)
+- [Volume Vs Margins Tradeoff](topics/volume_vs_margins_tradeoff.md)
+- [Vsl Pre Framing](topics/vsl_pre_framing.md)
+- [Vsl Strategy](topics/vsl_strategy.md)
 - [Waived Fee Offers](topics/waived_fee_offers.md)
+- [Warm Lead Underestimation Problem](topics/warm_lead_underestimation_problem.md)
 - [Warm Outreach Strategy](topics/warm_outreach_strategy.md)
+- [Warm Process Mistake](topics/warm_process_mistake.md)
+- [Warm Vs Cold Sales Process Mismatch](topics/warm_vs_cold_sales_process_mismatch.md)
+- [Warranties And Guarantees](topics/warranties_and_guarantees.md)
+- [Warren Buffett Pricing Power](topics/warren_buffett_pricing_power.md)
+- [Watermark Vs Fixed Investment Strategy](topics/watermark_vs_fixed_investment_strategy.md)
+- [Weak To Strong Brand Progression](topics/weak_to_strong_brand_progression.md)
+- [Wealth Building Timeline](topics/wealth_building_timeline.md)
+- [Wealth Compounding Vs Active Income](topics/wealth_compounding_vs_active_income.md)
+- [Wealth Distribution](topics/wealth_distribution.md)
+- [Wealth Distribution Economics](topics/wealth_distribution_economics.md)
+- [Wealth Tier Jumps](topics/wealth_tier_jumps.md)
+- [Wealth Tiers](topics/wealth_tiers.md)
+- [Webinar Lead Generation](topics/webinar_lead_generation.md)
+- [Webinar Strategy](topics/webinar_strategy.md)
 - [Website Deployment](topics/website_deployment.md)
 - [Wedding Cake Profit Model](topics/wedding_cake_profit_model.md)
+- [Whale Vs Minnow Economics](topics/whale_vs_minnow_economics.md)
+- [What Branding Is](topics/what_branding_is.md)
+- [Wholesale Integration](topics/wholesale_integration.md)
+- [Why Meaningful Goals Matter](topics/why_meaningful_goals_matter.md)
+- [Willingness To Pay The Price](topics/willingness_to_pay_the_price.md)
 - [Win Your Money Back](topics/win_your_money_back.md)
+- [Win Your Money Back Offer](topics/win_your_money_back_offer.md)
 - [Winning Hooks From Existing Content](topics/winning_hooks_from_existing_content.md)
+- [Word Of Mouth Marketing](topics/word_of_mouth_marketing.md)
+- [Work As Identity](topics/work_as_identity.md)
+- [Work Capacity And Adaptation](topics/work_capacity_and_adaptation.md)
+- [Work Ethic Substitution](topics/work_ethic_substitution.md)
+- [Work Multiplication](topics/work_multiplication.md)
+- [Work Multiplier Effect](topics/work_multiplier_effect.md)
+- [Work Shapes You](topics/work_shapes_you.md)
+- [Work Then Pay Model](topics/work_then_pay_model.md)
+- [Workflow Automation](topics/workflow_automation.md)
+- [Workflow Based Organization](topics/workflow_based_organization.md)
+- [Workload Tolerance](topics/workload_tolerance.md)
+- [Worst Case Survivability](topics/worst_case_survivability.md)
+- [Youtube Multi Format Strategy](topics/youtube_multi_format_strategy.md)
+- [Zero Capital Business Selection](topics/zero_capital_business_selection.md)
 
 ## Sources
 
+- **100m_ceo_explains_how_to_find_people_you_can_trust_k5-57282taI.txt** — 7 claims · 7 sections · topics: Trust Framework, Track Record Verification, Betrayal Consequences, Trustworthiness Maintenance, Relationship Context Building
+  - _Breaks down trust as a behavioral framework involving calculated risk-taking and vulnerability, explaining four types of trust and how to both gain and maintain it._
 - **100m_leads.txt** — 24 claims · 248 sections · topics: Engaged Leads Definition, Lead Magnets and Offers, Warm Outreach Strategy, Free Content Creation, Cold Outreach Execution, Paid Advertising Fundamentals, Value Equation Framework, The Core Four Methods, Audience Targeting, Content Unit Structure, Give-Ask Ratio Management, Call-Out Techniques, Landing Pages and CTAs, Client-Financed Acquisition, More, Better, New Scaling, Customer Referral Programs, Product-Market Goodwill, Employee Training and Leverage, Agency Partnerships, Affiliate Program Building, Launch Strategies, Lead Getter Integration, Advertising Metrics and ROI, Open-to-Goal Work Framework, Business Scaling Roadmap
   - _Comprehensive guide to generating millions of leads through the Core Four advertising methods (warm outreach, content, cold outreach, paid ads) and leveraging lead getters (customers, employees, agencies, affiliates) to build a scalable, self-sustaining customer acquisition machine._
 - **100m_leads_2_bonus_chapters.txt** — 12 claims · 26 sections · topics: Free Offers, Discount Offers, Premium Offers, Grand Slam Offers, Sales Process & Conversion, Offer Positioning, Friction & Qualification, Two-Step Sales
@@ -203,11 +1492,397 @@ _10 source(s) · 184 topic(s)_
   - _A systematic framework for creating high-converting ads at scale through an assembly-line process of hooks, creative meat, and CTAs, enabling businesses to move from ad saturation to exponential growth by producing hundreds of variations weekly._
 - **100m_playbook_lead_nurture.txt** — 12 claims · 43 sections · topics: Lead Nurture Definition, Four Pillars Framework, Availability & Scheduling, Speed to Contact, Personalization Tactics, Volume & Follow-Up, BAMFAM Method, Lead Scoring & Qualification
   - _Alex Hormozi's Lead Nurture playbook outlines four pillars (Availability, Speed, Personalization, Volume) to increase show rates for scheduled appointments, derived from analysis of 4,000+ daily appointments in his ALAN software._
+- **15_brutal_truths_i_know_at_36_that_i_wish_i_knew_at_20_XGm2ERU9qtA.txt** — 42 claims · 18 sections · topics: Suffering Fixed Cost, Goal Worth Suffering For, Mastering Rejection Shame, 20-Hour Competence, Learning Through Action, Skill Transposition, Long-Term Thinking, Downside Capped Upside Uncapped, Entrepreneurship Personal Development, Delayed Gratification, The Danger Of Uncertainty Tolerance, Skill Compounding, Decision Theory
+  - _A distillation of core business and life principles covering suffering as fixed cost, shamelessness, learning velocity, long-term vision, and the compound effect of commitment._
+- **15_leads_but_only_one_pays_you_HbaGDrFufmk.txt** — 6 claims · 6 sections · topics: Lead Qualification Frameworks, Funnel Friction Design, Avatar Clarity from Insurance Constraints, Application Page Scoring, Cold Lead Math, Conversion Metrics Tracking
+  - _Medical consulting business with $5M revenue needs to add friction to funnel by qualifying leads on specific criteria (insurance type, wound size) rather than trying to fix targeting after the fact._
+- **1_habit_that_fixes_90_of_problems_tfWtqcYI7Zk.txt** — 6 claims · 2 sections · topics: Sleep Schedule Leverage, Risk Prevention Outcomes, Health and Longevity Benefits, Implementation Mechanism
+  - _Going to bed on time is a high-leverage habit that prevents 10+ major life problems through cascading positive effects._
+- **250k_followers_and_zero_customers_aTP0fwDESOY.txt** — 9 claims · 5 sections · topics: Content Audience Misalignment, Content Reframing, Platform Algorithm Targeting, Bait-and-Switch Prevention, Client-Centric Framing, Creator Burnout from Wrong Audience
+  - _A life coach trainer with 250K Instagram followers and $3M revenue from certification programs has zero customer crossover. She's baited followers with relationship content (red flags, green flags) but attracts relationship-focused users, not life coach trainees. Reframe same content as client case studies instead—"I had a client with this problem"—to attract aspiring coaches._
+- **26_harsh_lessons_i_learned_in_2025_YONIUpk-kAs.txt** — 56 claims · 72 sections · topics: Fear and Risk-Taking, Mental Toughness, Record-Breaking Execution, Team & Personal Life, Independent Thinking and Agency, Business Partnerships and Legal, Compliance and Law, Life Stage Evolution, Decision-Making Frameworks, Business Leverage: More, Better, New, Gratification Timing, Marketing Clarity, Offers and Bonuses
+  - _Alex Hormozi shares 13 critical business and personal lessons from 2025, including his $250M+ company revenue, Guinness World Record book launch generating $106M in 3 days, and his mother's death. The video covers fear management, mental toughness, relentless execution, team leadership, legal compliance, business fundamentals, and life philosophy._
+- **300k_month_with_80_margins_on_instagram_organic_g2i-aBfWfvA.txt** — 10 claims · 5 sections · topics: Lead Generation Volume, Conversion Funnel, DM Setter Bottleneck, High-Margin Business Model, Lead Nurture, Staffing Constraints
+  - _Info-consulting business in Argentina running $300K/month revenue ($240K profit, 80% margins). Generating 20K+ leads/month via Instagram organic but only converting 80 clients (0.3%). Bottleneck is DM setters, not sales or qualification._
+- **30k_isn_t_luxury_it_s_cheap_Zk3xE-0jFZc.txt** — 8 claims · 8 sections · topics: Luxury Positioning & Pricing Power, Price Anchoring, Lead Qualification Funnel, VSL Pre-Framing, Offer Stacking & Upsells, Memory-Driven Value Framing
+  - _A luxury wedding entertainment business is repositioned to compete on price power, not volume, by raising pricing to $100K-$250K tiers and qualifying leads through a questionnaire rather than generic form._
+- **3m_med_spa_owner_wants_to_scale_to_20m_rqJM6mFhyes.txt** — 8 claims · 5 sections · topics: Bandwidth Constraint vs. Financial Constraint, Delegation of Clinical Role, Multiple Location Expansion, Service Line Prioritization, Business Owner Mindset Shift
+  - _A med-spa owner at $3M revenue with $700K+ net profit wants $20M through multiple locations but realizes the constraint is personal bandwidth, not money; solution is hiring a physician to free up time for business scaling._
+- **500k_power_washing_business_stuck_on_referrals_gRQLYWfwRIA.txt** — 9 claims · 5 sections · topics: Acquisition Channels, Attribution Tracking, Door-to-Door vs Ads, Scaling Existing Channels, Margins and Metrics
+  - _Power washing business ($500K revenue, $250K profit on residential) struggling with referral-only growth. Owner wants to add B2B recurring cleaning but lacks data on ad channel effectiveness._
+- **a_lifetime_of_personal_development_in_18_minutes_PsxOnxIU274.txt** — 17 claims · 11 sections · topics: Thoughts as Unreliable, Feelings vs Actions, Situational Ethics, Ignorance as Evil, Environmental Design, Identity Through Actions, Reference Groups, Behavior Prediction, Consequence Mapping, Gap Between Stimulus and Response, Authenticity in Communication, Content Creation from Truth
+  - _Personal development fundamentals: thoughts aren't inherently true, feelings don't mandate action, events have no inherent good/bad nature, ignorance is the primary enemy, changing surroundings changes behavior, and actions define identity more than past._
+- **advice_to_a_17_year_old_starting_a_business_Hw1W8G6idMY.txt** — 4 claims · 1 sections · topics: PPC Lead Generation, Sales Speed, Customer Acquisition Cost, Continuity Revenue Model
+  - _Practical advice for young entrepreneurs starting a pool construction business, focusing on lead generation, sales velocity, and customer retention._
+- **affiliate_offer_10x_the_kickback_to_boost_referrals_dX-eI11-kSw.txt** — 9 claims · 8 sections · topics: Affiliate Commission Structure, Activation Friction Removal, Urgency & Momentum, Ongoing Revenue Share vs Upfront Spiff, Social Proof & Testimonial Acquisition, Content-Driven Ad Funnel
+  - _A $6M e-commerce accounting/CFO SaaS business ($55-60% gross margins, ~6-fig LTV, near-zero churn) increases affiliate activation by boosting upfront commission from $2K to $6-10K per deal, adding 30-day urgency, providing white-labeled materials, and preparing to launch ads + organic content feed to cold-acquire B2B agencies as affiliates._
+- **are_you_even_trying__deYfX6flgo.txt** — 6 claims · 4 sections · topics: Volume Underestimation, Action Per Unit Time, Content Production Scale, Compound Work, Persistence Over Talent
+  - _Argues that people dramatically underestimate the volume required for success. Most don't fail due to inability but because they quit before reaching the scale that works._
+- **booking_100_calls_a_month_but_closing_half_Tk0e0z8h64Y.txt** — 8 claims · 5 sections · topics: Warm vs. Cold Sales Process Mismatch, Sales Motion Architecture, Cold Lead Conversion Framework, Service-to-Continuity Model, Offer Bifurcation Strategy
+  - _A video testimonial agency at $6M revenue booking 100 cold outbound calls but closing only 6% learns the core issue: warm sales process applied to cold leads; fix with VSL, pre-frame, and sales training to improve close rates._
+- **brazil_s_accounting_empire_12m_revenue_1_decision_left_hbRuTx98gM0.txt** — 7 claims · 4 sections · topics: Software Economics, Technical Co-Founder Strategy, Education Business Model, SaaS Valuation Multiples, Market Distribution, Alternative Partnership Strategy
+  - _Interview with Brazilian accounting education founder running $12M revenue with 100K+ students. Discusses whether to build accounting software or partner with existing software to increase valuation for exit._
+- **build_a_mind_so_strong_it_scares_people_SE9_1PYsaP0.txt** — 19 claims · 16 sections · topics: Tolerance & Emotional Threshold, Fortitude & Behavior Control, Resilience & Recovery Time, Adaptability & Growth From Adversity, Trauma & Permanent Behavior Change, Separation of Feeling and Action, Daily Practice & Skill Building, Identity Reinforcement Through Behavior, Service & Character as Life Values, Biological Factors in Mental Resilience
+  - _Defines mental toughness as four measurable components—tolerance, fortitude, resilience, and adaptability—and provides frameworks for developing each skill to improve life outcomes and behavior consistency under adversity._
+- **building_a_12_000_000_business_for_a_stranger_in_25_minutes_MH-IMJxbUY4.txt** — 25 claims · 18 sections · topics: Demand vs Supply Constraint, UGC Content Loop, Creative Optimization, Kaleidoscope Creative Variations, Lead Scoring, Sales Dialer Efficiency, Damaging Admissions Framework, Product Avatar Diversity, Conversion Rate Optimization, Offer Structure, Distribution Channels, Team Scaling
+  - _A business consulting session showing how to scale a $6.4M travel business from demand-constrained to growth-unlocked through better creative, UGC loops, improved sales process, and lead scoring._
+- **building_a_1_000_000_business_for_a_stranger_in_26_minutes_HGZOxBfnF-E.txt** — 14 claims · 17 sections · topics: Attribution & Data Problems, Customer Segmentation & Market Focus, Custom Order Strategy & Positioning, Sales Process Design & Closing Mechanics, Video Sales Letter Framework, Lead Qualification & BANT Method, Email Nurture & Long-Term Retention, Pricing Psychology & Anchoring
+  - _Live business scaling session with Luis from Optimum Works (railing company at $2.5M revenue); diagnoses attribution problems, reorients strategy toward custom orders with sales process, and implements long-term email nurture to achieve 44% revenue growth ($3.6M) and 40% profit growth in one year._
+- **building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt** — 49 claims · 27 sections · topics: Business Stage Diagnosis, Pricing Strategy, Debt Management, Landing Page Optimization, Google Ads Optimization, Facebook Ads Optimization, Funnel Conversion Rate Optimization, Email Reactivation Campaigns, Affiliate Partnership Model, Ad Spend Scaling, Seasonal Marketing Angles, Cross-Platform Retargeting, Branded Search Term Defense, Implementation Timeline and Priority
+  - _Alex Hormozi consults with Corey, an HVAC cleaning business owner doing $1.25M in revenue with $60k debt, and implements strategic improvements across pricing, funnel optimization, ads, affiliates, and email reactivation to nearly double the business to $2.3-2.5M within a year._
+- **built_a_1_6m_practice_now_it_s_my_biggest_problem_G3NUEoTJ0Ec.txt** — 8 claims · 6 sections · topics: Founder Dependency, Client Transition Risk, Sales Motion Building, Warm Process Mistake, Soft Handoff, Telehealth Positioning
+  - _Functional medicine practitioner at $1.6M revenue targeting $16M struggles with transitioning clients to new practitioner and must build reliable paid acquisition before handing off customers to avoid catastrophic margin collapse._
+- **buying_the_400k_machine_that_10x_s_my_business_WAkaq4BLSiw.txt** — 8 claims · 5 sections · topics: Supplier Terms Negotiation, Supply Chain Constraints, Capital Equipment Investment, Vertical Integration, Cash Flow Prioritization, Proprietary Technology
+  - _A beef protein chip company at $1M revenue wants to scale to $1M/month. Manufacturer can produce 20K units/month ($280K revenue) but needs a $400K proprietary machine. Solution: negotiate better payment terms, use cash flow and pre-orders to buy the machine, then vertically integrate to own manufacturing defensibility._
+- **doing_10_tasks_inside_a_3m_brand_YLLes93QigQ.txt** — 25 claims · 9 sections · topics: Paid Media Arbitrage Scaling Limits, Task Delegation and VAs, E-commerce Scaling Bottlenecks, Brand Building Strategy, Product Defensibility, Direct Response Doom Loop, Portfolio vs Single Brand, SKU Optimization, CAC and Margin Dynamics, Affiliate Model, Supply Chain Risks
+  - _Discussion on scaling a $3M e-commerce paid-media business from 4 SKUs to $15M. Core issue: founder drowning in miscellaneous tasks; real bottleneck is building a defensible brand, not just optimizing media spend._
+- **don_t_worry_about_what_you_re_earning_worry_about_what_you_r_dW27orkcmG4.txt** — 6 claims · 2 sections · topics: Volume Over Salary, Feedback Loop Optimization, Sales Position Types, Long-Term Learning Strategy
+  - _Sales career advice emphasizing learning velocity over immediate income, prioritizing high-volume feedback loops for rapid skill development._
+- **empty_motels_are_a_14m_goldmine_here_s_the_catch_zk5jD2uko_k.txt** — 8 claims · 6 sections · topics: Deal Flow Problem, Gatekeeper Strategy, Path Optimization, Analysis Paralysis, Blue Ocean Strategy, Content Marketing
+  - _Motel-to-apartment converter at $14M targeting $30M; bottleneck is deal flow (pipeline); considering thought leadership to become gatekeepers' first call; learning: don't get paralyzed by perfect path choice—commit to any path for 18 months and you'll see results._
+- **fence_company_stuck_at_20m_here_s_why_bHOR3aMRs1U.txt** — 12 claims · 7 sections · topics: Talent Acquisition Funnel, Sales Hiring and Scaling, Leadership and Founder Capacity, Sales Academy Model, Cost of Talent vs. ROI
+  - _Fence company at $20M revenue needs to build a talent acquisition funnel parallel to lead generation to scale to $50M; founder talent determines growth ceiling._
+- **fixing_a_sales_agency_with_a_40_cancellation_rate_2PfbKVGNgPM.txt** — 5 claims · 2 sections · topics: Expectation Management, Sales and Fulfillment Misalignment, Customer Retention Through Transparency, Follow-the-Leader Model
+  - _A sales agency selling electricity plans faces a 40% cancellation rate because fulfillment takes 120 days; the fix is managing customer expectations upfront by committing to timeline and positioning it as a benefit._
+- **focus_is_a_daily_fight_not_a_one_time_win_-aX5ccYfVHU.txt** — 12 claims · 6 sections · topics: Focus as Daily Practice, Opportunity Cost, Saying No, Skill Accumulation, Difficulty Curve, Perseverance vs Quitting, Knowledge Types
+  - _Focus is a daily practice, not a one-time decision; as you gain skills and wealth, distractions multiply; regret comes from quitting before breakthrough; long-term success requires learning declarative (knowing about) vs procedural (knowing how) knowledge._
+- **free_car_wash_made_more_than_paid_ones_zJc777yAE-w.txt** — 7 claims · 8 sections · topics: Pick-Your-Price Offer Mechanics, Goodwill-Based Upsells, Bonus Tier Structure, Free Attraction with Paid Upsell, Reciprocity Psychology, Low-Trust Environment Conversion
+  - _A free car wash offer during COVID became a model for "pick your price" upsells: market the offer as free, then at checkout let customers choose donation level with bonuses at $30, $67, $99+ tiers; gyms and weight-loss coaches adapted it to reach $99 average ticket from low-barrier offers._
 - **gym_launch_secrets.txt** — 25 claims · 292 sections · topics: Client-Financed Acquisition, Irresistible Offers, Lead Generation & Marketing, Sales Process & Closing, Price Optimization, Membership Structuring, Billing Cycles, Capacity Maximization, Session Duration & Structure, Exercise Selection & Programming, Overhead Management, Wedding Cake Profit Model, Large-Group Training Revenue, Semi-Private (1-on-4) Training, Supplement Sales & Distribution, Internal Plays & Upsells, Retention & Attrition Reduction, Reach-Out Communication Systems, Attendance Tracking & Follow-up, Team Compensation & Incentives, Trainer Motivation & Culture, Organizational Structure & Hiring, Communication Cycles & Meetings, Member Lifecycle Management, Exit Interviews & Objection Handling
   - _Alex Hormozi's guide to transforming gym profitability through client-financed acquisition, profit levers, and retention systems that have grown 1,500+ gyms and generated $1 billion+ in revenue._
+- **he_built_a_5m_paint_biz_now_he_s_stuck_FzYRdOT_rXQ.txt** — 7 claims · 5 sections · topics: Recurring Revenue, Model Pivot, Cash Flow Management, Accounts Receivable Financing, Business Model Selection
+  - _How to solve the cash conversion cycle problem when scaling to higher-margin work; use AR financing instead of changing profitable models._
+- **he_buys_businesses_but_can_t_make_them_grow_6WPNzaWuAic.txt** — 7 claims · 6 sections · topics: Acquisition vs Organic Growth, Founder Selection Bias, Portfolio Company Scaling Challenges, Deal Flow Generation, Founder Replacement Economics, Ambition-Based Founder Screening, Private Equity Growth Problems
+  - _Portfolio of 4 software businesses targeting $90M in 5 years via acquisitions and organic growth, but founder is bottleneck because acquired businesses are small and founder-dependent._
+- **he_can_double_his_business_tomorrow_and_won_t_TaeBazpcRk8.txt** — 8 claims · 5 sections · topics: Mental Spending Barrier, Churn as Growth Ceiling, Customer Lifetime Value Leverage, Ad Spend vs. Retention ROI, Conversion Rate Assumptions
+  - _An HRT medical practice at $3M revenue has capacity to 2x but is stalled at $1K/day ad spend due to mental barrier; the real constraint is 50% annual churn—fixing retention (not ads) will compound growth explosively._
+- **he_makes_250k_cleaning_driveways_GUaphMvD9Tc.txt** — 7 claims · 5 sections · topics: Acquisition Channels, Attribution Tracking, Door-to-Door Scaling, Margins, Ad Channel Effectiveness
+  - _Power washing and solar panel cleaning business ($500K revenue, $250K profit). Same interview as 500k business but duplicate content - teaches acquisition channels and attribution importance._
+- **he_makes_4m_tax_free_but_can_t_scale_UmBWqjwfgtA.txt** — 6 claims · 7 sections · topics: Founder Sales Dependency, Hiring and Training Systematization, Identity Shift to Trainer, Agent Recruitment, Behavior Codification
+  - _Tax services business making $6M revenue ($4M tax-free profit) in UAE is founder-dependent—needs to systematize sales and hiring to scale from 8 reps to 80, shifting identity from sales god to sales training god._
+- **he_s_at_1_2m_solo_and_walking_away_from_it_gMXG_HoYnRY.txt** — 8 claims · 5 sections · topics: New Market Entry Strategy, Geographic Expansion, Tenant vs. Buyer Specialization, Cold Outreach for Executives
+  - _A commercial real estate broker at $1.2M solo making $700K+ profit is moving to Phoenix and needs a strategy to break into a new C-suite market from zero network using ads, outreach, and a niched service angle._
+- **he_sold_125m_in_real_estate_after_i_fired_him_HlK_MeYWKEs.txt** — 12 claims · 10 sections · topics: Identifying Your True Strength, Niche Down to Scale Up, The Core Economic Driver, Eliminating Secondary Business Lines, Compounding Growth Through One Channel, Lead Source Concentration Risk, The Q4 Tax Season Bottleneck, High-Ticket Sales Pricing, Turnkey Vs. Done-For-You Positioning, Expansion Without Dilution
+  - _Shows how identifying a niche (tax-advantaged real estate for high-income earners), focusing on the core value driver (property acquisition), and expanding lead sources (from 4 to 40 CPAs) unlocks 10x growth._
+- **he_spends_60k_to_hire_one_salesperson_k0qvQaSD-1M.txt** — 8 claims · 5 sections · topics: Sales Director Hiring, Talent Acquisition Economics, Sales Process Design, Team Management Structure, Script Optimization
+  - _A $5M client acquisition agency struggles with sales director talent constraints. The bottleneck isn't the sales process but leadership training—fixing scripting and management structure can eliminate the need for $60K unicorn hires._
+- **he_spends_6_700_to_make_22_000_is_that_good_RRFXliltxFM.txt** — 8 claims · 6 sections · topics: CAC LTV Ratio, Attribution Modeling, Qualitative Attribution, Scientific Attribution, First Touch Analysis, Best Person Duplication, Branding Touchpoints
+  - _Property buyers advisory service at $22M revenue with $6,700 CAC and $22,500 LTV seeks to reduce CAC and duplicate top sales talent to reach $54M, facing attribution confusion across multiple media channels._
+- **he_wants_3m_but_he_s_the_bottleneck_EbcqyxLLWN4.txt** — 8 claims · 6 sections · topics: Avatar Segmentation, Customer Activation, Churn Problem, Lead Gen to Coaching Transition, Sales Training Model, Value Stacking, Affiliate Model
+  - _Financial advisors sales coaching/lead gen company at $6.6M wanting $20M+; main issue is churn from inability to get advisors activated and closing deals; solution is better avatar targeting and fixing activation ops._
+- **helping_4_educational_business_owners_build_a_1m_business_in_BYpTRiRqS1Y.txt** — 19 claims · 17 sections · topics: Local Market Domination Before Expansion, Pricing Strategy & Value Stacking, Paid Ads vs. Organic Growth Foundation, Churn Reduction in Subscription Models, Customer Avatar Refinement & Selection, Content Creation & Brand Building, Sales Motion Changes With Cold Traffic, Group Role-Play Sales Training, Event-Based Revenue Model Optimization
+  - _Four-case study Q&A session with educational and coaching business owners ($100k-$6.6M revenue) on scaling to $1M+; covers local market domination, pricing strategy, paid ads, sales motion changes, churn reduction, customer avatar refinement, and the importance of content and organic growth foundation._
+- **helping_6_business_owners_scale_in_33_minutes_0EqJD2o-Mnk.txt** — 26 claims · 23 sections · topics: Trade-offs and Goal Clarity, Talent Acquisition and Management, Pricing and Premium Offers, Lead Generation and Sales Strategy, Delegation and Key Person Risk, Multi-Stage Business Scaling Roadmap, Service vs. Passive Income Management, Sales Team Structure and Compensation, Recruiting High-Leverage Talent, Market Positioning and Differentiation, Business Model Innovation, Operational Efficiency and Redundancy
+  - _Alex Ramosi shares tactical advice for scaling brick-and-mortar and service businesses, addressing constraints of founders at $1M-$11M revenue including hiring, pricing, delegation, and focus._
+- **helping_a_15m_law_firm_solve_its_1_bottleneck_w435ckDcfy4.txt** — 10 claims · 5 sections · topics: Legal Talent Acquisition, Recruiting Economics, Volume-Based Hiring, Talent Quality Multiplier, Law Firm Capacity Constraints, Recruiting Leverage
+  - _A $15M law firm with endless demand wants to scale but has talent constraints. They hire 2 attorneys/quarter; need 20 more to meet demand. At current speed, 2.5 years behind. Solution: 3x recruiting resources, hire 10+ recruiters, run 10x outreach volume, and treat hiring like a volume game not a quality filter._
+- **helping_a_15m_legal_services_business_hit_20m_Q_IrTjdFNMc.txt** — 6 claims · 7 sections · topics: Market Dominance Strategy, Cost of Change Framework, State Expansion Dynamics, Monopolistic Levers, Market Share vs New Markets
+  - _Addresses whether to expand to new states or dominate existing market—argues that 20% guaranteed cost of change only justifies 50%+ upside, and dominance within one market is higher leverage than geographic expansion._
+- **helping_a_1_5m_nail_salon_owner_stop_doing_too_much_I1NYJ8dm4Jk.txt** — 12 claims · 7 sections · topics: Vision vs. Plan Clarity, Business Model Refinement, Franchising Strategy, Margin Optimization, Organizational Scope
+  - _Premium nail salon owner at $1.5M revenue trying to build an empire across multiple business layers, but must focus on perfecting the core model and franchising for true scale._
+- **helping_a_250k_ai_ad_agency_land_bigger_clients_PEnDTYaSVw0.txt** — 8 claims · 6 sections · topics: AI as Cost Advantage Not Feature, Enterprise vs SMB Pricing Strategy, Creative Volume Demand, Ad Agency Business Model, Media Buying Integration, Customer Qualification Requirements, Efficiency-Based Value Prop
+  - _AI ad creation agency with $250K revenue and $32K/month burn needs to shift from enterprise 30-sec commercial pitch ($50K) to high-volume creative production for mid-market agencies spending $100K+/month on ads._
+- **helping_a_3m_balloon_arch_business_fix_their_offer_lJ6jkoD5ApA.txt** — 15 claims · 8 sections · topics: Avatar Clarity, Offer Productization, Pricing Strategy, Value-Based vs Cost-Plus Pricing, Corporate Client Leverage, Positioning for Premium Markets, Margin Optimization, Bundle Strategy, Subcontractor Scalability, Sales Messaging, Revenue Channels, Scaling Roadmap
+  - _A consulting session fixing a $3M balloon arch business's pricing and positioning strategy. The founder has 18-19% margins, 34% recurring revenue, and four core problems: weak avatar clarity, vague offer, weak positioning, and poor messaging._
+- **helping_a_4m_tattoo_business_scale_to_35m_cvn8nPtLtfc.txt** — 10 claims · 4 sections · topics: Multi-Business Focus, Tattoo Business Model, Education vs Studio, Exit Difficulty, Gym Launch Comparison
+  - _Discusses scaling a $4M tattoo studio business to $35M. Owner struggles with focus across tattoo services, artist education, and coaching. Explores conflicting exit paths and the pain of choosing between businesses._
+- **helping_a_55k_month_funding_broker_escape_the_roller_coaster_rSoL1TZ4G28.txt** — 8 claims · 5 sections · topics: Revenue Roller Coaster Problem, Delegation Priority (Delivery First), Solo Business Scaling, Marketing vs. Delivery Time Split, Deal Flow Systemization
+  - _A solo loan/funding broker hitting $55K profit months on a volatile revenue roller coaster learns to hire first for delivery (not sales) to free time for marketing and stabilize the business._
+- **helping_a_5_5m_auto_hail_repair_company_scale_to_15m_k8-xbMrcUtA.txt** — 8 claims · 8 sections · topics: Executive Titling & Levels, Operator Recruitment Strategy, Profit Share Pool Structure, Phantom Equity & Exit Incentives, Shop-Level Decentralization, On-Target Earnings Reverse Engineering
+  - _A $5.5M auto hail repair company aims for $15M next year; the founder designs a VP/ops role with profit-share, phantom equity, and decentralized shop-level incentives to scale without losing control._
+- **helping_a_concrete_business_owner_fix_his_margins_f0AY76fE9GI.txt** — 12 claims · 10 sections · topics: Two-Business Problem, Margin Improvement, Pricing Strategy, Sales Motion Fundamentals, Close Rate Optimization, In-Person Sales Closing, Cost-Plus vs Value-Based Pricing, Business Swamp Constraints, Price Anchoring, Price Raise Implementation
+  - _Live analysis of a concrete contractor's business bottlenecks reveals that fixing the sales motion and pricing strategy can triple revenue and create 5.7M+ in profit, enabling exit or operator hiring._
+- **helping_a_wildfire_sprinkler_company_scale_to_200m_DiOVkIanOkQ.txt** — 8 claims · 4 sections · topics: Avatar Clarity, Sales Motion, Deal Structure Analysis, Lead Generation Strategy
+  - _A wildfire sprinkler company at $2.2M revenue is positioned to scale to $200M by focusing on a specific avatar and leveraging an insurance company distribution deal._
+- **helping_e_commerce_business_owners_scale_8C_6qojTA78.txt** — 41 claims · 26 sections · topics: Scaling Media Buying and Keywords, Bridge Pages and Customer Awareness Levels, Service Business Reinvestment Strategy, Direct Response vs Brand Building, Avoiding the Direct Response Doom Loop, Operational Scaling Roadmap, Founder Dependencies and Task Delegation, Contractor vs Full-Time Hiring, Multi-Product vs Single-Product Strategy, SaaS Misconceptions and Validation, Organic Audience Monetization Mistakes, Operational Leverage and Logistics, Sales Training and Behavioral Language, Hiring and Recruiting Militancy
+  - _Alex Hormozi shares tactical strategies for scaling e-commerce businesses from multiple founders and entrepreneurs, covering paid media optimization, brand building, organizational scaling roadmaps, and avoiding common pitfalls like the direct response doom loop._
+- **hormozi_reveals_the_marketing_lie_costing_you_leads_R5Ay82ZvwWM.txt** — 7 claims · 6 sections · topics: Marketing Filtration vs Education, Avatar Targeting Strategy, Lead Quality Over Quantity, Content-to-Avatar Congruence, CAC vs LTV Math, Friction in Funnel Design, Low-Ticket Products as Relationship Shifters
+  - _Marketing acts as a filtration system to find ideal buyers rather than create them. Target advanced customers through messaging and content that matches their problems, not beginners._
+- **how_a_22_year_old_built_a_2_4m_pizza_shop_pobfyHIItag.txt** — 8 claims · 6 sections · topics: Nail It Then Scale It Framework, General Manager Profit Share Structure, Founder Removal Test, Location Economics Sequencing, Data Tracking During Transition, Ownership Equity Incentive Structure, Overexpansion Risk
+  - _22-year-old pizza and ice cream shop at $2.4M revenue (30% margins) scaling from 1 location to 2 needs to nail current location first with new GM before expanding, ensuring business runs without founder before opening next store._
+- **how_acquisition_com_makes_money_hHkdbr6_JJs.txt** — 10 claims · 11 sections · topics: Monetization Funnel, Attention to Conversion, Advisory Practice Tiers, Revenue Redeployment, Real Estate Arm, Venture Capital Strategy, ACQ Network, Brand Credibility, Ideal Customer Avatar
+  - _How acquisition.com converts raw attention into revenue through multiple monetization channels (books, courses, advisory services, real estate, ventures) while building a scalable ecosystem for business owners._
+- **how_do_i_make_my_crm_sexy_on_the_front_end_IKRBA9ALc68.txt** — 7 claims · 6 sections · topics: Ad Spend Testing, LTV CAC Economics, Channel Strategy, CRM Offer Positioning, Partner Channel Model, Funnel Optimization
+  - _An online fitness coaching CRM platform owner discusses improving customer acquisition through better advertising, offer positioning, and messaging to move from $2M to $12M+ revenue._
+- **how_i_diffused_a_decade_long_family_fight_l6_t_e3FIxs.txt** — 6 claims · 3 sections · topics: Understanding Over Judgment, Reinforcement and Behavior, Regrets as Inevitable, Opportunity Cost Framework, Choosing Your Regrets, Compassion Through Context
+  - _Explains how understanding someone's past and reinforcement history dissolves conflict, and introduces Hitchens' concept of choosing your regrets due to unavoidable opportunity costs._
+- **how_i_made_my_first_high_ticket_sale_B7P5WCVfnPE.txt** — 17 claims · 11 sections · topics: The Money Belief Gap, Rich Mindset vs. Poor Mindset Pricing, The First High-Ticket Sale, Close Rate as Pricing Signal, Emotional Anchoring Before Price Drop, Consumer vs. Business Pricing Tiers, Selling by Value Ratio, Target Audience Qualification, The Pricing Virtuous Cycle, Price as Market Signal
+  - _Breaking through limiting money beliefs by selling high-ticket services; rich people buy on value-to-cost ratio (not absolute price), and close rates reveal pricing power gaps._
+- **how_learning_to_try_one_thing_beats_99_of_people_unkbSx2WZH0.txt** — 4 claims · 2 sections · topics: Deliberate Practice and Commitment, Generalization Across Domains, Competitive Advantage Through Persistence, Time and Resource Allocation
+  - _Learning to commit fully to one thing for an extended period builds a generalizable skill that beats most competitors because few people actually persist in deliberate practice._
+- **how_long_can_you_go_through_hardship_before_you_crack_B6yMJkT7CJo.txt** — 4 claims · 2 sections · topics: Tolerance as a Mental Toughness Component, Maintaining Behavior Under Stress, Measuring Tolerance, Behavioral Consistency
+  - _Tolerance is the first component of mental toughness—it measures how long you can endure hardship before your behavior changes, not about ignoring pain but maintaining intended behavior under stress._
+- **how_making_more_money_affects_your_life_W_34Zwki0W8.txt** — 9 claims · 4 sections · topics: Wealth Tier Jumps, Quality of Life Variables, Spending Skill Gap, Saving vs Spending, Diminishing Returns, Income Plateaus
+  - _Wealth tiers have distinct quality-of-life impacts; jumps are smaller early ($6k-$50k), then larger ($50k-$500k to $1M+), but spending is a skill most people never master despite higher income._
+- **how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt** — 19 claims · 21 sections · topics: Inflation and Future Dollar Value, Income Growth as Primary Lever, Spending Discipline and Opportunity Cost, Skill Investment ROI, Time Value of Money in Wealth Building, Watermark vs. Fixed Investment Strategy, Learning Budget and Experimentation, Alternative Education Path, Skill Acquisition as Bridge Building
+  - _Alex Hormozi reframes personal finance by accounting for inflation and time value of money, showing that traditional $100/month savings targets fall short, and demonstrating how increasing income through skill acquisition creates exponential compounding advantages._
+- **how_to_actually_become_successful_stop_copying_me_tDr3Ocu0VxE.txt** — 6 claims · 2 sections · topics: Authenticity vs. Imitation, Providing Value, Proof and Credibility, Starting for Free
+  - _Success comes from being the most authentic version of yourself and providing value in your domain; proof comes from either past achievements or the effort itself (e.g., 2,000 videos on TikTok)._
+- **how_to_build_unshakeable_fortitude_in_your_business_X4z_5m5_hig.txt** — 6 claims · 2 sections · topics: Fortitude Definition, Behavioral Change Scale, High Fortitude Examples, Low Fortitude Examples
+  - _Technical definitions and examples of fortitude as the intensity of behavioral change after reaching a breaking point, with methods to build it._
+- **how_to_catch_up_in_life_using_logic_EonibwnAEME.txt** — 20 claims · 9 sections · topics: Capacity Building, Opportunity Recognition, Money Savings, Skill Stacking, Time Management, Audience Building, Network Expansion, Preparation and Readiness, Financial Discipline, Learning Strategy, Luck Surface Area, Early Career Foundation
+  - _Six principles for building capacity before knowing what to do, designed to help ambitious people go from zero to $100k by preparing to recognize and capitalize on opportunities when they arise._
+- **how_to_change_your_life_MZPVPCIeUpg.txt** — 32 claims · 13 sections · topics: Trade-Offs and Constraints, Conscious vs Unconscious Trades, Risk Perception and Overestimation, Upside Asymmetry, Worst-Case Survivability, Genetic Baseline and Effort, Hedonic Adaptation, Decision Limbo and Purgatory, Framing Life as Happening For You, Criticism from Mediocrity, Fear as Illusion, Small Bets and Iteration
+  - _Life change requires conscious trade-offs rather than wanting everything; people stay stuck because they fear losses more than value gains, but worst-case scenarios are survivable and upside is unlimited._
+- **how_to_decommoditize_a_service_business_m8m7jbuIP4U.txt** — 7 claims · 7 sections · topics: RFP Frame Strategy, Case Study Close, Value vs Price Positioning, Holistic Sales Approach, Proof Methodology
+  - _Shows how service businesses can escape commodity status by shifting from price-based selling to value-based selling using case studies and RFP reframing._
+- **how_to_find_motivated_sellers_in_a_frozen_real_estate_market_960cDVNgTC8.txt** — 6 claims · 7 sections · topics: Motivated Buyer Strategy, Community Building Asset, Income Diversification, Seller Psychology
+  - _Addresses how to find motivated sellers when market conditions make sellers reluctant to list, and how building community assets can create long-term business value in real estate._
+- **how_to_get_good_at_sales_n_6TZGmck3k.txt** — 8 claims · 6 sections · topics: Sales Conviction, Trust Building, Sales Framework, Objection Handling, Tone And Belief, Sales Process Structure, No-Based Close
+  - _Sales training framework emphasizing conviction, trust-building through expertise, and consultative questioning over pressure tactics._
+- **how_to_get_more_patients_for_your_dental_clinic_wTXCZLVQ0x8.txt** — 5 claims · 2 sections · topics: Content Strategy for Healthcare, Before/After Operationalization, Paid Content Amplification
+  - _Dental clinics competing on price can use content strategy (before/afters) as the primary acquisition lever, operationalized by collecting photos from every patient, then run paid ads to top performers._
+- **how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt** — 20 claims · 13 sections · topics: Churn as a Leaky Bucket, Retention Benchmarks, Cohort Analysis & Time-Based Churn, Customer Feedback Loops, Engagement Optimization, Pricing Tiers, Overwhelm Reduction, Community Design, Onboarding & Activation, Owner Presence & Culture, Communication Cadence, Annual Plans
+  - _Strategies to reduce churn and improve customer retention in recurring revenue businesses by tracking metrics, removing friction, and building community._
+- **how_to_get_your_first_clients_with_zero_proof_QgvX_5km_Yo.txt** — 6 claims · 3 sections · topics: Proof Problem, Service as Differentiation, Free Work Strategy, Testimonials as Currency, Aligned Incentives, Toads to Kiss
+  - _To get first clients with no track record, lead with free service to build proof and testimonials, positioning yourself as owner-operator with aligned incentives._
+- **how_to_grow_any_business_faster_masterclass_qsXxckCbci0.txt** — 53 claims · 53 sections · topics: E-Commerce Business Model, Service Business Model, Education and Info-Media Business, SaaS and Software Business, Cash Flow Management, Brand Building and Competitive Moats, Talent Recruitment and Training, Revenue Retention and Stickiness, Scaling Constraints and Growth Challenges, Distribution and Marketing Strategy, Product-Market Fit, Pricing and Gross Margins, Vertical Integration vs. Partnerships, Customer Avatar and Systematization
+  - _A comprehensive masterclass on the four fundamental business shapes that exist: e-commerce, service, education/info-media, and SaaS. The speaker explains the growth curve, scaling mechanics, and competitive advantages specific to each model, drawing on experience scaling $250M+ in companies._
+- **how_to_hire_the_right_leadership_team_as_you_scale_n7CYRXrdebU.txt** — 14 claims · 7 sections · topics: Leadership Hiring Strategy, Recruiting Leverage, CEO Involvement in Hiring, Networking and Headhunters, Talent Pattern Recognition
+  - _Skincare company at $4.5M monthly revenue targeting $25M needs to build top-layer leadership; strategy differs by role and network, with CEO involvement in key hiring._
+- **how_to_make_progress_faster_than_everyone_yb2cLMMuMdQ.txt** — 8 claims · 6 sections · topics: Shame vs Guilt vs Cringe, Documentation of Struggle, Caring as Competitive Advantage, Cringe as Status Play, Iterative Improvement Process, Comparing Early vs Late Chapters, Building in Public
+  - _Progress requires caring, documenting the struggle, and being willing to be cringe during the journey - comparing your Chapter 1 to others' Chapter 25 is unfair and why documentation of the come-up matters._
+- **how_to_outlearn_everyone_q9qBqnhdWKw.txt** — 16 claims · 18 sections · topics: Learning Definition and Intelligence, Skill Deconstruction, Success Metrics and Quantification, Black Box Thinking, Observational Learning, First-Party Data and Iteration, Speed of Learning Over Starting Point, Modeling High Performers
+  - _Alex Hormozi teaches a systematic process for learning any skill faster by understanding learning fundamentals, deconstructing skills, defining success metrics, ignoring confusing theories, and using iterative improvement through observation and feedback loops._
+- **how_to_raise_capital_without_using_your_personal_network_EjBgv-DGJ-M.txt** — 7 claims · 3 sections · topics: Capital Raising Channels, Affiliate Model, Conference and Events Strategy, Paid Advertising for Investors, Content Marketing for Investors, Outbound Sales for Capital, High-Leverage Fundraising
+  - _To raise capital from accredited investors without personal connections, use conferences/events for face-to-face trust, paid ads targeting investors, affiliate models, or content marketing._
+- **how_to_recruit_a_players_for_your_roofing_company_ls3VjXEW-R4.txt** — 7 claims · 1 sections · topics: Three Levels of Salesmanship, Sales Leadership Transition, Recruitment Framework, Compensation Structure
+  - _Framework for recruiting salespeople to scale a roofing company from solo sales to a team, using three levels of sales mastery._
+- **how_to_say_no_to_the_wrong_opportunities_YJy7PL2apUo.txt** — 12 claims · 10 sections · topics: Grass Is Greener Bias, Downside Tolerance Framework, Existing Vehicle Optimization, Venture-Backed Scaling Illusion, Margin Improvement vs Revenue Growth, Acquisition Strategy (M&A), Licensing vs Franchising, Team Capacity Constraints
+  - _Teaches how to evaluate growth opportunities using downside tolerance and existing vehicle improvement, advising against pivoting to new models when the core business can reach scale through M&A and operational efficiency._
+- **how_to_scale_a_tutoring_business_from_250k_to_1m_U8Noy9ly7A4.txt** — 8 claims · 5 sections · topics: Offer Stacking, Demand Problem, Enrollment Funnel, Continuity Upsell, Product Positioning
+  - _How to move from one-time service demand to continuity by wrapping the continuity offer inside the product they actually want; frame the entry point then upsell the solution._
+- **how_to_scale_a_white_label_agency_past_1_5m_0coMtm_i1UA.txt** — 8 claims · 5 sections · topics: SMB Customer Volatility Problem, Agency Churn Root Cause, Pricing Tier Restructure, Distribution Layers, Retention vs. Growth Mindset
+  - _A white-label media agency stuck at $1.5M for five years learns that high SMB customer churn, not lead generation, is the real constraint; retention via tiered pricing is the path to $5M._
+- **how_to_see_reality_more_clearly_than_99_of_people_8YJEyMYYwnE.txt** — 25 claims · 14 sections · topics: Observable Reality Framework, Learning & Behavior Change, Intelligence as Learning Rate, Communication Clarity, Excuse & Responsibility, Patience as Action, Resilience & Trauma, Courage & Risk Interval, Authenticity & Context, Training Precision, Feedback Loops & Reinforcement, Trait Development
+  - _Define abstract concepts in observable, behavioral terms to eliminate vague communication and enable precise personal change and business decision-making._
+- **how_to_sell_a_2k_service_in_a_saturated_market_trAAFADIAZw.txt** — 5 claims · 2 sections · topics: Content-Led Sales Strategy, Before/After Proof and Social Proof, High-Ticket Sales Funnel
+  - _To sell high-ticket services ($2K+) in saturated markets, lead with content and before/after proof, then run ads to winning content with a funnel that gates traffic through live calls or webinars._
+- **how_to_sell_more_franchises_without_selling_them_0ZwRf4Dy_MM.txt** — 7 claims · 5 sections · topics: Unit Economics, Restaurant Profitability, Franchisee Recruitment, Financial Modeling, Business Model Selection, Margin Optimization
+  - _How to make franchises sell themselves by fixing unit economics first; franchise demand is a symptom of restaurant profitability._
+- **how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt** — 8 claims · 4 sections · topics: Profit Optimization, Sales Motion, Pricing Strategy, Operational Efficiency, Margin Analysis, Leadership Alignment
+  - _A $15M plumbing and HVAC company can triple net profit margins from 14% to 30% by stopping top-line growth focus and optimizing sales, pricing, and operations._
+- **how_to_use_ai_in_your_business_in_2026_fr78adfAnuA.txt** — 16 claims · 11 sections · topics: AI as Tool Not Industry, Cloud to Dirt Knowledge, AI Implementation Pitfalls, Marketing Automation, Sales AI Application, Customer Support AI, Risk Reduction with AI, Content Creation with AI, Behavior Pattern Recognition, Workflow Automation, 18-Month Opportunity Window
+  - _Businesses don't need to become AI companies but must use AI as a tool across all functions. AI makes operations better, faster, cheaper, and less risky when properly implemented with business acumen overlaid on technical capability._
+- **how_to_win_with_ai_in_2026_9q5ojtkqsBs.txt** — 20 claims · 18 sections · topics: AI Adoption Urgency, Workflow-Based Organization, AI Training Methodology, Revenue Per Employee Leverage, BYOA Business Model, AI Safety And Risk, Barbell Strategy For Future, Task Automation Framework, Long-Term Thinking In AI
+  - _A comprehensive guide to preparing for AI disruption in business, emphasizing workflow-based thinking, training AI like employees, and adopting AI-first strategies to maintain competitive advantage._
+- **how_we_trained_sales_teams_across_thousands_of_gyms_7w1HQAvlLZk.txt** — 8 claims · 6 sections · topics: Sales Training at Scale, Boiler Room Method, Network & Community, Licensing Model, Avatar Targeting, Time to Value, Operationalization
+  - _Gym Launch's approach to sales training at scale: daily boiler room role-play covering 5 script stages, network + community as core moat, and creative licensing model that didn't require 100+ account reps._
+- **humans_overestimate_the_downside_I8YZLBYYMag.txt** — 6 claims · 3 sections · topics: Evolutionary Bias Toward Pessimism, Upside in Uncertainty, Psychological Nature of Failure, Overestimating Downside Risk, Arbitrage in Delayed Rewards, Willingness to Pay the Price
+  - _Explores the evolutionary basis of human pessimism and how it limits opportunity-seeking. Argues that upside lies in uncertainty and delayed rewards, and that most failures are psychological rather than real._
+- **i_built_an_app_and_no_one_s_using_it_-Le_gCaW_5c.txt** — 8 claims · 5 sections · topics: Trial-to-Activation Problem, Churn Root Cause Analysis, CAC vs. True CAC, Pricing & Trial Structure, Activation Incentives
+  - _A fence visualization SaaS at $500K revenue with 8% monthly churn learns that poor trial-to-customer activation is the real constraint: incentivize first use rather than scaling ads._
+- **i_feel_stupid_apartment_broker_stuck_at_250k_pEKRblMK-Xg.txt** — 8 claims · 5 sections · topics: The Swamp (1-3M Revenue Range), Scaling Through Delegation, Team Hiring Strategy, Market vs. Model Issues, Time-Leverage Tradeoffs
+  - _An apartment broker at $250K revenue learns he's stuck in the swamp—the $1-3M range—and needs to transition from selling himself to building a team by hiring top talent and delegating systematically._
+- **i_m_a_physics_tutor_making_80k_how_do_i_scale_bBm70Ojep80.txt** — 6 claims · 2 sections · topics: US Market Priority, Geographic Signaling, Language Optimization, Content Strategy
+  - _Market entry strategy for scaling a physics tutoring business from India to US and EU customers through language and positioning._
+- **i_m_closing_10_of_my_sales_calls_what_am_i_doing_wrong_tWRrd0ClwjA.txt** — 7 claims · 8 sections · topics: Free Trial Plus Penalty Model, Proof & Testimonial Acquisition, Sales Volume vs Close Rate, Agency Avatar Problem, Business Model Bifurcation, Long-term Growth Path
+  - _A client-acquisition agency for financial advisors ($5K upfront + $2-5K/month, 10% close rate, <1 year old) is advised to move to free-trial-plus-penalty model, fill pipeline with proof/testimonials, and plan for eventual pivot to either low-cost-high-volume ($300-400/mo) or upmarket whale model._
+- **i_m_so_confused_walk_me_through_how_you_make_money_fTV3PbWAfWQ.txt** — 8 claims · 5 sections · topics: Alternative Mortgage Models, Deal Flow Acquisition, Wholesale Integration, Fund vs. Operations, Capital Efficiency
+  - _An Easy Dwell founder does $3M revenue and $500K profit by buying properties, financing them to buyers via LLC structures, and holding 30-40 years of cash flow ($800/month per deal). The constraint is deal flow; he's only done 40 deals in 2 years and should master wholesaling or acquire wholesalers to increase volume._
+- **i_m_trying_to_build_an_empire_hormozi_stops_her_cold_xrZH29ut-LY.txt** — 11 claims · 7 sections · topics: Specialization vs. Diversification, Business Focus and Constraints, Revenue Scaling, Empire Building Delusion
+  - _Skincare e-commerce company at $4.5M monthly revenue and $195k bottom line needs to stop building multi-businesses and focus deep on scaling one to $10M+._
+- **i_m_trying_to_replicate_gym_launch_in_the_pet_care_industry_pstJXCdpIio.txt** — 8 claims · 6 sections · topics: Supply vs Demand Constraints, Delivery Model Redesign, Expectation Setting, Founder Over-Delivery, Customer Segmentation, Cohort-Based Pricing, Accessibility as Differentiation
+  - _Pet care coach (Dogco Launch) growing from $356k to $1.2M this year, but capped by high-touch delivery model; advice covers delivery restructuring, customer expectation management, and promoting accessibility-to-scale transition._
+- **i_want_to_grow_my_business_but_i_don_t_want_to_sacrifice_fam_iq4VNdOAfWM.txt** — 8 claims · 6 sections · topics: Trade-Off Reality, Comfort as Constraint, Family Time vs Growth, Talent Hiring Levels, Active vs Passive Assets, Opportunity Cost, Finite Productive Years
+  - _Roofing/exterior remodeling owner at $6M wanting to hit $100M but facing comfort, fear of losing family time, and distraction from side businesses; core insight is that you must trade something to scale, and regret comes from imagining upside without the downside cost._
+- **if_i_started_a_business_in_2026_i_d_do_this_uWdIgftpvBI.txt** — 26 claims · 14 sections · topics: Core Economic Arbitrage, Pricing Strategy & Anchoring, High-Ticket One-on-One Selling, Time vs. Money Earning, Tiered Offer Architecture, Value Creation & Frames, Avatar Selection & Pain Articulation, Perceived Likelihood of Achievement, Speed & Latency as Leverage, Friction Elimination, Bootstrap Scaling
+  - _Foundational business strategy: sell extremely expensive to select few or cheap to everyone (avoid middle); build unscalable one-on-one premium tier to fund growth while validating value._
+- **if_i_wanted_to_grow_an_audience_in_2026_i_d_do_this_Jmkq5RLjm0U.txt** — 49 claims · 105 sections · topics: What Branding Is, Branding Economics & Pricing Power, Pairing Products With Customer Values, Brand Measurement & Metrics, Content Strategy: Entertainment vs Education, Audience Targeting & Messaging, Content Format & Production, Short-Form vs Long-Form Content, Community & Parasocial Relationships, Authenticity & Personal Brand, Paid Partnerships & Collaborations, Execution & Rapid Iteration, Revenue Models & Monetization, Thumbnail & Headline Clarity
+  - _Alex Hormozi teaches how to build a personal brand and grow an audience to 7.8 million followers in 40 months using six key lessons: transitioning from edutainment to education, shifting focus from the creator to the audience, narrowing topics to a specific niche, tracking revenue metrics over vanity metrics, prioritizing long-form over short-form content, and replacing assumptions with data-driven decisions._
+- **if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt** — 24 claims · 12 sections · topics: Cost Elimination, Time Optimization, Skill Selection, Learning Through Iteration, Strategic Spending, Income vs Lifestyle Discipline, Maker vs Manager Mindset, Focus Through Subtraction, First-Party Data Learning, Skill Monetization, The 4-4-4 Time Split, Bootstrapping Without Debt
+  - _A six-step roadmap to earning and banking your first $100,000: cut all costs, save time, research skills people pay for, spend time learning through iteration, reinvest money strategically, and maintain discipline by not increasing lifestyle._
+- **if_i_wanted_to_scale_a_service_business_in_2026_here_s_what_N5MExtki_VI.txt** — 34 claims · 44 sections · topics: Service Business Scaling Model, Offer Architecture and Bundling, Delivery Ratio Economics, Time and Cash Flow Constraints, Customer Acquisition Cost Optimization, Lead Quality vs Lead Form Trade-offs, Conversion Funnel Design, Content and Creative Strategy, Event Strategy and Upselling, Psychological Principles in Sales, Product Simplification, Recurring Revenue Architecture, Limiting Beliefs and Business Constraints, Scaling Supply Constraints
+  - _Alex Hermozi advises Kyle and Ariel (Couplepreneurs founders) on scaling their $480K/year couple-focused coaching business by redesigning their offer, changing delivery ratios, improving creative, and building recurring revenue streams._
+- **insurance_stopped_paying_should_i_switch_to_a_membership_mod_r7AzdHfBu68.txt** — 7 claims · 5 sections · topics: Market Shift Response, Subscription vs. One-Time Model, Membership Model Pitfalls, Insurance Industry Disruption, Cash Flow Model Testing, Demand Generation Strategy
+  - _How to avoid the trap of switching business models when your market shifts; test alternatives before pivoting away from a working foundation._
+- **it_took_me_36_years_to_realize_what_i_ll_tell_you_in_26_minu__KlZoPxbStk.txt** — 25 claims · 18 sections · topics: Passion Myth, Suffering As Fixed Cost, Rare Pleasure Principle, Passion vs Purpose, Why Meaningful Goals Matter, Reframing Difficulty, The 5% Problem, Intrinsic Meaning, Long-Term Vision, Personal Growth Philosophy
+  - _An exploration of how following passion is a myth, suffering is universal, and true fulfillment comes from pursuing meaningful goals worth suffering for rather than expecting work to be enjoyable._
+- **kill_the_customer_that_s_making_you_money_MKz81j4FsSM.txt** — 9 claims · 4 sections · topics: Avatar Focus, LTV to CAC Ratio, Customer Concentration, Operational Complexity, Revenue vs Unit Economics, Scaling Discipline
+  - _Cleaning service company with two avatars (homeowners 60% revenue, vacation rentals 15%) should eliminate the lower-LTV segment and go all-in on recurring residential customers for faster scaling._
+- **let_my_competitor_copy_the_broke_model_pHBSA4udH8Q.txt** — 6 claims · 8 sections · topics: Unit Economics Optimization, Pricing Power in Established Markets, Competitive Moats & Fear Inversions, Free Content & Monetization Psychology
+  - _A motocross training company learned to abandon unprofitable single-day tours ($300 each, bottom 40 net-negative or under $1K profit) and focus on five-day camps ($1,200, $100K+ profit each), scaling to 25 camps/year instead of 140 tours._
+- **make_an_offer_so_good_they_feel_stupid_saying_no_lpA7Uhav8qA.txt** — 6 claims · 4 sections · topics: Acquisition Structure, Multiple Arbitrage, DSO Consolidation, Coaching as Moat, Post-Acquisition Integration, Deal Mechanics
+  - _Teaches how to structure acquisition offers for practice owners to consolidate into a DSO (dental support group). Shows how to align incentives by offering a 4x multiple on solo sale versus 7x with consolidation, keeping the difference._
+- **my_best_store_is_dying_and_my_team_blames_the_economy_4J_Bo4Dbxjk.txt** — 8 claims · 5 sections · topics: Leadership Quality, Key Man Dependency, Market Saturation Myth, Talent Acquisition Standards, Culture & Execution
+  - _A golf club retailer with a declining 36-year store and thriving beach location discovers the problem isn't market saturation—it's leadership. The departure of a "key man" revealed a culture/execution gap; better hiring and unwavering standards will fix it._
+- **my_messaging_is_off_hormozi_breaks_down_what_that_actually_m_EiUW4sCi23s.txt** — 9 claims · 6 sections · topics: Problem Definition, Messaging Framework, Sales Funnel Friction, VSL Strategy, Fast Cash Play, Offer Qualification, Sales Motion Components
+  - _Restaurant operations consultant at $3.2M (targeting $10M) realizes messaging and sales process problems come from unclear value proposition; must build filtering funnel and fast-cash play to accelerate close._
+- **my_spiritual_coaching_offer_isn_t_converting_help_qsGvub8nxaU.txt** — 9 claims · 8 sections · topics: Language Clarity & Objectivism, Behavior-Change Framing, Sales Process Overhaul, Win-Your-Money-Back Offer, Court-Filter Observable Language, Upsell Architecture
+  - _A spiritual coaching business ($97-$2K range, organic/webinar/checkout funnel, 400K followers) repositions coaching as behavior-change, drops ethereal language, adds one-to-one calls to $97 upsell, and implements a money-back offer with dual conversion (results + referral)._
+- **never_give_real_equity_do_this_instead_lqKx0GDHFX8.txt** — 7 claims · 5 sections · topics: Profit Share Structure, Equity vs. Alternatives, Risk vs. Reward Distribution, Sales Role Compensation, Future Talent Allocation
+  - _How to structure incentive compensation for leadership team members without giving away actual equity, using profit share pools and performance alignment instead._
+- **our_cac_is_6_700_and_we_don_t_know_what_s_working_15CxTygzVio.txt** — 9 claims · 6 sections · topics: Attribution Challenge, Multi-Touch Complexity, Scientific Attribution, Directional Approach, Channel Prioritization, Sales Behavior Analysis, Skill Duplication
+  - _Real estate buyers advisory service ($22M, targeting $54M) cannot identify which acquisition channels drive customers despite having data, struggling with attribution across multiple touchpoints and needing to focus on top performers._
+- **people_have_no_idea_how_hard_it_actually_is_s1MErPSWMKw.txt** — 6 claims · 2 sections · topics: Invisible Difficulty, Survivorship Bias, Narrative Transparency, Romanticization Problem
+  - _Critique of 'must be nice' thinking that dismisses others' success without understanding the hidden difficulty and suffering required to achieve it._
+- **pick_one_sales_channel_or_stay_broke_Yjt_YfzF1kQ.txt** — 8 claims · 5 sections · topics: Sales Channel Focus, Channel Selection Criteria, Networking at Scale, Business Cash Flow, Hiring & Leverage, Market Economics at Scale
+  - _A $1M junk removal business testing multiple sales channels (email, LinkedIn, social, networking) gets advice to pick one and master it. Networking is owner's strength; expand from a few events/week to several daily to hit $3M before diversifying._
+- **raising_100m_almost_got_me_kicked_out_of_my_own_company_Uw9weyjJL1A.txt** — 7 claims · 6 sections · topics: Fundraising Strategy, Founder Control, Valuation Narrative, Risk Reduction, Investor Confidence
+  - _A biotech founder discusses fundraising challenges when scaling from $24M to $500M valuation, focusing on maintaining control while raising $100M and understanding investor risk assessment._
+- **reacting_to_my_first_videos_10_years_later_Q8xXSMe8E4Q.txt** — 6 claims · 4 sections · topics: Execution Over Planning, New Service Launch, Sales Fundamentals
+  - _Reflection on early content and lessons learned about execution, planning, and launching new businesses. Teaches that detailed planning is overrated, execution matters more, and success comes from finding customers and solving their problems._
+- **reflecting_on_why_i_was_wrong_about_myself_patience_self_jud_ezN8B1d1RVw.txt** — 6 claims · 3 sections · topics: Traits as Continuums, Evidence Over Emotion, Patience as Behavior, Self-Judgment Through Action, Courage and Fear
+  - _Explores how traits like patience and loyalty aren't binary or emotional states but evidence-based behaviors. Building traits requires accumulating proof through action despite not feeling the trait._
+- **scale_any_business_with_these_3_levers_3xrL1nQcqlU.txt** — 12 claims · 7 sections · topics: Unit Economics and ROI, Ad Spend Scalability, Sales Response Time, Customer Lifetime Value, Pricing Strategy, Lead Qualification Speed
+  - _Pool service company at $1.2M annual revenue with strong economics ($2,250 gross profit per $150 customer acquisition) must increase ad spend and improve sales response time._
+- **scaling_a_22m_hemp_distributor_to_50m_85lDC9uzFWI.txt** — 5 claims · 3 sections · topics: Regulatory Uncertainty, Information-Based Decision Making, Opportunity Cost of Caution, Ray Dalio Fallacy, Pivot Timing
+  - _Addresses regulatory uncertainty as a growth blocker in cannabis hemp distribution. Recommends operating normally with current information and pivoting only when regulatory change is imminent, rather than pre-emptively constraining growth._
+- **scaling_a_50m_pest_control_company_to_1b_bYGRh4ZOdUo.txt** — 9 claims · 6 sections · topics: Delivery Capacity, Talent Retention, Career Ladder Design, Promotion Velocity, Organic Growth Model, Acquisition Strategy, Perks as Retention
+  - _Pest control at $50M targeting $1B (20x growth); constraint is delivery manpower retention, not recruitment; solution is creating expanded career ladder so average talent has 9–18 rungs of advancement instead of 3, keeping promotions spaced 3–6 months apart._
+- **scared_of_debt_your_business_will_stall_gOG7zvp2ub0.txt** — 7 claims · 5 sections · topics: Debt Fear, Risk Assessment, Growth vs. Safety, Capital-Intensive Business, Debt Covenants, Long-Term Strategy
+  - _How to evaluate debt rationally using math instead of emotion; understand risk trade-offs between growth speed and business survival._
+- **should_i_take_5_to_help_grow_his_business_LGbS0GOZBNE.txt** — 7 claims · 6 sections · topics: Partnership Requirements Framework, Equity vs Stake Distinction, Sales Skills vs Business Skills, Learning vs Earning Mode, Career Path Decisions, Founding vs Joining Playbooks, Goal Clarity
+  - _18-year-old with sales background considering 5% equity partnership in $200K pest control business needs to understand partnership requirements and whether learning mode is better than ownership._
+- **smb_clients_will_quietly_bankrupt_you_3Lvhd3LIwwY.txt** — 7 claims · 5 sections · topics: SMB Market Dangers, Customer Churn, Customer Acquisition Cost, Pricing Strategy, Delivery Model, Margins Compression, Market Segmentation
+  - _Why SMB digital marketing services fail; the only viable models are ultra-cheap automated delivery or high-touch for sophisticated operators, never the middle._
+- **sounds_like_a_scam_pitching_200k_in_savings_to_ceos_Ht9u-qEXTQY.txt** — 9 claims · 7 sections · topics: Value Proposition Repositioning, Nonprofit Advantage, Sales Process Redesign, Centers of Influence, Affiliate Integration, Proof Problem, Customer Education
+  - _Health benefits nonprofit at $3M selling to 50+ employee companies with 20% savings pitch sounding like scam; solution is repositioning as nonprofit model (0% profit margin vs 20% industry standard) and shifting marketing from direct-to-customer to centers of influence (CPAs, financial advisors)._
 - **start_a_1_person_business_with_claude_4_hour_course_2026.txt** — 200 claims · 62 sections · topics: AI Adoption Rates, AI Business Opportunities, AI Operating System Setup, AI Tools, AI-Generated Websites, Build Plan, Building Framework, Building Trust, Business Excitement Curve, Claude Code, Claude Code Installation, Claude Skills, Client Acquisition Strategies, Cold Email Campaigns, Commitment to Business, Composio Authentication, Full AI Systems, GitHub Integration, Lead Generation, Market Opportunity, Million Verifier, Next.js Frontend, One-Person Company, Pricing AI Services, Roadmap for AI Business, Sales Call Strategy, Satisfaction Guarantee, Service Delivery, Sustaining the Business, Trigger.dev Automations, Upselling and Referrals, Upwork Freelancing, Upwork Profile Optimization, Website Deployment
   - _This video teaches how to build a one-person AI business using Claude Code, covering everything from setting up development tools and acquiring clients through Upwork and cold email, to building websites, automations, and full AI systems, and finally, how to price services and scale the business._
+- **stop_building_10_businesses_build_one_to_10m_sRBO1pxSqK4.txt** — 13 claims · 7 sections · topics: Sales Channel Expansion, Webinar Strategy, B2B Partnership Integration, Lead Generation Scaling, Avatar Focus, Virtual Lead Gen
+  - _Healthcare VA company at $7M annual revenue doing event-based lead generation needs to unlock growth beyond calendar constraint via webinars and B2B partnerships._
+- **stop_selling_done_for_you_sell_franchises_instead_2RYARn7GMek.txt** — 6 claims · 7 sections · topics: Franchise vs Done-For-You, Regulatory Compliance, Business Model Sustainability, Partner Quality, Scaling Limitations
+  - _Argues that high-ticket done-for-you services have regulatory and operational problems at scale, and franchise model is more legitimate, more profitable, and allows better partner relationships._
+- **stop_selling_from_your_own_wallet_yEmM9JygeEo.txt** — 8 claims · 4 sections · topics: Wealth Distribution, Target Avatar Selection, Pricing Psychology, Anchor Pricing, Profit vs Volume, Rich Client Dynamics
+  - _Teaches pricing strategy for entrepreneurs. Shows that top 10% of Americans have $1M+ net worth and you should price for them, not for the bottom 50% who will never be your customers._
+- **stop_the_side_hustle_and_grow_the_golden_goose_AhwQYu01rM0.txt** — 6 claims · 7 sections · topics: Core Business Focus, Shiny Object Syndrome, Licensing vs Direct Service, Revenue Model Transition, Golden Goose Principle
+  - _Warns against abandoning a successful core business to chase new opportunities, using done-for-you podcast agency as example of when licensing model diverts attention from proven cash generator._
+- **stop_using_a_warm_sales_process_on_cold_leads_lPZOkIvVxPc.txt** — 8 claims · 5 sections · topics: Warm Lead Underestimation Problem, Cold Process on Warm Leads, Real Estate Agent Pricing Strategy, Market-Driven vs. Strategy-Driven Pricing
+  - _Professionals (real estate, consulting, referral-based) treat warm referrals too casually and lose deals; deliver full cold sales process to every lead regardless of source, building credibility and certainty before commitment._
+- **the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt** — 9 claims · 4 sections · topics: Constraint Management, Capital Allocation, Manufacturing Consolidation, Sales vs Operations, Eisenhower Matrix, Facility Planning
+  - _Family manufacturing business deciding between consolidating production facilities immediately or focusing on sales/marketing first. Teaches constraint management and capital allocation when facing dual competing pressures._
+- **the_10x_move_for_healthcare_service_businesses_Bt6lTDsX12s.txt** — 10 claims · 7 sections · topics: Positioning and Value Proposition, Lead Gen Channels, Webinar Lead Generation, B2B Sales Motion
+  - _Healthcare service businesses like PT/OT practices should position virtual assistants as profitability multipliers, not cost cutters, to unlock franchise-like growth._
+- **the_3_types_of_content_and_why_only_one_builds_a_business_NTm8BibjUqQ.txt** — 21 claims · 22 sections · topics: Three Content Buckets, Entertainment vs. Education Audiences, Funnel Myth Debunking, Clear vs. Vague Packaging, Proof-Promise-Plan Framework, Content Meat and Production, Effective Visuals vs. Razzle, Pre-Work Over Post-Production, RPM as Quality Metric, Short-Form vs. Long-Form Strategy, Audience Assumption Errors, Business-Focused Content Strategy
+  - _Alex Hormozi analyzes three content types—entertainment, education, and edutainment—and argues that education content uniquely drives business outcomes; he shares six specific tactical changes to optimize for business owner audiences._
+- **the_4_proven_ways_to_build_wealth_in_2026_sL16tsGafcQ.txt** — 16 claims · 18 sections · topics: Bootstrapped Business Model, Raising Capital Path, Investing Path, Fund Management Path, Wealth Building Timeline, Debt Types and Trade-Offs, Equity Dilution and Control, Deal Flow and Proprietary Advantage, Capital Leverage and Returns, Wealth Compounding vs. Active Income
+  - _Alex Hormozi presents four paths to building mega wealth: bootstrapping, raising capital, investing, and fund management, each with distinct risk-return profiles and time horizons suitable for different stages of wealth creation._
+- **the_5_30_am_parking_lot_test_SxS1vjwovEs.txt** — 7 claims · 2 sections · topics: Consistency as Rare Competitive Advantage, Visibility of Work, The Decision to Go Pro, Daily Execution vs. Celebration
+  - _Consistency is the rarest trait because it's invisible without participation; it's a decision to go pro and do the work invisibly, knowing you'll never get credit for effort, only results._
+- **the_6_levels_of_making_money_rMJIOK_FgJk.txt** — 15 claims · 12 sections · topics: Work Then Pay Model, Pay As You Go Model, Pay Then Work Model, Outcome-Based Compensation, Risk Arbitrage and Mispricing, Insurance and Risk Transfer, Leverage Through Risk, Royalties and Revenue Share, Warranties and Guarantees, Franchise and Payment Control, Outsized Returns from Contrarian Bets, Long-Tail Distribution in Business
+  - _A framework of six compensation structures ranked from lowest to highest leverage, showing how to shift risk to maximize earnings and explaining why the market overcompensates those perceived as risk-takers._
+- **the_actual_definition_of_trauma_and_how_to_stop_using_it_as_glx-N7CMbqA.txt** — 6 claims · 2 sections · topics: Trauma Definition, Behavior Change Requirement, Positive vs Negative Outcomes, Adaptability Factor
+  - _Clinical definition of trauma as permanent behavioral change from aversive stimulus, distinguishing positive vs negative outcomes and adaptability._
+- **the_best_business_to_start_with_no_money_C7t6IIPr4QY.txt** — 8 claims · 5 sections · topics: Performance-Based Business Models, Zero-Capital Business Selection, Recruiting Economics, Real Estate Agent Arbitrage, Customer Acquisition Arbitrage
+  - _To start with zero capital, choose performance-based, no-upfront-cost businesses like recruiting or real estate agent roles. Build arbitrage by negotiating vendor discounts and selling at higher prices; start with $1,000 to fund initial advertising._
+- **the_cobbler_s_shoes_problem_killing_your_agency_growth_-G08--_mZaU.txt** — 6 claims · 7 sections · topics: Cobblers Shoes Problem, Supply Constraint, Founder Magic Decay, Reinvestment Strategy, Service Business Economics, Brand Play Investment
+  - _Addresses the cobbler's shoes problem where performance marketing agencies can't run their own ads because they're fully staffed serving clients, and shows how to break through by hiring inbound marketers._
 - **the_lazy_way_i_make_money_with_ai_2026.txt** — 24 claims · 8 sections · topics: AI-Driven Website, Cold Outreach & Referral Growth, Critical Thinking for Closing Deals, Five AI Workers, Franchise Referrals, GBT Training Data, Lazy System, Lead Generation, Referrals
   - _The excerpt argues that building an AI agency requires a lazy system leveraging AI workers, franchise referrals, and optimized lead generation to avoid traditional marketing costs._
+- **the_lonely_chapter_xyKwap1p3rU.txt** — 12 claims · 10 sections · topics: The Lonely Chapter, Reframing Hardship as Competitive Advantage, Early-Stage Motivation and Passion Protection, Earning Your Stripes Through Mastery, The Exponential Payoff Paradox, Future-Casting Your Narrative, The Hero's Journey Mindset, Compounding Returns from Early Work, Building Under Uncertainty
+  - _Explores how difficulty and hardship in entrepreneurial paths indicate you're on the right track, and the paradox that building something valuable requires protecting your passion through the lowest-reward early stages when effort matters most._
+- **the_mathematics_of_business_explained_A_tx40lNpf8.txt** — 52 claims · 41 sections · topics: Close Rate vs Pricing, LTV to CAC Ratio, Rule of 100, Lead Response Time, Calendar Utilization, Payback Period, Gross Margins, 30-Day Cash Collected, Churn and Retention, Prepayment and Cash Flow, Industry Averages, Conversion Rate Benchmarks, Business Model Selection, Pricing Leverage, Scaling Discipline
+  - _Alex Hormozi shares 12 core business rules of thumb derived from 14 years of entrepreneurship, focusing on fundamental ratios and metrics that reveal business health and guide scaling decisions._
+- **the_new_way_of_making_content_in_the_age_of_ai_XsWSvz-aewA.txt** — 12 claims · 10 sections · topics: The Risk Continuum for Creators, AI Disruption by Creator Type, Proof as Competitive Moat, Real-Time Demonstration vs. Accomplishments, Self-Linking Business Loops, Content at Scale vs. Capturing Reality, B2C Entertainment and Educators, B2B High-Ticket Creators, Third-Party Credibility Signals, Content Engineering for Proof
+  - _Shows that AI will disrupt creators unevenly based on risk level; high-risk B2B creators are safe if they demonstrate real-world proof and build self-linking business loops that generate proof while serving customers._
+- **the_offer_structure_a_stranger_pitched_me_in_a_parking_lot_GMiOc8RKYEo.txt** — 25 claims · 9 sections · topics: Discount Plus Fee Structure, One-Time Setup Fees, Churn Reduction, Commission-Based Pricing, Recurring Service Monetization, Program-Based Pricing, Discount Messaging, Customer Commitment, Fee Psychology, Margin Protection, Offer Flexibility, Legal Compliance
+  - _Explanation of the Discount Plus One-Time Fee offer structure: discounted first term followed by additional made-up fees that increase customer investment, reduce churn, and monetize acquisitions through commission-based pricing._
+- **the_pricing_rule_that_5x_d_my_profit_overnight_yBrRSS3Vsxk.txt** — 10 claims · 5 sections · topics: Pareto Pricing Tiers, Customer Wealth Distribution, Profit Concentration, Price Multiplier Strategy, Tier Design, High-Value Customer Service
+  - _Pareto principle applied to pricing: 20% of customers have 14x+ the wealth of the bottom 50%. Create 4 tiers with 5-10x price gaps; expect 20% takeup per tier. Top 20% drives majority of profit despite minority of customers. Start high to build top-down brand and serve fewer high-value customers than many low-value ones._
+- **the_real_problem_with_done_for_you_businesses_iL5v-37Vm48.txt** — 6 claims · 7 sections · topics: Fulfillment Bottleneck, Liability at Scale, Founder Dependency, Partner Recruitment, Churn and Cohort Dynamics, High-Ticket Biz-Op Risk
+  - _Explains why done-for-you service businesses struggle at scale—the model inherently limits growth because delivery depends on founder, creating liability and partnership problems._
+- **the_real_reason_i_can_t_scale_two_businesses_at_once_kp68MDBTpWY.txt** — 10 claims · 6 sections · topics: Focus Tradeoff, Teaching Authority, R&D Budget Model, Coaching Product Scaling, Long-Form Content, Short-Form Repurposing
+  - _Entrepreneur running two businesses (marketing agency for doctors + coaching on how to start one) can't focus on both; learns that teaching doesn't require operating the best version of business, and that R&D process and product scaling differ._
+- **the_real_reason_you_don_t_have_what_you_want_in_life_tbNTKpwvRK4.txt** — 6 claims · 2 sections · topics: Resilience Definition, Recovery Time, High vs Low Resilience, Resilience as Leverage
+  - _Explanation of resilience as the key factor determining whether people achieve their goals, defined as the time it takes to recover from setbacks._
+- **the_real_reason_you_haven_t_succeeded_yet_o06NDWKHFVA.txt** — 7 claims · 2 sections · topics: Victim Mindset vs. Agency, Uncertainty as Fuel, The Value of Struggle, Continuous Improvement vs. Outcome Fixation
+  - _You haven't succeeded because a victim mindset ("it must be easy") causes you to externalize responsibility; real success requires accepting uncertainty and doing the work most people won't do._
+- **the_single_greatest_opportunity_for_2026_OsYAUkL6L6Y.txt** — 5 claims · 3 sections · topics: Macro Opportunities, Market Timing and Land Grabs, Skill Requirements for Opportunity, TikTok Shop Opportunity, Early-Mover Advantage
+  - _Identifies macro opportunities like Internet, Web 2.0, and AI, and discusses micro opportunities like TikTok Shop. Emphasizes that capturing these requires skills and being early before markets stabilize._
+- **the_two_channels_with_the_highest_return_right_now_zb1eSorqNps.txt** — 7 claims · 6 sections · topics: Channel ROI Analysis, Instagram Monetization Paths, YouTube Multi-Format Strategy, Podcast Reach Limitations, Short-Form to Long-Form Conversion, Content Surface Area Math, Influencer Type Categories
+  - _Instagram and YouTube have highest blended ROI because they balance new customer acquisition with nurturing and have multiple monetization paths, while podcasts are high-ROI but low-reach._
+- **there_s_no_easy_business_NadXwJQjBiY.txt** — 8 claims · 6 sections · topics: Supply Constraint, Operating Leverage, Offshore Staffing, AI First Strategy, Data Architecture, Marketing Distraction, Margin Expansion
+  - _A CFO advisory business owner ($2.9M revenue targeting $20M) learns they're operationally constrained and need to solve supply constraints through offshoring, operating leverage, and data architecture before trying to market or sell courses._
+- **tiktok_has_the_worst_audience_monetization_ever__9Wiua_4SJ8.txt** — 9 claims · 5 sections · topics: Content Creator Burnout, Audience Quality vs. Size, Content Enjoyment, Platform Monetization, Educational Content Strategy, Creator Sustainability
+  - _A welding supply creator with 300K TikTok followers and $1.7M revenue questions whether to grow audience or pivot channels. The real issue is content burnout; fix it by reverse-engineering what you enjoy and reminding yourself that repetition serves audiences—Dave Ramsey taught the same thing for 35 years._
+- **tiktok_shop_has_a_hidden_200m_loophole_OulGPT2kZ7c.txt** — 7 claims · 6 sections · topics: Influencer Leverage Strategy, Capital Efficiency Mindset, Creator Community Network Effects, Dual Revenue Model, Market Expansion Sequencing, Focus Over Resources, Creator Influencer Power
+  - _TikTok Shop creator membership and matchmaking platform doing $3.6M year 1 needs to focus on high-leverage creator influencers instead of raising capital, and use multiple revenue streams (membership + transaction fees) without adding complexity._
 - **watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt** — 108 claims · 34 sections · topics: AI-Driven Lead Generation Without Ads, AI-Driven Lead Nurturing, AI-Driven Marketing, AI-Driven Review/Referral Systems, Audience-Specific Ad Targeting, CRM Limitations and Manual Follow-Ups, Client Case Studies and Results, Client's Current Marketing Inefficiencies, Decagon Matrix Marketing, Financial Structure, Follow-Up Calls, Google Business Page Optimization, Google My Business Optimization, Implementation of Training-Focused Marketing, Investment Costs for Initial Month, Lead Follow-Up, Market Gap Analysis and Client Transformation, Marketing Strategy, Process Gaps, Reactivation Campaign, Revenue Models through Recurring Revenue, Review Process Gaps, Reviews and AI Integration, Sales Process Refinement, Service Pricing, Structured Processes for Reviews/Referrals/Lead Re-engagement
   - _The excerpt argues that the speaker is helping a business owner improve their strategy with CRM, reactivation campaigns, and marketing strategies to overcome lead generation issues and financial constraints._
+- **watch_this_if_you_have_a_service_business_jqo0lVveh98.txt** — 46 claims · 28 sections · topics: Attribution Tracking and Input-Output Equations, Lead Generation Channels and Content Strategy, Pricing and LTV-CAC Dynamics for SMBs, Service Business Churn Patterns, Supply vs. Demand Constraints, Operations and Margin Compression, Hiring and Talent Acquisition, Data-First and AI-Ready Architecture, Multi-Channel Acquisition Strategy, Founder Fulfillment vs. Business Growth, Passive vs. Active Income Management, The Who Game and Leadership Levels, Sales Funnel and Sales Academy Build-Out, Market Expansion and Geographic Scaling, Character and Vision in Team Building
+  - _Alex Hormozi addresses six founders operating service businesses at various scales, providing tactical advice on growth constraints, pricing strategies, hiring talent, and the trade-offs required to scale from $2M to $100M+ in revenue._
+- **watch_this_to_get_ahead_in_2026_spXH1kJ6q-Q.txt** — 72 claims · 42 sections · topics: Discipline vs. Liking What You Do, The Execution Gap: Why Entrepreneurs Get Stuck, Self-Awareness and Constraint Identification, Focus and Distractions (Idea Management), Time Horizon and Vision, AI and Business Fundamentals, Pricing Strategy, Sales Timing and Deprivation, Content Strategy: Declarative vs. Procedural Knowledge, Sales Training and Script Execution, Influence and Branding Framework (SPCL), Key Man Risk and Business Scaling, The Management Diamond, Culture Definition and Codification, Death Creates Clarity (Reverse Eulogy)
+  - _Alex Ramosi, who runs a $250M+ portfolio, compresses a decade of business knowledge into actionable lessons on discipline, sales, AI, influence, and execution. Core insight: most entrepreneurs already know what to do but don't do it due to inability to delay gratification, poor constraint identification, and fear of uncertainty._
+- **we_broke_the_guinness_world_record_in_24_hours_u3H7CfpfwHQ.txt** — 20 claims · 14 sections · topics: Belief & Proof, Book Series Architecture, Cultural Foundation & Team Setup, Event Planning & Logistics, Risk Identification & Mitigation, Sales Operations & Training, Live Launch Execution, Multi-Tiered Offer Strategy, Marketing & Ad Management, Payment & Checkout Infrastructure, Scaling Beyond the Record
+  - _Behind-the-scenes of breaking the Guinness World Record for fastest-selling nonfiction book ($100 Million Money Models) in 24 hours by executing with extreme operational precision and team culture._
+- **we_have_more_demand_than_we_can_handle_how_do_i_get_to_10m_lCmdlNNJkBw.txt** — 7 claims · 6 sections · topics: Demand Unlocking, Messaging & Positioning, Pricing Strategy, Fast Cash Plays, Pre-Framing & Friction, Customer Activation
+  - _Restaurant operations consultant scaling from $3.2M to $10M revenue by fixing messaging, sales process, pricing, and fast-cash plays that let customers self-fund the engagement._
+- **we_hit_700k_then_crashed_to_200k_why__4BGku-jLh4.txt** — 12 claims · 7 sections · topics: Sales Culture and Consistency, Script Discipline, Sales Management and Leadership, Compensation Structure, Sales Training Process, Talent Screening and Onboarding
+  - _Real estate wholesaler reveals why sales team performance crashes after big months, and how script discipline and sales culture are the real constraints._
+- **we_re_posting_and_praying_a_13m_ceo_with_no_metrics_EIlXNKmHK20.txt** — 7 claims · 5 sections · topics: Marketing Metrics, Customer Acquisition, Distribution Layer Strategy, Agency Partnerships, Churn vs. Recurring Revenue, Product Bundling
+  - _How to move from episodic customer sales to a distribution model that compounds; shift focus from acquiring end customers to acquiring distributor partners._
+- **we_re_profiting_75_but_can_t_get_continuity_kYUXKevbChg.txt** — 7 claims · 6 sections · topics: Alumni Earnings Documentation, University Exclusivity Strategy, Dual-Sided Revenue Models, Customer LTV Leverage, Career Placement Economics, Trade Show Lead Generation, Academic Sales Hiring
+  - _BCBA test prep business with 75% margins and $80K/month needs to document earnings of graduates, lock in exclusive university partnerships, and add career placement revenue model._
+- **what_branding_actually_is_and_how_to_build_one_fast_Vt4D1qgo9ic.txt** — 18 claims · 11 sections · topics: Branding Definition, Deliberate Pairing, Good vs Bad Branding, Weak to Strong Brand Progression, Premium Pricing Power, Advertising vs Branding, Brand Loyalty, Reference Group Association, Livestock Branding History, Customer Behavior Change, Ideal Audience Alignment, Warren Buffett Pricing Power
+  - _Branding is deliberate pairing of a product with desired outcomes through the customer's lens; good branding changes customer behavior in your favor, commanding premium pricing and customer loyalty._
+- **what_has_value_in_the_age_of_ai_D8mz-jmYL5M.txt** — 9 claims · 4 sections · topics: Information vs Curation, Community Value, Consumable Products, Authenticity Premium, Pricing Recurring Content
+  - _Explores what remains valuable in the age of AI. Argues that information was always cheap, real value comes from curation/selection, and community combined with consumable recurring inputs._
+- **what_makes_the_perfect_business_5_things_3fsJFUvA6Ts.txt** — 14 claims · 15 sections · topics: Revenue Retention & Stickiness, Gross Margins & Economics, Market Expansion & Growth Tailwinds, Operational Leverage & Scalability, Competitive Moats & Differentiation, Customer Retention Mechanics, Brand as Competitive Advantage
+  - _Framework for identifying five essential business characteristics—stickiness, high margins, expansion, operational efficiency, and competitive moat—that create scalable, profitable companies. Demonstrates how to evaluate and develop each advantage using data and strategy._
+- **when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt** — 10 claims · 4 sections · topics: Founder Desperation, Survival Mode Motivation, Skin-in-the-Game, Early Traction, Founder Reality, Market Timing
+  - _Founder's journey from homeless in California to gym owner: demonstrates how visceral desperation drives action; the suffering period lasts years, not seconds, and without true skin-in-the-game forced urgency, most won't execute._
+- **why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt** — 12 claims · 9 sections · topics: Workflow Automation, Role-Based to Workflow-Based Thinking, Process Mapping, AI Agent Training, Observable Behavior Specification, Hotline Workflow Example, Automation Prioritization, Back Office Automation, Future UX Shift, Humanoid Robots, AI Skillset Requirements
+  - _Explains how AI will reshape businesses by shifting from hiring roles to automating workflows, requiring leaders to map detailed processes and think in granular activities rather than job titles._
+- **why_ambitious_people_stay_mediocre_A248pGXTSoY.txt** — 28 claims · 13 sections · topics: Industry Standards Trap, Personal Standard Setting, The Cost of Distinctiveness, Multiple Attack Vectors, Profit as Unnatural, Hedgehog Concept, Physics-Based Goals, Contrarian Conviction, Compounding Effort, Leader as Standard Holder, Unreasonable Ambition, Operational Excellence
+  - _Ambitious people stay mediocre because they accept industry standards instead of holding personal high standards; the path to excellence requires rejecting normalcy through continuous work and attacking problems from many angles._
+- **why_i_hate_the_word_mindset_5xWG6jb6vB8.txt** — 5 claims · 2 sections · topics: Language as Behavior, Behavioral Reinforcement Loops, Definition and Clarity, Vague Terminology Problem, Self-Reinforcing Patterns
+  - _The term "mindset" is vague and undefined; what matters is understanding language and behavior as interconnected systems, where words reinforce actions through social feedback loops._
+- **why_i_m_rolling_up_50_med_spas_instead_of_exiting_Ok8cv-ivKIw.txt** — 9 claims · 4 sections · topics: Business Rollup Strategy, Dual Business Model, Founder Delegation, Operator Partnerships, Equity Incentive Structure, Day-to-Day Exit
+  - _Med spa operator running two businesses (direct operations + consulting) plans to exit by building a 50+ location rollup through coaching and scalable operator partnerships._
+- **why_i_tell_beginners_to_cold_email_before_running_ads_MEuEEoC-9s0.txt** — 8 claims · 5 sections · topics: Cold Email vs. Paid Ads ROI, Beginner Sales Skill Development, Content as Lead Nurture, Social Profile Credibility, Deal Flow Consistency, Content Cadence Basics
+  - _Cold email is the fastest ROI learning tool for beginners: teaches volume, cold selling, and lead qualification before scaling ads (which require expertise); pair with baseline content for credibility and nurture._
+- **why_money_stops_buying_happiness_after_70k_OUowG_oCbCI.txt** — 8 claims · 4 sections · topics: Time as Capital, Spending as Skill, Wealth Tiers, ROI on Time Freedom, Lifestyle Design, Founder Optimization
+  - _Spending money effectively is a learnable skill; beyond $70k annually, most people don't know how to deploy capital to improve quality of life, but strategic spending on time-recovery returns significant happiness dividends._
+- **why_most_agency_founders_never_break_1m_KztNWHJLip8.txt** — 5 claims · 1 sections · topics: Brand Risk Perception, Customer Segmentation Strategy, Sales Reframing, Business Growth Constraints
+  - _Analysis of limiting beliefs that prevent LinkedIn agency founders from scaling beyond $1M, focusing on brand risk concerns and strategic reframing._
+- **why_most_businesses_fail_no_standards_8N8_Jgx97jA.txt** — 4 claims · 2 sections · topics: Standards and Business Success, Leadership by Example, Owner Accountability, Communication of Expectations
+  - _Businesses fail because owners don't establish clear standards and fail to model them; leadership by example is the foundation of any successful organization._
+- **why_most_med_spa_owners_stall_at_7m_wRe3Umk2hec.txt** — 6 claims · 7 sections · topics: Founder Dependency in Spas, Location Expansion Dynamics, Margin Degradation, Sales Motion Systematization, Talent Retention Strategy
+  - _Shows how med spa owners stall at 3-location expansion due to founder dependency, low margins (15%), and lack of systematized sales motion—requires fixing margins first before scaling._
+- **why_warren_buffett_calls_this_industry_a_scam_K9YN5sbwR94.txt** — 9 claims · 7 sections · topics: Insurance Industry Economics, Value Proposition Design, Affiliate Channel Strategy, Sales Process Optimization, Center of Influence Partnerships
+  - _Nonprofit health insurance broker reveals why the insurance industry's commission model is broken, and demonstrates a better value proposition focused on centers of influence._
+- **why_watching_podcasts_is_making_you_dumber_bpkxMfNiMbA.txt** — 7 claims · 3 sections · topics: Learning Definition, Intelligence as Rate, Behavioral Change, Content Consumption Trap, Motivation Definition, Deprivation and Drive
+  - _Consuming content without changing behavior is entertainment, not learning; learning is same condition + new behavior. Intelligence is the rate at which you change behavior when exposed to new conditions._
+- **why_we_refused_to_join_the_100k_club_j7JGiFKooD4.txt** — 5 claims · 3 sections · topics: Replicate Before Iterate, Buying Access for Learning, Shared Knowledge Exposure, Integrity Over Opportunity
+  - _Discusses closing knowledge gaps through replicating before iterating, buying access for faster learning, and maintaining shared knowledge exposure with partners. Values integrity over premium network access._
+- **why_you_aren_t_making_as_much_money_as_you_want_ZuJryiwxjDw.txt** — 39 claims · 24 sections · topics: Wealth Distribution Economics, Pareto Principle and Profit Concentration, Pricing Strategy and Tiered Offers, Sales Targeting and Lead Qualification, Belief Systems of Wealthy vs. Poor, Value Perception and Pricing Psychology, Top-Down Market Positioning, Upselling to High-Ticket Customers, Close Rate Analysis and Price Optimization, Service Quality and Premium Margins, Sales Qualification and Avatar Targeting, Entrepreneurial Mindset and Opportunity Cost
+  - _Alex Ramosi explains wealth distribution economics and how to price products to capture it: the top 1% holds $32 of every $100 in U.S. wealth, and businesses fail by selling to the poor instead of the rich._
+- **why_you_can_t_run_two_businesses_at_once_3t6sA6OmzHA.txt** — 5 claims · 3 sections · topics: Focus and Avatar Conflict, LTV-to-CAC Validation, Whale vs. Minnow Economics, Early Acquisition Signals, Profitability Proof
+  - _Advises against running two businesses with different customer avatars simultaneously. Recommends waiting to see LTV-to-CAC proof before pivoting one business, to avoid splitting focus and missing true profitability._
+- **why_you_re_not_burnt_out_you_re_just_weak_85HElwKCAPY.txt** — 6 claims · 2 sections · topics: Work Capacity and Adaptation, Reframing Burnout, Work as Identity, Outcome vs. Process Orientation
+  - _Burnout is a reframing problem; you're not burnt out, you're underestimating your capacity to adapt. Work capacity itself is trainable and increases with volume, just like physical fitness._
+- **why_you_re_still_the_only_closer_in_your_business_fECT6E27oi8.txt** — 8 claims · 5 sections · topics: Founder-Driven Sales, Sales Training, Sales Scalability, Script Design, Sales Process Framework
+  - _How to build a scalable sales process by systematizing it instead of relying on founder expertise; train sales people to ask questions instead of demonstrate authority._
+- **why_you_should_always_build_a_business_top_down_Gr2A7wUoEwo.txt** — 5 claims · 2 sections · topics: Top-Down Business Strategy, Brand Narrative and Anchoring, Operational Scalability, Volume vs. Margins Tradeoff
+  - _Building a business from the top down means starting with high-end customers and premium offerings before scaling to mass market, using Tesla's Roadster-to-Model-3 strategy as the blueprint._
+- **why_you_should_charge_5x_more_not_50_more_CTJRsVA89Oc.txt** — 6 claims · 3 sections · topics: Pricing Tiers and Jumps, High-End Pricing Strategy, Service vs. Automation, Profit Concentration, Mass Market Economics, Capital Requirements for Scale
+  - _Price in large jumps (5x, not 50% more) because disproportionate profit is at high price points; most service businesses lack automation and must serve high-end clients profitably._
+- **why_you_shouldn_t_put_your_actions_on_a_pedestal_70LSQk_RH_M.txt** — 4 claims · 2 sections · topics: Identity as Behavior Aggregation, Behavioral Flexibility, Emotional Rigidity and Change, Cost-Benefit Analysis in Relationships
+  - _Your identity is the sum of your behaviors, not some fixed essence; treating specific actions as sacred reduces your flexibility to adapt and trade behaviors when it benefits others._
+- **why_your_10m_brand_will_never_hit_100m_x3Ft7uuSlKM.txt** — 10 claims · 6 sections · topics: Margin Compression, Brand Building, Performance Marketing Doom Loop, Attribution Expansion, Premium Positioning, Founder Psychology, Long-Term Value
+  - _DTC skincare at $10M with 15% margins stuck in performance marketing trap; scaling requires shifting from direct-response to brand-building to escape commoditization and premium pricing._
+- **why_your_content_isn_t_attracting_the_customers_you_want_2Abd02X4PnA.txt** — 8 claims · 6 sections · topics: SPCL Framework, Status Definition, Power Through Say-Do, Credibility Building, Likeness And Audience, Influence Stack, Content Strategy
+  - _Framework for building influence through content using SPCL: Status, Power, Credibility, Likeness—explaining how to attract right audience instead of maximizing views._
+- **why_your_restaurant_marketing_doesn_t_matter_u99G6KwRWQ0.txt** — 8 claims · 4 sections · topics: Product-Market Fit, Word-of-Mouth Marketing, Grand Opening Strategy, CAC vs Product, Customer Experience, Location Scaling
+  - _Restaurant growth is driven by product quality and customer experience, not marketing spend; 90% of diners find restaurants via word-of-mouth and reviews, making execution more valuable than advertising._
+- **why_your_sales_team_tanks_after_every_big_month_IVNuDhV1uw4.txt** — 14 claims · 7 sections · topics: Sales Culture Volatility, Process-Over-Player Philosophy, Sales Team Management, Script Enforcement, Training and Coaching, Talent Selection
+  - _Real estate wholesaler experiences revenue crashes after peak months due to sales culture and discipline issues; root cause is leadership and process enforcement._
+- **you_don_t_have_to_feel_good_enough_to_win_HwTWXXoVm-8.txt** — 5 claims · 3 sections · topics: Action Decoupled from Feeling, Hyper Successful Traits, Early Wins Build Confidence
+  - _You can feel unqualified, insecure, or "not good enough" and still win by taking the required actions; the feeling and the outcome are decoupled._
+- **you_don_t_need_2x_more_effort_you_need_10x_Qq-iYKtyF0U.txt** — 11 claims · 4 sections · topics: Input-Output Equations, Order of Magnitude Thinking, Leverage Mechanics, Control Relinquishment, Scaling Through Others, Entrepreneurial Trajectory
+  - _Entrepreneurs must think in 10x/100x multipliers, not doubles; success requires defining input-output equations then scaling effort by orders of magnitude, which only becomes possible through leveraging others._
+- **you_ll_find_this_video_when_you_need_it_1vHTG2WEoYc.txt** — 6 claims · 3 sections · topics: Action Over Narrative, Shame as Fuel, Narrative Adaptation, First Rule of Entrepreneurship, Emotional Authenticity
+  - _Use whatever emotional fuel and resources you have—shame, negative past, deprivation—to drive action; the narrative about why you're motivated doesn't matter, only that you take the required actions._
+- **you_need_to_advertise_more_lBNpcvKvf38.txt** — 8 claims · 5 sections · topics: Marketing Volume, Creative Production, Content Consistency, Work Multiplier Effect
+  - _How to scale marketing by focusing on volume, consistency, and accepting short-term inefficiency; more is not just scaling spend, it's increasing creative, platforms, and output._
+- **you_need_to_work_100x_harder_otJE7ij924s.txt** — 8 claims · 4 sections · topics: Disproportionate Effort, Exponential Returns, Mastery Depth, Standard Elevation, Work Multiplication, Effort Scaling
+  - _Excellence requires disproportionate effort; working 100x harder can yield 1M-fold returns, but few people understand the depth of work required to reach true mastery._
+- **you_re_not_a_victim_of_your_circumstances_keep_going_LOSLhlb5GKM.txt** — 6 claims · 3 sections · topics: Work Shapes You, Skills Over Outcomes, Delayed Profit, Compounding Development, Mountain Climbing Metaphor, Loss and Capability
+  - _Argues that work shapes you more than results, and that five years of apparent failure actually built skills that generated 5x the profit in the next 12 months. Emphasizes that climbing small mountains builds capacity for bigger ones._
+- **you_re_not_winning_you_re_just_getting_used_to_pain_IxqZEmO9WUQ.txt** — 6 claims · 2 sections · topics: Growth Through Adversity, Capacity Expansion, Resilience Building, Reframing Difficulty, Workload Tolerance
+  - _Growth requires pain and discomfort; each challenge you survive raises your capacity ceiling, creating inverse PTSD where you learn you can handle more than you thought._
+- **you_think_you_re_not_smart_enough_REDPMH2BMrY.txt** — 6 claims · 3 sections · topics: Intelligence as Speed, Learning Definition, Iteration Vectors, Skill as Chained Behaviors, Work Ethic Substitution
+  - _Reframes intelligence as speed of learning rather than innate ability. Shows that you can compensate for fewer natural iterations through higher iteration velocity._
+- **your_business_needs_consumable_media_Pa1XNVGhzOI.txt** — 12 claims · 9 sections · topics: Consumable Media, Education Product Limitations, Recurring Revenue Model, Value Creation Through Pre-Work, Community Retention, Accountability Systems, Magical Product Experiences, Complexity Reduction, Churn Prevention
+  - _Explores how to build sustainable business revenue by creating consumable media that customers repeatedly use and pay for monthly, transforming one-time educational products into recurring revenue streams._

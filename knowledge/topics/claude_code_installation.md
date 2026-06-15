@@ -35,9 +35,6 @@
 - Fixing knowledge base issue by adding OpenAI key again — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Testing and Refining the AI Support System"]
 
 
-## Connections
-- Claude Code Installation involves Visual Studio and API keys, while AI Operating System Setup specifies creating a Shiny folder and installing skills to build the complete AI infrastructure. _(connects to: Ai Operating System Setup)_
-- AI-Generated Websites highlights Visual Studio Code excelling at building sites with AI, while Claude Code Installation provides the exact setup (Visual Studio, API keys, Shiny folder) for this development environment. _(connects to: Ai Generated Websites)_
 
 ---
 _Topic appears in 1 source(s) · 10 claim(s) · 1 connection(s)_

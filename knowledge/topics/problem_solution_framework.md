@@ -27,8 +27,6 @@
 - Create five core value drivers by identifying problems, turning them into solutions, listing delivery vehicles, and trimming to high-value low-cost options. — [100m_offers.txt]
 - You must solve every perceived problem a buyer has; missing one can prevent the sale entirely. — [100m_offers.txt]
 
-## Connections
-- Problem Solution Framework identifies all buyer problems and converts them to solutions, directly addressing all four Value Equation levers (dream outcome, perceived likelihood, time delay, effort/sacrifice). _(connects to: Value Equation)_
 
 ---
 _Source: 100m_offers.txt · 2 claim(s)_

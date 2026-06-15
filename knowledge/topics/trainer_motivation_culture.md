@@ -16,8 +16,9 @@
 ## Claims
 - Motivate trainers intrinsically via significance (monthly trainer awards), contribution (ask for program ideas), growth (pay $30/week for certifications), and certainty (on-time payments, consistent leadership) — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Team Compensation Incentives structure pay as base $15-20/hour plus revenue share and per-sale bonuses, enabling Trainer Motivation Culture through extrinsic income paths and intrinsic significance/contribution/growth/certainty levers. _(connects to: Team Compensation Incentives)_
+- Train concrete behaviors not charisma; extrinsic and intrinsic motivation unlock trainer performance. _(connects to: Sales Training And Behavioral Language)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

@@ -18,9 +18,14 @@
 - Most ads hit a wall when targeting expands from warm audiences to cold audiences; better creative quality, not market saturation, is the limiting factor — [100m_playbook_goated_ads.txt]
 - Audience awareness goes from Most Aware (warmest, smallest) at bottom to Completely Unaware (coldest, largest) at top; ads must improve in quality and creative as audience gets colder — [100m_playbook_goated_ads.txt]
 
+
 ## Connections
-- The Audience Awareness Pyramid shows why Expansion Hooks for New Markets are necessary: as audiences get colder and larger, ad quality must improve from Most Aware (offer-driven hooks) to Completely Unaware (broad meme-like content). _(connects to: Expansion Hooks For New Markets)_
-- Audience Awareness Pyramid shows that ads scale by improving creative quality, not spend, while Premium Offers require 3-5x higher prices to justify 5-10x higher CAC as audiences grow colder. _(connects to: Premium Offers)_
+- Larger audiences require better creative; educational content builds loyal customers while entertainment builds uncommitted scale. _(connects to: Content Strategy Entertainment Vs Education)_
+- Building audience early provides leverage multiplier; creative quality requirements increase proportionally. _(connects to: Audience Building)_
+- Creative quality is primary spend constraint; better creative unlocks higher budgets and larger audiences. _(connects to: Creative Optimization)_
+- Large audiences require better creative; but first qualify that audience has actual buying power. _(connects to: Target Audience Qualification)_
+- Right audience on small platform beats wrong audience on large; quality of audience compounds with creative quality. _(connects to: Content Audience Misalignment)_
+- Larger audiences need better creative; entertainment content doesn't convert—different audiences, not funnels. _(connects to: Funnel Myth Debunking)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 2 claim(s)_

@@ -20,8 +20,10 @@
 ## Claims
 - Charge $500-$600 for front-end 6-week challenge with money-back guarantee if clients hit weight-loss goals; transforms cheap $21 offers into premium positioning — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Irresistible Offers bundle gym services into rare, exclusive, risk-free programs at $500-600 with money-back guarantees, applying the Grand Slam Offer principle of combining attractive promotion, unmatchable value, premium price, and guarantee. _(connects to: Grand Slam Offer)_
+- Use discounted offers to reduce purchase friction; bundle into defined-end programs that feel exclusive and risk-free. _(connects to: Attraction Offers)_
+- Free generates 9x volume; bundle it with paid exclusivity and risk-reversal to create irresistible conversion. _(connects to: Free Offers)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

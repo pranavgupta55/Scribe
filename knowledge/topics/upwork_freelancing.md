@@ -27,8 +27,6 @@
 - Upwork is recommended for outreach (mechanism: using Upwork for outreach, outcome: landing clients) — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "The Power of Upwork for Beginners"]
 - Upwork's default email sending window is scheduled from 7 a.m. to 4 p.m., with a time zone-based scheduling mechanism, and this window is recommended for business hours. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Maximizing Client Acquisition with Upwork and Cold Email"]
 
-## Connections
-- Upwork Freelancing provides initial clients through platform sign-ups and profile optimization, while Client Acquisition Strategies recommend leveraging Upwork with strategic pricing for rapid scaling. _(connects to: Client Acquisition Strategies)_
 
 ---
 _Topic appears in 1 source(s) · 7 claim(s) · 0 connection(s)_

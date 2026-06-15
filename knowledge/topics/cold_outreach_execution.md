@@ -25,8 +25,11 @@
 ## Claims
 - Cold outreach success requires three elements: targeted lists (scraped, brokered, or manually assembled), personalization of initial contact, and big fast value to overcome stranger distrust — [100m_leads.txt]
 
+
 ## Connections
-- Cold Outreach requires scraped lists, personalization, and big fast value to overcome stranger distrust, while Warm Outreach leverages known contacts where trust is already established, both achieving 1-2 customers per 100 attempts. _(connects to: Warm Outreach Strategy)_
+- One-to-one cold outreach via email, phone, or direct mail generates engaged leads at scale. _(connects to: Cold Email Campaigns)_
+- One-to-one contact via email, phone, DM generates engaged leads; seamless upselling compounds with system integration. _(connects to: Cold Outreach Referral Growth)_
+- One-to-one contact generates engaged leads; cold process works on both cold and warm leads when proper. _(connects to: Cold Process On Warm Leads)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

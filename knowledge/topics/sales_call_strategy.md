@@ -16,9 +16,11 @@
 - Spend four hours daily on marketing — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
 
+
 ## Connections
-- Critical Thinking for Closing Deals recognizes that deal closing is hard and requires critical thought, while Sales Call Strategy provides the doctor approach (20% dialogue, 80% questions) enabling clients to discover their own needs. _(connects to: Critical Thinking For Closing Deals)_
-- Upselling and Referrals recognize that clients are more persuaded when they state their own problems, which Sales Call Strategy enables through the doctor approach (20% dialogue, 80% questions). _(connects to: Upselling And Referrals)_
+- Structured sales calls with problem-outcome-solution framing scale $97 offers to $3K while delivering 5x ROI. _(connects to: Sales Process Overhaul)_
+- Structured sales calls with clear process beat ad hoc closing; order of operations matters. _(connects to: Sales Motion Fundamentals)_
+- Structured sales calls achieve 5x ROI; sales process constraints matter more than offer or leads. _(connects to: Sales Process Redesign)_
 
 ---
 _Topic appears in 1 source(s) · 8 claim(s) · 3 connection(s)_

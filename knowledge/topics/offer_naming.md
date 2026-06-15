@@ -27,8 +27,6 @@
 - Container words (Challenge, Blueprint, Bootcamp, Intensive, Accelerator) denote bundled systems that can't be compared to commodities. — [100m_offers.txt]
 - When offers fatigue, change creative → copy → headline wrapper → duration → bonuses/discount, only changing the money model as last resort. — [100m_offers.txt]
 
-## Connections
-- Offer Naming uses the M-A-G-I-C formula where Avatar and Goal directly reference the Dream Outcome, ensuring the offer name attracts the right buyers seeking the right status increase. _(connects to: Dream Outcome)_
 
 ---
 _Source: 100m_offers.txt · 3 claim(s)_

@@ -16,8 +16,9 @@
 ## Claims
 - Trainers earn base $15-20/hour + 25% revenue share on semi-private clients + $15-50 per supplement sale; potential $60k+/year on one trainer's nine semi-privates plus 12 supplement sales/month — [gym_launch_secrets.txt]
 
+
 ## Connections
-- Team Compensation Incentives structure pay as base $15-20/hour plus revenue share and per-sale bonuses, enabling Trainer Motivation Culture through extrinsic income paths and intrinsic significance/contribution/growth/certainty levers. _(connects to: Trainer Motivation Culture)_
+- Sales and trainer compensation align profit; base plus revenue share or per-unit bonus unlocks $60K+ potential. _(connects to: Compensation Structure)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_

@@ -59,8 +59,9 @@
 - Focus on marketing over technical skills — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
 
+
 ## Connections
-- Upwork Freelancing provides initial clients through platform sign-ups and profile optimization, while Client Acquisition Strategies recommend leveraging Upwork with strategic pricing for rapid scaling. _(connects to: Upwork Freelancing)_
+- Leverage strategic pricing and client results together; case studies prove what messaging promises. _(connects to: Client Case Studies And Results)_
 
 ---
 _Topic appears in 1 source(s) · 35 claim(s) · 8 connection(s)_

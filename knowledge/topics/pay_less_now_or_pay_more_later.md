@@ -11,5 +11,8 @@
 ## Claims
 - Pay Less Now or Pay More Later options with conditional satisfaction guarantees require clear yes/no results tracked easily, with cancellation rates above 10% indicating too loose guarantee conditions. — [100m_money_models.txt]
 
+## Connections
+- Offer structure with bonuses worth more than base offer acquires customers; discount-now-or-full-price-later conditions choice. _(connects to: Offers And Bonuses)_
+
 ---
 _Source: 100m_money_models.txt · 1 claim(s)_

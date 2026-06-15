@@ -14,8 +14,6 @@
 ## Claims
 - Launches use whisper-tease-shout method: create curiosity early (whisper every 4-6 weeks), reveal product details and value (tease weekly), then drive urgency (shout daily until launch) — [100m_leads.txt]
 
-## Connections
-- Launch Strategies use whisper-tease-shout sequencing (curiosity early, reveal weekly, urgent daily), while Urgency reveals that 50-60% of sales occur in the final 4 hours, making the shout phase the revenue driver. _(connects to: Urgency)_
 
 ---
 _Source: 100m_leads.txt · 1 claim(s)_

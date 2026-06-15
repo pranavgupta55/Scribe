@@ -16,8 +16,6 @@
 ## Claims
 - Faceless ads use screenshots of customer comments/texts, text-only slides, animations, cartoons, or visual effects without requiring on-camera talent — [100m_playbook_goated_ads.txt]
 
-## Connections
-- Faceless Ads scale production by removing on-camera talent and using screenshots, text, animations, directly enabling Ad Creative Formats to rotate meat variations weekly without talent constraints. _(connects to: Ad Creative Formats)_
 
 ---
 _Source: 100m_playbook_goated_ads.txt · 1 claim(s)_

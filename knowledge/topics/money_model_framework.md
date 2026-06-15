@@ -8,8 +8,6 @@
 - Gym Launch scaled from $476,000/month to $4.4M/month over 14 months using sequential Decoy Offers ($16k), Classic Upsells ($42k/year), Payment Plan + Continuity Discounts, and Menu Upsells with Feature Downsells. — [100m_money_models.txt]
 - Perfect one offer at a time; implement Money Models in quarters not weeks; raise new offer prices incrementally as you gain yeses before moving to next stage. — [100m_money_models.txt]
 
-## Connections
-- The Money Model Framework stages progression through Attraction, Upsell, and Continuity offers while Sales to Fulfillment Continuum advises creating flow first before optimizing, preventing premature systematization that strangles cash flow. _(connects to: Sales To Fulfillment Continuum)_
 
 ---
 _Source: 100m_money_models.txt · 4 claim(s)_

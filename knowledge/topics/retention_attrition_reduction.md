@@ -13,9 +13,13 @@
 - 4. Events: Every 21 days (BBQ, bowling, hike, etc.); members-only for internal plays to drive FOMO
 - 5. Exit interview: Before cancellation, use C-L-O-S-E-R framework to uncover true obstacle and offer creative solution (freeze, schedule shift, price adjustment)
 
+
 ## Connections
-- Attendance Tracking identifies 2-visits-or-less members as cancellation-bound by Wednesday, enabling Retention Attrition Reduction through aggressive reach-out that cuts churn from 9% to under 3% within 3 months. _(connects to: Attendance Tracking Follow Up)_
-- Exit Interviews using C-L-O-S-E-R framework save 25% of cancellations by uncovering true obstacles and offering creative solutions, contributing to the broader Retention Attrition Reduction goal of reaching 3-4% churn. _(connects to: Exit Interviews Objection Handling)_
+- High churn in SMB services is structural; retention requires automation or premium positioning to be economical. _(connects to: Customer Retention Mechanics)_
+- Churn is hidden growth constraint; five simple systems reduce it from 9-10% industry average to 3-4%. _(connects to: Churn As Growth Ceiling)_
+- 80%+ B2B retention and 3-4% monthly churn require five systems: reach-outs, attendance, cards, events, exit interviews. _(connects to: Churn And Retention)_
+- Hitting day 90 and month 6 milestones via five retention systems drops churn from 10% to 3-4% within months. _(connects to: Cohort Analysis Time Based Churn)_
+- 80% referral retention compounds to 3x revenue in 3 years; fixing churn first outweighs acquisition scaling. _(connects to: Retention Vs Growth Mindset)_
 
 ---
 _Source: gym_launch_secrets.txt · 0 claim(s)_

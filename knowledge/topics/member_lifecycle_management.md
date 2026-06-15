@@ -17,9 +17,6 @@
 ## Claims
 - Member lifecycle: Connect (first few weeks), Refer/Testify (promote as remark-worthy), Testify/Refer (via reviews), Ascend (upsell to higher tier); reach each milestone via touch points and handwritten cards — [gym_launch_secrets.txt]
 
-## Connections
-- Member Lifecycle Management guides members through Connect-Refer-Testify-Ascend milestones, with Internal Plays like 6-week bootcamp challenges serving as leverage points for upselling at 25% member engagement. _(connects to: Internal Plays Upsells)_
-- Reach Out Communication Systems contact members every 14 days with personalized praise via trainers, supporting Member Lifecycle Management's Connect-Refer-Testify-Ascend progression with systematic touchpoints. _(connects to: Reach Out Communication Systems)_
 
 ---
 _Source: gym_launch_secrets.txt · 1 claim(s)_
