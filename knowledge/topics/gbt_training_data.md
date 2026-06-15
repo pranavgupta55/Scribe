@@ -9,6 +9,9 @@
 ## Claims
 - The GBT model is trained on ads generated from the speaker's business, which achieved over $25 million in revenue from ad investments. — [the_lazy_way_i_make_money_with_ai_2026.txt § "GBT Training Data"]
 
+## Connections
+- GBT Training Data from a business generating over $25M revenue demonstrates the scale achievable with AI, supporting AI Business Opportunities showing that one person can build billion-dollar companies leveraging AI models. _(connects to: Ai Business Opportunities)_
+
 ---
 _Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
 _Sources: the_lazy_way_i_make_money_with_ai_2026.txt_

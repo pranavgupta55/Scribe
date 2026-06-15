@@ -13,9 +13,6 @@
 - The client has 17,000 inactive contacts in his database, which is not being utilized for reactivation or reviews. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Client's Marketing Inefficiencies"]
 - A 25,000-person market within a 3-mile radius exemplifies a captive audience, highlighting the challenges of scaling operations in smaller markets. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Implementation of Training-Focused Marketing"]
 
-## Connections
-- The AI-driven system is designed to re-engage leads, yet the client's marketing inefficiencies show a lack of utilization for the database. _(connects to: AI-Driven Review/Referral Systems)_
-- Both topics highlight the need for AI adoption to address underutilized resources and the challenges of scaling operations in smaller markets. _(connects to: Market Opportunity)_
 
 ---
 _Topic appears in 1 source(s) · 5 claim(s) · 2 connection(s)_

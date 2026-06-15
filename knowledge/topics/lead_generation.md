@@ -29,10 +29,9 @@
 - 341 leads for $1.86 — [the_lazy_way_i_make_money_with_ai_2026.txt § "Lead Generation Example"]
 - 41 leads for $90 — [the_lazy_way_i_make_money_with_ai_2026.txt § "Lead Generation Example"]
 
+
 ## Connections
-- Both Lead Generation and Reactivation Campaign agree that AI-driven lead generation offers significant cost-benefit analysis for maximizing conversion rates. _(connects to: Reactivation Campaign)_
-- Lead generation methods support client acquisition strategies by providing reliable leads through AI tools _(connects to: Client Acquisition Strategies)_
-- Lead generation processes utilize AI tools like ChatGVD/Cloud for ad copy, aligning with AI-driven website strategies _(connects to: AI-Driven Website)_
+- Cold Email Campaigns using Cloud Code and Instantly.ai automate 90% of the client acquisition process, while Lead Generation provides B2B lead lists from TrustedLeads.io to fuel those campaigns. _(connects to: Cold Email Campaigns)_
 
 ---
 _Topic appears in 2 source(s) · 10 claim(s) · 3 connection(s)_

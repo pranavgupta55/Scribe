@@ -20,6 +20,9 @@
 - Claude Code connects to a Claude chat account via an authorization process that asks to 'connect to your Claude chat account'. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Installing Claude Code and Connecting Account"]
 - Chatting with Claude helps beginners determine the optimal tech stack for scaling, cost, speed, and functionality, forming the foundation of the cloud code framework. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Pricing AI Services: The 5x ROI Rule"]
 
+## Connections
+- AI Tools like Cloud Code, CRM software, and agent development are operationalized through Claude Code, which provides dark mode, account-based connections, and Pro/Max subscriptions for implementation. _(connects to: Ai Tools)_
+
 ---
 _Topic appears in 1 source(s) · 5 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

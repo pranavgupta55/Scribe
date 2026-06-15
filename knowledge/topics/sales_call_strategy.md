@@ -15,10 +15,10 @@
 - The 5x return on investment is promised by highlighting the pain points and outcomes, not the features or AI technology. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Selling Value, Not AI Features"]
 - Spend four hours daily on marketing — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
+
 ## Connections
-- Both topics agree that a CRM system is essential for organizing leads and follow-ups, with the latter emphasizing the need for a system to re-engage database leads. _(connects to: CRM Limitations and Manual Follow-Ups)_
-- Both Client Acquisition Strategies and Sales Call Strategy focus on generating leads and converting them into clients through overlapping techniques like cold email campaigns and structured sales processes _(connects to: Client Acquisition Strategies)_
-- Service Delivery's automation aligns with Sales Call Strategy's use of engagement techniques, such as asking questions to drive self-identification in client interactions. _(connects to: Service Delivery)_
+- Critical Thinking for Closing Deals recognizes that deal closing is hard and requires critical thought, while Sales Call Strategy provides the doctor approach (20% dialogue, 80% questions) enabling clients to discover their own needs. _(connects to: Critical Thinking For Closing Deals)_
+- Upselling and Referrals recognize that clients are more persuaded when they state their own problems, which Sales Call Strategy enables through the doctor approach (20% dialogue, 80% questions). _(connects to: Upselling And Referrals)_
 
 ---
 _Topic appears in 1 source(s) · 8 claim(s) · 3 connection(s)_

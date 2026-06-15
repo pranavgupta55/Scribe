@@ -29,6 +29,9 @@
 - Dark mode is integrated for contrast enhancement in website designs — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Building High-Converting AI-Generated Websites"]
 - AI replies to emails by checking the knowledge base and displaying confidence scores — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
 
+## Connections
+- AI-Generated Websites highlights Visual Studio Code excelling at building sites with AI, while Claude Code Installation provides the exact setup (Visual Studio, API keys, Shiny folder) for this development environment. _(connects to: Claude Code Installation)_
+
 ---
 _Topic appears in 1 source(s) · 5 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

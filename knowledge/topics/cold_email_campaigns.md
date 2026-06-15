@@ -35,8 +35,9 @@
 - 64% of emails are classified as good emails in the cold email campaign report. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Launching Cold Email Campaigns"]
 - Use cold email and Upwork proposals — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
+
 ## Connections
-- Both Cold Email Campaigns and AI-Driven Website leverage AI tools like ChatGVD/Cloud to create campaigns and nurture leads _(connects to: AI-Driven Website)_
+- Cold Email Campaigns using Cloud Code and Instantly.ai automate 90% of the client acquisition process, while Lead Generation provides B2B lead lists from TrustedLeads.io to fuel those campaigns. _(connects to: Lead Generation)_
 
 ---
 _Topic appears in 1 source(s) · 11 claim(s) · 1 connection(s)_

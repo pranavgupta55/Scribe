@@ -26,13 +26,9 @@
 - URL used for API key — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Setting Up Instantly.ai with Claude Desktop App"]
 - 30% of US small businesses lack a website by 2026, driving a $10 million market opportunity — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Building High-Converting AI-Generated Websites"]
 
+
 ## Connections
-- Both the market opportunity and AI-driven website highlight AI's potential in marketing and the lucrative market for advanced users _(connects to: AI-Driven Website)_
-- AI-driven lead management strategies highlight the critical role of immediate follow-up and market potential for AI services _(connects to: Lead Follow-Up)_
-- Both market opportunity and AI business opportunities emphasize the low AI adoption rate and the potential for a niche market _(connects to: AI Business Opportunities)_
-- Both topics highlight the need for AI adoption to address underutilized resources and the challenges of scaling operations in smaller markets. _(connects to: Client's Current Marketing Inefficiencies)_
-- Both AI-Driven Lead Generation Without Ads and Market Opportunity agree that AI's potential to generate leads and exploit market gaps in adoption is significant _(connects to: AI-Driven Lead Generation Without Ads)_
-- Both Market Opportunity and AI-Driven Marketing agree that the 0.04% of advanced AI users can leverage the massive potential of AI adoption to create lucrative services. _(connects to: AI-Driven Marketing)_
+- AI Adoption Rates showing that learning AI should be priority are enabled by Market Opportunity identifying the massive gap (84% never used AI) creating opportunity for the 0.04% of advanced users. _(connects to: Ai Adoption Rates)_
 
 ---
 _Topic appears in 1 source(s) · 9 claim(s) · 6 connection(s)_

@@ -9,8 +9,10 @@
 ## Claims
 - Front-end deployment to Vercel requires GitHub repository creation and Vercel project setup — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying Automations to Production"]
 
+
 ## Connections
-- Both topics agree that setting up GitHub for deployment is essential for front-end deployment to Vercel. _(connects to: GitHub Integration)_
+- Building Framework requires creating GitHub repos and setting up Vercel projects for front-end deployment, with GitHub Integration providing step-by-step setup including account creation and repo configuration. _(connects to: Github Integration)_
+- Website Deployment shows landscaping company building premium website in 8 minutes 41 seconds, operationalizing Building Framework that integrates tech stack, design, and UX with optimized AI implementation. _(connects to: Website Deployment)_
 
 ---
 _Topic appears in 1 source(s) · 1 claim(s) · 1 connection(s)_

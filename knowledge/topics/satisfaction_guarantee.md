@@ -9,8 +9,9 @@
 ## Claims
 - The Proof of Concept Offer is a satisfaction guarantee with upfront payment of $1,000 for website builds, ensuring a full refund if not satisfied. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "The Proof of Concept Offer for Closing Deals"]
 
+
 ## Connections
-- Structured processes enable the satisfaction guarantee by ensuring lead re-engagement and conversion _(connects to: Structured Processes for Reviews/Referrals/Lead Re-engagement)_
+- Satisfaction Guarantees on website builds ($1,000 upfront with full refund if unsatisfied) operationalize the Guarantees principle that reversing buyer risk increases conversions 2-4x by removing purchase friction. _(connects to: Guarantees)_
 
 ---
 _Topic appears in 1 source(s) · 1 claim(s) · 1 connection(s)_

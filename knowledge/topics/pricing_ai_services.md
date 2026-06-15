@@ -29,11 +29,9 @@
 - Tiers are used to manage revenue streams, with plans 1-3 offering different call limits and a higher-tier plan for increased capacity, ensuring consistent profitability. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Profitability, Tiers, and Software Costs"]
 - A call should focus on the current problems a client faces and the promised savings, rather than emphasizing AI features or pricing. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Selling Value, Not AI Features"]
 
+
 ## Connections
-- Both topics discuss pricing models tied to ROI, with AI-driven services using tiered pricing and marketing employing structured processes to achieve revenue. _(connects to: AI-Driven Marketing)_
-- Sustaining business goals (2,000–3,000 monthly) align with pricing models that ensure profitability through tiered structures _(connects to: Sustaining the Business)_
-- Both discuss pricing models tied to cost savings and client satisfaction, with specific examples of result-based pricing and milestone payments. _(connects to: AI-Driven Website)_
-- Cold outreach failures contrast with AI-driven pricing models that rely on measurable results _(connects to: Cold Outreach & Referral Growth)_
+- Sustaining Business Growth emphasizes reaching $2,000-3,000 monthly stability through happy clients and low churn, which Pricing AI Services enables through 5x ROI-focused tiered models that incentivize long-term partnerships. _(connects to: Sustaining The Business)_
 
 ---
 _Topic appears in 1 source(s) · 9 claim(s) · 4 connection(s)_

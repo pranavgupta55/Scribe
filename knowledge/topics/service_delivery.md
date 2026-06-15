@@ -34,12 +34,9 @@
 - Modify UI elements to remove unwanted shadows and gradients — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Refining the Dashboard Design"]
 - The system escalates issues but requires manual refreshes for proper functionality — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
 
+
 ## Connections
-- Both topics agree that AI-driven strategies are essential for re-engaging database leads to improve marketing outcomes. _(connects to: Structured Processes for Reviews/Referrals/Lead Re-engagement)_
-- Both Service Delivery and AI Tools agree that AI tools are essential for automating client operations and improving business efficiency _(connects to: AI Tools)_
-- The CRM's lack of system to re-engage database leads is a prerequisite for service delivery techniques like claw listening and automation _(connects to: CRM Limitations and Manual Follow-Ups)_
-- Service Delivery's automation aligns with Sales Call Strategy's use of engagement techniques, such as asking questions to drive self-identification in client interactions. _(connects to: Sales Call Strategy)_
-- Service Delivery aligns with AI Business Opportunities by leveraging AI tools for client management, enabling the scaling of AI-driven businesses. _(connects to: AI Business Opportunities)_
+- Implementation of Training-Focused Marketing involves collaboration between marketing and tech leads in onboarding, while Service Delivery emphasizes automation through contextual listening during meetings. _(connects to: Implementation Of Training Focused Marketing)_
 
 ---
 _Topic appears in 1 source(s) · 11 claim(s) · 5 connection(s)_

@@ -58,15 +58,9 @@
 - Work for free (design a website for them for free) — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 - Focus on marketing over technical skills — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
+
 ## Connections
-- Both cold outreach and client acquisition strategies emphasize using targeted approaches to generate leads, albeit with different focuses _(connects to: Cold Outreach & Referral Growth)_
-- Client acquisition strategies provide foundational principles that underpin lead re-engagement and referral processes, ensuring consistent follow-up and conversion _(connects to: Structured Processes for Reviews/Referrals/Lead Re-engagement)_
-- Both client acquisition strategies and AI business opportunities highlight the potential of AI to generate revenue and scale businesses through structured approaches _(connects to: AI Business Opportunities)_
-- Both Client Acquisition Strategies and Sales Call Strategy focus on generating leads and converting them into clients through overlapping techniques like cold email campaigns and structured sales processes _(connects to: Sales Call Strategy)_
-- Both AI-driven review systems and client acquisition strategies leverage AI to generate revenue through free work and trust-building. _(connects to: AI-Driven Review/Referral Systems)_
-- Lead generation methods support client acquisition strategies by providing reliable leads through AI tools _(connects to: Lead Generation)_
-- Client acquisition strategies leverage AI-led ads and lead nurturing, supported by AI-driven website tools _(connects to: AI-Driven Website)_
-- Client acquisition strategies utilize AI tools like Make.com and TrustedLeads.io to reach leads efficiently. _(connects to: AI Tools)_
+- Upwork Freelancing provides initial clients through platform sign-ups and profile optimization, while Client Acquisition Strategies recommend leveraging Upwork with strategic pricing for rapid scaling. _(connects to: Upwork Freelancing)_
 
 ---
 _Topic appears in 1 source(s) · 35 claim(s) · 8 connection(s)_

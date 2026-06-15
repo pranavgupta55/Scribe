@@ -33,9 +33,11 @@
 - Trigger.dev is built with code and better than NNN and Make — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Automating Business Processes with Trigger.dev"]
 - The Superpowers skill generates a design spec with input fields (email, company name, LinkedIn URL) and output fields (contact info, company info, socials) for a lead enricher, using the Hunter API with fallback providers (Hunter, Polar, Merge) and sequential enrichment. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Demonstrating the Framework: Building a Lead Enricher"]
 
+
 ## Connections
-- Both Service Delivery and AI Tools agree that AI tools are essential for automating client operations and improving business efficiency _(connects to: Service Delivery)_
-- Client acquisition strategies utilize AI tools like Make.com and TrustedLeads.io to reach leads efficiently. _(connects to: Client Acquisition Strategies)_
+- AI Tools like Cloud Code, CRM software, and agent development are operationalized through Claude Code, which provides dark mode, account-based connections, and Pro/Max subscriptions for implementation. _(connects to: Claude Code)_
+- Trigger.dev enables open-source automation with cloud backend configuration, providing the execution layer for AI Tools like CRM software, marketing, and agent development mentioned in the AI Tech Stack. _(connects to: Trigger Dev Automations)_
+- Composio API keys enable Gmail and Google Drive integration for invoice generation and email sending, operationalizing AI Tools' requirement for CRM software, cloud, and marketing integrations. _(connects to: Composio Authentication)_
 
 ---
 _Topic appears in 1 source(s) · 9 claim(s) · 2 connection(s)_

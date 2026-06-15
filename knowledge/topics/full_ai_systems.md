@@ -29,8 +29,10 @@
 - Subagent-driven automation for faster development — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Building an Advanced AI Support Email System"]
 - Deployment of a Next.js application with MongoDB for backend operations — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
 
+
 ## Connections
-- Claude Code Installation builds on the setup requirements needed for Full AI Systems. _(connects to: Claude Code Installation)_
+- Full AI Systems automate work into a one-person business with automation and dashboards using Claude Code, realizing the One Person Company vision of billion-dollar businesses run by individuals. _(connects to: One Person Company)_
+- Five AI Workers notes that AI has limitations in creativity and complex reasoning, meaning Full AI Systems must be designed with human supervision and decision-making at critical junctures. _(connects to: Five Ai Workers)_
 
 ---
 _Topic appears in 1 source(s) · 6 claim(s) · 1 connection(s)_

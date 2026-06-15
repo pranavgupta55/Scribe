@@ -14,6 +14,9 @@
 - The speaker acknowledges the need for a more specific marketing strategy to target potential customers rather than existing members. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Lack of Follow-Up Systems"]
 - A 10,000-person market in a 7-mile radius demonstrates the potential for consistent results through structured processes, as shown via screen sharing. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Implementation of Training-Focused Marketing"]
 
+## Connections
+- Market Gap Analysis identifies 10,000-person market potential in 7-mile radius through structured processes, while Decagon Matrix Marketing operationalizes that targeting by creating 10 distinct audience segments. _(connects to: Decagon Matrix Marketing)_
+
 ---
 _Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
 _Sources: watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt_

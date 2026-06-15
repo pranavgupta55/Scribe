@@ -30,8 +30,9 @@
 - Setting MongoDB URI and DB name in production trigger.dev — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Testing and Refining the AI Support System"]
 - A refresh button with polling every 30 seconds to manually trigger updates — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
 
+
 ## Connections
-- Both platforms agree that AI-driven lead management enhances engagement through personalized outreach _(connects to: AI-Driven Lead Nurturing)_
+- Trigger.dev enables open-source automation with cloud backend configuration, providing the execution layer for AI Tools like CRM software, marketing, and agent development mentioned in the AI Tech Stack. _(connects to: Ai Tools)_
 
 ---
 _Topic appears in 1 source(s) · 6 claim(s) · 1 connection(s)_

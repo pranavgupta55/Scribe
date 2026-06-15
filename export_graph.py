@@ -185,18 +185,28 @@ def build_graph():
         # task 4 — enrich source node: YouTube link, video length, transcription + processing
         # times (read from the .meta.json sidecar at process time), plus the existing counts.
         url   = meta.get("url", "")
-        length_str = fmt_hms(meta.get("duration_seconds"))
 
         desc = f"**{claim_n} claims · {section_n} sections**"
         if summary:
             desc += f"\n\n{summary}"
         if url:
             desc += f"\n\n[Watch on YouTube]({url})"
-        desc += (
-            f"\n\n- **Video length:** {length_str}"
-            f"\n- **Transcription time:** {fmt_mins(meta.get('transcribe_seconds'))}"
-            f"\n- **Extraction time:** {fmt_mins(meta.get('process_seconds'))}"
-        )
+        if meta.get("duration_seconds"):
+            # Video source: show length + transcription time
+            desc += (
+                f"\n\n- **Video length:** {fmt_hms(meta.get('duration_seconds'))}"
+                f"\n- **Transcription time:** {fmt_mins(meta.get('transcribe_seconds'))}"
+                f"\n- **Extraction time:** {fmt_mins(meta.get('process_seconds'))}"
+            )
+        else:
+            # Imported text/book transcript: no video length / transcription step
+            label = "Imported book transcript" if meta.get("source_type") == "book" \
+                else "Imported transcript"
+            desc += (
+                f"\n\n- **Type:** {label}"
+                f"\n- **Extraction time:** {fmt_mins(meta.get('process_seconds'))}"
+                f"\n- **Backend:** {meta.get('backend', 'local')}"
+            )
         desc += f"\n\nTopics: {topic_list or '—'}"
         nodes.append({
             "id":          src,

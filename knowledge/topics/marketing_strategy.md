@@ -9,8 +9,6 @@
 ## Claims
 - Providing marketing services drives revenue — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "CRM Limitations and Manual Follow-Ups"]
 
-## Connections
-- Both topics emphasize driving revenue through marketing services and AI-driven approaches _(connects to: AI-Driven Website)_
 
 ---
 _Topic appears in 1 source(s) · 1 claim(s) · 1 connection(s)_

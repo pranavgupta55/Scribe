@@ -39,11 +39,10 @@
 - The system can be sold as a support inbox to clients, generating revenue up to $5,000/month — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
 - Learn a skill (cloud code) — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
+
 ## Connections
-- Both the AI-Driven Website and AI Business Opportunities highlight AI's transformative potential in business, with the former focusing on revenue generation and the latter on scaling success through AI. _(connects to: AI-Driven Website)_
-- Both client acquisition strategies and AI business opportunities highlight the potential of AI to generate revenue and scale businesses through structured approaches _(connects to: Client Acquisition Strategies)_
-- Both market opportunity and AI business opportunities emphasize the low AI adoption rate and the potential for a niche market _(connects to: Market Opportunity)_
-- Service Delivery aligns with AI Business Opportunities by leveraging AI tools for client management, enabling the scaling of AI-driven businesses. _(connects to: Service Delivery)_
+- AI Business Opportunities showing billion-dollar companies built by one person are realized through One Person Company, demonstrating that AI tools now enable one person to do what teams of hundreds previously required. _(connects to: One Person Company)_
+- GBT Training Data from a business generating over $25M revenue demonstrates the scale achievable with AI, supporting AI Business Opportunities showing that one person can build billion-dollar companies leveraging AI models. _(connects to: Gbt Training Data)_
 
 ---
 _Topic appears in 1 source(s) · 14 claim(s) · 4 connection(s)_
