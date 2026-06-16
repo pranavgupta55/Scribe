@@ -686,12 +686,25 @@ function setView(view) {
   btnGraph.classList.toggle('active', isGraph);
   btnChat.classList.toggle('active', isChat);
   btnCopy.classList.toggle('active', isCopy);
+
+  // Show/hide the three view-panels via opacity (so child elements can animate)
   chatPanel.classList.toggle('show', isChat);
   copyPanel.classList.toggle('show', isCopy);
-  // Graph-only chrome hides in chat/copy modes
-  [canvas, controlsEl, centerBtn, hintEl].forEach(el => {
+  // canvas/center/hint only visible in graph mode (no need to animate these)
+  [canvas, centerBtn, hintEl].forEach(el => {
     if (el) el.style.display = isGraph ? '' : 'none';
   });
+
+  // Sliding side-chrome:
+  //   #controls (graph controls top-left): slides up off-screen when not graph
+  //   #dev-panel (left of chat): slides left off-screen when not chat
+  //   #right (topics sidebar):  slides right off-screen ONLY in copy view
+  controlsEl.classList.toggle('is-hidden', !isGraph);
+  const devEl = document.getElementById('dev-panel');
+  if (devEl) devEl.classList.toggle('is-hidden', !isChat);
+  const rightEl = document.getElementById('right');
+  if (rightEl) rightEl.classList.toggle('is-hidden', isCopy);
+
   if (isChat) {
     chatInput.focus();
     startStatusPoll();
@@ -700,7 +713,6 @@ function setView(view) {
   }
   if (isCopy) {
     copyInput.focus();
-    // Re-layout the stack on entering this view (in case window resized)
     requestAnimationFrame(layoutCopyStack);
   }
 }
@@ -1089,19 +1101,121 @@ let copyBusy  = false;
 let copySeen  = new Set();   // source names included in any prior turn THIS session
                               // (in-memory only — resets on page reload, i.e. new chat)
 
-function fitTextToBox(box) {
-  // Shrink font-size until content fits without scrolling. Starts at 13px,
-  // bottoms out at 8px to keep readability.
-  let fs = 13;
+function fitTextToBox(box, startFs = 12, minFs = 4) {
+  // Shrink font-size until content fits without scrolling.
+  let fs = startFs;
   box.style.fontSize = fs + 'px';
-  box.style.lineHeight = '1.5';
-  // measure
+  box.style.lineHeight = fs < 9 ? '1.25' : '1.4';
+  // Bail out if box is hidden (zero size) — try again later
+  if (box.clientHeight === 0 || box.clientWidth === 0) return;
   while ((box.scrollHeight > box.clientHeight + 1 ||
-          box.scrollWidth  > box.clientWidth  + 1) && fs > 8) {
-    fs -= 0.5;
+          box.scrollWidth  > box.clientWidth  + 1) && fs > minFs) {
+    fs -= 0.25;
     box.style.fontSize = fs + 'px';
-    box.style.lineHeight = fs < 11 ? '1.4' : '1.5';
+    box.style.lineHeight = fs < 9 ? '1.2' : '1.4';
   }
+}
+
+// ── Bento packing: exact tiling of an H×W grid with 1×1 + 1×2 cells ──
+//   1. Choose a (W, H, k) such that 2·k + (N − k) = W·H and k ≤ H·⌊W/2⌋
+//      (= the max horizontal 1×2's that fit in a W×H grid)
+//   2. Place k 1×2 dominos at random valid positions, then fill the rest with
+//      1×1 monominos. Random source-to-cell assignment.
+function shuffled(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function bentoPack(itemsLen, containerW, containerH) {
+  const N = itemsLen.length;
+  if (N === 0) return { placements: [], W: 1, H: 1 };
+  if (N === 1) return { placements: [{ r: 0, c: 0, w: 1, h: 1 }], W: 1, H: 1 };
+
+  const aspect = Math.max(0.4, containerW / Math.max(containerH, 1));
+  const idxByLen = [...itemsLen.keys()].sort((a, b) => itemsLen[b] - itemsLen[a]);
+
+  // Find (W, H, k): pick total cells starting from ~1.3·N upward; for each,
+  // enumerate divisors and pick the one nearest sqrt(cells · aspect).
+  let spec = null;
+  for (let cells = Math.max(N, Math.round(N * 1.3)); cells <= 2 * N + 1; cells++) {
+    const k = cells - N;
+    if (k < 0 || k > N) continue;
+    const ideal = Math.sqrt(cells * aspect);
+    const opts = [];
+    for (let W = 2; W <= cells; W++) {
+      if (cells % W !== 0) continue;
+      const H = cells / W;
+      const maxK = H * Math.floor(W / 2);
+      if (k > maxK) continue;
+      // bias toward even W and target aspect
+      opts.push({ W, H, score: Math.abs(W - ideal) + (W % 2 ? 0.4 : 0) });
+    }
+    opts.sort((a, b) => a.score - b.score);
+    if (opts.length) { spec = { ...opts[0], k }; break; }
+  }
+  if (!spec) {
+    // Fallback to all-1×1 (leaves trailing empty cells in row)
+    const W = Math.max(2, Math.round(Math.sqrt(N * aspect)));
+    const H = Math.ceil(N / W);
+    return {
+      placements: itemsLen.map((_, i) => ({ r: Math.floor(i / W), c: i % W, w: 1, h: 1 })),
+      W, H
+    };
+  }
+  const { W, H, k } = spec;
+
+  // Phase 1: greedy random placement of k wides. If a random shuffle fails,
+  // retry; up to 20 attempts.
+  for (let attempt = 0; attempt < 20; attempt++) {
+    const grid = Array.from({ length: H }, () => Array(W).fill(false));
+    const wideStarts = [];
+    for (let r = 0; r < H; r++)
+      for (let c = 0; c < W - 1; c++)
+        wideStarts.push([r, c]);
+    const order = shuffled(wideStarts);
+    let placed = 0;
+    const widePos = [];
+    for (const [r, c] of order) {
+      if (placed >= k) break;
+      if (grid[r][c] || grid[r][c + 1]) continue;
+      grid[r][c] = grid[r][c + 1] = true;
+      widePos.push({ r, c });
+      placed++;
+    }
+    if (placed < k) continue;  // random pick boxed itself in; retry
+
+    // Phase 2: fill 1×1 cells
+    const smallCells = [];
+    for (let r = 0; r < H; r++)
+      for (let c = 0; c < W; c++)
+        if (!grid[r][c]) smallCells.push({ r, c });
+
+    // Assign sources to positions: longest k → wides, rest → smalls (shuffle each)
+    const widePosShuf = shuffled(widePos);
+    const smallPosShuf = shuffled(smallCells);
+    const wideIds = shuffled(idxByLen.slice(0, k));
+    const smallIds = shuffled(idxByLen.slice(k));
+    const placements = new Array(N);
+    wideIds.forEach((id, i) => {
+      const p = widePosShuf[i];
+      placements[id] = { r: p.r, c: p.c, w: 2, h: 1 };
+    });
+    smallIds.forEach((id, i) => {
+      const p = smallPosShuf[i];
+      placements[id] = { r: p.r, c: p.c, w: 1, h: 1 };
+    });
+    return { placements, W, H };
+  }
+
+  // Final fallback (shouldn't hit): everyone gets row-major 1×1
+  return {
+    placements: itemsLen.map((_, i) => ({ r: Math.floor(i / W), c: i % W, w: 1, h: 1 })),
+    W, H
+  };
 }
 
 function copyAutoGrow() {
@@ -1138,73 +1252,164 @@ function formatTurnText(query, sources) {
   return `Question: ${query}\n\n${blocks.join('\n\n')}`;
 }
 
+function escapeHTML(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function formatOneSource(query, src) {
+  const passages = (src.passages || []).map(p => {
+    const hdr = p.section_title ? `[§ ${p.section_title}] ` : '';
+    return hdr + (p.text || '');
+  }).join('\n\n');
+  const facts = (src.facts && src.facts.length)
+    ? '\n\nKey facts from this source:\n' + src.facts.map(f => `- ${f}`).join('\n')
+    : '';
+  return `Question: ${query}\n\n===== SOURCE: ${src.name} =====\n${passages}${facts}`;
+}
+
 function buildCopyTurn(query, data) {
   const sources = data.sources || [];
   const newSources = sources.filter(s => !copySeen.has(s.name));
   newSources.forEach(s => copySeen.add(s.name));
 
-  const allText = formatTurnText(query, sources);
-  const newText = formatTurnText(query, newSources);
+  const allBulkText = formatTurnText(query, sources);
+  const newBulkText = formatTurnText(query, newSources);
 
   const turn = document.createElement('div');
   turn.className = 'copy-turn';
   turn.innerHTML = `
-    <div class="copy-cols">
-      <div class="copy-col left">
-        <div class="copy-count">
-          <span>New sources <span class="count-num">${newSources.length}</span></span>
-          <span class="copy-hint">click to copy</span>
-        </div>
-        <div class="copy-box new-box"></div>
+    <div class="copy-col bulk">
+      <div class="copy-count">
+        <span>All new (bulk) <span class="count-num">${newSources.length}</span></span>
+        <span class="copy-hint">click</span>
       </div>
-      <div class="copy-col right">
-        <div class="copy-count">
-          <span>All sources <span class="count-num">${sources.length}</span></span>
-          <span class="copy-hint">click to copy</span>
-        </div>
-        <div class="copy-box all-box"></div>
+      <div class="copy-box bulk-box"></div>
+    </div>
+    <div class="copy-col new-bento">
+      <div class="copy-count">
+        <span>New sources <span class="count-num">${newSources.length}</span></span>
+        <span class="copy-hint">click any</span>
       </div>
+      <div class="bento-grid new-grid"></div>
+    </div>
+    <div class="copy-col all-bento">
+      <div class="copy-count">
+        <span>All sources <span class="count-num">${sources.length}</span></span>
+        <span class="copy-hint">click any</span>
+      </div>
+      <div class="bento-grid all-grid"></div>
     </div>
   `;
-  const newBox = turn.querySelector('.new-box');
-  const allBox = turn.querySelector('.all-box');
-  newBox.textContent = newText;
-  allBox.textContent = allText;
+  const bulkBox = turn.querySelector('.bulk-box');
+  const newGrid = turn.querySelector('.new-grid');
+  const allGrid = turn.querySelector('.all-grid');
+  bulkBox.textContent = newBulkText;
 
-  const wireClick = (el, text) => el.addEventListener('click', () => {
-    // Only the focused turn is interactive (.off blocks via pointer-events)
-    copyText(text);
-    el.classList.add('copied');
-    setTimeout(() => el.classList.remove('copied'), 1200);
+  // Click-to-copy for bulk box
+  bulkBox.addEventListener('click', () => {
+    copyText(newBulkText);
+    bulkBox.classList.add('copied');
+    setTimeout(() => bulkBox.classList.remove('copied'), 1200);
   });
-  wireClick(newBox, newText);
-  wireClick(allBox, allText);
+
+  // Build the bento grids
+  const fillBento = (gridEl, srcList) => {
+    gridEl.innerHTML = '';
+    if (srcList.length === 0) {
+      gridEl.innerHTML = '<div class="bc-empty">— none —</div>';
+      gridEl.style.gridTemplateColumns = '1fr';
+      gridEl.style.gridTemplateRows = '1fr';
+      return [];
+    }
+    const cards = [];
+    srcList.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'bento-card';
+      card.innerHTML = `
+        <div class="bc-head" title="${escapeHTML(s.name)}">${escapeHTML(shortenSource(s.name))}</div>
+        <div class="bc-body"></div>`;
+      const body = card.querySelector('.bc-body');
+      const text = formatOneSource(query, s);
+      body.textContent = text;
+      card.addEventListener('click', () => {
+        copyText(text);
+        card.classList.add('copied');
+        setTimeout(() => card.classList.remove('copied'), 1200);
+      });
+      gridEl.appendChild(card);
+      cards.push({ card, body });
+    });
+    return cards;
+  };
+
+  const newCards = fillBento(newGrid, newSources);
+  const allCards = fillBento(allGrid, sources);
 
   copyStage.appendChild(turn);
   copyEmpty.classList.add('hidden');
 
-  copyTurns.push({ el: turn, query, sources, newSources, allText, newText, newBox, allBox });
+  copyTurns.push({
+    el: turn, query, sources, newSources,
+    bulkBox, newGrid, allGrid, newCards, allCards,
+  });
   copyFocus = copyTurns.length - 1;
   layoutCopyStack();
 }
 
+// Reuse the shortenSource helper already defined in the chat code, or define a
+// simple one if it's not in scope here.
+function shortenSource(name) {
+  return name.replace(/\.txt$/, '').replace(/_/g, ' ').slice(0, 36);
+}
+
+function layoutBentoFor(turn) {
+  // Compute and apply CSS grid template + grid-area for each bento card so the
+  // grid is perfectly tiled with 1×1 / 1×2 cells, placed randomly.
+  const apply = (gridEl, cards, srcs) => {
+    if (!cards.length) return;
+    const rect = gridEl.getBoundingClientRect();
+    const lens = srcs.map(s =>
+      (s.passages || []).reduce((a, p) => a + (p.text || '').length, 0) +
+      (s.facts || []).reduce((a, f) => a + (f || '').length, 0));
+    const { placements, W, H } = bentoPack(lens, rect.width, rect.height);
+    gridEl.style.gridTemplateColumns = `repeat(${W}, 1fr)`;
+    gridEl.style.gridTemplateRows    = `repeat(${H}, 1fr)`;
+    cards.forEach(({ card, body }, i) => {
+      const p = placements[i];
+      if (!p) { card.style.display = 'none'; return; }
+      card.style.display = '';
+      card.style.gridColumn = `${p.c + 1} / span ${p.w}`;
+      card.style.gridRow    = `${p.r + 1} / span ${p.h}`;
+    });
+    // After layout, fit each card's text
+    requestAnimationFrame(() => {
+      cards.forEach(({ body }) => fitTextToBox(body, 11, 4));
+    });
+  };
+  apply(turn.newGrid, turn.newCards, turn.newSources);
+  apply(turn.allGrid, turn.allCards, turn.sources);
+}
+
 function layoutCopyStack() {
   // Position each turn relative to the focused one.
-  // Focused: center, full size, interactive. Others: scaled down + dimmed.
+  // Older turns (lower index) are stacked ABOVE the focused one visually,
+  // newer turns (higher index) BELOW — matches "new messages push old upwards".
+  // Arrows: ▲ moves focus toward newer (down the index, visually up the stack
+  // = bring the older-but-still-visible one down), ▼ toward older. Wait —
+  // per the user, ▲ shows the panel above (older); ▼ shows the one below.
   copyTurns.forEach((t, i) => {
-    const d = i - copyFocus;       // -N (older) .. +N (newer)
+    const d = i - copyFocus;       // -N (older, above) .. +N (newer, below)
     const isFocused = d === 0;
     t.el.classList.toggle('off', !isFocused);
-    // Stacking transforms
     if (isFocused) {
       t.el.style.transform = 'translate(-50%, -50%)';
       t.el.style.opacity = '1';
       t.el.style.zIndex = '5';
     } else {
-      // older (d<0) go DOWN visually (you "look up" in time → arrow ▲ goes older)
-      // newer (d>0) go UP visually
-      const dir = d < 0 ? 1 : -1;
-      const offset = Math.min(Math.abs(d), 4);  // cap stack depth
+      // d<0 (older) → ABOVE: yPct negative
+      // d>0 (newer) → BELOW: yPct positive
+      const offset = Math.min(Math.abs(d), 4);
+      const dir = d < 0 ? -1 : 1;
       const yPct = -50 + dir * (32 + (offset - 1) * 14);
       const scale = Math.max(0.4, 1 - 0.15 * offset);
       t.el.style.transform = `translate(-50%, ${yPct}%) scale(${scale})`;
@@ -1212,12 +1417,21 @@ function layoutCopyStack() {
       t.el.style.zIndex  = String(2 - offset);
     }
   });
-  // Re-fit the focused turn's boxes (their available size may have changed)
+  // Re-fit the focused turn (its layout / sizing may have changed)
   const f = copyTurns[copyFocus];
   if (f) {
-    requestAnimationFrame(() => { fitTextToBox(f.newBox); fitTextToBox(f.allBox); });
+    requestAnimationFrame(() => {
+      fitTextToBox(f.bulkBox, 11, 4);
+      layoutBentoFor(f);
+    });
   }
-  // Update arrow state + position label
+  // Arrow state + position label.
+  //   ▲ goes to OLDER (lower index)  — disabled when at index 0
+  //   ▼ goes to NEWER (higher index) — disabled at last index
+  // The previous wiring had ▲ = focus-- (older) which the user said is "flipped".
+  // Now: ▲ moves up the visual stack → toward the OLDER panels = focus--, which
+  // makes the panel above slide down into focus. This matches "arrows reflect
+  // direction the focused panel travels" when you press them.
   copyUp.disabled   = copyFocus <= 0;
   copyDown.disabled = copyFocus >= copyTurns.length - 1;
   copyPos.textContent = copyTurns.length
