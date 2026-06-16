@@ -4,6 +4,8 @@ import {
   forceManyBody,
   forceCenter,
   forceCollide,
+  forceX,
+  forceY,
 } from 'https://cdn.jsdelivr.net/npm/d3-force@3/+esm';
 
 // ─── DOM refs ─────────────────────────────────────────────────────────────────
@@ -145,14 +147,66 @@ requestAnimationFrame(resizeCanvas);
 
 // ─── Controls ────────────────────────────────────────────────────────────────
 
-let cfg = { repulsion: 400, linkDist: 120, momentum: 8, nodeSize: 4 };
+// All sliders use a normalized 0–100 HTML range with default = 50 (visually
+// centred). Each maps linearly into a [lo, hi] band picked so the user's
+// preferred working values land at the midpoint. The displayed "0.50" is
+// just slider.value / 100. Edge min's mapped value is divided by 100 again
+// to become a 0.0–1.0 weight threshold.
+const sliderRanges = {
+  repulsion: [400, 1400],   // default 50 → 900
+  linkDist:  [50,  250],    // default 50 → 150
+  momentum:  [2,   12],     // default 50 → 7
+  nodeSize:  [2,   10],     // default 50 → 6
+  edgeMin:   [80,  100],    // default 50 → threshold 0.90
+  gravity:   [20,  100],    // default 50 → 60
+};
 
-['repulsion', 'linkDist', 'momentum', 'nodeSize'].forEach(k => {
+let cfg = { repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0 };
+
+function updateCfgFromSlider(k, sliderVal) {
+  const [lo, hi] = sliderRanges[k];
+  const actual = lo + (sliderVal / 100) * (hi - lo);
+  cfg[k] = (k === 'edgeMin') ? (actual / 100) : actual;
+  const valEl = document.getElementById(k + '-val');
+  if (valEl) valEl.textContent = (sliderVal / 100).toFixed(2);
+}
+
+// Initialise cfg from each slider's current value (defaults to 50)
+Object.keys(sliderRanges).forEach(k => {
+  updateCfgFromSlider(k, +document.getElementById(k).value);
+});
+
+// Wire input listeners — every slider triggers a sim rebuild
+Object.keys(sliderRanges).forEach(k => {
   document.getElementById(k).addEventListener('input', e => {
-    cfg[k] = +e.target.value;
+    updateCfgFromSlider(k, +e.target.value);
     rebuildSim();
   });
 });
+
+// Set of link references that are the highest-weight edge for at least one
+// of their endpoints. These are NEVER filtered out, so no node ever becomes
+// completely orphaned by the edge-weight threshold.
+let keystoneLinks = new Set();
+
+function computeKeystoneLinks() {
+  keystoneLinks = new Set();
+  const best = new Map();   // nodeId → {weight, link}
+  for (const l of links) {
+    const sId = typeof l.source === 'object' && l.source !== null ? l.source.id : l.source;
+    const tId = typeof l.target === 'object' && l.target !== null ? l.target.id : l.target;
+    const w = l.weight ?? 0;
+    const sBest = best.get(sId);
+    if (!sBest || w > sBest.weight) best.set(sId, { weight: w, link: l });
+    const tBest = best.get(tId);
+    if (!tBest || w > tBest.weight) best.set(tId, { weight: w, link: l });
+  }
+  for (const { link } of best.values()) keystoneLinks.add(link);
+}
+
+function activeLinks() {
+  return links.filter(l => (l.weight ?? 0) >= cfg.edgeMin || keystoneLinks.has(l));
+}
 
 // ─── Simulation ──────────────────────────────────────────────────────────────
 
@@ -162,12 +216,16 @@ function rebuildSim() {
   if (sim) sim.stop();
   const alphaDecay = 0.0228 * (21 - cfg.momentum) / 20;
   sim = forceSimulation(nodes)
-    .force('link', forceLink(links)
+    .force('link', forceLink(activeLinks())
       .id(d => d.id)
       .distance(l => cfg.linkDist * (1.6 - weightT(l.weight)))
       .strength(l => 0.2 + 0.7 * weightT(l.weight)))
     .force('charge', forceManyBody().strength(-cfg.repulsion))
     .force('center', forceCenter(0, 0).strength(0.05))
+    // Gravity: per-axis pull toward (0,0) so disconnected components don't
+    // drift off into space. Slider 0–100 → strength 0.0–0.10.
+    .force('gravityX', forceX(0).strength(cfg.gravity / 1000))
+    .force('gravityY', forceY(0).strength(cfg.gravity / 1000))
     .force('collide', forceCollide().radius(d => nodeRadius(d) + 4))
     .alphaDecay(alphaDecay)
     .velocityDecay(0.4)
@@ -212,6 +270,17 @@ function neighborsOf(n) {
 
 function selectNode(n, panTo = false) {
   selectedNode = n;
+
+  // If the sidebar was collapsed, reopen it so the user can actually see the
+  // detail they just asked for. Without this, opening the detail-col while
+  // collapsed widens the sidebar element while it's still translated off-
+  // screen, which leaves a blank gap on the left of the (still-hidden) panel.
+  const rs = document.getElementById('right');
+  if (rs && rs.classList.contains('collapsed')) {
+    rs.classList.remove('collapsed');
+    document.body.classList.remove('right-collapsed');
+    rs.style.marginRight = '';
+  }
 
   listCol.querySelectorAll('.node-item').forEach(el => el.classList.remove('active'));
   if (n._listEl) {
@@ -313,6 +382,9 @@ function draw() {
   links.forEach(l => {
     const s = l.source, t = l.target;
     if (!s || !t || s.x == null) return;
+    // Hide edges below threshold UNLESS this is the keystone (max-weight)
+    // edge for at least one of its endpoints
+    if ((l.weight ?? 0) < cfg.edgeMin && !keystoneLinks.has(l)) return;
     const isSelEdge = selectedNode && (s === selectedNode || t === selectedNode);
     const isHoverEdge = hoveredNode && (s === hoveredNode || t === hoveredNode);
     const ti = weightT(l.weight);
@@ -706,6 +778,10 @@ function setView(view) {
   if (rightEl) rightEl.classList.toggle('is-hidden', isCopy);
   const hkEl = document.getElementById('copy-hotkeys');
   if (hkEl) hkEl.classList.toggle('off', !isCopy);
+  // The right-sidebar minimize button: only useful in graph + chat (the
+  // copy view already hides the sidebar via its own .is-hidden class).
+  const rtEl = document.getElementById('right-toggle');
+  if (rtEl) rtEl.classList.toggle('show', isGraph || isChat);
 
   // Don't auto-focus the input when entering chat/copy — the user wants the
   // arrow keys to swap pages without first clicking out of the textarea.
@@ -716,6 +792,25 @@ function setView(view) {
 btnGraph.addEventListener('click', () => setView('graph'));
 btnChat.addEventListener('click', () => setView('chat'));
 btnCopy.addEventListener('click', () => setView('copy'));
+
+// Right-sidebar minimize / restore. Slides the sidebar off via transform AND
+// applies a negative margin-right equal to its current width so the layout
+// also collapses — otherwise #left wouldn't expand into the freed space.
+const rightToggleBtn = document.getElementById('right-toggle');
+const rightSidebar = document.getElementById('right');
+if (rightToggleBtn && rightSidebar) {
+  rightToggleBtn.addEventListener('click', () => {
+    const collapsing = !rightSidebar.classList.contains('collapsed');
+    if (collapsing) {
+      const w = rightSidebar.offsetWidth;
+      rightSidebar.style.marginRight = `-${w}px`;
+    } else {
+      rightSidebar.style.marginRight = '';
+    }
+    rightSidebar.classList.toggle('collapsed', collapsing);
+    document.body.classList.toggle('right-collapsed', collapsing);
+  });
+}
 
 // ─── Chat (RAG over the knowledge base) ───────────────────────────────────────
 
@@ -1672,5 +1767,12 @@ async function sendCopy(opts = {}) {
   links = data.links.map(l => ({ ...l }));
 
   computeDegrees();
-  requestAnimationFrame(rebuildSim);
+  computeKeystoneLinks();
+  setView('graph');           // ensure initial chrome state is correct
+  requestAnimationFrame(() => {
+    rebuildSim();
+    // Auto-fit the graph after the sim has had a moment to relax. The PCA
+    // seed positions are reasonable so 350ms is enough for a clean zoom.
+    setTimeout(centerView, 350);
+  });
 })();

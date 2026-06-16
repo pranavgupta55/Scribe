@@ -35,6 +35,22 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* No focus outline / tap highlight on any interactive control — the user
+       wants buttons to not look "highlightable" after click. Hover/active
+       state colors still apply (they're on individual elements). */
+    button, a, input, textarea, [role="button"] {
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+    button:focus, button:focus-visible, button:active,
+    a:focus, a:focus-visible,
+    input:focus, textarea:focus,
+    [role="button"]:focus, [role="button"]:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+    button { user-select: none; }
+
     body {
       display: flex;
       height: 100vh;
@@ -124,10 +140,22 @@
     .control-row {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       gap: 8px;
     }
-    .control-row label { color: #888; flex-shrink: 0; }
+    .control-row label {
+      color: var(--text-dim);
+      flex-shrink: 0;
+      flex: 1;          /* push the value + slider to the right edge */
+    }
+    .control-row .val {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-dim);
+      font-variant-numeric: tabular-nums;
+      width: 32px;
+      text-align: right;
+      flex-shrink: 0;
+    }
 
     input[type="range"] {
       -webkit-appearance: none;
@@ -247,9 +275,14 @@
       padding: 6px 10px;
       cursor: pointer;
       z-index: 10;
-      transition: color 0.15s, border-color 0.15s;
+      transition: color 0.15s, border-color 0.15s, right 0.32s cubic-bezier(0.4,0,0.2,1);
       user-select: none;
     }
+    /* When the sidebar is collapsed there's no room between the view-toggle
+       and the right-toggle to fit the Center button cleanly — hide it. It
+       reappears as soon as the sidebar opens (e.g. when the user clicks a
+       node, which auto-restores). */
+    body.right-collapsed #center-btn { display: none; }
     #center-btn:hover { color: var(--text-main); border-color: var(--accent-red-dim); }
 
     /* Empty / error state */
@@ -294,7 +327,37 @@
       flex-shrink: 0;
       background: var(--bg-base);
       border-left: 1px solid var(--border-subtle);
+      position: relative;
     }
+    /* Collapsed state: slide the entire sidebar off to the right. The
+       reopen button below stays anchored to the viewport edge. */
+    #right.collapsed { transform: translateX(100%); }
+
+    /* Minimize / restore button — pinned to viewport top-right so it stays
+       visible when the sidebar slides off. Only shown in graph view (JS). */
+    #right-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 28px;
+      height: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      color: var(--text-dim);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 13;
+      transition: color 0.12s, border-color 0.12s;
+      user-select: none;
+      font-size: 13px;
+      line-height: 1;
+    }
+    #right-toggle.show { display: flex; }
+    #right-toggle:hover { color: var(--accent-red); border-color: var(--accent-red); }
+    #right-toggle .rt-icon { display: inline-block; transition: transform 0.22s; }
+    body.right-collapsed #right-toggle .rt-icon { transform: rotate(180deg); }
 
     /* Column 1: node list */
     #node-list-col {
@@ -556,7 +619,8 @@
     }
     #right {
       transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
-                  opacity 0.25s ease;
+                  opacity 0.25s ease,
+                  margin-right 0.32s cubic-bezier(0.4,0,0.2,1);
     }
     #right.is-hidden {
       transform: translateX(110%);
@@ -1398,7 +1462,7 @@
   <div id="left">
     <canvas id="canvas"></canvas>
 
-    <div id="controls">
+    <div id="controls" class="collapsed">
       <div id="controls-header">
         <h2>Graph Controls</h2>
         <span id="controls-chevron">▾</span>
@@ -1406,21 +1470,37 @@
       <div id="controls-body">
         <div class="control-row">
           <label>Repulsion</label>
-          <input type="range" id="repulsion" min="50" max="1500" value="400" />
+          <span class="val" id="repulsion-val">0.50</span>
+          <input type="range" id="repulsion" min="0" max="100" value="50" step="1" />
         </div>
         <div class="control-row">
           <label>Link dist</label>
-          <input type="range" id="linkDist" min="20" max="600" value="120" />
+          <span class="val" id="linkDist-val">0.50</span>
+          <input type="range" id="linkDist" min="0" max="100" value="50" step="1" />
         </div>
         <div class="control-row">
           <label>Momentum</label>
-          <input type="range" id="momentum" min="1" max="20" value="8" />
+          <span class="val" id="momentum-val">0.50</span>
+          <input type="range" id="momentum" min="0" max="100" value="50" step="1" />
         </div>
         <div class="control-row">
           <label>Node size</label>
-          <input type="range" id="nodeSize" min="1" max="12" value="4" />
+          <span class="val" id="nodeSize-val">0.50</span>
+          <input type="range" id="nodeSize" min="0" max="100" value="50" step="1" />
         </div>
-        <div id="legend">
+        <div class="control-row">
+          <label>Threshold</label>
+          <span class="val" id="edgeMin-val">0.50</span>
+          <input type="range" id="edgeMin" min="0" max="100" value="50" step="1"
+                 title="Hide edges below this weight (each node keeps its strongest edge)" />
+        </div>
+        <div class="control-row">
+          <label>Gravity</label>
+          <span class="val" id="gravity-val">0.50</span>
+          <input type="range" id="gravity" min="0" max="100" value="50" step="1"
+                 title="Pull all nodes toward the centre — keeps disconnected nodes from drifting away" />
+        </div>
+        <div id="legend" class="legend-collapsed">
           <div id="legend-header">
             <div id="legend-title">Sources</div>
             <span id="legend-chevron">▾</span>
@@ -1440,6 +1520,10 @@
       <button id="toggle-chat">Chat</button>
       <button id="toggle-copy">Copy</button>
     </div>
+
+    <button id="right-toggle" title="Hide / show right sidebar">
+      <span class="rt-icon">→</span>
+    </button>
 
     <button id="center-btn" title="Fit all nodes in view">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
