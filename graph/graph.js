@@ -650,7 +650,9 @@ function applySourceShorthand(escaped) {
 const viewToggle  = document.getElementById('view-toggle');
 const btnGraph    = document.getElementById('toggle-graph');
 const btnChat     = document.getElementById('toggle-chat');
+const btnCopy     = document.getElementById('toggle-copy');
 const chatPanel   = document.getElementById('chat-panel');
+const copyPanel   = document.getElementById('copy-panel');
 const controlsEl  = document.getElementById('controls');
 const centerBtn   = document.getElementById('center-btn');
 const hintEl      = document.getElementById('hint');
@@ -675,25 +677,37 @@ if (legendHeader) {
 }
 
 function setView(view) {
-  const chat = view === 'chat';
-  viewToggle.classList.toggle('chat', chat);
-  btnGraph.classList.toggle('active', !chat);
-  btnChat.classList.toggle('active', chat);
-  chatPanel.classList.toggle('show', chat);
-  // Graph-only chrome hides in chat mode
+  const isChat = view === 'chat';
+  const isCopy = view === 'copy';
+  const isGraph = view === 'graph';
+  // Toggle pill position via class (handles 0% / 100% / 200%)
+  viewToggle.classList.toggle('chat', isChat);
+  viewToggle.classList.toggle('copy', isCopy);
+  btnGraph.classList.toggle('active', isGraph);
+  btnChat.classList.toggle('active', isChat);
+  btnCopy.classList.toggle('active', isCopy);
+  chatPanel.classList.toggle('show', isChat);
+  copyPanel.classList.toggle('show', isCopy);
+  // Graph-only chrome hides in chat/copy modes
   [canvas, controlsEl, centerBtn, hintEl].forEach(el => {
-    if (el) el.style.display = chat ? 'none' : '';
+    if (el) el.style.display = isGraph ? '' : 'none';
   });
-  if (chat) {
+  if (isChat) {
     chatInput.focus();
     startStatusPoll();
   } else {
     stopStatusPoll();
   }
+  if (isCopy) {
+    copyInput.focus();
+    // Re-layout the stack on entering this view (in case window resized)
+    requestAnimationFrame(layoutCopyStack);
+  }
 }
 
 btnGraph.addEventListener('click', () => setView('graph'));
 btnChat.addEventListener('click', () => setView('chat'));
+btnCopy.addEventListener('click', () => setView('copy'));
 
 // ─── Chat (RAG over the knowledge base) ───────────────────────────────────────
 
@@ -1055,6 +1069,193 @@ async function sendChat() {
     chatBusy = false;
     chatSend.disabled = false;
     chatInput.focus();
+  }
+}
+
+// ─── Copy-paste RAG view ──────────────────────────────────────────────────────
+
+const copyStage    = document.getElementById('copy-stage');
+const copyEmpty    = document.getElementById('copy-empty');
+const copyInput    = document.getElementById('copy-input');
+const copySend     = document.getElementById('copy-send');
+const copyUp       = document.getElementById('copy-up');
+const copyDown     = document.getElementById('copy-down');
+const copyPos      = document.getElementById('copy-pos');
+const copyLoading  = document.getElementById('copy-loading');
+
+let copyTurns = [];          // [{el, query, sources, newSources, allText, newText}]
+let copyFocus = 0;           // index of focused turn (last = newest)
+let copyBusy  = false;
+let copySeen  = new Set();   // source names included in any prior turn THIS session
+                              // (in-memory only — resets on page reload, i.e. new chat)
+
+function fitTextToBox(box) {
+  // Shrink font-size until content fits without scrolling. Starts at 13px,
+  // bottoms out at 8px to keep readability.
+  let fs = 13;
+  box.style.fontSize = fs + 'px';
+  box.style.lineHeight = '1.5';
+  // measure
+  while ((box.scrollHeight > box.clientHeight + 1 ||
+          box.scrollWidth  > box.clientWidth  + 1) && fs > 8) {
+    fs -= 0.5;
+    box.style.fontSize = fs + 'px';
+    box.style.lineHeight = fs < 11 ? '1.4' : '1.5';
+  }
+}
+
+function copyAutoGrow() {
+  copyInput.style.height = 'auto';
+  copyInput.style.height = Math.min(copyInput.scrollHeight, 120) + 'px';
+}
+copyInput.addEventListener('input', copyAutoGrow);
+copyInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCopy(); }
+});
+copySend.addEventListener('click', sendCopy);
+
+copyUp.addEventListener('click', () => {
+  if (copyFocus > 0) { copyFocus--; layoutCopyStack(); }
+});
+copyDown.addEventListener('click', () => {
+  if (copyFocus < copyTurns.length - 1) { copyFocus++; layoutCopyStack(); }
+});
+
+function formatTurnText(query, sources) {
+  // Plain-text format suitable for pasting into an external model.
+  if (!sources.length) return `Question: ${query}\n\n(no sources retrieved)`;
+  const blocks = sources.map((s, i) => {
+    const head = `===== SOURCE ${i + 1}: ${s.name} =====`;
+    const passages = (s.passages || []).map(p => {
+      const hdr = p.section_title ? `[§ ${p.section_title}] ` : '';
+      return hdr + (p.text || '');
+    }).join('\n\n');
+    const facts = (s.facts && s.facts.length)
+      ? '\n\nKey facts from this source:\n' + s.facts.map(f => `- ${f}`).join('\n')
+      : '';
+    return `${head}\n${passages}${facts}`;
+  });
+  return `Question: ${query}\n\n${blocks.join('\n\n')}`;
+}
+
+function buildCopyTurn(query, data) {
+  const sources = data.sources || [];
+  const newSources = sources.filter(s => !copySeen.has(s.name));
+  newSources.forEach(s => copySeen.add(s.name));
+
+  const allText = formatTurnText(query, sources);
+  const newText = formatTurnText(query, newSources);
+
+  const turn = document.createElement('div');
+  turn.className = 'copy-turn';
+  turn.innerHTML = `
+    <div class="copy-cols">
+      <div class="copy-col left">
+        <div class="copy-count">
+          <span>New sources <span class="count-num">${newSources.length}</span></span>
+          <span class="copy-hint">click to copy</span>
+        </div>
+        <div class="copy-box new-box"></div>
+      </div>
+      <div class="copy-col right">
+        <div class="copy-count">
+          <span>All sources <span class="count-num">${sources.length}</span></span>
+          <span class="copy-hint">click to copy</span>
+        </div>
+        <div class="copy-box all-box"></div>
+      </div>
+    </div>
+  `;
+  const newBox = turn.querySelector('.new-box');
+  const allBox = turn.querySelector('.all-box');
+  newBox.textContent = newText;
+  allBox.textContent = allText;
+
+  const wireClick = (el, text) => el.addEventListener('click', () => {
+    // Only the focused turn is interactive (.off blocks via pointer-events)
+    copyText(text);
+    el.classList.add('copied');
+    setTimeout(() => el.classList.remove('copied'), 1200);
+  });
+  wireClick(newBox, newText);
+  wireClick(allBox, allText);
+
+  copyStage.appendChild(turn);
+  copyEmpty.classList.add('hidden');
+
+  copyTurns.push({ el: turn, query, sources, newSources, allText, newText, newBox, allBox });
+  copyFocus = copyTurns.length - 1;
+  layoutCopyStack();
+}
+
+function layoutCopyStack() {
+  // Position each turn relative to the focused one.
+  // Focused: center, full size, interactive. Others: scaled down + dimmed.
+  copyTurns.forEach((t, i) => {
+    const d = i - copyFocus;       // -N (older) .. +N (newer)
+    const isFocused = d === 0;
+    t.el.classList.toggle('off', !isFocused);
+    // Stacking transforms
+    if (isFocused) {
+      t.el.style.transform = 'translate(-50%, -50%)';
+      t.el.style.opacity = '1';
+      t.el.style.zIndex = '5';
+    } else {
+      // older (d<0) go DOWN visually (you "look up" in time → arrow ▲ goes older)
+      // newer (d>0) go UP visually
+      const dir = d < 0 ? 1 : -1;
+      const offset = Math.min(Math.abs(d), 4);  // cap stack depth
+      const yPct = -50 + dir * (32 + (offset - 1) * 14);
+      const scale = Math.max(0.4, 1 - 0.15 * offset);
+      t.el.style.transform = `translate(-50%, ${yPct}%) scale(${scale})`;
+      t.el.style.opacity = String(Math.max(0, 0.55 - 0.12 * (offset - 1)));
+      t.el.style.zIndex  = String(2 - offset);
+    }
+  });
+  // Re-fit the focused turn's boxes (their available size may have changed)
+  const f = copyTurns[copyFocus];
+  if (f) {
+    requestAnimationFrame(() => { fitTextToBox(f.newBox); fitTextToBox(f.allBox); });
+  }
+  // Update arrow state + position label
+  copyUp.disabled   = copyFocus <= 0;
+  copyDown.disabled = copyFocus >= copyTurns.length - 1;
+  copyPos.textContent = copyTurns.length
+    ? `${copyFocus + 1} / ${copyTurns.length}` : '—';
+}
+
+window.addEventListener('resize', () => {
+  if (copyPanel.classList.contains('show')) layoutCopyStack();
+});
+
+async function sendCopy() {
+  const q = copyInput.value.trim();
+  if (!q || copyBusy) return;
+  copyBusy = true;
+  copySend.disabled = true;
+  copyInput.value = '';
+  copyAutoGrow();
+  copyLoading.classList.add('show');
+  try {
+    const res = await fetch('/api/rag', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: q }),
+    });
+    if (!res.ok) {
+      const errBody = await res.json().catch(() => ({error: `HTTP ${res.status}`}));
+      buildCopyTurn(q, { sources: [{ name: 'error', passages: [{section_title:'', text: errBody.error || 'failed'}], facts: [] }] });
+    } else {
+      const data = await res.json();
+      buildCopyTurn(q, data);
+    }
+  } catch (err) {
+    buildCopyTurn(q, { sources: [{ name: 'error', passages: [{section_title:'', text: 'Could not reach the knowledge server. Is `serve.sh` running?'}], facts: [] }] });
+  } finally {
+    copyLoading.classList.remove('show');
+    copyBusy = false;
+    copySend.disabled = false;
+    copyInput.focus();
   }
 }
 

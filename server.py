@@ -45,6 +45,10 @@ QWEN_MODEL    = "qwen3:1.7b"
 N_FACTS  = 10    # facts retrieved (precise grounding + consulted-topic surfacing)
 N_CHUNKS = 5     # full-context passages for the answer
 MAX_TOPICS = 8
+# Copy-paste RAG mode: wider net since the output goes to a larger external model
+RAG_N_FACTS  = 30
+RAG_N_CHUNKS = 25
+RAG_MAX_TOPICS = 24
 
 _SYSTEM = (
     "You are Scribe, a retrieval assistant answering ONLY from the user's "
@@ -139,6 +143,61 @@ def _slug(text):
 def _topic_display(topic):
     """Match the graph node id produced by export_graph.py (slug → Title Case)."""
     return _slug(topic).replace("_", " ").title()
+
+
+def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
+                        max_topics=RAG_MAX_TOPICS):
+    """Wider RAG used by the copy-paste view. Returns
+        {topics: [...], sources: [{name, passages: [{section_title, text}], facts: [...]}]}
+    grouped by source filename, in retrieval-relevance order.
+    """
+    import chromadb, ollama
+    from collections import OrderedDict
+
+    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
+    facts_col  = client.get_collection("facts")
+    chunks_col = client.get_collection("chunks")
+
+    q_emb = ollama.embeddings(model=EMBED_MODEL, prompt=query)["embedding"]
+
+    def _q(col, n):
+        c = col.count()
+        if c == 0:
+            return {"documents": [[]], "metadatas": [[]]}
+        return col.query(query_embeddings=[q_emb], n_results=min(n, c))
+
+    fres = _q(facts_col, n_facts)
+    cres = _q(chunks_col, n_chunks)
+
+    fact_docs, fact_metas = fres["documents"][0], fres["metadatas"][0]
+    chunk_docs, chunk_metas = cres["documents"][0], cres["metadatas"][0]
+
+    topics, seen = [], set()
+    for meta in fact_metas:
+        t = meta.get("topic")
+        if not t:
+            continue
+        disp = _topic_display(t)
+        if disp and disp.lower() not in seen:
+            seen.add(disp.lower())
+            topics.append(disp)
+    topics = topics[:max_topics]
+
+    by_src = OrderedDict()
+    for doc, meta in zip(chunk_docs, chunk_metas):
+        s = meta.get("source", "?")
+        by_src.setdefault(s, {"passages": [], "facts": []})
+        by_src[s]["passages"].append({
+            "section_title": meta.get("section_title", ""),
+            "text": doc,
+        })
+    for doc, meta in zip(fact_docs, fact_metas):
+        s = meta.get("source", "?")
+        by_src.setdefault(s, {"passages": [], "facts": []})
+        by_src[s]["facts"].append(doc)
+
+    sources = [{"name": s, **blk} for s, blk in by_src.items()]
+    return {"topics": topics, "sources": sources}
 
 
 def retrieve(query):
@@ -307,6 +366,27 @@ class Handler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_POST(self):
+        if self.path == "/api/rag":
+            # Wider retrieval, no LLM — used by the Copy-paste view to surface
+            # raw RAG sources for pasting into an external model.
+            length = int(self.headers.get("Content-Length", 0))
+            try:
+                body = json.loads(self.rfile.read(length) or b"{}")
+                query = (body.get("query") or "").strip()
+            except json.JSONDecodeError:
+                query = ""
+            if not query:
+                self._json_response({"error": "Empty query."}, status=400)
+                return
+            try:
+                res = retrieve_structured(query)
+            except Exception as e:
+                self._json_response({"error": f"Retrieval failed: {e}"}, status=500)
+                return
+            res["query"] = query
+            self._json_response(res)
+            return
+
         if self.path != "/api/chat":
             self.send_error(404)
             return

@@ -457,7 +457,7 @@
       position: absolute;
       top: 3px;
       left: 3px;
-      width: calc(50% - 3px);
+      width: calc((100% - 6px) / 3);
       height: calc(100% - 6px);
       background: #2a2550;
       border-radius: 5px;
@@ -465,6 +465,7 @@
       z-index: 0;
     }
     #view-toggle.chat .toggle-pill { transform: translateX(100%); }
+    #view-toggle.copy .toggle-pill { transform: translateX(200%); }
     #view-toggle button {
       position: relative;
       z-index: 1;
@@ -861,6 +862,229 @@
       transition: background 0.15s;
     }
     #gemini-only-btn.on .go-indicator { background: #7c6af7; }
+
+    /* ── Copy-paste view: floating RAG panel for external models ── */
+    #copy-panel {
+      position: absolute;
+      inset: 0;
+      display: none;
+      background: #0d0d0d;
+      z-index: 5;
+      overflow: hidden;
+    }
+    #copy-panel.show { display: block; }
+
+    /* Stage that holds the vertical stack of turn-panels */
+    #copy-stage {
+      position: absolute;
+      inset: 0 80px 140px 0;     /* right=arrows, bottom=composer */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 800px;
+    }
+    #copy-empty {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: #4a4560;
+      text-align: center;
+      padding: 0 40px;
+      pointer-events: none;
+    }
+    #copy-empty .ce-title { font-size: 16px; font-weight: 600; color: #8a82c0; }
+    #copy-empty .ce-sub { font-size: 12.5px; line-height: 1.7; max-width: 520px; }
+    #copy-empty.hidden { display: none; }
+
+    .copy-turn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(92%, 1200px);
+      height: 72%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
+                  opacity 0.25s ease,
+                  filter 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      will-change: transform, opacity;
+    }
+    /* Stack offsets — applied via inline style based on distance from focus */
+    .copy-turn.off { pointer-events: none; opacity: 0.45; filter: blur(0.4px) saturate(0.7); }
+
+    .copy-cols {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      min-height: 0;
+    }
+    .copy-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 0;
+      min-width: 0;
+    }
+    .copy-col.left  { flex: 1; }      /* 1/3 — new sources */
+    .copy-col.right { flex: 2; }      /* 2/3 — all sources */
+
+    .copy-count {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #5a5480;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 4px;
+    }
+    .copy-count .count-num {
+      color: #c8bdff;
+      background: #1a1730;
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-variant-numeric: tabular-nums;
+    }
+    .copy-count .copy-hint { color: #3a3660; font-weight: 500; letter-spacing: 0.04em; text-transform: none; }
+
+    .copy-box {
+      flex: 1;
+      min-height: 0;
+      background: #110f1c;
+      border: 1px solid #1f1d34;
+      border-radius: 10px;
+      padding: 14px 16px;
+      overflow: hidden;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: #c8c2e4;
+      white-space: pre-wrap;
+      word-break: break-word;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      font-size: 12px;
+      line-height: 1.5;
+      position: relative;
+    }
+    .copy-box:hover { border-color: #3a3060; background: #14122a; }
+    .copy-box.copied {
+      border-color: #2f5a3f;
+      background: #14241a;
+      color: #b8e6cc;
+    }
+    .copy-box.copied::after {
+      content: 'Copied ✓';
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #73c990;
+      background: #0d1e15;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .copy-turn.off .copy-box { cursor: default; }
+
+    /* Composer at the bottom — centered floating text bar */
+    #copy-composer {
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      width: min(720px, 80%);
+      z-index: 6;
+    }
+    #copy-composer .composer-inner {
+      display: flex; align-items: flex-end; gap: 8px;
+      background: #15131f;
+      border: 1px solid #2a2545;
+      border-radius: 14px;
+      padding: 8px 8px 8px 16px;
+      transition: border-color 0.15s;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    #copy-composer .composer-inner:focus-within { border-color: #4a3f9f; }
+    #copy-input {
+      flex: 1;
+      background: transparent; border: none; outline: none; resize: none;
+      color: #ddd; font-family: inherit; font-size: 14px; line-height: 1.5;
+      max-height: 120px; padding: 6px 0;
+    }
+    #copy-input::placeholder { color: #4a4560; }
+    #copy-send {
+      flex-shrink: 0;
+      width: 32px; height: 32px; border-radius: 9px; border: none;
+      background: #5a4fc0; color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #copy-send:hover { background: #6b5ee0; }
+    #copy-send:disabled { opacity: 0.35; cursor: default; }
+
+    /* Right-side up/down navigator */
+    #copy-nav {
+      position: absolute;
+      top: 50%; right: 16px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 6;
+    }
+    .copy-nav-btn {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: #1a1730; border: 1px solid #2a2545;
+      color: #9a8fe0;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      user-select: none;
+    }
+    .copy-nav-btn:hover { background: #251f4a; color: #c8bdff; border-color: #4a3f9f; }
+    .copy-nav-btn:disabled { opacity: 0.25; cursor: default; }
+    #copy-nav .copy-pos {
+      text-align: center;
+      font-size: 10px;
+      color: #4a4560;
+      letter-spacing: 0.05em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Loading indicator inside the copy view */
+    #copy-loading {
+      position: absolute;
+      top: 16px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #5a5480;
+      background: #110f1c;
+      border: 1px solid #1f1d34;
+      border-radius: 999px;
+      padding: 4px 12px;
+      display: none;
+      z-index: 7;
+    }
+    #copy-loading.show { display: block; }
+    #copy-loading .dot {
+      display: inline-block; width: 7px; height: 7px;
+      border-radius: 50%; background: #7c6af7; margin-right: 6px;
+      vertical-align: middle;
+      animation: pulse 1s ease-in-out infinite;
+    }
   </style>
 </head>
 <body>
@@ -907,6 +1131,7 @@
       <div class="toggle-pill"></div>
       <button id="toggle-graph" class="active">Graph</button>
       <button id="toggle-chat">Chat</button>
+      <button id="toggle-copy">Copy</button>
     </div>
 
     <button id="center-btn" title="Fit all nodes in view">
@@ -988,6 +1213,39 @@
               </svg>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy-paste view: floating RAG panel(s) for pasting into a larger model -->
+    <div id="copy-panel">
+      <div id="copy-loading"><span class="dot"></span>Retrieving…</div>
+      <div id="copy-stage">
+        <div id="copy-empty">
+          <div class="ce-title">RAG copy-paste mode</div>
+          <div class="ce-sub">
+            Type a query below. Each turn shows two panels with the user prompt
+            plus retrieved sources — left is the <b>new</b> sources not seen this
+            chat, right is <b>all</b> retrieved sources. Click either panel to
+            copy. Previous turns stack above; use the ▲ ▼ buttons to scroll
+            through them.
+          </div>
+        </div>
+      </div>
+      <div id="copy-nav">
+        <button class="copy-nav-btn" id="copy-up"   title="Previous turn (older)">▲</button>
+        <div class="copy-pos" id="copy-pos">—</div>
+        <button class="copy-nav-btn" id="copy-down" title="Next turn (newer)">▼</button>
+      </div>
+      <div id="copy-composer">
+        <div class="composer-inner">
+          <textarea id="copy-input" rows="1" placeholder="Ask your sources (output formatted for paste into another model)…"></textarea>
+          <button id="copy-send" title="Retrieve">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
