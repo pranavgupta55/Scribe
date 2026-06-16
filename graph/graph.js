@@ -43,8 +43,8 @@ const PALETTE = [
   '#e07070', '#7ec8a0', '#d4a0d8', '#63b8e8', '#e8b85a', '#88d8b0', '#e898b0',
   '#8ab4f8', '#f0c070',
 ];
-const STANDALONE_COLOR = '#4a3f9f';
-const STANDALONE_HUB = '#7c6af7';
+const STANDALONE_COLOR = '#3a1410';
+const STANDALONE_HUB = '#d9453a';
 
 async function loadGraph() {
   const candidates = ['./graph.json'];
@@ -297,8 +297,8 @@ function animatePanTo(n) {
 
 const COLORS = {
   bg: '#0d0d0d',
-  text: '#c8c4f0',
-  textDim: '#5a5580',
+  text: '#ece6dc',
+  textDim: '#8a857d',
 };
 
 function draw() {
@@ -323,13 +323,13 @@ function draw() {
     ctx.moveTo(s.x, s.y);
     ctx.lineTo(t.x, t.y);
     if (isSelEdge) {
-      ctx.strokeStyle = `rgba(180,165,255,${Math.min(0.8, baseAlpha + 0.4)})`;
+      ctx.strokeStyle = `rgba(217,69,58,${Math.min(0.8, baseAlpha + 0.4)})`;
       ctx.lineWidth = (baseWidth + 0.8) / scale;
     } else if (isHoverEdge) {
-      ctx.strokeStyle = `rgba(170,160,255,${Math.min(0.7, baseAlpha + 0.3)})`;
+      ctx.strokeStyle = `rgba(217,69,58,${Math.min(0.7, baseAlpha + 0.3)})`;
       ctx.lineWidth = (baseWidth + 0.5) / scale;
     } else {
-      ctx.strokeStyle = `rgba(120,110,200,${baseAlpha})`;
+      ctx.strokeStyle = `rgba(217,69,58,${baseAlpha})`;
       ctx.lineWidth = baseWidth / scale;
     }
     ctx.stroke();
@@ -347,7 +347,7 @@ function draw() {
       ctx.beginPath();
       ctx.arc(n.x, n.y, r + 7, 0, Math.PI * 2);
       const grad = ctx.createRadialGradient(n.x, n.y, r * 0.4, n.x, n.y, r + 7);
-      const glowCol = isSelected ? 'rgba(220,210,255,0.45)' : hexToRgba(base, isHover ? 0.4 : 0.3);
+      const glowCol = isSelected ? 'rgba(239,90,77,0.45)' : hexToRgba(base, isHover ? 0.4 : 0.3);
       grad.addColorStop(0, glowCol);
       grad.addColorStop(1, 'transparent');
       ctx.fillStyle = grad;
@@ -370,7 +370,7 @@ function draw() {
     if (isSelected) {
       ctx.beginPath();
       ctx.arc(n.x, n.y, r + 3.5, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(220,210,255,0.6)';
+      ctx.strokeStyle = 'rgba(239,90,77,0.6)';
       ctx.lineWidth = 1.5 / scale;
       ctx.stroke();
     }
@@ -378,7 +378,7 @@ function draw() {
     const showLabel = isSelected || isHover || isDrag || scale > 0.9;
     if (showLabel) {
       ctx.font = `${(isSelected || isHover) ? 600 : 400} ${9 / scale}px -apple-system, sans-serif`;
-      ctx.fillStyle = isSelected ? '#d8d0ff' : (isHover ? COLORS.text : COLORS.textDim);
+      ctx.fillStyle = isSelected ? '#ef5a4d' : (isHover ? COLORS.text : COLORS.textDim);
       ctx.textAlign = 'center';
       ctx.fillText(n.id, n.x, n.y - r - 5 / scale);
     }
@@ -505,7 +505,7 @@ canvas.addEventListener('wheel', e => {
   tx = mx - (mx - tx) * zoomFactor;
   ty = my - (my - ty) * zoomFactor;
   scale *= zoomFactor;
-  scale = Math.max(0.1, Math.min(scale, 5));
+  scale = Math.max(0.02, Math.min(scale, 5));
   draw();
 }, { passive: false });
 
@@ -704,17 +704,13 @@ function setView(view) {
   if (devEl) devEl.classList.toggle('is-hidden', !isChat);
   const rightEl = document.getElementById('right');
   if (rightEl) rightEl.classList.toggle('is-hidden', isCopy);
+  const hkEl = document.getElementById('copy-hotkeys');
+  if (hkEl) hkEl.classList.toggle('off', !isCopy);
 
-  if (isChat) {
-    chatInput.focus();
-    startStatusPoll();
-  } else {
-    stopStatusPoll();
-  }
-  if (isCopy) {
-    copyInput.focus();
-    requestAnimationFrame(layoutCopyStack);
-  }
+  // Don't auto-focus the input when entering chat/copy — the user wants the
+  // arrow keys to swap pages without first clicking out of the textarea.
+  if (isChat) startStatusPoll(); else stopStatusPoll();
+  if (isCopy) requestAnimationFrame(layoutCopyStack);
 }
 
 btnGraph.addEventListener('click', () => setView('graph'));
@@ -882,9 +878,20 @@ function autoGrow() {
 }
 chatInput.addEventListener('input', autoGrow);
 chatInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    if (!chatInput.value.trim()) {
+      chatInput.blur();
+    } else {
+      sendChat({ refocus: false });
+      chatInput.blur();
+    }
+  } else if (e.key === 'Escape') {
+    e.preventDefault();
+    chatInput.blur();
+  }
 });
-chatSend.addEventListener('click', sendChat);
+chatSend.addEventListener('click', () => sendChat({ refocus: true }));
 
 function addUserMessage(text) {
   if (chatEmpty) chatEmpty.style.display = 'none';
@@ -924,7 +931,7 @@ function addAssistantShell() {
 function renderNodeChips(container, names) {
   container.innerHTML = '';
   if (!names.length) {
-    container.innerHTML = `<span style="font-size:11px;color:#4a4560">No matching topics</span>`;
+    container.innerHTML = `<span style="font-size:11px;color:#4a4641">No matching topics</span>`;
     return;
   }
   names.forEach(name => {
@@ -971,7 +978,8 @@ function scrollToBottom() {
   chatScroll.scrollTop = chatScroll.scrollHeight;
 }
 
-async function sendChat() {
+async function sendChat(opts = {}) {
+  const { refocus = true } = opts;
   const text = chatInput.value.trim();
   if (!text || chatBusy) return;
   chatBusy = true;
@@ -1080,7 +1088,7 @@ async function sendChat() {
     finishBody();
     chatBusy = false;
     chatSend.disabled = false;
-    chatInput.focus();
+    if (refocus) chatInput.focus();
   }
 }
 
@@ -1226,15 +1234,37 @@ function tryPlaceSquare(N, idxByLen, W, H, k, reserved) {
   return null;
 }
 
+const copyPanelEl = document.getElementById('copy-panel');
+const copyComposerEl = document.getElementById('copy-composer');
+
 function copyAutoGrow() {
   copyInput.style.height = 'auto';
   copyInput.style.height = Math.min(copyInput.scrollHeight, 120) + 'px';
+  // Slide the stage upward as the composer grows, so the focused panel stays
+  // visually centered without ever overlapping the input bar.
+  requestAnimationFrame(() => {
+    const composerH = copyComposerEl.offsetHeight;
+    const stageBottom = 30 + composerH + 20;   // composer bottom-offset + height + clearance
+    copyPanelEl.style.setProperty('--stage-bottom', `${stageBottom}px`);
+  });
 }
 copyInput.addEventListener('input', copyAutoGrow);
 copyInput.addEventListener('keydown', e => {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCopy(); }
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    if (!copyInput.value.trim()) {
+      // Empty input + Enter → just blur (toggle off the input).
+      copyInput.blur();
+    } else {
+      sendCopy({ refocus: false });
+      copyInput.blur();
+    }
+  } else if (e.key === 'Escape') {
+    e.preventDefault();
+    copyInput.blur();
+  }
 });
-copySend.addEventListener('click', sendCopy);
+copySend.addEventListener('click', () => sendCopy({ refocus: true }));
 
 copyUp.addEventListener('click', () => {
   if (copyFocus > 0) { copyFocus--; layoutCopyStack(); }
@@ -1243,14 +1273,68 @@ copyDown.addEventListener('click', () => {
   if (copyFocus < copyTurns.length - 1) { copyFocus++; layoutCopyStack(); }
 });
 
-// Keyboard ↑/↓ scroll through turns when in Copy view (but not while the user
-// is editing the composer text — Enter sends, arrow keys navigate the textarea
-// only when there's selected text)
+function flashCopied(el) {
+  if (!el) return;
+  el.classList.add('copied');
+  setTimeout(() => el.classList.remove('copied'), 1200);
+}
+
+// Unified document-level hotkeys. Behaviour depends on current view:
+//   Copy view:
+//     ↑/↓  switch focused turn
+//     ←    copy the new-sources panel
+//     →    copy the user prompt
+//     Enter / /  focus composer
+//   Graph + Chat view:
+//     ←/→  cycle pages (graph ↔ chat ↔ copy)
+//     Enter / /  focus the chat composer (in chat view only)
+// When typing in any text input, hotkeys are ignored except Escape/Enter which
+// the input's own handler manages.
+function currentView() {
+  if (copyPanel.classList.contains('show')) return 'copy';
+  if (chatPanel.classList.contains('show')) return 'chat';
+  return 'graph';
+}
+function cycleView(dir) {
+  const order = ['graph', 'chat', 'copy'];
+  const cur = currentView();
+  const i = order.indexOf(cur);
+  const next = order[(i + dir + order.length) % order.length];
+  setView(next);
+}
+
 document.addEventListener('keydown', (e) => {
-  if (!copyPanel.classList.contains('show')) return;
-  if (e.target === copyInput) return;
-  if (e.key === 'ArrowUp')   { e.preventDefault(); copyUp.click(); }
-  if (e.key === 'ArrowDown') { e.preventDefault(); copyDown.click(); }
+  // Don't hijack input handlers
+  if (e.target === copyInput || e.target === chatInput) return;
+  const view = currentView();
+  if (view === 'copy') {
+    if (e.key === 'Enter' || e.key === '/') {
+      e.preventDefault();
+      copyInput.focus();
+      return;
+    }
+    if (e.key === 'ArrowUp')   { e.preventDefault(); copyUp.click(); return; }
+    if (e.key === 'ArrowDown') { e.preventDefault(); copyDown.click(); return; }
+    const f = copyTurns[copyFocus];
+    if (!f) return;
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const btn = f.el.querySelector('.new-copy-all');
+      if (btn) btn.click();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      copyText(f.query);
+      flashCopied(f.promptCard && f.promptCard.card);
+    }
+    return;
+  }
+  // Graph + Chat views
+  if (e.key === 'ArrowLeft')  { e.preventDefault(); cycleView(-1); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); cycleView(+1); return; }
+  if (view === 'chat' && (e.key === 'Enter' || e.key === '/')) {
+    e.preventDefault();
+    chatInput.focus();
+  }
 });
 
 function formatTurnText(query, sources) {
@@ -1268,6 +1352,26 @@ function formatTurnText(query, sources) {
     return `${head}\n${passages}${facts}`;
   });
   return `Question: ${query}\n\n${blocks.join('\n\n')}`;
+}
+
+// "Copy all new" format — sources first, prompt last, with clear splitters.
+function formatNewBulkText(query, sources) {
+  const SEP_END = '\n\n================ END OF SOURCES ================\n';
+  const SEP_PR  = '\n================ USER PROMPT BELOW ================\n\n';
+  const promptBlock = `${SEP_END}${SEP_PR}${query}\n`;
+  if (!sources.length) return `(no new sources retrieved)${promptBlock}`;
+  const blocks = sources.map((s, i) => {
+    const head = `===== SOURCE ${i + 1}: ${s.name} =====`;
+    const passages = (s.passages || []).map(p => {
+      const hdr = p.section_title ? `[§ ${p.section_title}] ` : '';
+      return hdr + (p.text || '');
+    }).join('\n\n');
+    const facts = (s.facts && s.facts.length)
+      ? '\n\nKey facts from this source:\n' + s.facts.map(f => `- ${f}`).join('\n')
+      : '';
+    return `${head}\n${passages}${facts}`;
+  });
+  return `${blocks.join('\n\n')}${promptBlock}`;
 }
 
 function escapeHTML(s) {
@@ -1321,8 +1425,10 @@ function buildCopyTurn(query, data) {
   const newCopyAll = turn.querySelector('.new-copy-all');
   const allCopyAll = turn.querySelector('.all-copy-all');
 
-  // Bulk text for the copy-all buttons
-  const newBulkText = formatTurnText(query, newSources);
+  // Bulk text for the copy-all buttons. Left button: sources first, then a
+  // separator, then the user prompt (helps a downstream model treat the user
+  // turn as the latest message rather than top-of-system context).
+  const newBulkText = formatNewBulkText(query, newSources);
   const allBulkText = formatTurnText(query, sources);
   const wireCopyAll = (btn, text) => btn.addEventListener('click', () => {
     copyText(text);
@@ -1389,19 +1495,58 @@ function buildCopyTurn(query, data) {
 }
 
 function layoutBentoFor(turn) {
-  // Compute square (or 2×1) cell sizes per panel and apply explicit CSS grid
-  // sizing so every cell is the same square. Wide cells become exact 2×1.
-  const applyLeft = () => {
-    const cards = turn.newCards;
-    if (!cards.length || turn.newSources.length === 0) return;
-    const rect = turn.newGrid.getBoundingClientRect();
-    if (rect.width < 10 || rect.height < 10) return;
-    const lens = turn.newSources.map(s =>
+  // Compute the bento's available area from the COLUMN (not the grid), since
+  // the grid is no longer flex:1. We subtract the source-count header and the
+  // copy-all button heights plus a small min-gap allowance so space-evenly on
+  // the col gives breathing room without huge empty bands.
+  const MIN_GAP = 20;   // minimum visible space between header / bento / button
+  const PAD_V   = 12;   // .copy-col vertical padding (6 + 6)
+  const PAD_H   = 16;   // .copy-col horizontal padding (8 + 8)
+  const GAP     = 6;    // gap inside the bento
+
+  function applyPanel(col, grid, cards, sources, reserved) {
+    if (!col || !grid) return;
+    const hasPrompt = !!reserved;
+    if (!sources.length && !hasPrompt) {
+      // Empty new-panel — render a placeholder cell that fits the col
+      grid.style.width  = '';
+      grid.style.height = '';
+      grid.style.gridTemplateColumns = '1fr';
+      grid.style.gridTemplateRows = '1fr';
+      return;
+    }
+    const colRect = col.getBoundingClientRect();
+    const headerEl = col.querySelector('.copy-count');
+    const btnEl    = col.querySelector('.copy-all-btn');
+    const headerH  = headerEl ? headerEl.offsetHeight : 0;
+    const btnH     = btnEl    ? btnEl.offsetHeight    : 0;
+
+    const availW = colRect.width  - PAD_H;
+    // 4 gaps with space-evenly: above-header / header-bento / bento-button /
+    // below-button — reserve MIN_GAP for each so the bento doesn't crowd them.
+    const availH = colRect.height - PAD_V - headerH - btnH - 4 * MIN_GAP;
+    if (availW < 50 || availH < 50) return;
+
+    const lens = sources.map(s =>
       (s.passages || []).reduce((a, p) => a + (p.text || '').length, 0) +
       (s.facts || []).reduce((a, f) => a + (f || '').length, 0));
-    const spec = bentoPackSquare(lens.length, lens, rect.width, rect.height, null);
+    const spec = bentoPackSquare(lens.length, lens, availW, availH, reserved);
     if (!spec) return;
-    sizeGrid(turn.newGrid, spec, rect);
+
+    const cellSize = Math.floor(Math.min(
+      (availW - GAP * (spec.W - 1)) / spec.W,
+      (availH - GAP * (spec.H - 1)) / spec.H
+    ));
+    grid.style.gridTemplateColumns = `repeat(${spec.W}, ${cellSize}px)`;
+    grid.style.gridTemplateRows    = `repeat(${spec.H}, ${cellSize}px)`;
+    grid.style.width  = `${spec.W * cellSize + GAP * (spec.W - 1)}px`;
+    grid.style.height = `${spec.H * cellSize + GAP * (spec.H - 1)}px`;
+
+    if (hasPrompt) {
+      turn.promptCard.card.style.display = '';
+      turn.promptCard.card.style.gridColumn = `1 / span ${reserved.w}`;
+      turn.promptCard.card.style.gridRow    = `1 / span ${reserved.h}`;
+    }
     cards.forEach(({ card }, i) => {
       const p = spec.placements[i];
       if (!p) { card.style.display = 'none'; return; }
@@ -1409,51 +1554,16 @@ function layoutBentoFor(turn) {
       card.style.gridColumn = `${p.c + 1} / span ${p.w}`;
       card.style.gridRow    = `${p.r + 1} / span ${p.h}`;
     });
-    requestAnimationFrame(() => cards.forEach(({ body }) => fitTextToBox(body, 9, 4)));
-  };
-
-  const applyRight = () => {
-    const rect = turn.allGrid.getBoundingClientRect();
-    if (rect.width < 10 || rect.height < 10) return;
-    const lens = turn.sources.map(s =>
-      (s.passages || []).reduce((a, p) => a + (p.text || '').length, 0) +
-      (s.facts || []).reduce((a, f) => a + (f || '').length, 0));
-    // Reserve top-left 3×3 for the prompt
-    const spec = bentoPackSquare(lens.length, lens, rect.width, rect.height,
-                                 { r: 0, c: 0, w: 3, h: 3 });
-    if (!spec) return;
-    sizeGrid(turn.allGrid, spec, rect);
-    // Prompt card first
-    turn.promptCard.card.style.display = '';
-    turn.promptCard.card.style.gridColumn = '1 / span 3';
-    turn.promptCard.card.style.gridRow    = '1 / span 3';
-    turn.allCards.forEach(({ card }, i) => {
-      const p = spec.placements[i];
-      if (!p) { card.style.display = 'none'; return; }
-      card.style.display = '';
-      card.style.gridColumn = `${p.c + 1} / span ${p.w}`;
-      card.style.gridRow    = `${p.r + 1} / span ${p.h}`;
-    });
     requestAnimationFrame(() => {
-      turn.allCards.forEach(({ body }) => fitTextToBox(body, 9, 4));
-      fitTextToBox(turn.promptCard.body, 13, 6);
+      cards.forEach(({ body }) => fitTextToBox(body, 9, 4));
+      if (hasPrompt) fitTextToBox(turn.promptCard.body, 13, 6);
     });
-  };
+  }
 
-  applyLeft();
-  applyRight();
-}
-
-function sizeGrid(gridEl, spec, rect) {
-  // Make each cell exactly cellSize × cellSize (square). 2×1 cells become 2:1.
-  const gap = 6;
-  const W = spec.W, H = spec.H;
-  const cellSize = Math.floor(Math.min(
-    (rect.width  - gap * (W - 1)) / W,
-    (rect.height - gap * (H - 1)) / H
-  ));
-  gridEl.style.gridTemplateColumns = `repeat(${W}, ${cellSize}px)`;
-  gridEl.style.gridTemplateRows    = `repeat(${H}, ${cellSize}px)`;
+  const newCol = turn.el.querySelector('.copy-col.new-panel');
+  const allCol = turn.el.querySelector('.copy-col.all-panel');
+  applyPanel(newCol, turn.newGrid, turn.newCards, turn.newSources, null);
+  applyPanel(allCol, turn.allGrid, turn.allCards, turn.sources, { r: 0, c: 0, w: 2, h: 2 });
 }
 
 function layoutCopyStack() {
@@ -1506,7 +1616,8 @@ window.addEventListener('resize', () => {
   if (copyPanel.classList.contains('show')) layoutCopyStack();
 });
 
-async function sendCopy() {
+async function sendCopy(opts = {}) {
+  const { refocus = true } = opts;
   const q = copyInput.value.trim();
   if (!q || copyBusy) return;
   copyBusy = true;
@@ -1533,7 +1644,7 @@ async function sendCopy() {
     copyLoading.classList.remove('show');
     copyBusy = false;
     copySend.disabled = false;
-    copyInput.focus();
+    if (refocus) copyInput.focus();
   }
 }
 
