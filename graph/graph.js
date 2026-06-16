@@ -1130,71 +1130,84 @@ function shuffled(arr) {
   return a;
 }
 
-function bentoPack(itemsLen, containerW, containerH) {
-  const N = itemsLen.length;
-  if (N === 0) return { placements: [], W: 1, H: 1 };
-  if (N === 1) return { placements: [{ r: 0, c: 0, w: 1, h: 1 }], W: 1, H: 1 };
-
-  const aspect = Math.max(0.4, containerW / Math.max(containerH, 1));
+// Aim for SQUARE-ish cells. Optionally reserve a top-left rectangular block
+// (e.g. 3×3 user-prompt cell) before placing N other items as 1×1 / 1×2 dominos.
+function bentoPackSquare(N, itemsLen, containerW, containerH, reserved) {
+  if (N === 0 && !reserved) return { placements: [], W: 1, H: 1 };
+  const reservedCells = reserved ? reserved.w * reserved.h : 0;
+  const aspect = Math.max(0.3, containerW / Math.max(containerH, 1));
   const idxByLen = [...itemsLen.keys()].sort((a, b) => itemsLen[b] - itemsLen[a]);
 
-  // Find (W, H, k): pick total cells starting from ~1.3·N upward; for each,
-  // enumerate divisors and pick the one nearest sqrt(cells · aspect).
-  let spec = null;
-  for (let cells = Math.max(N, Math.round(N * 1.3)); cells <= 2 * N + 1; cells++) {
-    const k = cells - N;
-    if (k < 0 || k > N) continue;
-    const ideal = Math.sqrt(cells * aspect);
-    const opts = [];
-    for (let W = 2; W <= cells; W++) {
-      if (cells % W !== 0) continue;
-      const H = cells / W;
-      const maxK = H * Math.floor(W / 2);
-      if (k > maxK) continue;
-      // bias toward even W and target aspect
-      opts.push({ W, H, score: Math.abs(W - ideal) + (W % 2 ? 0.4 : 0) });
+  // Score (W, H, k) by how SQUARE the resulting cells will be.
+  // cellW = containerW / W,  cellH = containerH / H,  square ⇒ cellW = cellH.
+  // Use the cell-aspect score to pick the best grid.
+  const candidates = [];
+  const minW = reserved ? Math.max(3, reserved.c + reserved.w) : 2;
+  const minH = reserved ? Math.max(3, reserved.r + reserved.h) : 1;
+  for (let W = minW; W <= Math.min(16, N + reservedCells); W++) {
+    for (let H = minH; H <= Math.min(16, N + reservedCells); H++) {
+      const total = W * H;
+      const free = total - reservedCells;
+      if (free < N) continue;       // need ≥ N cells for sources
+      const k = free - N;
+      if (k > N) continue;          // need each wide to come from an item
+      const cellW = containerW / W;
+      const cellH = containerH / H;
+      const cellAspect = cellW / cellH;
+      const squareScore = Math.abs(Math.log(cellAspect));   // 0 = perfect square
+      const sizeScore   = -Math.min(cellW, cellH);          // prefer big cells
+      candidates.push({ W, H, k, score: squareScore * 4 + sizeScore * 0.01 });
     }
-    opts.sort((a, b) => a.score - b.score);
-    if (opts.length) { spec = { ...opts[0], k }; break; }
   }
-  if (!spec) {
-    // Fallback to all-1×1 (leaves trailing empty cells in row)
-    const W = Math.max(2, Math.round(Math.sqrt(N * aspect)));
-    const H = Math.ceil(N / W);
-    return {
-      placements: itemsLen.map((_, i) => ({ r: Math.floor(i / W), c: i % W, w: 1, h: 1 })),
-      W, H
-    };
-  }
-  const { W, H, k } = spec;
+  candidates.sort((a, b) => a.score - b.score);
 
-  // Phase 1: greedy random placement of k wides. If a random shuffle fails,
-  // retry; up to 20 attempts.
-  for (let attempt = 0; attempt < 20; attempt++) {
+  for (const c of candidates.slice(0, 30)) {
+    const result = tryPlaceSquare(N, itemsLen.length ? idxByLen : [], c.W, c.H, c.k, reserved);
+    if (result) return { placements: result, W: c.W, H: c.H };
+  }
+  // Fallback — best-effort 1×1 only
+  const W = Math.max(2, Math.round(Math.sqrt((N + reservedCells) * aspect)));
+  const H = Math.ceil((N + reservedCells) / W);
+  return {
+    placements: itemsLen.map((_, i) => ({ r: Math.floor(i / W), c: i % W, w: 1, h: 1 })),
+    W, H
+  };
+}
+
+function tryPlaceSquare(N, idxByLen, W, H, k, reserved) {
+  for (let attempt = 0; attempt < 25; attempt++) {
     const grid = Array.from({ length: H }, () => Array(W).fill(false));
+    // Block reserved cells
+    if (reserved) {
+      for (let r = reserved.r; r < reserved.r + reserved.h; r++)
+        for (let c = reserved.c; c < reserved.c + reserved.w; c++)
+          grid[r][c] = true;
+    }
+
+    // Place k wides (1×2 horizontal) at random valid positions in remaining area
     const wideStarts = [];
     for (let r = 0; r < H; r++)
       for (let c = 0; c < W - 1; c++)
-        wideStarts.push([r, c]);
+        if (!grid[r][c] && !grid[r][c + 1]) wideStarts.push([r, c]);
     const order = shuffled(wideStarts);
-    let placed = 0;
     const widePos = [];
     for (const [r, c] of order) {
-      if (placed >= k) break;
+      if (widePos.length >= k) break;
       if (grid[r][c] || grid[r][c + 1]) continue;
       grid[r][c] = grid[r][c + 1] = true;
       widePos.push({ r, c });
-      placed++;
     }
-    if (placed < k) continue;  // random pick boxed itself in; retry
+    if (widePos.length < k) continue;
 
-    // Phase 2: fill 1×1 cells
+    // Fill remaining cells with 1×1
     const smallCells = [];
     for (let r = 0; r < H; r++)
       for (let c = 0; c < W; c++)
         if (!grid[r][c]) smallCells.push({ r, c });
 
-    // Assign sources to positions: longest k → wides, rest → smalls (shuffle each)
+    // Sanity: small cells + 2*k should equal N
+    if (smallCells.length + k !== N) continue;
+
     const widePosShuf = shuffled(widePos);
     const smallPosShuf = shuffled(smallCells);
     const wideIds = shuffled(idxByLen.slice(0, k));
@@ -1208,14 +1221,9 @@ function bentoPack(itemsLen, containerW, containerH) {
       const p = smallPosShuf[i];
       placements[id] = { r: p.r, c: p.c, w: 1, h: 1 };
     });
-    return { placements, W, H };
+    return placements;
   }
-
-  // Final fallback (shouldn't hit): everyone gets row-major 1×1
-  return {
-    placements: itemsLen.map((_, i) => ({ r: Math.floor(i / W), c: i % W, w: 1, h: 1 })),
-    W, H
-  };
+  return null;
 }
 
 function copyAutoGrow() {
@@ -1233,6 +1241,16 @@ copyUp.addEventListener('click', () => {
 });
 copyDown.addEventListener('click', () => {
   if (copyFocus < copyTurns.length - 1) { copyFocus++; layoutCopyStack(); }
+});
+
+// Keyboard ↑/↓ scroll through turns when in Copy view (but not while the user
+// is editing the composer text — Enter sends, arrow keys navigate the textarea
+// only when there's selected text)
+document.addEventListener('keydown', (e) => {
+  if (!copyPanel.classList.contains('show')) return;
+  if (e.target === copyInput) return;
+  if (e.key === 'ArrowUp')   { e.preventDefault(); copyUp.click(); }
+  if (e.key === 'ArrowDown') { e.preventDefault(); copyDown.click(); }
 });
 
 function formatTurnText(query, sources) {
@@ -1267,127 +1285,175 @@ function formatOneSource(query, src) {
   return `Question: ${query}\n\n===== SOURCE: ${src.name} =====\n${passages}${facts}`;
 }
 
+function shortenSource(name) {
+  return name.replace(/\.txt$/, '').replace(/_/g, ' ').slice(0, 32);
+}
+
 function buildCopyTurn(query, data) {
   const sources = data.sources || [];
   const newSources = sources.filter(s => !copySeen.has(s.name));
   newSources.forEach(s => copySeen.add(s.name));
 
-  const allBulkText = formatTurnText(query, sources);
-  const newBulkText = formatTurnText(query, newSources);
-
   const turn = document.createElement('div');
   turn.className = 'copy-turn';
+  // Layout: 3:2 row → new panel (larger) | all panel. Each has a count
+  // header, a bento grid, and a "Copy all" button. A translucent backdrop sits
+  // behind the entire pair.
   turn.innerHTML = `
-    <div class="copy-col bulk">
+    <div class="copy-backdrop"></div>
+    <div class="copy-col new-panel">
       <div class="copy-count">
-        <span>All new (bulk) <span class="count-num">${newSources.length}</span></span>
-        <span class="copy-hint">click</span>
-      </div>
-      <div class="copy-box bulk-box"></div>
-    </div>
-    <div class="copy-col new-bento">
-      <div class="copy-count">
-        <span>New sources <span class="count-num">${newSources.length}</span></span>
-        <span class="copy-hint">click any</span>
+        New sources <span class="count-num">${newSources.length}</span>
       </div>
       <div class="bento-grid new-grid"></div>
+      <button class="copy-all-btn new-copy-all">Copy all new</button>
     </div>
-    <div class="copy-col all-bento">
+    <div class="copy-col all-panel">
       <div class="copy-count">
-        <span>All sources <span class="count-num">${sources.length}</span></span>
-        <span class="copy-hint">click any</span>
+        All sources <span class="count-num">${sources.length}</span>
       </div>
       <div class="bento-grid all-grid"></div>
+      <button class="copy-all-btn all-copy-all">Copy all</button>
     </div>
   `;
-  const bulkBox = turn.querySelector('.bulk-box');
   const newGrid = turn.querySelector('.new-grid');
   const allGrid = turn.querySelector('.all-grid');
-  bulkBox.textContent = newBulkText;
+  const newCopyAll = turn.querySelector('.new-copy-all');
+  const allCopyAll = turn.querySelector('.all-copy-all');
 
-  // Click-to-copy for bulk box
-  bulkBox.addEventListener('click', () => {
-    copyText(newBulkText);
-    bulkBox.classList.add('copied');
-    setTimeout(() => bulkBox.classList.remove('copied'), 1200);
+  // Bulk text for the copy-all buttons
+  const newBulkText = formatTurnText(query, newSources);
+  const allBulkText = formatTurnText(query, sources);
+  const wireCopyAll = (btn, text) => btn.addEventListener('click', () => {
+    copyText(text);
+    btn.classList.add('copied');
+    const orig = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => { btn.classList.remove('copied'); btn.textContent = orig; }, 1400);
   });
+  wireCopyAll(newCopyAll, newBulkText);
+  wireCopyAll(allCopyAll, allBulkText);
 
-  // Build the bento grids
-  const fillBento = (gridEl, srcList) => {
-    gridEl.innerHTML = '';
-    if (srcList.length === 0) {
-      gridEl.innerHTML = '<div class="bc-empty">— none —</div>';
-      gridEl.style.gridTemplateColumns = '1fr';
-      gridEl.style.gridTemplateRows = '1fr';
-      return [];
-    }
-    const cards = [];
-    srcList.forEach(s => {
-      const card = document.createElement('div');
-      card.className = 'bento-card';
-      card.innerHTML = `
-        <div class="bc-head" title="${escapeHTML(s.name)}">${escapeHTML(shortenSource(s.name))}</div>
-        <div class="bc-body"></div>`;
-      const body = card.querySelector('.bc-body');
-      const text = formatOneSource(query, s);
-      body.textContent = text;
-      card.addEventListener('click', () => {
-        copyText(text);
-        card.classList.add('copied');
-        setTimeout(() => card.classList.remove('copied'), 1200);
-      });
-      gridEl.appendChild(card);
-      cards.push({ card, body });
+  // Build cards for each panel. The ALL grid prepends a 3×3 user-prompt card.
+  const makeCard = (title, body, fullCopy, extraClass = '') => {
+    const card = document.createElement('div');
+    card.className = 'bento-card' + (extraClass ? ' ' + extraClass : '');
+    card.innerHTML = `
+      <div class="bc-head" title="${escapeHTML(title)}">${escapeHTML(title)}</div>
+      <div class="bc-body"></div>`;
+    const bodyEl = card.querySelector('.bc-body');
+    bodyEl.textContent = body;
+    card.addEventListener('click', () => {
+      copyText(fullCopy);
+      card.classList.add('copied');
+      setTimeout(() => card.classList.remove('copied'), 1200);
     });
-    return cards;
+    return { card, body: bodyEl };
   };
 
-  const newCards = fillBento(newGrid, newSources);
-  const allCards = fillBento(allGrid, sources);
+  // New panel: just source cards (no prompt cell)
+  const newCards = [];
+  if (newSources.length === 0) {
+    newGrid.innerHTML = '<div class="bc-empty">— no new sources —</div>';
+    newGrid.style.gridTemplateColumns = '1fr';
+    newGrid.style.gridTemplateRows = '1fr';
+  } else {
+    newSources.forEach(s => {
+      const c = makeCard(shortenSource(s.name), formatOneSource(query, s),
+                         formatOneSource(query, s));
+      newGrid.appendChild(c.card);
+      newCards.push(c);
+    });
+  }
+
+  // All panel: 3×3 user-prompt cell + source cards
+  const allCards = [];
+  const promptCard = makeCard('Your question', query, query, 'prompt-cell');
+  allGrid.appendChild(promptCard.card);
+  sources.forEach(s => {
+    const c = makeCard(shortenSource(s.name), formatOneSource(query, s),
+                       formatOneSource(query, s));
+    allGrid.appendChild(c.card);
+    allCards.push(c);
+  });
 
   copyStage.appendChild(turn);
   copyEmpty.classList.add('hidden');
 
   copyTurns.push({
     el: turn, query, sources, newSources,
-    bulkBox, newGrid, allGrid, newCards, allCards,
+    newGrid, allGrid, newCards, allCards, promptCard,
   });
   copyFocus = copyTurns.length - 1;
   layoutCopyStack();
 }
 
-// Reuse the shortenSource helper already defined in the chat code, or define a
-// simple one if it's not in scope here.
-function shortenSource(name) {
-  return name.replace(/\.txt$/, '').replace(/_/g, ' ').slice(0, 36);
-}
-
 function layoutBentoFor(turn) {
-  // Compute and apply CSS grid template + grid-area for each bento card so the
-  // grid is perfectly tiled with 1×1 / 1×2 cells, placed randomly.
-  const apply = (gridEl, cards, srcs) => {
-    if (!cards.length) return;
-    const rect = gridEl.getBoundingClientRect();
-    const lens = srcs.map(s =>
+  // Compute square (or 2×1) cell sizes per panel and apply explicit CSS grid
+  // sizing so every cell is the same square. Wide cells become exact 2×1.
+  const applyLeft = () => {
+    const cards = turn.newCards;
+    if (!cards.length || turn.newSources.length === 0) return;
+    const rect = turn.newGrid.getBoundingClientRect();
+    if (rect.width < 10 || rect.height < 10) return;
+    const lens = turn.newSources.map(s =>
       (s.passages || []).reduce((a, p) => a + (p.text || '').length, 0) +
       (s.facts || []).reduce((a, f) => a + (f || '').length, 0));
-    const { placements, W, H } = bentoPack(lens, rect.width, rect.height);
-    gridEl.style.gridTemplateColumns = `repeat(${W}, 1fr)`;
-    gridEl.style.gridTemplateRows    = `repeat(${H}, 1fr)`;
-    cards.forEach(({ card, body }, i) => {
-      const p = placements[i];
+    const spec = bentoPackSquare(lens.length, lens, rect.width, rect.height, null);
+    if (!spec) return;
+    sizeGrid(turn.newGrid, spec, rect);
+    cards.forEach(({ card }, i) => {
+      const p = spec.placements[i];
       if (!p) { card.style.display = 'none'; return; }
       card.style.display = '';
       card.style.gridColumn = `${p.c + 1} / span ${p.w}`;
       card.style.gridRow    = `${p.r + 1} / span ${p.h}`;
     });
-    // After layout, fit each card's text
+    requestAnimationFrame(() => cards.forEach(({ body }) => fitTextToBox(body, 9, 4)));
+  };
+
+  const applyRight = () => {
+    const rect = turn.allGrid.getBoundingClientRect();
+    if (rect.width < 10 || rect.height < 10) return;
+    const lens = turn.sources.map(s =>
+      (s.passages || []).reduce((a, p) => a + (p.text || '').length, 0) +
+      (s.facts || []).reduce((a, f) => a + (f || '').length, 0));
+    // Reserve top-left 3×3 for the prompt
+    const spec = bentoPackSquare(lens.length, lens, rect.width, rect.height,
+                                 { r: 0, c: 0, w: 3, h: 3 });
+    if (!spec) return;
+    sizeGrid(turn.allGrid, spec, rect);
+    // Prompt card first
+    turn.promptCard.card.style.display = '';
+    turn.promptCard.card.style.gridColumn = '1 / span 3';
+    turn.promptCard.card.style.gridRow    = '1 / span 3';
+    turn.allCards.forEach(({ card }, i) => {
+      const p = spec.placements[i];
+      if (!p) { card.style.display = 'none'; return; }
+      card.style.display = '';
+      card.style.gridColumn = `${p.c + 1} / span ${p.w}`;
+      card.style.gridRow    = `${p.r + 1} / span ${p.h}`;
+    });
     requestAnimationFrame(() => {
-      cards.forEach(({ body }) => fitTextToBox(body, 11, 4));
+      turn.allCards.forEach(({ body }) => fitTextToBox(body, 9, 4));
+      fitTextToBox(turn.promptCard.body, 13, 6);
     });
   };
-  apply(turn.newGrid, turn.newCards, turn.newSources);
-  apply(turn.allGrid, turn.allCards, turn.sources);
+
+  applyLeft();
+  applyRight();
+}
+
+function sizeGrid(gridEl, spec, rect) {
+  // Make each cell exactly cellSize × cellSize (square). 2×1 cells become 2:1.
+  const gap = 6;
+  const W = spec.W, H = spec.H;
+  const cellSize = Math.floor(Math.min(
+    (rect.width  - gap * (W - 1)) / W,
+    (rect.height - gap * (H - 1)) / H
+  ));
+  gridEl.style.gridTemplateColumns = `repeat(${W}, ${cellSize}px)`;
+  gridEl.style.gridTemplateRows    = `repeat(${H}, ${cellSize}px)`;
 }
 
 function layoutCopyStack() {
