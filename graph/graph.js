@@ -1483,13 +1483,11 @@ function layoutCopyStack() {
       t.el.style.zIndex  = String(2 - offset);
     }
   });
-  // Re-fit the focused turn (its layout / sizing may have changed)
+  // Re-layout the focused turn's bento (cards + text-fit). Double rAF so the
+  // grid's clientRect is settled after a freshly-appended turn.
   const f = copyTurns[copyFocus];
   if (f) {
-    requestAnimationFrame(() => {
-      fitTextToBox(f.bulkBox, 11, 4);
-      layoutBentoFor(f);
-    });
+    requestAnimationFrame(() => requestAnimationFrame(() => layoutBentoFor(f)));
   }
   // Arrow state + position label.
   //   ▲ goes to OLDER (lower index)  — disabled when at index 0

@@ -942,7 +942,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: min(95%, 1400px);
+      /* Leave 140px on both sides — the right side holds the floating arrows
+         (which are at right: 24px). The 140-px gutter keeps the panels visually
+         centered on the screen without overlapping the arrow column. */
+      width: min(calc(100% - 140px), 1300px);
       height: 80%;
       transform: translate(-50%, -50%);
       transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
@@ -1147,10 +1150,10 @@
     #copy-send:hover { background: #6b5ee0; }
     #copy-send:disabled { opacity: 0.35; cursor: default; }
 
-    /* Right-side up/down navigator */
+    /* Right-side up/down navigator (centered vertically, on the screen's right edge) */
     #copy-nav {
       position: absolute;
-      top: 50%; right: 16px;
+      top: 50%; right: 24px;
       transform: translateY(-50%);
       display: flex;
       flex-direction: column;
