@@ -2,6 +2,8 @@
 
 A personal knowledge pipeline that runs entirely on-device. Transcribe YouTube videos, extract structured knowledge with a local LLM, store it as vector embeddings for RAG, and explore it as an interactive graph.
 
+> 📐 **See [ARCHITECTURE.md](ARCHITECTURE.md)** for the v2 knowledge-graph design — node layers (L0 Concepts / L1 Frameworks / L2 Claims / L3 Examples / L4 Practices), the transcript → graph pipeline, and how cross-source claim agreement is tracked.
+
 ---
 
 ## Commands
