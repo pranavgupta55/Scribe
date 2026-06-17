@@ -1680,6 +1680,39 @@ function formatOneSource(query, src) {
   return `Question: ${query}\n\n===== SOURCE: ${src.name} =====\n${passages}${facts}`;
 }
 
+// Cell *body* (visible in the bento card) = source-level video_summary or first
+// passage snippet if no summary exists. The full source block (passages + facts)
+// is what lands on the clipboard when the user clicks the card. This separation
+// was the user's explicit ask: cells should be readable at a glance, not walls
+// of transcript text.
+function summaryForCell(src) {
+  if (src.video_summary && src.video_summary.trim()) return src.video_summary.trim();
+  // Fallback: first passage's first ~200 chars
+  const firstPassage = (src.passages && src.passages[0] && src.passages[0].text) || '';
+  if (firstPassage) return firstPassage.slice(0, 220) + (firstPassage.length > 220 ? '…' : '');
+  // Last resort: a fact
+  const firstFact = (src.facts && src.facts[0]) || '';
+  return firstFact || '(no summary)';
+}
+
+// Clipboard payload for a single source card. Drops the "Question: ..." prefix
+// from formatOneSource (the question is its own cell). Includes passages + facts
+// + the video_summary header.
+function clipboardForSource(query, src) {
+  const summaryHeader = src.video_summary
+    ? `# ${src.title || src.name}\n\n${src.video_summary}\n\n`
+    : `# ${src.title || src.name}\n\n`;
+  const passages = (src.passages || []).map(p => {
+    const hdr = p.section_title ? `[§ ${p.section_title}] ` : '';
+    return hdr + (p.text || '');
+  }).join('\n\n');
+  const facts = (src.facts && src.facts.length)
+    ? '\n\nKey facts from this source:\n' + src.facts.map(f => `- ${f}`).join('\n')
+    : '';
+  const url = src.url ? `\n\n[Source: ${src.url}]` : '';
+  return `${summaryHeader}===== SOURCE: ${src.name} =====\n${passages}${facts}${url}`;
+}
+
 function shortenSource(name) {
   return name.replace(/\.txt$/, '').replace(/_/g, ' ').slice(0, 32);
 }
@@ -1756,8 +1789,8 @@ function buildCopyTurn(query, data) {
     newGrid.style.gridTemplateRows = '1fr';
   } else {
     newSources.forEach(s => {
-      const c = makeCard(shortenSource(s.name), formatOneSource(query, s),
-                         formatOneSource(query, s));
+      const c = makeCard(shortenSource(s.name), summaryForCell(s),
+                         clipboardForSource(query, s));
       newGrid.appendChild(c.card);
       newCards.push(c);
     });

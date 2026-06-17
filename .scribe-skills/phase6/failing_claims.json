@@ -1,0 +1,501 @@
+{
+ "failing": [
+  {
+   "node_id": "claim:394",
+   "failure_modes": [
+    "A3"
+   ],
+   "notes": "FAIL row 1: Conditions list contains redundant/conflicting items (multiple references to different revenue levels, multiple margin/compensation refs). Ambiguity in referents across the conditions array. Row 3: Though mechanism exists, the claim bundles too many contextual variants (home-services, agency, physician-draw, recruiter comparison). Hit A3 for axis-less data points mixed with conditions.",
+   "text": "Alex Hormozi frames investing in a salesperson as a capital-allocation decision with a measurable ROI: in a home-services business with roughly $1M gross profit per salesperson and $200K all-in annual compensation, the investment yields approximately a 5:1 gross-profit-to-cost ratio, plus an estimated 8x enterprise value multiplier on the incremental gross profit generated.",
+   "topic": "Hiring as Capital Allocation",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "$5M top-line revenue",
+    "50% gross margin on $2M per salesperson revenue",
+    "Agency is supply constrained",
+    "Business has sufficient retained profit to fund operations without the owner's salary redirected",
+    "Business is considering whether to use an external recruiter vs. build an internal recruiting function",
+    "Done-for-you client-acquisition agency",
+    "Gross profit per salesperson approximately $1M (50% gross margin on $2M revenue per rep)",
+    "Hire is a leadership role expected to generate measurable business output",
+    "Hire is intended to generate incremental revenue",
+    "Home-services business at approximately $20M revenue",
+    "Low capex service business",
+    "Owner has end-of-year profit to allocate",
+    "Owner is taking a medical director draw approximately equal to market rate for a replacement physician",
+    "Owner is unwilling to raise prices",
+    "Salesperson compensation approximately $200K/year (top performers)",
+    "Sufficient existing cash flow to fund hire",
+    "context: investor evaluating founder-led company",
+    "founder at $1M-$10M revenue",
+    "founder currently producing $4M personally",
+    "founder is the primary value-creator in the business",
+    "founder unwilling to increase personal working hours",
+    "high-margin services where each deal is significant",
+    "home-services business with $20M revenue",
+    "incremental hires reach full productivity and are retained",
+    "professional services firm valued at ~8x EBITDA multiple",
+    "sales director managing ~3 agency clients",
+    "team of 7+ agents each capable of incremental improvement",
+    "~31 clients paying ~$150k/year each"
+   ],
+   "mechanism": "When viewed as a capital investment rather than a headcount cost, each salesperson hire converts $200K of cost into $1M of gross profit, with enterprise value creation multiplying the economics further.",
+   "numbers": {
+    "axis": "gross-profit-to-salesperson-cost ratio",
+    "anchors": [
+     {
+      "region": "Salesperson cost (top performer, annual)",
+      "value": "$200K"
+     },
+     {
+      "region": "Gross profit generated per salesperson",
+      "value": "~$1M"
+     },
+     {
+      "region": "GP-to-cost ratio",
+      "value": "~5:1"
+     },
+     {
+      "region": "Enterprise value multiplier on incremental GP (estimated 8x)",
+      "value": "~$8M per $200K invested"
+     }
+    ]
+   }
+  },
+  {
+   "node_id": "claim:2021",
+   "failure_modes": [
+    "A1 \u2014 Ambiguous actor reference: uses generic role-word 'founders' and 'larger company sizes' instead of named entities. Speaker is Hormozi but the subject of the claim is unbound generic actors."
+   ],
+   "notes": "FAILS row 1. Claim refers to generic 'founders' and 'larger company sizes' without resolution to specific named referents. Repair: 'LinkedIn agency founders targeting companies above $X revenue' or name the company types explicitly.",
+   "text": "For LinkedIn agency founders offering content-and-DM services, founders at larger company sizes raise brand-risk objections \u2014 they are unwilling to have DMs sent from their personal account \u2014 creating a ceiling on client acquisition unless the agency reframes or restructures its offer.",
+   "topic": "Growth Path Selection",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "LinkedIn agency offering DM outreach as a service",
+    "Target clients are founder-CEOs above a certain revenue threshold"
+   ],
+   "mechanism": "Larger-company founders perceive personal brand damage risk from outsourced DM outreach because their reputation is already an asset worth protecting; smaller or earlier-stage founders have less brand equity to lose and therefore less resistance.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:572",
+   "failure_modes": [
+    "A9 \u2014 Tautology/truism: 'best talent is always in the future' is trivially true by definition; adds no information. A4 \u2014 Vague blanket: 'superior people are available ahead' is an unqualified assertion with no quantifier or comparison.",
+    "Row 5 (Falsifiable) fails: 'talent is in the future' is unfalsifiable because any counterfact can be restated as 'those weren't truly the best'."
+   ],
+   "notes": "FAILS rows 4-5. The core claim conflates 'always upgrade hiring standards' (load-bearing) with 'best talent is in the future' (tautology). Repair: either reframe as 'raising hiring standards over time unlocks access to a larger talent pool' (mechanism: selection effect) or drop as advice-only (demote to practices[]).",
+   "text": "Alex Hormozi, quoting Acquisition.com president Sharon, asserts that the best talent is always in the future: whatever caliber of team a business has today, superior people are available ahead, not behind.",
+   "topic": "Recruiting High-Leverage Talent",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Applies to businesses that are actively raising hiring standards over time"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:163",
+   "failure_modes": [
+    "A4 \u2014 Vague blanket statement: 'worse content' and 'reducing effectiveness' lack quantification; no testable threshold or comparison",
+    "A15 \u2014 Correlation dressed as causation: no mechanism explaining *how* disengagement reduces content quality; causality assumed but not explained"
+   ],
+   "notes": "Fails load-bearing (row 3) and falsifiability (row 5). The claim is intuitive but operationally untestable\u2014there's no way to measure 'worse content' or prove disengagement causes the degradation vs. correlation.",
+   "text": "Alex Hormozi asserts that a creator who is bored by or disengaged from a content topic will produce worse content on that topic, reducing the effectiveness of that content as a marketing channel, suggesting that content topic selection must account for the creator's genuine interest level, not only audience fit.",
+   "topic": "Attention-to-Revenue Funnel",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "organic long-form or short-form content creator",
+    "topics the creator finds uninteresting relative to alternatives"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1740",
+   "failure_modes": [
+    "A4 \u2014 Vague blanket statement: 'strong conversion' and 'any product' lack quantification; no threshold, no axis, no comparison",
+    "A13 \u2014 Universalized anecdote: presented as universal principle without N, cohort size, or comparison group"
+   ],
+   "notes": "Fails load-bearing (row 3) and falsifiability (row 5). Too broad and untestable\u2014'any product' and 'strong conversion' have no anchors. Reads as unsupported generalization from Hormozi's personal experience.",
+   "text": "Alex Hormozi asserts that a personal brand, once established, can direct its audience to any product or offer and achieve strong conversion, as long as the audience trusts the creator; the brand is not locked to a single product category.",
+   "topic": "Attention-to-Revenue Funnel",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Audience trust has been established through consistent personal brand content",
+    "New product is congruent with the problems the audience cares about"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1169",
+   "failure_modes": [
+    "A15 \u2014 Correlation dressed as causation: no mechanism explaining *why* pain articulation outperforms outcome promises; causality assumed but not proven",
+    "A9 \u2014 Tautology-adjacent: 'if you articulate pain better, they'll believe you can solve it' is close to definitional; lacks comparative evidence"
+   ],
+   "notes": "Fails falsifiability (row 5). The claim lacks a mechanism or evidence\u2014it asserts a causal relationship without explaining the causal chain. No testable conditions or comparison data.",
+   "text": "Alex Hormozi asserts that if a founder can articulate a customer's pain more accurately than the customer can describe it themselves, the customer will inherently believe the founder can solve that problem \u2014 making pain articulation a more powerful conversion lever than a larger outcome promise.",
+   "topic": "Avatar Targeting Strategy",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "copy or sales conversation that mirrors the avatar's own language",
+    "offer targeting a specific avatar with known pain points"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:2097",
+   "failure_modes": [
+    "A13 \u2014 Universalized anecdote: 'the more he works, the better he gets' is a personal experience generalized to principle without N or comparison cohort",
+    "A15 \u2014 Correlation dressed as causation: mechanism states correlation (higher volume raises output) but no independent test isolates causation from selection bias"
+   ],
+   "notes": "Fails falsifiability (row 5). Mechanism is stated but mechanism \u2260 falsifiability; no evidence that this holds for others or controls for selection effects (people who work hard may simply be naturally productive).",
+   "text": "Alex Hormozi asserts that the more he works, the more productive he becomes per unit of time \u2014 a compounding dynamic in which work ethic itself grows with volume, eventually making external outcomes secondary to the intrinsic reward of increased capacity. The mechanism is within-person skill compounding: higher volume raises both output quality and resilience.",
+   "topic": "Compound Work Payoff",
+   "speaker": "Alex Hormozi",
+   "conditions": [],
+   "mechanism": "Repeated high-volume work builds work ethic as a trainable skill, compounding both output per hour and tolerance for sustained effort over time.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:989",
+   "failure_modes": [
+    "A8\u2014Hortative without mechanism: 'will exhibit high churn' lacks explanation of *why* churn occurs; mechanism provided but vague ('no established habit... perceived value is low'). Would benefit from clearer causal statement.",
+    "No falsifiable anchor: claim depends on external book ($100M Leads) but provides no specific, verifiable claim about what happens if the book's strategy is *not* applied. Churn is asserted but no counterfactual baseline is provided."
+   ],
+   "notes": "Speaker and topic resolvable. Conditions clearly stated (distributor agencies, white-label). Type declared (conditional). But mechanism is thin and no evidence base cited; the claim rests on 'reads the book and applies it' as the condition, making it unfalsifiable without knowing what the book actually prescribes. n_sources=1 is thin.",
+   "text": "Alex Hormozi asserted that distributor agencies in a white-label model who are not treated with a customer journey \u2014 specifically without reading and applying the affiliate-management strategy in $100M Leads \u2014 will exhibit high churn regardless of service quality.",
+   "topic": "Affiliate and Partner Channel Strategy",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Distributor agencies receiving service to resell",
+    "White-label or affiliate distribution model"
+   ],
+   "mechanism": "Distributors who receive no onboarding, no activation journey, and no ongoing engagement have no established habit of using the service; without a usage habit, perceived value is low and churn is high.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:174",
+   "failure_modes": [
+    "A8\u2014Hortative assertion without mechanism: claim is 'leaders are responsible for monitoring proximity to burnout' but provides no evidence, comparison, or condition where this applies or fails. No counterfactual. Unsupported advice.",
+    "Unverifiable assertion: 'hard workers run themselves into the ground when goal is large enough' \u2014 this is a universal claim without scope (all industries? all workers?) or falsifiability test."
+   ],
+   "notes": "Speaker named, conditions narrow (large goal, high performer). Mechanism field is null\u2014no causal explanation. n_sources=1. Type is 'assertion'. The core assertion is motivational/hortative rather than empirical and lacks any anchor point to test it.",
+   "text": "Alex Hormozi asserts that hard workers will run themselves into the ground when the goal is large enough, and will look to their direct leader to signal when to rest; leaders are therefore responsible for monitoring proximity to burnout and proactively authorizing rest before the worker crosses that line.",
+   "topic": "Discretionary Effort and the 5% Core",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Goal is large and emotionally engaging",
+    "High performer with strong work ethic"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:560",
+   "failure_modes": [
+    "A1\u2014Ambiguous/over-parameterized conditions: 23 conditions listed, many contradictory ('agency or coaching company' appears twice in slightly different forms; 'Meta or TikTok' channel-specific; 'tenant-only commercial' is a single example, not a category). Claim is obscured by over-fitting to one case.",
+    "A2\u2014Feature-list disguised as claim: the node reads as a collection of specific contexts ('wildfire sprinkler', 'HNW clients', 'commercial real estate') rather than a generalizable principle. Core claim is load-bearing (avatar targeting reduces churn) but the conditions list drowns it.",
+    "A3\u2014Axis-less comparison: 'raise CAC' is mentioned but no quantified axis on CAC, LTV, or churn tradeoff is provided; the numbers field is null. Claims like 'stick-rate improvement more than compensates' are unanchored.",
+    "Not standalone (row 2): without the 23 conditions, the reader cannot understand the scope. The claim's applicability is buried in the condition list."
+   ],
+   "notes": "Speaker named (Hormozi), type declared (conditional), mechanism clear (high-propensity avatars extract more value). But the 23 conditions and multiple bounded_by examples create a claim that is specific to a single case study (wildfire sprinkler, HNW clients) rather than a principle. The core insight is strong but overconditioned and not independently intelligible. n_sources=11 but many are example-driven.",
+   "text": "Alex Hormozi states that for an agency or coaching company facing high churn, the solution is first to identify which customer avatar segments have a meaningfully higher likelihood of activating and sticking, and to restrict sales to only those segments, even if it raises CAC. This solves both the activation problem and the stick problem simultaneously.",
+   "topic": "Avatar Targeting Strategy",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Advertiser spending at least $100K/month on paid media",
+    "B2B certification or training business where the seller's clients serve an end-consumer",
+    "Business where customer sophistication correlates with spend level",
+    "Company previously selling to the entire market (B2C and B2B undifferentiated)",
+    "LTV-to-CAC in new segment matches or exceeds the existing segment after at least one month of data",
+    "Local market with sufficient commercial real estate deal volume",
+    "Meta or TikTok paid advertising",
+    "Needing 50-100+ creative pieces per month",
+    "Running direct-response campaigns requiring creative variety",
+    "Service with a narrow, differentiated positioning (e.g., tenant-only commercial lease negotiation)",
+    "Shifted to high-net-worth private clients and commercial clients three months prior",
+    "Targeting an advanced or higher-revenue customer segment",
+    "agency or coaching company with high churn driven by customer activation failure",
+    "both segments are served by the same founder or team",
+    "broad-appeal consumer offer (travel, wellness, finance)",
+    "business owner emotionally attached to secondary segment",
+    "business with confirmed activation-to-retention correlation",
+    "campaign optimized for conversions",
+    "capable of consistent delivery at multiple locations simultaneously",
+    "coaching or agency business with high churn driven by activation failure",
+    "current avatar is too broad and includes low-propensity-to-activate segments",
+    "existing customer data allows segmentation by demographics, financials, and behavioral patterns",
+    "majority of revenue already concentrated in one avatar",
+    "organic social content marketing",
+    "primary segment not yet saturated",
+    "service business operating across multiple states",
+    "sufficient historical customer data to distinguish activated vs. churned cohorts",
+    "that avatar has demonstrably higher LTV and recurring purchase behavior"
+   ],
+   "mechanism": "Customers who cannot or will not engage with the service cannot extract its value, causing churn regardless of price or delivery quality; filtering to only high-propensity avatars raises unit economics and reduces churn simultaneously even at higher CAC.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:2164",
+   "failure_modes": [
+    "A3\u2014Decontextualized number: 'churn rate approximately equal to hiring rate' is stated in isolation. What is the hiring rate in a 17-person team? What does 'approximately equal' mean (\u00b110%? \u00b130%)? The axis is missing. Without a baseline from other teams or a quantified definition of steady-state, the claim is unverifiable.",
+    "Unfalsifiable steady-state assertion: 'keeps the team permanently stuck' \u2014 stuck on what metric? Close rate? Revenue? Quality? The outcome is vague."
+   ],
+   "notes": "Speaker named (Hormozi), conditions clear (high-volume inbound, 15-20 reps, no process enforcement). Mechanism provided. Type declared (mechanism). But the core claim relies on a number ('approximately equal hiring and churn rates') that is not anchored to actual figures or comparison points. n_sources=1. Needs quantified axis.",
+   "text": "Alex Hormozi asserts that the churn rate of sales reps \u2014 people quitting and being fired \u2014 in a high-volume team of 17 is approximately equal to the hiring rate, producing a steady-state headcount that masks the underlying process problem and keeps the team permanently stuck.",
+   "topic": "Sales Team Scaling and Leadership",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "High-volume inbound model",
+    "Midsize sales team (15-20 reps)",
+    "No culture or process enforcement"
+   ],
+   "mechanism": "Without process enforcement, the team continuously loses low-performers and occasional high-performers who leave for better culture; constant replacement hiring consumes management bandwidth that could otherwise be spent improving the process.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1066",
+   "failure_modes": [
+    "A2\u2014Feature-list claim disguised as load-bearing claim: 'banning the word sales, renaming to consulting' is a specific tactic, not a principle. The claim reads as 'we did X and activation improved' without explaining *why* semantic reframing works or *when* it fails. If the list of renamed terms were different (e.g., 'professional engagement' instead of 'consulting'), the claim would be equally true.",
+    "Row 5 (Falsifiable): claim depends on a semantic choice (word choice) rather than a mechanism. No clear test: does the word change matter, or was it correlated with a deeper change in positioning? Confounded.",
+    "Low load-bearing: Hormozi explicitly notes in bounded_by that 'reframing is an activation tactic, not a retention or product solution.' This weakens the claim's fundamental importance."
+   ],
+   "notes": "Speaker named, conditions clear (professional-credential audiences, sales coaching). Type declared (assertion). But the core claim is tactically specific (semantic replacement) without principled explanation. Mechanism field is null. The bounded_by statement undermines the claim's own importance. n_sources=1. Reads as an anecdote that was over-generalized.",
+   "text": "Alex Hormozi notes that among the financial advisors served by the questioner's business, resistance to the word 'sales' is real and reduces activation. The questioner's team resolved this by banning the word 'sales' internally and replacing it with 'consulting,' and renaming 'sales calls' to 'consults,' which reduced resistance and improved engagement.",
+   "topic": "Behavior-Change Framing",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "professional-credential audiences (e.g., financial advisors, licensed professionals) who have identity conflict with the role of salesperson",
+    "sales coaching product sold to non-sales-native founders or professionals"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1167",
+   "failure_modes": [
+    "A1: Ambiguous actor reference \u2014 'any founder,' 'any business' are unbound generics. Needs specific example or company anchor.",
+    "A5: Universalized anecdote \u2014 'every business can do this' lacks evidence, comparison, or counterexample. Needs cohort data or named instance."
+   ],
+   "notes": "Too generic; no specific founder, business, industry, or outcome anchor. Claim is a universal assertion without proof.",
+   "text": "Alex Hormozi claims that any founder can create a premium one-on-one tier in any business \u2014 including non-professional service businesses like lawn care \u2014 by differentiating who gets direct access to the founder versus who gets a standard account representative, and who gets the founder's personal design versus a crew member's execution.",
+   "topic": "Tiered Offer Pricing",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "any service business regardless of industry"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:2193",
+   "failure_modes": [
+    "A3: Decontextualized number (implicit) \u2014 mechanism states 'roughly proportional' but no axis given. What is the relationship? At what volume threshold does this hold? Comparison missing.",
+    "A4: Vague blanket statement \u2014 'obsess over efficiency' and 'stay small' lack operational boundaries. How much obsession? How small is 'small'? No metric."
+   ],
+   "notes": "Mechanism stated but unfalsifiable without quantified axis. 'Obsessed' and 'small' are subjective descriptors.",
+   "text": "Alex Hormozi asserts that operators who obsess over efficiency, margin optimization, or relative returns on advertising instead of raw volume stay small, because they withhold the sustained high-volume input that produces compounding sales output.",
+   "topic": "Psychological Barriers to Growth",
+   "speaker": "Alex Hormozi",
+   "conditions": [],
+   "mechanism": "Obsessing over optimization causes under-investment in volume; the relationship between advertising input and sales output is roughly proportional, so optimizing a small input produces a small output even if efficiency is high.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:631",
+   "failure_modes": [
+    "A1: Ambiguous actor reference \u2014 'a prior company' is unbound. No company name, industry, scale, or time period. Speaker attribution weak (no source file/offset)."
+   ],
+   "notes": "Narrative is clear and load-bearing, but 'prior company' violates resolvable referents rule. Needs company name, founding year, or public identifier.",
+   "text": "Alex Hormozi notes that a prior company he examined that offered both a DIY ad-making tool and full-service ad production found that customers did not want the DIY tool and instead demanded the full-service output, causing the company to pivot to pure marketing agency services using AI production as an internal efficiency lever rather than a customer-facing feature.",
+   "topic": "Offer and Audience Pruning",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "AI ad production market circa 2024"
+   ],
+   "mechanism": "Buyers want creative output, not access to creative tools; the tool-vs-service framing is a supply-side perspective that buyers do not share.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:414",
+   "failure_modes": [
+    "A4: Vague blanket statement \u2014 'both must be present' and 'prevents sustained effective execution' lack operationalization. How is 'sustained effective execution' measured? Falsifiability depends on a metric or comparison, neither of which is provided.",
+    "A9: Tautology \u2014 The claim is self-evident in business contexts; every domain practitioner already agrees that saying no (prioritization) and hearing no (resilience) are both important."
+   ],
+   "notes": "True but trivial. No comparison, no counterexample, no mechanism that would change if the claim were false.",
+   "text": "Alex Hormozi argues that winning in business requires simultaneously saying no to opportunities without remorse and hearing no (rejection) without losing enthusiasm \u2014 these are two distinct learnable skills that both must be present; lacking either one prevents sustained effective execution.",
+   "topic": "Bidirectional Rejection Tolerance as Learned Skill",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Applies to business operators in sales and opportunity-selection contexts"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:641",
+   "failure_modes": [
+    "A1: Ambiguous actor reference \u2014 conditions reference 'true enterprise clients,' 'AI origin,' 'broadcast commercial budgets' without grounding. Who specifically are these clients? What is their purchasing process?",
+    "A2: Specific-but-not-load-bearing detail \u2014 conditions list (B2B, enterprise procurement, RFP, margin profiles) reads like a feature checklist rather than load-bearing context. The core claim is clear but the conditions are disconnected.",
+    "A18: Vague comparative \u2014 'lead customers toward the most profitable option' lacks a metric. Compared to what baseline? How much does guided flow increase selection?"
+   ],
+   "notes": "Core claim is sound but resolvability and falsifiability are undermined by vague conditions and missing metrics.",
+   "text": "Alex Hormozi argues that in a tiered-pricing bundle structure, businesses should lead customers toward the most profitable option rather than presenting all options neutrally \u2014 because the goal is margin optimization, not option-presentation fairness.",
+   "topic": "Value-Based Pricing and Margin Optimization",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "AI origin must not be disclosed",
+    "B2B service company with differentiated outcomes (e.g., speed, risk reduction)",
+    "Sales cycle: long (enterprise procurement)",
+    "True enterprise clients accustomed to $500K broadcast commercial budgets",
+    "business offers multiple tiers or bundles",
+    "buyer using procurement / RFP process",
+    "tiers have materially different margin profiles"
+   ],
+   "mechanism": "Presenting options neutrally leaves margin capture to chance; guided sales flows increase the percentage of buyers who choose higher-margin bundles, raising average revenue per transaction without changing the offer itself.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:2026",
+   "failure_modes": [
+    "A4: Vague blanket statement \u2014 'vast majority of business owners fail' is descriptive but not actionable. 'Observable, actionable behaviors' is stated as the solution but not operationalized. How do you convert a standard to an observable behavior? No mechanism or example given.",
+    "A9: Tautology \u2014 The claim is self-evident; everyone agrees standards should be clear and measurable. No reader's behavior would change if this were false."
+   ],
+   "notes": "Observation is true but not load-bearing. Needs a specific mechanism or example of how to operationalize standards.",
+   "text": "Alex Hormozi asserts that the vast majority of business owners fail to translate standards into observable, actionable behaviors that their teams can replicate \u2014 the standard exists in the owner's head but is never operationalized into something the team can measure or follow.",
+   "topic": "Operational Culture Norms",
+   "speaker": "Alex Hormozi",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1611",
+   "failure_modes": [
+    "A1 \u2014 Ambiguous actor reference: 'common social media framing' is a generic role-word with no specific source or example named. Contrast lacks specificity \u2014 which specific media influencers or platforms are referenced?"
+   ],
+   "notes": "Fails row 1 (resolvable referents) \u2014 'common social media framing' is not a named entity. Fails row 2 (standalone meaning) \u2014 the claim depends on knowing what framing is being rejected but does not name it specifically.",
+   "text": "Alex Hormozi argues that the common social media framing of trauma \u2014 that it only makes you worse, that you are a victim, that it happens to you \u2014 is inaccurate because it ignores cases where bad events permanently improve behavior and outcome trajectory.",
+   "topic": "Undefined Words Create Mythology and Prevent Clear Thinking",
+   "speaker": "Alex Hormozi",
+   "conditions": [],
+   "mechanism": "The undefined or overly emotional social media usage of 'trauma' collapses positive and negative behavior change outcomes into a single victim-framing, preventing clear diagnosis of what actually happened and what response is warranted.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1814",
+   "failure_modes": [
+    "A1 (Ambiguous actor reference): 'the speaker' is unresolved \u2014 Jacob is named but then described parenthetically as 'AI agency founder, unnamed in transcript'; unclear authority or context",
+    "A2 (Feature-list claim): The core assertion is 'agencies don't advise X, Y, Z' \u2014 this reads as a feature-list gap, not a load-bearing claim. No comparison of outcomes, no axis of difference",
+    "A15 (Correlation dressed as causation): Claims agencies 'use singular one-dimensional playbooks' causing the gap, but provides no mechanism or evidence that this singular approach is the actual cause vs. other factors (client budget constraints, agency specialization, etc.)"
+   ],
+   "notes": "Fails on multiple counts: speaker authority undefined (AI agency founder with no validation), claim is a feature-list checklist (reactivate leads, get reviews, run ads) rather than a load-bearing assertion, and the causal mechanism (playbooks) is asserted without evidence.",
+   "text": "Most local businesses working with marketing agencies have never been advised to reactivate their existing lead database or get reviews and referrals from active members before running paid ads. The speaker states this gap exists because large agencies use singular, one-dimensional playbooks (ads only) and do not customize based on what would actually maximize a specific client's return.",
+   "topic": "Avatar Mismatch in Agency Positioning",
+   "speaker": "Jacob (AI agency founder, unnamed in transcript but presenting his own recorded sales calls)",
+   "conditions": [
+    "businesses currently paying a marketing agency for paid ads",
+    "local brick-and-mortar businesses with an existing lead database of hundreds to thousands of contacts"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1143",
+   "failure_modes": [
+    "A8 (Hortative without mechanism): The claim 'the correct path to scale is to either hire or restructure' is advice-phrasing (imperative) without a supporting mechanism. Why is hiring/restructuring better than changing demand channels? The node states the recommendation but not the reasoning."
+   ],
+   "notes": "Nearly passing but fails on row 4: lacks explicit type label (should be marked Framework or Prescriptive), and lacks a mechanism explaining *why* hiring/restructuring beats demand-channel changes \u2014 appears as advice without load-bearing justification.",
+   "text": "Alex Hormozi asserts that when a coaching business founder is already supply-constrained, the correct path to scale is to either hire a second delivery person or restructure the delivery format to serve more clients per unit of founder time, not to modify demand-generation channels or selling cadence.",
+   "topic": "Supply Constraint Levers",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Business is at or near full delivery capacity",
+    "Coaching or consulting business",
+    "Demand exceeds current delivery capacity",
+    "Founder is considering changing offer structure or enrollment windows to grow revenue",
+    "Founder is the only delivery resource"
+   ],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:2233",
+   "failure_modes": [
+    "A5-adjacent: Conditions array is excessively redundant (10 items with 3+ near-duplicates: 'B2C or B2B education', 'education or info product', 'pure education product with no ongoing consumable component' stated separately). Suggests over-cautious extraction. Should consolidate to 2-3 distinct conditions."
+   ],
+   "notes": "Education ceiling claim is strong on all other axes (load-bearing, mechanism clear, falsifiable), but conditions list obscures referent clarity. Row 1 fails due to redundant/bloated conditions array rather than actual actor binding failure.",
+   "text": "Alex Hormozi asserts that education, as a standalone product, has a fundamental revenue ceiling: the moment a customer learns the skill, the educational product loses all value for them, making repeat purchase and retention near-impossible. This is why educational businesses struggle to generate recurring revenue from the same customer.",
+   "topic": "Education Product Revenue Ceiling",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "B2C or B2B education/info product (course, book)",
+    "Knowledge-based or curriculum-based education business",
+    "Membership or community business model where ongoing retention is the goal",
+    "One-time or cohort-based delivery model",
+    "Outcome depends primarily on buyer implementation, not delivery",
+    "customer fully acquires the skill taught",
+    "education or information product business",
+    "pure education product with no ongoing consumable component",
+    "selling a skill or knowledge outcome to individuals"
+   ],
+   "mechanism": "Once a learner has the skill, the pre-learning value (infinitely high) drops to approximately zero post-learning; there is no reason to repurchase what you already possess.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:2025",
+   "failure_modes": [
+    "A1-Ambiguous actor reference (what constitutes excellent/poor is undefined)",
+    "A4-Vague blanket statement (standards presumed but undefined)",
+    "A7-Self-referential definition (asserts standards are necessary without load-bearing mechanism)",
+    "A9-Tautology (owners who have standards are perceived as excellent by definition)"
+   ],
+   "notes": "Terms 'excellent' and 'standards' are undefined. No mechanism or comparison. Risk of tautology: if excellent businesses have standards and poor ones lack them, this is unfalsifiable.",
+   "text": "According to Alex Hormozi, every business that customers perceive as excellent has clear standards, and every business customers perceive as poor lacks them \u2014 and the presence or absence of standards is entirely the owner's responsibility, not the team's.",
+   "topic": "Operational Culture Norms",
+   "speaker": "Alex Hormozi",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null
+  },
+  {
+   "node_id": "claim:12",
+   "failure_modes": [
+    "A9-Tautology risk (trust extended creates opportunity for trust to be earned or lost\u2014tautological restatement)",
+    "A15-Mechanism undersupported (behavioral outcome claimed but causal chain is assumed not proven)"
+   ],
+   "notes": "Resolvable referents and type-label correct, but mechanism 'raises stakes for team' is mechanism-restating-outcome. Falsifiable element weak: testing whether vulnerability \u2192 higher trust-behavior would require isolating confounds.",
+   "text": "Alex Hormozi asserts that sharing information about yourself with your team, even information they could use against you, is itself an act of trust that creates an opportunity for team members to earn or lose that trust, and that default trust extended to others is effectively theirs to lose, not yours to give.",
+   "topic": "Trust & Integrity Framework",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "Leader voluntarily shares context with their team"
+   ],
+   "mechanism": "By making oneself punishable, the leader signals belief in the team's trustworthiness, which raises the stakes for the team to behave consistently with that belief.",
+   "numbers": null
+  },
+  {
+   "node_id": "claim:1992",
+   "failure_modes": [
+    "A1-Ambiguous actor reference (undefined abstract terms listed without examples)",
+    "A2-Specific-but-not-load-bearing ('spiritual terminology' and 'behavioral outcomes' named but not defined)",
+    "A4-Vague blanket statement (both parties can use same word without shared meaning\u2014tautological)",
+    "A7-Self-referential definition (restates that undefined words create confusion)",
+    "A9-Tautology (if terms are undefined, communication fails by definition)"
+   ],
+   "notes": "Conditions list (offer language, social traffic) vague and context-dependent. No concrete example of mythologized term. Falsifiable element missing: how would you test whether undefined term *itself* blocks thinking vs. poor communication in general?",
+   "text": "Alex Hormozi contends that undefined abstract terms create mythology rather than understanding, and that both parties in a conversation can use the same word without shared meaning, blocking clear thinking and effective communication.",
+   "topic": "Undefined Words Create Mythology and Prevent Clear Thinking",
+   "speaker": "Alex Hormozi",
+   "conditions": [
+    "offer language uses spiritual or identity-based terminology rather than behavioral outcomes",
+    "organic or paid social traffic to a webinar or checkout funnel"
+   ],
+   "mechanism": null,
+   "numbers": null
+  }
+ ]
+}
