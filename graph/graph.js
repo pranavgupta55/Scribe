@@ -7,6 +7,7 @@ import {
   forceX,
   forceY,
 } from 'https://cdn.jsdelivr.net/npm/d3-force@3/+esm';
+import { quadtree } from 'https://cdn.jsdelivr.net/npm/d3-quadtree@3/+esm';
 
 // ─── DOM refs ─────────────────────────────────────────────────────────────────
 
@@ -36,17 +37,25 @@ let selectedNode = null;
 
 let nodes = [];
 let links = [];
-let pluginColors = {}; // plugin name -> hex
+// Per-plugin colour map. Now uniformly SOURCE_COLOR for every source — only
+// kept so the legend swatch lookup still works. (Topic-node colour is derived
+// from degree at draw time, not from this map.)
+let pluginColors = {};
 
 // ─── Data load ──────────────────────────────────────────────────────────────
 
-const PALETTE = [
-  '#5fa8d3', '#e0a458', '#73c990', '#d36f8f', '#c3a6e0', '#5bc8c8', '#d3b85f',
-  '#e07070', '#7ec8a0', '#d4a0d8', '#63b8e8', '#e8b85a', '#88d8b0', '#e898b0',
-  '#8ab4f8', '#f0c070',
-];
-const STANDALONE_COLOR = '#3a1410';
-const STANDALONE_HUB = '#d9453a';
+// Semantic color scheme:
+//   - Source nodes (videos / plugin === null) → SOURCE_COLOR (accent red).
+//   - Topic nodes → cool gradient from TOPIC_LO (low-degree, dim slate) to
+//     TOPIC_HI (high-degree, bright sky). Color = how "hub-like" the topic is.
+// The legacy per-plugin palette was meaningless beyond 16 plugins (we have 200+)
+// — colour now carries semantics, not provenance.
+const SOURCE_COLOR = '#d9453a';
+const SOURCE_RING  = '#ece6dc';   // light outline ring around every source node
+const TOPIC_LO     = '#475569';   // slate-700 — leaf topic
+const TOPIC_HI     = '#5fa8d3';   // sky        — hub topic
+// Kept for back-compat with the legend (renderLegend uses STANDALONE_HUB).
+const STANDALONE_HUB = SOURCE_COLOR;
 
 async function loadGraph() {
   const candidates = ['./graph.json'];
@@ -64,7 +73,7 @@ async function loadGraph() {
 function buildPluginColors(rawNodes) {
   const plugins = [...new Set(rawNodes.map(n => n.plugin).filter(Boolean))].sort();
   const map = {};
-  plugins.forEach((p, i) => { map[p] = PALETTE[i % PALETTE.length]; });
+  plugins.forEach(p => { map[p] = SOURCE_COLOR; });
   return map;
 }
 
@@ -101,12 +110,24 @@ function computeDegrees() {
   });
 }
 
-function nodeColor(n) {
-  return n.plugin ? pluginColors[n.plugin] : STANDALONE_COLOR;
+// Topic colour by degree: log-scaled blend from TOPIC_LO (leaf) → TOPIC_HI (hub).
+// Saturates around degree ~16 (log2 = 4), which matches the upper tail of the
+// degree distribution — beyond that, all hub nodes look equally "hot".
+function topicColor(n) {
+  const t = Math.min(1, Math.log2(Math.max(1, n.degree || 0)) / 4);
+  return mixHex(TOPIC_LO, TOPIC_HI, t);
 }
 
+function nodeColor(n) {
+  if (!n.plugin) return SOURCE_COLOR;   // video source — always accent red
+  return topicColor(n);                 // topic — degree-graded cool ramp
+}
+
+// Sources get a flat radius boost (+50 %) on top of the steeper degree curve,
+// so they read as distinct landmarks even without their outline ring.
 function nodeRadius(d) {
-  return cfg.nodeSize + Math.sqrt(d.degree || 0) * 0.7;
+  const base = cfg.nodeSize + Math.sqrt(d.degree || 0) * 1.6;
+  return d.plugin ? base : base * 1.5 + 2;
 }
 
 function screenToWorld(sx, sy) {
@@ -159,9 +180,10 @@ const sliderRanges = {
   nodeSize:  [2,   10],     // default 50 → 6
   edgeMin:   [80,  100],    // default 50 → threshold 0.90
   gravity:   [20,  100],    // default 50 → 60
+  edgeRepel: [0,   120],    // default 50 → 60 (push edges apart from each other)
 };
 
-let cfg = { repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0 };
+let cfg = { repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0, edgeRepel: 0 };
 
 function updateCfgFromSlider(k, sliderVal) {
   const [lo, hi] = sliderRanges[k];
@@ -210,16 +232,82 @@ function activeLinks() {
 
 // ─── Simulation ──────────────────────────────────────────────────────────────
 
+// Edge–edge repulsion: treat each visible link's midpoint as a charged particle
+// indexed in a quadtree, and push pairs of nearby midpoints apart (skipping
+// pairs that share a node — those are already coupled by the link force). The
+// push is applied equally to both endpoints of each edge so the geometry tilts
+// rather than the endpoints flying apart. Strength is per-tick * alpha; the
+// effect fades naturally as the simulation cools.
+function forceEdgeRepel() {
+  let activeLinksList = [];
+  let strength = 60;
+  const maxDist = 90;    // ignore pairs farther apart than this (in world units)
+
+  function force(alpha) {
+    if (!activeLinksList.length || strength <= 0) return;
+    const mids = [];
+    for (const l of activeLinksList) {
+      if (!l.source || !l.target || l.source.x == null) continue;
+      mids.push({
+        l,
+        x: (l.source.x + l.target.x) / 2,
+        y: (l.source.y + l.target.y) / 2,
+      });
+    }
+    if (mids.length < 2) return;
+    const tree = quadtree().x(d => d.x).y(d => d.y).addAll(mids);
+    const k = strength * alpha * 0.5;   // halved because each pair visited twice
+    const maxDist2 = maxDist * maxDist;
+
+    for (const mid of mids) {
+      tree.visit((node, x0, y0, x1, y1) => {
+        if (!node.length) {
+          do {
+            const other = node.data;
+            if (!other || other === mid) continue;
+            const A = mid.l, B = other.l;
+            // Edges sharing a node are pulled together by the link force —
+            // pushing them apart here would just oscillate.
+            if (A.source === B.source || A.source === B.target ||
+                A.target === B.source || A.target === B.target) continue;
+            const dx = mid.x - other.x;
+            const dy = mid.y - other.y;
+            const d2 = dx * dx + dy * dy;
+            if (d2 < 1e-3 || d2 > maxDist2) continue;
+            const f = k / d2;
+            const fx = dx * f, fy = dy * f;
+            A.source.vx += fx; A.source.vy += fy;
+            A.target.vx += fx; A.target.vy += fy;
+          } while ((node = node.next));
+          return;
+        }
+        // Prune far-away subtrees.
+        return (x0 > mid.x + maxDist || x1 < mid.x - maxDist ||
+                y0 > mid.y + maxDist || y1 < mid.y - maxDist);
+      });
+    }
+  }
+
+  force.initialize = () => {};
+  force.links = (l) => { activeLinksList = l; return force; };
+  force.strength = (s) => { if (s == null) return strength; strength = s; return force; };
+  return force;
+}
+
 let sim;
 
 function rebuildSim() {
   if (sim) sim.stop();
   const alphaDecay = 0.0228 * (21 - cfg.momentum) / 20;
+  // Link distance & strength: previously varied 0.6×–1.6× by edge weight, which
+  // was the dominant reason edges looked uneven. Tightened to 0.85×–1.15× so
+  // every visible edge sits in a similar length band; heavier edges still pull
+  // a bit harder so the cluster structure is preserved.
   sim = forceSimulation(nodes)
     .force('link', forceLink(activeLinks())
       .id(d => d.id)
-      .distance(l => cfg.linkDist * (1.6 - weightT(l.weight)))
-      .strength(l => 0.2 + 0.7 * weightT(l.weight)))
+      .distance(l => cfg.linkDist * (1.15 - 0.30 * weightT(l.weight)))
+      .strength(l => 0.45 + 0.45 * weightT(l.weight)))
     .force('charge', forceManyBody().strength(-cfg.repulsion))
     .force('center', forceCenter(0, 0).strength(0.05))
     // Gravity: per-axis pull toward (0,0) so disconnected components don't
@@ -227,6 +315,7 @@ function rebuildSim() {
     .force('gravityX', forceX(0).strength(cfg.gravity / 1000))
     .force('gravityY', forceY(0).strength(cfg.gravity / 1000))
     .force('collide', forceCollide().radius(d => nodeRadius(d) + 4))
+    .force('edgeRepel', forceEdgeRepel().links(activeLinks()).strength(cfg.edgeRepel))
     .alphaDecay(alphaDecay)
     .velocityDecay(0.4)
     .on('tick', draw);
@@ -413,9 +502,10 @@ function draw() {
     const isHover = n === hoveredNode;
     const isDrag = n === dragNode;
     const isSelected = n === selectedNode;
+    const isSource = !n.plugin;
     const base = nodeColor(n);
 
-    if (isSelected || isHover || isDrag || n.degree > 4) {
+    if (isSelected || isHover || isDrag || isSource || n.degree > 4) {
       ctx.beginPath();
       ctx.arc(n.x, n.y, r + 7, 0, Math.PI * 2);
       const grad = ctx.createRadialGradient(n.x, n.y, r * 0.4, n.x, n.y, r + 7);
@@ -432,12 +522,20 @@ function draw() {
       ctx.fillStyle = lighten(base, 0.55);
     } else if (isHover || isDrag) {
       ctx.fillStyle = lighten(base, 0.3);
-    } else if (!n.plugin && n.degree > 4) {
-      ctx.fillStyle = STANDALONE_HUB;
     } else {
       ctx.fillStyle = base;
     }
     ctx.fill();
+
+    // Always outline source nodes — visual landmark for "this is a video".
+    // Selection ring is drawn afterwards on top so it takes precedence.
+    if (isSource) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r + 1.5, 0, Math.PI * 2);
+      ctx.strokeStyle = SOURCE_RING;
+      ctx.lineWidth = 1.5 / scale;
+      ctx.stroke();
+    }
 
     if (isSelected) {
       ctx.beginPath();
@@ -471,6 +569,12 @@ function lighten(hex, amt) {
   const [r, g, b] = hexToRgb(hex);
   const f = (c) => Math.round(c + (255 - c) * amt);
   return `rgb(${f(r)},${f(g)},${f(b)})`;
+}
+function mixHex(a, b, t) {
+  const [ar, ag, ab] = hexToRgb(a);
+  const [br, bg, bb] = hexToRgb(b);
+  const f = (l, h) => Math.round(l + (h - l) * t).toString(16).padStart(2, '0');
+  return `#${f(ar, br)}${f(ag, bg)}${f(ab, bb)}`;
 }
 
 // ─── Interaction ─────────────────────────────────────────────────────────────

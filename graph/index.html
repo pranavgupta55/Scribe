@@ -1496,9 +1496,15 @@
         </div>
         <div class="control-row">
           <label>Gravity</label>
-          <span class="val" id="gravity-val">0.50</span>
-          <input type="range" id="gravity" min="0" max="100" value="50" step="1"
+          <span class="val" id="gravity-val">1.00</span>
+          <input type="range" id="gravity" min="0" max="100" value="100" step="1"
                  title="Pull all nodes toward the centre — keeps disconnected nodes from drifting away" />
+        </div>
+        <div class="control-row">
+          <label>Edge spread</label>
+          <span class="val" id="edgeRepel-val">1.00</span>
+          <input type="range" id="edgeRepel" min="0" max="100" value="100" step="1"
+                 title="Push edges apart from each other — reduces crossings at the cost of geometric strain" />
         </div>
         <div id="legend" class="legend-collapsed">
           <div id="legend-header">
