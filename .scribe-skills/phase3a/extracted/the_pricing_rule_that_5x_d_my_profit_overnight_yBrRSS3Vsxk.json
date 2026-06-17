@@ -1,0 +1,273 @@
+{
+  "source_file": "the_pricing_rule_that_5x_d_my_profit_overnight_yBrRSS3Vsxk.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+    "Wealth Distribution & Customer Targeting",
+    "Tiered Offer Pricing",
+    "Margin Concentration and Leverage",
+    "High-Value Customers Are Less Demanding Per Dollar",
+    "Premium Positioning",
+    "Top-Down Prioritization Strategy",
+    "Capital Requirements for Scale",
+    "Price Anchoring"
+  ],
+  "frameworks": [
+    {
+      "name": "Pareto Pricing Tier Framework",
+      "definition": "Four price tiers with 5-10x gaps between each level; expect approximately 20% of customers at each tier to take the next step up; top tiers generate the majority of profit despite minority of customers.",
+      "concept": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that the bottom 50% of customers hold roughly $2 of wealth while the next 40% hold roughly $28, a 14x wealth gap; this disparity means pricing uniformly for all customers leaves the majority of available profit uncaptured.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Wealth Distribution & Customer Targeting",
+      "conditions": [],
+      "mechanism": null,
+      "numbers": {
+        "axis": "cumulative wealth by customer percentile",
+        "anchors": [
+          {"region": "bottom 50% of customers", "value": "$2 (relative wealth unit)"},
+          {"region": "next 40% of customers (50th-90th percentile)", "value": "$28 (relative wealth unit, ~14x the bottom 50%)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that for each new pricing tier, you should set the price at 5-10x the previous tier and expect approximately 20% of customers at the current tier to take the step up.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "rule of thumb",
+      "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+      "conditions": [
+        "business with tiered upsell offers",
+        "offer differentiation is meaningful between tiers"
+      ],
+      "mechanism": "The wealth distribution in any customer base follows a Pareto-like curve; most customers cannot afford the premium, so a 5-10x gap and 20% take-up expectation maps realistically to the distribution of actual spending power.",
+      "numbers": {
+        "axis": "price multiple between consecutive tiers",
+        "anchors": [
+          {"region": "minimum tier gap", "value": "5x"},
+          {"region": "maximum tier gap", "value": "10x"},
+          {"region": "expected take-up rate per tier step", "value": "~20%"}
+        ]
+      },
+      "bounded_by": [
+        "Small price gaps (e.g., $100 vs $129) produce identical willingness-to-pay and are not treated as a distinct tier by buyers"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that each pricing tier should roughly double total revenue relative to the tier below; if a new tier does not contribute approximately 100% more revenue, the operational complexity it adds is not worth it.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "my rule of thumb",
+      "topic": "Tiered Offer Pricing",
+      "conditions": [
+        "business adding a new service or product tier",
+        "tier creates additional operational complexity"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "incremental revenue contribution of adding a tier",
+        "anchors": [
+          {"region": "minimum acceptable tier contribution", "value": "doubles existing tier revenue (100% increase)"},
+          {"region": "below threshold", "value": "tier is not worth the operational constraint"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi demonstrates through a numerical example that adding a premium tier can 5x total business profit even when it adds only modest gross revenue, because overhead is already covered by the base tier and the incremental revenue flows almost entirely to the bottom line.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Margin Concentration and Leverage",
+      "conditions": [
+        "base tier revenue covers the majority of fixed overhead",
+        "premium tier carries lower incremental cost"
+      ],
+      "mechanism": "When fixed costs are covered by the base tier, each dollar from the premium tier has near-zero incremental overhead, so its contribution margin approaches 100% and its profit impact is disproportionately large relative to its revenue size.",
+      "numbers": {
+        "axis": "profit before and after adding premium tier (illustrative example)",
+        "anchors": [
+          {"region": "before premium tier: base revenue $80/mo, costs $70/mo", "value": "$10/mo profit"},
+          {"region": "after premium tier: base $80 + premium $100, incremental cost $20", "value": "$90/mo profit (9x increase)"}
+        ]
+      },
+      "bounded_by": [
+        "Only holds when base tier covers overhead; if business is already losing money, adding a tier does not automatically produce this profit leverage"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a four-tier pricing structure set at 10x intervals with 20% take-up per tier (800 customers at tier 1, 200 at tier 2, 40 at tier 3, 8 at tier 4) reflects the actual distribution of spending power across a customer base.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+      "conditions": [
+        "starting customer base of ~1,000"
+      ],
+      "mechanism": "Tier take-up follows the Pareto wealth distribution: each step up in price filters out the customers who cannot afford it, leaving only the wealthiest fraction to ascend.",
+      "numbers": {
+        "axis": "customers per tier in a 1,000-customer base at 10x price intervals",
+        "anchors": [
+          {"region": "Tier 1 ($10/mo)", "value": "~800 customers"},
+          {"region": "Tier 2 ($100/mo)", "value": "~200 customers"},
+          {"region": "Tier 3 ($1,000/mo)", "value": "~40 customers"},
+          {"region": "Tier 4 ($10,000/mo)", "value": "~8 customers"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that high-wealth customers (those paying $100,000 vs. $100) are less demanding per dollar spent because the purchase represents a far smaller fraction of their net worth; a $100,000 payment is 1% of a $10M net worth, while $100 is 10% of a $1,000 net worth.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "High-Value Customers Are Less Demanding Per Dollar",
+      "conditions": [],
+      "mechanism": "Demandingness scales with the proportion of net worth at stake, not the absolute dollar amount. A buyer whose purchase represents 10% of their assets monitors outcomes far more closely than one whose purchase is 1% of assets.",
+      "numbers": {
+        "axis": "purchase as percentage of net worth",
+        "anchors": [
+          {"region": "$100 payment, $1,000 net worth", "value": "10% of net worth"},
+          {"region": "$100,000 payment, $10M net worth", "value": "1% of net worth"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that serving one customer at $100,000 is operationally easier than serving 1,000 customers at $100 each, even though both generate the same gross revenue, because a single high-value customer requires less coordination, communication, and service complexity than 1,000 lower-paying ones.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "High-Value Customers Are Less Demanding Per Dollar",
+      "conditions": [
+        "speaker's personal experience selling $100 gym memberships as comparison baseline"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "customers required to reach equivalent gross revenue",
+        "anchors": [
+          {"region": "1 customer at $100,000", "value": "same revenue as 1,000 customers at $100"},
+          {"region": "operational complexity", "value": "1 vs 1,000 relationships to manage"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi recommends starting a new pricing tier structure from the highest price point (top-down), not from the cheapest entry offer, because top-down brand positioning is stronger than bottom-up; citing the Tesla/Rolls Royce analogy, he argues it is harder for a mass-market brand to launch a premium sub-brand than for a premium brand to launch a more accessible sub-brand.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Top-Down Prioritization Strategy",
+      "conditions": [
+        "building a new pricing ladder or offer suite",
+        "brand positioning is not yet established"
+      ],
+      "mechanism": "Brand perception cascades downward more easily than upward; a luxury brand entering a lower tier still carries the premium halo, whereas a commodity brand entering a premium tier battles pre-existing low-price associations.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that profit concentrates at the top pricing tiers in the same way wealth concentrates at the top of the customer wealth distribution; the majority of bottom-line dollars come from the fewest, highest-paying customers.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Margin Concentration and Leverage",
+      "conditions": [
+        "multi-tier pricing structure with overhead-covered base tier"
+      ],
+      "mechanism": "Top tiers carry the highest incremental margin because fixed costs are already absorbed at lower tiers; each additional top-tier customer adds almost pure profit.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi applies the Pareto pricing tier framework to Acquisition.com's advisory practice: $100/mo (School hobby plan), $100/mo (School pro plan), $5,000/mo (L1), $35,000/mo (L2), $135,000/mo (L3), with equity-only (no cash price) for portfolio companies at the top.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+      "conditions": [
+        "Acquisition.com advisory practice specifically"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Acquisition.com advisory tier prices",
+        "anchors": [
+          {"region": "School hobby/pro plans", "value": "$100/mo"},
+          {"region": "L1 advisory", "value": "$5,000/mo"},
+          {"region": "L2 advisory", "value": "$35,000/mo (~7x L1)"},
+          {"region": "L3 advisory", "value": "$135,000/mo (~4x L2)"},
+          {"region": "portfolio companies", "value": "equity only (no cash payment)"}
+        ]
+      },
+      "bounded_by": [
+        "This structure was built over years, not launched all at once; it required significant operational capacity at each tier"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that adding a tier with a small price increment (e.g., $100 vs. $129) is not a meaningful tier because the willingness to pay for both prices is identical; only 5-10x gaps create genuine separation in the buyer segments who can afford them.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+      "conditions": [],
+      "mechanism": "Buyers who can afford $100 can also afford $129; the two prices lie within the same wealth band and produce the same decision. Only a 5-10x gap crosses a wealth-band boundary and engages a materially different segment.",
+      "numbers": {
+        "axis": "price gap magnitude vs. distinct buyer segment reached",
+        "anchors": [
+          {"region": "small gap ($100 vs $129, ~29% increase)", "value": "same buyer segment, same pitch, no incremental segment reached"},
+          {"region": "large gap ($100 vs $500-$1000, 5-10x)", "value": "reaches distinct wealth segment with different willingness to pay"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the reason most businesses do not generate as much profit as they want is that they are not pricing appropriately for the customers who actually have the money to pay more, not because they lack customers.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Wealth Distribution & Customer Targeting",
+      "conditions": [],
+      "mechanism": "Uniform pricing anchored at the median or bottom of a customer base captures only the wealth available at that band; the wealth held by top-percentile customers remains uncaptured without higher tiers.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi illustrates the profit leverage of a premium tier with a simple numerical scenario: 10 customers are split into 8 at $10/mo (generating $80/mo) and 2 at $50/mo (generating $100/mo). The top 20% alone produce more revenue than the bottom 80%, effectively doubling total revenue. He then extends this to a profit scenario: before adding the premium tier, costs are $70 against $80 revenue, yielding $10 profit. After adding the $100/mo premium tier with $20 incremental cost, profit becomes $90/mo, a 9x increase in profit from a modest revenue add.",
+      "claim_index": 3,
+      "topic": "Margin Concentration and Leverage"
+    },
+    {
+      "text": "Alex Hormozi presents his own business (Acquisition.com advisory practice) as a real-world application of the Pareto tier framework. The tiers run: School hobby/pro plan at $100/mo, L1 at $5,000/mo, L2 at $35,000/mo, and L3 at $135,000/mo, with portfolio company involvement at equity-only. He notes he did not start with the School product; he built the brand first, then the advisory tiers over years of iteration.",
+      "claim_index": 9,
+      "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps"
+    },
+    {
+      "text": "Alex Hormozi uses the Tesla vs. Rolls Royce analogy to illustrate top-down brand positioning: Honda attempting to build a better car and position it as premium is extremely difficult because its brand is already anchored at mass-market. By contrast, Rolls Royce launching a more accessible model (a Rolls Royce Light) would carry the existing premium halo downward, making the top-down entry path easier to execute than the bottom-up path.",
+      "claim_index": 7,
+      "topic": "Top-Down Prioritization Strategy"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Add pricing tiers one at a time, not all at once; build the operational capability at each tier before launching the next.",
+      "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps"
+    },
+    {
+      "text": "Start building your pricing ladder from the highest tier you can operationally deliver, then expand downward toward the base tier.",
+      "topic": "Top-Down Prioritization Strategy"
+    },
+    {
+      "text": "When evaluating whether to create a new upsell tier, verify that it will at least double your existing revenue; if not, the operational complexity is not worth adding.",
+      "topic": "Tiered Offer Pricing"
+    }
+  ]
+}

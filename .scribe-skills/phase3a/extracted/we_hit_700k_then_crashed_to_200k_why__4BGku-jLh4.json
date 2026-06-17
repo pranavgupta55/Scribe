@@ -1,0 +1,260 @@
+{
+  "source_file": "we_hit_700k_then_crashed_to_200k_why__4BGku-jLh4.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Process Optimization",
+    "Script Compliance",
+    "Operational Culture Norms",
+    "Sales Team Scaling and Leadership",
+    "Leadership Sets Culture; Culture Determines Acceptable Effort",
+    "Sales Talent Pipeline",
+    "Team Training and Scaling",
+    "Top Performer Behavior Codification",
+    "Training Culture Gap",
+    "Tracking and Measurement Discipline",
+    "Sales Team Structure and Compensation",
+    "Founder Bottleneck",
+    "Constraint Identification"
+  ],
+  "frameworks": [
+    {
+      "name": "Checklist-Driven Sales Ops",
+      "definition": "A complete list of sales operations requirements (scripting, daily training, cultural enforcement, manager accountability) where executing the full checklist produces consistent results and any gap identifies the leader as the constraint.",
+      "concept": "Sales Process Optimization"
+    },
+    {
+      "name": "Group-Audition Hiring Funnel",
+      "definition": "A four-stage sales-rep hiring process: send script before interview, request a 60-second video audition, invite finalists to a group drill call for coachability scoring, then make job offers only to those who pass all stages.",
+      "concept": "Sales Talent Pipeline"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that high variability in a sales team's close rate is caused by low script adherence, not lead quality, provided lead quality is held constant month to month.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "script adherence",
+      "topic": "Script Compliance",
+      "conditions": [
+        "Lead quality is consistent across months",
+        "Inbound lead source is unchanged"
+      ],
+      "mechanism": "When reps deviate from a proven script, each rep invents different approaches, producing unpredictable per-rep close rates whose aggregate oscillates instead of holding steady.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when a change in lead source or lead quality is the root cause of variance"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a sales team's performance volatility is a culture problem, and culture is always a leader problem: the manager either reinforces off-script behavior or fails to enforce consequences, producing a team of mercenaries with no collective standard.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "culture game",
+      "topic": "Leadership Sets Culture; Culture Determines Acceptable Effort",
+      "conditions": [
+        "Sales organization with more than a handful of reps",
+        "Performance feedback loops are short (weekly or faster)"
+      ],
+      "mechanism": "The sales manager sets what is acceptable; if off-script closes go unpunished, reps learn that the script is optional, each pursues their own style, and collective output becomes the sum of uncoordinated individuals rather than a replicable process.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that in a sales-and-marketing business with no delivery component, script discipline and sales ops are the core constraint and must be world-class; without them, no growth tactic will produce consistent results.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Business where revenue depends primarily on closing inbound or outbound leads",
+        "Minimal or no complex delivery component (e.g., real estate wholesaling)"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to businesses where delivery quality, not sales conversion, is the primary constraint"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that roughly 95-98% of sales teams do not have actual sales training or sales culture; they hire, observe who closes deals, and fire the rest, producing mercenary dynamics with no process consistency.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Training Culture Gap",
+      "conditions": [],
+      "mechanism": "Without a codified training standard, the only selection criterion is individual deal-closing instinct, so reps have no shared system to default to and no reason to subordinate personal style to team process.",
+      "numbers": {
+        "axis": "Proportion of sales teams with real training and culture systems",
+        "anchors": [
+          { "region": "Teams with genuine sales training and culture", "value": "~2-5%" },
+          { "region": "Teams that hire-and-see-who-closes", "value": "~95-98%" }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that in high-volume inbound sales (17+ reps), the constraint maintaining team size is not sourcing candidates but churn: reps quitting equals reps hired, creating a steady-state trap.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Talent Pipeline",
+      "conditions": [
+        "High-volume inbound sales team",
+        "Approximately 17 or more reps",
+        "No structured hiring pipeline or culture filter in place"
+      ],
+      "mechanism": "Without a culture filter, the team continuously absorbs mercenary reps who leave when conditions feel suboptimal; hiring volume merely replaces outflows rather than growing net headcount.",
+      "numbers": {
+        "axis": "Net sales headcount growth when churn equals hiring rate",
+        "anchors": [
+          { "region": "No culture filter", "value": "Net zero growth: hires = quits" },
+          { "region": "Culture-filtered hiring funnel", "value": "Net positive growth: filtered reps stay longer" }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the process must always rank above the individual player in a sales organization: no rep is above the script, and the moment personal style is permitted to override the process, cultural consistency collapses.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "process has to always go above the player",
+      "topic": "Operational Culture Norms",
+      "conditions": [
+        "Sales organization with a proven, codified script"
+      ],
+      "mechanism": "If exceptions exist for high performers, other reps observe the exception and infer the script is optional; norm erosion is faster than norm enforcement.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply before a proven script exists"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a sales team's training gap is a bottleneck checklist problem: if a complete list of sales-ops practices is executed in full, consistent performance follows; any gap in the checklist predicts the manager as the source of the problem.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "straight out of the book checklist problem",
+      "topic": "Sales Team Scaling and Leadership",
+      "conditions": [
+        "The business has defined the complete list of required sales ops practices",
+        "Lead quality and volume are held constant"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the more skilled a sales leader becomes at training and systematizing sales, the lower the baseline skill threshold required in new hires to produce a consistent close rate, which becomes the primary profit arbitrage in high-volume sales businesses.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Top Performer Behavior Codification",
+      "conditions": [
+        "High-volume inbound or outbound sales operation",
+        "Codified script and training system in place"
+      ],
+      "mechanism": "A strong training system converts raw work ethic into competent closers; when the system does the skill-building, the business stops competing for scarce experienced closers and instead wins on conversion of abundant entry-level talent.",
+      "numbers": {
+        "axis": "Time to first close for a new hire with no prior sales experience",
+        "anchors": [
+          { "region": "No training system", "value": "Months or never" },
+          { "region": "Strong training system (e.g., real estate wholesaling)", "value": "~14 days" }
+        ]
+      },
+      "bounded_by": [
+        "Applies to script-driven, high-repetition sales roles; does not apply to complex enterprise sales requiring extensive product expertise"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that the entire recruiting and onboarding process for a sales role is itself a sales pitch that sets the cultural frame: how disciplined the process is signals to candidates how the company operates, attracting candidates who want structure and filtering out those who do not.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "selling them on selling for you sets the frame",
+      "topic": "Sales Team Scaling and Leadership",
+      "conditions": [
+        "Sales hiring process with a defined script and multi-stage audition"
+      ],
+      "mechanism": "Candidates experience the company's standards during recruiting; those who are unwilling to follow the script or take coaching feedback self-select out, producing a survivor pool of coachable, process-adherent reps without requiring extra filtering post-hire.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that in sales-team performance crises, the tactical fix (enforce scripts, daily training, scripted management cadence) should be attempted first; only if the team cannot adhere after structured enforcement should a leader consider firing a substantial portion of the team.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Existing sales team with measurable performance volatility",
+        "Leadership has not yet enforced script compliance or daily training"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "If the root issue is manager reinforcing the wrong behaviors, the tactical fix alone will not hold without replacing or re-training the manager"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a sales team's ability to maintain consistency is a sales culture issue, and culture is observable in sales faster than in any other business function because sales performance feedback loops are uniquely short.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "sales is a culture game",
+      "topic": "Operational Culture Norms",
+      "conditions": [],
+      "mechanism": "Sales produces daily or weekly close-rate data; cultural drift manifests as measurable performance degradation within days, whereas cultural drift in operations or product takes months to surface.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that when reps are allowed to go off-script to chase closes, they eventually make promises and commitments that the business cannot fulfill, creating a downstream fulfillment and trust problem beyond just close-rate volatility.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Script Compliance",
+      "conditions": [
+        "Sales team with no script enforcement",
+        "Business with defined delivery constraints"
+      ],
+      "mechanism": "Unconstrained reps optimize for the close rather than for what the company can actually deliver; each improvised promise accumulates into a backlog of unmet customer expectations that damage retention and reputation.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A real estate wholesaling business averaging $450K/month in gross revenue (approximately $250K in assignment-fee spread at ~40% margins) experienced swings between $700K peak months and $200-250K crash months in the same year. The business had 17 sales reps on a mixed compensation structure ($42K base salary plus 10% of assignment fees). After power months where reps took home $20-30K in commission, the following month's performance collapsed. Alex Hormozi diagnosed the root cause as a sales ops and culture issue: the business had scripts but treated them as guidelines rather than non-negotiable standards, and the sales manager was not enforcing consequences for off-script behavior.",
+      "claim_index": 0,
+      "topic": "Script Compliance"
+    },
+    {
+      "text": "Alex Hormozi described a Group-Audition Hiring Funnel for high-volume sales roles: send the script to applicants before they interview; require a 60-second video of the applicant reciting the script as the application; invite only video submissions to a group drill call (not one-on-one calls); give one piece of feedback and immediately ask the person to repeat the script; those who absorb the feedback and came prepared advance to a job-offer call. Of ten screened applicants, two to three typically advance. Anyone who shows attitude during coaching or who arrived unprepared is eliminated on the spot. This process functions simultaneously as hiring screen and cultural-frame-setting.",
+      "claim_index": 8,
+      "topic": "Sales Talent Pipeline"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Require every sales rep to deliver the approved script verbatim on every call; any rep who improvises or goes off-script is removed from the call queue.",
+      "topic": "Script Compliance"
+    },
+    {
+      "text": "Run daily sales training sessions to verify reps are saying phrases the right way and have the script fully memorized.",
+      "topic": "Team Training and Scaling"
+    },
+    {
+      "text": "Manage sales reps on a daily and weekly basis with explicit career-goal conversations, morning routines, and scripted management cadences.",
+      "topic": "Sales Team Scaling and Leadership"
+    },
+    {
+      "text": "Send the script to sales applicants before any interview and require a 60-second audition video as the first filter step.",
+      "topic": "Sales Talent Pipeline"
+    },
+    {
+      "text": "Use group drill calls instead of one-on-one interviews to screen multiple candidates simultaneously for coachability and script readiness.",
+      "topic": "Sales Talent Pipeline"
+    },
+    {
+      "text": "If individual tactics and script enforcement fail to produce adherence, diagnose the sales manager as the root constraint and consider replacing them or rebuilding the team from scratch.",
+      "topic": "Leadership Sets Culture; Culture Determines Acceptable Effort"
+    }
+  ]
+}

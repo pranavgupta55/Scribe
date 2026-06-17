@@ -1,0 +1,226 @@
+{
+  "source_file": "he_makes_250k_cleaning_driveways_GUaphMvD9Tc.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Tracking and Measurement Discipline",
+    "Channel Optimization Before Expansion",
+    "Door-to-Door Acquisition Scaling",
+    "Ad Spend Optimization",
+    "Supply vs. Demand Constraint Diagnosis",
+    "Affiliate and Partner Channel Strategy",
+    "Service Business Unit Economics",
+    "Lead-Cost-Closeout Math"
+  ],
+  "frameworks": [
+    {
+      "name": "Four Acquisition Channels",
+      "definition": "Four non-referral channels for getting clients: paid ads, organic content, cold outreach, and affiliate/partner networks.",
+      "concept": "Affiliate and Partner Channel Strategy"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that before scaling paid advertising spend, a service business must install attribution tracking that maps spend to revenue, because without it the operator cannot distinguish a profitable channel from a money-losing one. In the case of Supreme Power Wash spending $2,000/month on ads with no clear attribution, the business may already have a 5:1 or 10:1 return but cannot confirm it.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "attribution tracking",
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "Service business running paid ads",
+        "No existing attribution system in place"
+      ],
+      "mechanism": "Without tracking what is spent versus what is made from each channel, the operator has no feedback signal and cannot safely increase spend or cut underperforming channels.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that when a paid acquisition channel is unproven due to missing attribution, the correct sequencing is: (1) install attribution first, (2) confirm positive return, then (3) increase budget incrementally rather than jumping to the target spend level. He illustrated this with an example of moving from $2,000/month to $4,000 or $6,000 before reaching a higher target.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Ad Spend Optimization",
+      "conditions": [
+        "Paid channel with no attribution data",
+        "Service business with existing working channels"
+      ],
+      "mechanism": "Incremental increase allows the operator to observe return at each step before committing more capital, limiting downside if the channel is not profitable.",
+      "numbers": {
+        "axis": "monthly ad spend scale-up path",
+        "anchors": [
+          {"region": "current baseline", "value": "$2,000/month"},
+          {"region": "first step up", "value": "$4,000-$6,000/month"},
+          {"region": "target (10x baseline)", "value": "$10,000/month"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that relying primarily on referrals for customer acquisition is not a scalable acquisition channel because it is entirely dependent on inbound calls the founder cannot control or predict, leaving revenue growth to chance rather than operator decision.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "acquisition channel",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Service business at the stage where growth is desired"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that door-to-door canvassing at Supreme Power Wash generates approximately 20 to 25 deals per month at an average deal size of $500, producing roughly $10,000-$12,500 per month from that single channel and likely accounts for a majority of the business's non-referral revenue.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Door-to-Door Acquisition Scaling",
+      "conditions": [
+        "Local residential power washing business",
+        "Active door-knocking program"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "monthly revenue from door-to-door canvassing",
+        "anchors": [
+          {"region": "deals per month", "value": "20-25 deals"},
+          {"region": "average deal size", "value": "$350-$1,800 (blended ~$500)"},
+          {"region": "estimated monthly revenue", "value": "~$10,000-$12,500"}
+        ]
+      },
+      "bounded_by": [
+        "Based on a single case; actual results depend on geography, density, and canvassing time"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that for local service businesses operating in small or geographically constrained markets, running multiple acquisition channels simultaneously is justified and he is less opposed to it than for other business types, because the finite addressable population requires reaching the same prospects through every available channel.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "local is the only exception",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Local service business",
+        "Geographically constrained market (e.g., small city or rural area)"
+      ],
+      "mechanism": "A small local market has a hard population ceiling; a business needs to reach prospects by every channel because it cannot rely on volume from a single channel alone.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to businesses with large or national addressable markets, where single-channel domination is preferred"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that when a service business already has two working acquisition channels, the right move is to optimize existing channels rather than pivot to a new customer segment (e.g., commercial) or build an entirely new acquisition system, because changing too many variables simultaneously prevents learning which lever is producing results.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Existing working acquisition channels",
+        "50% gross margins",
+        "Business not yet at channel saturation"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that if a service business is spending $500 per week on paid ads and getting more than one deal per week from those ads, at an average deal size of $500, it is likely achieving at least a 1:1 return and the channel is probably profitable. This break-even math suggests that any conversion above one deal per week per $500 in spend represents positive ROI.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "Local service business",
+        "Average deal size ~$500",
+        "Ad spend ~$500/week ($2,000/month)"
+      ],
+      "mechanism": "At a 1:1 cost-to-revenue ratio, any deal attributable to the ad spend above one deal per week means the channel is cash-flow positive before accounting for margins.",
+      "numbers": {
+        "axis": "ad spend to deal ratio break-even",
+        "anchors": [
+          {"region": "break-even threshold", "value": "1 deal per $500 spent"},
+          {"region": "weekly ad spend", "value": "$500/week ($2,000/month)"},
+          {"region": "average deal size", "value": "$500"}
+        ]
+      },
+      "bounded_by": [
+        "Does not account for COGS or labor; gross revenue break-even only"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a service business achieving 50% net margins on $500,000 in revenue ($250,000 profit) is performing well and does not require a fundamental business model change; the correct priority is improving acquisition volume and attribution visibility rather than restructuring the offer or target segment.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Service business with 50% net margins",
+        "Revenue around $500,000"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "net margin quality assessment",
+        "anchors": [
+          {"region": "revenue", "value": "$500,000"},
+          {"region": "profit", "value": "$250,000 (50% net margin)"},
+          {"region": "verdict", "value": "model is sound; focus on acquisition volume"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that commercial recurring clients are more valuable than residential one-time clients for local service businesses because the revenue is recurring on a monthly basis and the contract size is larger, making commercial accounts a higher-LTV customer segment. However, he does not recommend pivoting to commercial as a primary strategy before optimizing existing residential channels.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply vs. Demand Constraint Diagnosis",
+      "conditions": [
+        "Local service business (power washing, cleaning)",
+        "Existing residential acquisition channels working"
+      ],
+      "mechanism": "Recurring commercial contracts produce predictable monthly revenue versus unpredictable residential one-time transactions, improving revenue stability and LTV.",
+      "numbers": null,
+      "bounded_by": [
+        "Pivot to commercial is premature if residential acquisition channels are not yet fully optimized"
+      ]
+    },
+    {
+      "text": "Alex Hormozi identifies four non-referral acquisition channels available to any local service business: paid advertising, organic content, cold outreach (door-to-door), and affiliate/partner networks (businesses that already serve the target customer). He presents these as the primary levers for moving beyond referral-dependent growth.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Affiliate and Partner Channel Strategy",
+      "conditions": [
+        "Local service business",
+        "Seeking to move beyond referral-dependent growth"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "The owner of Supreme Power Wash (power washing and solar panel cleaning, $500K revenue, $250K profit) was spending $2,000/month on third-party managed paid ads but had no attribution tracking in place to confirm whether deals were coming from ads or other sources. He was simultaneously doing door-to-door canvassing generating ~20-25 deals/month. Alex Hormozi advised him to install attribution first, confirm the ads are working, and then scale ad spend incrementally (to $4,000 then $6,000) rather than switching to a commercial-only strategy or rebuilding his acquisition approach from scratch.",
+      "claim_index": 0,
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "When the Supreme Power Wash owner expressed fear of spending more on ads because of uncertainty about the third-party manager's performance, Hormozi reframed the problem: the issue was not the spend level but the absence of tracking. He pointed out that at $2,000/month ($500/week) with an average deal size of $500, getting even one extra deal per week from ads would cover the entire ad budget, suggesting the channel might already be delivering a 5:1 or 10:1 return without the owner knowing it.",
+      "claim_index": 6,
+      "topic": "Lead-Cost-Closeout Math"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Install attribution tracking on all paid ad channels before increasing budget; require the third-party ad manager to provide channel-level attribution or replace them with one who can.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Scale ad spend in incremental steps (e.g., double before tripling) rather than jumping to the target level, so each step can be evaluated against attributed results.",
+      "topic": "Ad Spend Optimization"
+    },
+    {
+      "text": "Do not open a new customer segment (e.g., commercial) or build a new acquisition system while existing channels are unoptimized and un-attributed.",
+      "topic": "Channel Optimization Before Expansion"
+    }
+  ]
+}

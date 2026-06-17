@@ -1,0 +1,409 @@
+{
+  "source_file": "building_a_1_000_000_business_for_a_stranger_in_26_minutes_HGZOxBfnF-E.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Multi-Touch Attribution Ambiguity",
+    "Tracking and Measurement Discipline",
+    "Offer and Audience Pruning",
+    "Progressive Pricing Tier Stacking",
+    "Sales Process Optimization",
+    "Consultative Sales Process",
+    "VSL as Qualification and Pre-Frame Gate",
+    "Meeting and Follow-Up Cadence",
+    "Sales Closing Mechanics",
+    "2x Weekly Email Cadence with Rotating Themes",
+    "Long-Term Horizon Advantage",
+    "Margins",
+    "Revenue Stage Transitions",
+    "Channel Optimization Before Expansion",
+    "High-Value Customers Are Less Demanding Per Dollar",
+    "Avatar Targeting Strategy"
+  ],
+  "frameworks": [
+    {
+      "name": "Custom-Order Sales Flow",
+      "definition": "A four-stage sequential funnel for converting DIY railing browsers into custom-order buyers: (1) form opt-in, (2) pre-call VSL with price anchoring and BANT qualification via SMS, (3) consultative phone close with on-call discount incentive, (4) card capture on the call.",
+      "concept": "Sales Process Optimization"
+    },
+    {
+      "name": "Long-Term Email Nurture Structure",
+      "definition": "A recurring two-to-three-times-per-week email cadence rotating three content themes: (1) before/after transformation photos, (2) cool project showcases, (3) FAQ objection-breakers — each email structured as subject line, immediate visual reward, CTA link, and PS.",
+      "concept": "2x Weekly Email Cadence with Rotating Themes"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi diagnosed that Optimum Works (a railing e-commerce company at $2.5M revenue, 2025) had a data attribution problem rather than a marketing problem: the agency-reported LTV-to-CAC of 0.41:1 implied the business should be losing money on every Google-sourced sale, yet the business was profitable — indicating that the numbers were tracking the wrong signal and making channel optimization impossible.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "data attribution issue",
+      "topic": "Multi-Touch Attribution Ambiguity",
+      "conditions": [
+        "Multi-channel paid traffic (Google + Meta)",
+        "Revenue stage $2-3M",
+        "Agency-managed ad accounts"
+      ],
+      "mechanism": "Agencies report LTV and CAC against ad-attributed conversions; when customers use multiple touchpoints before buying (e.g., view Meta ad, then buy via Google organic), the attributed channel gets full CAC credit but fractional LTV credit, producing a ratio that implies losses that do not exist in the P&L.",
+      "numbers": {
+        "axis": "reported LTV-to-CAC ratio vs. actual profitability",
+        "anchors": [
+          {"region": "agency-reported LTV:CAC for Optimum Works Google channel", "value": "0.41:1"},
+          {"region": "actual business P&L net margin", "value": "15% on $2.5M revenue"},
+          {"region": "Google share of reported sales", "value": "80-81%"}
+        ]
+      },
+      "bounded_by": [
+        "Applies when a large share of traffic is agency-managed and attribution is last-click or single-touch",
+        "Does not apply when a single acquisition channel is cleanly isolated and tracked end-to-end"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserted that a business cannot optimize its ad spend without clean attribution data, and that having revenue numbers without attribution leaves the operator unable to tell which channels are profitable — making it impossible to scale from $3M toward $10M.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "Revenue stage $2M-$10M",
+        "Multi-channel paid acquisition"
+      ],
+      "mechanism": "Without per-channel attribution, operators cannot identify which spend is generating profitable sales versus which spend is consuming budget on traffic that would have converted anyway, so scaling any channel risks wasting incremental dollars.",
+      "numbers": null,
+      "bounded_by": [
+        "Single-channel businesses (e.g., 100% organic) do not face this constraint at the same severity"
+      ]
+    },
+    {
+      "text": "Alex Hormozi recommended that Optimum Works (railing e-commerce, $2.5M revenue, 2025) reorganize strategy around DIY buyers plus custom orders, deprioritizing contractors and designers, because DIY buyers are less price-sensitive, more emotionally invested in the product, and their average order value ($873) is similar to contractor orders — making DIY buyers a higher-gross-margin segment at equivalent ticket sizes.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "DIY plus custom",
+      "topic": "Offer and Audience Pruning",
+      "conditions": [
+        "E-commerce product business",
+        "Multiple buyer types with similar average order values",
+        "One segment shops on emotion, another on price"
+      ],
+      "mechanism": "Contractors and designers compare multiple suppliers and negotiate on price, compressing margins. DIY buyers self-select on taste and aesthetics, meaning they can be converted to custom orders at higher ticket ($1,300-$1,500) without a parallel price-shopping process.",
+      "numbers": {
+        "axis": "average order value by buyer type for Optimum Works",
+        "anchors": [
+          {"region": "DIY buyer average order", "value": "$873"},
+          {"region": "estimated DIY custom order potential", "value": "$1,300-$1,500"},
+          {"region": "revenue mix at time of session", "value": "70% DIY / 30% custom"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when contractor/designer orders are substantially higher-ticket than DIY (e.g., $20,000 vs. $873)",
+        "Does not apply when the business cannot handle custom-order volume operationally"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserted that shifting Optimum Works' custom-order process to a consultative phone close — with a VSL pre-frame, BANT qualification by SMS, and an on-call discount incentive — would likely produce a 50-60% close rate on custom orders, approximately doubling the close rate achievable without a structured sales process.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Custom or high-consideration product with variable pricing",
+        "Buyer has pre-qualified intent (watched VSL, submitted form)",
+        "Single-call close is the objective"
+      ],
+      "mechanism": "Pre-call BANT qualification (budget, authority, need, timing) via SMS eliminates unqualified buyers and surfaces decision-maker composition before the call, allowing the closer to address the right stakeholders and create urgency around timing. The on-call discount incentive creates a reason to close on that call rather than defer.",
+      "numbers": {
+        "axis": "expected close rate by sales process sophistication",
+        "anchors": [
+          {"region": "custom-order form-only flow (no sales process)", "value": "baseline (unspecified, implied low)"},
+          {"region": "projected close rate with VSL + BANT + on-call discount", "value": "50-60%"},
+          {"region": "actual close rate one year after implementation", "value": "20% (raised prices; tripled lead volume)"}
+        ]
+      },
+      "bounded_by": [
+        "Applies to custom or semi-custom physical product orders with 10-30 minute decision windows",
+        "Does not apply to purely self-serve e-commerce where human interaction is not standard"
+      ]
+    },
+    {
+      "text": "Alex Hormozi stated that offering a $200 on-call discount (disclosed before the call via the nurture sequence) is an effective mechanism to create close-on-call urgency without being perceived as high-pressure, because the framing is administrative efficiency rather than sales pressure.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "Custom product with quote-required pricing",
+        "Buyer has expressed intent by booking the call",
+        "Discount amount is meaningful but not margin-destroying"
+      ],
+      "mechanism": "Disclosing the on-call discount in the pre-call nurture SMS reframes the call as a buying session rather than an exploratory conversation. The buyer arrives expecting to transact, reducing post-call drift and the need for follow-up calls.",
+      "numbers": {
+        "axis": "on-call discount amount for Optimum Works custom orders",
+        "anchors": [
+          {"region": "on-call discount offered", "value": "$200"},
+          {"region": "estimated custom order value", "value": "$1,300-$1,500"}
+        ]
+      },
+      "bounded_by": [
+        "Discount must be pre-disclosed before the call, not revealed during negotiation — revealing it during negotiation reads as a concession, not a gift"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserted that BANT (Budget, Authority, Need, Timing) qualification via SMS after call booking — before the actual sales call — is more valuable for custom-product businesses than addressing BANT during the call, because it eliminates mismatched calls and surfaces missing decision-makers in advance.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "BANT",
+      "topic": "Consultative Sales Process",
+      "conditions": [
+        "High-consideration product requiring spouse or business-partner sign-off",
+        "Sales call is the close mechanism, not a discovery call",
+        "Custom pricing that requires scoping"
+      ],
+      "mechanism": "Asking BANT questions via SMS before the call converts the call from a discovery + qualification + close sequence into a close-only sequence, because qualification has already occurred. This compresses the call length and raises close rates by reducing the chance of a second call requirement.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when the sales cycle is long (enterprise, multi-month) and BANT changes over time",
+        "Does not apply to self-serve or low-ticket purchases where a call is not standard"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argued that for a railing e-commerce business (Optimum Works, 2025), the custom-order call-to-action should appear on every product listing page — not just best-sellers — because there is no structural reason to limit custom-order discovery to a subset of pages, and expanding placement multiplies the top-of-funnel for the higher-margin custom channel.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "E-commerce with a custom-order variant of the core product",
+        "Custom-order flow is already built and operational"
+      ],
+      "mechanism": "Product listing pages are the last step before purchase intent; placing the custom CTA on all pages captures intent that would otherwise be lost on pages that never surfaced the option.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi recommended that a VSL (video sales letter) for custom railing orders follow a proof-promise-plan-picture structure (5-7 minutes), include explicit price ranges and delivery timeline expectations to maintain viewer attention to the end, and close by framing the call as the natural decision point — not an exploratory step.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "VSL",
+      "topic": "VSL as Qualification and Pre-Frame Gate",
+      "conditions": [
+        "High-consideration custom product with variable pricing",
+        "Buyer needs education on product options before committing to a call",
+        "Target length: 5-7 minutes"
+      ],
+      "mechanism": "Announcing that pricing will be covered at the end creates an open loop that retains viewers who would otherwise drop off. Covering pricing in the VSL pre-qualifies viewers on budget expectations and filters out price-sensitive shoppers before the call, improving call quality.",
+      "numbers": {
+        "axis": "recommended VSL length for custom railing sales funnel",
+        "anchors": [
+          {"region": "minimum viable VSL length", "value": "5 minutes"},
+          {"region": "maximum recommended VSL length", "value": "7 minutes"}
+        ]
+      },
+      "bounded_by": [
+        "Applies to considered purchases where buyer needs decision criteria education; does not apply to impulse or commodity products"
+      ]
+    },
+    {
+      "text": "Alex Hormozi recommended that Optimum Works commit to a twice-weekly email cadence to its 10,000-person list, rotating three content themes — before/after transformations, cool projects, and FAQ objection-breakers — as a low-cost mechanism to drive repeat purchases from past customers and create long-term compounding list value.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "long-term nurture",
+      "topic": "2x Weekly Email Cadence with Rotating Themes",
+      "conditions": [
+        "Business with an existing customer email list",
+        "Low-frequency repeat-purchase product (home improvement / railing)",
+        "Goal is to be top-of-mind for the next purchase occasion, not immediate conversion"
+      ],
+      "mechanism": "Home improvement buyers are emotionally invested in their space and consume transformation content for enjoyment. Consistent email contact keeps the brand top-of-mind so that when the next project triggers a railing need, the subscriber defaults to the sender rather than re-entering a Google search.",
+      "numbers": {
+        "axis": "email list size relative to revenue for Optimum Works",
+        "anchors": [
+          {"region": "Optimum Works email list at time of session", "value": "10,000 contacts"},
+          {"region": "annual revenue at same time", "value": "$2.5M"}
+        ]
+      },
+      "bounded_by": [
+        "Applies to infrequent-purchase products where email serves as a top-of-mind retention tool rather than a direct conversion channel",
+        "Does not apply to high-frequency consumables where promotional email is the primary purchase trigger"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserted that a 10,000-person email list generating $2.5M in annual revenue is a high-quality list, because the revenue-per-subscriber ratio far exceeds typical e-commerce averages — implying that the subscribers are highly intent buyers rather than passive content consumers.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "E-commerce list built over 5 years",
+        "List built from purchase transactions, not content opt-ins"
+      ],
+      "mechanism": "A small list with high revenue per subscriber reflects transactional list-building (buyers, not browsers); these subscribers have demonstrated purchase intent at least once and are more likely to convert on future offers than entertainment-content subscribers.",
+      "numbers": {
+        "axis": "annual revenue per email subscriber",
+        "anchors": [
+          {"region": "Optimum Works ratio (2025)", "value": "$250 revenue per subscriber ($2.5M / 10,000)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "One year after the strategy session (April 2025 to March 2026), Optimum Works (Luis Loira, railing e-commerce) grew annual revenue 44% from $2.5M to $3.6M and profit 40% from $384,000 to $540,000, primarily by shifting custom orders from 30% to 50% of total business, fixing attribution to reallocate budget from losing campaigns to winning ones, and implementing a structured sales process for custom orders.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "E-commerce business with custom-product capability",
+        "Implemented: attribution fix, custom-order page expansion, VSL + sales process for custom orders",
+        "Timeframe: 12 months post-session"
+      ],
+      "mechanism": "Fixing attribution revealed campaigns that were breaking even or worse; reallocating that budget to proven winners improved ROAS. Expanding custom-order placement across all product pages and adding a structured sales call process tripled custom-order lead submissions and increased close rate to 20% despite a price increase.",
+      "numbers": {
+        "axis": "Optimum Works annual business metrics before and after strategy implementation",
+        "anchors": [
+          {"region": "revenue before (April 2025)", "value": "$2.5M"},
+          {"region": "revenue after (March 2026, 12 months)", "value": "$3.6M (+44%)"},
+          {"region": "profit before", "value": "$384,000"},
+          {"region": "profit after", "value": "$540,000 (+40%)"},
+          {"region": "custom order share before", "value": "30%"},
+          {"region": "custom order share after", "value": "50%"},
+          {"region": "custom order close rate after price increase", "value": "20%"},
+          {"region": "custom order lead volume change", "value": "tripled"}
+        ]
+      },
+      "bounded_by": [
+        "Results are from one specific business with an existing strong DIY base and a custom-order capability that competitors lacked",
+        "Attribution fix was a necessary precondition; without it, budget reallocation would not have been possible"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserted that at the $2-3M revenue stage, a business operator must know their attribution data as well as they know the back of their hand, because without per-channel attribution, the optimization choices required to grow from $3M to $10M are impossible to make correctly.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Multi-channel paid acquisition",
+        "Revenue stage $2M-$10M growth phase"
+      ],
+      "mechanism": "As a business moves toward colder and colder audiences (scaling beyond its warm network), each incremental dollar of spend has lower baseline conversion. Without attribution, the operator cannot identify which cold-audience channels are working and which are burning budget, making systematic improvement impossible.",
+      "numbers": null,
+      "bounded_by": [
+        "Single-channel or purely organic businesses do not face this constraint at the same urgency"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argued that for Optimum Works, converting the 30% custom-order segment into the dominant revenue stream (50%+) via a structured sales process would produce a 4x improvement in gross profit contribution — because doubling close rates and more than doubling gross margin per custom order compounds multiplicatively.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Margins",
+      "conditions": [
+        "Business with an existing custom-product capability that is underutilized",
+        "Gross margin on custom orders substantially higher than standard orders"
+      ],
+      "mechanism": "Custom orders carry higher gross margins because the buyer cannot comparison-shop on a per-unit basis (no direct competitor price is visible). A structured close process converts browsers into buyers at a higher rate, and the custom pricing allows average order values to increase to $1,300-$1,500 vs. $873 on standard orders.",
+      "numbers": {
+        "axis": "gross profit impact multiplier from custom-order strategy",
+        "anchors": [
+          {"region": "improvement from doubling close rate alone", "value": "2x"},
+          {"region": "improvement from doubling gross margin per order", "value": ">2x"},
+          {"region": "combined multiplicative improvement estimate", "value": "approximately 4x gross profit contribution from custom channel"}
+        ]
+      },
+      "bounded_by": [
+        "Requires that custom orders genuinely carry materially higher gross margin than standard orders — not universally true for all custom products"
+      ]
+    },
+    {
+      "text": "Alex Hormozi recommended that Optimum Works add a sticky top-of-page banner advertising custom designs across all pages, because a disappearing promotional banner loses visibility as users scroll — and custom-order awareness is the precondition for custom-order intent.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "sticky",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "E-commerce site with a custom product offering that is not the primary browsing path",
+        "Significant portion of traffic lands on standard product listing pages"
+      ],
+      "mechanism": "Non-sticky banners disappear on scroll, meaning visitors who linger on product pages never see the custom option. A persistent sticky banner ensures the custom CTA is visible throughout the browse session.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi stated that the email content theme of before/after home transformation photos works because home improvement buyers have an emotionally obsessive relationship with their space — they consume transformation imagery the way others consume entertainment — making this content format the highest-engagement option for a railing company's email list.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "before and after",
+      "topic": "2x Weekly Email Cadence with Rotating Themes",
+      "conditions": [
+        "Home improvement or aesthetics product category",
+        "Email list built from buyers, not content subscribers"
+      ],
+      "mechanism": "Emotional engagement with home transformation content is intrinsic to the buyer type — they are not opening emails for information but for inspiration. High open rates from this motivation increase email deliverability over time (inbox placement improves as engagement signals strengthen), compounding list value.",
+      "numbers": null,
+      "bounded_by": [
+        "Applies to categories with high visual/aspirational appeal (home, design, lifestyle)",
+        "Does not apply to B2B utility or commoditized product categories where transformation imagery has no emotional resonance"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi reviewed Optimum Works' Google Ads account live during the session and found that the agency-reported LTV-to-CAC ratio of 0.41:1 was flatly incompatible with the fact that the business was profitable. He reasoned that if 80% of sales were attributed to Google and each Google conversion was losing money on the reported ratio, the business should be losing money overall — but it was not. His proposed explanation: the agency had no idea what they were doing, and Optimum Works was actually receiving a large volume of referral and direct traffic from past buyers that was being incorrectly attributed to paid campaigns, making the ad spend appear both more costly and more impactful than it actually was.",
+      "claim_index": 0,
+      "topic": "Multi-Touch Attribution Ambiguity"
+    },
+    {
+      "text": "At the one-year follow-up (March 2026), Luis Loira reported that once Optimum Works fixed attribution, they discovered specific campaigns that were breaking even or unprofitable. They reallocated the budget from those campaigns to the profitable winners. This single change — budget reallocation enabled only by clean attribution data — was described by Luis as one of the two highest-impact changes made over the year, alongside the custom-order sales process improvement.",
+      "claim_index": 1,
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "During the session, Alex Hormozi reviewed the customer segmentation data for Optimum Works and noted that the average order value for DIY buyers ($873) was very close to the average for contractors and designers — not substantially different. He then argued that this equivalence eliminated the primary reason to pursue the contractor/designer segment (higher ticket), while the DIY segment offered a unique advantage: emotional investment in the product. A DIY buyer who has already self-selected on aesthetics is far more convertible to a custom order than a contractor comparing multiple fabricators on a spec sheet.",
+      "claim_index": 2,
+      "topic": "Offer and Audience Pruning"
+    },
+    {
+      "text": "Alex Hormozi walked through the full custom-order sales funnel live during the session: the buyer clicks a custom-order CTA on any product listing page, fills out a short form, books a call via an embedded calendar, watches a 5-7 minute VSL explaining how to choose railings and covering price ranges, then receives BANT-focused SMS messages (budget, authority, need, timing) before the call. On the call, the rep closes with a credit-card-or-financing A/B close and a $200 on-call discount that was pre-disclosed in the nurture sequence. Hormozi estimated this process would yield 50-60% close rates on custom orders.",
+      "claim_index": 3,
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "One year after Hormozi's session with Optimum Works, Luis Loira reported that custom orders had grown from 30% to 50% of total business. He tripled the number of custom-order leads submitted by expanding the custom CTA across all product pages and improving the custom-order landing page. Despite raising prices, the custom-order close rate settled at 20% — lower than Hormozi's 50-60% projection but still sufficient to produce 44% revenue growth and 40% profit growth in 12 months.",
+      "claim_index": 10,
+      "topic": "Revenue Stage Transitions"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Put the custom-order CTA and form on every product listing page, not just the best-sellers.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "Make the promotional top-of-page banner sticky so it remains visible as users scroll through product pages.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "In pre-call BANT SMS nurture, ask explicitly whether the spouse or financial decision-maker needs to be on the call — and if so, encourage them to book when both can attend.",
+      "topic": "Consultative Sales Process"
+    },
+    {
+      "text": "Disclose the on-call discount before the call (in nurture SMS) rather than during the call, so the buyer arrives expecting to transact.",
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Structure each email as: subject line, immediate visual reward (before/after image or project photo), CTA link, and a PS with a discount, joke, or friendly note.",
+      "topic": "2x Weekly Email Cadence with Rotating Themes"
+    },
+    {
+      "text": "In a custom-product VSL, announce at the start that pricing will be covered at the end to create an open loop that retains viewers through the full video.",
+      "topic": "VSL as Qualification and Pre-Frame Gate"
+    },
+    {
+      "text": "Use a credit-card-or-financing A/B close on custom product sales calls: present both options as equally acceptable to the seller so the buyer can self-select without friction.",
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "When diagnosing an attribution problem, consider turning off all paid ads temporarily to observe the baseline change in sales — the gap reveals true paid-ad incrementality.",
+      "topic": "Tracking and Measurement Discipline"
+    }
+  ]
+}

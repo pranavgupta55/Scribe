@@ -1,0 +1,94 @@
+{
+  "source_file": "fixing_a_sales_agency_with_a_40_cancellation_rate_2PfbKVGNgPM.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Promise-Delivery Gap",
+    "Sales Process Optimization",
+    "Behavior-Change Framing",
+    "Sales Closing Mechanics",
+    "Customer Retention Mechanics"
+  ],
+  "frameworks": [],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that a 40% cancellation rate in a sales agency context is a symptom of a sales problem, not a fulfillment problem: if customers are canceling after signing because they get tired of waiting for a 120-day fulfillment period, the issue is that the sale was made without committing to the timeline upfront.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Promise-Delivery Gap",
+      "conditions": [
+        "sales agency selling a service with a multi-month fulfillment delay",
+        "customers already have access to the alternative (e.g., existing electricity service) and cancel before installation"
+      ],
+      "mechanism": "Customers cancel not because the product is bad but because the sale mismanaged expectations: no timeline was stated upfront, so the wait feels indefinite and trust erodes over 120 days.",
+      "numbers": {
+        "axis": "cancellation rate vs. fulfillment wait time",
+        "anchors": [
+          {"region": "sales agency with unstated 120-day fulfillment delay", "value": "~40% cancellation rate"},
+          {"region": "comparable company that commits to timeline at point of sale and stages installation by geography", "value": "no stated cancellation problem (implied near-zero)"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when customers have no alternative and cannot cancel (captive markets)",
+        "Does not apply when churn is driven by price competition after installation, not pre-installation wait"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a comparable electricity-plan sales agency that collects commitment and banking information upfront, then canvasses until it hits a geographic threshold before dispatching the installation team, avoids the cancellation problem entirely, because the customer is committed before the wait begins and the timeline expectation is set at signing.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "utility or subscription service requiring geographic density before installation can proceed",
+        "customers already have access to the baseline service (electricity, internet, etc.)"
+      ],
+      "mechanism": "Collecting payment commitment and banking information before the fulfillment clock starts anchors the customer to the outcome and removes the implicit assumption that installation is imminent, so waiting 120 days does not feel like a broken promise.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires the sales model to support collecting banking or payment info well before service activation",
+        "Does not apply to one-time product sales where delivery is immediate"
+      ]
+    },
+    {
+      "text": "Alex Hormozi prescribes that, for a sales agency selling electricity plans with a 120-day fulfillment delay, the correct sales script should commit to the timeline explicitly at point of sale and position the wait as a benefit (first to get the lower rate), not hide it: the customer hears the 4-month wait before signing, not after.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Behavior-Change Framing",
+      "conditions": [
+        "B2C or SMB service with a structural multi-month fulfillment delay",
+        "customer already has access to the baseline service and can cancel penalty-free before delivery"
+      ],
+      "mechanism": "Telling the customer the wait upfront converts ambiguous future disappointment into a committed known timeline; framing first-mover status as a reward converts the wait from a cost into a privilege, reducing the psychological pressure to cancel.",
+      "numbers": {
+        "axis": "fulfillment timeline communicated to customer",
+        "anchors": [
+          {"region": "timeline withheld or vague", "value": "~40% cancellation rate before installation"},
+          {"region": "4-month timeline committed at signing with first-mover framing", "value": "expected near-zero cancellation (Hormozi's prescribed outcome)"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when the fulfillment delay is truly unpredictable and cannot be honestly committed to",
+        "Assumes the customer's primary objection is the wait, not the price or the product itself"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A sales agency selling electricity plans and backup power generates $300K/month in revenue. Their fulfillment partner (the installation company) cannot keep pace with sales volume, creating a 120-day wait between signing and installation. By the time the electrician arrives, roughly 40% of customers have canceled. Alex Hormozi identifies a comparable company using a different model: they canvas a neighborhood, collect signed commitments and banking information upfront, accumulate enough contracts to justify sending the installation team, and only then dispatch them. That company has no cancellation problem because customers know the timeline before they sign. Hormozi's prescribed fix for the original agency is a three-sentence close: confirm the customer wants a lower bill, tell them it takes four months, tell them they do not need to do anything except sign and they will be first in line for the lower rate.",
+      "claim_index": 0,
+      "topic": "Promise-Delivery Gap"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When selling a service with a structural multi-month fulfillment delay, state the exact timeline at the point of sale and frame first-mover status as a benefit before asking for the signature.",
+      "topic": "Behavior-Change Framing"
+    },
+    {
+      "text": "For geographic roll-out services (utility plans, fiber, backup power), collect payment commitment and banking information at signing before hitting the installation threshold, so customers are financially committed before the wait begins.",
+      "topic": "Sales Closing Mechanics"
+    }
+  ]
+}

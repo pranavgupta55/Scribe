@@ -1,0 +1,172 @@
+{
+  "source_file": "the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Supply vs. Demand Constraint Diagnosis",
+    "Growth-Constrained Prioritization",
+    "Constraint Identification",
+    "Scaling Bottleneck Diagnosis",
+    "Tradeoffs & Conscious Sacrifice",
+    "Promise-Delivery Gap",
+    "Payment Timing Optimization"
+  ],
+  "frameworks": [
+    {
+      "name": "Today Constraint vs. Horizon Constraint",
+      "definition": "Distinguish the constraint blocking growth right now (sales/marketing) from the constraint that will become existential at a future date (facility/supply); address today's constraint first unless the horizon constraint's timeline forces earlier action.",
+      "concept": "Supply vs. Demand Constraint Diagnosis"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi argues that when a manufacturing business faces both a present growth constraint (sales and marketing) and a future existential constraint (a dilapidated facility whose lease will expire in 24-36 months), fixing the sales and marketing constraint first is the correct sequence because it generates additional cash flow that can then fund the facility move — provided the supply constraint's timeline does not force action sooner.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Growth-Constrained Prioritization",
+      "conditions": [
+        "Business is currently profitable",
+        "Facility/supply constraint is not existential for at least 24-36 months",
+        "Sales and marketing is the binding near-term growth constraint",
+        "Move cost represents roughly 45% of annual free cash flow"
+      ],
+      "mechanism": "Generating more cash flow through sales and marketing first expands the capital pool available to fund the facility move, making the capital-intensive project cheaper relative to annual cash flow once the sales engine is running faster.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the facility constraint is imminent (less than 12 months away)",
+        "Does not apply if the business is not profitable and cannot self-fund either project"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that if a business accelerates sales and marketing before resolving an upstream supply/fulfillment constraint, it will exacerbate the constraint — meaning the supply bottleneck will arrive sooner than it otherwise would, not be avoided.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply vs. Demand Constraint Diagnosis",
+      "conditions": [
+        "Business has an existing supply or fulfillment ceiling",
+        "Sales growth is demand-driven and directly loads the constrained facility"
+      ],
+      "mechanism": "Higher sales volume increases throughput demand against a fixed production ceiling, consuming available capacity headroom faster and pulling the constraint forward in time.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the supply constraint has slack capacity sufficient to absorb projected sales growth"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that two large operational projects — a production facility consolidation and a sales/marketing buildout — can be run in parallel rather than sequentially, because the leaders who own each project are typically different people with non-overlapping responsibilities.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Tradeoffs & Conscious Sacrifice",
+      "conditions": [
+        "Each project has a distinct owner or project manager",
+        "The projects do not compete for the same capital allocation simultaneously at a level that would starve one"
+      ],
+      "mechanism": "When project leadership does not overlap, the attention cost of each project is borne by different people, eliminating the bottleneck that would arise if a single team had to context-switch between both.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when both projects require the same leadership team or compete for the same finite capital pool"
+      ]
+    },
+    {
+      "text": "Alex Hormozi estimates that a manufacturing facility relocation is a 12-week project, and therefore classifies it as a finite, manageable event rather than a multi-year distraction — implying the business does not need to defer all other growth work to complete it.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Growth-Constrained Prioritization",
+      "conditions": [
+        "Move is within-country (U.S. state-to-state)",
+        "Business already has a target location identified",
+        "A capable project manager is assigned full-time to the move"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "estimated calendar duration of a manufacturing facility relocation",
+        "anchors": [
+          {"region": "Hormozi estimate for this context (U.S. state-to-state, known destination)", "value": "approximately 12 weeks"},
+          {"region": "implied alternative view (multi-year distraction framing)", "value": "rejected by Hormozi as overstated"}
+        ]
+      },
+      "bounded_by": [
+        "Estimate is presented without specifying equipment complexity or workforce relocation burden",
+        "May not apply to large-scale heavy-industrial moves requiring specialized permitting"
+      ]
+    },
+    {
+      "text": "Alex Hormozi frames a capital-intensive operational project that is certain to happen but whose exact timing is not yet forced as a non-urgent, important task in the Eisenhower matrix — and argues this classification makes it a candidate for parallel execution alongside urgent projects rather than sequential execution after them.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Eisenhower matrix of non-urgent and important",
+      "topic": "Constraint Identification",
+      "conditions": [
+        "The project has a known future deadline but no immediate crisis",
+        "The urgent project (sales/marketing) and the important project (facility move) can be staffed independently"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if capital constraints make running both projects simultaneously impossible"
+      ]
+    },
+    {
+      "text": "Alex Hormozi advises that when a facility move would cost roughly 45% of one year's free cash flow, the sequence that makes strategic sense is: first grow sales to expand the cash pool, then fund the move from a larger base — rather than funding the move now and delaying sales investment.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Payment Timing Optimization",
+      "conditions": [
+        "Move cost is approximately 45% of annual free cash flow",
+        "Sales and marketing investment has positive expected ROI",
+        "The facility constraint allows at least 24-36 months before becoming existential"
+      ],
+      "mechanism": "Investing in sales first raises the denominator (annual free cash flow), making the fixed move cost a smaller percentage of total capital and reducing the relative financial strain of the project.",
+      "numbers": {
+        "axis": "facility move cost as a percentage of annual free cash flow",
+        "anchors": [
+          {"region": "stated scenario (triggers sales-first recommendation)", "value": "~45% of annual free cash flow"},
+          {"region": "implied threshold where move might be prioritized first", "value": "not explicitly stated; implied to be near 100%+ or when timeline forces action"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if the facility timeline is imminent and cannot be deferred",
+        "Assumes sales investment generates measurable cash flow increase within the deferral window"
+      ]
+    },
+    {
+      "text": "Alex Hormozi recommends hiring a dedicated project manager to own the facility relocation as a separate hire from the sales/marketing team, and notes that a capable project manager hired for the move will likely provide long-term value to the business beyond the single project.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "The business is running parallel growth and operational projects",
+        "Sales and marketing leadership is already assigned to growth work"
+      ],
+      "mechanism": "Assigning a dedicated project manager prevents the facility move from consuming sales/marketing leadership attention, preserving focus on the growth constraint while the move progresses independently.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A multi-generation family business selling lightweight home service contractor equipment operates two separate P&Ls and has niched each one to a distinct customer avatar. One P&L involves a production facility in New York state (dilapidated building, lease expiring in 24-36 months) while the founder has already relocated personally and partially to Texas. The team is sales and marketing constrained today — meaning they are profitable but not growing as fast as desired. The business faces a fork: consolidate manufacturing into a Texas center of excellence now (capturing EBITDA through cost structure improvement, tax benefits, and team centralization) or focus entirely on sales and marketing first and defer the move. Alex Hormozi recommended a hybrid path: prioritize sales and marketing to generate more free cash flow, hire a separate project manager to run the facility move concurrently, use the increased cash flow to fund the move from a stronger capital position, and then scale sales aggressively once the supply constraint is resolved.",
+      "claim_index": 0,
+      "topic": "Growth-Constrained Prioritization"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When facing two large competing projects, identify whether they can be led by different people before deciding whether to sequence or parallelize them.",
+      "topic": "Tradeoffs & Conscious Sacrifice"
+    },
+    {
+      "text": "Bring in a dedicated project manager for a facility or operational move rather than pulling sales or marketing leaders off their growth focus.",
+      "topic": "Growth-Constrained Prioritization"
+    },
+    {
+      "text": "Before committing to a major capital project, calculate its cost as a percentage of annual free cash flow to determine whether growing the cash base first is more advantageous than funding the project at current cash flow levels.",
+      "topic": "Payment Timing Optimization"
+    }
+  ]
+}

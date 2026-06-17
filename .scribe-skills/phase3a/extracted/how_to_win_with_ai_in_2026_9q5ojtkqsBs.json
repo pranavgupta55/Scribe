@@ -1,0 +1,315 @@
+{
+  "source_file": "how_to_win_with_ai_in_2026_9q5ojtkqsBs.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "AI First-Mover Window",
+    "Workflow Automation",
+    "AI Training Like New Employee",
+    "AI Implementation Maturity Mismatch",
+    "One-Person Company (AI-Enabled)",
+    "Delivery Model Polarization",
+    "Creator Vulnerability to AI Disruption",
+    "Volume and Repetition Mastery",
+    "Hiring as Capital Allocation",
+    "Margins",
+    "Compound Work Payoff",
+    "Long-Term Horizon Advantage",
+    "Worst-Case Crystallization",
+    "Market Tailwinds Enable Default Growth",
+    "Data Architecture First",
+    "Team Training and Scaling"
+  ],
+  "frameworks": [
+    {
+      "name": "Barbell AI Strategy",
+      "definition": "Position on two extremes simultaneously: high-risk AI-first operations on one pole, and bets on timeless human needs (health, food, entertainment) on the other; avoid the unprotected middle.",
+      "concept": "Delivery Model Polarization"
+    },
+    {
+      "name": "Workflow-First Org Design",
+      "definition": "Replace role-based org thinking with workflow-based thinking: decompose every role into four to ten granular tasks, then ask which tasks can live inside an automated workflow instead of headcount.",
+      "concept": "Workflow Automation"
+    },
+    {
+      "name": "BYOS / BYOA Model",
+      "definition": "Bring Your Own Software or Bring Your Own Agent: employees and contractors who arrive with pre-built AI agents that replace entire department outputs become disproportionately valuable as labor markets shift.",
+      "concept": "One-Person Company (AI-Enabled)"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that AI will never be worse than it is right now; therefore, assuming any reasonable rate of improvement, learning to use AI should be treated as the single highest-priority investment a business owner can make in 2026.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI First-Mover Window",
+      "conditions": [],
+      "mechanism": "AI capability improves continuously; waiting to adopt means competing against operators who have compounded their advantage over time.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that organizations with large existing headcounts face a structural disadvantage in AI adoption because incumbents are too busy running existing operations to learn AI, and leaders are unwilling to have the hard conversations required to eliminate automated roles, whereas AI-first startups face neither constraint.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI First-Mover Window",
+      "conditions": [
+        "existing large-headcount organization",
+        "incumbent market position"
+      ],
+      "mechanism": "Incumbents carry organizational inertia: retraining existing staff is slow, and eliminating automated roles requires uncomfortable people decisions that startups bypass by never creating those roles in the first place.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to startups without legacy headcount"
+      ]
+    },
+    {
+      "text": "Alex Hormozi observes that in his own AI-first companies started during the 2024-2025 period, revenue per employee reaches into the millions per year per head because the businesses were structured AI-first from day one rather than retrofitting AI onto an existing human org chart.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "One-Person Company (AI-Enabled)",
+      "conditions": [
+        "AI-first from founding",
+        "no legacy headcount to convert"
+      ],
+      "mechanism": "Starting AI-first avoids the coordination cost of converting human roles and avoids the political cost of eliminating people after automation; both costs compound against incumbents.",
+      "numbers": null,
+      "bounded_by": [
+        "Incumbents with existing org charts cannot achieve this without difficult workforce restructuring"
+      ]
+    },
+    {
+      "text": "Alex Hormozi claims that the correct unit of analysis for replacing headcount with AI is the task level, not the role level: each role should be decomposed into four to ten specific tasks and each task evaluated individually for automation, because roles are communication interfaces between humans whereas workflows are the actual input-output system.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "workflow-based thinking",
+      "topic": "Workflow Automation",
+      "conditions": [],
+      "mechanism": "Org charts exist to organize communication between humans, not to organize production inputs and outputs; once tasks are separated, each can be automated independently without disrupting the whole role at once.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that training an AI agent requires the same discipline as training a new human employee: you must define observable outputs explicitly, provide examples, and iterate with feedback; the critical difference is that 100 feedback cycles that take 18 months with a human take roughly 100 minutes with an AI agent.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI Training Like New Employee",
+      "conditions": [],
+      "mechanism": "AI systems learn from reinforcement in the same structural way humans do (action -> outcome -> more or less of that behavior); the feedback loop is identical but the cycle time is orders of magnitude faster.",
+      "numbers": {
+        "axis": "Training feedback cycles required to reach high output quality",
+        "anchors": [
+          {"entity": "Human employee", "value": "~100 cycles over 18 months"},
+          {"entity": "AI agent", "value": "~100 cycles over 100 minutes"}
+        ]
+      },
+      "bounded_by": [
+        "Requires the trainer to define observable outputs precisely; vague instructions yield equally poor results from both humans and AI"
+      ]
+    },
+    {
+      "text": "Alex Hormozi claims that the primary reason AI outputs are poor is not AI capability but the lack of precise, observable output definitions from the trainer: giving AI a writing task without explicit rules and examples produces generic internet-trained copy, whereas providing 12 explicit rules and 16 writing samples produces outputs roughly five times better.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI Training Like New Employee",
+      "conditions": [
+        "copywriting or content generation tasks"
+      ],
+      "mechanism": "AI was trained on the internet and defaults to the statistical average of internet writing; explicit constraints and examples force it to pattern-match against a specific style instead of the population mean.",
+      "numbers": {
+        "axis": "Output quality improvement from adding explicit constraints and examples",
+        "anchors": [
+          {"condition": "No rules or examples given", "value": "baseline generic AI output"},
+          {"condition": "12 rules + 16 writing samples provided", "value": "~5x better output quality"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that the risk of not adopting AI exceeds the risk of adopting it, because humans systematically overweight rare visible failure cases (agents given excessive permissions, security edge cases) and underweight the compounding cost of falling behind competitors who do adopt.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Worst-Case Crystallization",
+      "conditions": [],
+      "mechanism": "Rare and visible failure cases receive disproportionate attention versus the invisible accumulated cost of slower operations compounding over years.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that the BYOS / BYOA model (Bring Your Own Software or Agent) represents a new form of employee leverage unavailable before 2024: a single contractor or employee who arrives with pre-trained AI agents capable of replacing an entire department output can capture department-level compensation from an employer who previously needed five to ten people to produce that output.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "BYOS, BYOA",
+      "topic": "One-Person Company (AI-Enabled)",
+      "conditions": [
+        "individual has built and trained domain-specific AI agents",
+        "employer evaluates on output not headcount"
+      ],
+      "mechanism": "Employers allocate budget based on the output they need, not the number of people historically required to produce it; an individual who can deliver department-level output with agents captures that department budget.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires employers willing to evaluate workers by output rather than title or headcount",
+        "Does not apply to roles requiring physical presence or regulatory headcount minimums"
+      ]
+    },
+    {
+      "text": "Alex Hormozi predicts that businesses that charge legacy prices for services whose underlying cost structure has been dramatically reduced by AI will earn disproportionate margins during a transition period, because customer price sensitivity adjusts slowly relative to cost structure changes; a service priced at $2,000/month that previously cost $500/month to deliver may now cost $5/month to deliver with AI.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Margins",
+      "conditions": [
+        "services previously priced with labor cost baked in",
+        "AI-enabled cost reduction available but customer expectations anchored to old price"
+      ],
+      "mechanism": "Customers are anchored to the price they have always paid; if AI drops delivery cost from $500 to $5/month, the seller captures the spread as margin during the anchoring period.",
+      "numbers": {
+        "axis": "Monthly delivery cost after AI automation on a $2,000/month service",
+        "anchors": [
+          {"condition": "Pre-AI labor cost", "value": "~$500/month"},
+          {"condition": "Post-AI automation cost", "value": "$50 or $5/month"}
+        ]
+      },
+      "bounded_by": [
+        "Price anchoring erodes as market normalizes; window is finite"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that in a long-run scenario where AI provides near-infinite intelligence and labor at the cost of electricity, the last valuable human contribution will be risk-taking, because risk is the one input that only the person bearing the downside can actually assume; labor and intelligence will no longer command market wages when AI can supply them at electricity cost.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI First-Mover Window",
+      "conditions": [
+        "long-run scenario where AI provides infinite intelligence and labor at electricity cost"
+      ],
+      "mechanism": "Risk cannot be transferred to AI; the human must bear downside. When intelligence and labor are commoditized, the only scarce input is human willingness to absorb loss.",
+      "numbers": null,
+      "bounded_by": [
+        "Applies to medium-to-long-run scenario only; short-run human skills still command premiums during the transition period"
+      ]
+    },
+    {
+      "text": "Alex Hormozi claims that throughout all of human history, humans with superior technology have beaten humans with inferior technology, implying that businesses or individuals who fail to adopt AI will lose competitive ground to those who do, regardless of their relative skill level.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Compound Work Payoff",
+      "conditions": [],
+      "mechanism": "Technology multiplies the productive output of the human who wields it; two people of equal skill competing with different technology levels do not produce equal output.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when the machine is competing alone without a human partner; the claim is specifically about humans-plus-tools versus humans-plus-inferior-tools"
+      ]
+    },
+    {
+      "text": "Alex Hormozi suggests that the optimal individual strategy for AI adoption is a barbell: fully commit to AI-first operations on one extreme (high risk, high reward), while on the other extreme invest in industries whose demand is structurally independent of AI development such as health, food, and entertainment, because human bodies, the need for calories, and leisure time will persist regardless of AI capability.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "barbell strategy",
+      "topic": "Delivery Model Polarization",
+      "conditions": [
+        "medium-term planning horizon where AI trajectory is uncertain"
+      ],
+      "mechanism": "Barbell avoids concentration risk in the uncertain middle; high-AI-exposure bets capture upside if AI advances quickly, while stable-need bets provide downside protection if AI disrupts labor markets faster than expected.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not address the catastrophic scenario (full societal collapse) because in that case no strategy matters"
+      ]
+    },
+    {
+      "text": "Alex Hormozi observes that slow human adaptation to price changes creates a time-limited window where AI-enabled operators can maintain legacy prices while dramatically reducing delivery costs; this window closes as customer price expectations normalize to AI-era costs.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI First-Mover Window",
+      "conditions": [
+        "existing market where prices embed historical labor costs",
+        "AI-enabled operator able to reduce delivery cost dramatically"
+      ],
+      "mechanism": "Human price sensitivity is calibrated to what they have always paid; the cognitive recalibration to AI-era prices lags the actual cost shift, creating a temporary margin window.",
+      "numbers": null,
+      "bounded_by": [
+        "Window is temporary and closes once competitors normalize pricing to AI cost levels"
+      ]
+    },
+    {
+      "text": "Alex Hormozi contends that people who decline to use AI are analogous to companies that avoided the internet: they may still generate revenue, but they compete at a structural disadvantage that compounds over time, requiring them to be disproportionately better at everything else to stay competitive.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI First-Mover Window",
+      "conditions": [],
+      "mechanism": "The internet analogy holds because both are infrastructure multipliers, not optional features; non-adoption is possible but carries an ever-growing competitive cost relative to adoption.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that people who do not automate their own role are at the greatest risk of being replaced: if you do not automate your job yourself, someone else will do it for you, and that someone will control the automation while you are displaced.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "AI Implementation Maturity Mismatch",
+      "conditions": [
+        "individual is in a role with automatable tasks"
+      ],
+      "mechanism": "Automation is inevitable once the technology is cost-effective; the person who automates their own role retains relevance by becoming the AI trainer and director, whereas those who resist are replaced entirely by whoever does the automating.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi describes a friend who is a successful entrepreneur and has launched an internal division whose sole mission is to put his much larger legacy business out of business. The friend allocates 20% of his time to this effort. This illustrates the claim that the most adaptive business operators are actively attempting to automate themselves rather than waiting for a competitor to do it.",
+      "claim_index": 14,
+      "topic": "AI Implementation Maturity Mismatch"
+    },
+    {
+      "text": "Hormozi cites Anthropic as an example of AI-enabled organizational leverage: Anthropic reportedly runs its entire marketing function with one person. Hormozi acknowledges that Anthropic also benefits from significant earned media and PR, but his point is that one person with well-trained AI agents can produce the output previously requiring a full department, illustrating the BYOS / BYOA model.",
+      "claim_index": 7,
+      "topic": "One-Person Company (AI-Enabled)"
+    },
+    {
+      "text": "Hormozi gives a concrete AI training illustration: if you tell an AI to write email copy without additional context, it produces generic internet-sounding output because it was trained on the internet as a whole. If you provide 12 specific rules the AI cannot break plus 16 writing samples, the output is roughly five times better. After 100 such feedback cycles the output is perfectly pattern-matched to the desired style, and those 100 cycles that would take 18 months with a human employee take approximately 100 minutes with an AI agent.",
+      "claim_index": 5,
+      "topic": "AI Training Like New Employee"
+    },
+    {
+      "text": "Hormozi recounts a Brian Johnson (Blueprint longevity company founder) analogy: humans have progressively become better swimmers, moving from lap pools to open ocean. But the coming AI shift is not a bigger wave in the same medium; it is a phase shift from water to gas. A perfect swimmer still cannot swim when the water has evaporated. The analogy is meant to convey that AI represents a fundamental environmental change rather than a skill upgrade, and competitive advantages built for the old environment may not transfer.",
+      "claim_index": 0,
+      "topic": "AI First-Mover Window"
+    },
+    {
+      "text": "Hormozi uses the AI-generated adult content industry as a leading-indicator example of where AI will eventually penetrate mainstream entertainment and media. He describes businesses generating AI avatar personas, producing automated video content, and deploying chatbots trained on thousands of domain-specific conversations, all without the logistical overhead of managing real people. His argument is explicitly economic rather than normative: whatever the adult content industry adopts first tends to reach mainstream use eventually, and the pattern here is AI-generated personas plus automated conversation at scale.",
+      "claim_index": 11,
+      "topic": "Creator Vulnerability to AI Disruption"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Write down every task you perform at the most granular level possible (not role buckets like run ads but specific sub-tasks like make campaigns, set budgets, analyze results, write copy, test landing page headlines). Then take each task one at a time, put it into AI, ask how to automate it, take the first step from its answer, and if you get stuck screenshot your screen and ask the AI what to do next.",
+      "topic": "Workflow Automation"
+    },
+    {
+      "text": "Take a full weekend and commit entirely to building something with an AI agent. Do not read articles about AI; get your hands into it directly. The goal is not to finish a complete project but to remove the psychological barrier and gain direct experience.",
+      "topic": "AI First-Mover Window"
+    },
+    {
+      "text": "Before hiring for any role, write down the four to ten things that person would actually do with their hands and time, then ask whether each of those activities could live inside a workflow instead of headcount.",
+      "topic": "Workflow Automation"
+    },
+    {
+      "text": "When training an AI agent on a writing or communication task, always provide explicit rules (what the output must never do) and multiple examples of the desired output style before asking it to produce anything.",
+      "topic": "AI Training Like New Employee"
+    },
+    {
+      "text": "Allocate at least 20% of your time to attempting to automate your own current role; the goal is to control the automation of your job rather than be replaced by someone else who does it first.",
+      "topic": "AI Implementation Maturity Mismatch"
+    }
+  ]
+}

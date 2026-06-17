@@ -1,0 +1,236 @@
+{
+  "source_file": "our_cac_is_6_700_and_we_don_t_know_what_s_working_15CxTygzVio.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Multi-Touch Attribution Ambiguity",
+    "Audience Survey for Discovery Channel Attribution",
+    "Tracking and Measurement Discipline",
+    "Cumulative Secondary Touchpoints Compound Conversion",
+    "Brand Attribution Window",
+    "Channel Optimization Before Expansion",
+    "Top Performer Behavior Codification",
+    "Lead-Cost-Closeout Math",
+    "Volume-First Scaling",
+    "True CAC Differs from Reported CAC"
+  ],
+  "frameworks": [
+    {
+      "name": "Scientific Attribution Model",
+      "definition": "A blended attribution rule: if a conversion occurs within 30 days of a touchpoint, assign credit to the last touch; if the gap exceeds 30 days, assign credit to the first touch. This prevents both the short-termism of pure last-touch and the brand-inflation of pure first-touch.",
+      "concept": "Multi-Touch Attribution Ambiguity"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi argues that for service businesses with complex, multi-month sales cycles (where customers may research for 1-3 years before buying), pure last-touch attribution systematically over-credits direct-response channels and will eventually cause operators to prune brand-building channels that actually drive first awareness.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "scientific attribution",
+      "topic": "Multi-Touch Attribution Ambiguity",
+      "conditions": [
+        "high-touch service business",
+        "sales cycle longer than 30 days",
+        "multiple digital touchpoints before conversion"
+      ],
+      "mechanism": "Last-touch models assign credit to the most recent interaction, which is disproportionately a direct-response hook. Over time, operators A/B test toward those hooks, defunding awareness channels, until the top-of-funnel collapses.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to e-commerce or transactional services with same-session purchase behavior"
+      ]
+    },
+    {
+      "text": "Alex Hormozi's Scientific Attribution rule assigns last-touch credit when the conversion occurs within 30 days of a touchpoint, and first-touch credit when the gap exceeds 30 days; this blended rule balances direct-response accuracy against brand-channel under-counting.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "scientific attribution",
+      "topic": "Multi-Touch Attribution Ambiguity",
+      "conditions": [
+        "conversion within 30 days of touchpoint: last-touch credit",
+        "conversion more than 30 days after first touchpoint: first-touch credit"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "days between first touchpoint and conversion",
+        "anchors": [
+          {"region": "within 30 days", "value": "last-touch attribution"},
+          {"region": "more than 30 days", "value": "first-touch attribution"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that qualitative first-touch survey data collected directly from existing customers is sufficient to power-rank acquisition channels and direct reinvestment decisions, even without quantitative tracking infrastructure; the survey should ask where each customer first heard about the business.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Audience Survey for Discovery Channel Attribution",
+      "conditions": [
+        "business lacks reliable digital attribution tracking",
+        "service business with complex multi-touch sales cycle"
+      ],
+      "mechanism": "Direct customer recall of first discovery channel is directionally accurate even if not precise, and provides an immediately actionable signal for budget reallocation.",
+      "numbers": null,
+      "bounded_by": [
+        "Provides directional accuracy, not forensic precision; does not reveal the conversion function of middle-funnel touchpoints"
+      ]
+    },
+    {
+      "text": "Alex Hormozi advises that once a primary first-touch channel is identified via qualitative survey, the operator should more than double investment in that channel while leaving all other brand touchpoints at current spend levels, because secondary touchpoints perform a nudging or conversion function that is distinct from the awareness function of the primary channel.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "high-touch service business",
+        "multi-touchpoint sales cycle",
+        "primary first-touch channel identified via customer survey"
+      ],
+      "mechanism": "The primary channel brings leads into the funnel; secondary channels facilitate conversion across the longer decision window. Cutting secondary channels to fund primary risks losing the conversion function.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that applying pure split-testing optimization to all channels of a brand-dependent service business will progressively convert the business into a pure direct-response operation and destroy the brand equity that sustains long sales cycles; he quotes George Mack's observation that if you split test enough, everything becomes porn.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Brand Attribution Window",
+      "conditions": [
+        "brand-dependent service businesses with 30+ day sales cycles"
+      ],
+      "mechanism": "Split tests optimize for the highest short-term conversion rate, which systematically favors explicit direct-response hooks over brand-building content; compounding this optimization over cycles removes all brand signal from the channel mix.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to transactional products or businesses where brand is not a conversion variable"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that for a real estate buyers advisory business with a four-month sign-to-full-payment cycle and deal sizes of $600K-$1M, the 30-day cutoff in the Scientific Attribution Model means that most conversions will be attributed to first touch, making brand-awareness channels more measurably important than last-touch models suggest.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Multi-Touch Attribution Ambiguity",
+      "conditions": [
+        "service business",
+        "sign-to-payment cycle exceeding 30 days",
+        "high average deal value ($600K-$1M purchase price, $22K service fee)"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "sign-to-full-payment cycle duration",
+        "anchors": [
+          {"region": "stated sign-up to cash received", "value": "approximately 4 months"},
+          {"region": "scientific attribution threshold", "value": "30 days"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi claims that doubling total acquisition spending across all existing channels will produce proportional revenue growth for a service business even without resolved attribution clarity, because the macro-level volume effect overrides per-channel attribution uncertainty at the scale of doubling.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "business has sufficient cash reserves to sustain increased ad spend (stated as 4 months OPEX)",
+        "existing channels are already producing customers",
+        "no single channel has been identified as non-performing"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Attribution data remains necessary for long-run efficiency optimization; doubling spend without attribution only delays the efficiency problem"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that all sales skills are teachable, and that top-performing salespeople are not doing anything magical but simply exhibiting specific observable behaviors that differ from lower performers; those behaviors can be identified, codified, and trained to the rest of the team within a couple of weeks.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Top Performer Behavior Codification",
+      "conditions": [
+        "service sales context",
+        "top performers already exist within the team"
+      ],
+      "mechanism": "Sales success is behavioral, not intuitive; any reproducible behavior can be observed, described in observable terms, and retrained. The timeline for sales skill transfer is shorter than for technical or cognitive skills because the behaviors are explicit and external.",
+      "numbers": {
+        "axis": "time to transfer top-performer sales behaviors to team",
+        "anchors": [
+          {"region": "most sales skills", "value": "teachable within a couple of weeks"}
+        ]
+      },
+      "bounded_by": [
+        "If performance gap persists after behavioral training, remaining gap is attributable to adherence or work ethic, which are harder to train and may not be worth the investment"
+      ]
+    },
+    {
+      "text": "Alex Hormozi distinguishes between two types of performance gaps in sales teams: behavioral gaps (the top performers say or do different specific things) and adherence or work ethic gaps (the performer knows what to do but does not consistently do it); only the first type is efficiently addressable through behavior codification and training.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Top Performer Behavior Codification",
+      "conditions": [
+        "gap analysis conducted after behavioral training has been deployed",
+        "service sales team"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi observes that when a high-touch service business customer touches 5-10 channels over months or years before buying, determining which channel deserves acquisition credit is structurally ambiguous; the earlier the touchpoint in the customer journey, the less defensible any single attribution assignment becomes.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Multi-Touch Attribution Ambiguity",
+      "conditions": [
+        "complex, multi-touchpoint B2C or B2B service business",
+        "sales cycle spanning multiple months to multiple years"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "number of touchpoints before purchase",
+        "anchors": [
+          {"region": "stated example (buyers advisory service)", "value": "touches meta origination plus 5+ other channels before converting"},
+          {"region": "illustrative podcast example", "value": "some customers research for 3 years before buying"}
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi performed a live qualitative first-touch attribution exercise during the session by asking the room to raise hands by discovery channel: first heard via word of mouth, first discovered via the book on Amazon, first found on YouTube, or first found on Instagram. The result showed roughly two-thirds from YouTube and a meaningful portion from word of mouth, with the book and Instagram as minor sources. Hormozi used this to illustrate that a simple show-of-hands survey yields a power-ranked channel list that immediately implies where to concentrate reinvestment: in this case, making better YouTube content would have delivered disproportionate returns relative to any other channel.",
+      "claim_index": 2,
+      "topic": "Audience Survey for Discovery Channel Attribution"
+    },
+    {
+      "text": "The real estate buyers advisory founder described a specific attribution problem: customers would appear in analytics as originating from Meta (Facebook/Instagram), but when traced further, each customer had also touched five other channels (PR, YouTube, podcast, organic content, agency-driven campaigns) along their journey before converting. This multi-touch reality made it impossible to determine which channel to scale, resulting in the team increasing all channels simultaneously without knowing which was driving incremental customers.",
+      "claim_index": 9,
+      "topic": "Multi-Touch Attribution Ambiguity"
+    },
+    {
+      "text": "Alex Hormozi noted that some customers of the buyers advisory business had been listening to their podcast for three years before purchasing, while others watched a VSL and signed up within days. This range illustrates that customer decision timelines can vary from days to years within the same service business, making any fixed attribution window an imperfect but necessary simplification.",
+      "claim_index": 5,
+      "topic": "Brand Attribution Window"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Survey your existing customer base asking only one question: where did you first hear about us? Tally results, power-rank the channels, and let that ranking drive your reinvestment allocation.",
+      "topic": "Audience Survey for Discovery Channel Attribution"
+    },
+    {
+      "text": "To identify what top performers are doing differently from average team members, study their observable behaviors (what they say, when they say it, how they handle objections) and break those behaviors into a teachable checklist, then make that checklist the team standard.",
+      "topic": "Top Performer Behavior Codification"
+    },
+    {
+      "text": "If attribution is unresolved but cash reserves allow it (at least 4 months of OPEX), double all existing acquisition spend rather than waiting for attribution clarity; attribution data can then be used to optimize efficiency after the volume increase.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "After identifying the primary first-touch channel, allocate more than double the current investment there while maintaining all other brand touchpoints at current levels; do not cut secondary channels even if their ROI is unclear.",
+      "topic": "Channel Optimization Before Expansion"
+    }
+  ]
+}

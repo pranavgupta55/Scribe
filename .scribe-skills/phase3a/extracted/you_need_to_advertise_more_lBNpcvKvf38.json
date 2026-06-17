@@ -1,0 +1,177 @@
+{
+  "source_file": "you_need_to_advertise_more_lBNpcvKvf38.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Volume-First Scaling",
+    "Ad Creative Assembly and Variation",
+    "Ad Spend Optimization",
+    "Channel Optimization Before Expansion",
+    "Execution and Rapid Iteration",
+    "Scaling Bottleneck Diagnosis",
+    "Persistence as Competitive Advantage",
+    "Psychological Barriers to Growth"
+  ],
+  "frameworks": [
+    {
+      "name": "Paid Ads More Sequence",
+      "definition": "Three-step risk-ordered sequence for scaling paid advertising: (1) make more creative, (2) spend more money, (3) expand to more platforms — each step unlocks the next.",
+      "concept": "Ad Spend Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that when scaling paid advertising, the lowest-risk first move is producing more creative, not spending more money, because more creative volume increases the probability of finding winning ads, which then justifies increased spend.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "more creative",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["paid advertising context", "business already running paid ads"],
+      "mechanism": "More creatives increase the probability of finding winners; winners improve ROAS; better ROAS makes increased spend economically justified before the spend is increased.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the correct sequence for scaling paid advertising is (1) produce more creative, (2) increase ad spend, (3) expand to more platforms — in that order of ascending risk — because each prior step validates the economics before committing to the higher-risk next step.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "more, better, new",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": ["paid advertising scaling", "business has existing paid ad infrastructure"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that erratic, volatile sales (e.g., one sale per week with no predictable cadence) are caused by an insufficient and inconsistent level of advertising output — not by market conditions or offer quality — and that multiplying advertising volume 7x is required to move from one sale per week to one sale per day.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "level of advertising",
+      "topic": "Volume-First Scaling",
+      "conditions": ["business currently generating approximately 4 sales per month"],
+      "mechanism": "There is a fixed relationship between advertising volume and sales volume; erratic sales reflect erratic or low advertising, not market unpredictability.",
+      "numbers": {
+        "axis": "advertising volume multiplier required to reach target sales frequency",
+        "anchors": [
+          {"region": "current state: ~1 sale/week (4/month)", "value": "baseline advertising level"},
+          {"region": "target: 1 sale/day (7x current frequency)", "value": "7x advertising volume required"},
+          {"region": "target with efficiency drop accounted for", "value": "up to 14x advertising volume required"}
+        ]
+      },
+      "bounded_by": ["Assumes the offer and close rate remain constant; applies only to the advertising input lever, not to product or pricing changes."]
+    },
+    {
+      "text": "Alex Hormozi asserts that operators who obsess over efficiency, margin optimization, or relative returns on advertising instead of raw volume stay small, because they withhold the sustained high-volume input that produces compounding sales output.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "obsessed with the margin",
+      "topic": "Psychological Barriers to Growth",
+      "conditions": [],
+      "mechanism": "Obsessing over optimization causes under-investment in volume; the relationship between advertising input and sales output is roughly proportional, so optimizing a small input produces a small output even if efficiency is high.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the short-term inefficiency of doing high advertising volume is a necessary forcing function: it forces operators to find leverage and improve quality organically, because a fixed-volume commitment (e.g., 100 calls/day) creates pressure to improve pickup rates, scheduling, and targeting without requiring a separate optimization initiative.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "forcing function",
+      "topic": "Volume-First Scaling",
+      "conditions": ["operator commits to a fixed daily output volume regardless of short-term results"],
+      "mechanism": "Fixed high volume creates pain from inefficiency; that pain motivates data-driven optimization (e.g., timing, targeting) without a separate mandate. Operators who avoid that pain never receive the signal to optimize.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that high ad spend volume at scale (e.g., $500,000 per day) is only achievable when the creative input volume is proportionally large, because platforms require a sufficient pool of distinct creatives to distribute spend across without fatigue.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "equal amount of scale in terms of the inputs",
+      "topic": "Ad Spend Optimization",
+      "conditions": ["paid advertising at scale", "platform-distributed spend"],
+      "mechanism": "Ad spend and creative volume scale together; creative fatigue limits spend throughput, so a fixed small creative library caps the maximum daily spend regardless of budget available.",
+      "numbers": {
+        "axis": "daily ad spend relative to creative library size",
+        "anchors": [
+          {"region": "pre-launch creative pool: ~2,800 ads banked", "value": "$500,000/day spend at peak (last few days of launch)"},
+          {"region": "baseline creative team: 5 editors at 5 ads/day each", "value": "25 ads/day maximum output, insufficient for $500k/day scale"},
+          {"region": "scaled creative team: 15 editors", "value": "required to bank 2,800 ads before launch start"}
+        ]
+      },
+      "bounded_by": ["Specific to paid social/display platforms where creative rotation is the primary spend lever; may not apply to search-intent platforms where keyword budget is the primary lever."]
+    },
+    {
+      "text": "Alex Hormozi asserts that consistency of advertising output over time is a component of volume that cannot be compressed into a single burst, because building a large creative library requires sustained daily production over hundreds of days rather than a single sprint.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "part of volume is the consistency associated with it",
+      "topic": "Persistence as Competitive Advantage",
+      "conditions": ["large-scale paid ad campaign preparation"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "daily creative output required to accumulate 2,800 ads",
+        "anchors": [
+          {"region": "sustained daily run rate: 25-50 ads/day", "value": "required for hundreds of consecutive days to reach 2,800 total"},
+          {"region": "single-day burst at max team capacity", "value": "cannot replicate the 2,800-ad library; time is non-compressible"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the cost of scaling creative production is almost always far smaller than the incremental revenue the additional scale generates, making under-investment in creative volume a reliable economic error.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "a lot less than 105 million",
+      "topic": "Execution and Rapid Iteration",
+      "conditions": ["businesses with proven offer and positive ROAS on existing ads"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": ["Assumes the offer already converts; does not apply to businesses still searching for product-market fit."]
+    },
+    {
+      "text": "Alex Hormozi asserts that the resource gap blocking higher advertising volume (e.g., not enough editors) is almost always solvable once operators do the math: calculate the required output, determine the resource cost, and compare it to the projected revenue upside — and the answer is almost always a strong yes to investing.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "what's stopping us",
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": ["business has proven offer with positive ROAS", "operator has identified creative production as the bottleneck"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "For the Money Models launch, Alex Hormozi's team produced 2,800 ads before the six-week launch period began. With only 5 editors producing 25 ads per day, they could not have built that library; they contracted 10 additional editors (15 total) to meet the required output rate. At peak spend during the final days of the launch, the team was spending $500,000 per day on ads. The launch generated over $105 million. Hormozi's framing: the cost of contracting the additional editors was trivially small relative to $105M, making the decision obvious once the math was done.",
+      "claim_index": 5,
+      "topic": "Ad Spend Optimization"
+    },
+    {
+      "text": "Alex Hormozi uses the example of a business doing one sale per week, with sales appearing on Monday one week, Thursday the next, Friday the week after, and Tuesday the following week — seemingly random. His interpretation: the randomness reflects a fixed but low advertising level. To reach one sale per day (7 sales per week), the business would need to 7x its advertising volume; accounting for likely efficiency loss at higher volume, it might require 14x. The point: volatile sales are a volume problem, not a market or offer problem.",
+      "claim_index": 2,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Alex Hormozi uses the analogy of committing to 100 calls per day as a forcing function for optimization: once locked into that volume, an operator naturally starts noticing that prospects pick up more in the afternoon, or between 5-7am in certain markets. The pain of doing 100 inefficient calls motivates time-of-day and segment analysis — optimization that would not have occurred without the volume commitment first.",
+      "claim_index": 4,
+      "topic": "Volume-First Scaling"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When scaling paid ads, sequence your moves: first make more creative, then increase budget, then expand to new platforms. Do not increase budget before building creative volume.",
+      "topic": "Ad Spend Optimization"
+    },
+    {
+      "text": "Before a major launch, bank a large creative library (e.g., 2,000+ ads) by hiring additional editors well in advance; do not rely on a small editorial team to generate launch-scale creative output in real time.",
+      "topic": "Ad Creative Assembly and Variation"
+    },
+    {
+      "text": "When trying to diagnose erratic or volatile sales, calculate the implied advertising volume needed to achieve your target sales frequency and compare it to your current volume — close the gap rather than investigating offer quality or market conditions first.",
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Commit to a fixed daily output target (calls, ads, content pieces) and hold it for an extended period even when short-term results are poor; the consistency itself builds the data and optimization pressure that makes the volume worthwhile.",
+      "topic": "Persistence as Competitive Advantage"
+    }
+  ]
+}

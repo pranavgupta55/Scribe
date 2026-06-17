@@ -1,0 +1,184 @@
+{
+  "source_file": "we_re_posting_and_praying_a_13m_ceo_with_no_metrics_EIlXNKmHK20.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Tracking and Measurement Discipline",
+    "Distribution Layer Strategy",
+    "Intermediary as Primary Customer",
+    "Affiliate and Partner Channel Strategy",
+    "Churn and Retention",
+    "Channel Partner Quality",
+    "Multi-Stage Business Scaling Roadmap"
+  ],
+  "frameworks": [
+    {
+      "name": "Distribution Node Acquisition Model",
+      "definition": "Instead of tracking end-customer acquisition, count the number of distribution partners (agencies, producers) onboarded per month, treating each as a recurring referral node whose compounding output replaces the episodic churn of direct customer sales.",
+      "concept": "Distribution Layer Strategy"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi argues that for episodic-work businesses (e.g., experiential marketing at $13M revenue with ~80% annual customer churn), the primary acquisition metric should shift from end-customer count to distribution-partner count, because a stable base of partner nodes compounds referrals over time even when the underlying work is one-time.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "node of distribution",
+      "topic": "Distribution Layer Strategy",
+      "conditions": [
+        "episodic or one-time-project work",
+        "end-customer churn exceeds 70% annually",
+        "intermediaries (agencies, producers) already exist in the sales chain"
+      ],
+      "mechanism": "A partner node generates a recurring stream of end-customers each year; acquiring one new node per month creates a compounding stack so total monthly deal flow grows even if any single customer is one-time.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when the business sells directly to end-customers without intermediary involvement"
+      ]
+    },
+    {
+      "text": "Alex Hormozi observes that a business requiring 80% new customer acquisition every year just to maintain flat revenue is structurally fragile, because the growth layer must be built entirely on top of the replacement layer with no compounding base.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Churn and Retention",
+      "conditions": [
+        "project-based or episodic service business",
+        "customer repeat-purchase rate below 25%"
+      ],
+      "mechanism": "When 80% of customers are new each year, revenue never compounds; growth requires winning the same acquisition battle repeatedly rather than building a retained base.",
+      "numbers": {
+        "axis": "annual new-customer requirement as a percentage of total customer base",
+        "anchors": [
+          { "region": "low-churn compounding business", "value": "20% or fewer customers are new each year" },
+          { "region": "high-churn treadmill business (this case)", "value": "80% of customers are new each year" }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to subscription or retainer models with high retention"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that in experiential or event-marketing businesses where intermediary producers or account teams (not formal agencies) actually initiate the work order, the distribution-partner strategy applies equally well with individual producers as the unit of relationship rather than the agency entity.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "producer",
+      "topic": "Intermediary as Primary Customer",
+      "conditions": [
+        "the true decision-maker or work initiator is an individual freelance producer or account-team member",
+        "that individual moves from employer to employer and brings vendor relationships with them"
+      ],
+      "mechanism": "The relationship with a mobile producer travels across jobs, so cultivating the producer rather than the agency preserves the distribution node even when the institutional client changes.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi illustrates that if a business acquires one new agency-or-producer partner per month, each generating one end-customer per month, total monthly deal flow grows by one unit per month compounding: month 1 yields 1 deal, month 12 yields 12 deals per month from that year's cohort alone, and the total at year-end is 12 active partners each contributing ongoing deals.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Distribution Layer Strategy",
+      "conditions": [
+        "each new partner is activated (contributing at least one referral per month)",
+        "partner retention mirrors 80% customer retention assumed in the analogy"
+      ],
+      "mechanism": "Compounding logic: each month adds one new producing node; nodes persist month-over-month, so total output is the running sum of all active nodes.",
+      "numbers": {
+        "axis": "monthly deal flow as a function of months of partner acquisition at 1 partner/month",
+        "anchors": [
+          { "region": "month 1", "value": "1 deal/month from 1 partner" },
+          { "region": "month 12", "value": "12 deals/month from 12 accumulated partners" },
+          { "region": "month 13+", "value": "13+ deals/month; number grows by 1 each month as new partner is added" }
+        ]
+      },
+      "bounded_by": [
+        "Assumes full activation of every partner — actual output depends on distributor churn rate and activation rate"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that a CEO at $13M revenue who is spending approximately $13,000 per month on paid search but does not know the metrics for that spend (channel breakdown, close rate, cost per customer) has no feedback signal and therefore cannot improve — the absence of measurement prevents iteration.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "posting and praying",
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "business is actively spending on paid channels",
+        "no attribution or conversion tracking is in place"
+      ],
+      "mechanism": "Without measuring input-to-output ratios (spend to close rate to customer), no lever can be optimized; any action is as likely to be wrong as right, so the business cannot improve even with increased spend.",
+      "numbers": {
+        "axis": "monthly paid search spend with no measurement system",
+        "anchors": [
+          { "region": "spend level (this case)", "value": "~$13,000/month" },
+          { "region": "known metrics", "value": "zero — no channel breakdown, close rate, or cost-per-customer tracked" }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi points out that when white-label or sub-contracted service businesses treat agencies as end-customers rather than as distribution partners, they obscure the true acquisition unit and miss the compounding leverage available by investing in the agency relationship.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Intermediary as Primary Customer",
+      "conditions": [
+        "the business is white-labeled or bundled into an agency's deliverable to a brand",
+        "the business currently acquires agencies one project at a time without a structured partner journey"
+      ],
+      "mechanism": "Treating agencies as end-customers means the acquisition metric is project count rather than partner count; this masks the compounding value of a retained referral network.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi contends that the true measure of distributor-channel health is whether individual partner nodes remain active (still referring business) year over year, analogous to customer retention, and that an 80% distributor retention rate would create a stackable compounding business even when the underlying work is entirely episodic.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Channel Partner Quality",
+      "conditions": [
+        "episodic or project-based service business",
+        "distribution partners (agencies or producers) are the source of end-customer referrals"
+      ],
+      "mechanism": "If 80% of partners still refer business the following year, total partner base grows net-positive each month; this creates a compounding referral base despite zero customer stickiness at the end-client level.",
+      "numbers": {
+        "axis": "distributor retention rate needed to create compounding business",
+        "anchors": [
+          { "region": "analogy baseline", "value": "80% annual distributor retention (mirrors customer retention target in this conversation)" },
+          { "region": "current state", "value": "unknown — no distributor tracking exists" }
+        ]
+      },
+      "bounded_by": [
+        "Assumes distributor activation problem is solved — inactive partners contribute zero regardless of retention"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The $13M experiential marketing company (anonymized CEO, interviewed by Alex Hormozi) runs mobile tours and experiences for brands like eBay. They spend roughly $13,000/month on paid search but the CEO cannot identify what keywords or channels the budget goes to, and has no close rate or cost-per-customer metric. They produce 20-25 new customers per year, of which roughly 80% are new each year (20% repeat), meaning the business replaces nearly its entire customer base annually. Agency intermediaries, who white-label or bundle the company's production services into their own client proposals, are the primary source of work but are treated as one-off customers rather than as a distribution layer to be systematically cultivated.",
+      "claim_index": 0,
+      "topic": "Distribution Layer Strategy"
+    },
+    {
+      "text": "During the conversation, the CEO of the experiential marketing company initially describes the intermediary as the agency, but then clarifies that post-COVID, agencies are distributed and the actual decision-maker is the individual producer who lands a job (e.g., a Coca-Cola activation) and then calls vendors to execute. Alex Hormozi immediately accepts this correction and says the distribution-partner strategy applies identically — just swap the unit of relationship from agency to producer. This confirms the framework is person-level, not institution-level, in markets where individual freelancers or account-team members control vendor selection.",
+      "claim_index": 2,
+      "topic": "Intermediary as Primary Customer"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Before attempting to scale marketing spend, install tracking: know the channel breakdown of every paid dollar, the number of conversations required per sale, and the cost per customer acquired.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "For service businesses that receive most work through intermediaries (agencies, brokers, producers), build a structured partner onboarding and activation journey — define what an activated partner looks like and measure partner churn separately from end-customer churn.",
+      "topic": "Distribution Layer Strategy"
+    },
+    {
+      "text": "When designing a growth strategy for episodic-work businesses, target acquiring one new distribution partner per month rather than optimizing for end-customer volume; track partner count and partner activation rate as primary KPIs.",
+      "topic": "Affiliate and Partner Channel Strategy"
+    },
+    {
+      "text": "Show agencies and producers how much incremental revenue or margin they capture when they bundle your service into their client proposals; this is the primary motivator for a distributor to refer actively rather than episodically.",
+      "topic": "Intermediary as Primary Customer"
+    }
+  ]
+}
