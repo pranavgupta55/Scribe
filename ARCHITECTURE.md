@@ -74,7 +74,7 @@ flowchart TD
     classDef decision fill:#22200c,stroke:#f1e05a,color:#c9d1d9,stroke-width:2px
     classDef endpoint fill:#1a1726,stroke:#bc8cff,color:#c9d1d9,stroke-width:3px
 
-    USER([user runs scribe.sh + updateDB.sh]):::endpoint
+    USER(["user runs scribe.sh + updateDB.sh"]):::endpoint
     TXT[("transcripts/*.txt<br/>~200 files")]:::file
     SRC[("knowledge/sources.json<br/>raw topic strings + metadata")]:::file
     USER --> TXT
@@ -195,7 +195,7 @@ flowchart TD
         P6_decide{pass-rate ≥ 80%?}:::decision
         P6_repair{{"1 Sonnet repair pass over the failing claims<br/>system prompt: §A failure modes + §3 claim shape<br/>action per claim: rewrite (fix conditions/mechanism/<br/>numbers) OR drop if unrescuable"}}:::llm
         P6_apply["apply rewrites · drop irrecoverable<br/>nodes.jsonl: ~1409 → ~1405 claims"]:::code
-        P6_done([eval passed · ship · 87% → ~95% post-repair]):::endpoint
+        P6_done(["eval passed · ship · 87% → ~95% post-repair"]):::endpoint
 
         P6_samp --> P6_split --> P6_hai --> P6_decide
         P6_decide -->|yes, ≥80%| P6_repair
@@ -213,8 +213,8 @@ flowchart TD
         P7_q["user query · embed via nomic-embed-text"]:::code
         P7_retrieve["retrieve_structured()<br/>top-50 chunks + top-50 facts (was 25 + 30)"]:::code
         P7_attach["attach title + video_summary + url<br/>per source from sources.json"]:::code
-        P7_chat([RAG chat answer<br/>(Gemini 2.5 Flash)]):::endpoint
-        P7_copy([Copy-view source cards<br/>summary visible · click copies full block]):::endpoint
+        P7_chat(["RAG chat answer · Gemini 2.5 Flash"]):::endpoint
+        P7_copy(["Copy-view source cards · summary visible · click copies full block"]):::endpoint
 
         P7_q --> CHROMA
         CHROMA --> P7_retrieve --> P7_attach
@@ -224,7 +224,7 @@ flowchart TD
     SRC --> P7_attach
 
     %% ═════════════════════ user-facing endpoints ═════════════════════
-    GRAPH --> VIEW([graph viewer<br/>http://localhost:8000/graph/?graph=v2]):::endpoint
+    GRAPH --> VIEW(["graph viewer · http://localhost:8000/graph/?graph=v2"]):::endpoint
     GRAPH -. optional Phase 8 .-> P7_retrieve
 ```
 
