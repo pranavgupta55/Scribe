@@ -1,0 +1,206 @@
+{
+  "source_file": "500k_power_washing_business_stuck_on_referrals_gRQLYWfwRIA.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Channel Optimization Before Expansion",
+    "Tracking and Measurement Discipline",
+    "Ad Spend Optimization",
+    "Scaling Bottleneck Diagnosis",
+    "Service Business Unit Economics",
+    "Founder Bottleneck",
+    "Supply vs. Demand Constraint Diagnosis",
+    "Lead-Cost-Closeout Math",
+    "Volume-First Scaling"
+  ],
+  "frameworks": [
+    {
+      "name": "Core Four Acquisition Channels",
+      "definition": "Four mutually exclusive methods for getting customers: paid ads, organic content, cold outreach, and affiliate/partner referral. Every business should map which of the four it currently uses before deciding what to add.",
+      "concept": "Channel Optimization Before Expansion"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi advises that a business spending $2,000/month on paid ads without attribution tracking cannot determine whether those ads are profitable or not, and that installing attribution tracking is the prerequisite step before increasing ad spend or opening any new acquisition channel.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "attribution tracking",
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "Business is running paid ads",
+        "No attribution data exists linking ad spend to closed deals"
+      ],
+      "mechanism": "Without knowing which spend produces which revenue, any scaling decision is a guess; attribution converts ad spend from a cost center into a measurable input-output equation.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that for local service businesses, a cost-per-deal ratio of roughly 1:1 or better (e.g., $500 ad spend per week producing at least one $500 deal) means the paid channel is likely working and should be scaled before new channels are opened.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "Local service business",
+        "Average deal size ~$500",
+        "Weekly ad spend ~$500"
+      ],
+      "mechanism": "If revenue from a channel equals or exceeds its cost, the channel has positive ROI and scaling it compounds returns before adding the complexity of a second channel.",
+      "numbers": {
+        "axis": "weekly ad spend to deals closed",
+        "anchors": [
+          {"region": "break-even floor", "value": "1 deal per $500 spend ($500 average deal)"},
+          {"region": "strong channel signal", "value": "5:1 to 10:1 return on $500/week spend"}
+        ]
+      },
+      "bounded_by": [
+        "Requires attribution data in place before this ratio is knowable"
+      ]
+    },
+    {
+      "text": "Alex Hormozi advises against pivoting to a new customer avatar (e.g., commercial B2B) or a new acquisition channel while existing channels are unoptimized; the correct sequence is to validate and scale what is already partially working first.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "don't change the business model",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "At least one channel is already generating revenue",
+        "Attribution data is absent or incomplete",
+        "A second channel or avatar is being considered"
+      ],
+      "mechanism": "Opening a new channel before exhausting the current one splits attention and capital across two unproven systems, reducing the signal quality from both; the existing channel may already be highly efficient.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that local service businesses are the one exception to his general rule against running multiple acquisition channels simultaneously, because geographic constraints limit addressable market and require reaching the same pool of prospects through multiple touchpoints.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "local is the only exception",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Service area is geographically bounded",
+        "Total addressable market is small (e.g., a city or small region)"
+      ],
+      "mechanism": "In a small geographic market, a single channel may reach only a fraction of prospects; multiple channels compensate for the addressable market ceiling rather than cannibalizing each other.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to businesses with national or digital reach, where a single channel can scale to very high volume"
+      ]
+    },
+    {
+      "text": "Alex Hormozi recommends a graduated ad spend increase (e.g., from $2,000 to $4,000 or $6,000 per month) rather than jumping to full scale immediately, with each increment validated by attribution data before the next step.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "go from two to four or two to six",
+      "topic": "Ad Spend Optimization",
+      "conditions": [
+        "Attribution tracking is in place",
+        "Current channel is showing positive ROI"
+      ],
+      "mechanism": "Incremental scaling preserves the ability to isolate whether spend increases produce proportional revenue increases, preventing overcommitment to a channel whose efficiency may degrade at higher volume.",
+      "numbers": {
+        "axis": "monthly ad spend increment",
+        "anchors": [
+          {"region": "current baseline", "value": "$2,000/month"},
+          {"region": "first test increment", "value": "$4,000 or $6,000/month"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi observes that a residential power washing business generating $500,000 in revenue and $250,000 in profit (50% net margin) has healthy unit economics, and that the binding growth constraint is an underdeveloped or unmeasured paid acquisition channel rather than margins or product.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "50% margins, not bad",
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Residential service business",
+        "Revenue primarily from referrals and door knocking"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "revenue to profit conversion for residential power washing",
+        "anchors": [
+          {"region": "gross revenue", "value": "$500,000/year"},
+          {"region": "owner profit", "value": "$250,000/year (50% margin)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi identifies referral-only growth as an absence of an acquisition channel, not merely a slow channel, and frames the business problem as building a controllable demand system rather than relying on inbound luck.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "you don't have an acquisition channel",
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "Business revenue grows only when existing customers refer new ones",
+        "No proactive outbound or paid channel generates predictable new leads"
+      ],
+      "mechanism": "Referral-only growth makes revenue a function of past customer satisfaction and word-of-mouth timing, both outside the founder's direct control; an acquisition channel converts growth into a repeatable input-output system.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that a business owner spending $2,000/month on ads and generating no attribution data is effectively wasting the learning opportunity that spend provides, because the data needed to decide whether to scale or kill the channel does not exist.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "Paid ads running with third-party help",
+        "No tracking of which ads produce closed deals"
+      ],
+      "mechanism": "Ad spend without attribution produces revenue-correlated noise, not signal; each dollar spent is both a marketing cost and a wasted data collection opportunity, making the next decision as uninformed as the first.",
+      "numbers": {
+        "axis": "monthly ad spend without attribution",
+        "anchors": [
+          {"region": "current spend", "value": "$2,000/month"},
+          {"region": "deals attributed", "value": "unknown / untracked"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the decision to pursue B2B recurring commercial cleaning as a new revenue line should come after, not before, the existing residential paid channel is optimized and cash flow is improved.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "once you've tapped that, you'll have a little bit more cash flow",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Current paid acquisition channel is unoptimized",
+        "Attribution tracking is not yet in place"
+      ],
+      "mechanism": "Expanding into a new customer segment (commercial B2B) before the current segment's acquisition economics are understood creates two simultaneous unknowns, doubling complexity and slowing feedback loops on both.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Supreme Power Wash (power washing, solar panel cleaning, window cleaning) generates $500K revenue and $250K profit annually, with primary customer acquisition via door knocking (~20-25 deals/month at $350-$1,800 average, roughly $500 blended) and referrals. The owner is spending $2,000/month on ads but cannot confirm how many customers come from ads versus door knocking. Alex Hormozi uses this case to illustrate the attribution gap: the owner suspects ads work but has no data, so neither scaling ads nor cutting them is defensible.",
+      "claim_index": 0,
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "When the Supreme Power Wash owner explained a desire to shift from residential to commercial B2B recurring clients (citing one commercial client that brought higher recurring revenue), Alex Hormozi reframed the goal: instead of opening a new channel and new avatar simultaneously, the owner should first get attribution on the existing $2,000/month paid channel, verify it produces positive ROI, scale it to $4,000 or $6,000, and only then consider commercial. The one commercial client already in the portfolio was a proof-of-concept example, not a signal to abandon residential.",
+      "claim_index": 2,
+      "topic": "Channel Optimization Before Expansion"
+    }
+  ],
+  "practices": [
+    {
+      "text": "If a third-party agency is running your ads and cannot provide attribution data showing which ads produced which closed deals, replace them with one who can.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "For local service businesses running paid ads: set up attribution tracking, verify cost-per-deal is at or below average deal value, then incrementally double ad spend before exploring new channels or avatars.",
+      "topic": "Ad Spend Optimization"
+    },
+    {
+      "text": "Do not launch a B2B recurring commercial cleaning line until residential paid acquisition is attributable and cash flow has improved enough to fund a parallel test.",
+      "topic": "Channel Optimization Before Expansion"
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "source_file": "100m_money_models.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Pay-Less-Now Upsell Architecture",
+    "Classic Upsell",
+    "Downsell Tier Creation",
+    "Continuity Upsell",
+    "Offer Value Architecture",
+    "Free-to-Paid Funnel Architecture",
+    "Contingent Refund for Dual Accountability",
+    "Alternative Financing Structures",
+    "Activation as Primary Churn Lever",
+    "Churn and Retention",
+    "Tiered Offer Pricing",
+    "Price Anchoring",
+    "Before/After Proof Engine",
+    "Payment Timing Optimization",
+    "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+    "Setup Fee as Churn Reduction Mechanism",
+    "Free Trial with Card Penalty Conversion Model",
+    "Guided A/B Menu Upsell",
+    "Cohort-Based Churn Analysis"
+  ],
+  "frameworks": [
+    {
+      "name": "Four Offer Types Money Model",
+      "definition": "A sequenced offer stack combining Attraction Offers (strangers to customers), Upsell Offers (spend more), Downsell Offers (yes when they would say no), and Continuity Offers (keep buying) to maximize 30-day profit and recurring revenue.",
+      "concept": "Offer Value Architecture"
+    },
+    {
+      "name": "Payment Plan Downsell Process",
+      "definition": "A seven-step funnel shifting from full prepayment to free trial: (1) reward prepay with discount, (2) 3rd-party financing/credit card/layaway, (3) half now half later, (4) desire check 1-10 scale, (5) three-payment split, (6) evenly spread payments, (7) free trial with card.",
+      "concept": "Alternative Financing Structures"
+    },
+    {
+      "name": "Menu Upsell Four-Tactic Process",
+      "definition": "A structured upsell sequence combining Unselling (cross out what they don't need), Prescription Upselling (tell them exactly what they do need), A/B Upselling (ask preference between two options), and Card On File (make payment frictionless).",
+      "concept": "Guided A/B Menu Upsell"
+    },
+    {
+      "name": "Anchor Upsell Framework",
+      "definition": "A five-step premium-first pricing process: present anchor (5-10x premium), get the gasp, come to the rescue by asking what makes the premium matter to them, present core offer, ask how they want to pay.",
+      "concept": "Price Anchoring"
+    },
+    {
+      "name": "Win Your Money Back Offer",
+      "definition": "An attraction offer where customers pay upfront and earn their money back as cash or store credit if they meet defined results, actions, or both criteria; the real profit comes from the upsell made to successful customers.",
+      "concept": "Contingent Refund for Dual Accountability"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi argues that a well-designed Money Model — a sequence of offers covering attraction, upsell, downsell, and continuity — is the primary mechanism by which a business makes more money from each customer than it costs to acquire them, enabling profitable reinvestment in the next customer without requiring external capital.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Money Model",
+      "topic": "Offer Value Architecture",
+      "conditions": [],
+      "mechanism": "Each sequenced offer solves the next problem the previous offer reveals, compounding revenue per customer while keeping acquisition cost constant.",
+      "numbers": null,
+      "bounded_by": ["Requires sufficient product variety to fill each offer type; single-product businesses cannot implement the full model"]
+    },
+    {
+      "text": "Alex Hormozi asserts that covering total customer acquisition cost plus delivery cost within 30 days is the threshold that separates a viable Money Model from a cash-starving one, because most businesses can access 30-day interest-free credit via credit card, allowing them to pay off acquisition spend and reuse it for the next customer.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Payment Timing Optimization",
+      "conditions": ["business has access to credit card float", "cost recovery occurs within 30 days"],
+      "mechanism": "30-day credit card float provides interest-free capital; if the customer pays back the acquisition cost within that window, the credit card is cleared and the same float is reused, creating a self-financing loop.",
+      "numbers": {
+        "axis": "days to cost recovery",
+        "anchors": [
+          {"region": "viable", "value": "<=30 days"},
+          {"region": "capital-constrained", "value": "2 years"}
+        ]
+      },
+      "bounded_by": ["Does not apply to businesses that require year-long LTV to recover CAC without access to bridge capital"]
+    },
+    {
+      "text": "Alex Hormozi states that in a well-sequenced Money Model, doubling customer value, doubling customer volume, and doubling acquisition speed independently each multiplies business growth by 2x, but combining all three compounds to an 8x growth rate; tripling all three produces a 27x growth rate.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer Value Architecture",
+      "conditions": [],
+      "mechanism": "Multiplicative compounding: independent variables multiply rather than add when combined.",
+      "numbers": {
+        "axis": "growth rate multiplier from improving acquisition levers",
+        "anchors": [
+          {"region": "2x each lever (value, volume, speed)", "value": "8x total growth"},
+          {"region": "3x each lever", "value": "27x total growth"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that upsell offers account for the majority of profit in a healthy Money Model, citing the McDonald's example where the base burger generates only $0.25 profit but adding fries and a drink raises profit to $2.00 (8x), and adding a supersize upsell raises it to $3.00 (11.6x), making upsells structurally indispensable to profitability.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "upsells",
+      "topic": "Classic Upsell",
+      "conditions": ["business has additional offers beyond a low-margin core product"],
+      "mechanism": "Each additional offer solves the next problem revealed by the previous purchase; incremental delivery cost is low relative to incremental revenue, so profit concentration shifts to later offers.",
+      "numbers": {
+        "axis": "profit per transaction vs. number of upsells made",
+        "anchors": [
+          {"region": "burger only", "value": "$0.25 profit"},
+          {"region": "burger + fries + drink", "value": "$2.00 profit (8x)"},
+          {"region": "burger + fries + drink + supersize", "value": "$3.00 profit (11.6x)"}
+        ]
+      },
+      "bounded_by": ["Requires relevant upsells that solve genuine next-step problems; irrelevant upsells fail regardless of sequencing"]
+    },
+    {
+      "text": "Alex Hormozi argues that when a customer declines an offer, the response should never be reducing the price of the same product, because each downward price change on the same product destroys trust and causes the customer to retroactively question the legitimacy of all prior prices, ultimately jeopardizing the original sale itself.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Downsell Tier Creation",
+      "conditions": ["sales context where customer said no to an offer"],
+      "mechanism": "Price reduction on the same product signals that the original price was arbitrary, causing the customer to question whether they were being overcharged; once trust is broken it extends backwards to all prices offered by that seller.",
+      "numbers": null,
+      "bounded_by": ["Offering a different product at a lower price is acceptable and does not trigger the same trust erosion"]
+    },
+    {
+      "text": "Alex Hormozi claims that Payment Plan Downsells increase customer acquisition by spreading cost over time without discounting the total price, because the primary reason customers decline is not that the total price is too high but that the upfront payment is too high; customers who convert via payment plans still pay full price over time, boosting 30-day revenue while preserving margins.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Payment Plan Downsells",
+      "topic": "Alternative Financing Structures",
+      "conditions": ["customer said no to a full-price offer", "business can tolerate collection risk over the payment period"],
+      "mechanism": "Cost objections are typically a cash-flow objection rather than a value objection; spreading payments reduces the perceived immediate burden without changing total value exchanged, so conversion improves while total revenue per customer is preserved.",
+      "numbers": null,
+      "bounded_by": ["Payment plans make money only if more customers convert AND they complete their payments; if payment plan customers would have paid in full they reduce 30-day cash flow without offsetting benefit"]
+    },
+    {
+      "text": "Alex Hormozi reports that Profitwell's churn data across 14,000 businesses shows that billing frequency directly affects monthly cancellation rates: monthly billing (12x per year) produces 10.7% monthly churn, quarterly billing (4x per year) produces 5% monthly churn, and annual billing (1x per year) produces 2% monthly churn.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Cohort-Based Churn Analysis",
+      "conditions": ["subscription or recurring-revenue business", "data from Profitwell across 14,000 businesses"],
+      "mechanism": "Less frequent billing reduces the recurring decision moment at which customers actively choose to cancel; fewer billing events means fewer cancellation triggers.",
+      "numbers": {
+        "axis": "monthly churn rate by billing frequency",
+        "anchors": [
+          {"region": "monthly billing (12x/year)", "value": "10.7% monthly churn"},
+          {"region": "quarterly billing (4x/year)", "value": "5% monthly churn"},
+          {"region": "annual billing (1x/year)", "value": "2% monthly churn"}
+        ]
+      },
+      "bounded_by": ["Data is aggregate; individual business results vary by industry and product type"]
+    },
+    {
+      "text": "Alex Hormozi asserts that billing every four weeks rather than every calendar month generates 8.3% more annual revenue for the same product at the same nominal per-period price, because a year contains 13 four-week cycles but only 12 calendar months, and this pricing word change does not reduce conversion.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": ["recurring revenue business", "per-period price is presented as 'every 4 weeks' rather than 'per month'"],
+      "mechanism": "Calendar year has 13 four-week cycles; presenting price as 'per 4 weeks' captures 13 billing events vs. 12 monthly events with zero change in perceived price, since customers rarely calculate annual totals.",
+      "numbers": {
+        "axis": "annual billing events and revenue lift",
+        "anchors": [
+          {"region": "monthly billing", "value": "12 billing events, 0% revenue lift"},
+          {"region": "every-4-weeks billing", "value": "13 billing events, 8.3% revenue lift"},
+          {"region": "20% margin business applying this change", "value": "41% annual profit increase"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi claims that for Continuity Offers, the price ratio between a one-time standalone purchase and a monthly membership determines what percentage of customers choose continuity: to get 50% to choose continuity the standalone must be 1.33x the monthly rate, to get 70% to choose continuity the standalone must be 2x the monthly rate, and to get 90% to choose continuity the standalone must be 2.66x the monthly rate.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": ["customer is choosing between a one-time purchase and a recurring membership for the same core product"],
+      "mechanism": "Customers implicitly calculate the break-even month at which continuity costs more than the standalone; as the standalone price grows relative to monthly, the break-even shifts further out and continuity looks increasingly attractive.",
+      "numbers": {
+        "axis": "standalone-to-monthly price ratio vs. percentage choosing continuity",
+        "anchors": [
+          {"region": "standalone at 1.33x monthly", "value": "50% choose continuity"},
+          {"region": "standalone at 1.66x monthly", "value": "60% choose continuity"},
+          {"region": "standalone at 2x monthly", "value": "70% choose continuity"},
+          {"region": "standalone at 2.33x monthly", "value": "80% choose continuity"},
+          {"region": "standalone at 2.66x monthly", "value": "90% choose continuity"}
+        ]
+      },
+      "bounded_by": ["Data from Hormozi's own testing; exact ratios may differ by industry and product type"]
+    },
+    {
+      "text": "Alex Hormozi asserts that the Win Your Money Back Offer generates approximately 10% refund requests from customers, and that offering store credit rather than cash back yields the same number of customer sign-ups while preserving cash inside the business.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Win Your Money Back",
+      "topic": "Contingent Refund for Dual Accountability",
+      "conditions": ["gym or fitness context with defined goal criteria; based on thousands of gym owners in the Gym Launch portfolio"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "customer refund request rate in Win Your Money Back programs",
+        "anchors": [
+          {"region": "typical refund request rate", "value": "~10% of all customers"},
+          {"region": "conversion equivalence: cash vs. store credit", "value": "same sign-up rate; store credit preserves cash"}
+        ]
+      },
+      "bounded_by": ["If refund rate exceeds 5% in a new program, Hormozi recommends fixing the product before running this offer at scale"]
+    },
+    {
+      "text": "Alex Hormozi claims that the Trial With Penalty downsell converts an additional 40 of 100 leads who said no to an initial offer into trial customers, roughly doubling the total customers acquired compared to the initial offer alone, because it removes financial risk for the customer while installing accountability through penalty fees.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Trial With Penalty",
+      "topic": "Free Trial with Card Penalty Conversion Model",
+      "conditions": ["business where customer must take defined actions to get results", "initial offer close rate of ~30%"],
+      "mechanism": "Free trials reduce perceived risk to near-zero; penalty fees for non-compliance replace risk for the business and simultaneously hold customers accountable to actions that generate results, improving both conversion and outcomes.",
+      "numbers": {
+        "axis": "customers acquired per 100 leads with vs. without Trial With Penalty",
+        "anchors": [
+          {"region": "initial offer only (30% close rate)", "value": "30 customers"},
+          {"region": "initial offer + Trial With Penalty downsell", "value": "30 + 40 = ~70 customers (doubling)"}
+        ]
+      },
+      "bounded_by": ["Only works for businesses where the customer must do work to get results; does not work for pure product purchases"]
+    },
+    {
+      "text": "Alex Hormozi argues that a Feature Downsell — removing the money-back guarantee from an offer and lowering price — paradoxically increases take-rate on the full-price original offer because customers only recognize the value of the guarantee after seeing the price differential when it is removed, citing a practitioner who tripled close rate from 25% to 75% while also increasing full-price buyer volume from 25 to 35 per 100 leads.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Feature Downsell",
+      "topic": "Downsell Tier Creation",
+      "conditions": ["high-ticket offer where guarantee is a meaningful component of perceived value"],
+      "mechanism": "Customers do not consciously value the guarantee until presented with the alternative of paying less without it; the price-value comparison makes the guarantee's worth visible, causing a portion of no-sayers to self-re-upsell to the full-priced offer.",
+      "numbers": {
+        "axis": "close rate and full-price buyer count per 100 leads, before vs. after Feature Downsell introduction",
+        "anchors": [
+          {"region": "original offer only, no downsell", "value": "25 full-price buyers, 25% total close rate"},
+          {"region": "with Feature Downsell (guarantee removed)", "value": "35 full-price buyers + 40 downsell buyers, 75% total close rate"}
+        ]
+      },
+      "bounded_by": ["Effect is strongest when the removed feature (e.g., guarantee) has higher perceived value than its contribution to total price"]
+    },
+    {
+      "text": "Alex Hormozi claims that presenting a premium anchor offer (5-10x more expensive than the main offer) before the main offer causes more customers to buy the main offer at a higher-than-expected price, and that a meaningful fraction of customers will buy the premium anchor itself — generating outsized profit from a small number of sales.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Anchor Upsell",
+      "topic": "Price Anchoring",
+      "conditions": ["premium and core offers share the same primary functional features; premium differentiates only on secondary features"],
+      "mechanism": "Cognitive anchoring: the high price of the premium option reframes the core offer's price as a bargain relative to the anchor, increasing perceived value-to-cost ratio for the core offer without changing the core offer itself.",
+      "numbers": {
+        "axis": "anchor price ratio to core offer price",
+        "anchors": [
+          {"region": "recommended anchor premium ratio", "value": "5-10x core offer price"},
+          {"region": "core offer effective discount created by anchor", "value": "presented at ~1/5 of anchor price"}
+        ]
+      },
+      "bounded_by": ["Anchor must be presented as a genuine offer the seller wants to sell; treating it as a fake causes customers to recognize the manipulation and erodes trust"]
+    },
+    {
+      "text": "Alex Hormozi argues that in a Giveaway Offer, all entrants who do not win the grand prize are pre-qualified warm leads who have already demonstrated interest in the grand prize item, and calling them with a 'promotional offer' (partial discount) converts at a high rate because they experienced value confirmation through the giveaway entry process.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Giveaway",
+      "topic": "Free-to-Paid Funnel Architecture",
+      "conditions": ["giveaway is advertised to the target audience", "grand prize is the actual core product offered at full retail value"],
+      "mechanism": "Entry into a giveaway is a voluntary expression of desire for the grand prize product; non-winners receive the same product at a discount, converting what would otherwise be zero-revenue leads into paying customers who already self-selected interest.",
+      "numbers": null,
+      "bounded_by": ["Giveaways are heavily regulated; laws vary by jurisdiction and can classify improperly structured giveaways as illegal lotteries"]
+    },
+    {
+      "text": "Alex Hormozi reports that Rollover Upsells — crediting some or all of a customer's previous purchase toward a more expensive next offer — are his most frequently used upsell type, and that a winback campaign he ran making personalized videos for 200 past customers offering $4,000 credit to return achieved a 20% take rate, generating approximately $1,900,000 in additional annual revenue from one day of recording.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Rollover Upsell",
+      "topic": "Classic Upsell",
+      "conditions": ["customers who had not purchased in 6+ months", "personalized video outreach", "credit offered equals 25% of next-offer price (4x rule)"],
+      "mechanism": "Crediting past spend toward a new purchase reduces the psychological cost of re-entry while creating urgency if the credit is positioned as one-time; existing customers require less trust-building than new leads.",
+      "numbers": {
+        "axis": "winback campaign results",
+        "anchors": [
+          {"region": "outreach volume", "value": "200 past customers"},
+          {"region": "take rate", "value": "~20% (40 customers)"},
+          {"region": "revenue generated", "value": "~$1,900,000 additional annual revenue"}
+        ]
+      },
+      "bounded_by": ["Hormozi recommends pricing the rollover upsell at minimum 4x the credit amount to preserve profit after discount"]
+    },
+    {
+      "text": "Alex Hormozi asserts that in a Decoy Offer setup, asking a lead 'Are you here for free stuff or lasting results?' immediately before presenting both decoy and premium options is sufficient to get most leads to self-select into the premium offer framing, removing the need to sell the decoy first.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Decoy Offer",
+      "topic": "Free-to-Paid Funnel Architecture",
+      "conditions": ["lead has expressed interest in a free or discounted attraction offer", "business has a premium version ready to present side-by-side"],
+      "mechanism": "The question reframes the interaction as an identity choice rather than a price negotiation; most people identify with wanting results, which serves as implicit permission to skip to the premium offer presentation.",
+      "numbers": null,
+      "bounded_by": ["If lead explicitly asks for the decoy first, the business is legally required to present it before pivoting to premium"]
+    },
+    {
+      "text": "Alex Hormozi claims that the A/B upsell — asking customers which of two product options they prefer rather than asking whether they want to buy — converts more customers than binary yes/no selling because removing the option of not buying eliminates the path of least resistance toward refusal.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "A/B Upsell",
+      "topic": "Guided A/B Menu Upsell",
+      "conditions": ["two or more products exist that solve the same customer problem", "seller has already confirmed the customer wants to solve the problem"],
+      "mechanism": "A yes/no buy question creates a clear exit path; a preference question between two options presupposes purchase, making refusal a more active choice that requires the customer to override social momentum.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that continuity offers are structurally best placed last in a Money Model sequence — after attraction, upsell, and downsell offers — because continuity offers produce less upfront cash, making them poor standalone attraction tools; by placing them after cash-generating offers, the business covers acquisition cost from earlier offers while stacking recurring revenue from continuity.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Continuity Offers",
+      "topic": "Continuity Upsell",
+      "conditions": [],
+      "mechanism": "Continuity offers convert a small fraction of prospects to recurring buyers at low per-period prices; using them as attraction offers would leave acquisition cost uncovered in the first 30 days, creating cash flow deficit. Prior offers cover CAC, so continuity revenue becomes pure compounding cash.",
+      "numbers": null,
+      "bounded_by": ["Continuity can be used as an attraction or upsell offer; the structural argument applies primarily to businesses that need 30-day cost recovery"]
+    },
+    {
+      "text": "Alex Hormozi asserts that in Buy X Get Y Free offers, giving more free units than paid units (e.g., buy one get two free rather than buy two get one free) is more compelling to customers and generates more sales, and that 'free' framing outperforms equivalent discount framing (e.g., 'buy one shirt get two free for $20' outperforms 'three shirts for $6.67 each') because more customers understand the value of free than the math of a percentage discount.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Buy X Get Y Free",
+      "topic": "Pay-Less-Now Upsell Architecture",
+      "conditions": ["product or service can be bundled meaningfully", "customer has limited experience calculating per-unit cost"],
+      "mechanism": "The word 'free' triggers an availability heuristic that percent discounts do not; customers anchor on the number of items received, so more free items signals a better deal independent of the mathematical equivalence.",
+      "numbers": null,
+      "bounded_by": ["Price must be permanently raised to accommodate the discount before running the offer; the business must be able to deliver on the full bundled commitment"]
+    },
+    {
+      "text": "Alex Hormozi reports that the Pay Less Now or Pay More Later offer structure — where customers choose between paying full price later with a conditional guarantee, or paying a discounted price now with bonuses — should have a pay-now discount of 20-50%, and that if more than 10% of pay-later customers cancel before billing, the guarantee conditions are too low, the price is too high, or the promise was overstated.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Pay Less Now or Pay More Later",
+      "topic": "Free-to-Paid Funnel Architecture",
+      "conditions": ["digital product or short-duration service context"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "pay-now discount percentage and cancellation rate diagnostic threshold",
+        "anchors": [
+          {"region": "recommended pay-now discount", "value": "20-50% off pay-later price"},
+          {"region": "acceptable pay-later cancellation rate", "value": "<10%"},
+          {"region": "trigger for offer redesign", "value": ">10% cancellation rate"}
+        ]
+      },
+      "bounded_by": ["Offer requires a clear, trackable yes/no result deliverable within the pay-later window; cannot be used when promise is ambiguous or subjective"]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi describes how a storage facility owner showed him that advertising 'first month free' generated $127 per customer in complementary sales: a specialty lock ($47), boxes and packing supplies ($30), a kickback from a moving company affiliate, and insurance upgrade ($10/month). The free month attracted the customer; the upsells made the real money. Hormozi used this model to design his own gym offers.",
+      "claim_index": 0,
+      "topic": "Offer Value Architecture"
+    },
+    {
+      "text": "Alex Hormozi describes his early gym business model where he advertised a Free 6-Week Challenge at $5 per lead, converted 25% of leads into a $600 program, and earned an additional $80 per customer from supplements, yielding 34:1 return on ad spend in 48 hours. A famous marketer he paid $25,000 for an hour of consulting told him he had a 'level-10 skill in a level-2 opportunity' and advised him to teach other gym owners instead of running gyms himself.",
+      "claim_index": 1,
+      "topic": "Payment Timing Optimization"
+    },
+    {
+      "text": "Alex Hormozi describes a car rental transaction where a $19/day rental became a $100/day rental through a sequence of five offers: vehicle upgrade, late return fee, premium insurance, minimum insurance downsell, and prepaid gas. He notes he was happy to pay more because each offer solved a real problem he had, illustrating that a well-sequenced offer stack increases customer spend without coercion.",
+      "claim_index": 3,
+      "topic": "Classic Upsell"
+    },
+    {
+      "text": "Alex Hormozi describes learning the Rollover Upsell from a gym owner named Justin who, when customers won their $600 money back, applied it as a $50/month discount over 12 months rather than returning it as a lump sum. This single structural change converted winback customers into 12-month paying members instead of free months that churned out.",
+      "claim_index": 14,
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "Alex Hormozi describes visiting Nashville's Boot Factory, which sold cowboy boots by tripling the single-pair price and advertising 'Buy One Pair Get Two Pairs Free.' The effective per-pair cost was unchanged ($200 each), but the free framing drew in bachelorette groups buying matching boots, illustrating how Buy X Get Y Free reframes pricing without changing actual cost.",
+      "claim_index": 18,
+      "topic": "Pay-Less-Now Upsell Architecture"
+    },
+    {
+      "text": "Alex Hormozi describes learning the Menu Upsell at his gym after struggling to sell supplements. He discovered that asking 'chocolate or vanilla?' instead of 'do you want a protein shake?' converted his first 20 consecutive supplement customers in a row, and that adding written prescription-style instructions on the order form with card-on-file payment caused customers to buy without being explicitly asked.",
+      "claim_index": 16,
+      "topic": "Guided A/B Menu Upsell"
+    },
+    {
+      "text": "Alex Hormozi describes a neighbor who built a trash collection business by offering one free year of service to apartment complexes in exchange for a five-year paid contract. Despite no investors and family skepticism, after the free year ended the recurring cash flows funded a multi-location business he eventually sold for a significant sum, illustrating the Continuity Discount Offer at scale.",
+      "claim_index": 17,
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "A practitioner shared with Alex Hormozi that after adding a Feature Downsell (removing the money-back guarantee and lowering price), his close rate tripled from 25% to 75%, and full-price buyers increased from 25 to 35 per 100 leads. The framing was: 'If you don't want the option to get your money back, you can pay less. Which would you prefer?' — most customers realized the value of the guarantee only after being offered its removal.",
+      "claim_index": 11,
+      "topic": "Downsell Tier Creation"
+    },
+    {
+      "text": "Alex Hormozi describes paying $25,000 for an hour with a marketer doing $1M/month in revenue, expecting to learn scaling tactics for his gyms. Instead, the marketer told him his gym model was a '34:1 ROI in 48 hours' arbitrage that should be taught to other gym owners. Hormozi closed his gyms over 9 months and founded Gym Launch, which over the next five years generated over $43M in owner distributions before he sold 66% for $46.2M cash, crossing $100M net worth at age 31.",
+      "claim_index": 0,
+      "topic": "Offer Value Architecture"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When a customer wins store credit in a Win Your Money Back program, offer to apply it as a monthly discount over 12 months (e.g., $600 credit becomes $50/month off a $200/month membership) rather than giving free months upfront; this keeps customers paying and engaged over the long haul.",
+      "topic": "Contingent Refund for Dual Accountability"
+    },
+    {
+      "text": "Make all meetings and check-in calls a required criterion for winning money back in Win Your Money Back offers; these meetings serve as upsell opportunities and the best time to make the next offer based on the customer's progress.",
+      "topic": "Contingent Refund for Dual Accountability"
+    },
+    {
+      "text": "In upsell sequences, always offer more profitable upsells before less profitable ones, and bundle multiple upsells into named packages (e.g., 'Total Transformation Package') to make a single ask that closes multiple items at once.",
+      "topic": "Classic Upsell"
+    },
+    {
+      "text": "End every sales meeting by scheduling the next appointment before the customer leaves (Book A Meeting From A Meeting, BAMFAM); the next appointment is the most important upsell opportunity in a recurring service business.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "In continuity offers, always present the option to pay annually or prepay multiple months alongside the monthly option; use bulk prepaid discounts to boost 30-day cash — only one in eight customers needs to take a 'buy five get one free' offer to raise 30-day profits by 50%.",
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "When a customer wants to cancel a continuity offer, offer to waive the cancellation fee in exchange for an exit interview; Hormozi reports saving approximately one third of customers who agree to exit interviews by either solving the problem or rollover-upselling them to a higher-tier offering.",
+      "topic": "Churn and Retention"
+    },
+    {
+      "text": "To reduce declined payments in recurring billing, align payment dates with customers' paycheck schedules; if a payment is declined, attempt to run it multiple times on the same payday to recover a third of declined payments.",
+      "topic": "Alternative Financing Structures"
+    },
+    {
+      "text": "When building a Giveaway offer, set the grand prize value high enough to generate genuine demand; a grand prize that fails to attract entries signals the prize was not grand enough, not that the giveaway format doesn't work.",
+      "topic": "Free-to-Paid Funnel Architecture"
+    },
+    {
+      "text": "In a Feature Downsell process, remove features from highest to lowest customer value; this causes customers to self-re-upsell as they realize how much more value the more expensive option delivers per dollar of additional cost.",
+      "topic": "Downsell Tier Creation"
+    },
+    {
+      "text": "When adding a 3% processing fee to recurring offers, offer a second form of payment (preferably ACH direct debit) to customers who want to avoid the fee; this reduces revenue lost to expired cards and processing failures while reducing the cost argument for the fee.",
+      "topic": "Alternative Financing Structures"
+    }
+  ]
+}

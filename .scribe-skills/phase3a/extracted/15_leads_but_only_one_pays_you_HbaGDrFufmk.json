@@ -1,0 +1,215 @@
+{
+  "source_file": "15_leads_but_only_one_pays_you_HbaGDrFufmk.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Targeting and Lead Qualification",
+    "Lead-Cost-Closeout Math",
+    "Insurance-Driven Lead Generation",
+    "Avatar Targeting Strategy",
+    "Sales Process Optimization",
+    "Motivated Buyer Targeting",
+    "Funnel Optimization"
+  ],
+  "frameworks": [
+    {
+      "name": "Three-Variable Lead Viability Math",
+      "definition": "A channel's economic viability is determined by exactly three numbers: cost per lead, close rate (% of leads converted), and average deal size. Their product determines CAC and whether the channel is profitable.",
+      "concept": "Lead-Cost-Closeout Math"
+    },
+    {
+      "name": "Funnel Friction Stacking",
+      "definition": "When a funnel generates too many unqualified leads, add qualification gates in sequence — first in ad copy, then in opt-in fields (scored questions), then by gating the scheduler behind a score threshold — until the unqualified volume is filtered out.",
+      "concept": "Sales Targeting and Lead Qualification"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that a business experiencing high lead volume but low conversion is not necessarily facing a targeting problem — it may instead be facing a funnel friction problem. The correct diagnosis question is: given a known cost per lead and a known close rate, does the math still work? If cost-per-acquired-customer is acceptable, the low close rate is a feature (cheap unqualified traffic filtered at point of sale), not a bug requiring targeting surgery.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "cost per lead is known",
+        "close rate is known",
+        "average deal size is known"
+      ],
+      "mechanism": "If CAC (lead cost divided by close rate) is below acceptable threshold given deal size, the low close rate is economically irrelevant — the math works regardless of how much trash is in the funnel.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when founder or reps are spending significant time on unqualified calls, even if CAC math works — time cost must also be valued"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that for a medical wound-care business accepting Medicare Part B insurance, when all persons aged 65 and older automatically qualify for Medicare Part B coverage upon reaching that age, the practical avatar filter is simply age 65+, not insurance type. Trying to filter on insurance type in ad targeting adds complexity without adding qualifying power, because the insurance requirement is already satisfied by the age condition.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Insurance-Driven Lead Generation",
+      "conditions": [
+        "insurance type (Medicare Part B) is automatically granted at age 65 in the US",
+        "the service provider can accept Medicare Part B"
+      ],
+      "mechanism": "Since 100% of people over 65 hold Medicare Part B, targeting age 65+ is equivalent to targeting Medicare Part B holders — the age filter fully captures the insurance filter, eliminating duplicate complexity.",
+      "numbers": null,
+      "bounded_by": [
+        "Some people over 65 opt into supplemental insurance plans (Medicare Advantage) that can replace Part B; this is the residual qualification issue the speaker acknowledges but does not fully resolve in this session"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that in a service where lead-level LTV varies by the size of the presenting problem (e.g., wound size in a chronic wound care business), the qualification gate should include a scored question about problem severity at the point of opt-in, and the scheduler (sales call booking) should only be shown to leads who pass a minimum score threshold. This converts the scheduler from a universal next step into a conditional reward for qualified leads.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "deal value varies materially by a quantifiable patient/client characteristic",
+        "the business has sufficient lead volume that screening is worth gating"
+      ],
+      "mechanism": "By inserting a scored field (e.g., wound size) before showing the scheduler, the business withholds access to the sales call from low-value prospects, reducing rep time wasted on unqualified leads without reducing total lead volume.",
+      "numbers": null,
+      "bounded_by": [
+        "If lead volume is very low, gating the scheduler may cut total booked calls below minimum viable pipeline"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that a medical consulting business generating $5M in top-line revenue and $2M in profit at a cost of $15 per lead is not suffering — the constraint is operational efficiency in the funnel (too many unqualified calls), not marketing volume or ad spend. The appropriate intervention is adding friction (qualification gates), not increasing spend or changing targeting networks.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "business is already profitable ($2M on $5M = 40% net margin)",
+        "the bottleneck is rep time wasted on unqualified leads, not total lead volume"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "business financial position of the wound-care consulting client",
+        "anchors": [
+          {"region": "top-line revenue", "value": "$5M"},
+          {"region": "profit", "value": "$2M"},
+          {"region": "cost per lead", "value": "$15"},
+          {"region": "treatments closed out of 1,000 leads", "value": "5"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi contends that a funnel in which all opt-in leads are shown the scheduler regardless of their qualification status forces founders and reps to personally screen unqualified leads on sales calls, substituting expensive human time for cheap automated filtering. In a medical consulting context where the founder and one rep were taking all calls, this was identified as the primary source of wasted labor.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "high-touch sales model where calls are required to close",
+        "funnel shows the scheduler to all opt-ins regardless of qualification"
+      ],
+      "mechanism": "Without a pre-call qualification gate, every unqualified lead consumes a sales call slot; because call capacity is finite, this crowds out qualified leads and reduces effective throughput.",
+      "numbers": null,
+      "bounded_by": [
+        "If calls are automated or asynchronous (e.g., video sales letters), the time cost of unqualified leads is lower and this mechanism is less acute"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that the correct sequence for diagnosing and fixing a low-conversion lead funnel is: (1) verify the three-variable math (lead cost, close rate, deal size) to determine if the economics work at the current conversion rate; (2) if math works but rep time is wasted, add friction to the funnel rather than changing targeting; (3) add friction first in ad copy, then in opt-in form fields, then by gating the scheduler behind scored responses.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Funnel Optimization",
+      "conditions": [
+        "the business is running paid traffic (Facebook ads or similar)",
+        "the business uses a multi-step funnel: ad -> opt-in -> scheduler -> sales call"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Does not address organic or referral funnels where ad copy changes are not available as a lever"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that for a wound-care Medicare business with variable reimbursement tied to wound size, the lead scoring variable should be wound size (a quantifiable characteristic tied directly to deal value), and only leads above a wound-size threshold should be routed to book a call. This makes the qualification variable both the revenue predictor and the gating condition.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Avatar Targeting Strategy",
+      "conditions": [
+        "deal value is directly correlated with a measurable, self-reportable patient characteristic",
+        "the characteristic (wound size) can be asked on the opt-in form without creating significant drop-off"
+      ],
+      "mechanism": "When deal size varies predictably with a prospect characteristic, using that characteristic as a gating score aligns sales capacity with the highest-value prospects automatically.",
+      "numbers": null,
+      "bounded_by": [
+        "Self-reported characteristics (like wound size) may be inaccurate; the score is directional, not a perfect filter"
+      ]
+    },
+    {
+      "text": "Alex Hormozi distinguishes between two orientations toward a low close rate: (a) treating it as a targeting problem requiring ad spend changes or audience changes, and (b) treating it as a funnel friction problem requiring qualification gates. He argues that operators default to orientation (a) when orientation (b) is usually the correct first intervention, because adding friction costs nothing in ad spend.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "applies to businesses running paid lead-generation funnels",
+        "the business has not yet added qualification gates to the funnel"
+      ],
+      "mechanism": "Ad targeting changes increase cost and reduce volume without resolving funnel-level qualification failures; friction gates fix the same problem without touching media spend.",
+      "numbers": null,
+      "bounded_by": [
+        "If the ad audience is genuinely wrong (targeting people who cannot afford the service or who are ineligible by hard criteria), targeting changes are warranted before friction gates"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that when a business generates $15 leads but only 5 out of every 1,000 leads convert to paying customers (0.5% close rate), the per-customer acquisition cost is $3,000 ($15 / 0.005). Whether this is acceptable depends entirely on the deal size — but the operator must know this number before deciding whether to intervene in targeting or funnel design.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "based on the wound-care consulting client's reported metrics",
+        "5 treatments closed from 1,000 leads at $15 per lead"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "implied cost per acquired customer at reported conversion rate",
+        "anchors": [
+          {"region": "cost per lead", "value": "$15"},
+          {"region": "close rate", "value": "0.5% (5 out of 1,000 leads)"},
+          {"region": "implied CAC", "value": "$3,000"}
+        ]
+      },
+      "bounded_by": [
+        "The 5/1,000 figure was reported by the business owner and may not be a stable sample; may include the ramp-up period"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A medical consulting business focused on chronic wound care had built a Facebook ad funnel offering a generic wound-care PDF to anyone who opted in, then showing all opt-ins a scheduler for a consultation call. The business was generating leads at $15 each but had only converted 5 paying patients out of 1,000 leads. Founders and one sales rep were personally taking all the calls. Alex Hormozi diagnosed the problem as absent qualification friction rather than wrong targeting: the ad targeted 65+ (all of whom hold Medicare Part B), but neither the opt-in page nor the form asked about insurance type or wound size, so unqualified prospects flooded the consultation calendar. His prescription was to (1) add age 65+ explicitly in the ad copy and opt-in page to reinforce the Medicare Part B criterion, (2) add a wound-size field to the opt-in form to score leads, and (3) gate the scheduler so it only appears to leads above a minimum wound-size threshold.",
+      "claim_index": 2,
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "In the same wound-care consulting session, Alex Hormozi noted that reimbursement from Medicare Part B varies by wound size: a 1x1 centimeter wound generates less revenue than a 100-square-centimeter wound. This variability means not all qualified leads (insurance-eligible, age 65+) are equally valuable, and a second dimension of qualification — wound size — is needed to prioritize the highest-LTV patients for the limited sales call calendar.",
+      "claim_index": 6,
+      "topic": "Avatar Targeting Strategy"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Before changing ad targeting or increasing spend to improve conversion rates, first check whether the three-variable math (lead cost, close rate, deal size) already works at the current conversion rate. If CAC is acceptable given deal size, the problem is not targeting.",
+      "topic": "Lead-Cost-Closeout Math"
+    },
+    {
+      "text": "When running a consultation-call funnel for a medically constrained service (specific insurance type, specific condition severity), include a scored question about eligibility criteria in the opt-in form and only show the scheduler to leads who pass the score threshold.",
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "For services where the customer must hold a specific insurance type that is automatically granted at a certain age (e.g., Medicare Part B at 65), use the age criterion as the primary targeting variable in ad audiences and ad copy rather than trying to target insurance type directly.",
+      "topic": "Insurance-Driven Lead Generation"
+    },
+    {
+      "text": "Add funnel friction in this order when unqualified leads are wasting rep time: (1) ad copy and messaging, (2) opt-in form fields with scoring, (3) conditional scheduler access based on score.",
+      "topic": "Funnel Optimization"
+    }
+  ]
+}

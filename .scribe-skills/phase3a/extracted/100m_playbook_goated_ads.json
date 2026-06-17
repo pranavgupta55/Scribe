@@ -1,0 +1,297 @@
+{
+  "source_file": "100m_playbook_goated_ads.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Ad Creative Assembly and Variation",
+    "Customer Awareness Levels",
+    "Kaleidoscope Creative Variation Strategy",
+    "Volume-First Scaling",
+    "Execution and Rapid Iteration",
+    "Scaling Bottleneck Diagnosis",
+    "Marketing Clarity Over Production Quality",
+    "Content-Led Sales Strategy",
+    "Creative Variation Strategy",
+    "Ad Spend Optimization",
+    "Narrative Motivation Ads",
+    "Cold-Start Trust Architecture",
+    "Content Volume as Moat",
+    "Brand as Behavioral Pairing",
+    "Attention-to-Revenue Funnel"
+  ],
+  "frameworks": [
+    {
+      "name": "Ad Assembly Line Process",
+      "definition": "Decompose ad creation into three interchangeable components (hook, meat, CTA) produced in bulk separately, then assembled combinatorially to generate 150-750 unique ads per week from a single recording session.",
+      "concept": "Ad Creative Assembly and Variation"
+    },
+    {
+      "name": "Five Ad Meat Formats",
+      "definition": "Five proven content formats for the body of an ad: Demonstration, Testimonial, Education, Story, and Faceless; these formats work across all industries and can be mixed and matched.",
+      "concept": "Ad Creative Assembly and Variation"
+    },
+    {
+      "name": "Audience Awareness Ladder (adapted from Eugene Schwartz)",
+      "definition": "A five-level model mapping ad hook style to audience knowledge state: Most Aware (offer-driven), Product-Aware (proof-driven), Solution-Aware (promise-driven), Problem-Aware (pain-driven), Completely Unaware (curiosity-driven).",
+      "concept": "Customer Awareness Levels"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that ads do not hit a ceiling because of market saturation; rather, they plateau because ad creative quality is exhausted. A business spending $200,000 per month on Facebook weight-loss ads at $5,000-$8,000 per day was constrained not by market size but by the quality ceiling of its small creative library (5 ads per month). Better creative converts progressively colder and larger audiences, so the real constraint is creative output volume and quality, not market capacity.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "hit a wall with your ad quality, not with the market",
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": ["paid social advertising", "direct-response campaigns"],
+      "mechanism": "Ad creative quality determines how far up the awareness pyramid traffic converts; low creative quality exhausts warm audiences quickly but never reaches colder larger segments.",
+      "numbers": null,
+      "bounded_by": ["Does not address organic reach constraints or supply-chain bottlenecks"]
+    },
+    {
+      "text": "Alex Hormozi asserts that ad creation should be structured as an assembly line that produces 50 hooks, 3-5 meats, and 1-3 CTAs per recording session, yielding 150 to 750 distinct ads per week. He describes this as the mechanism that took a portfolio company from 5 ads per month to 600 ads per month, which doubled revenue in two quarters.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "assembly line",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["paid social advertising businesses", "dedicated weekly ad production day"],
+      "mechanism": "Decomposing ads into interchangeable parts (hook, meat, CTA) and producing each in bulk enables combinatorial scaling that is impossible when ads are produced end-to-end.",
+      "numbers": {
+        "axis": "weekly ad output from one recording session",
+        "anchors": [
+          {"region": "baseline (one end-to-end session)", "value": "5 ads per month"},
+          {"region": "assembly-line (50 hooks x 3-5 meat x 1-3 CTAs)", "value": "150-750 ads per week, ~600 per month"}
+        ]
+      },
+      "bounded_by": ["Assumes dedicated prep time outside the recording session; recording alone takes 1-2 hours for hooks, ~1 hour for meats, 5 minutes for CTAs"]
+    },
+    {
+      "text": "Alex Hormozi asserts that 80% of ad preparation time should be spent on hooks and only 20% on the meat (body copy), because if a viewer does not make it through the hook, the body of the ad is never seen and contributes nothing to conversion.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "eighty percent of your time",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["paid video ads on social platforms"],
+      "mechanism": "Hook failure is terminal for that impression; body content is only consumed after hook retention, so allocating effort proportionally to drop-off risk maximizes conversion per dollar of creative investment.",
+      "numbers": {
+        "axis": "ad preparation time allocation",
+        "anchors": [
+          {"region": "hooks", "value": "80%"},
+          {"region": "meat (body)", "value": "20%"},
+          {"region": "CTAs", "value": "~0% (minimal)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the meat (body) of an ad requires only 3-5 variations per weekly recording session because fewer people see the body than the hook, meaning the body gets used up more slowly and therefore needs less frequent rotation.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "three to five per weekly recording session is more than enough",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["paid social video advertising", "assembly-line production model"],
+      "mechanism": "Impression depth decreases past the hook; body content experiences lower consumption frequency per impression and therefore saturates more slowly than hook variants.",
+      "numbers": {
+        "axis": "body (meat) variations needed per week",
+        "anchors": [
+          {"region": "hooks (high attrition, high rotation)", "value": "50 per week"},
+          {"region": "meat (lower attrition, lower rotation)", "value": "3-5 per week"},
+          {"region": "CTAs (minimal rotation)", "value": "1-3 per session"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi claims that a winning hook from free organic content has the highest likelihood of converting when repurposed as a paid ad hook, higher than hooks sourced from competitor ad libraries or written from scratch, because organic performance already validates audience resonance before paid dollars are spent.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "highest likelihood of converting",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["paid social advertising", "business has existing organic content library"],
+      "mechanism": "Organic content hooks are pre-validated by audience engagement before spending; ad library hooks lack performance data to separate winners from losers.",
+      "numbers": null,
+      "bounded_by": ["Does not apply if the business has no existing content library (first-time ad runners)", "Applies only when the hook is broad enough to detach from its original content context"]
+    },
+    {
+      "text": "Alex Hormozi asserts that hooks from competitor ad libraries are the least reliable source of winning hooks because it is difficult to identify which ads actually perform well; most advertisers in ad libraries do not know what they are doing, making the library a source of inspiration rather than validated winners.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "last place I look",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["sourcing hooks from platform ad libraries such as Facebook Ad Library"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": ["Exception: if the researcher knows specific companies that run provably high-performing paid ads, their library hooks carry more signal"]
+    },
+    {
+      "text": "Alex Hormozi asserts that hooks written at a broader audience awareness level catch both the warm (most-aware) audience and also attract some of the colder audience, while hooks written narrowly toward the most-aware segment capture only warm audiences. When most hooks concentrate at the most-aware level, spreading them across awareness levels expands total addressable audience without abandoning existing warm traffic.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "go a little broader",
+      "topic": "Customer Awareness Levels",
+      "conditions": ["paid social advertising", "existing hook library concentrated in offer-driven (Most Aware) hooks"],
+      "mechanism": "Broader hooks reach colder audiences who are numerically larger; most-aware hooks continue to convert the warm subset of colder audiences since warm buyers exist in every audience segment.",
+      "numbers": null,
+      "bounded_by": ["Well-known national brands (e.g., Subway $5 Footlong) can lead with offer-driven hooks to cold audiences because brand awareness is already universal; this does not apply to unknown brands with products requiring education"]
+    },
+    {
+      "text": "Alex Hormozi claims that a clear, explicit CTA that both shows and tells the viewer exactly what to do next (click this button, fill out this form, scan this QR code) increases conversion relative to ads without an explicit CTA. He notes most ads still omit this step despite its documented lift.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "show and tell them",
+      "topic": "Marketing Clarity Over Production Quality",
+      "conditions": ["paid video ads", "any ad format with a conversion goal"],
+      "mechanism": "Audience motivation from a well-made ad is large but brief; an explicit CTA directs that motivation toward a specific action before it dissipates; demonstrating the next step also produces congruence, increasing follow-through after the click.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that running three identical hook-plus-meat combinations to the same audience, varying only the CTA, is the correct method for identifying a winning call-to-action, and that once a sound CTA is found it should be reused rather than replaced frequently.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "only changing the CTA",
+      "topic": "Ad Creative Assembly and Variation",
+      "conditions": ["paid social advertising", "advertiser has a stable offer"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "CTA variants to test",
+        "anchors": [
+          {"region": "minimum test set", "value": "3 identical ads differing only in CTA"},
+          {"region": "ongoing production after winner identified", "value": "1-2 CTAs reused consistently"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that producing higher volumes of ad creative is the primary mechanism by which businesses scale paid advertising past a plateau, because only a minority of ad variations become winners and scale requires a large pool to discover them. He draws an analogy to the Old Spice horse ads, which converted buyers who were not previously Old Spice customers because the creative was exceptional enough to reach cold audiences.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "you only do that by making more...way more",
+      "topic": "Volume-First Scaling",
+      "conditions": ["paid social advertising", "business spending at least several thousand dollars per day on ads"],
+      "mechanism": "Most ad variations fail; winning creatives are identified only through volume testing. Better creative expands the converting audience further up the awareness pyramid, so total addressable audience scales non-linearly with creative quality, which scales with volume of production.",
+      "numbers": null,
+      "bounded_by": ["This process took 13 years to develop (Hormozi's self-reported timeline); not an immediate turnaround for businesses with no creative infrastructure"]
+    },
+    {
+      "text": "Alex Hormozi asserts that winning hooks transfer across industries: a hook that works for one niche often works in an entirely different category because the underlying emotional trigger is industry-agnostic.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Winning hooks in one industry often work in others",
+      "topic": "Creative Variation Strategy",
+      "conditions": ["hook must be broad enough to detach from its original industry context"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": ["Product-specific or highly technical hooks that require industry knowledge do not transfer cleanly"]
+    },
+    {
+      "text": "Alex Hormozi asserts that meme-format hooks attract the largest possible percentage of a given audience because memes are culturally recognized shorthand; for narrower target audiences, niche-specific memes function the same way within that subgroup, acting as a high-penetration entry point for a broader ad.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "like a moth to a flame",
+      "topic": "Audience Building & Call-Out Mechanics",
+      "conditions": ["social media paid advertising", "advertiser targeting either broad or niche audiences"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that new customers enter a market every day, so even a previously shown ad will be seen for the first time by segments of a target audience, meaning advertisers should not retire proven hooks out of personal boredom; the first-time impression for the viewer is what matters, not whether the advertiser is tired of the creative.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "don't get bored repeating the same stuff",
+      "topic": "Creative Variation Strategy",
+      "conditions": ["paid advertising at scale", "sufficiently large target market"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": ["Eventually audiences do exhaust; the point is that creative retirement should be data-driven (declining CTR or rising CPM), not driven by the advertiser's aesthetic fatigue"]
+    },
+    {
+      "text": "Alex Hormozi asserts that high production value is not required for effective ads; raw iPhone-style testimonials and screenshot compilation ads have been top performers in his portfolio, appearing alongside professionally produced hero ads in the same campaigns.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Raw iPhone style testimonials",
+      "topic": "Marketing Clarity Over Production Quality",
+      "conditions": ["paid social advertising", "particularly direct-response campaigns"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": ["High-production ads (e.g., Dollar Shave Club style) also appear in Hormozi's winning set; format choice depends on match to audience awareness level, not production value maximization"]
+    },
+    {
+      "text": "Alex Hormozi asserts that the defense benefit of high creative volume is that competitors cannot reverse-engineer the top-performing ad variations because the signal is buried in noise across hundreds of variants.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "no one being able to figure out your top performing ads",
+      "topic": "Content Volume as Moat",
+      "conditions": ["advertisers producing 150+ ad variations per week"],
+      "mechanism": "High output volume obscures the winning creative from external observers because there are too many variations to track; it also provides internal efficiency through the assembly-line model.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A portfolio company founder told Hormozi they could not scale past $5,000-$8,000 per day in Facebook ad spend for a weight-loss offer without customer acquisition cost shooting up, attributing this to market saturation. Hormozi diagnosed the real problem: they were recording only five or so ads per month. He instructed the founder to devote every Friday to advertising, chop winning ads into hook, meat, and CTA components, run them through a kaleidoscope to generate 50 hooks with 3-5 meat variations each, and produce 150 ads per week instead of five per month. The company doubled revenue in two quarters.",
+      "claim_index": 0,
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "Hormozi cites the Old Spice television ads featuring a man on a horse as an example of creative quality overcoming audience awareness barriers. He describes himself as a non-Old Spice buyer who found the ads funny and subsequently began purchasing the product, and estimates that approximately 70% of the market had a similar conversion experience. His interpretation is that sufficiently excellent creative removes the ceiling imposed by audience awareness levels, converting even cold and skeptical audiences.",
+      "claim_index": 9,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Hormozi describes a lifestyle ad he ran showing a luxury car that he personally hated making but that performed well. The ad showed the math behind a $20k per month online business. He returned the car within six months and considers this the only ad he ever ran where he displayed wealth. He uses it to illustrate that ad performance is independent of the creator's personal aesthetic preferences.",
+      "claim_index": 12,
+      "topic": "Narrative Motivation Ads"
+    },
+    {
+      "text": "Hormozi describes how a podcast-style clip his team cut from a recording session became one of their top ads for Skool.com, illustrating that high-performing ads can emerge from repurposing existing content rather than producing new ad-specific material.",
+      "claim_index": 4,
+      "topic": "Ad Creative Assembly and Variation"
+    },
+    {
+      "text": "Hormozi provides B2C and B2B hook examples mapped across all five awareness levels using a hypothetical weight-loss shake called XFast and a marketing agency called Digital Boost. For XFast: Most Aware: 'XFast's new formula: Now with 25% more protein - Same great taste!' through to Completely Unaware: 'The hidden hormonal imbalance that's making 1 in 3 Americans gain weight.' For Digital Boost: Most Aware: 'DigitalBoost: Now offering social media management at 20% off for new clients' through to Completely Unaware: 'The unexpected way your business is losing $1000s each month in untapped revenue.' These illustrate how hook language maps to audience knowledge state.",
+      "claim_index": 6,
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "Hormozi notes the Subway $5 Footlong as a canonical example of a national brand correctly using an offer-driven hook for a cold nationwide audience, because decades of brand investment have already moved that audience to the Most Aware level. He uses this to illustrate why hook type must match actual audience awareness, not just aspirational positioning, and warns that an unknown brand copying this approach without the brand foundation would be equivalent to burning money.",
+      "claim_index": 6,
+      "topic": "Customer Awareness Levels"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Devote one full day per week (e.g., every Friday) exclusively to ad creation using the assembly-line process: research and write 50 hooks, record 3-5 meat variations, record 1-3 CTAs.",
+      "topic": "Ad Creative Assembly and Variation"
+    },
+    {
+      "text": "Save all ads you encounter that you like to a dedicated album on your phone to use as a hook reference library on ad creation days.",
+      "topic": "Ad Creative Assembly and Variation"
+    },
+    {
+      "text": "Write hooks distributed across all five awareness levels (Most Aware, Product Aware, Solution Aware, Problem Aware, Completely Unaware) rather than concentrating them in the Most Aware (offer-driven) bucket.",
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "When a CTA is identified that follows sound fundamentals (what to do, how to do it, when to do it, what they get, what happens next), stop testing CTAs and reuse it; a broken CTA can kill a campaign but a sound one does not need constant replacement.",
+      "topic": "Marketing Clarity Over Production Quality"
+    },
+    {
+      "text": "Show and tell the CTA by visually demonstrating the next step in the conversion flow (click this button, watch the form appear, see the submit screen), not just verbally describing it.",
+      "topic": "Marketing Clarity Over Production Quality"
+    },
+    {
+      "text": "When the existing ad pool is saturated and new hooks have also been exhausted, the next step is not new meat or new CTAs but expansion hooks that target a broader awareness level to reach a new audience segment.",
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "Test meme-format hooks for the widest possible reach; for niche audiences use niche-specific memes that function as cultural in-group signals.",
+      "topic": "Audience Building & Call-Out Mechanics"
+    },
+    {
+      "text": "When scaling, double down on winning hooks by reusing them to generate additional variants rather than retiring them out of personal fatigue with the creative.",
+      "topic": "Creative Variation Strategy"
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "source_file": "100m_playbook_lead_nurture.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Availability as Conversion Multiplier",
+    "Lead Response Time",
+    "Meeting and Follow-Up Cadence",
+    "Sales Targeting and Lead Qualification",
+    "Cold Outreach Channels",
+    "Tracking and Measurement Discipline",
+    "Sales Process Optimization",
+    "Volume-First Scaling",
+    "Operational Culture Norms",
+    "Sales Closing Mechanics",
+    "Script Compliance",
+    "Before/After Proof Engine"
+  ],
+  "frameworks": [
+    {
+      "name": "Four Pillars of Lead Nurture",
+      "definition": "A four-part framework (Availability, Speed, Personalization, Volume) derived from analysis of 4,000+ daily appointments in ALAN software that identifies the primary drivers of show rates for scheduled sales appointments.",
+      "concept": "Availability as Conversion Multiplier"
+    },
+    {
+      "name": "BAMFAM",
+      "definition": "Book-A-Meeting-From-A-Meeting: always schedule the next appointment during the current appointment rather than following up later, to prevent leads from going cold between calls.",
+      "concept": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "name": "Lead Nurture Throughput Math",
+      "definition": "Three-metric model: Schedule Rate (engaged leads who schedule) x Show Rate (scheduled leads who show) = Throughput (total engaged leads who show). Optimizing any variable compounds the others.",
+      "concept": "Sales Process Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi found, through analysis of 4,000+ daily appointments in his ALAN software (2020-2021), that four data points correlate most strongly with appointment show rates: (1) more available time slots, (2) fewer days between scheduling and the appointment, (3) more follow-up attempts, and (4) higher lead response rate to follow-ups.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "four data points",
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": ["appointment-based businesses", "mixed phone and video sales environments"],
+      "mechanism": "Each driver addresses a separate failure mode: no slots means no scheduling; distant appointments give leads time to disengage; few follow-ups leave non-responders uncontacted; low response rate signals mismatched communication or value framing.",
+      "numbers": {
+        "axis": "correlation strength with positive appointment outcomes",
+        "anchors": [
+          {"driver": "available time slots", "relationship": "highest single predictor of throughput per Vlad's analysis"},
+          {"driver": "days-to-appointment", "relationship": "negative correlation — closer appointment = higher show rate"},
+          {"driver": "follow-up volume", "relationship": "positive correlation — more attempts = more shows"},
+          {"driver": "lead response rate", "relationship": "positive correlation — responding leads show more often"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that availability (the number of open appointment slots and hours) is the single strongest predictor of show-through rate in appointment-based businesses, stronger even than speed of contact, because if no slot exists when a lead is ready to schedule, they either never schedule or schedule at an inconvenient time and ghost.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "availability",
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": ["appointment-based businesses"],
+      "mechanism": "Without an available slot, a lead cannot schedule; a poorly-timed slot increases ghosting and reduces close rate even for those who do show; each ghost also blocks a better-fit lead from taking that slot.",
+      "numbers": null,
+      "bounded_by": ["does not apply to walk-in or self-serve contexts where no appointment is required"]
+    },
+    {
+      "text": "Alex Hormozi reports that increasing appointment availability from a 5-day-a-week schedule to a 7-day schedule makes a business approximately 40% more available to accept revenue, because the additional days represent 40% more of the calendar year during which a business can generate sales.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "seven days a week",
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": ["appointment-based service businesses", "fixed overhead cost structure (rent, payroll, insurance paid 7 days/week)"],
+      "mechanism": "Fixed costs are incurred 7 days per week regardless; selling only 5 days wastes 2/7 of potential revenue capacity at no reduction in cost.",
+      "numbers": {
+        "axis": "appointment availability as a share of the calendar year",
+        "anchors": [
+          {"schedule": "5 days/week", "availability": "~71% of calendar year"},
+          {"schedule": "7 days/week", "availability": "~100% of calendar year, ~40% increase over 5-day baseline"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi found, citing data from InsideSales.com, that the average business takes 42 hours to respond to a new lead, whereas contacting within 42 seconds is achievable and dramatically higher-converting.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "speed to contact",
+      "topic": "Lead Response Time",
+      "conditions": ["inbound leads who have opted in or expressed interest"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "time from lead opt-in to first contact attempt",
+        "anchors": [
+          {"business": "average competitor", "response_time": "42 hours (InsideSales.com data)"},
+          {"business": "target standard", "response_time": "42 seconds or under 5 minutes"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi cites third-party research showing that contacting a lead within 60 seconds produces a 391% increase in sales conversions compared to slower contact (Velocify); companies that contact within one hour are 7x more likely to qualify leads than those who wait even one more hour, and 60x more likely than companies that wait 24 hours (Harvard Business Review); 78% of customers buy from the first company that responds to their inquiry (Lead Connect).",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "speed to first contact",
+      "topic": "Lead Response Time",
+      "conditions": ["inbound leads who have opted in"],
+      "mechanism": "Leads have high motivation for only a brief window after opting in; each passing minute allows competing providers, distraction, and buyer disengagement to reduce conversion probability.",
+      "numbers": {
+        "axis": "conversion improvement vs. contact speed",
+        "anchors": [
+          {"contact_window": "within 60 seconds", "outcome": "+391% conversion vs. baseline (Velocify)"},
+          {"contact_window": "within 1 hour vs. 2+ hours", "outcome": "7x more likely to qualify (HBR)"},
+          {"contact_window": "within 1 hour vs. 24 hours", "outcome": "60x more likely to qualify (HBR)"},
+          {"contact_window": "first to respond", "outcome": "78% of customers buy (Lead Connect)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi found that faster first contact reduces the total number of follow-up attempts required to convert a lead: the slower you contact leads, the more times you must contact them before they buy; the faster you contact them, the fewer total contacts are needed.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "speed to first contact",
+      "topic": "Lead Response Time",
+      "conditions": ["inbound leads"],
+      "mechanism": "Early contact catches the lead at peak motivation and captures their attention before competing distractions set in; late contact forces recovery of a cooled relationship requiring more touches to rebuild engagement.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi recommends limiting scheduled appointments to within three days (same day, next day, or day after), because show rates are higher for appointments scheduled closer to the current date; appointments booked five or more days out produce more ghosting, lower morale for sales teams, and block high-intent leads from accessing convenient slots.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "speed to first appointment",
+      "topic": "Meeting and Follow-Up Cadence",
+      "conditions": ["appointment-based sales", "phone or video sales context"],
+      "mechanism": "As days pass between scheduling and the appointment, leads cool: competing priorities emerge, motivation fades, and the original reason for scheduling recedes in salience.",
+      "numbers": {
+        "axis": "maximum days from scheduling to appointment",
+        "anchors": [
+          {"window": "same day (in real time)", "show_rate": "100% (they are already on the call)"},
+          {"window": "1-3 days out", "show_rate": "recommended target; higher show rate"},
+          {"window": "5+ days out", "show_rate": "more ghosting; triple loss — ghost, morale damage, blocked slot"}
+        ]
+      },
+      "bounded_by": ["can allow up to 5 days if operationally necessary; monitor show rates to find sweet spot"]
+    },
+    {
+      "text": "Alex Hormozi found that nearly half (44%, citing RAIN Group data) of salespeople stop follow-up after the first contact attempt, while his data shows that leads require 5+ contact attempts before scheduling; this gap between salesperson persistence and required persistence is a primary revenue leak.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "volume",
+      "topic": "Volume-First Scaling",
+      "conditions": ["outbound follow-up on inbound or opted-in leads"],
+      "mechanism": "Most contact attempts fail for reasons unrelated to disinterest (bad timing, missed notification, busy moment); later attempts catch leads at more convenient moments and remind older leads whose circumstances have changed.",
+      "numbers": {
+        "axis": "number of contact attempts before abandoning lead",
+        "anchors": [
+          {"cohort": "average salesperson", "attempts": "1.3 before stopping (InsideSales.com); 44% stop after first attempt (RAIN Group)"},
+          {"cohort": "Hormozi recommended standard", "attempts": "5+ in first week, transitioning to long-term nurture after week 1"}
+        ]
+      },
+      "bounded_by": ["leads who have been firmly disqualified should be removed from the cadence; laws on contact frequency vary by jurisdiction"]
+    },
+    {
+      "text": "Alex Hormozi found that routing the highest-scored leads to the best closers, rather than distributing leads randomly, can produce dramatic sales increases. He cites a timeshare sales example in which implementing best-leads-to-best-closers at one local office produced 5x production and, when rolled out nationally, grew the company from $200M to $1B in annual sales over five years.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "send the best leads to the best closers",
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": ["businesses with multiple sales reps of varying skill levels", "businesses with lead qualification data available"],
+      "mechanism": "Top closers generate disproportionate output per lead; assigning them low-quality leads wastes their conversion capacity, while assigning high-quality leads to junior reps wastes the lead's conversion probability.",
+      "numbers": {
+        "axis": "sales output after best-leads-to-best-closers implementation",
+        "anchors": [
+          {"scope": "single timeshare office (pre-implementation)", "output": "baseline production"},
+          {"scope": "single timeshare office (post-implementation)", "output": "5x production"},
+          {"scope": "national rollout over five years", "output": "company grew from $200M to $1B annual sales"}
+        ]
+      },
+      "bounded_by": ["requires a functioning lead-scoring system (e.g., 1-5 or red-yellow-green) and multiple reps at different skill levels"]
+    },
+    {
+      "text": "Alex Hormozi found that qualifying leads through an application before the sales call, and actively canceling appointments with unqualified leads, increases show percentage and profit relative to businesses that take all comers, because reps spend their time on high-fit leads rather than unqualified ones.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "qualify the leads",
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": ["businesses with a sales call step before purchase"],
+      "mechanism": "Pre-call applications filter for fit signals that predict purchase probability; removing low-fit leads from the calendar frees slot capacity for high-fit leads and raises average quality of sales conversations.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi found that personalizing proof to match the lead's demographics (age, gender, ethnicity, situation) increases motivation to attend the appointment; the closer the match between the proof case study and the lead's profile, the stronger the effect.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "personalized proof",
+      "topic": "Before/After Proof Engine",
+      "conditions": ["lead nurture stage — after scheduling, before the appointment"],
+      "mechanism": "Matched proof activates the lead's self-identification with the success story, reducing skepticism and increasing perceived relevance; mismatched proof feels generic and fails to motivate attendance.",
+      "numbers": null,
+      "bounded_by": ["proof must be compliant with local regulations on testimonials and results claims, which vary by state and country"]
+    },
+    {
+      "text": "Alex Hormozi found that offering leads an A/B choice that assumes attendance (e.g., 'Do you want a shirt or shorts?', 'Morning or afternoon?') increases show rates by creating a soft commitment to attend; because both choices assume the lead will show, accepting either option psychologically commits them to being there.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "pull incentive",
+      "topic": "Sales Closing Mechanics",
+      "conditions": ["lead nurture stage prior to sales appointment"],
+      "mechanism": "The A/B choice bypasses the explicit attend/not-attend decision and frames attendance as a given; cognitive consistency pressure then pushes the lead to follow through on their implicit commitment.",
+      "numbers": null,
+      "bounded_by": ["the offered item must be something leads genuinely want and must have an obvious connection to the product being sold; the seller must demonstrate real cost incurred in preparing it"]
+    },
+    {
+      "text": "Alex Hormozi found that using BAMFAM (Book-A-Meeting-From-A-Meeting) to schedule the next appointment during the current call dramatically increases second-call show rates, because the probability of scheduling an appointment drops sharply once both parties disconnect.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "BAMFAM",
+      "topic": "Meeting and Follow-Up Cadence",
+      "conditions": ["multi-call sales processes requiring two or more appointments to close"],
+      "mechanism": "Leads are at peak engagement during the current call; once the call ends, scheduling competes with all subsequent distractions and the lead can easily deprioritize the follow-up.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi reports that Hubspot improved email marketing ROI by 7x after segmenting its list, which he cites as evidence that sending messages relevant to each lead segment produces substantially higher response rates than sending identical messages to all leads.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "segment your messaging",
+      "topic": "Cold Outreach Channels",
+      "conditions": ["email and text nurture sequences", "businesses with distinct lead categories (by revenue, intent, demographic, goal)"],
+      "mechanism": "Segment-specific messages address the pains that each group actually experiences; generic messages fail to signal relevance and are ignored at higher rates.",
+      "numbers": {
+        "axis": "email marketing ROI before/after list segmentation",
+        "anchors": [
+          {"company": "Hubspot (pre-segmentation)", "roi": "baseline"},
+          {"company": "Hubspot (post-segmentation)", "roi": "7x baseline"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi found that including the outbound area code in automated appointment reminders approximately doubles lead pick-up rates, because leads are more likely to answer calls from recognized local numbers than unrecognized or out-of-area codes.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "local area code call wrapping",
+      "topic": "Cold Outreach Channels",
+      "conditions": ["outbound calling for appointment confirmation", "businesses calling leads in multiple geographic regions"],
+      "mechanism": "Consumers have learned to ignore unrecognized or toll-free numbers as likely spam; a local area code triggers familiar-caller heuristics that increase answer probability.",
+      "numbers": {
+        "axis": "pick-up rate vs. caller area code",
+        "anchors": [
+          {"caller_id": "unrecognized or out-of-area code", "pickup_rate": "baseline (lower)"},
+          {"caller_id": "local area code matching lead's region", "pickup_rate": "~2x baseline"}
+        ]
+      },
+      "bounded_by": ["tech and carrier policies change over time; monitor effectiveness"]
+    },
+    {
+      "text": "Alex Hormozi argues that tracking conversion rate from lead to close (a combined metric that accounts for both show rate and close rate) is more informative than tracking close rate alone, because a rep with a high close rate but low show rate has worse overall unit economics than a rep with moderate close rate and high show rate.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "lead-to-close percentage",
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": ["sales teams with both a nurture function and a closing function"],
+      "mechanism": "Close rate measures skill only on leads who appeared; lead-to-close rate measures the combined output of working leads and closing them, which is the true revenue-generating metric.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that a 20-40% increase in show rate translates to a 2x-3x increase in profit for businesses running 20% net margins, because incremental sales from higher show rates carry minimal additional variable cost against the fixed cost base already in place.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "show rate improvement",
+      "topic": "Sales Process Optimization",
+      "conditions": ["businesses with fixed overhead and approximately 20% net margins"],
+      "mechanism": "At 20% net margin, incremental revenue from a higher show rate flows to profit at nearly full margin because fulfillment and overhead costs are already covered by existing volume.",
+      "numbers": {
+        "axis": "profit multiplier vs. show rate increase",
+        "anchors": [
+          {"show_rate_increase": "20-40%", "profit_multiplier": "2x-3x profit at 20% net margin baseline (year one)"}
+        ]
+      },
+      "bounded_by": ["applies to businesses at sufficient scale where fixed costs are already covered; early-stage businesses with no base volume would see smaller absolute profit gains"]
+    },
+    {
+      "text": "Alex Hormozi found that embedding a small commission bonus (roughly 5-30% of the rep's normal commission per sale) tied to show rates motivates sales reps to work leads more diligently and improves show rate culture at the team level.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "show-rate commission bump",
+      "topic": "Operational Culture Norms",
+      "conditions": ["sales teams with both a nurture role and a closing role", "commission-based compensation structure"],
+      "mechanism": "Tying financial reward to show rates signals organizational priority; reps optimize for what they are paid to do; without a show-rate incentive, reps rationally focus only on close rate.",
+      "numbers": {
+        "axis": "commission bump magnitude relative to per-sale commission",
+        "anchors": [
+          {"ticket_price": "lower ticket", "commission_bump": "closer to 30% of per-sale commission"},
+          {"ticket_price": "higher ticket", "commission_bump": "closer to 5% of per-sale commission"}
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "In June 2020, during COVID lockdowns, Alex Hormozi's ALAN software was managing 4,000+ appointments per day across phone and video sales businesses. Show rates were poor and inconsistent across business types. Hormozi hired a data scientist named Vlad (name changed), who had won Russia's machine learning Olympics equivalent, and gave him roughly one million rows of appointment data to analyze in one week. Vlad identified four columns that correlated with higher show rates: more available time slots, fewer days between scheduling and appointment, more follow-up attempts, and higher lead response rate. This data-driven finding became the foundation of the Four Pillars of Lead Nurture framework.",
+      "claim_index": 0,
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "In June 2021, on a work trip to Los Angeles, Alex Hormozi's wife Leila needed to get her nails done without a prior relationship with any local salon. She called four salons in sequence. The first did not answer. The second had no openings until the next day. The third put her on hold indefinitely. The fourth accepted walk-ins immediately, confirmed the appointment by text, named her technician, and provided a warm handoff — and that is where she went. Hormozi presented this as the consumer-side illustration of why availability is the strongest lead-nurture driver: the first business to have a slot and answer immediately captured the sale.",
+      "claim_index": 1,
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "An ALAN beta tester in 2020 had show rates significantly higher than all others in the test group despite using the same message cadence and templates. When Hormozi investigated, he found the business owner was texting leads from a separate iPhone outside the system, offering a personalized gift: 'Hey, I've got a shirt here waiting for you. Do you prefer black or pink?' Once a lead responded with a color preference, they showed up almost every time. This example illustrates both personalization (knowing and preparing something specific for the lead) and the A/B commitment mechanism (accepting either choice implicitly commits the lead to attending).",
+      "claim_index": 11,
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "Alex Hormozi recounts meeting his neighbor's son Jacob, who at 19 was trying to wholesale real estate by watching videos online and making halting, unconfident cold calls. Hormozi got him an interview on his cold call team, where Jacob joined as the most junior member. Hormozi told him to find out what the top caller on the team was doing and do double it: if the top guy made 200 calls per day, make 400; if he worked five days, work six. Jacob adopted the 'garbage man' philosophy — taking unqualified (yellow) leads the experienced reps rejected — and turned them into sales. He became known for saying 'Yellow is the new gold.' Jacob eventually rose to be the top salesman the quarter he left Gym Launch (out of 26 reps, many of them experienced adults), then joined Acquisition.com as Director of Sales. This example illustrates that volume of practice combined with non-selectivity (taking all leads as learning opportunities) compounds skill faster than cherry-picking high-quality leads.",
+      "claim_index": 7,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Alex Hormozi bought an insurance company that had a significant drop-off in prospects between the first and second sales call. Reps were making and sending custom plans between calls — high effort, low return. Hormozi implemented BAMFAM (Book-A-Meeting-From-A-Meeting), a concept from his friend Sharran Srivatsaa: never end a call without scheduling the next one in real time. After implementing BAMFAM, second-call show rates skyrocketed and overall insurance company sales increased meaningfully.",
+      "claim_index": 12,
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Alex Hormozi tells the story of the number one timeshare sales rep in the US — a man who lived in his building and had finished first out of nearly 3,000 reps in five of the last six years. At a CEO meeting, the rep said: 'You're wasting all the good leads on these junior reps. Meanwhile, I waste two-thirds of my time with people who have 500 credit scores. Just give me the best leads, and I'll make you a lot of money.' The local office tried it, and the rep's office produced 5x its previous output. The company then rolled it out nationally, growing from $200M to $1B in annual sales over five years.",
+      "claim_index": 8,
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "Alex Hormozi describes encountering a weight-loss company that actively canceled its own sales appointments after reviewing lead applications. Initially he thought the owner hated money. But the owner's close rate and profit far exceeded industry norms for his business size. The mechanism: the owner required a pre-call application from every lead, and based on answers, he canceled appointments for leads unlikely to be a fit. As a result, reps spent all their time on high-probability leads, and the quality of sales conversations and close rates reflected it.",
+      "claim_index": 9,
+      "topic": "Sales Targeting and Lead Qualification"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Give leads four scheduling options per hour (every 15 minutes) rather than one or two per hour, to increase convenience without changing appointment duration.",
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "Offer inbound self-scheduling, outbound rep-set scheduling, and lead-initiated scheduling simultaneously; the more booking pathways available, the more appointments are booked.",
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "On scheduling pages, use a Header-Headline-Subheadline structure (Avatar-targeted header, benefit headline, supporting subheadline) and display available time slots immediately on page load, visible without scrolling, on both mobile and desktop.",
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "Contact leads in under five minutes of opt-in; the gold standard is under 60 seconds. If the team is not regularly hearing 'That was fast — you guys are on top of it!' at least once per day, contact speed is insufficient.",
+      "topic": "Lead Response Time"
+    },
+    {
+      "text": "Use local-area-code call wrapping technology that dynamically matches the outbound area code to the lead's local area when calling; this significantly increases pick-up rates.",
+      "topic": "Cold Outreach Channels"
+    },
+    {
+      "text": "Use iPhones (blue iMessage bubbles) rather than SMS from business systems (green bubbles) when texting leads to increase response rates, as leads associate blue messages with real humans and green messages with spam.",
+      "topic": "Cold Outreach Channels"
+    },
+    {
+      "text": "Double-dial leads on first contact: call once, and if no answer, call immediately again. Many phones block the first call from unknown numbers and allow the second through.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Send automated appointment reminders at four intervals: immediately upon scheduling (include caller name, time, date, and the area code you will call from), 24 hours before, 12 hours before, and 3 hours before.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Send manual reminders from a real cell phone the night before, morning of, and one hour before the appointment, in addition to automated reminders.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Score leads on a 1-5 or red-yellow-green system based on qualification criteria derived from your top customers' demographics and actions, then route top-scored leads to top closers.",
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "Initiate contact across all available channels (call, text, DM, email) but then continue communication exclusively through the channel on which the lead first responds.",
+      "topic": "Cold Outreach Channels"
+    },
+    {
+      "text": "Send personalized proof (case studies and testimonials) matched to the lead's demographics after scheduling and before the appointment, between the first and second call, and every 90 days for ghosted leads.",
+      "topic": "Before/After Proof Engine"
+    },
+    {
+      "text": "Track and publicly rank the sales team by show rate, close rate, and total lead-to-close percentage simultaneously; give cultural recognition (kudos, attention, approval) to reps with high show rates, not just high close rates.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Use an automatic dialer to improve lead-working efficiency 2-3x and ensure the team follows the cadence without relying on spreadsheets and sticky notes.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Build a culture of accepting unqualified leads as free practice rather than wasted time; treating every lead as a reps opportunity regardless of qualification drives skill compounding and prevents entitlement.",
+      "topic": "Operational Culture Norms"
+    }
+  ]
+}
