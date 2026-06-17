@@ -1,0 +1,737 @@
+{
+  "batch_id": 1,
+  "concepts": [
+    {
+      "concept_id": 0,
+      "canonical_name": "Sales Process Optimization",
+      "aliases": [
+        "Sales Motion",
+        "Sales Motion Fundamentals",
+        "Sales Process Redesign",
+        "Close Rate Optimization"
+      ],
+      "avoid_terms": ["Sales Funnel Redesign", "Go-to-Market Motion", "Revenue Process"],
+      "definition": "The structured diagnosis and redesign of a sales process to improve close rate, prioritizing in-person closing mechanics before pricing changes.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 1,
+      "canonical_name": "Price Anchoring",
+      "aliases": [
+        "Anchor Pricing",
+        "Sales Conviction"
+      ],
+      "avoid_terms": ["Decoy Pricing", "Price Bracketing", "Reference Price"],
+      "definition": "A pricing tactic that presents a high anchor (e.g., 10x upsell) to make the base offer feel like a bargain, boosted by seller conviction.",
+      "ambiguity_notes": "Sales Conviction is a belief state, not a pricing tactic — kept as alias but distinct from anchoring mechanics.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 2,
+      "canonical_name": "Proof Before Optimization",
+      "aliases": [
+        "Sales Volume vs Close Rate"
+      ],
+      "avoid_terms": ["Close Rate Maximization", "Volume Selling", "Sales Efficiency"],
+      "definition": "The principle that a business should maximize volume and accumulate proof before optimizing close rate, because premature optimization discards evidence.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 3,
+      "canonical_name": "Courage",
+      "aliases": [
+        "Courage and Fear",
+        "Action Decoupled from Feeling",
+        "Courage & Risk Interval",
+        "Cringe as Status Play",
+        "Early Wins Build Confidence"
+      ],
+      "avoid_terms": ["Bravery", "Confidence", "Risk Tolerance"],
+      "definition": "The act of taking purposeful action despite perceived fear or discomfort; confidence is a retroactive result of action, not a precondition.",
+      "ambiguity_notes": "Courage & Risk Interval refers to the psychological window between perceiving a threat and acting — a specific sub-mechanism, not a synonym.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 4,
+      "canonical_name": "Member Retention Follow-up",
+      "aliases": [
+        "Member Retention Follow-up Systems",
+        "Attendance Tracking & Follow-up",
+        "Reach-Out Communication Systems"
+      ],
+      "avoid_terms": ["Churn Prevention", "Customer Success", "Re-engagement Campaigns"],
+      "definition": "A systematic process in membership businesses of flagging low-attendance members and conducting personal outreach to prevent churn.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 5,
+      "canonical_name": "Meeting and Follow-Up Cadence",
+      "aliases": [
+        "Appointment and Communication Cadence",
+        "BAMFAM Method",
+        "Communication Cadence",
+        "Communication Cycles & Meetings",
+        "Volume & Follow-Up"
+      ],
+      "avoid_terms": ["Drip Campaign", "Outreach Sequence", "Touch Cadence"],
+      "definition": "A structured schedule of recurring touchpoints — daily huddles, weekly one-on-ones, and BAMFAM booking — that maximizes show rates and sustains team alignment.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 6,
+      "canonical_name": "Educational vs Entertainment Content",
+      "aliases": [
+        "Content Strategy: Entertainment vs Education",
+        "Educational Content Strategy",
+        "Entertainment vs. Education Audiences",
+        "Funnel Myth Debunking",
+        "Three Content Buckets"
+      ],
+      "avoid_terms": ["Content Marketing", "Audience Building", "Inbound Content"],
+      "definition": "Educational content builds high-converting loyal audiences; entertainment builds large low-converting ones — they are distinct funnels that should not be conflated.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 7,
+      "canonical_name": "Employee Retention Through Belonging",
+      "aliases": [
+        "Community Design",
+        "Engagement Optimization"
+      ],
+      "avoid_terms": ["Culture Fit", "Employee Engagement", "Team Cohesion"],
+      "definition": "One trusted peer relationship inside an organization increases employee tenure approximately fivefold by anchoring identity and belonging.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 8,
+      "canonical_name": "Deal Structure and Ownership",
+      "aliases": [
+        "Deal Mechanics",
+        "Follow-the-Leader Model",
+        "Soft Handoff",
+        "Post-Acquisition Integration"
+      ],
+      "avoid_terms": ["Term Sheet Design", "Equity Structure", "Transaction Architecture"],
+      "definition": "The set of mechanics governing equity allocation, batch commitment timing, ownership transitions, and post-acquisition integration to prevent holdouts and misalignment.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 9,
+      "canonical_name": "Perks as Retention Lever",
+      "aliases": [
+        "Perks as Retention"
+      ],
+      "avoid_terms": ["Employee Benefits", "Incentive Compensation", "Loyalty Programs"],
+      "definition": "Alternating status or title bumps with tangible perks prevents recipients from accepting an incentive and then departing.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 10,
+      "canonical_name": "Sales Targeting and Lead Qualification",
+      "aliases": [
+        "Friction & Qualification",
+        "Friction Elimination",
+        "Lead Quality Over Quantity",
+        "Lead Scoring",
+        "Lead Scoring & Qualification",
+        "Proof Methodology",
+        "Sales Qualification and Avatar Targeting",
+        "Lead Qualification Speed"
+      ],
+      "avoid_terms": ["Pricing Strategy", "Ideal Customer Profile", "Lead Generation"],
+      "definition": "The process of identifying and filtering prospects by wealth, intent, and avatar fit, using qualification friction as the primary mechanism to raise close rates.",
+      "ambiguity_notes": "Pricing Strategy was an original member alias but is tracked as its own concept (concept_id 18 / 30); do not collapse.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 11,
+      "canonical_name": "Behavior-Change Framing",
+      "aliases": [
+        "Emotional Rigidity and Change",
+        "Expectation Setting"
+      ],
+      "avoid_terms": ["Mindset Shift", "Behavior Modification", "Habit Change"],
+      "definition": "A communication discipline that positions offers and directives as observable, measurable behavior changes (stop X, start Y) rather than emotional or identity claims.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 12,
+      "canonical_name": "Sales Closing Mechanics",
+      "aliases": [
+        "In-Person Sales Closing",
+        "No-Based Close",
+        "Objection Handling",
+        "Urgency & Momentum"
+      ],
+      "avoid_terms": ["Closing Techniques", "Hard Close", "Objection Script"],
+      "definition": "Tactical in-person close methods: collect deposit on-site, frame the close as permission, handle objections with curiosity, and leverage urgency to maintain momentum.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 13,
+      "canonical_name": "Customer Awareness Levels",
+      "aliases": [
+        "Bridge Pages and Customer Awareness Levels",
+        "Messaging & Positioning",
+        "Marketing Filtration vs Education"
+      ],
+      "avoid_terms": ["Funnel Stage", "Customer Journey", "Buyer Readiness"],
+      "definition": "Eugene Schwartz's five-stage awareness model, used to match marketing message complexity to prospect knowledge; bridge pages serve cold, problem-unaware audiences.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 14,
+      "canonical_name": "Motivated Buyer Targeting",
+      "aliases": [
+        "Motivated Buyer Strategy",
+        "Telehealth Positioning"
+      ],
+      "avoid_terms": ["Niche Selection", "Audience Targeting", "High-Intent Leads"],
+      "definition": "A market selection strategy that identifies audiences with forced or urgent need (regulatory mandates, high-pain underserved niches) rather than manufacturing demand from reluctant prospects.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 15,
+      "canonical_name": "Revenue Stage Transitions",
+      "aliases": [
+        "Business Cash Flow",
+        "Long-term Growth Path",
+        "Scaling Roadmap",
+        "Time Horizon and Vision"
+      ],
+      "avoid_terms": ["Growth Stages", "Business Milestones", "Scaling Phases"],
+      "definition": "The predictable inflection points ($1M, $3M, $10M revenue) at which a business must shift strategy, org structure, or time horizon to avoid plateau.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 16,
+      "canonical_name": "Scaling Bottleneck Diagnosis",
+      "aliases": [
+        "E-commerce Scaling Bottlenecks",
+        "Paid Media Arbitrage Scaling Limits",
+        "Direct Response vs Brand Building",
+        "Mental Spending Barrier",
+        "Supply Chain Constraints"
+      ],
+      "avoid_terms": ["Theory of Constraints", "Growth Blockers", "Scaling Challenges"],
+      "definition": "The systematic process of identifying the true structural constraint blocking growth at a revenue stage, distinguishing perceived limits (ad budget, mindset) from real ones (brand moat, supply chain).",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 17,
+      "canonical_name": "Hiring as Capital Allocation",
+      "aliases": [
+        "Sales Director Hiring",
+        "Core Business Focus"
+      ],
+      "avoid_terms": ["Headcount Planning", "Talent Investment", "HR Strategy"],
+      "definition": "The mental model of evaluating key hires and client-acquisition investments as capital-allocation decisions judged by ROI ratios, not cost-avoidance instincts.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 18,
+      "canonical_name": "Premium Positioning",
+      "aliases": [
+        "Brand as Competitive Advantage",
+        "Branding Economics & Pricing Power",
+        "Premium Pricing",
+        "Premium Pricing Power",
+        "Pricing Leverage",
+        "Pricing Power in Established Markets",
+        "Pricing Psychology",
+        "The Pricing Virtuous Cycle",
+        "Warren Buffett Pricing Power"
+      ],
+      "avoid_terms": ["Luxury Pricing", "Value-Based Pricing", "Price Optimization"],
+      "definition": "A strong brand enables premium pricing, which drives a virtuous cycle of better margins, superior talent, stronger reputation, and increased demand up to the willingness-to-pay ceiling.",
+      "ambiguity_notes": "Pricing Psychology as alias risks confusion with behavioral pricing tactics (anchoring, decoys) — those belong to concept_id 1 and 30.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 19,
+      "canonical_name": "Insurance-Driven Lead Generation",
+      "aliases": [
+        "Avatar Clarity from Insurance Constraints",
+        "Deal Structure Analysis",
+        "Insurance Industry Economics",
+        "Lead Generation Strategy"
+      ],
+      "avoid_terms": ["Medicare Marketing", "Insurance Sales", "Regulated Market Strategy"],
+      "definition": "Insurance mandates (e.g., Medicare Part B eligibility at age 65) create predictable, high-volume lead pools whose broker commission structure creates exploitable misaligned incentives.",
+      "ambiguity_notes": "Lead Generation Strategy is too generic as an alias — it is used to mean this insurance-specific pattern only.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 20,
+      "canonical_name": "Continuity Upsell",
+      "aliases": [
+        "Event Strategy and Upselling",
+        "Internal Plays & Upsells",
+        "Large-Group Training Revenue",
+        "Recurring Revenue Architecture",
+        "Semi-Private (1-on-4) Training"
+      ],
+      "avoid_terms": ["Subscription Upsell", "Renewal Offer", "Post-Purchase Offer"],
+      "definition": "An upsell strategy that offers renewal or higher-tier continuation after a program's initial phase, leveraging proof and momentum from the completed stage.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 21,
+      "canonical_name": "Channel Partner Quality",
+      "aliases": [
+        "Affiliate Channel Strategy",
+        "Affiliate Integration",
+        "Founder Dependency",
+        "Partner Quality",
+        "Whale vs. Minnow Economics",
+        "Distribution Layers"
+      ],
+      "avoid_terms": ["Affiliate Marketing", "Reseller Program", "Partner Network"],
+      "definition": "The principle that deep relationships with a few high-quality channel partners produce better returns than managing many low-quality ones, requiring active replacement of weak affiliates.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 22,
+      "canonical_name": "Margins",
+      "aliases": [
+        "Gross Margins & Economics",
+        "Margins and Metrics",
+        "Capital Efficiency"
+      ],
+      "avoid_terms": ["Profitability", "Unit Economics", "Gross Profit"],
+      "definition": "Gross margin percentage as the primary lever for reinvestment velocity: a 50% margin business at $20M compounds faster than a 10% margin business at $100M.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 23,
+      "canonical_name": "Sales Talent Pipeline",
+      "aliases": [
+        "Sales Academy Model",
+        "Market vs. Model Issues"
+      ],
+      "avoid_terms": ["Sales Hiring", "Sales Training", "Sales Team Building"],
+      "definition": "The internal system a scaling business uses to recruit, onboard, and continuously replenish sales staff as a repeatable operational process rather than ad hoc hiring.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 24,
+      "canonical_name": "Service Business Unit Economics",
+      "aliases": [
+        "Recurring Revenue",
+        "Service Business Economics",
+        "Tattoo Business Model"
+      ],
+      "avoid_terms": ["Service Revenue Model", "Labor Business Financials", "Professional Services Economics"],
+      "definition": "The margin profiles, LTV-to-CAC ratios, and staffing densities that characterize labor-intensive service businesses, distinguishing their economics from SaaS or product businesses.",
+      "ambiguity_notes": "Overlaps with concept_id 38 (Service Business Model Economics) — 24 covers unit-level metrics, 38 covers model-level margin requirements for talent retention.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 25,
+      "canonical_name": "Outcome-Based Work Design",
+      "aliases": [
+        "Outcome-Based Compensation",
+        "Open-to-Goal Work Framework",
+        "Maker vs Manager Mindset"
+      ],
+      "avoid_terms": ["Remote Work Policy", "Performance Management", "Results-Only Work Environment"],
+      "definition": "A work and compensation structure anchored to outcomes rather than hours, with explicit separation of maker mode (deep work) and manager mode (meetings).",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 26,
+      "canonical_name": "Organizational Decentralization",
+      "aliases": [
+        "Shop-Level Decentralization"
+      ],
+      "avoid_terms": ["Autonomy", "Flat Organization", "Distributed Management"],
+      "definition": "Each operating location holds independent P&L ownership under a dedicated ops manager, enabling accountability without top-down micromanagement.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 27,
+      "canonical_name": "Discretionary Effort and the 5% Core",
+      "aliases": [
+        "Discretionary Effort and Support",
+        "Team & Personal Life",
+        "The 5% Problem"
+      ],
+      "avoid_terms": ["Work-Life Balance", "Employee Wellbeing", "Burnout Prevention"],
+      "definition": "Most daily work supports a small passion core (roughly 5%); accepting this ratio, and maintaining a supportive personal life, sustains high performance without burnout.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 28,
+      "canonical_name": "Behavioral Reinforcement Loops",
+      "aliases": [
+        "Behavior Prediction",
+        "Feedback Loops & Reinforcement",
+        "Identity Reinforcement Through Behavior",
+        "Influence Stack",
+        "Language as Behavior",
+        "Power Through Say-Do",
+        "Reinforcement and Behavior",
+        "Self-Reinforcing Patterns"
+      ],
+      "avoid_terms": ["Habit Loops", "Positive Reinforcement", "Conditioning"],
+      "definition": "The causal loop in which post-behavior consequences determine repetition; consistent reinforcement hardens into identity, and say-do consistency compounds compliance over time.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 29,
+      "canonical_name": "Workflow Automation",
+      "aliases": [
+        "Back Office Automation",
+        "Deal Flow Systemization",
+        "Role-Based to Workflow-Based Thinking",
+        "Task Automation Framework",
+        "Workflow-Based Organization"
+      ],
+      "avoid_terms": ["Process Automation", "Business Automation", "Operations Automation"],
+      "definition": "An organizational design approach that decomposes roles into granular task-level workflows and automates them systematically, replacing headcount-first thinking with task-first thinking.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 30,
+      "canonical_name": "Price Communication",
+      "aliases": [
+        "Emotional Anchoring Before Price Drop",
+        "Language Optimization",
+        "Margin Protection",
+        "Price Anchoring",
+        "Price as Market Signal",
+        "Pricing Tiers",
+        "Seller Psychology"
+      ],
+      "avoid_terms": ["Discount Strategy", "Pricing Presentation", "Negotiation Framing"],
+      "definition": "The discipline of establishing emotional context and perceived value before revealing price, fixing price upfront to avoid renegotiation, and using pricing tiers as market signals.",
+      "ambiguity_notes": "Price Anchoring here means emotional anchoring before a price drop — distinct from the pricing anchor tactic in concept_id 1.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 31,
+      "canonical_name": "Founder Bottleneck",
+      "aliases": [
+        "Founder Bottleneck in Delivery and Sales",
+        "Delivery Model Redesign",
+        "Founder Sales Dependency",
+        "Founder-Driven Sales",
+        "Scaling Limitations",
+        "Cohort-Based Pricing",
+        "Delegation and Key Person Risk",
+        "Key Man Risk and Business Scaling"
+      ],
+      "avoid_terms": ["Founder Dependency", "Key-Person Risk", "Single Point of Failure"],
+      "definition": "The constraint that emerges when a founder is the primary delivery or sales vehicle, capping business scale at their personal capacity; resolved by restructuring delivery or hiring replacements.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 32,
+      "canonical_name": "Motivation Source",
+      "aliases": [
+        "Emotional Authenticity",
+        "Intrinsic Meaning",
+        "Passion Myth",
+        "Passion vs Purpose",
+        "Shame as Fuel"
+      ],
+      "avoid_terms": ["Intrinsic Motivation", "Purpose-Driven Work", "Emotional Driver"],
+      "definition": "The origin of a person's drive (pain, shame, purpose, meaning) — the source is irrelevant to outcomes; purpose is stable and internal whereas passion is fickle and external.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 33,
+      "canonical_name": "Ad Spend Optimization",
+      "aliases": [
+        "Ad Spend Scalability",
+        "Ad Spend Scaling",
+        "Attribution Tracking",
+        "Audience Awareness Pyramid",
+        "Creative Optimization",
+        "Creative Production",
+        "Google Ads Optimization",
+        "Marketing Metrics"
+      ],
+      "avoid_terms": ["Media Buying", "Paid Acquisition", "Performance Marketing"],
+      "definition": "The sequencing of paid media scaling: optimize landing page and creative quality first, then increase budget; ROAS is preserved by raising creative quality before raising spend.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 34,
+      "canonical_name": "Debt Management",
+      "aliases": [
+        "Debt Covenants",
+        "Debt Fear",
+        "Debt Types and Trade-Offs",
+        "Risk Assessment"
+      ],
+      "avoid_terms": ["Leverage Strategy", "Capital Structure", "Debt Financing"],
+      "definition": "A framework for evaluating business debt as a volatility and coverage-ratio problem rather than an emotional fear, distinguishing covenant risk from operational risk.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 35,
+      "canonical_name": "Key-Person Risk Elimination",
+      "aliases": [
+        "Delegation and Key Person Risk",
+        "Key Man Risk and Business Scaling"
+      ],
+      "avoid_terms": ["Founder Dependency", "Key-Person Risk", "Single Point of Failure"],
+      "definition": "The process of decomposing a founder's or key employee's role into composable positions and delegating them to remove the single-point-of-failure constraint.",
+      "ambiguity_notes": "Strongly overlaps with concept_id 31 (Founder Bottleneck) — 31 frames the problem, 35 frames the solution; merge candidate.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 36,
+      "canonical_name": "Observable Reality Framework",
+      "aliases": [
+        "Court-Filter Observable Language",
+        "Language Clarity & Objectivism",
+        "Observable Behavior Specification",
+        "Traits as Continuums"
+      ],
+      "avoid_terms": ["Objective Language", "Behavioral Specification", "Operational Definition"],
+      "definition": "A discipline of defining any concept via observable, court-admissible behavior rather than vague interpretation, treating traits as measurable continuums not binary labels.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 37,
+      "canonical_name": "Recruiting High-Leverage Talent",
+      "aliases": [
+        "Career Placement Economics",
+        "Executive Titling & Levels",
+        "Legal Talent Acquisition",
+        "Law Firm Capacity Constraints",
+        "Talent Quality Multiplier",
+        "Talent Recruitment and Training"
+      ],
+      "avoid_terms": ["Talent Acquisition", "Executive Search", "A-Player Hiring"],
+      "definition": "A-talent is the binding growth constraint in scaling service businesses; recruiting infrastructure and hiring velocity determine the actual growth ceiling.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 38,
+      "canonical_name": "Service Business Model Economics",
+      "aliases": [
+        "Pricing and Gross Margins",
+        "Service Business Model"
+      ],
+      "avoid_terms": ["Service Pricing", "Agency Economics", "Consulting Business Model"],
+      "definition": "Service businesses require structurally higher gross margins than SaaS to absorb talent volatility and sustain the recruiting investment needed for growth.",
+      "ambiguity_notes": "Overlaps with concept_id 24 (Service Business Unit Economics) — 24 covers unit-level metrics (LTV/CAC, staffing density), 38 covers the model-level margin requirements driven by talent volatility.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 39,
+      "canonical_name": "Classic Upsell",
+      "aliases": [
+        "Coaching Product Scaling",
+        "Upsell Offers",
+        "Upselling and Referrals"
+      ],
+      "avoid_terms": ["Cross-Sell", "Add-On Sale", "Expansion Revenue"],
+      "definition": "An upsell offer that targets the next problem a customer discovers after their first purchase, leveraging existing trust and results.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 40,
+      "canonical_name": "Founder Character and Team Attraction",
+      "aliases": [
+        "Character and Vision in Team Building",
+        "Founder Psychology",
+        "Technical Co-Founder Strategy"
+      ],
+      "avoid_terms": ["Employer Branding", "Culture Building", "Leadership Presence"],
+      "definition": "A founder's demonstrated reliability and clarity of vision are the primary determinants of the caliber of talent and equity partners they can attract.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 41,
+      "canonical_name": "Growth Path Selection",
+      "aliases": [
+        "Acquisition vs Organic Growth",
+        "Brand Risk Perception",
+        "Sales Reframing",
+        "Path Optimization",
+        "Launch Strategies"
+      ],
+      "avoid_terms": ["Growth Strategy", "Scale Strategy", "Business Development Path"],
+      "definition": "The decision framework for choosing between organic growth (founder quality-dependent) and acquisition-led growth (deal flow-dependent), shaped by perception risk.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 42,
+      "canonical_name": "Focus Through Subtraction",
+      "aliases": [
+        "Expansion Without Dilution",
+        "Eliminating Secondary Business Lines",
+        "Focus Over Resources",
+        "Focus and Distractions (Idea Management)",
+        "Hedgehog Concept",
+        "Service Line Prioritization",
+        "Specialization vs. Diversification",
+        "The Core Economic Driver"
+      ],
+      "avoid_terms": ["Core Focus", "Niche Down", "Simplification"],
+      "definition": "Scale by deepening the core strength and actively removing distracting service lines or ideas, not by diversifying into adjacent offerings.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 43,
+      "canonical_name": "Capital Deployment Paths",
+      "aliases": [
+        "Franchising Strategy",
+        "Fund Management Path",
+        "Investing Path",
+        "Raising Capital Path",
+        "Real Estate Arm",
+        "Revenue Redeployment",
+        "Strategic Spending",
+        "Watermark vs. Fixed Investment Strategy",
+        "Money Model Framework",
+        "Capital Leverage and Returns"
+      ],
+      "avoid_terms": ["Wealth Management", "Investment Strategy", "Capital Allocation Strategy"],
+      "definition": "The four paths for deploying accumulated business capital: raising a fund, venture investing, franchising, or reinvesting into the core business.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 44,
+      "canonical_name": "Entrepreneurship as Personal Development",
+      "aliases": [
+        "Entrepreneurship Personal Development"
+      ],
+      "avoid_terms": ["Founder Growth", "Self-Development Through Business", "Entrepreneurial Learning"],
+      "definition": "Entrepreneurship is the fastest personal development vehicle because market feedback delivers unfiltered truth that social relationships withhold.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 45,
+      "canonical_name": "Partnership Value Test",
+      "aliases": [
+        "Partnership Requirements Framework"
+      ],
+      "avoid_terms": ["Partner Selection", "Joint Venture Criteria", "Co-Founder Fit"],
+      "definition": "A partnership only creates value if the partner fills a capability gap the founder genuinely cannot fill alone.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 46,
+      "canonical_name": "Founder Conviction Under Isolation",
+      "aliases": [
+        "The Lonely Chapter"
+      ],
+      "avoid_terms": ["Founder Loneliness", "The Dip", "Early-Stage Hardship"],
+      "definition": "The season in which a founder operates without peer support or market validation, which is the definitive test of whether their conviction is intrinsic.",
+      "ambiguity_notes": "The Lonely Chapter is a speaker-specific label (Hormozi register); canonical name is more transferable across speakers.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 47,
+      "canonical_name": "Business Leverage Through Founder Dependency",
+      "aliases": [
+        "Business Focus and Constraints"
+      ],
+      "avoid_terms": ["Founder Value", "Key-Person Leverage", "Indispensability"],
+      "definition": "A business that halts entirely without the founder has negotiating leverage precisely because of that dependency, even though it is not independently scalable.",
+      "ambiguity_notes": "Intentionally distinct from concept_id 31 (Founder Bottleneck): 31 treats dependency as a problem to eliminate; 47 treats it as a tactical asset in negotiations.",
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "Post-Acquisition Integration",
+      "assigned_to": 8,
+      "rationale": "Acquisition integration is an extension of deal mechanics and ownership transition — the core subject of concept 8."
+    },
+    {
+      "topic": "Path Optimization",
+      "assigned_to": 41,
+      "rationale": "Optimizing which growth path to select is directly within the Growth Path Selection concept."
+    },
+    {
+      "topic": "Money Model Framework",
+      "assigned_to": 43,
+      "rationale": "A money model framework describes how capital is deployed and structured — fits Capital Deployment Paths."
+    },
+    {
+      "topic": "Lead Qualification Speed",
+      "assigned_to": 10,
+      "rationale": "Speed of qualification is a dimension of the lead qualification process — belongs in Sales Targeting and Lead Qualification."
+    },
+    {
+      "topic": "Urgency & Momentum",
+      "assigned_to": 12,
+      "rationale": "Urgency is a standard closing mechanic; maintaining momentum is intrinsic to in-person close execution."
+    },
+    {
+      "topic": "Launch Strategies",
+      "assigned_to": 41,
+      "rationale": "Launch strategy is a subset of growth path selection (organic vs acquisition, timing, sequencing); fits concept 41 as an alias."
+    },
+    {
+      "topic": "Distribution Layers",
+      "assigned_to": 21,
+      "rationale": "Distribution layers describes how products reach customers through partner tiers — maps to Channel Partner Quality."
+    },
+    {
+      "topic": "Capital Leverage and Returns",
+      "assigned_to": 43,
+      "rationale": "Leverage and returns analysis is the analytical layer of capital deployment decision-making — fits concept 43."
+    },
+    {
+      "topic": "Capital Efficiency",
+      "assigned_to": 22,
+      "rationale": "Capital efficiency is a ratio of output per dollar invested — closely tied to margin economics and reinvestment velocity."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "source_concept_id": 35,
+      "target_concept_id": 31,
+      "rationale": "Key-Person Risk Elimination (35) is the solution to Founder Bottleneck (31); they describe the same concept from problem and solution angles — one node with both facets is cleaner."
+    },
+    {
+      "source_concept_id": 2,
+      "target_concept_id": 0,
+      "rationale": "Proof Before Optimization (2) is a sub-principle of Sales Process Optimization (0) — the volume-before-close-rate rule is a claim within the parent concept, not a separate concept."
+    }
+  ]
+}

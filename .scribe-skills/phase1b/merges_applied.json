@@ -1,0 +1,75 @@
+{
+  "n_merges": 14,
+  "merges": [
+    {
+      "source": 35,
+      "target": 31,
+      "rationale": "Key-Person Risk Elimination (35) is the solution to Founder Bottleneck (31); they describe the same concept from problem and solution angles \u2014 one node with both facets is cleaner."
+    },
+    {
+      "source": 2,
+      "target": 0,
+      "rationale": "Proof Before Optimization (2) is a sub-principle of Sales Process Optimization (0) \u2014 the volume-before-close-rate rule is a claim within the parent concept, not a separate concept."
+    },
+    {
+      "source": 126,
+      "target": 122,
+      "rationale": "Concept 126 (Pricing Tier Jump Magnitude, 'jump 5x not 50%') is a specific claim about tier spacing that sits inside the domain covered by concept 122 (Tiered Offer Pricing). The '5x jump' is an L2 claim within 122's framework, not an independent L0 concept. Merge 126 into 122; the 5x rule becomes a named claim child. Both share super_cluster proximity (15 vs 38 are both pricing-related)."
+    },
+    {
+      "source": 97,
+      "target": 96,
+      "rationale": "Concept 97 (Brand-Value Misalignment Risk) is a single-member concept whose entire load-bearing content is a counterexample to concept 96 (Brand as Behavioral Pairing). Per HIERARCHY.md \u00a72, a counterexample lives as an L3a node under the claim it bounds, not as a peer L0 concept. Merge 97 into 96 as a counterexample node. The Bud Light / Dylan Mulvaney example becomes an L3a child of the 'good pairing drives behavior' claim."
+    },
+    {
+      "source": 171,
+      "target": 170,
+      "rationale": "Supplier Terms Negotiation (171) has a single member and its definition is a narrow variant of Alternative Financing Structures (170)\u2014both improve cash position without product changes. Merging reduces concept fragmentation in super_cluster 4; supplier-side claims become a condition-gated subcategory within 170."
+    },
+    {
+      "source": 175,
+      "target": 174,
+      "rationale": "Buying Power Qualification (175) has a single member. Its core claim\u2014targeting only those with decision authority spikes close rates\u2014is a qualification filter applied during audience targeting, which is exactly what Audience Targeting via Platform Tools (174) executes. Merge with condition: claims from 175 carry the 'buying authority' condition tag."
+    },
+    {
+      "source": 234,
+      "target": 214,
+      "rationale": "Concepts 214 (Leadership Sets Culture; Culture Determines Acceptable Effort) and 234 (Leader as Standard Holder) share the same actor (leader), same mechanism (leader behavior \u2192 team behavior), and same domain (leadership). 234's 'quality standards' framing is a narrower instance of 214's 'effort standard' framing. Merge 234 into 214; retain 'Leader as Standard Holder' and 'Standards and Business Success' as aliases on 214."
+    },
+    {
+      "source": 207,
+      "target": 206,
+      "rationale": "Concept 207 (Churn Prevention via Recurring Consumption) is a mechanism-level node that lives entirely within concept 206 (Community as Recurring Revenue Model). Churn prevention is the causal mechanism explaining why recurring consumption generates stable revenue. Merge 207 into 206 as a mechanism claim; retain 'Churn Prevention' and 'Consumable Products' as aliases on 206."
+    },
+    {
+      "source": 278,
+      "target": 277,
+      "rationale": "Concept 278 (Service Delivery Tactics) has a single member ('New Service Launch') and a one-sentence definition that is subordinate to the Licensing Model theme. Both share super_cluster 14 and source_cluster 218. Merging into 277 strengthens the concept without loss of information."
+    },
+    {
+      "source": 262,
+      "target": 263,
+      "rationale": "Concepts 262 (Past Survival as Anchor) and 263 (Narrative Structure & Hero Identity) both operate via retrospective reframing to build resilience, share super_cluster 49 and source_cluster 207, and together form one coherent mental model. 263's narrative-construction frame is richer and should absorb 262's survival-anchor mechanism as a sub-claim."
+    },
+    {
+      "source": 304,
+      "target": 303,
+      "rationale": "Concept 304 (Feature-Software Business Model Distinction) has a single source member and its core claim ('adding software features does not make a SaaS company') is a natural child claim under 303 (SaaS Capital and Time Economics). Both are in super_cluster 17 and address the same audience (founders considering SaaS). Proposed merge: absorb 304's definition as a claim under 303, retiring 304 as a standalone L0 concept. Flag for human review before executing \u2014 if 304 has cross-source agreement from a non-SaaS source, keep separate."
+    },
+    {
+      "source": 318,
+      "target": 317,
+      "rationale": "Concept 318 (Content Marketing to Attract Accredited Investors) is a thin single-member concept whose subject matter is a child of concept 317 (Four Investor Acquisition Channels) \u2014 specifically it elaborates on the 'content' channel within the four-channel framework. Proposed merge: 318's definition becomes a claim under the 'content' slot of 317's framework. Retire 318 as a standalone L0 concept."
+    },
+    {
+      "source": 343,
+      "target": 342,
+      "rationale": "Before/After Operationalization (343) is the practice-level how-to for Before/After Visual Proof as Highest-ROI Channel (342). No independent mechanism distinguishes 343 as a separate L0 concept; demote to L4' Practice under 342 at the next verification pass."
+    },
+    {
+      "source": 380,
+      "target": 379,
+      "rationale": "Community Peer Accountability with Selective Refund (380) adds only the community layer to Contingent Refund for Dual Accountability (379). Both originate from source_cluster 296 and share identical super_cluster (41). Merge 380 as a mechanism variant under 379 unless distinct claims surface at extraction."
+    }
+  ]
+}

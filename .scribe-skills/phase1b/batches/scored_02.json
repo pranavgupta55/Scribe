@@ -1,0 +1,798 @@
+{
+  "batch_id": 2,
+  "concepts": [
+    {
+      "concept_id": 48,
+      "canonical_name": "Founder Performance Decay",
+      "aliases": [
+        "Founder Magic Decay",
+        "Ambition-Based Founder Screening",
+        "Comfort as Constraint",
+        "Founder Over-Delivery",
+        "Founder Replacement Economics"
+      ],
+      "avoid_terms": ["founder magic", "founder superpower", "founder advantage"],
+      "definition": "Founders outperform replacements by ~30%; systems must be designed to absorb that margin loss at handoff.",
+      "ambiguity_notes": "Original name 'Founder Magic Decay' is evocative but informal; 'Founder Performance Decay' is more precise without losing the decay framing.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 49,
+      "canonical_name": "Supply Constraint Levers",
+      "aliases": [
+        "Scaling Supply Constraints",
+        "Delivery Ratio Economics",
+        "Influence and Branding Framework (SPCL)",
+        "Lead Source Concentration Risk",
+        "Mental Toughness",
+        "Risk vs. Reward Distribution",
+        "SPCL Framework",
+        "Value Equation",
+        "Value Equation Framework"
+      ],
+      "avoid_terms": ["capacity bottleneck", "supply scaling", "bandwidth problem"],
+      "definition": "Four levers (price, delivery ratio, productization, hiring) that resolve capacity constraints; choice depends on team bandwidth.",
+      "ambiguity_notes": "Cluster absorbs 'Value Equation' and 'SPCL Framework' which are distinct frameworks; they should live as L1 children of this concept, not aliases.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 50,
+      "canonical_name": "Delivery Session Compression",
+      "aliases": [
+        "Session Duration & Structure",
+        "Conversion Funnel Design",
+        "Iteration Vectors",
+        "The Q4 Tax Season Bottleneck",
+        "Time and Cash Flow Constraints",
+        "Urgency"
+      ],
+      "avoid_terms": ["session optimization", "scheduling strategy", "time compression"],
+      "definition": "Restructuring delivery into shorter, denser sessions to split peak-load capacity while framing the change as a client convenience improvement.",
+      "ambiguity_notes": "Members like 'Conversion Funnel Design' and 'Urgency' are loosely related; core concept is specifically about delivery compression as a supply lever.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 51,
+      "canonical_name": "Exit Interview Retention",
+      "aliases": [
+        "Retention Through Exit Interviews",
+        "Customer Feedback Loops",
+        "Damaging Admissions Framework",
+        "Exit Interviews & Objection Handling"
+      ],
+      "avoid_terms": ["churn recovery", "cancellation save", "win-back campaign"],
+      "definition": "Proactively calling canceling customers to surface real obstacles and negotiate creative solutions before churn completes.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 52,
+      "canonical_name": "Systemic vs Segment Risk Diagnosis",
+      "aliases": [
+        "Systemic Market Risk Assessment",
+        "Insurance Industry Disruption",
+        "Market Shift Response",
+        "Risk Identification & Mitigation"
+      ],
+      "avoid_terms": ["market risk", "pivot triggers", "market diagnosis"],
+      "definition": "Framework for determining whether revenue decline is systemic (market-wide) or segment-specific before committing to a model pivot.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 53,
+      "canonical_name": "Activity-Based Time Valuation",
+      "aliases": [
+        "Time-Leverage Tradeoffs",
+        "Delegation of Clinical Role",
+        "ROI on Time Freedom",
+        "Task Delegation and VAs",
+        "Time vs. Money Earning"
+      ],
+      "avoid_terms": ["time management", "leverage", "delegation"],
+      "definition": "Calculating income-per-hour for each activity and delegating everything that falls below the founder's threshold hourly rate.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 54,
+      "canonical_name": "Volume-First Scaling",
+      "aliases": [
+        "Networking at Scale",
+        "Business Rollup Strategy",
+        "Market Economics at Scale",
+        "Marketing Volume",
+        "More, Better, New Scaling",
+        "Volume-Based Hiring",
+        "Work Multiplier Effect"
+      ],
+      "avoid_terms": ["hustle", "volume strategy", "scaling hacks"],
+      "definition": "Multiply output 3-5x on any given channel before declaring saturation; volume compounds non-linearly across networking, hiring, and marketing.",
+      "ambiguity_notes": "Original name 'Networking at Scale' undersells the concept; it applies to all growth inputs, not just networking.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 55,
+      "canonical_name": "Wealth-Relative Value Perception",
+      "aliases": [
+        "Value Perception and Pricing Psychology",
+        "Belief Systems of Wealthy vs. Poor",
+        "Rich Client Dynamics",
+        "Rich Mindset vs. Poor Mindset Pricing",
+        "Selling by Value Ratio",
+        "The Money Belief Gap"
+      ],
+      "avoid_terms": ["rich vs poor mindset", "luxury psychology", "price sensitivity"],
+      "definition": "Customers with accumulated wealth evaluate purchases as price-to-value ratios; customers without wealth perceive only absolute price.",
+      "ambiguity_notes": "The 'mindset' framing risks being moralistic; the concept is behavioral/economic, not normative.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 56,
+      "canonical_name": "AI First-Mover Window",
+      "aliases": [
+        "AI Opportunity Window & Adoption Urgency",
+        "18-Month Opportunity Window",
+        "AI Adoption Rates",
+        "AI Adoption Urgency",
+        "AI Business Opportunities",
+        "AI First Strategy",
+        "Macro Opportunities",
+        "Margin Expansion",
+        "Market Opportunity"
+      ],
+      "avoid_terms": ["AI gold rush", "AI disruption", "tech opportunity"],
+      "definition": "An approximately 18-month window where early AI adopters capture disproportionate margin before capabilities commoditize.",
+      "ambiguity_notes": "The '18-month' anchor is speaker-specific and time-bound; claims under this concept should carry speaker attribution and date context.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 57,
+      "canonical_name": "Reality-Sourced Content",
+      "aliases": [
+        "Content Creation with AI",
+        "Content Engineering for Proof",
+        "Content at Scale vs. Capturing Reality",
+        "Memory-Driven Value Framing",
+        "Short-Form Repurposing",
+        "Virtual Lead Gen"
+      ],
+      "avoid_terms": ["AI content", "content automation", "repurposing"],
+      "definition": "Extracting moments from actual business activity (calendars, calls, events) and repackaging them as authentic proof via AI-assisted repurposing.",
+      "ambiguity_notes": "The canonical name emphasizes the source of authenticity ('reality'), which is the core differentiator from synthetic AI content.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 58,
+      "canonical_name": "Hidden Cost Blindness",
+      "aliases": [
+        "Grass Is Greener Bias",
+        "Criticism from Mediocrity",
+        "Shiny Object Syndrome"
+      ],
+      "avoid_terms": ["FOMO", "grass is greener", "shiny object syndrome"],
+      "definition": "A cognitive bias where new opportunities appear perfect because their costs are invisible, while existing problems feel larger than they are.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 59,
+      "canonical_name": "Cold-Start Trust Architecture",
+      "aliases": [
+        "Trust Building & Credibility Demonstration",
+        "Aligned Incentives",
+        "Building Trust",
+        "Customer Retention Through Transparency",
+        "Demonstration Ads",
+        "Education Ads",
+        "Low-Trust Environment Conversion",
+        "Trust Building"
+      ],
+      "avoid_terms": ["trust building", "credibility", "social proof"],
+      "definition": "Tactics for converting prospects in low-trust contexts: aligned incentives, transparent delivery, and demonstration-over-assertion ad formats.",
+      "ambiguity_notes": "Overlaps with concept 76 (Before/After Proof); proof mechanics should live under that concept; trust architecture is about the design of incentive/transparency signals.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 60,
+      "canonical_name": "Cost Arbitrage Model",
+      "aliases": [
+        "Customer Acquisition Arbitrage",
+        "Ad Agency Business Model",
+        "Core Economic Arbitrage",
+        "Efficiency-Based Value Prop",
+        "Multiple Arbitrage",
+        "Staffing Constraints"
+      ],
+      "avoid_terms": ["margin play", "reseller model", "white-label"],
+      "definition": "Negotiating access to a resource at below-market cost and reselling at market rate; the spread is the economic engine.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 61,
+      "canonical_name": "Offer and Audience Pruning",
+      "aliases": [
+        "Unit Economics Optimization",
+        "Calendar Utilization",
+        "Customer Acquisition Cost Optimization",
+        "Distribution Channels",
+        "Event-Based Revenue Model Optimization",
+        "Ideal Audience Alignment",
+        "Overhead Management"
+      ],
+      "avoid_terms": ["unit economics", "portfolio pruning", "optimization"],
+      "definition": "Eliminating low-ROI volume in favor of high-margin offers targeted at the audience segment that converts most efficiently.",
+      "ambiguity_notes": "Original name 'Unit Economics Optimization' is output-oriented; this name captures the action (pruning) that drives the economic improvement.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 62,
+      "canonical_name": "Distinctiveness Requires Active Effort",
+      "aliases": [
+        "The Cost of Distinctiveness",
+        "Hedonic Adaptation",
+        "Profit as Unnatural",
+        "Rare Pleasure Principle"
+      ],
+      "avoid_terms": ["differentiation", "standing out", "brand uniqueness"],
+      "definition": "Entropy continuously pulls systems toward normalcy; distinctiveness and profit require ongoing active resistance against that gravitational pull.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 63,
+      "canonical_name": "Attention-to-Revenue Funnel",
+      "aliases": [
+        "Attention to Conversion",
+        "Content Creation & Brand Building",
+        "Free Content Creation",
+        "Free Offers",
+        "Give-Ask Ratio Management",
+        "Grand Slam Offers",
+        "Monetization Funnel",
+        "Starting for Free"
+      ],
+      "avoid_terms": ["marketing funnel", "content funnel", "lead funnel"],
+      "definition": "Structured pathway converting raw attention through free content, email capture, and tiered paid products; governed by a give-to-ask ratio.",
+      "ambiguity_notes": "Overlaps with concept 93 (Value Creation & Frames); that concept focuses on offer design; this concept focuses on the funnel architecture moving attention to revenue.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 64,
+      "canonical_name": "Intermediary as Primary Customer",
+      "aliases": [
+        "Centers of Influence as True Customer",
+        "Agency Partnerships",
+        "Center of Influence Partnerships",
+        "Centers of Influence",
+        "Cobblers Shoes Problem"
+      ],
+      "avoid_terms": ["channel partners", "referral partners", "COI"],
+      "definition": "Repositioning intermediaries (CPAs, advisors, agencies) as the primary acquisition target because they refer at scale rather than execute individually.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 65,
+      "canonical_name": "Constraint-Based Strategy",
+      "aliases": [
+        "Physics-Based Goals",
+        "Revenue Model Transition"
+      ],
+      "avoid_terms": ["first-principles thinking", "mathematical strategy"],
+      "definition": "Grounding strategic decisions in mathematical and physical constraints rather than industry convention; superior models replace predecessors rather than coexist.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 66,
+      "canonical_name": "Cold-to-Close Sales Architecture",
+      "aliases": [
+        "Sales Process & Closing Frameworks",
+        "Case Study Close",
+        "Cold Lead Conversion Framework",
+        "Cold Outreach & Referral Growth",
+        "Sales Call Strategy",
+        "Sales Motion Architecture",
+        "Sales Motion Building",
+        "Sales Process & Closing",
+        "Sales Process Design & Closing Mechanics",
+        "Sales Process Overhaul"
+      ],
+      "avoid_terms": ["sales process", "closing techniques", "sales playbook"],
+      "definition": "Structured cold-lead-to-close pathway using VSL pre-framing, qualification, and scripted close frameworks (e.g. C-L-O-S-E-R) to move close rates from 6% to 20%+.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 67,
+      "canonical_name": "Difficulty Curve",
+      "aliases": [
+        "Romanticization Problem"
+      ],
+      "avoid_terms": ["learning curve", "valley of despair", "emotional journey"],
+      "definition": "The named emotional arc of hard endeavors: optimism → informed pessimism → despair → breakthrough; reality is brutal, not inspirational as popularly framed.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 68,
+      "canonical_name": "Conscious Trade Accounting",
+      "aliases": [
+        "Effort & Sacrifice",
+        "Conscious vs Unconscious Trades",
+        "Mastering Rejection Shame"
+      ],
+      "avoid_terms": ["sacrifice", "paying the price", "hard work"],
+      "definition": "Tangible and intangible costs (time, fear, shame) required to achieve outcomes; costs made unconscious are consistently the most expensive.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 69,
+      "canonical_name": "High-Achiever Cognitive Profile",
+      "aliases": [
+        "Psychological Traits of High Achievers",
+        "Hyper Successful Traits",
+        "Evolutionary Bias Toward Pessimism"
+      ],
+      "avoid_terms": ["success mindset", "winner psychology", "high performer traits"],
+      "definition": "Cognitive and personality cluster of high performers: grandiose vision coexisting with crippling insecurity, strong impulse control, and an evolved pessimism bias.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 70,
+      "canonical_name": "Content Surface Area",
+      "aliases": [
+        "Content Surface Area Math",
+        "Short-Form vs. Long-Form Strategy",
+        "Work Multiplication"
+      ],
+      "avoid_terms": ["content output", "content volume", "content strategy"],
+      "definition": "The total audience exposure time generated by a creator's content portfolio; governed by format mix (long vs. short) and publishing frequency.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 71,
+      "canonical_name": "Brand Attribution Window",
+      "aliases": [
+        "Brand Attribution Windows",
+        "Attribution Expansion",
+        "Long-Term Value"
+      ],
+      "avoid_terms": ["long-term ROI", "brand investment", "brand vs performance"],
+      "definition": "The measurement timeframe required to capture brand marketing's compounding return (6–12 months) versus performance marketing's near-term return (30–60 days).",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 72,
+      "canonical_name": "Pricing Anchoring Strategy",
+      "aliases": [
+        "Pricing Strategy & Anchoring",
+        "Anchor Upsell",
+        "Brand Narrative and Anchoring",
+        "Bundle Strategy",
+        "Buy X Get Y Free",
+        "High-End Pricing Strategy",
+        "Luxury Positioning & Pricing Power",
+        "Premium Offers",
+        "Price Multiplier Strategy",
+        "Pricing Strategy & Value Stacking",
+        "Pricing and Premium Offers",
+        "Reciprocity Psychology"
+      ],
+      "avoid_terms": ["premium pricing", "value stacking", "price framing"],
+      "definition": "Anchoring the price perception of a product line by placing a 5–10x tier at the top; the anchor elevates perceived value across all lower tiers.",
+      "ambiguity_notes": "Concept absorbs reciprocity and bundle mechanics as tactics under the anchoring framework; these should be L1 frameworks, not aliases.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 73,
+      "canonical_name": "Long-Term Horizon Advantage",
+      "aliases": [
+        "Long-Term Thinking Compounds",
+        "Delayed Profit",
+        "Long-Term Strategy",
+        "Long-Term Thinking",
+        "Long-Term Vision",
+        "Ray Dalio Fallacy"
+      ],
+      "avoid_terms": ["patience", "long-term thinking", "delayed gratification"],
+      "definition": "Maintaining a 1–10 year decision horizon is a durable competitive edge because most operators optimize for quarters, not years.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 74,
+      "canonical_name": "Founder-Led Executive Recruiting",
+      "aliases": [
+        "CEO-Led Talent Acquisition",
+        "CEO Involvement in Hiring",
+        "Cold Outreach for Executives",
+        "Networking and Headhunters",
+        "Recruiting Leverage",
+        "Team Hiring Strategy"
+      ],
+      "avoid_terms": ["executive recruiting", "talent acquisition", "CEO hiring"],
+      "definition": "Direct founder/CEO cold outreach to top talent, combined with strong employer brand and documented systems, outperforms third-party recruiters for key hires.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 75,
+      "canonical_name": "Offshore Leverage Model",
+      "aliases": [
+        "Lean & Offshore Scaling",
+        "Leadership Hiring Strategy",
+        "Offshore Staffing",
+        "Operating Leverage",
+        "Operational Efficiency and Redundancy",
+        "Operationalization",
+        "Organizational Structure & Hiring"
+      ],
+      "avoid_terms": ["outsourcing", "offshoring", "virtual team"],
+      "definition": "Scaling output per headcount by pairing offshore low-cost execution with documented systems; leadership layers added only when workload forces it.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 76,
+      "canonical_name": "Before/After Proof Engine",
+      "aliases": [
+        "Before/After Proof and Social Proof",
+        "Service as Differentiation"
+      ],
+      "avoid_terms": ["social proof", "case studies", "testimonials"],
+      "definition": "Before-and-after result documentation is the highest-leverage proof format for service businesses; absent documented results, service quality itself becomes the proof.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 77,
+      "canonical_name": "Service Business Margin Targets",
+      "aliases": [
+        "Gross Margins",
+        "Margin Analysis"
+      ],
+      "avoid_terms": ["profit margin", "margin optimization", "margin targets"],
+      "definition": "Service businesses should target ≥80% gross margin and ≥30% net margin; net cannot exceed gross and must fund all operating costs.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 78,
+      "canonical_name": "Service Business Scaling Strategy",
+      "aliases": [
+        "Brand Play Investment",
+        "Customer Avatar and Systematization",
+        "Customer Segmentation Strategy",
+        "Service vs. Automation"
+      ],
+      "avoid_terms": ["service scaling", "agency scaling", "scaling services"],
+      "definition": "Service business growth requires ICP narrowing, brand investment beyond direct response, and segmentation to neutralize objections; mass-market low-price scale requires automation most lack.",
+      "ambiguity_notes": "Overlap with concept 61 (Offer and Audience Pruning); that concept covers unit economics; this concept covers the higher-level growth playbook.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 79,
+      "canonical_name": "SMB Volatility Risk",
+      "aliases": [
+        "SMB Customer Volatility Problem",
+        "Customer Acquisition Cost",
+        "Enterprise vs SMB Pricing Strategy",
+        "SMB Market Dangers"
+      ],
+      "avoid_terms": ["SMB churn", "small business risk", "SMB instability"],
+      "definition": "SMBs transfer their operational dysfunction into their vendor's revenue through high churn; pricing structures must insulate against this volatility absorption.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 80,
+      "canonical_name": "Narrative Motivation Ads",
+      "aliases": [
+        "Narrative-Driven Motivational Ads",
+        "Story Ads",
+        "Activation Friction Removal"
+      ],
+      "avoid_terms": ["story ads", "emotional marketing", "aspirational ads"],
+      "definition": "Ad formats using emotional narrative and lifestyle aspiration, rather than rational product benefits, to motivate action from cold audiences.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 81,
+      "canonical_name": "Early-Stage Identity Construction",
+      "aliases": [
+        "Early-Stage Motivation and Passion Protection",
+        "Early Traction",
+        "Narrative Adaptation"
+      ],
+      "avoid_terms": ["passion", "founder identity", "early stage motivation"],
+      "definition": "Reorienting early-stage focus from external validation toward internal identity formation; updating motivational narrative to sustain action through feedback volatility.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 82,
+      "canonical_name": "Non-Dilutive Ownership Incentives",
+      "aliases": [
+        "Equity vs. Alternatives",
+        "Phantom Equity & Exit Incentives",
+        "Profit Share Pool Structure",
+        "Profit Share Structure"
+      ],
+      "avoid_terms": ["equity compensation", "phantom stock", "profit sharing"],
+      "definition": "Incentive structures (profit-share pools, phantom equity) that create employee ownership thinking without transferring control or diluting the cap table.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 83,
+      "canonical_name": "Prepayment Cash Flow Control",
+      "aliases": [
+        "Franchise and Payment Control",
+        "Cash Flow Model Testing",
+        "Pay Then Work Model",
+        "Prepayment and Cash Flow",
+        "Royalties and Revenue Share"
+      ],
+      "avoid_terms": ["upfront payment", "cash flow management", "franchise model"],
+      "definition": "Structuring business models so payment is collected before work begins, and royalties or revenue share are taken off the top before remitting to operators.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 84,
+      "canonical_name": "Lead Response Time",
+      "aliases": [
+        "Lead Response Time Imperative",
+        "Sales Response Time",
+        "Sales Speed"
+      ],
+      "avoid_terms": ["follow-up speed", "response time", "speed to lead"],
+      "definition": "Contacting inbound leads by phone within 60 seconds; achieves 30–60% conversion versus lower rates from email or delayed response.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 85,
+      "canonical_name": "Cold Outreach Channels",
+      "aliases": [
+        "Cold Email Campaigns",
+        "Cold Outreach Execution",
+        "Warm Outreach Strategy"
+      ],
+      "avoid_terms": ["prospecting", "outbound", "cold calling"],
+      "definition": "Direct one-to-one contact methods (email, phone, DM, direct mail) where personalization and segmentation drive response rates above templated outreach.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 86,
+      "canonical_name": "Suffering-Worthy Goal Selection",
+      "aliases": [
+        "Goal Worth Suffering For",
+        "Dream Outcome",
+        "Goal Clarity",
+        "Unreasonable Ambition",
+        "Why Meaningful Goals Matter"
+      ],
+      "avoid_terms": ["dream goal", "big hairy audacious goal", "BHAG", "purpose"],
+      "definition": "Choosing a goal large and meaningful enough that the required sacrifices feel justified; meaningfulness is the filtering criterion for goal selection.",
+      "ambiguity_notes": null,
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 87,
+      "canonical_name": "Coach CRM Funnel Integration",
+      "aliases": [
+        "CRM Offer Positioning",
+        "Funnel Optimization"
+      ],
+      "avoid_terms": ["CRM integration", "coach funnel", "DM automation"],
+      "definition": "A specific funnel design for coaches: bundle a CRM tool with automated DM follow-up; use case studies of low-follower coaches as the lead magnet.",
+      "ambiguity_notes": "Very narrow/niche concept; may warrant folding into a broader 'Offer-Funnel Alignment' concept if one exists in adjacent batches.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 88,
+      "canonical_name": "Self-Directed Education Investment",
+      "aliases": [
+        "Alternative Education Path",
+        "Buying Access for Learning",
+        "Education Business Model",
+        "Education vs Studio",
+        "Learning Budget and Experimentation"
+      ],
+      "avoid_terms": ["self-education", "skip college", "alternative education"],
+      "definition": "Allocating capital (e.g. $100k in courses/coaching) and a monthly percentage of income directly to learning as a higher-ROI alternative to traditional credentials.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 89,
+      "canonical_name": "Promotion Velocity and Staging",
+      "aliases": [
+        "Promotion Velocity",
+        "Roadmap for AI Business"
+      ],
+      "avoid_terms": ["onboarding speed", "hiring velocity", "promotion timeline"],
+      "definition": "First promotion awarded after an easy win; subsequent promotions require 3–6 month intervals; first client acquisition should take approximately 2 weeks.",
+      "ambiguity_notes": "The 'Roadmap for AI Business' alias is very context-specific; the core concept is timing of incentive staging, not AI-specific.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 90,
+      "canonical_name": "Lead-Cost-Closeout Math",
+      "aliases": [
+        "Lead Cost and Deal Size Math",
+        "CAC vs LTV Math",
+        "Cold Lead Math",
+        "Content Unit Structure",
+        "Content-to-Avatar Congruence"
+      ],
+      "avoid_terms": ["unit economics", "CAC math", "LTV calculation"],
+      "definition": "The three-variable relationship between lead cost, close rate, and deal size whose product determines whether a channel is economically viable.",
+      "ambiguity_notes": "Members 'Content Unit Structure' and 'Content-to-Avatar Congruence' are conceptually distant; likely belong in a content-strategy concept.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 91,
+      "canonical_name": "Avatar Targeting Strategy",
+      "aliases": [
+        "Avatar Clarity",
+        "Avatar Focus",
+        "Avatar Segmentation",
+        "Avatar Selection & Pain Articulation",
+        "Avatar Targeting",
+        "Customer Avatar Refinement & Selection",
+        "Ideal Customer Avatar",
+        "Operational Complexity",
+        "Product Avatar Diversity"
+      ],
+      "avoid_terms": ["buyer persona", "ICP", "target customer", "ideal customer profile"],
+      "definition": "Selecting a hyper-specific customer segment (e.g. PT/OT owners with 5+ locations) and ruthlessly excluding all lower-probability segments from messaging and offers.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 92,
+      "canonical_name": "Service Profit Reinvestment Loop",
+      "aliases": [
+        "Service Business Reinvestment Strategy",
+        "Client Case Studies and Results",
+        "Distribution and Marketing Strategy",
+        "Marketing Strategy",
+        "Reinvestment Strategy",
+        "Revenue Models through Recurring Revenue",
+        "Self-Linking Business Loops",
+        "Sustaining the Business"
+      ],
+      "avoid_terms": ["reinvestment", "profit recycling", "flywheel"],
+      "definition": "Reinvesting service profits into A-player talent and brand assets (books, speaking) that create a compounding loop: better work → reputation → premium pricing → better talent.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 93,
+      "canonical_name": "Offer Value Architecture",
+      "aliases": [
+        "Value Creation & Frames",
+        "Acquisition Structure",
+        "Bonuses",
+        "Continuity Bonus Offers",
+        "Grand Slam Offer",
+        "Lead Magnets and Offers",
+        "Offer Naming",
+        "Offers and Bonuses",
+        "Problem-Solution Framework"
+      ],
+      "avoid_terms": ["offer design", "value proposition", "offer stack"],
+      "definition": "Designing high-value offers using three intellectual frames: the 100x price question, the word-of-mouth scenario, and the unscalable-but-maximally-valuable frame.",
+      "ambiguity_notes": "Overlaps with concept 63 (Attention-to-Revenue Funnel); offer architecture is about the product structure; the funnel concept covers distribution and conversion mechanics.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 94,
+      "canonical_name": "Debt-Free Bootstrap Path",
+      "aliases": [
+        "Bootstrapping Without Debt",
+        "Bootstrapped Business Model",
+        "Cost Elimination",
+        "Early Career Foundation",
+        "Revenue Scaling",
+        "Wealth Building Timeline"
+      ],
+      "avoid_terms": ["bootstrapping", "self-funded", "zero debt"],
+      "definition": "Building to $100k revenue using only personal savings and reinvested profits; requires cutting personal living costs to maximize capital accumulation.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    },
+    {
+      "concept_id": 95,
+      "canonical_name": "Business Model Bifurcation",
+      "aliases": [
+        "Consumer vs. Business Pricing Tiers",
+        "Membership Structuring",
+        "Multi-Tiered Offer Strategy",
+        "Pricing AI Services",
+        "Pricing and LTV-CAC Dynamics for SMBs",
+        "Service Pricing",
+        "Tier Design"
+      ],
+      "avoid_terms": ["market segmentation", "tiered pricing", "price stratification"],
+      "definition": "Client-acquisition agencies must choose between low-cost-high-volume or premium-whale poles; competing at mid-market is an economically untenable position.",
+      "ambiguity_notes": null,
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "Model Pivot",
+      "original_cluster_id": 30,
+      "assigned_to": "ORPHAN",
+      "rationale": "Model Pivot is a case study / example illustrating a business decision, not a load-bearing concept. No concept in batch 02 covers strategic pivots at sufficient specificity to absorb it cleanly. Flag for batch 01 or batch 03 reviewer to check if a 'Business Model Transition' concept exists."
+    },
+    {
+      "topic": "Information vs Curation",
+      "original_cluster_id": 38,
+      "assigned_to": "93",
+      "rationale": "The epistemological claim that curation beats raw information is load-bearing for offer design (why a curated offer commands price over freely available content). Absorb as a mechanism child of concept 93 (Offer Value Architecture)."
+    },
+    {
+      "topic": "Lead Generation Channels and Content Strategy",
+      "original_cluster_id": 40,
+      "assigned_to": "85",
+      "rationale": "Multi-channel lead generation distribution belongs under concept 85 (Cold Outreach Channels), which already covers the channel mechanics. The trust-building core (concept 59) should not absorb distribution tactics."
+    },
+    {
+      "topic": "Fee Psychology",
+      "original_cluster_id": 40,
+      "assigned_to": "72",
+      "rationale": "Fee psychology (artificial fees increase buyer commitment) is a pricing and anchoring mechanism. Absorb into concept 72 (Pricing Anchoring Strategy) as a mechanism-type child claim."
+    },
+    {
+      "topic": "Critical Thinking for Closing Deals",
+      "original_cluster_id": 47,
+      "assigned_to": "ORPHAN",
+      "rationale": "Tautological as kicked: 'critical thinking is essential for closing' carries no actionable content and fails decontextualization (A9). Cannot be meaningfully absorbed into any concept without substantial rewriting. Drop from graph."
+    },
+    {
+      "topic": "Inflation and Future Dollar Value",
+      "original_cluster_id": 72,
+      "assigned_to": "ORPHAN",
+      "rationale": "Generic personal-finance concept with no domain-specific anchoring to the business/hiring context of this corpus. Does not meet the 'changes how reader acts in their business' standard (CLAIM-DEFINITION §4). Drop."
+    },
+    {
+      "topic": "Investment Costs for Initial Month",
+      "original_cluster_id": 72,
+      "assigned_to": "94",
+      "rationale": "The '$1,500 first-month investment cost' fragment is decontextualized on its own but belongs as a quantified anchor under concept 94 (Debt-Free Bootstrap Path) if the source context is bootstrapping costs. Assign tentatively pending source verification."
+    },
+    {
+      "topic": "Spending Discipline and Opportunity Cost",
+      "original_cluster_id": 72,
+      "assigned_to": "94",
+      "rationale": "Spending discipline as a mechanism for accumulating startup capital is a direct component of the bootstrapping path. Absorb into concept 94 (Debt-Free Bootstrap Path)."
+    },
+    {
+      "topic": "Unit Economics and ROI",
+      "original_cluster_id": 72,
+      "assigned_to": "90",
+      "rationale": "Generic unit economics framing maps cleanly to concept 90 (Lead-Cost-Closeout Math), which is the domain-specific instantiation of unit economics in this corpus. Absorb there."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "merge_id": "M02-01",
+      "concepts": [70, 71],
+      "proposed_canonical_name": "Content Surface Area and Attribution",
+      "rationale": "Concepts 70 (Content Surface Area) and 71 (Brand Attribution Window) are tightly coupled: surface area math determines how much brand exposure you generate, attribution window determines how you measure its return. Both originate from source_cluster_id 49 and share super_cluster_id 30. Merging preserves the measurement-to-output relationship and reduces graph fragmentation. Recommend merge only if the resulting definition can stay ≤25 words."
+    }
+  ]
+}

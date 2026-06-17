@@ -1,0 +1,712 @@
+{
+  "batch_id": 7,
+  "concepts": [
+    {
+      "concept_id": 288,
+      "canonical_name": "Sales Process Maturity Routing",
+      "aliases": [
+        "High-Ticket Biz-Op Risk",
+        "Sales Process & Conversion",
+        "Sales to Fulfillment Continuum"
+      ],
+      "avoid_terms": ["sales maturity", "readiness gating", "conversion funnel"],
+      "definition": "Early-stage founders must master soft-close sales before deploying premium or high-ticket offers; premium positioning requires proven process, strong copy, and deep avatar understanding.",
+      "ambiguity_notes": "Name conflates two distinct ideas: (1) routing based on founder maturity, and (2) sales-to-fulfillment handoff. If these split into separate claims, promote 'Sales to Fulfillment Continuum' to its own concept.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 289,
+      "canonical_name": "Content Knowledge Tier Strategy",
+      "aliases": [
+        "Content Strategy: Declarative vs. Procedural Knowledge",
+        "Declarative vs Procedural Content Split"
+      ],
+      "avoid_terms": ["free vs paid content", "knowledge gating", "content funnel"],
+      "definition": "Teach declarative knowledge (about-what) in free content to drive conversions; reserve procedural knowledge (how-to) for paid products to create defensible value separation.",
+      "ambiguity_notes": "Original colon in canonical name ('Content Strategy: Declarative vs. Procedural Knowledge') is a smell — it reads like a heading, not a concept name. Rename drops the colon.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 290,
+      "canonical_name": "Proprietary Capital Equipment as Moat",
+      "aliases": [
+        "Capital Equipment Investment",
+        "Proprietary Technology",
+        "Vertical Integration"
+      ],
+      "avoid_terms": ["manufacturing moat", "capex defensibility", "equipment arbitrage"],
+      "definition": "Investing $400k+ in manufacturing equipment is defensible only when the machine is genuinely proprietary and creates a barrier competitors cannot economically replicate.",
+      "ambiguity_notes": "'Vertical Integration' in aliases is a broad strategic term that could confuse with concept 326 (Integration Captures Full Value). Monitor for overlap; these are distinct: 290 is about capex moat, 326 is about margin capture via wholesale.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 291,
+      "canonical_name": "Wealth Tiers and Diminishing Marginal Returns",
+      "aliases": [
+        "Wealth Tiers",
+        "Diminishing Returns",
+        "Income Plateaus",
+        "Wealth Tier Jumps"
+      ],
+      "avoid_terms": ["happiness curve", "income diminishing returns", "wealth plateau"],
+      "definition": "Quality-of-life from income follows distinct tiers ($0–150k, $150–650k, $650k+) with sharply diminishing marginal happiness gain per tier; beyond $650k additional income yields minimal additional wellbeing.",
+      "ambiguity_notes": "Numbers in definition ($0–150k, $150–650k, $650k+) are speaker-attributed anchors (Hormozi), not general economic facts. Must be attributed at claim level to avoid being read as universal truth.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 292,
+      "canonical_name": "Market Expansion Sequencing",
+      "aliases": [
+        "US Market Priority",
+        "Dominate Before Expand"
+      ],
+      "avoid_terms": ["global expansion", "market prioritization", "go-to-market sequencing"],
+      "definition": "Prioritize dominating the largest, richest available market (e.g., US TikTok Shop creator space) before geographic expansion; dominance in one market maximizes defensibility and cash flow before diluting focus.",
+      "ambiguity_notes": "Definition currently over-anchors to TikTok Shop — that is one example instance; the generalizable claim is the sequencing principle. The example should live at L3, not embedded in the L0 definition.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 293,
+      "canonical_name": "Sleep Schedule as Behavioral Lever",
+      "aliases": [
+        "Sleep Schedule Leverage",
+        "Health and Longevity Benefits",
+        "Implementation Mechanism",
+        "Risk Prevention Outcomes"
+      ],
+      "avoid_terms": ["sleep hygiene", "sleep optimization", "health habit"],
+      "definition": "Consistent sleep schedule prevents cascading downstream disruptions (health decline, appearance loss, cognitive impairment); one behavior lever forestalls dozens of compounding negative outcomes.",
+      "ambiguity_notes": "Alias 'Implementation Mechanism' is too generic — it describes a node type, not a concept alias. Drop it from the public alias list; retained here only as provenance record.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 294,
+      "canonical_name": "Setup Fee as Churn Reduction Mechanism",
+      "aliases": [
+        "Churn Reduction",
+        "Customer Commitment",
+        "One-Time Setup Fees"
+      ],
+      "avoid_terms": ["onboarding fee", "activation fee", "commitment fee"],
+      "definition": "One-time setup fees increase customer commitment via sunk-cost psychology, reducing churn; higher fees correlate directly with lower churn, especially for effort-intensive recurring services.",
+      "ambiguity_notes": "Mechanism (sunk-cost effect) must appear at L2 claim level with the causal because-clause. The L0 definition correctly names the mechanism but cannot substitute for a fully-attributed L2 claim node.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 295,
+      "canonical_name": "VSL as Qualification and Pre-Frame Gate",
+      "aliases": [
+        "VSL Strategy",
+        "Video Sales Letter Framework",
+        "VSL Pre-Framing",
+        "Lead Qualification & BANT Method",
+        "Messaging Framework"
+      ],
+      "avoid_terms": ["sales video", "video funnel", "sales letter"],
+      "definition": "A 5–7 minute video sales letter gates call booking by (1) filtering unqualified leads via secret-word confirmation and (2) pre-framing pricing, promise, proof, and objections so only aligned buyers proceed.",
+      "ambiguity_notes": "'Lead Qualification & BANT Method' is a loose alias — BANT (Budget, Authority, Need, Timeline) is a distinct qualification framework. If BANT surfaces as a separate concept elsewhere, decouple from this node.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 296,
+      "canonical_name": "B2B Partnership Lead Gen Prioritization",
+      "aliases": [
+        "Lead Gen Channels",
+        "B2B Partnership Integration",
+        "B2B Sales Motion",
+        "Lead Generation Scaling"
+      ],
+      "avoid_terms": ["partnership marketing", "channel strategy", "referral network"],
+      "definition": "For new founders, B2B partnerships outperform webinars as a lead channel because partnerships require no technology setup and leverage existing relationships for faster, lower-risk lead generation.",
+      "ambiguity_notes": "Original canonical name 'Lead Gen Channels' is too broad — it is an L0 concept name in the broader Lead Generation cluster. This concept is specifically about the prioritization decision between channels. Renamed to avoid collision.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 297,
+      "canonical_name": "Time-Cost Positioning for High-Income Buyers",
+      "aliases": [
+        "Corporate Client Leverage",
+        "Founder Optimization",
+        "Sales Messaging",
+        "Service Quality and Premium Margins",
+        "Speed & Latency as Leverage",
+        "Time as Capital"
+      ],
+      "avoid_terms": ["convenience selling", "latency pricing", "speed positioning"],
+      "definition": "For buyers earning >$70k/year, time-cost reduction motivates purchase more than price reduction; position on convenience and speed (latency removal) rather than feature lists to command up to 10x cost premium.",
+      "ambiguity_notes": "Six aliases signal over-broad source cluster. 'Founder Optimization' and 'Sales Messaging' are particularly weak aliases — they describe the tactical layer, not the concept. Monitor for future split into (a) the buyer psychology claim and (b) the positioning tactic.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 298,
+      "canonical_name": "Resilience as Recovery-Speed Metric",
+      "aliases": [
+        "Resilience & Recovery Time",
+        "Recovery Time",
+        "Resilience Definition",
+        "Resilience as Leverage"
+      ],
+      "avoid_terms": ["grit", "toughness", "bounce-back", "mental fortitude"],
+      "definition": "Resilience is operationally defined as the speed of recovery from setbacks; fast recovery minimizes lifetime impact of adverse events by shortening behavioral disruption from years to minutes.",
+      "ambiguity_notes": "This is a definitional concept (redefines a common word operationally). The definition must be explicitly speaker-attributed at L2 to signal it is Hormozi's operational definition, not the dictionary sense.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 299,
+      "canonical_name": "Fast Cash Plays via Underutilized Assets",
+      "aliases": [
+        "Fast Cash Plays",
+        "Fast Cash Play",
+        "First Rule of Entrepreneurship"
+      ],
+      "avoid_terms": ["quick wins", "cash flow hack", "revenue sprint"],
+      "definition": "Activate existing underutilized customer or business assets to generate quick revenue that self-funds further service development; resourcefulness with current assets outperforms waiting for external capital.",
+      "ambiguity_notes": "'First Rule of Entrepreneurship' is a bumper-sticker alias that belongs in the L4' practices list, not as a concept alias — it is an imperative, not a description of what the concept is.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 300,
+      "canonical_name": "Differentiation and Premium Positioning",
+      "aliases": [
+        "Market Positioning and Differentiation",
+        "Positioning for Premium Markets",
+        "Value vs Price Positioning",
+        "Market-Driven vs. Strategy-Driven Pricing",
+        "Real Estate Agent Pricing Strategy",
+        "CAC vs Product"
+      ],
+      "avoid_terms": ["competitive differentiation", "premium branding", "value proposition"],
+      "definition": "Compete on defensible offer attributes (quality, speed, reliability, guarantee) not price; premium pricing holds only when offer is differentiated and buyer perception aligns; position as strategy provider, not commodity vendor.",
+      "ambiguity_notes": "'Real Estate Agent Pricing Strategy' is an example instance embedded as an alias — it should live at L3 (Example) under a claim, not as a concept alias. 'CAC vs Product' is too cryptic; needs disambiguation at claim level.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 301,
+      "canonical_name": "Value-Based Pricing and Margin Optimization",
+      "aliases": [
+        "Value-Based vs Cost-Plus Pricing",
+        "Cost-Plus vs Value-Based Pricing",
+        "Price Optimization",
+        "Commodity Problem"
+      ],
+      "avoid_terms": ["cost-plus", "price anchoring", "margin expansion"],
+      "definition": "Shift from cost-plus (showing customers the math) to value-based pricing (anchor high, hide cost structure); two-tier pricing with premium features and accountability beats commodity unlimited plans on margin.",
+      "ambiguity_notes": "Overlaps with concept 300 (Differentiation and Premium Positioning) at super_cluster 22. Both share the 'compete on value not price' theme. Distinction: 300 is about positioning/messaging; 301 is about the pricing mechanism and structure. Maintain separation but flag for merge review.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 302,
+      "canonical_name": "Daily Sales Role-Play as Training Cadence",
+      "aliases": [
+        "Daily Sales Team Role-Play Training",
+        "Group Role-Play Sales Training",
+        "Sales Training Model",
+        "Sales Training at Scale",
+        "Training and Coaching"
+      ],
+      "avoid_terms": ["sales rehearsal", "call training", "role-playing"],
+      "definition": "Daily rotating role-play through sales stages (intro, discovery, offer, objections, looping) keeps scripts sharp and team aligned; cadence of practice is the mechanism, not intensity of individual sessions.",
+      "ambiguity_notes": "Original canonical name is already very clear; retained as alias. 'Training and Coaching' alias is too broad — it names an entire subdomain, not this specific technique.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 303,
+      "canonical_name": "SaaS Capital and Time Economics",
+      "aliases": [
+        "SaaS Economics (Capital & Time)",
+        "SaaS Misconceptions and Validation",
+        "SaaS and Software Business"
+      ],
+      "avoid_terms": ["SaaS business model", "software economics", "startup runway"],
+      "definition": "SaaS typically requires 7+ years to reach profitability with high upfront capital; an existing business with margins is a superior foundation for bootstrapping a SaaS layer.",
+      "ambiguity_notes": "'SaaS Misconceptions and Validation' as alias is weak — it describes a rhetorical category, not what the concept is. Should be dropped from alias list once Phase 1b stabilizes.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 304,
+      "canonical_name": "Feature-Software Business Model Distinction",
+      "aliases": [
+        "Feature-Software Distinction",
+        "Software Economics"
+      ],
+      "avoid_terms": ["software feature", "SaaS vs app", "product vs platform"],
+      "definition": "Adding software features alone does not create a SaaS company or command SaaS-level valuation multiples; business model and recurring revenue structure determine the valuation category.",
+      "ambiguity_notes": "Thin concept — single member ('Software Economics'). May be better absorbed into 303 (SaaS Capital and Time Economics) as a child claim. Flag for merge consideration; kept separate only because the distinction (feature ≠ SaaS) is a load-bearing claim that changes how builders act.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 305,
+      "canonical_name": "Founder Time Redeployment: Delivery to Marketing",
+      "aliases": [
+        "Redeploy Founder Time: Delivery to Marketing",
+        "Delegation Priority (Delivery First)",
+        "Marketing vs. Delivery Time Split",
+        "Operational Leverage and Logistics"
+      ],
+      "avoid_terms": ["founder leverage", "time management", "delegation"],
+      "definition": "Hire for delivery and execution first to free the founder for 100% focus on promotion (sales and marketing), which is the primary business lever for deal flow growth.",
+      "ambiguity_notes": "Overlaps with concept 332 (Time Allocation Across Work and Skill-Building) at super_cluster level. 305 is prescriptive for established founders delegating delivery; 332 is about time structure for early-stage people with a day job. Distinguish at L2 via conditions.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 306,
+      "canonical_name": "Feedback-Loop-Driven Iterative Learning",
+      "aliases": [
+        "Feedback-Driven Iterative Learning",
+        "Behavioral Change",
+        "Feedback Loop Optimization",
+        "Iterative Improvement Process",
+        "Learning Strategy"
+      ],
+      "avoid_terms": ["growth mindset", "continuous improvement", "iteration"],
+      "definition": "Maximizing feedback frequency accelerates learning; winners systematically extract lessons from failures and iterate behavior, compressing the gap between attempt and adjustment.",
+      "ambiguity_notes": "Alias 'Behavioral Change' is too generic — it is a measurable outcome of learning (see concept 329), not a synonym for this concept. Potential overlap with 329 (Learning Requires Behavior Change Through Feedback): 306 is about optimizing the feedback loop rate; 329 is about the definitional requirement of behavior change for learning to count.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 307,
+      "canonical_name": "Multi-Vector Problem-Solving",
+      "aliases": [
+        "Skill Development Via Multiple Approaches",
+        "Multiple Attack Vectors"
+      ],
+      "avoid_terms": ["trial and error", "experimentation", "diverse tactics"],
+      "definition": "Solve hard problems by exhausting many distinct approaches; the constraint is the solver's skill repertoire, not the problem's inherent unsolvability.",
+      "ambiguity_notes": "Thin concept — single source member. Definition is coherent but under-supported. Monitor for additional claims from other sources before treating as high-confidence L0 concept.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 308,
+      "canonical_name": "Daily Execution as Opportunity Readiness",
+      "aliases": [
+        "Daily Practice Builds Readiness for Opportunity",
+        "Daily Execution vs. Celebration",
+        "Focus as Daily Practice",
+        "Preparation and Readiness"
+      ],
+      "avoid_terms": ["consistency", "discipline", "habit building"],
+      "definition": "Consistent daily execution of fundamentals — practice, focus, preparation — builds the readiness state required to capitalize on opportunity when it arrives; opportunity without readiness yields nothing.",
+      "ambiguity_notes": "'Event Planning & Logistics' was a member in the source batch but is absent here — it was likely a misfiled topic that landed in this cluster by similarity error. Should be ORPHAN-reviewed separately.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 309,
+      "canonical_name": "Webinar Soft-Offer Lead Nurture",
+      "aliases": [
+        "Webinar Lead Nurture via Soft Offer",
+        "Webinar Lead Generation",
+        "Webinar Strategy"
+      ],
+      "avoid_terms": ["webinar funnel", "lead magnet", "free training"],
+      "definition": "A free webinar offering a soft pitch (e.g., savings assessment or value demonstration) nurtures leads and builds trust without a hard close, qualifying intent through engagement.",
+      "ambiguity_notes": "super_cluster_id is 0, suggesting this is unassigned or defaulted. Needs manual cluster assignment — likely belongs with lead generation or content marketing clusters. Flag for re-clustering.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 310,
+      "canonical_name": "Upwork Profile Optimization for Client Acquisition",
+      "aliases": [
+        "Upwork Client Acquisition (Title, Portfolio, Pricing)",
+        "Client Acquisition Strategies",
+        "Upwork Freelancing",
+        "Upwork Profile Optimization"
+      ],
+      "avoid_terms": ["freelance marketing", "gig economy optimization", "platform SEO"],
+      "definition": "Secure freelance clients via Upwork by optimizing title, portfolio, location signals, cover letter language, and pricing to align with buyer search patterns and trust signals.",
+      "ambiguity_notes": "Highly platform-specific concept. 'Client Acquisition Strategies' as an alias is too broad — it names an entire strategic domain. The concept is specifically Upwork-context client acquisition, not general client acquisition.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 311,
+      "canonical_name": "Execution and Rapid Adjustment Over Planning",
+      "aliases": [
+        "Execution and Rapid Adjustment Trump Planning",
+        "Execution Over Planning",
+        "Analysis Paralysis",
+        "Information-Based Decision Making",
+        "Pre-Work Over Post-Production"
+      ],
+      "avoid_terms": ["bias for action", "move fast", "lean startup"],
+      "definition": "Perfect plans fail on contact with reality; start execution quickly to gather real information, adjust based on data, and commit to one path for at least 18 months before pivoting.",
+      "ambiguity_notes": "'Information-Based Decision Making' as alias is a near-antonym of the concept's spirit — the concept argues against extensive pre-execution analysis. The alias may have been pulled from a different source section. Verify attribution at L2.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 312,
+      "canonical_name": "Content Cadence for Social Proof and Lead Nurture",
+      "aliases": [
+        "Content Cadence Maintains Perceived Activity",
+        "Content Cadence Basics",
+        "Content as Lead Nurture",
+        "Social Profile Credibility"
+      ],
+      "avoid_terms": ["posting schedule", "content calendar", "social media consistency"],
+      "definition": "Minimum 1–3 posts per week on one platform keeps profile credibly active; prospects verify social presence before responding to outreach; silent profiles signal abandonment and destroy initial trust.",
+      "ambiguity_notes": "The mechanism (prospect verification behavior) is a strong, attributable claim. Must appear as L2 with speaker attribution — do not let it collapse into a practice at L4'.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 313,
+      "canonical_name": "Pareto Pricing: Four-Tier Structure at 5–10x Gaps",
+      "aliases": [
+        "Pareto Pricing Tiers",
+        "Customer Wealth Distribution",
+        "Pareto Principle and Profit Concentration",
+        "Pricing Strategy and Tiered Offers"
+      ],
+      "avoid_terms": ["tiered pricing", "good-better-best", "price ladder"],
+      "definition": "Price in four tiers with 5–10x gaps between each, expecting approximately 20% take-up per step up; this structure captures the full Pareto distribution of buyer wealth and concentrates majority of profit in the top tiers.",
+      "ambiguity_notes": "The '20% take-up per step' claim is a quantified axis that must be source-attributed at L2 — it is speaker-specific and not a general marketing benchmark. Do not embed as a definition axiom.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 314,
+      "canonical_name": "Value as Helping Others Succeed",
+      "aliases": [
+        "Value Definition: Helping Others Succeed",
+        "Providing Value",
+        "Sales Fundamentals"
+      ],
+      "avoid_terms": ["provide value", "add value", "value delivery"],
+      "definition": "Value means helping others get what they want; the obligation is to make a meaningful promise and deliver on it until the other party is satisfied.",
+      "ambiguity_notes": "This is a definitional concept (speaker's operational definition of 'value'). Thin at L0 — a single short definition with no mechanism. Will only become load-bearing at L2 if claims are attached that change how readers price or position. Monitor for promotion or orphaning.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 315,
+      "canonical_name": "Reciprocity and Incentive Alignment",
+      "aliases": [
+        "Reciprocity & Incentive Alignment",
+        "Cost-Benefit Analysis in Relationships",
+        "Goodwill-Based Upsells"
+      ],
+      "avoid_terms": ["win-win", "mutual benefit", "relationship investment"],
+      "definition": "When a behavior change costs you little but benefits another greatly, accept it to build goodwill; frame gifts to employees as helping them to trigger reciprocity and voluntary above-and-beyond performance.",
+      "ambiguity_notes": "'Goodwill-Based Upsells' conflates two separate applications: employee reciprocity (internal) and customer goodwill upsells (external). If both claim types surface, split into two L0 concepts.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 316,
+      "canonical_name": "Google Business Profile Optimization",
+      "aliases": [
+        "Google Business Profile Optimization for Local Visibility",
+        "Google Business Page Optimization",
+        "Google My Business Optimization"
+      ],
+      "avoid_terms": ["local SEO", "GMB", "Google listing"],
+      "definition": "Optimize Google Business Profile listings (formerly Google My Business) for reviews, completeness, and local search visibility to drive inbound discovery from local prospects.",
+      "ambiguity_notes": "Canonical name is overly long in original. Shortened to the platform name + action. 'GMB' is the deprecated name for the product — avoid as alias to prevent confusion with updated Google nomenclature.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 317,
+      "canonical_name": "Four Investor Acquisition Channels",
+      "aliases": [
+        "Four Capital Raising Channels",
+        "Capital Raising Channels",
+        "Affiliate Model",
+        "Paid Advertising for Investors"
+      ],
+      "avoid_terms": ["fundraising channels", "investor outreach", "capital acquisition"],
+      "definition": "Reach accredited investors via four channels: affiliate (partner introductions), paid ads (targeted to accredited), content (thought leadership), and outbound (direct outreach); each channel serves a distinct stage of investor trust.",
+      "ambiguity_notes": "This concept is within super_cluster 10 (capital/finance). 'Affiliate Model' is too broad as an alias — it typically refers to performance-marketing revenue, not investor sourcing via partner introductions. Narrow the alias scope at L2.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 318,
+      "canonical_name": "Content Marketing to Attract Accredited Investors",
+      "aliases": [
+        "Content Marketing to Investor Audience",
+        "Content Marketing for Investors"
+      ],
+      "avoid_terms": ["investor content", "thought leadership", "investor relations content"],
+      "definition": "Regularly creating sector-relevant content attracts accredited investors by positioning the founder as a domain expert, reducing cold-outreach friction and shortening time-to-conviction.",
+      "ambiguity_notes": "Thin concept — single member. May be a child claim of 317 (Four Investor Acquisition Channels) rather than a standalone L0 concept. Keep separate only if there are multiple independent claims about the content-to-investor mechanism.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 319,
+      "canonical_name": "Geographic Monopoly: Fix State Before Expanding",
+      "aliases": [
+        "Geographic Monopoly Build: Fix State First, Expand Later",
+        "Monopolistic Levers",
+        "State Expansion Dynamics"
+      ],
+      "avoid_terms": ["local dominance", "market concentration", "geographic expansion"],
+      "definition": "Increase market share and revenue within one state or market to dominance before expanding to adjacent markets; fragmented multi-market presence is less valuable than monopolistic single-market dominance.",
+      "ambiguity_notes": "'Monopolistic Levers' is a vague alias — it suggests a framework of multiple levers, not a single sequencing concept. Retain as alias only, do not let it promote to a separate concept without additional supporting claims.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 320,
+      "canonical_name": "Conferences and Events as High-Leverage Channels",
+      "aliases": [
+        "Conference and Events Strategy",
+        "High-Leverage Fundraising",
+        "Trade Show Lead Generation"
+      ],
+      "avoid_terms": ["event marketing", "trade show strategy", "conference networking"],
+      "definition": "In-person conferences and events are high-leverage channels for founders seeking fundraising and audience access because face-to-face interaction compresses trust-building timelines unavailable in digital channels.",
+      "ambiguity_notes": "The mechanism (face-to-face trust compression) is a strong causal claim. Must appear at L2 with conditions: which stage of founder, which type of investor or audience. Does not generalize to all conferences for all founders.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 321,
+      "canonical_name": "Investor Confidence Through Assumption Reduction",
+      "aliases": [
+        "Investor Confidence Through De-Risking",
+        "Investor Confidence",
+        "Valuation Narrative"
+      ],
+      "avoid_terms": ["de-risking", "investor pitch", "proof of concept"],
+      "definition": "Investor confidence scales inversely with the number of assumptions they must accept; build investment thesis around provably-true conditions, not aspirational projections, to minimize belief burden.",
+      "ambiguity_notes": "'Valuation Narrative' alias is too broad — it encompasses a separate concept domain (how to frame business valuation). If a valuation-narrative concept surfaces elsewhere, decouple this alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 322,
+      "canonical_name": "Process Design Enables Junior Talent Execution",
+      "aliases": [
+        "Process Design Unlocks Junior Talent",
+        "Sales Process Design",
+        "Sales Training Process",
+        "Script Optimization"
+      ],
+      "avoid_terms": ["standard operating procedure", "playbook", "systematization"],
+      "definition": "Well-designed process (scripts, checklists, repeatable steps) reduces the skill requirement for execution, enabling junior talent to perform consistently at scale without senior-level judgment.",
+      "ambiguity_notes": "Related to concept 302 (Daily Sales Role-Play as Training Cadence) — both are in super_cluster 35. Distinction: 322 is about process design reducing skill requirements; 302 is about practice cadence maintaining skill sharpness. Both are valid L0 concepts; do not merge.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 323,
+      "canonical_name": "Transitive Skill Generalization",
+      "aliases": [
+        "Generalization Across Domains",
+        "Skill Transposition"
+      ],
+      "avoid_terms": ["skill transfer", "cross-domain learning", "transferable skills"],
+      "definition": "Success in one domain transfers to others because the underlying skill-acquisition mechanisms are domain-agnostic; top performers naturally apply this transitive property to compound their advantage across fields.",
+      "ambiguity_notes": "This is a meta-level learning concept. May belong in super_cluster 43 (learning) rather than 11. Monitor for clustering correction — if most claims about this concept appear alongside learning claims, reassign.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 324,
+      "canonical_name": "Brand as Competitive Moat",
+      "aliases": [
+        "Brand as Moat",
+        "Brand Building",
+        "Brand Building Strategy"
+      ],
+      "avoid_terms": ["brand equity", "brand awareness", "brand loyalty strategy"],
+      "definition": "A defensible brand built through customer belief and ambassador evangelism — not patents or arbitrage — commands premium pricing and creates durable competitive advantage that compounds over time.",
+      "ambiguity_notes": "Companion concept to 325 (Brand and Customer Behavior). Distinction: 324 is about brand as a competitive moat (strategic level); 325 is about how brand directly shifts individual customer behavior (behavioral level). Both in super_cluster 40 — maintain separation.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 325,
+      "canonical_name": "Brand Effect on Customer Behavior and WTP",
+      "aliases": [
+        "Brand and Customer Behavior",
+        "Brand Loyalty",
+        "Customer Behavior Change"
+      ],
+      "avoid_terms": ["brand influence", "brand preference", "customer loyalty"],
+      "definition": "Strong brand directly shifts customer choice and willingness-to-pay, driving repeat purchases and lifetime value beyond what product features alone can sustain.",
+      "ambiguity_notes": "See 324 note. 'Customer Behavior Change' as alias is dangerously broad — it could alias to dozens of other concepts. Use only as a provenance alias, not a discoverable synonym.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 326,
+      "canonical_name": "Vertical Integration to Capture Full Margin",
+      "aliases": [
+        "Integration Captures Full Value",
+        "Wholesale Integration",
+        "Fund vs. Operations"
+      ],
+      "avoid_terms": ["vertical integration", "supply chain ownership", "margin capture"],
+      "definition": "Integrating wholesale operations in-house captures the full volume and margin of that channel rather than a shared fraction; cash flow from the wholesale layer funds higher-multiple operational growth.",
+      "ambiguity_notes": "'Fund vs. Operations' is an opaque alias that requires context to parse. It refers to the comparison between running a fund (taking a fraction) vs. operating directly (taking all). Should be renamed at alias level or explained via a claim.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 327,
+      "canonical_name": "Failure as Recoverable Iteration",
+      "aliases": [
+        "Failure is Psychological Until Death",
+        "Psychological Nature of Failure",
+        "Small Bets and Iteration"
+      ],
+      "avoid_terms": ["fail fast", "embrace failure", "failure tolerance"],
+      "definition": "All operational failure is recoverable through iteration unless the actor dies; reframe failure as a solvable iteration problem rather than a terminal event to remove the emotional brake on repeated attempts.",
+      "ambiguity_notes": "Related to 331 (Asymmetric Bet Framework) — both are in super_cluster 26. Distinction: 327 is about reframing failure psychologically; 331 is about the structural (bounded downside / uncapped upside) bet logic. Different claims, different mechanisms — do not merge.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 328,
+      "canonical_name": "Emotion-Action Decoupling",
+      "aliases": [
+        "Evidence Over Emotion",
+        "Feelings vs Actions",
+        "Separation of Feeling and Action"
+      ],
+      "avoid_terms": ["emotional regulation", "stoicism", "composure"],
+      "definition": "Mature behavior separates feeling from action; one can feel afraid, angry, or uncertain while acting normally. Identity is determined by observable action, not internal emotional state.",
+      "ambiguity_notes": "This is a mental-model concept with strong L2 potential. 'Evidence Over Emotion' alias partially overlaps with a different concept (data-driven decision-making) — use cautiously as alias and flag for collision check across the graph.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 329,
+      "canonical_name": "Learning as Measurable Behavior Change",
+      "aliases": [
+        "Learning Requires Behavior Change Through Feedback",
+        "Learning Definition",
+        "Learning & Behavior Change",
+        "Learning Through Iteration",
+        "Content Consumption Trap"
+      ],
+      "avoid_terms": ["learning by doing", "experiential learning", "active learning"],
+      "definition": "Learning is operationally valid only as behavior change in the same triggering condition, proved by re-entering that condition and responding differently; content consumption without behavior change is entertainment, not learning.",
+      "ambiguity_notes": "This is a definitional reframe of 'learning' — one of the strongest mental-model concepts in this corpus. Overlaps with 306 (Feedback-Loop-Driven Iterative Learning) at super_cluster 43. Distinction: 329 defines what learning IS; 306 prescribes how to optimize it. Both must remain distinct L0 nodes.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 330,
+      "canonical_name": "Close Rate as Pricing Calibration Signal",
+      "aliases": [
+        "Close Rate as Pricing Signal",
+        "Close Rate Analysis and Price Optimization",
+        "Close Rate vs Pricing",
+        "High-Ticket Sales Pricing"
+      ],
+      "avoid_terms": ["conversion rate optimization", "close rate analysis", "price testing"],
+      "definition": "Close rate reveals pricing power: 80%+ signals underpricing (3–4x room to raise), 30–40% is calibrated, below 30% indicates a sales or qualification problem rather than a pricing problem.",
+      "ambiguity_notes": "The three-anchor quantified axis (80%+, 30-40%, <30%) is a strong L2b (Quantified Axis) claim requiring Hormozi attribution. Do not present as general sales-ops benchmark — it is a speaker-specific framework.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 331,
+      "canonical_name": "Asymmetric Bet Framework",
+      "aliases": [
+        "Downside Capped Upside Uncapped",
+        "Downside Tolerance Framework",
+        "Overestimating Downside Risk",
+        "Upside Asymmetry"
+      ],
+      "avoid_terms": ["risk tolerance", "expected value", "calculated risk"],
+      "definition": "Identify situations with bounded downside and uncapped upside; a young person with time has a capped loss (zero) and unlimited attempts — arbitrage value lives in the gap between perceived and actual downside risk.",
+      "ambiguity_notes": "Strong mental-model concept with multiple supporting claims. 'Overestimating Downside Risk' alias captures the psychological error this framework corrects — keep it, but note it names a cognitive bias, not the framework itself.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 332,
+      "canonical_name": "Time Block Architecture for Dual-Track Growth",
+      "aliases": [
+        "Time Allocation Across Work and Skill-Building",
+        "The 4-4-4 Time Split",
+        "Time Management",
+        "Time Optimization"
+      ],
+      "avoid_terms": ["time blocking", "deep work", "time management system"],
+      "definition": "Structure time in distinct blocks: day job (8am–5pm) covers present expenses; morning and evening windows (5–9am, 5–9pm) build the future business or skill base; reclaim the ~4-hour windows around employment to run dual-track growth.",
+      "ambiguity_notes": "'Time Management' and 'Time Optimization' as aliases are too generic and will create false-positive connections to dozens of unrelated concepts. Use only as provenance aliases; remove from public synonym table.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 333,
+      "canonical_name": "Monetizing Pre-Processed Complexity",
+      "aliases": [
+        "Monetizing Complexity Reduction",
+        "Complexity Reduction",
+        "Magical Product Experiences",
+        "Value Creation Through Pre-Work"
+      ],
+      "avoid_terms": ["simplification", "white-glove service", "done-for-you"],
+      "definition": "Capture value by doing invisible pre-processing work (research, distillation, filtering) so the customer receives effortless, simple output; the fortune is in the complexity absorbed before delivery, not the delivery itself.",
+      "ambiguity_notes": "'Magical Product Experiences' is a marketing-voice alias — it adds no semantic precision. Retain as provenance only. This concept closely relates to 297 (Time-Cost Positioning) in mechanism: both are about removing friction/complexity for the buyer. Distinction: 297 is about positioning for high-income buyers; 333 is about the product design strategy.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 334,
+      "canonical_name": "Audience Survey for Discovery Channel Attribution",
+      "aliases": [
+        "Audience Survey for Channel Prioritization",
+        "First Touch Analysis"
+      ],
+      "avoid_terms": ["customer survey", "channel attribution", "first-touch attribution"],
+      "definition": "Ask customers where they first heard about you via direct survey; use qualitative results to identify and power-rank the primary discovery channel, then concentrate growth investment in that channel.",
+      "ambiguity_notes": "Thin concept — single source member. Strong as a specific tactic but may be better housed as an L4 Implementation Detail under a broader channel-prioritization concept. Keep as L0 only if additional independent claims surface.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 335,
+      "canonical_name": "ICP Avatar Definition via Customer Language",
+      "aliases": [
+        "Offer Bifurcation Strategy",
+        "ICP Phase 1 Definition"
+      ],
+      "avoid_terms": ["buyer persona", "customer avatar", "ideal customer profile"],
+      "definition": "Define ICP phase 1 using emotional testimonials from representative customers at the $15–25k upfront price point, then mirror their native language in offer positioning and copy.",
+      "ambiguity_notes": "'Offer Bifurcation Strategy' is a misleading alias — bifurcation (splitting into two paths) is not what this concept describes. The alias likely arrived from a different source section. Verify attribution and consider dropping. The $15–25k price anchor must be speaker-attributed at L2.",
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "GitHub Integration",
+      "assigned_to": "ORPHAN",
+      "rationale": "Pure technical tool name with no domain meaning per ubiquitous-language.md ('Skip the names of modules or classes unless they have meaning in the domain language'). No business, craft, or mental-model concept can absorb this topic. Drop."
+    },
+    {
+      "topic": "Website Deployment",
+      "assigned_to": "ORPHAN",
+      "rationale": "Technical infrastructure topic (Vercel/deployment pipeline) with no domain relevance to the business and craft concepts in this corpus. No existing concept can absorb it without category contamination. Drop."
+    },
+    {
+      "topic": "Culture Definition and Codification",
+      "assigned_to": "C-CULTURE-01",
+      "rationale": "Rebuildable as a standalone L0 concept: 'Organizational Culture Codification'. The kick rationale (anecdotal + self-referential definition) means this cannot be a claim yet, but a concept node can exist with a clean definition awaiting load-bearing L2 children. Assign to new concept C-CULTURE-01 pending Phase 2 claim extraction."
+    },
+    {
+      "topic": "Cultural Foundation & Team Setup",
+      "assigned_to": "C-CULTURE-01",
+      "rationale": "Same source cluster as 'Culture Definition and Codification' (cluster 248). Both topics express the same embryonic concept — how founders codify and establish organizational culture. Merge both into new concept C-CULTURE-01 rather than creating two thin concepts."
+    },
+    {
+      "topic": "Regulatory Compliance",
+      "assigned_to": "C-LEGAL-01",
+      "rationale": "The kick rationale identified three separable sub-concepts in cluster 261: (1) ignorance-is-not-a-defense, (2) franchise legal structure, (3) regulatory gray zones. This topic maps to sub-concept 1 and 3. Assign to new concept C-LEGAL-01: 'Regulatory Awareness and Gray-Zone Risk' — the generalizable claim that ignorance of applicable law does not reduce legal exposure, and that operating in gray zones requires active monitoring."
+    },
+    {
+      "topic": "Legal Compliance",
+      "assigned_to": "C-LEGAL-01",
+      "rationale": "Synonym for 'Regulatory Compliance' in context of cluster 261. Fold into C-LEGAL-01 as an alias. Does not constitute a separate concept — the distinction between 'regulatory' and 'legal' compliance at L0 is too fine-grained for this corpus."
+    },
+    {
+      "topic": "Compliance and Law",
+      "assigned_to": "C-LEGAL-01",
+      "rationale": "Third synonym from cluster 261 referring to the same ignorance-and-gray-zone domain. Fold into C-LEGAL-01 as an alias."
+    },
+    {
+      "topic": "Franchise vs Done-For-You",
+      "assigned_to": "C-LEGAL-02",
+      "rationale": "Maps to the franchise legal structure sub-concept identified in the kick rationale. Franchise vs DFY is a distinct decision with specific legal implications (franchise law triggers at certain fee/trademark thresholds). Assign to new concept C-LEGAL-02: 'Franchise vs Done-For-You Legal Structure' — the claim that structuring a program as DFY vs. franchise has material legal and operational differences that affect how the offer can be sold and priced."
+    },
+    {
+      "topic": "Supply of pest control technicians is the bottleneck, not demand for service",
+      "assigned_to": "ORPHAN",
+      "rationale": "Singleton with zero variance and extreme domain specificity (pest control labor market). Not generalizable to a broader L0 concept without fabrication. No existing concept in batch_07 or adjacent super_clusters can absorb a pest-control labor-supply observation. Drop. If pest-control-specific content accumulates in Phase 2, revisit as a domain-specific example under a Delivery Capacity Bottleneck concept."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "source_concept_id": 304,
+      "target_concept_id": 303,
+      "rationale": "Concept 304 (Feature-Software Business Model Distinction) has a single source member and its core claim ('adding software features does not make a SaaS company') is a natural child claim under 303 (SaaS Capital and Time Economics). Both are in super_cluster 17 and address the same audience (founders considering SaaS). Proposed merge: absorb 304's definition as a claim under 303, retiring 304 as a standalone L0 concept. Flag for human review before executing — if 304 has cross-source agreement from a non-SaaS source, keep separate."
+    },
+    {
+      "source_concept_id": 318,
+      "target_concept_id": 317,
+      "rationale": "Concept 318 (Content Marketing to Attract Accredited Investors) is a thin single-member concept whose subject matter is a child of concept 317 (Four Investor Acquisition Channels) — specifically it elaborates on the 'content' channel within the four-channel framework. Proposed merge: 318's definition becomes a claim under the 'content' slot of 317's framework. Retire 318 as a standalone L0 concept."
+    }
+  ]
+}

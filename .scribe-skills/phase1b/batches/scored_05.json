@@ -1,0 +1,702 @@
+{
+  "batch_id": 5,
+  "concepts": [
+    {
+      "concept_id": 192,
+      "canonical_name": "Authenticity in Communication",
+      "aliases": [
+        "Authenticity Premium",
+        "Content Creation from Truth",
+        "Tone And Belief"
+      ],
+      "avoid_terms": ["genuine voice", "being real", "authentic content"],
+      "definition": "Communication rooted in true belief stands out without forced differentiation; realness compounds over time.",
+      "ambiguity_notes": "Distinct from 'Authenticity vs. Imitation' (concept 201), which focuses on not copying others' templates. This concept is about communication tone and belief-origin; 201 is about creative strategy.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 193,
+      "canonical_name": "Active vs. Passive Capital Management",
+      "aliases": [
+        "Active vs Passive Assets",
+        "Passive vs. Active Income Management",
+        "Service vs. Passive Income Management"
+      ],
+      "avoid_terms": ["active income", "passive income", "asset allocation"],
+      "definition": "Keep passive investments passive to avoid opportunity cost; active capital deployed in business returns more than passive vehicles.",
+      "ambiguity_notes": "Not about investment portfolio theory broadly; specific to founder decision of where to deploy personal capital.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 194,
+      "canonical_name": "Accelerated Learning via Paid Mentorship",
+      "aliases": [
+        "Contractor vs Full-Time Hiring",
+        "Early-Mover Advantage",
+        "Paid Partnerships & Collaborations",
+        "Pay As You Go Model"
+      ],
+      "avoid_terms": ["coaching", "paid training", "mentee"],
+      "definition": "Paying for access to experienced operators compresses the learning curve; mentorship converts years into months.",
+      "ambiguity_notes": "Members 'Contractor vs Full-Time Hiring', 'Early-Mover Advantage', and 'Pay As You Go Model' are weakly related to paid mentorship; they likely slipped in via proximity. Canonical name should govern. Flag for re-check if claims don't align.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 195,
+      "canonical_name": "Opportunity Cost & Finite Seasons",
+      "aliases": [
+        "Finite Productive Years",
+        "Opportunity Cost",
+        "Time and Resource Allocation"
+      ],
+      "avoid_terms": ["time management", "prioritization", "work-life balance"],
+      "definition": "A founder has roughly four to five high-leverage business seasons; allocation discipline across those seasons determines ultimate scale.",
+      "ambiguity_notes": "Overlaps conceptually with concept 198 (Tradeoffs & Conscious Sacrifice) but this concept emphasizes finite temporal windows, not the sacrifice mechanics.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 196,
+      "canonical_name": "Creator Vulnerability to AI Disruption",
+      "aliases": [
+        "AI Disruption by Creator Type",
+        "B2C Entertainment and Educators",
+        "Risk Reduction",
+        "Risk Reduction with AI",
+        "The Risk Continuum for Creators"
+      ],
+      "avoid_terms": ["AI risk", "creator economy", "automation threat"],
+      "definition": "AI disrupts low-proof creators (consistency demonstrators) first; creators who prove real-world results are protected by proof requirements AI cannot replicate.",
+      "ambiguity_notes": "Renamed from 'Creator Vulnerability to AI' to make the disruption vector explicit. 'Risk Reduction' as an alias is vague; the concept is specifically about AI-driven displacement risk gradient.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 197,
+      "canonical_name": "Team Capacity as Growth Bottleneck",
+      "aliases": [
+        "Operational Scalability",
+        "Owner Accountability",
+        "Scaling Constraints and Growth Challenges",
+        "Scaling Discipline",
+        "Team Capacity Constraints"
+      ],
+      "avoid_terms": ["scaling up", "growth challenges", "headcount"],
+      "definition": "Founder ego and immature systems gate growth; premature expansion before economics solidify destroys unit economics.",
+      "ambiguity_notes": "The canonical name implies team capacity is the primary constraint, but the definition implicates founder ego/systems maturity. Both angles are valid; claims will clarify which mechanism dominates.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 198,
+      "canonical_name": "Tradeoffs & Conscious Sacrifice",
+      "aliases": [
+        "Focus Tradeoff",
+        "Founder Fulfillment vs. Business Growth",
+        "Growth vs. Safety",
+        "Multi-Business Focus",
+        "Trade-Off Reality",
+        "Trade-Offs and Constraints"
+      ],
+      "avoid_terms": ["balance", "compromise", "give and take"],
+      "definition": "Growth requires the conscious abandonment of something valued—balance, safety, debt-free status, or fulfillment; the sacrifice must be chosen deliberately.",
+      "ambiguity_notes": "Distinct from concept 195 (Opportunity Cost) in that this concept addresses the psychological/emotional act of sacrifice, not the economic lens of foregone returns.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 199,
+      "canonical_name": "Shame vs. Guilt: Navigating Social Signals",
+      "aliases": [
+        "Excuse & Responsibility",
+        "Psychological Principles in Sales",
+        "Shame vs Guilt vs Cringe",
+        "Shame, Guilt, & Social Signals"
+      ],
+      "avoid_terms": ["embarrassment", "social anxiety", "self-esteem"],
+      "definition": "Shame (violating others' rules) and guilt (violating own rules) are distinct; group exposure reframes shame as healing rather than humiliation.",
+      "ambiguity_notes": "'Psychological Principles in Sales' as an alias is generic and could belong to many concepts; retain only if claims reference sales context specifically.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 200,
+      "canonical_name": "Niche Down to Scale Up",
+      "aliases": [
+        "Bootstrap Scaling",
+        "High-Ticket One-on-One Selling",
+        "Niching"
+      ],
+      "avoid_terms": ["specialization", "vertical focus", "niche market"],
+      "definition": "Ultra-specific niche enables 10–100x premium pricing and conversion; one-on-one high-ticket tier generates the capital to fund scalable growth.",
+      "ambiguity_notes": "Canonical name is already the domain idiom. 'Bootstrap Scaling' is a weak alias—it addresses funding strategy, not niching. Retain for now; demote if claims diverge.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 201,
+      "canonical_name": "Authenticity vs. Imitation",
+      "aliases": [
+        "Comparing Early vs Late Chapters",
+        "Identifying Your True Strength",
+        "Replicate Before Iterate"
+      ],
+      "avoid_terms": ["copying", "originality", "creative identity"],
+      "definition": "Build on your genuine strengths, not others' templates; copy exactly first to internalize structure, then improve; never compare your beginning to someone else's middle.",
+      "ambiguity_notes": "Distinct from concept 192 (Authenticity in Communication): 192 is about communication tone; 201 is about creative strategy and self-comparison traps.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 202,
+      "canonical_name": "Deal Flow Generation",
+      "aliases": [],
+      "avoid_terms": ["lead generation", "pipeline building", "business development"],
+      "definition": "Generating market demand is the highest-leverage activity; operations, service, and fulfillment all flow from brand visibility and deal flow.",
+      "ambiguity_notes": "Singleton cluster—no aliases. Verify whether this overlaps with Lead Generation (a likely existing concept in the corpus). Consider merging if claims are redundant.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 203,
+      "canonical_name": "Creator Leverage Strategy",
+      "aliases": [
+        "Creator Influencer Power",
+        "Influencer Leverage Strategy"
+      ],
+      "avoid_terms": ["influencer marketing", "creator economy", "brand ambassador"],
+      "definition": "Creators and influencers own all attention and trust in attention-based markets; leveraging three to five big creators as brand ambassadors drives outsized brand growth.",
+      "ambiguity_notes": "Distinct from concept 204 (Content Volume as Moat): 203 is about deploying others' audiences, 204 is about owning your own production volume.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 204,
+      "canonical_name": "Content Volume as Moat",
+      "aliases": [
+        "Creative Volume Demand"
+      ],
+      "avoid_terms": ["content marketing", "publishing frequency", "content calendar"],
+      "definition": "Accelerating demand for creative output makes production volume a sustainable competitive moat that compounds over time.",
+      "ambiguity_notes": "Singleton alias. The concept is narrow but defensible. Ensure claims reference volume-as-moat mechanism, not just 'more content is better.'",
+      "role": "domain"
+    },
+    {
+      "concept_id": 205,
+      "canonical_name": "Intelligence as Learning Rate",
+      "aliases": [
+        "Intelligence as Rate",
+        "Intelligence as Speed",
+        "Learning Definition and Intelligence"
+      ],
+      "avoid_terms": ["IQ", "cognitive ability", "natural talent"],
+      "definition": "Intelligence is the speed at which behavior changes under constant conditions—a rate measure, not a fixed capacity.",
+      "ambiguity_notes": "This is a redefinition (non-standard usage by the speaker). It belongs in the concept's definition field, not as a standalone claim. Flag for claims extraction: any claim here must attribute the speaker explicitly.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 206,
+      "canonical_name": "Community as Recurring Revenue Model",
+      "aliases": [
+        "Community Value",
+        "Consumable Media",
+        "Recurring Revenue Model"
+      ],
+      "avoid_terms": ["subscription community", "membership site", "community-led growth"],
+      "definition": "Community generates recurring revenue by supplying monthly consumable inputs—education materials and resources—that anchor ongoing customer engagement.",
+      "ambiguity_notes": "Overlaps with concept 207 (Churn Prevention via Recurring Consumption); 206 is the revenue architecture, 207 is the retention mechanism. Keep separate.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 207,
+      "canonical_name": "Churn Prevention via Recurring Consumption",
+      "aliases": [
+        "Churn Prevention",
+        "Consumable Products"
+      ],
+      "avoid_terms": ["retention", "member stickiness", "engagement loops"],
+      "definition": "Monthly consumption of platform products anchors members to the platform and prevents churn by creating habitual return.",
+      "ambiguity_notes": "Mechanism-level concept under concept 206. Consider whether to keep as peer concept or subordinate. Standalone if claims are independently actionable.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 208,
+      "canonical_name": "Market Saturation Narrative Is Usually a Performance Problem",
+      "aliases": [
+        "Market Saturation Myth"
+      ],
+      "avoid_terms": ["saturated market", "market crowding", "competition"],
+      "definition": "Founders who declare market saturation typically misdiagnose weak execution or poor positioning; comparable geographies succeed with the same offer.",
+      "ambiguity_notes": "Assertion-as-canonical-name is intentional and appropriate here—it's load-bearing. Singleton alias. Ensure claims carry named speaker and geographic comparison evidence.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 209,
+      "canonical_name": "Market Selection Criteria: Growth + Pain + Targeting",
+      "aliases": [
+        "Market Selection"
+      ],
+      "avoid_terms": ["TAM", "market sizing", "market fit"],
+      "definition": "Choosing a growing market (>20% CAGR), clear pain, and targeting ease matters more than offer strength or persuasion skill.",
+      "ambiguity_notes": "Colon-delimited canonical name encodes the framework slots (Growth, Pain, Targeting). Claims should populate each slot independently.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 210,
+      "canonical_name": "Geographic Expansion Sequence: Dominate Local, Then Expand",
+      "aliases": [
+        "Local Market Domination Before Expansion",
+        "Geographic Expansion",
+        "Market Expansion and Geographic Scaling"
+      ],
+      "avoid_terms": ["market rollout", "city-by-city expansion", "geographic diversification"],
+      "definition": "Conquer one city fully before expanding nationally or globally; overexpansion before local dominance causes collapse.",
+      "ambiguity_notes": "Sequence-as-name is precise and useful. 'Geographic Expansion' alias is too broad—any claim about expansion would hit it. Narrow it in the alias list if needed.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 211,
+      "canonical_name": "Market Tailwinds Enable Default Growth",
+      "aliases": [
+        "Market Expansion & Growth Tailwinds",
+        "Market Timing and Land Grabs"
+      ],
+      "avoid_terms": ["market timing", "rising tide", "secular trend"],
+      "definition": "Markets growing at 20%+ CAGR deliver returns by default; shrinking markets require heroic execution. Outsized returns concentrate during market imbalances.",
+      "ambiguity_notes": "Renamed from 'Market Tailwinds Enable Growth by Default' to remove the awkward trailing 'by default.' Distinct from concept 209 (Market Selection): 211 is about why tailwinds matter, 209 is the selection rubric.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 212,
+      "canonical_name": "Market Capacity Is Usually Underestimated",
+      "aliases": [
+        "Keyword/Channel Market Capacity Often Underestimated",
+        "Scaling Media Buying and Keywords",
+        "Expansion Hooks for New Markets"
+      ],
+      "avoid_terms": ["audience size", "addressable market", "ad inventory"],
+      "definition": "Saturation is usually false; markets hold far more capacity than founders assume. Test broader hooks rather than optimize narrow existing channels.",
+      "ambiguity_notes": "Renamed to drop the jargon-heavy 'Keyword/Channel' opener. Broader claim about capacity underestimation applies beyond media buying. Retaining original as alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 213,
+      "canonical_name": "Effort Compounds Relative to Starting Conditions",
+      "aliases": [
+        "Genetic Baseline and Effort",
+        "Market Timing",
+        "Speed of Learning Over Starting Point",
+        "Work Ethic Substitution"
+      ],
+      "avoid_terms": ["hard work", "grit", "natural talent vs effort"],
+      "definition": "Extreme work ethic can overcome natural ability disadvantages; focus on controllables—effort and rate of improvement—not luck or genetics.",
+      "ambiguity_notes": "'Market Timing' as an alias here is a mismatch—it belongs to concept 211. Flag for removal from this concept's alias list.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 214,
+      "canonical_name": "Leadership Sets Culture; Culture Determines Acceptable Effort",
+      "aliases": [
+        "Culture & Execution",
+        "Key Man Dependency",
+        "Leadership Quality",
+        "Owner Presence & Culture",
+        "Sales Management and Leadership",
+        "Sales Team Management"
+      ],
+      "avoid_terms": ["company culture", "team morale", "leadership style"],
+      "definition": "A leader sets the effort standard; a declining business unit reflects a leadership problem, not a market or team problem.",
+      "ambiguity_notes": "Long canonical name but precise. Distinct from concept 234 (Leader as Standard Holder): 214 focuses on the culture-effort link, 234 focuses on quality standards enforcement. May warrant merge review.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 215,
+      "canonical_name": "True CAC Differs from Reported CAC",
+      "aliases": [
+        "CAC vs. True CAC",
+        "Conversion Metrics Tracking"
+      ],
+      "avoid_terms": ["blended CAC", "effective CAC", "acquisition cost"],
+      "definition": "Reported CAC obscures true acquisition cost after conversion bottlenecks (e.g., trial-to-paying rate); funnel drop-off masquerades as a targeting problem.",
+      "ambiguity_notes": "The example numbers ($130 reported vs. higher true CAC) should live in claims, not the definition. Definition is correctly abstract here.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 216,
+      "canonical_name": "Cross-Platform Retargeting Increases Touchpoints and Reduces CAC",
+      "aliases": [
+        "Cross-Platform Retargeting"
+      ],
+      "avoid_terms": ["remarketing", "ad retargeting", "multi-channel"],
+      "definition": "Following prospects across Google, Facebook, and other platforms multiplies touchpoints and lowers customer acquisition cost.",
+      "ambiguity_notes": "Assertion-as-name is appropriate. Singleton alias. Ensure claims carry quantified CAC reduction evidence.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 217,
+      "canonical_name": "Revenue Mix: Recurring, Paid Search, and Organic",
+      "aliases": [
+        "Revenue Channels",
+        "Revenue Mix: Recurring, Paid Search, and SEO"
+      ],
+      "avoid_terms": ["revenue streams", "channel mix", "acquisition channels"],
+      "definition": "Revenue splits across recurring (past customers), paid search, and organic SEO; the ratio shifts by business maturity stage.",
+      "ambiguity_notes": "Renamed to use 'Organic' instead of 'SEO' for broader accuracy. Previous canonical name retained as alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 218,
+      "canonical_name": "Platform Choice and Backup Channel Resilience",
+      "aliases": [
+        "Platform Choice and Backup Channels Matter",
+        "Marketing & Ad Management",
+        "Paid Advertising Fundamentals",
+        "Platform Monetization"
+      ],
+      "avoid_terms": ["channel diversification", "platform risk", "ad platform selection"],
+      "definition": "Primary channel failure requires backup channels across Meta, TikTok, and LinkedIn; platform monetization quality varies by audience type.",
+      "ambiguity_notes": "Renamed to make the resilience framing explicit. Previous canonical name retained as alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 219,
+      "canonical_name": "All Life Paths Have Equal Suffering; Outcome Differs by Choice",
+      "aliases": [
+        "Suffering As Fixed Cost",
+        "Suffering Fixed Cost"
+      ],
+      "avoid_terms": ["stoicism", "mindset", "hardship"],
+      "definition": "All career paths involve equivalent suffering; the variable is what you receive in return for that suffering, not whether you suffer.",
+      "ambiguity_notes": "Mental-model-level claim framed as a concept. Verify whether this is better classified as role: 'mental-model' rather than 'domain'.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 220,
+      "canonical_name": "Capacity Expansion Through Stretching",
+      "aliases": [
+        "Capacity Expansion",
+        "Effort Scaling",
+        "Growth Through Adversity",
+        "Mountain Climbing Metaphor",
+        "Personal Growth Philosophy"
+      ],
+      "avoid_terms": ["resilience", "pushing limits", "growth mindset"],
+      "definition": "Breaking each capacity limit raises the belief in what you can handle; growth happens at the capacity edge where pain signals productive stretching.",
+      "ambiguity_notes": "'Mountain Climbing Metaphor' is a L1' node (Metaphor/Analogy per HIERARCHY.md §1) and should be broken out as a separate metaphor node under this concept, not treated as an alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 221,
+      "canonical_name": "Scaling Performance Marketing Compresses Margins Until Breakeven",
+      "aliases": [
+        "Avoiding the Direct Response Doom Loop",
+        "CAC and Margin Dynamics",
+        "Direct Response Doom Loop",
+        "Margin Compression",
+        "Margins Compression",
+        "Operations and Margin Compression",
+        "Performance Marketing Doom Loop"
+      ],
+      "avoid_terms": ["margin squeeze", "ad spend efficiency", "doom loop"],
+      "definition": "Scaling direct response advertising compresses margins as CAC rises, churn accelerates, and supply costs grow, eventually reaching unprofitable breakeven.",
+      "ambiguity_notes": "The 'Direct Response Doom Loop' alias is the speaker's idiom and should be preserved. 'Margins Compression' is a duplicate of 'Margin Compression'—remove one.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 222,
+      "canonical_name": "Parallel Dialer Maximizes Talk Time Over Waiting Time",
+      "aliases": [
+        "Sales Dialer Efficiency"
+      ],
+      "avoid_terms": ["power dialer", "predictive dialer", "outbound calling"],
+      "definition": "Parallel dialing ten numbers simultaneously at ~5% pickup enables a sales team to maximize talk time relative to wait time between dials.",
+      "ambiguity_notes": "Tactical implementation concept. Likely better classified as a Practice or Implementation Detail under a broader outbound sales concept unless there's a load-bearing mechanism claim.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 223,
+      "canonical_name": "Show-Up Rate and Lead Nurture Optimization",
+      "aliases": [
+        "Conversion Funnel",
+        "Lead Nurture"
+      ],
+      "avoid_terms": ["no-show rate", "appointment setting", "lead follow-up"],
+      "definition": "Booked calls have a ~50% baseline show-up rate; a structured lead nurture playbook improves show-up to ~70%.",
+      "ambiguity_notes": "The 50%/70% anchors are load-bearing quantified claims that must appear in the claims layer, not just the definition. 'Conversion Funnel' alias is too broad.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 224,
+      "canonical_name": "Capacity Maximization Without Proportional Headcount",
+      "aliases": [
+        "Capacity Maximization",
+        "Toads to Kiss"
+      ],
+      "avoid_terms": ["operational efficiency", "lean operations", "scaling without hiring"],
+      "definition": "Five micro-levers—parallel dialing, lead nurture, capacity management, and volume—enable teams to serve more clients in the same space without proportional hiring.",
+      "ambiguity_notes": "'Toads to Kiss' is a speaker idiom—keep as alias. The five micro-levers should be enumerated in a Framework node (L1) under this concept.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 225,
+      "canonical_name": "High-Value Customers Are Less Demanding Per Dollar",
+      "aliases": [
+        "Customer Concentration",
+        "Customer Segmentation",
+        "Customer Segmentation & Market Focus",
+        "High-Value Customer Service"
+      ],
+      "avoid_terms": ["enterprise customers", "high-net-worth clients", "premium segment"],
+      "definition": "High-value customers are less price-sensitive and less demanding per revenue dollar because the purchase represents a smaller fraction of their net worth.",
+      "ambiguity_notes": "The net-worth-fraction mechanism ($100K = 1% vs. $100 = 10%) is the load-bearing insight and should anchor the primary claim under this concept.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 226,
+      "canonical_name": "Undefined Words Create Mythology and Prevent Clear Thinking",
+      "aliases": [
+        "Communication Clarity",
+        "Definition and Clarity",
+        "Vague Terminology Problem"
+      ],
+      "avoid_terms": ["semantics", "clear communication", "shared vocabulary"],
+      "definition": "Undefined abstract terms in conversation (e.g., 'quality,' 'success') create mythology; both parties use words without shared meaning, blocking clear thinking.",
+      "ambiguity_notes": "This is a conceptual claim about epistemology/communication, not a practice. Relates to the ubiquitous-language discipline but applied as a domain concept in the corpus.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 227,
+      "canonical_name": "The Execution Gap: Knowledge Without Action",
+      "aliases": [
+        "Accountability Systems",
+        "Customer Activation",
+        "The Execution Gap: Why Entrepreneurs Get Stuck",
+        "The Management Diamond"
+      ],
+      "avoid_terms": ["knowing-doing gap", "procrastination", "implementation"],
+      "definition": "Most people know what to do but do not act; a three-tier accountability structure bridges the gap between knowledge and execution.",
+      "ambiguity_notes": "'The Management Diamond' and 'Accountability Systems' suggest a L1 Framework node (three-tier structure) lives under this concept. 'Customer Activation' is a stretch alias—retain only if claims reference customer onboarding context.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 228,
+      "canonical_name": "Long-Term Learning Strategy",
+      "aliases": [
+        "Income Growth as Primary Lever",
+        "Learning vs Earning Mode",
+        "Money Savings",
+        "Skill Investment ROI",
+        "Volume Over Salary"
+      ],
+      "avoid_terms": ["career development", "skill building", "professional growth"],
+      "definition": "Trade short-term income for skill equity in early career; skill ROI compounds at 100x or more relative to salary growth alone.",
+      "ambiguity_notes": "'Money Savings' is a poor alias—it implies frugality, not skill investment. 'Volume Over Salary' better captures the learning-mode vs. earning-mode tradeoff. Recommend removing 'Money Savings' from alias list.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 229,
+      "canonical_name": "Leverage Through Risk Assumption",
+      "aliases": [
+        "Leverage Through Risk",
+        "Insurance and Risk Transfer",
+        "Skill Monetization",
+        "Warranties and Guarantees",
+        "Work Then Pay Model"
+      ],
+      "avoid_terms": ["financial risk", "risk tolerance", "guarantees"],
+      "definition": "Compensation scales with perceived risk assumed by the provider; selling insurance and warranties means selling risk itself as a product.",
+      "ambiguity_notes": "Renamed to clarify the mechanism is risk assumption (provider takes on client risk), not just risk management. Previous canonical name retained as alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 230,
+      "canonical_name": "Growth-Constrained Prioritization",
+      "aliases": [
+        "Cash Flow Prioritization",
+        "Constraint Management",
+        "Eisenhower Matrix",
+        "Manufacturing Consolidation"
+      ],
+      "avoid_terms": ["task prioritization", "resource allocation", "triage"],
+      "definition": "Defer facility and non-urgent capital expenditures; maximize sales and marketing spend to generate cash for reinvestment in growth constraints.",
+      "ambiguity_notes": "'Eisenhower Matrix' as an alias suggests the speaker used this framework explicitly; if so, it warrants a L1 Framework node, not just an alias. Verify at claims extraction.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 231,
+      "canonical_name": "Environmental Design for Behavior Change",
+      "aliases": [
+        "Environmental Design",
+        "Reference Groups"
+      ],
+      "avoid_terms": ["habit design", "nudge theory", "peer pressure"],
+      "definition": "Changing your environment and reference group shifts behavior faster than willpower or time alone.",
+      "ambiguity_notes": "Renamed to add 'for Behavior Change' to disambiguate from physical/UX environmental design. Previous canonical name retained as alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 232,
+      "canonical_name": "One-Person Company (AI-Enabled)",
+      "aliases": [
+        "AI Skillset Requirements",
+        "Customer Support AI",
+        "Full AI Systems",
+        "One-Person Company",
+        "Revenue Per Employee Leverage"
+      ],
+      "avoid_terms": ["solopreneur", "solo founder", "individual operator"],
+      "definition": "AI automation combined with hacker-level operational skill enables a solo founder to scale to millions in revenue with zero or near-zero headcount.",
+      "ambiguity_notes": "The parenthetical in the canonical name is intentional—it distinguishes the AI-era version from traditional one-person companies. 'AI Skillset Requirements' is an implementation detail, not a peer concept.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 233,
+      "canonical_name": "Free-to-Paid Funnel Architecture",
+      "aliases": [
+        "Decoy Offers",
+        "Free Attraction with Paid Upsell",
+        "Free Content & Monetization Psychology",
+        "Free Work Strategy",
+        "Offer Positioning",
+        "Pick-Your-Price Offer Mechanics",
+        "Solo Business Scaling"
+      ],
+      "avoid_terms": ["freemium", "lead magnet", "free trial"],
+      "definition": "Attract via free or low-friction entry; position paid tiers as 10x more valuable through decoy pricing and anchoring; reinvest in product quality after product-market fit.",
+      "ambiguity_notes": "The widest alias list in this batch (7 aliases). Claims should be checked for overlap with concept 235 (Value Bifurcation in Subscription Pricing), which also covers pricing architecture.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 234,
+      "canonical_name": "Leader as Standard Holder",
+      "aliases": [
+        "Personal Standard Setting",
+        "Standard Elevation",
+        "Standards and Business Success"
+      ],
+      "avoid_terms": ["quality control", "performance management", "accountability"],
+      "definition": "The highest leadership function is setting and relentlessly enforcing quality standards; standards are what separate winners from failures.",
+      "ambiguity_notes": "Overlaps with concept 214 (Leadership Sets Culture; Culture Determines Acceptable Effort). Merge candidate: 214 focuses on effort-culture link; 234 focuses on quality-standards enforcement. Proposing merge review in in_batch_merges.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 235,
+      "canonical_name": "Value Bifurcation in Subscription Pricing",
+      "aliases": [
+        "Churn Reduction in Subscription Models",
+        "Pricing Recurring Content",
+        "Pricing Tier Restructure",
+        "Service-to-Continuity Model",
+        "Value Stacking"
+      ],
+      "avoid_terms": ["subscription model", "tiered pricing", "recurring revenue"],
+      "definition": "Separate one-time skill-building (high-value) from recurring consumables (low-value) in subscription pricing; prevents churn caused by misaligned value expectations.",
+      "ambiguity_notes": "Distinct from concept 206 (Community as Recurring Revenue Model): 235 is about pricing tier architecture; 206 is about the revenue model structure. Some overlap—monitor at claims level.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 236,
+      "canonical_name": "Fortitude Definition",
+      "aliases": [
+        "Behavioral Change Scale",
+        "Fortitude & Behavior Control",
+        "High Fortitude Examples",
+        "High vs Low Resilience",
+        "Low Fortitude Examples"
+      ],
+      "avoid_terms": ["resilience", "mental toughness", "stress tolerance"],
+      "definition": "Fortitude is behavioral intensity post-breakpoint: high fortitude produces tiny reactions; low fortitude produces life-disrupting responses to the same stimulus.",
+      "ambiguity_notes": "Speaker-defined term (non-standard usage). The canonical name 'Fortitude Definition' signals it's a definitional concept—appropriate per CLAIM-DEFINITION.md §2 (Definition node type). Role should be 'mental-model' since it redefines an existing term.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 237,
+      "canonical_name": "Learning Through Action",
+      "aliases": [
+        "Knowledge Types",
+        "Self-Judgment Through Action"
+      ],
+      "avoid_terms": ["learning by doing", "experiential learning", "practice"],
+      "definition": "Procedural knowledge (doing) replaces declarative knowledge (knowing); reading or watching without implementation teaches nothing.",
+      "ambiguity_notes": "Closely related to concept 205 (Intelligence as Learning Rate) and concept 228 (Long-Term Learning Strategy). All three live under a likely super-cluster around learning. Ensure claims differentiate the mechanisms.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 238,
+      "canonical_name": "Savings Rate Over Absolute Income",
+      "aliases": [
+        "Saving vs Spending",
+        "Income vs Lifestyle Discipline",
+        "Lifestyle Design",
+        "Quality of Life Variables"
+      ],
+      "avoid_terms": ["frugality", "budgeting", "financial discipline"],
+      "definition": "Personal savings rate matters more than absolute income for quality-of-life improvement; do not increase lifestyle proportionally to income growth.",
+      "ambiguity_notes": "Renamed from 'Saving vs Spending' to center the actionable insight (savings rate > income). Previous canonical name retained as alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 239,
+      "canonical_name": "Talent Acquisition Standards",
+      "aliases": [
+        "Future Talent Allocation",
+        "Talent Retention",
+        "Talent Selection"
+      ],
+      "avoid_terms": ["hiring process", "recruitment", "talent management"],
+      "definition": "Hire to attract (you want them), not escape (you need a body); reserve equity for future A-players; ruthlessly filter from a large applicant pool.",
+      "ambiguity_notes": "Pull vs. push hiring distinction is the load-bearing mechanism. 'Future Talent Allocation' is about equity reservation strategy—related but could warrant its own concept if claims diverge.",
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "Expectation Management",
+      "assigned_to": 226,
+      "rationale": "Expectation management is a downstream consequence of undefined terms creating misaligned expectations. Concept 226 (Undefined Words Create Mythology and Prevent Clear Thinking) is the parent mechanism; expectation management is its operational application. Absorb as alias or practice under 226."
+    },
+    {
+      "topic": "Opportunity Recognition",
+      "assigned_to": 211,
+      "rationale": "Recognizing opportunities is closely tied to identifying market tailwinds and timing imbalances. Concept 211 (Market Tailwinds Enable Default Growth) covers the structural conditions that create recognizable opportunities. Absorb as alias under 211."
+    },
+    {
+      "topic": "Facility Planning",
+      "assigned_to": 230,
+      "rationale": "Facility planning is a capital expenditure deferral decision within growth-constrained prioritization. Concept 230 (Growth-Constrained Prioritization) explicitly covers deferring facility and non-urgent capital work. Demote to implementation detail under 230."
+    },
+    {
+      "topic": "Future UX Shift",
+      "assigned_to": "ORPHAN",
+      "rationale": "Speculative forward-looking UX claim (voice/text agents replacing UI in 12-24 months) is unfalsifiable, lacks a named source anchor, and has no mechanism. Cannot assign to any existing concept without contaminating it with an ungrounded assertion. Mark ORPHAN; do not surface in knowledge graph."
+    },
+    {
+      "topic": "AI-Generated Websites",
+      "assigned_to": 232,
+      "rationale": "AI-generated websites are an implementation capability of the one-person AI-enabled company. Concept 232 (One-Person Company AI-Enabled) covers AI tooling enabling solo operators. Demote to implementation detail under 232."
+    },
+    {
+      "topic": "Claude Code",
+      "assigned_to": "ORPHAN",
+      "rationale": "Claude Code as a product/tool name is a proper noun implementation detail, not a business/craft concept in the corpus. No existing concept covers AI developer tooling at a level that would absorb this without becoming a product feature list. Mark ORPHAN; demote to practices/implementation_details layer if any claims are retained."
+    },
+    {
+      "topic": "Claude Code Installation",
+      "assigned_to": "ORPHAN",
+      "rationale": "Installation steps are a feature-list implementation detail with no mechanism, conditions, or behavior-change implication. Cannot assign to any concept without violating CLAIM-DEFINITION.md §2 (Implementation Detail rules). Mark ORPHAN; discard from claim graph."
+    },
+    {
+      "topic": "Situational Ethics",
+      "assigned_to": 199,
+      "rationale": "Situational ethics—context-dependent moral judgments—maps most closely to concept 199 (Shame vs. Guilt: Navigating Social Signals), which covers the distinction between violating others' rules vs. own rules. Absorb as alias under 199 with a note that it covers the broader ethical-relativism framing."
+    },
+    {
+      "topic": "The Value of Struggle",
+      "assigned_to": 219,
+      "rationale": "The value of struggle—that hardship is inherently worthwhile—is a direct instantiation of concept 219 (All Life Paths Have Equal Suffering; Outcome Differs by Choice). Both address suffering as an unavoidable fixed cost whose value lies in what it produces. Absorb as alias under 219."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "source_concept_id": 234,
+      "target_concept_id": 214,
+      "rationale": "Concepts 214 (Leadership Sets Culture; Culture Determines Acceptable Effort) and 234 (Leader as Standard Holder) share the same actor (leader), same mechanism (leader behavior → team behavior), and same domain (leadership). 234's 'quality standards' framing is a narrower instance of 214's 'effort standard' framing. Merge 234 into 214; retain 'Leader as Standard Holder' and 'Standards and Business Success' as aliases on 214."
+    },
+    {
+      "source_concept_id": 207,
+      "target_concept_id": 206,
+      "rationale": "Concept 207 (Churn Prevention via Recurring Consumption) is a mechanism-level node that lives entirely within concept 206 (Community as Recurring Revenue Model). Churn prevention is the causal mechanism explaining why recurring consumption generates stable revenue. Merge 207 into 206 as a mechanism claim; retain 'Churn Prevention' and 'Consumable Products' as aliases on 206."
+    }
+  ]
+}

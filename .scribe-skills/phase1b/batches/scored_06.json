@@ -1,0 +1,666 @@
+{
+  "batch_id": 6,
+  "concepts": [
+    {
+      "concept_id": 240,
+      "canonical_name": "Warm vs. Cold Sales Process Mismatch",
+      "aliases": [
+        "Cold Process on Warm Leads",
+        "Sales Motion Changes With Cold Traffic",
+        "Warm Lead Underestimation Problem",
+        "Warm Process Mistake"
+      ],
+      "avoid_terms": ["process mismatch", "sales flow confusion"],
+      "definition": "Cold traffic requires more qualification rigor than warm leads; applying warm-lead shortcuts to cold traffic degrades close rates.",
+      "ambiguity_notes": "Distinguish from 'Funnel Friction Design' (251): this concept is about process selection by lead temperature, not funnel gate design.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 241,
+      "canonical_name": "Teaching Without Operating At Scale",
+      "aliases": [
+        "Operator Recruitment Strategy",
+        "Teaching Authority"
+      ],
+      "avoid_terms": ["teaching credential", "authority positioning"],
+      "definition": "Operational scale is not required to teach; only working, actionable advice grants teaching legitimacy.",
+      "ambiguity_notes": "Distinct from 'Credibility' broadly: scoped to whether scale is a prerequisite for instruction authority.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 242,
+      "canonical_name": "Credible Value Articulation",
+      "aliases": [
+        "Cost of Change Framework",
+        "Value Proposition Design",
+        "Value Proposition Repositioning"
+      ],
+      "avoid_terms": ["value prop", "pitch reframe"],
+      "definition": "Reframe value from unbelievable savings to believable margin arbitrage; 20% guaranteed cost floor forces a 50%+ upside threshold.",
+      "ambiguity_notes": "Distinguish from general 'Pricing Strategy': this is specifically about how to frame the value argument to overcome skepticism.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 243,
+      "canonical_name": "Distribution Channel Selection",
+      "aliases": [
+        "Demand Problem",
+        "Demand Unlocking"
+      ],
+      "avoid_terms": ["channel strategy", "go-to-market"],
+      "definition": "Growth bottleneck is usually distribution, not offer design; exhaust existing channels before building new offers.",
+      "ambiguity_notes": "Overlaps with concept 269 (Single-Channel Domination) on channel focus; 243 is about diagnosing the bottleneck, 269 is about concentration strategy.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 244,
+      "canonical_name": "Pre-Call Signal Stacking",
+      "aliases": [
+        "Pre-Framing & Friction"
+      ],
+      "avoid_terms": ["pre-frame", "pre-call optimization"],
+      "definition": "Stacking small credibility and scarcity signals before a sales call boosts conversion without altering the core offer.",
+      "ambiguity_notes": "Distinct from lead qualification (251): signal stacking applies post-qualification, boosting show rate and buyer readiness.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 245,
+      "canonical_name": "Service-First Upsell Sequencing",
+      "aliases": [
+        "Membership Model Pitfalls"
+      ],
+      "avoid_terms": ["upsell funnel", "membership launch"],
+      "definition": "Upsell memberships after delivering emergency or core service; proven pain and existing relationship lower ascension resistance.",
+      "ambiguity_notes": "Avoid conflating with general 'Upsell Strategy'; this concept is specifically about sequencing membership after demonstrated delivery.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 246,
+      "canonical_name": "Multi-Stage Business Scaling Roadmap",
+      "aliases": [
+        "Business Scaling Roadmap",
+        "Compounding Effort",
+        "Operational Scaling Roadmap",
+        "Service Business Scaling Model",
+        "Willingness to Pay the Price"
+      ],
+      "avoid_terms": ["growth stages", "business phases"],
+      "definition": "Ten-stage progression from zero to $100M+, mapped across eight business functions, with explicit graduation criteria; fewer than 1% of companies complete it.",
+      "ambiguity_notes": "Broader than concept 261 (Overexpansion Risk) and 276 (Business Swamp Constraints), which describe specific failure modes within this roadmap.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 247,
+      "canonical_name": "Founder Authenticity & Audience Alignment",
+      "aliases": [
+        "Authenticity & Personal Brand",
+        "Community & Parasocial Relationships"
+      ],
+      "avoid_terms": ["personal brand", "creator authenticity"],
+      "definition": "Audiences build loyalty around perceived value-alignment with a creator; parasocial connection drives repeat consumption and brand defense.",
+      "ambiguity_notes": "Distinct from 249 (Psychological & Literal Similarity Bias): 247 is about values alignment driving loyalty; 249 is about demographic/physical similarity driving followership.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 248,
+      "canonical_name": "Influence Measurement: Engagement Over Follower Count",
+      "aliases": [
+        "Influencer Type Categories"
+      ],
+      "avoid_terms": ["engagement rate", "follower quality"],
+      "definition": "Influence magnitude correlates with positive-interaction frequency, not absolute follower count; engagement is the operative metric.",
+      "ambiguity_notes": "Related to 274 (RPM as Quality Metric) which applies the same anti-vanity-metric logic to content revenue; 248 applies it to audience influence.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 249,
+      "canonical_name": "Psychological & Literal Similarity Bias",
+      "aliases": [
+        "Likeness And Audience"
+      ],
+      "avoid_terms": ["audience matching", "mirror marketing"],
+      "definition": "Audiences follow creators sharing their values or perceived physical/demographic likeness; both psychological and literal similarity independently drive followership.",
+      "ambiguity_notes": "Distinct from 247 (Founder Authenticity): 249 is about how similarity attracts new followers; 247 is about how authenticity retains and deepens existing audience loyalty.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 250,
+      "canonical_name": "Identity Through Actions",
+      "aliases": [
+        "Action Over Narrative",
+        "Behavioral Flexibility",
+        "Identity as Behavior Aggregation",
+        "Independent Thinking and Agency",
+        "Victim Mindset vs. Agency"
+      ],
+      "avoid_terms": ["growth mindset", "identity shift"],
+      "definition": "Identity is the aggregate of repeated actions, not a fixed essence or past circumstance; treating identity as malleable removes emotional friction from behavioral change.",
+      "ambiguity_notes": "Distinct from concept 262-264 (resilience/hardship cluster): 250 is about identity construction mechanism; 262-264 are about sustaining through difficulty.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 251,
+      "canonical_name": "Lead Qualification Friction",
+      "aliases": [
+        "Application Page Scoring",
+        "Friction in Funnel Design",
+        "Funnel Friction Design",
+        "High-Ticket Sales Funnel",
+        "Lead Qualification Frameworks",
+        "Lead Qualification Funnel",
+        "Lead Quality vs Lead Form Trade-offs",
+        "Sales Funnel Friction"
+      ],
+      "avoid_terms": ["lead scoring", "application funnel"],
+      "definition": "Add qualification gates (questionnaire, wound-size scoring, budget pre-qualification) before consultations to eliminate unqualified leads and improve close efficiency.",
+      "ambiguity_notes": "Distinct from 252 (Funnel Conversion Rate Optimization): 251 is about raising lead quality via friction gates; 252 is about lowering friction to improve volume conversion.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 252,
+      "canonical_name": "Funnel Conversion Rate Optimization",
+      "aliases": [
+        "Conversion Rate Benchmarks",
+        "Conversion Rate Optimization",
+        "Landing Page Optimization"
+      ],
+      "avoid_terms": ["CRO", "funnel optimization"],
+      "definition": "Simplify landing-page friction, dedicate pages to paid traffic, and optimize sales messaging and lead-scoring back-end to improve funnel conversion by 2-3x.",
+      "ambiguity_notes": "Distinct from 251 (Lead Qualification Friction): 252 adds friction strategically to improve quality; 252 removes friction to maximize volume-based conversion.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 253,
+      "canonical_name": "Luck Surface Area",
+      "aliases": [
+        "Network Expansion"
+      ],
+      "avoid_terms": ["networking", "relationship building"],
+      "definition": "Daily geographic proximity and consistent networking expand serendipity surface area, accelerating opportunity clustering and mentorship access.",
+      "ambiguity_notes": "Distinct from 271 (Community Network Effects): 253 is individual-level behavior to attract serendipitous opportunities; 271 is a structural market moat from community density.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 254,
+      "canonical_name": "Motivation as Deprivation Inverse",
+      "aliases": [
+        "Deprivation and Drive",
+        "Founder Desperation",
+        "Motivation Definition"
+      ],
+      "avoid_terms": ["intrinsic motivation", "drive"],
+      "definition": "Motivation is the inverse of deprivation; scarcity (desperation) drives action more reliably than aspirational messaging because people act hardest toward what they lack.",
+      "ambiguity_notes": "Distinct from 264 (Difficulty as Competitive Selection): 254 is about why desperate founders act; 264 is about hard paths as self-selection filters.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 255,
+      "canonical_name": "Referral & Retention Economics",
+      "aliases": [
+        "Customer Experience",
+        "Customer Referral Programs",
+        "Franchise Referrals",
+        "Ongoing Revenue Share vs Upfront Spiff",
+        "Product-Market Goodwill",
+        "Referrals"
+      ],
+      "avoid_terms": ["referral program", "NPS"],
+      "definition": "Ongoing-share referral incentives (10-15%) outperform one-time spiffs; goodwill (value-minus-price gap) drives referral velocity and repeat purchase.",
+      "ambiguity_notes": "Distinct from 267 (Churn and Retention): 255 focuses on incentive structure and goodwill mechanics driving new referrals; 267 focuses on churn thresholds and compounding growth math.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 256,
+      "canonical_name": "Training Precision",
+      "aliases": [
+        "Skill Deconstruction",
+        "Skill as Chained Behaviors",
+        "Trait Development"
+      ],
+      "avoid_terms": ["skills training", "behavior modification"],
+      "definition": "Break abstract traits into observable micro-behaviors; train each discrete behavior via checklist and repetition rather than coaching abstract qualities.",
+      "ambiguity_notes": "Distinct from general 'Hiring' or 'Team Building': scoped to the method of training, not who to hire or how to evaluate fit.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 257,
+      "canonical_name": "Content-Led Sales Strategy",
+      "aliases": [
+        "Content-Driven Ad Funnel",
+        "Paid Content Amplification",
+        "Short-Form to Long-Form Conversion",
+        "YouTube Multi-Format Strategy"
+      ],
+      "avoid_terms": ["content marketing", "organic + paid strategy"],
+      "definition": "Identify organic content winners first via engagement and CTR, then scale via paid distribution; content and ads operate as a unified system.",
+      "ambiguity_notes": "Distinct from 260 (Creative Variation Strategy): 257 is about organic-to-paid amplification sequence; 260 is about volume testing and burnout avoidance within content production.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 258,
+      "canonical_name": "Benchmarking Against Winners, Not Medians",
+      "aliases": [
+        "Industry Averages",
+        "Industry Standards Trap",
+        "Margin Improvement"
+      ],
+      "avoid_terms": ["best practices", "industry benchmark"],
+      "definition": "Industry averages guarantee mediocrity because they measure median performers; benchmark against top-decile operators and ignore 'good enough' framing.",
+      "ambiguity_notes": "Related to 272 (Restaurant Profitability) which gives a concrete benchmark target; 258 is the principle, 272 is a domain-specific application.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 259,
+      "canonical_name": "Wealth Distribution & Customer Targeting",
+      "aliases": [
+        "Target Avatar Selection",
+        "Wealth Distribution",
+        "Wealth Distribution Economics"
+      ],
+      "avoid_terms": ["ideal customer profile", "ICP"],
+      "definition": "Top 10% hold disproportionate wealth; profitability scales with targeting affluent customers over broad-base or bottom-50% audiences.",
+      "ambiguity_notes": "Distinct from general 'Avatar Selection': 259 specifically argues the wealth distribution math as the strategic rationale for upmarket targeting.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 260,
+      "canonical_name": "Creative Variation Strategy",
+      "aliases": [
+        "Content Creator Burnout",
+        "Content Enjoyment",
+        "Creator Sustainability",
+        "Winning Hooks From Existing Content",
+        "Short-Form vs Long-Form Content"
+      ],
+      "avoid_terms": ["A/B testing content", "content calendar"],
+      "definition": "Test hundreds of content variations weekly on the same themes; audiences need reminders more than novelty, so avoid burnout by committing to an enjoyable format first.",
+      "ambiguity_notes": "Distinct from 257 (Content-Led Sales Strategy): 260 is about the internal creative process and volume testing; 257 is about the distribution amplification system.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 261,
+      "canonical_name": "Overexpansion Risk",
+      "aliases": [
+        "Margin Degradation",
+        "Private Equity Growth Problems"
+      ],
+      "avoid_terms": ["premature scaling", "growth trap"],
+      "definition": "Premature multi-location or multi-division scaling compounds operational debt faster than single-market optimization; fix unit economics before expanding.",
+      "ambiguity_notes": "Distinct from 276 (Business Swamp Constraints): 276 describes the $1-3M founder-trap; 261 describes the expansion error committed when escaping it prematurely.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 262,
+      "canonical_name": "Past Survival as Anchor",
+      "aliases": [
+        "Reframing Difficulty (centroid)",
+        "Resilience Building"
+      ],
+      "avoid_terms": ["resilience", "grit"],
+      "definition": "Reference past survival events as evidence of current capacity to sustain through new, comparable challenges.",
+      "ambiguity_notes": "See merge proposal: highly overlaps with 263 (Narrative Structure & Hero Identity); both operate via retrospective reframing for resilience. Consider merge.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 263,
+      "canonical_name": "Narrative Structure & Hero Identity",
+      "aliases": [
+        "The Hero's Journey Mindset",
+        "Future-Casting Your Narrative",
+        "Framing Life as Happening For You"
+      ],
+      "avoid_terms": ["hero's journey", "positive reframing"],
+      "definition": "Construct a larger narrative around hardship that positions the self as protagonist, converting suffering into identity-building material.",
+      "ambiguity_notes": "See merge proposal with 262: both use retrospective reframing for resilience; 263 adds the prospective/narrative-construction angle. Could merge under a unified 'Resilience Reframing' concept.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 264,
+      "canonical_name": "Difficulty as Competitive Selection",
+      "aliases": [
+        "Reframing Hardship as Competitive Advantage",
+        "Workload Tolerance"
+      ],
+      "avoid_terms": ["competitive advantage through hardship", "barrier to entry"],
+      "definition": "Hard paths function as self-selection filters; enduring difficulty proves the path has few followers, reducing competition.",
+      "ambiguity_notes": "Distinct from 262/263 (resilience reframing): 264 uses difficulty as a competitive signal, not primarily as a resilience mechanism.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 265,
+      "canonical_name": "Deal Flow Acquisition",
+      "aliases": [
+        "Agent Recruitment"
+      ],
+      "avoid_terms": ["pipeline", "deal sourcing"],
+      "definition": "Sustained deal-flow volume as a market penetration metric; agent recruitment drives pipeline density.",
+      "ambiguity_notes": "Distinct from 269 (Single-Channel Domination): 265 measures pipeline volume; 269 is about concentrating on one acquisition channel.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 266,
+      "canonical_name": "Alumni Earnings Documentation",
+      "aliases": [
+        "Customer LTV Leverage"
+      ],
+      "avoid_terms": ["case studies", "testimonials"],
+      "definition": "Systematically document post-certification earnings lifts as a credible value signal that justifies premium program pricing.",
+      "ambiguity_notes": "Distinct from generic 'Social Proof': scoped to outcomes-based documentation (earnings lift) rather than sentiment or satisfaction testimonials.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 267,
+      "canonical_name": "Churn and Retention",
+      "aliases": [
+        "Churn vs. Recurring Revenue",
+        "Customer Lifetime Value Leverage",
+        "Retention Benchmarks",
+        "Retention vs. Growth Mindset",
+        "Revenue Retention & Stickiness",
+        "Revenue Retention and Stickiness"
+      ],
+      "avoid_terms": ["retention rate", "churn rate"],
+      "definition": "Retention above 80% annually enables compounding growth; churn below 20% is the critical threshold separating growth from treadmill businesses.",
+      "ambiguity_notes": "Distinct from 281 (Churn as Hidden Growth Constraint): 267 describes the retention math and threshold; 281 describes how high churn masks acquisition inefficiency specifically in agency models.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 268,
+      "canonical_name": "Sales Culture as Volatility Driver",
+      "aliases": [
+        "Partner Recruitment",
+        "Sales Culture Volatility",
+        "Sales Culture and Consistency"
+      ],
+      "avoid_terms": ["sales team culture", "rep volatility"],
+      "definition": "Feast-famine revenue cycles reflect a sales culture favoring mercenary incentives over mission alignment, producing inconsistent output.",
+      "ambiguity_notes": "Distinct from 265 (Deal Flow Acquisition): 268 is about cultural consistency of the sales team; 265 is about volume of deal pipeline.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 269,
+      "canonical_name": "Single-Channel Domination",
+      "aliases": [
+        "Compounding Growth Through One Channel",
+        "Lead Generation and Sales Strategy",
+        "Sales Channel Focus"
+      ],
+      "avoid_terms": ["channel focus", "omni-channel"],
+      "definition": "Dominate one lead source fully before adding others; concentration builds negotiating power and compounding advantage unavailable to diversified operators.",
+      "ambiguity_notes": "Distinct from 243 (Distribution Channel Selection): 243 diagnoses whether distribution is the bottleneck; 269 prescribes concentration once the channel is chosen.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 270,
+      "canonical_name": "Single-Product Portfolio",
+      "aliases": [
+        "Multi-Product vs Single-Product Strategy",
+        "Portfolio vs Single Brand",
+        "SKU Optimization"
+      ],
+      "avoid_terms": ["product portfolio", "SKU rationalization"],
+      "definition": "One strong brand with a clear winning product outperforms a portfolio of four to five simultaneously juggled products.",
+      "ambiguity_notes": "Distinct from 269 (Single-Channel Domination): 270 is about product/brand concentration; 269 is about channel concentration.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 271,
+      "canonical_name": "Community Network Effects & Market Moat",
+      "aliases": [
+        "ACQ Network",
+        "Community Building Asset",
+        "Creator Community Network Effects",
+        "Network & Community"
+      ],
+      "avoid_terms": ["community building", "network effects"],
+      "definition": "First-mover community advantage creates permanent market lock-in via network density that late entrants cannot replicate at the same cost.",
+      "ambiguity_notes": "Distinct from 253 (Luck Surface Area): 271 is a structural market moat via community density; 253 is individual-level behavioral surface area expansion.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 272,
+      "canonical_name": "Restaurant Profitability",
+      "aliases": [
+        "Margin Optimization"
+      ],
+      "avoid_terms": ["restaurant margins", "F&B profitability"],
+      "definition": "Target 27% net margins as a profitability floor for restaurants, benchmarked against Panda Express corporate operating efficiency.",
+      "ambiguity_notes": "Narrow domain application of concept 258 (Benchmarking Against Winners, Not Medians); if the corpus has few restaurant-specific sources, consider merging into 258 as an example node.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 273,
+      "canonical_name": "Data Architecture First",
+      "aliases": [
+        "Data Architecture",
+        "Data-First and AI-Ready Architecture"
+      ],
+      "avoid_terms": ["data strategy", "AI readiness"],
+      "definition": "Data architecture must precede the AI layer; AI amplifies existing structured data and cannot create organization from unstructured chaos.",
+      "ambiguity_notes": "Scoped to the sequencing principle (data before AI), not to data architecture design in general.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 274,
+      "canonical_name": "Revenue Measurement (RPM as Quality Metric)",
+      "aliases": [
+        "Brand Measurement & Metrics (centroid)",
+        "RPM as Quality Metric",
+        "Advertising Metrics and ROI",
+        "Channel ROI Analysis"
+      ],
+      "avoid_terms": ["CPM", "views", "impressions"],
+      "definition": "RPM (revenue per 1,000 views) and behavioral influence outperform vanity metrics like raw view count as measures of content quality and monetization efficiency.",
+      "ambiguity_notes": "Distinct from 248 (Influence Measurement: Engagement Over Follower Count): 274 applies the anti-vanity-metric principle to monetization; 248 applies it to influence scope.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 275,
+      "canonical_name": "Revenue Diversification Beyond Ads",
+      "aliases": [
+        "Revenue Models & Monetization"
+      ],
+      "avoid_terms": ["monetization mix", "ad dependency"],
+      "definition": "Ad revenue signals audience quality but is not the primary income driver; books, courses, and affiliate relationships generate real dollars.",
+      "ambiguity_notes": "Complement to 274 (RPM as Quality Metric): 274 uses ads as a quality signal; 275 explains why that signal does not equate to primary revenue.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 276,
+      "canonical_name": "Business Swamp Constraints",
+      "aliases": [
+        "The Swamp (1-3M Revenue Range)",
+        "Two-Business Problem"
+      ],
+      "avoid_terms": ["growth plateau", "scaling trap"],
+      "definition": "The $1-3M revenue range traps founders between overwork and the risk of betting 50% of profit on a single first hire.",
+      "ambiguity_notes": "Distinct from 261 (Overexpansion Risk): 276 describes the trap before the expansion decision; 261 describes the damage from expanding prematurely to escape it.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 277,
+      "canonical_name": "Licensing Model",
+      "aliases": [
+        "Licensing Model (centroid)",
+        "Licensing vs Direct Service",
+        "New Service Launch",
+        "Service Delivery Tactics"
+      ],
+      "avoid_terms": ["white-label", "franchise model"],
+      "definition": "License a replicable service (video editing, social management) to partners at a fixed margin; launch new services by solving avatar-specific problems in person first.",
+      "ambiguity_notes": "Note: concept 278 (Service Delivery Tactics) is proposed for merge here; both are from super_cluster 14 and source_cluster 218, and 278's single member is too thin to stand alone.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 279,
+      "canonical_name": "Door-to-Door Acquisition Scaling",
+      "aliases": [
+        "Acquisition Strategy",
+        "Ad Channel Effectiveness",
+        "Door-to-Door Scaling",
+        "Door-to-Door vs Ads"
+      ],
+      "avoid_terms": ["field sales", "outbound canvassing"],
+      "definition": "Door-to-door consistently generates 20+ deals per month and likely exceeds paid advertising ROI at comparable budgets.",
+      "ambiguity_notes": "Distinct from 269 (Single-Channel Domination): 279 makes an empirical claim about D2D ROI; 269 prescribes channel concentration as a strategic principle.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 280,
+      "canonical_name": "Avatar Mismatch in Agency Positioning",
+      "aliases": [
+        "Agency Avatar Problem (centroid)",
+        "Churn Problem",
+        "Agency Churn Root Cause"
+      ],
+      "avoid_terms": ["ICP fit", "customer-product fit"],
+      "definition": "Selling client-acquisition services to non-sales-capable founders creates churn; inability to activate the service, not price, is the bottleneck.",
+      "ambiguity_notes": "Distinct from 281 (Churn as Hidden Growth Constraint): 280 identifies the root cause of agency churn (avatar mismatch); 281 describes the mathematical growth ceiling churn creates.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 281,
+      "canonical_name": "Churn as Hidden Growth Constraint",
+      "aliases": [
+        "Churn as Growth Ceiling",
+        "Conversion Rate Assumptions"
+      ],
+      "avoid_terms": ["retention problem", "churn ceiling"],
+      "definition": "Annual churn of 40-50% in agency and service models masks acquisition inefficiency; reducing churn outperforms scaling acquisition as a growth lever.",
+      "ambiguity_notes": "Distinct from 267 (Churn and Retention): 281 is specific to high-churn agency/service models and the hidden growth ceiling dynamic; 267 covers general retention thresholds.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 282,
+      "canonical_name": "Distribution Layer Strategy",
+      "aliases": [
+        "Churn and Cohort Dynamics"
+      ],
+      "avoid_terms": ["channel partners", "distributor network"],
+      "definition": "Replace transactional customer acquisition with compounding distributor relationships to convert one-time buyers into recurring referral pipelines.",
+      "ambiguity_notes": "Distinct from 255 (Referral & Retention Economics): 282 is about replacing the acquisition model with a distributor layer; 255 is about incentive design within existing referral programs.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 283,
+      "canonical_name": "Lead Nurture Definition",
+      "aliases": [
+        "Lead Nurture Definition (centroid)",
+        "Engaged Leads Definition"
+      ],
+      "avoid_terms": ["drip campaign", "lead warming"],
+      "definition": "Lead nurture maximizes show rates in the window between ad impression and sales call; it is post-interest and pre-purchase.",
+      "ambiguity_notes": "Distinct from 284 (Audience Building & Call-Out Mechanics): 283 operates after interest is established (post-opt-in); 284 operates before interest to build the audience in the first place.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 284,
+      "canonical_name": "Audience Building & Call-Out Mechanics",
+      "aliases": [
+        "Audience Building",
+        "Call-Out Techniques"
+      ],
+      "avoid_terms": ["list building", "attention hacking"],
+      "definition": "Build an audience and attention before product launch; attention-grabbing call-out tactics create a leverage multiplier for future offer launches.",
+      "ambiguity_notes": "Distinct from 283 (Lead Nurture Definition): 284 is pre-interest audience construction; 283 is post-interest nurture to maximize show rates.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 285,
+      "canonical_name": "Persistence Over Talent",
+      "aliases": [
+        "Content Consistency",
+        "Volume Underestimation"
+      ],
+      "avoid_terms": ["grit", "work ethic"],
+      "definition": "Results require persisting through high-volume work beyond the point where most competitors quit; talent is secondary to outlasting initial inefficiency.",
+      "ambiguity_notes": "Distinct from 264 (Difficulty as Competitive Selection): 285 prescribes the behavioral response (persist); 264 explains the competitive structure (difficulty as filter).",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 286,
+      "canonical_name": "Trust & Integrity Framework",
+      "aliases": [
+        "Authenticity & Context",
+        "Integrity Over Opportunity",
+        "Trust Framework",
+        "Trustworthiness Maintenance"
+      ],
+      "avoid_terms": ["honesty", "transparency"],
+      "definition": "Trust is a behavioral bet that accepts punishment risk; integrity is earned via consistent reinforcement and protected by never weaponizing shared information against others.",
+      "ambiguity_notes": "Distinct from 247 (Founder Authenticity & Audience Alignment): 286 is about bilateral trust mechanics in relationships; 247 is about unilateral audience perception of creator values.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 287,
+      "canonical_name": "Cold Email as Skill Foundation",
+      "aliases": [
+        "Beginner Sales Skill Development",
+        "Cold Email vs. Paid Ads ROI"
+      ],
+      "avoid_terms": ["cold outreach", "email prospecting"],
+      "definition": "Cold email teaches transferable sales fundamentals (volume discipline, qualification, skeptic conversion) applicable across channels; paid ads teach only platform-specific tactics useful at scale.",
+      "ambiguity_notes": "Distinct from 279 (Door-to-Door Acquisition Scaling): 287 argues for cold email as a skill-building foundation; 279 argues for D2D as an ROI-positive acquisition channel.",
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "Short-Form to Long-Form Conversion",
+      "assigned_to": 257,
+      "rationale": "Content-Led Sales Strategy (257) covers the organic-to-paid distribution system; short-form-to-long-form conversion is a format-sequencing tactic within that same content amplification system. Absorbed as alias."
+    },
+    {
+      "topic": "YouTube Multi-Format Strategy",
+      "assigned_to": 257,
+      "rationale": "YouTube multi-format decisions (shorts, longs, clips) are execution tactics within the Content-Led Sales Strategy framework. Absorbed as alias."
+    },
+    {
+      "topic": "Channel ROI Analysis",
+      "assigned_to": 274,
+      "rationale": "RPM as Quality Metric (274) is explicitly about measuring channel/content ROI beyond vanity metrics; Channel ROI Analysis is a restatement of the same concept. Absorbed as alias."
+    },
+    {
+      "topic": "Short-Form vs Long-Form Content",
+      "assigned_to": 260,
+      "rationale": "Creative Variation Strategy (260) covers format selection and volume testing decisions; short-form vs. long-form is one of those format variation axes. Absorbed as alias."
+    },
+    {
+      "topic": "Agent Recruitment",
+      "assigned_to": 265,
+      "rationale": "Deal Flow Acquisition (265) is about pipeline volume and market penetration; agent recruitment is the mechanism by which pipeline density is built. Absorbed as alias."
+    },
+    {
+      "topic": "Two-Business Problem",
+      "assigned_to": 276,
+      "rationale": "Business Swamp Constraints (276) describes the $1-3M founder trap; the 'two-business problem' (overwork + first hire bet) is the exact structural dynamic that defines the swamp. Absorbed as alias."
+    },
+    {
+      "topic": "Decision Limbo and Purgatory",
+      "assigned_to": "ORPHAN",
+      "rationale": "No concept in this batch covers philosophical/meta-personal limbo states. The topic is too abstract and context-dependent (original kick rationale: fails B3 resolvable context and B4 load-bearing clarity). No safe absorption target without forcing a fit."
+    },
+    {
+      "topic": "Next.js Frontend",
+      "assigned_to": "ORPHAN",
+      "rationale": "Pure technical framework name with no domain-language meaning per ubiquitous-language.md rules. No business, craft, or mental-model concept in this batch absorbs it. Drop from knowledge graph."
+    },
+    {
+      "topic": "Building Framework",
+      "assigned_to": "ORPHAN",
+      "rationale": "Generic technical scaffolding term (Vercel, GitHub, Next.js, Tailwind cluster). No domain relevance per ubiquitous-language.md. No absorption target. Drop from knowledge graph."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "source_concept_id": 278,
+      "target_concept_id": 277,
+      "rationale": "Concept 278 (Service Delivery Tactics) has a single member ('New Service Launch') and a one-sentence definition that is subordinate to the Licensing Model theme. Both share super_cluster 14 and source_cluster 218. Merging into 277 strengthens the concept without loss of information."
+    },
+    {
+      "source_concept_id": 262,
+      "target_concept_id": 263,
+      "rationale": "Concepts 262 (Past Survival as Anchor) and 263 (Narrative Structure & Hero Identity) both operate via retrospective reframing to build resilience, share super_cluster 49 and source_cluster 207, and together form one coherent mental model. 263's narrative-construction frame is richer and should absorb 262's survival-anchor mechanism as a sub-claim."
+    }
+  ]
+}

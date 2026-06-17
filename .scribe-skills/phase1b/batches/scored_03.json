@@ -1,0 +1,720 @@
+{
+  "batch_id": 3,
+  "concepts": [
+    {
+      "concept_id": 96,
+      "canonical_name": "Brand as Behavioral Pairing",
+      "aliases": [
+        "Branding Definition",
+        "Advertising vs Branding",
+        "Deliberate Pairing",
+        "Good vs Bad Branding",
+        "Reference Group Association",
+        "Weak to Strong Brand Progression",
+        "What Branding Is"
+      ],
+      "avoid_terms": ["brand identity", "brand building", "brand awareness"],
+      "definition": "Deliberate pairing of a product with a customer reference group or value to condition purchasing behavior.",
+      "ambiguity_notes": "Distinct from advertising (which pushes message) — pairing is about conditioned association. 'Brand identity' bleeds in from design contexts; avoid.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 97,
+      "canonical_name": "Brand-Value Misalignment Risk",
+      "aliases": [
+        "Pairing Products With Customer Values"
+      ],
+      "avoid_terms": ["brand damage", "PR crisis", "cancel culture"],
+      "definition": "Pairing a brand with a value rejected by its core audience destroys equity and revenue within that target segment.",
+      "ambiguity_notes": "Thin single-member concept. Consider merging into 96 (Brand as Behavioral Pairing) as a counterexample node rather than a peer concept. Kept separate because the risk direction (misalignment → loss) is load-bearing and orthogonal to the mechanism of good pairing.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 98,
+      "canonical_name": "Compounding Skill Leverage",
+      "aliases": [
+        "Capacity Building",
+        "Earning Your Stripes Through Mastery",
+        "Skill Accumulation",
+        "Skill Acquisition as Bridge Building",
+        "Skill Requirements for Opportunity",
+        "Skill Stacking",
+        "Work as Identity"
+      ],
+      "avoid_terms": ["T-shaped skills", "upskilling", "reskilling"],
+      "definition": "Each additional skill multiplies return on existing skills, making the portfolio value grow faster than any single skill alone.",
+      "ambiguity_notes": "'Skill Stacking' is used in other frameworks (Shane Parrish) with different meaning; always qualify as Hormozi-specific compounding mechanism here.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 99,
+      "canonical_name": "Talent Acquisition Economics",
+      "aliases": [
+        "Talent Acquisition Economics"
+      ],
+      "avoid_terms": ["hiring cost", "recruiting budget", "HR spend"],
+      "definition": "Hiring spend of $15K/month generates $60K CAC with 6-month payoff on 10x profit per hire at scale.",
+      "ambiguity_notes": "Single-member concept with specific numbers anchoring it. Numbers must be treated as illustrative axis, not universal benchmark. Avoid generalizing outside the specific business stage cited.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 100,
+      "canonical_name": "Availability as Conversion Multiplier",
+      "aliases": [
+        "Availability & Scheduling",
+        "Availability & Scheduling Multiplier",
+        "Four Pillars Framework",
+        "Reviews and AI Integration",
+        "Sales Position Types",
+        "Word-of-Mouth Marketing"
+      ],
+      "avoid_terms": ["open hours", "staffing coverage", "booking window"],
+      "definition": "Seven-day extended-hour availability is the single strongest predictor of show rate and close rate in service businesses.",
+      "ambiguity_notes": "Original canonical name 'Availability & Scheduling Multiplier' buries the key claim; renamed to foreground causal direction. 'Four Pillars Framework' member is a framework alias — should become an L1 child, not a peer alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 101,
+      "canonical_name": "Script Compliance",
+      "aliases": [
+        "Script Discipline",
+        "Script Enforcement"
+      ],
+      "avoid_terms": ["talk track", "call guide", "sales playbook"],
+      "definition": "Operational standard requiring reps to deliver approved scripts verbatim, enforced as an employment condition with no ad-libbing permitted.",
+      "ambiguity_notes": "Distinct from 'script training' (which is process) and 'call guides' (which are advisory). Compliance here is binary and enforced.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 102,
+      "canonical_name": "Operational Culture Norms",
+      "aliases": [
+        "Leadership by Example",
+        "Process-Over-Player Philosophy"
+      ],
+      "avoid_terms": ["company culture", "values", "culture fit"],
+      "definition": "Organizational belief that process authority supersedes individual authority, with leaders personally modeling every standard they require of teams.",
+      "ambiguity_notes": "Overlaps semantically with Constraint Identification (120) on 'process authority.' Keep separate: 120 is about finding the constraint; 102 is about how authority is exercised once process is set.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 103,
+      "canonical_name": "Ad Creative Assembly and Variation",
+      "aliases": [
+        "Ad Assembly Line Process",
+        "Ad Creative Formats",
+        "Facebook Ads Optimization",
+        "Faceless Ads",
+        "Hook Writing Strategy",
+        "Lead Generation & Marketing",
+        "Marketing Automation",
+        "Scaling Ad Production"
+      ],
+      "avoid_terms": ["creative testing", "A/B testing ads", "ad production"],
+      "definition": "Scale ad output via templated variation of hooks, copy angles, and visuals rather than relying on agencies or bespoke creative.",
+      "ambiguity_notes": "'Hook Writing Strategy' risks confusion with copywriting concept; here it is specifically about template-driven variation, not craft. 'Lead Generation & Marketing' is far too broad as an alias — retain only for synonym lookup, not for conceptual equivalence.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 104,
+      "canonical_name": "Early Profitability Proof",
+      "aliases": [
+        "Early Acquisition Signals",
+        "Profitability Proof"
+      ],
+      "avoid_terms": ["product-market fit", "traction", "early adopters"],
+      "definition": "Cheap early acquisition is misleading without LTV proof; easy initial sales mask unit economics that fail at scale.",
+      "ambiguity_notes": "Distinct from Early Traction signal used in VC contexts — here the claim is that cheap acquisition is a negative signal unless paired with LTV data.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 105,
+      "canonical_name": "Founder-Led Differentiation in Underdog Stage",
+      "aliases": [
+        "Accessibility as Differentiation"
+      ],
+      "avoid_terms": ["founder brand", "personal brand", "high-touch service"],
+      "definition": "Founder direct accessibility (personal cell, high-touch) differentiates early-stage underdogs but becomes a scaling liability once credibility is proven.",
+      "ambiguity_notes": "Time-bounded concept: the differentiation strategy is stage-specific. Must note the inflection point or the claim is misleading. Thin single-member concept.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 106,
+      "canonical_name": "Licensing as Low-Margin Scalability",
+      "aliases": [
+        "Licensing vs Franchising"
+      ],
+      "avoid_terms": ["white-label", "franchise", "licensing deal"],
+      "definition": "Licensing at 6–8% of top-line outperforms franchising for low-margin businesses once team scalability is proven.",
+      "ambiguity_notes": "Single-member concept with specific numbers. The 6–8% anchor is Hormozi-specific; do not generalize without attribution. Thin concept — candidate for merge into 107 (Profitability Over VC Speed) under a Scaling Models framework.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 107,
+      "canonical_name": "Profitability Over VC Speed",
+      "aliases": [
+        "Venture-Backed Scaling Illusion"
+      ],
+      "avoid_terms": ["bootstrapping", "VC vs bootstrap", "growth hacking"],
+      "definition": "VC-backed firms show fast growth but sacrifice profitability and service quality that lean, profitable competitors can sustain.",
+      "ambiguity_notes": "Thin single-member concept. Consider merging with 106 (Licensing as Low-Margin Scalability) under a common 'Scaling Model Selection' framework; both assert that founder-controlled, margin-first paths beat externally-fueled speed.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 108,
+      "canonical_name": "Pay-Less-Now Upsell Architecture",
+      "aliases": [
+        "Attraction Offers",
+        "Discount Offers",
+        "Giveaways",
+        "Irresistible Offers",
+        "Offer Qualification",
+        "Pay Less Now Or Pay More Later",
+        "Pricing Psychology & Anchoring",
+        "Rollover Upsell",
+        "Two-Step Sales"
+      ],
+      "avoid_terms": ["loss leader", "freemium", "free trial", "tripwire offer"],
+      "definition": "Low-friction front offer removes initial purchase resistance; card-on-file capture enables automated upsell at 2–3x margin.",
+      "ambiguity_notes": "'Irresistible Offers' risks conflation with Hormozi's Grand Slam Offer framework (separate concept). 'Pricing Psychology & Anchoring' is too broad — only the pay-less-now anchoring mechanism belongs here.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 109,
+      "canonical_name": "High-Margin Supplement Resale via Partnerships",
+      "aliases": [
+        "Affiliate Partnership Model",
+        "Alternative Partnership Strategy",
+        "Subcontractor Scalability",
+        "Supplement Sales & Distribution"
+      ],
+      "avoid_terms": ["drop-shipping", "white-label supplements", "health product sales"],
+      "definition": "Partner with drop-ship supplement suppliers (zero inventory risk) to generate 40–50% margin recurring revenue reaching $25K/month.",
+      "ambiguity_notes": "Very specific to a gym/fitness business context. Numbers ($25K/month, 40–50% margin) are anecdote-grade without cross-source support. Consider demoting numbers to an L3 example rather than embedding in definition.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 110,
+      "canonical_name": "Risk Misprice Arbitrage",
+      "aliases": [
+        "Upside in Uncertainty",
+        "Risk Arbitrage and Mispricing"
+      ],
+      "avoid_terms": ["risk tolerance", "risk appetite", "calculated risk"],
+      "definition": "Largest gains reside where others avoid due to loss-aversion bias; people systematically overprice downside relative to upside.",
+      "ambiguity_notes": "Distinct from financial arbitrage (same asset, different markets). Here arbitrage is behavioral: exploiting others' loss-aversion miscalculation. Must not conflate with standard risk-management frameworks.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 111,
+      "canonical_name": "Uncertainty Tolerance as Capacity Ceiling",
+      "aliases": [
+        "The Danger Of Uncertainty Tolerance"
+      ],
+      "avoid_terms": ["risk tolerance", "comfort zone", "mindset"],
+      "definition": "Potential is bounded by uncertainty tolerance and time horizon, not talent; pre-emptive constraints trade certain upside for phantom downside.",
+      "ambiguity_notes": "Closely related to 112 (Psychological Barriers to Growth) — both concern self-imposed growth limits from fear. 111 frames the ceiling mechanistically; 112 catalogs specific fear types. Recommend keeping separate as 111 is the mechanism, 112 the instantiation.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 112,
+      "canonical_name": "Psychological Barriers to Growth",
+      "aliases": [
+        "Regulatory Uncertainty",
+        "Leadership and Founder Capacity",
+        "Family Time vs Growth"
+      ],
+      "avoid_terms": ["limiting beliefs", "fear of failure", "imposter syndrome"],
+      "definition": "Regulatory, capacity, and family fears prevent growth that would seldom materialize; phantom downside trades away real upside.",
+      "ambiguity_notes": "'Limiting beliefs' is avoided because it carries self-help connotation; the claim here is empirical (fears rarely materialize) not motivational. Candidate for merge into 111 as an L2 claim set; kept separate as it names specific barrier types.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 113,
+      "canonical_name": "Social Proof Hierarchy in Sales",
+      "aliases": [
+        "B2B High-Ticket Creators",
+        "Brand Credibility",
+        "Customer Qualification Requirements",
+        "Nonprofit Advantage",
+        "Offer Structure",
+        "Perceived Likelihood",
+        "Proof & Testimonial Acquisition",
+        "Social Proof & Testimonial Acquisition",
+        "Testimonial Ads",
+        "Testimonials as Currency"
+      ],
+      "avoid_terms": ["reviews", "ratings", "social proof (generic)"],
+      "definition": "Paid-client testimonials outperform free-client testimonials which outperform no proof; real voices defeat skepticism and lift conversion.",
+      "ambiguity_notes": "'Testimonials as Currency' is a metaphor alias — useful for recall but should be marked as metaphor, not a straight synonym. 'Offer Structure' and 'Customer Qualification Requirements' are broader than proof hierarchy; retain as aliases only.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 114,
+      "canonical_name": "Activation as Primary Churn Lever",
+      "aliases": [
+        "Activation Incentives",
+        "Continuity Revenue Model",
+        "Onboarding & Activation",
+        "Time to Value",
+        "Trial-to-Activation Problem"
+      ],
+      "avoid_terms": ["onboarding", "user activation", "churn reduction"],
+      "definition": "Churn bottleneck is activation (first value moment), not product quality; delivering value within 24 hours is critical to retention.",
+      "ambiguity_notes": "'Time to Value' is used in SaaS contexts with different connotations; here it is specifically the 24-hour activation window claim, not a general product principle. 'Continuity Revenue Model' is a business model term, not an activation term — keep as alias only.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 115,
+      "canonical_name": "Founder Delegation Sequence",
+      "aliases": [
+        "Scaling Through Others",
+        "Scaling Through Delegation"
+      ],
+      "avoid_terms": ["delegation", "empowerment", "letting go"],
+      "definition": "Scaling requires surrendering founder tasks in a fixed sequence: document first, train second, delegate third.",
+      "ambiguity_notes": "Sequence is load-bearing — skipping documentation before delegation is the failure mode. Must preserve the ordered constraint or this degrades to generic 'delegate more' advice.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 116,
+      "canonical_name": "Control Paradox in Scaling",
+      "aliases": [
+        "Control Relinquishment"
+      ],
+      "avoid_terms": ["founder syndrome", "micromanagement", "letting go"],
+      "definition": "The control that enabled early success becomes the hard ceiling on scale; founders must unlearn it to grow beyond themselves.",
+      "ambiguity_notes": "Thin single-member concept; candidate for merge into 115 (Founder Delegation Sequence) as its underlying mechanism. Kept separate because the paradox framing (the cause of success becomes the cause of failure) is a distinct mental model.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 117,
+      "canonical_name": "Founder Accountability Under Growth",
+      "aliases": [
+        "Liability at Scale"
+      ],
+      "avoid_terms": ["liability", "accountability", "responsibility"],
+      "definition": "As a founder delegates, liability for outcomes they no longer control expands faster than the delegation itself.",
+      "ambiguity_notes": "Thin single-member concept. Closely related to 116 (Control Paradox) and 115 (Delegation Sequence). The specific asymmetry claim (liability > delegation speed) is load-bearing enough to keep separate.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 118,
+      "canonical_name": "Equity Dilution and Founder Displacement",
+      "aliases": [
+        "Equity Dilution and Control"
+      ],
+      "avoid_terms": ["dilution", "cap table", "founder vesting"],
+      "definition": "Sequential funding rounds dilute founder control until the board can displace them; Steve Jobs' removal from Apple is the canonical example.",
+      "ambiguity_notes": "Single-member concept built around one anecdote (Jobs/Apple). Anecdote should live as an L3 example, not be embedded in the definition as evidence. The load-bearing claim is the dilution → displacement mechanism, independent of the example.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 119,
+      "canonical_name": "Compound Work Payoff",
+      "aliases": [
+        "Compound Work",
+        "Compounding Development",
+        "Compounding Returns from Early Work",
+        "Disproportionate Effort",
+        "Exponential Returns",
+        "The Exponential Payoff Paradox"
+      ],
+      "avoid_terms": ["hard work pays off", "long-term thinking", "delayed gratification"],
+      "definition": "Unglamorous early work builds unique context that compounds; ability gaps accumulate into exponential market-value differences over time.",
+      "ambiguity_notes": "Overlaps with 98 (Compounding Skill Leverage) — 98 is about skill portfolio multiplication, 119 is about time-cumulative work payoff. Both are in different super_clusters confirming the distinction is real.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 120,
+      "canonical_name": "Constraint Identification",
+      "aliases": [
+        "Operational Efficiency",
+        "Operational Excellence",
+        "Self-Awareness and Constraint Identification",
+        "Skin-in-the-Game"
+      ],
+      "avoid_terms": ["bottleneck", "Theory of Constraints", "operational issues"],
+      "definition": "Identify and solve the single constraint limiting business growth; visibility into operational constraints enables strategic focus over tactical noise.",
+      "ambiguity_notes": "'Skin-in-the-Game' is a Nassim Taleb concept with specific meaning; its use here as an alias likely means 'founder involvement in operations' — should be clarified or removed to avoid inter-corpus confusion.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 121,
+      "canonical_name": "Supply vs. Demand Constraint Diagnosis",
+      "aliases": [
+        "Business Stage Diagnosis",
+        "Problem Definition",
+        "Supply vs Demand Constraints",
+        "Supply vs. Demand Constraints"
+      ],
+      "avoid_terms": ["growth stage", "scaling problems", "business diagnosis"],
+      "definition": "Diagnose whether growth is blocked by too few customers (demand constraint) or too little capacity (supply constraint) before choosing tactics.",
+      "ambiguity_notes": "Canonical name updated to add 'Diagnosis' to foreground the decision act. Closely related to 132 (Supply Constraint Recognition) — 121 covers the diagnostic framework, 132 covers the specific supply-side failure mode. Keep separate.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 122,
+      "canonical_name": "Tiered Offer Pricing",
+      "aliases": [
+        "Pricing Tiers and Jumps",
+        "Tiered Offer Architecture",
+        "Wedding Cake Profit Model"
+      ],
+      "avoid_terms": ["good-better-best pricing", "price tiering", "pricing strategy"],
+      "definition": "Stack multiple offer tiers with distinct price points; high-margin premium tiers fund low-margin volume tiers.",
+      "ambiguity_notes": "Note: concept_id 126 (Pricing Tiers and Jumps) shares an alias name and is from a different super_cluster (15 vs 38). See in_batch_merges: 126 should merge into 122.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 123,
+      "canonical_name": "Margin Concentration and Leverage",
+      "aliases": [
+        "Financial Modeling",
+        "High-Margin Business Model",
+        "Margin Improvement vs Revenue Growth",
+        "Profit Concentration",
+        "SaaS Valuation Multiples"
+      ],
+      "avoid_terms": ["gross margin", "EBITDA margin", "profitability"],
+      "definition": "Profit concentrates disproportionately at high-price tiers; improving margin beats growing revenue in fixed-reimbursement business models.",
+      "ambiguity_notes": "'SaaS Valuation Multiples' is an outlier alias — it belongs to a different domain (public market comparables). Retain for synonym lookup only, do not treat as conceptually equivalent.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 124,
+      "canonical_name": "Marketing Clarity Over Production Quality",
+      "aliases": [
+        "Call-To-Action Best Practices",
+        "Clear vs. Vague Packaging",
+        "Content Format & Production",
+        "Content Meat and Production",
+        "Content Format and Production Clarity",
+        "Effective Visuals vs. Razzle",
+        "Marketing Clarity",
+        "Thumbnail & Headline Clarity"
+      ],
+      "avoid_terms": ["production value", "content quality", "video production"],
+      "definition": "Clarity of message and language in content beats production quality; clear CTAs and thumbnails drive more action than polished visuals.",
+      "ambiguity_notes": "Canonical name updated from 'Content Format and Production Clarity' — the key claim is the clarity-beats-production trade-off, not format or production as the subject. 'Content Meat and Production' is ambiguous; 'meat' here means substance, not production.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 125,
+      "canonical_name": "Volume and Repetition Mastery",
+      "aliases": [
+        "20-Hour Competence",
+        "Action Per Unit Time",
+        "Mastery Depth",
+        "Order of Magnitude Thinking",
+        "Rule of 100",
+        "Skill Compounding"
+      ],
+      "avoid_terms": ["10,000-hour rule", "deliberate practice", "mastery"],
+      "definition": "Base competence requires sustained high-volume deliberate action; 100x repetition of a single skill breaks through performance plateaus.",
+      "ambiguity_notes": "'Skill Compounding' here refers to repetition-driven mastery, not portfolio multiplication (as in concept 98). The alias must be context-tagged to avoid confusion. '20-Hour Competence' and 'Rule of 100' are Hormozi-specific quantified anchors.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 126,
+      "canonical_name": "Pricing Tier Jump Magnitude",
+      "aliases": [
+        "Pricing Tiers and Jumps"
+      ],
+      "avoid_terms": ["price increase", "price bump", "tiered pricing"],
+      "definition": "Price jumps between tiers must be 5x, not 50%, to create meaningfully distinct market segments and avoid cannibalization.",
+      "ambiguity_notes": "Shares alias 'Pricing Tiers and Jumps' with concept 122. This concept is narrower: it asserts a specific magnitude rule (5x). Proposed merge target: 122 (Tiered Offer Pricing), with 126's specific 5x claim becoming an L2 claim child. See in_batch_merges.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 127,
+      "canonical_name": "Member Lifecycle Progression",
+      "aliases": [
+        "Member Lifecycle Management",
+        "Narrative Transparency",
+        "Process Mapping"
+      ],
+      "avoid_terms": ["customer journey", "member journey", "lifecycle marketing"],
+      "definition": "Guide members through four milestones (Connect → Refer → Testify → Ascend) using transparent process communication and planned touchpoints.",
+      "ambiguity_notes": "'Narrative Transparency' as an alias is ambiguous — here it means communicating the member journey clearly to members, not general storytelling. Should be qualified in the alias table.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 128,
+      "canonical_name": "Team Training and Scaling",
+      "aliases": [
+        "Employee Training and Leverage",
+        "Boiler Room Method",
+        "The Core Four Methods"
+      ],
+      "avoid_terms": ["employee training", "staff development", "L&D"],
+      "definition": "Scale teams through Document-Demonstrate-Duplicate training and scripted role-rotation processes (boiler room, Core Four Methods).",
+      "ambiguity_notes": "'The Core Four Methods' is a named framework (L1 candidate) for lead generation; its presence here as a training alias suggests it was mis-extracted. Should be promoted to an L1 framework node under concept 129 (Affiliate and Partner Channel Strategy) or Lead Generation concept, not kept as an alias here.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 129,
+      "canonical_name": "Affiliate and Partner Channel Strategy",
+      "aliases": [
+        "Affiliate Program Building",
+        "BYOA Business Model",
+        "Channel Strategy",
+        "Dual Business Model",
+        "Lead Getter Integration",
+        "Partner Channel Model"
+      ],
+      "avoid_terms": ["referral program", "reseller channel", "partnerships (generic)"],
+      "definition": "Recruit independent businesses (affiliates, coaches, agencies) as sales channels; affiliate channels yield the highest lead volume per founder effort at scale.",
+      "ambiguity_notes": "'BYOA' (Bring Your Own Audience) is a specific model variant that may warrant its own concept if claims are distinct. 'Lead Getter Integration' is a system-level term from the extraction layer — valid alias for search but not conceptually equivalent.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 130,
+      "canonical_name": "Persistence as Competitive Advantage",
+      "aliases": [
+        "Caring as Competitive Advantage",
+        "Competitive Advantage Through Persistence",
+        "Consistency as Rare Competitive Advantage",
+        "Deliberate Practice and Commitment"
+      ],
+      "avoid_terms": ["grit", "resilience", "work ethic"],
+      "definition": "Sustained full commitment to one skill beats competitors because 99% of people quit before mastery; persistence is rare and therefore disproportionately valuable.",
+      "ambiguity_notes": "'Caring as Competitive Advantage' shifts the frame to effort quality (caring more), while 'Persistence' frames it as duration. Both point to the same mechanism: most people quit. The aliases are valid but capture different entry points to the same claim.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 131,
+      "canonical_name": "Delivery Model Polarization",
+      "aliases": [
+        "Delivery Model",
+        "Barbell Strategy For Future",
+        "LTV to CAC Ratio"
+      ],
+      "avoid_terms": ["service model", "delivery strategy", "operational model"],
+      "definition": "Avoid the delivery middle ground; choose ultra-cheap automation-heavy or high-touch sophisticated operations, adjusting LTV:CAC targets for each pole.",
+      "ambiguity_notes": "'Barbell Strategy For Future' is a Nassim Taleb term reused here with different meaning — flag as potential inter-corpus confusion. 'LTV to CAC Ratio' is a metric, not a delivery model concept; it is a consequence variable, not the concept itself.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 132,
+      "canonical_name": "Supply Constraint Recognition",
+      "aliases": [
+        "Business Growth Constraints",
+        "Limiting Beliefs and Business Constraints",
+        "Marketing Distraction",
+        "Supply Constraint"
+      ],
+      "avoid_terms": ["capacity problem", "operational bottleneck", "supply issues"],
+      "definition": "When operationally constrained, stopping sales masks the real problem; capacity must be solved before any growth investment.",
+      "ambiguity_notes": "Related to 121 (Supply vs. Demand Constraint Diagnosis) — 132 is the specific prescription for supply-side failure, 121 is the diagnostic framework for both sides. Distinct and worth keeping separate.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 133,
+      "canonical_name": "Sales Team Scaling and Leadership",
+      "aliases": [
+        "Identity Shift to Trainer",
+        "Sales Leadership Transition",
+        "Sales Operations & Training",
+        "Sales Process Structure",
+        "Sales Scalability",
+        "Team Management Structure",
+        "Team Scaling"
+      ],
+      "avoid_terms": ["sales management", "building a sales team", "sales org"],
+      "definition": "Scale sales by shifting founder from closer to trainer-multiplier; directors build culture and process, not close deals personally.",
+      "ambiguity_notes": "'Identity Shift to Trainer' foregrounds the psychological dimension of the transition, which is load-bearing — without the identity shift, founders continue closing and block scale. Retain as primary alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 134,
+      "canonical_name": "Channel Optimization Before Expansion",
+      "aliases": [
+        "Acquisition Channels",
+        "Business Leverage: More, Better, New",
+        "Content Marketing",
+        "Existing Vehicle Optimization",
+        "Market Dominance Strategy",
+        "Market Share vs New Markets",
+        "Scaling Existing Channels"
+      ],
+      "avoid_terms": ["omnichannel", "channel diversification", "market expansion"],
+      "definition": "Maximize proven acquisition channels before opening new ones; dominate current market share before entering adjacent markets.",
+      "ambiguity_notes": "'Business Leverage: More, Better, New' is a named framework (L1 candidate) — the three-step sequence (more of existing, do it better, then new) should be promoted to a framework node rather than kept as a flat alias.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 135,
+      "canonical_name": "Progressive Pricing Tier Stacking",
+      "aliases": [
+        "Advisory Practice Tiers",
+        "Bonus Tier Structure",
+        "Book Series Architecture",
+        "Career Ladder Design",
+        "Custom Order Strategy & Positioning"
+      ],
+      "avoid_terms": ["upsell ladder", "pricing tiers", "tiered offers"],
+      "definition": "Stack escalating tiers of price, complexity, and personalization where each tier builds prerequisite knowledge unlocking the next.",
+      "ambiguity_notes": "Overlaps with 122 (Tiered Offer Pricing) on structure. Distinction: 122 is about margin economics across tiers; 135 is about prerequisite knowledge sequencing. The book-series and career-ladder aliases confirm a pedagogical/career application beyond pricing.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 136,
+      "canonical_name": "Spending Skill Gap",
+      "aliases": [
+        "Attribution & Data Problems",
+        "Spending as Skill"
+      ],
+      "avoid_terms": ["capital allocation", "investing", "financial literacy"],
+      "definition": "Most high earners never learn to deploy capital effectively; wealth without the skill of spending fails to compound into further wealth.",
+      "ambiguity_notes": "'Attribution & Data Problems' is a tracking/analytics concept that appears misclustered here. Should be kicked to an analytics or measurement concept (e.g., 138 Tracking & Measurement). Retained as alias pending reassignment.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 137,
+      "canonical_name": "Documentation of Journey",
+      "aliases": [
+        "Building in Public",
+        "Documentation of Struggle"
+      ],
+      "avoid_terms": ["transparency", "vulnerability marketing", "personal brand"],
+      "definition": "Document the struggle and comeback in real time, not just the destination; narrative visibility of progress builds audience trust and accountability.",
+      "ambiguity_notes": "'Building in Public' is an established term in indie-hacker/startup culture with a well-defined meaning that largely matches this concept. Valid alias but carries its own community connotations.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 138,
+      "canonical_name": "Tracking and Measurement Discipline",
+      "aliases": [
+        "Data Tracking During Transition",
+        "Success Metrics and Quantification",
+        "Tracking & Measurement"
+      ],
+      "avoid_terms": ["analytics", "KPIs", "metrics"],
+      "definition": "Install tracking before growth makes it harder; without a measurement system, no feedback signal exists and improvement is impossible.",
+      "ambiguity_notes": "Canonical name updated from 'Tracking & Measurement' to add 'Discipline' — the load-bearing claim is about the obligation to track early, not the measurement tools themselves.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 139,
+      "canonical_name": "AI Automation and Integration",
+      "aliases": [
+        "Composio Authentication",
+        "Hotline Workflow Example",
+        "Trigger.dev Automations"
+      ],
+      "avoid_terms": ["AI tools", "automation", "no-code"],
+      "definition": "Compose AI-driven workflows by integrating external APIs and cloud automation platforms (Composio, Trigger.dev) to eliminate manual overhead.",
+      "ambiguity_notes": "The three aliases are implementation-level examples (L4 candidates), not conceptual equivalents. 'Composio Authentication' and 'Trigger.dev Automations' should be demoted to L4 implementation details under this concept rather than kept as peer aliases.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 140,
+      "canonical_name": "Claude Skills Platform",
+      "aliases": [
+        "Claude Skills",
+        "Service Delivery",
+        "AI Tools"
+      ],
+      "avoid_terms": ["Claude API", "AI assistant", "LLM tooling"],
+      "definition": "Portable Claude skills enable efficient task automation on a shared platform; reusable skills reduce per-task manual overhead.",
+      "ambiguity_notes": "Meta concept about the Scribe/Claude toolchain itself. Role should be 'meta' not 'domain' — it describes the corpus processing infrastructure. 'Service Delivery' and 'AI Tools' are extremely broad aliases; they likely represent mis-extraction artifacts from a generic video about AI tooling.",
+      "role": "meta"
+    },
+    {
+      "concept_id": 141,
+      "canonical_name": "Time Delay",
+      "aliases": [],
+      "avoid_terms": ["timing", "delay", "patience"],
+      "definition": "Placeholder concept with no coherent load-bearing claim; members conflate unrelated timing decisions. Candidate for drop or reassignment.",
+      "ambiguity_notes": "The original definition flags this as incoherent ('no coherent load-bearing concept'). This concept should be dropped unless members can be reassigned to other timing-related concepts (e.g., 119 Compound Work Payoff). Recommend ORPHAN treatment.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 142,
+      "canonical_name": "Founder Control and Equity Structure",
+      "aliases": [
+        "Founder Control",
+        "Fundraising Strategy",
+        "Operator Partnerships",
+        "Ownership Equity Incentive Structure"
+      ],
+      "avoid_terms": ["cap table", "equity splits", "shareholder agreement"],
+      "definition": "Maintain founder voting control through structured equity arrangements and operator partnerships while raising external capital.",
+      "ambiguity_notes": "Related to 118 (Equity Dilution and Founder Displacement) — 118 describes the failure mode (dilution → displacement), 142 describes the prevention mechanism (structured equity). Keep separate as mechanism vs. failure-mode pair.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 143,
+      "canonical_name": "Leverage Mechanics",
+      "aliases": [
+        "Attribution Tracking and Input-Output Equations",
+        "Entrepreneurial Trajectory",
+        "Input-Output Equations"
+      ],
+      "avoid_terms": ["scaling", "leverage (financial)", "operating leverage"],
+      "definition": "Define the specific input action that drives business results, then multiply that action via leverage while keeping founder effort flat or declining.",
+      "ambiguity_notes": "'Attribution Tracking and Input-Output Equations' overlaps with measurement/analytics concepts (138). The input-output equation framing is load-bearing here — it is about finding the right lever, not about attribution systems. Retain as alias but flag the cross-concept overlap.",
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "Grand Opening Strategy",
+      "assigned_to": "ORPHAN",
+      "rationale": "No existing batch_03 concept covers launch/opening marketing tactics. The claim ('grand opening is the only time aggressive marketing is justified') is hortative without mechanism, conditions, or data — fails A2 and A7. Cannot be salvaged by assignment; recommend drop or re-extraction from source transcript."
+    },
+    {
+      "topic": "Blue Ocean Strategy",
+      "assigned_to": "ORPHAN",
+      "rationale": "The extracted member ('only one other player') is a context-specific observation from a single motel-conversion video, not a generalizable strategy claim. The canonical Blue Ocean Strategy framework (Kim/Mauborgne) is a separate corpus-level concept that would need independent extraction. No suitable home in batch_03; ORPHAN pending a Competitive Strategy concept from another batch."
+    },
+    {
+      "topic": "Process Gaps",
+      "assigned_to": "120",
+      "rationale": "Process Gaps refers to unresolved operational deficiencies — closest home is concept 120 (Constraint Identification), which is explicitly about identifying the single constraint limiting growth. However the extracted content was self-referential (A7 fail); reassign the topic label only, do not carry forward the extracted claims without re-extraction."
+    },
+    {
+      "topic": "Lazy System",
+      "assigned_to": "ORPHAN",
+      "rationale": "No coherent load-bearing concept recoverable. 'Lazy System' as extracted is a feature-list label with no mechanism, conditions, or specificity (A2 + A7 fail). Cannot be rescued by assignment. Drop pending re-extraction from source."
+    },
+    {
+      "topic": "Review Process Gaps",
+      "assigned_to": "138",
+      "rationale": "Review Process Gaps concerns tracking gaps in operational review cycles — closest home is concept 138 (Tracking and Measurement Discipline), which asserts that measurement must be installed early. The 62% missed-calls data point is an axis-less number (A3 fail) and should not be carried into the concept definition, but the topic can be absorbed as a domain application alias."
+    },
+    {
+      "topic": "Equity vs Stake Distinction",
+      "assigned_to": "142",
+      "rationale": "Equity vs Stake Distinction concerns the structural difference between equity ownership and contractual stakes — best home is concept 142 (Founder Control and Equity Structure), which explicitly covers equity arrangement mechanics. The topic should become a definitional note within 142, not a standalone concept."
+    },
+    {
+      "topic": "University Exclusivity Strategy",
+      "assigned_to": "129",
+      "rationale": "University Exclusivity Strategy (exclusive partnerships with academic institutions as distribution channels) maps closest to concept 129 (Affiliate and Partner Channel Strategy). The exclusivity angle is a specific instantiation of the partner channel model. Should become an L3 example or L4 practice under 129, not a standalone concept."
+    },
+    {
+      "topic": "AI-Driven Lead Generation Without Ads",
+      "assigned_to": "ORPHAN",
+      "rationale": "All eight members of the original cluster share a boilerplate prefix, lack mechanism, conditions, and specificity (A2 + A7 fail across the board). Re-extraction from source transcripts required. Cannot be salvaged by assignment. Would likely map to concept 129 (Affiliate and Partner Channel Strategy) or 103 (Ad Creative Assembly and Variation) after clean re-extraction, but assignment before re-extraction would pollute those concepts."
+    },
+    {
+      "topic": "AI-Driven Website",
+      "assigned_to": "139",
+      "rationale": "AI-Driven Website (using AI to generate or optimize website content/structure) maps loosely to concept 139 (AI Automation and Integration). However the original extraction failed A2 and A7 — no mechanism or specificity. Assigned to 139 as a topic-label placeholder only; claims require re-extraction before they can be added to the concept's claim set."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "source_concept_id": 126,
+      "target_concept_id": 122,
+      "rationale": "Concept 126 (Pricing Tier Jump Magnitude, 'jump 5x not 50%') is a specific claim about tier spacing that sits inside the domain covered by concept 122 (Tiered Offer Pricing). The '5x jump' is an L2 claim within 122's framework, not an independent L0 concept. Merge 126 into 122; the 5x rule becomes a named claim child. Both share super_cluster proximity (15 vs 38 are both pricing-related)."
+    },
+    {
+      "source_concept_id": 97,
+      "target_concept_id": 96,
+      "rationale": "Concept 97 (Brand-Value Misalignment Risk) is a single-member concept whose entire load-bearing content is a counterexample to concept 96 (Brand as Behavioral Pairing). Per HIERARCHY.md §2, a counterexample lives as an L3a node under the claim it bounds, not as a peer L0 concept. Merge 97 into 96 as a counterexample node. The Bud Light / Dylan Mulvaney example becomes an L3a child of the 'good pairing drives behavior' claim."
+    }
+  ]
+}

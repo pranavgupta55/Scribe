@@ -1,0 +1,817 @@
+{
+  "batch_id": 8,
+  "concepts": [
+    {
+      "concept_id": 336,
+      "canonical_name": "Recurring Revenue Valuation Premium",
+      "aliases": [
+        "Recurring Revenue Command Higher Valuations",
+        "Recurring revenue models (maintenance contracts, SaaS) command higher valuations than project-based"
+      ],
+      "avoid_terms": [
+        "recurring revenue is better",
+        "subscription model advantage"
+      ],
+      "definition": "Recurring-revenue models (maintenance contracts, SaaS) command higher acquisition multiples than project-based models due to predictable cash flows.",
+      "ambiguity_notes": "Original name was a full sentence; shortened to noun-phrase canonical. Confirm scope includes both software and physical-service recurring models.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 337,
+      "canonical_name": "Business Model Financial Rules Divergence",
+      "aliases": [
+        "Business Model Selection Rules Differ",
+        "Choose between scalable (SaaS, software) and service models; each has different financial rules"
+      ],
+      "avoid_terms": [
+        "model comparison",
+        "SaaS vs services"
+      ],
+      "definition": "SaaS/scalable-software and service businesses operate under fundamentally different unit economics, growth ceilings, and financing rules.",
+      "ambiguity_notes": "Overlaps with 336 (recurring vs project); 336 is about valuation, 337 is about operating financial logic. Keep separate unless a future merge pass finds them consistently co-cited.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 338,
+      "canonical_name": "Blended Membership-Transaction Revenue Model",
+      "aliases": [
+        "Dual Revenue Model Integration",
+        "Membership + transaction fees create blended model without complexity"
+      ],
+      "avoid_terms": [
+        "hybrid model",
+        "freemium"
+      ],
+      "definition": "Combining recurring membership fees with per-transaction fees captures both predictability and volume upside without full-model switching costs.",
+      "ambiguity_notes": "Distinct from 336 (pure recurring valuation premium) and 337 (model selection rules). Scope is specifically the blended structure design decision.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 339,
+      "canonical_name": "Multi-Avatar Scope Creep Fragmentation",
+      "aliases": [
+        "Fragment Risk from Multi-Avatar Scope Creep",
+        "Focus and Avatar Conflict",
+        "Organic Audience Monetization Mistakes",
+        "Organizational Scope"
+      ],
+      "avoid_terms": [
+        "niche down",
+        "focus problem",
+        "avatar confusion"
+      ],
+      "definition": "Pursuing multiple customer avatars simultaneously fragments resources, messaging, and focus, compounding into 4+ parallel micro-businesses within years.",
+      "ambiguity_notes": "'Organic Audience Monetization Mistakes' and 'Organizational Scope' are loose aliases; may carry sub-claims not fully captured by the canonical. Flag for claim extraction.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 340,
+      "canonical_name": "Contrarian Conviction as Outsized Return Driver",
+      "aliases": [
+        "Outsized Returns from Contrarian Bets",
+        "Contrarian Conviction"
+      ],
+      "avoid_terms": [
+        "going against the grain",
+        "nonconformity",
+        "contrarian investing"
+      ],
+      "definition": "Outsized entrepreneurial returns accrue to those who bet against consensus, especially founders with naturally low agreeableness.",
+      "ambiguity_notes": "Low agreeableness as mechanism is a psychological claim; flag for sourcing. 'Contrarian' in finance vs entrepreneurship contexts differ—scope here is business-decision contrarianism.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 341,
+      "canonical_name": "Delivery Capacity Bottleneck",
+      "aliases": [
+        "Delivery Capacity"
+      ],
+      "avoid_terms": [
+        "bandwidth",
+        "throughput constraint"
+      ],
+      "definition": "Operational limit reached when delivery demand exceeds the team's execution capacity, blocking revenue growth regardless of demand.",
+      "ambiguity_notes": "Definition was empty in source; reconstructed from name and super_cluster (id 3, operations scaling). Verify against claim-level content before finalizing.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 342,
+      "canonical_name": "Before/After Visual Proof as Highest-ROI Acquisition Channel",
+      "aliases": [
+        "Before/After Visual Proof is Highest-ROI Acquisition",
+        "Before/after visual proof is the highest-ROI patient acquisition strategy"
+      ],
+      "avoid_terms": [
+        "before-and-after photos",
+        "transformation images",
+        "social proof imagery"
+      ],
+      "definition": "In healthcare/aesthetics verticals, before/after imagery delivers the highest return-on-investment per acquisition dollar across available channels.",
+      "ambiguity_notes": "Scope is vertical-specific (healthcare/aesthetics). The 'highest-ROI' superlative needs a comparison set in the underlying claim to pass falsifiability.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 343,
+      "canonical_name": "Before/After Collection Embedded in Patient Journey",
+      "aliases": [
+        "Before/After Operationalization into Patient Journey",
+        "Build before/after collection into the patient journey"
+      ],
+      "avoid_terms": [
+        "testimonial collection",
+        "photo documentation workflow"
+      ],
+      "definition": "Systematically embedding before/after capture checkpoints into patient onboarding generates a compounding social-proof asset library.",
+      "ambiguity_notes": "Close sibling to 342 (proof as channel); 342 is the strategic claim, 343 is the operational how-to. May merge into 342 as a practice node if no standalone mechanism is found.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 344,
+      "canonical_name": "Static Content and Daily Organic Posting Outperforms Video",
+      "aliases": [
+        "Static + Organic Content Outperforms Video",
+        "Video underperforms because execution quality varies; static images from camera roll + organic daily posting + repurposed podcast clips maximize ROI"
+      ],
+      "avoid_terms": [
+        "video is dead",
+        "static wins",
+        "camera-roll strategy"
+      ],
+      "definition": "Static camera-roll images plus daily organic posts and repurposed podcast clips yield higher ROI than video; video execution variance degrades performance.",
+      "ambiguity_notes": "Execution variance as mechanism is strong and specific—ensure claim extraction captures it. Context is likely small-business/solo creator, not brand accounts.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 345,
+      "canonical_name": "Outreach Predictability vs Content Compounding",
+      "aliases": [
+        "Outreach Drives Predictable Deal Flow; Content is Volatile",
+        "Content brings sporadic deals initially; over time it snowballs into consistent flow; but outreach drives predictable deal flow month-to-month"
+      ],
+      "avoid_terms": [
+        "inbound vs outbound",
+        "push vs pull"
+      ],
+      "definition": "Outreach produces month-to-month predictable deal flow; content-driven deals are initially sporadic but compound over time into consistency.",
+      "ambiguity_notes": "Two distinct time-horizon claims bundled here: short-run predictability (outreach) and long-run compounding (content). Consider splitting at claim level.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 346,
+      "canonical_name": "Delivery Time Crowding Out Marketing Consistency",
+      "aliases": [
+        "Delivery Work Blocks Marketing Consistency",
+        "Volatile revenue ($55K good months, low months) indicates delivery work is blocking marketing consistency; need to systemize execution"
+      ],
+      "avoid_terms": [
+        "feast-or-famine cycle",
+        "revenue volatility",
+        "busyness trap"
+      ],
+      "definition": "Owner time spent on delivery directly displaces marketing execution, producing revenue oscillation; systemizing delivery is the corrective lever.",
+      "ambiguity_notes": "$55K anecdote is illustrative detail, not load-bearing. Remove from alias set; keep as example node under the concept's claims.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 347,
+      "canonical_name": "Partnership Equity Must Be Codified Upfront",
+      "aliases": [
+        "Business Partnerships and Legal",
+        "Empire Building Delusion"
+      ],
+      "avoid_terms": [
+        "partnership agreement",
+        "equity split",
+        "handshake deal"
+      ],
+      "definition": "Partnership equity and legal terms must be written explicitly at formation when stakes are low; retrofitting terms after conflict creates irreversible friction.",
+      "ambiguity_notes": "'Empire Building Delusion' is a loose alias that may carry independent claims about overestimating growth. Flag for claim-level disentanglement.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 348,
+      "canonical_name": "Discipline as Consistency with Disliked Tasks",
+      "aliases": [
+        "Discipline Only Applies to Disliked Work",
+        "Discipline is consistency with things you dislike; liking something requires zero discipline"
+      ],
+      "avoid_terms": [
+        "willpower",
+        "self-control",
+        "grit"
+      ],
+      "definition": "Discipline is sustained action on tasks you dislike; behavior toward things you enjoy requires no discipline and is therefore intrinsically maintained.",
+      "ambiguity_notes": "Definitional/mental-model claim. Role set to 'domain' in source but fits 'mental-model' better; flagged for potential role reclassification.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 349,
+      "canonical_name": "Bidirectional Rejection Tolerance as Learned Skill",
+      "aliases": [
+        "Negotiation Rejection as Learned Skill",
+        "Must say no without remorse and hear no without loss of enthusiasm; both are learned skills"
+      ],
+      "avoid_terms": [
+        "resilience",
+        "thick skin",
+        "rejection hardening"
+      ],
+      "definition": "Both issuing rejections (no without remorse) and receiving rejections (no without enthusiasm loss) are learnable skills, not fixed personality traits.",
+      "ambiguity_notes": "Source places this in super_cluster 1 (mindset). The claim's most actionable framing is sales/negotiation practice. Keep as domain; tag for sales context.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 350,
+      "canonical_name": "Work as Identity and Capability Formation",
+      "aliases": [
+        "Work Shapes Your Identity More Than Its Outcomes",
+        "Continuous Improvement vs. Outcome Fixation",
+        "Skills Over Outcomes",
+        "Work Shapes You"
+      ],
+      "avoid_terms": [
+        "intrinsic motivation",
+        "growth mindset",
+        "self-development"
+      ],
+      "definition": "The primary output of sustained work is identity and capability formation, not external results; judging success by results is a lagging and misleading signal.",
+      "ambiguity_notes": "Overlaps thematically with 348 (discipline) and 355 (patience). Ensure cross-links are created at claim level. Role should be 'mental-model' not 'domain'.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 351,
+      "canonical_name": "Talent Funnel Mirroring Customer Acquisition Funnel",
+      "aliases": [
+        "Talent Funnel Mirrors Customer Acquisition Funnel",
+        "Build parallel talent funnel that mirrors your customer acquisition funnel",
+        "Scale home services by building parallel funnel for salespeople (app gen → nurture → interview → onboard → retain)"
+      ],
+      "avoid_terms": [
+        "hiring pipeline",
+        "recruitment pipeline",
+        "people funnel"
+      ],
+      "definition": "Talent acquisition should be structured as a parallel funnel (sourcing, nurture, screen, onboard, retain) mirroring the customer acquisition funnel to achieve scale.",
+      "ambiguity_notes": "Home-services context in alias is illustrative; the principle may generalize. Confirm scope in underlying claims before widening definition.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 352,
+      "canonical_name": "Multi-Stage Screening for Coachability and Discipline",
+      "aliases": [
+        "Multi-Stage Talent Screening for Coachability",
+        "Multi-stage funnel screens for coachability and discipline before hire"
+      ],
+      "avoid_terms": [
+        "culture fit screening",
+        "behavioral interview",
+        "personality testing"
+      ],
+      "definition": "Multi-round hiring screens specifically for coachability and discipline signals before offer, reducing post-hire culture mismatches.",
+      "ambiguity_notes": "Close sibling to 354 (recruiting discipline). 352 is specifically about screening criteria; 354 is about the overall recruiting process rigor. Keep separate.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 353,
+      "canonical_name": "Educational Platform as Sales Moat",
+      "aliases": [
+        "Educational Platform as Sales Moat and Demand Driver",
+        "Educational platform drives demand and integration for the DSO"
+      ],
+      "avoid_terms": [
+        "content marketing moat",
+        "training program upsell",
+        "educational arm"
+      ],
+      "definition": "Offering coaching or training programs creates switching costs and integrates demand generation into the core service business.",
+      "ambiguity_notes": "DSO context in alias (Dental Service Organization) is vertical-specific; principle may generalize to any professional-services business with teachable methodology.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 354,
+      "canonical_name": "Recruiting as Systematic Discipline",
+      "aliases": [
+        "Recruiting is Systematic Discipline",
+        "Recruiting is a discipline requiring multiple interview rounds, contractor vetting, and systematic training"
+      ],
+      "avoid_terms": [
+        "hiring process",
+        "talent acquisition process"
+      ],
+      "definition": "Recruiting requires disciplined multi-round interviewing, contractor vetting, and systematic onboarding to avoid false positives and culture failures.",
+      "ambiguity_notes": "Sibling to 352; 352 is criteria-focused, 354 is process-rigor-focused. Risk of merge at claim level if underlying claims are near-identical.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 355,
+      "canonical_name": "Patience as Productive Interim Action",
+      "aliases": [
+        "Patience as Action, Not Emotional State",
+        "Patience as Action",
+        "Patience as Behavior"
+      ],
+      "avoid_terms": [
+        "delayed gratification",
+        "long-term thinking",
+        "waiting it out"
+      ],
+      "definition": "Patience is defined by taking productive interim steps despite impatience, not by emotional equanimity; undefined patience is an abstraction with no behavioral output.",
+      "ambiguity_notes": "Overlaps with 364 (arbitrage in delayed rewards) on time-horizon theme. 355 is a behavioral definition; 364 is a wealth-building mechanism. Keep separate.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 356,
+      "canonical_name": "2x Weekly Email Cadence with Rotating Themes",
+      "aliases": [
+        "2x Weekly Email with Rotated Content Themes Drives Retention",
+        "2x weekly email commitment rotating before/after transformations, cool projects, and FAQ; long-term list building for repeat purchases"
+      ],
+      "avoid_terms": [
+        "email newsletter",
+        "email marketing frequency",
+        "drip campaign"
+      ],
+      "definition": "Twice-weekly email cadence rotating transformations, projects, and FAQ themes builds list health and drives repeat purchase behavior over the long term.",
+      "ambiguity_notes": "Specific cadence (2x weekly) is a quantified claim that should be sourced. May overlap with 357 and 358—all three are email/content strategy siblings under super_cluster 13.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 357,
+      "canonical_name": "Seasonal Marketing Campaign Architecture",
+      "aliases": [
+        "Seasonal Marketing Themes Create Year-Round Campaign Structure",
+        "Two major seasonal cycles per year enable year-round campaigns; align all channels on single theme per 2-month block"
+      ],
+      "avoid_terms": [
+        "seasonal promotion",
+        "content calendar",
+        "campaign planning"
+      ],
+      "definition": "Organizing marketing around two major seasonal cycles (2-month theme blocks) with full cross-channel alignment maximizes reach and memorability per campaign.",
+      "ambiguity_notes": "Sibling to 356 and 358. These three could merge into a 'Systematic Email and Content Strategy' concept if underlying claims show consistent co-citation.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 358,
+      "canonical_name": "Theme-Driven Email Reactivation with Split Testing",
+      "aliases": [
+        "Email Reactivation via Monthly Themes and Split Testing",
+        "Monthly email themes (savings, allergies, case studies) with split-tested subject lines drive 20-30% revenue lift"
+      ],
+      "avoid_terms": [
+        "win-back campaign",
+        "reactivation email",
+        "A/B email testing"
+      ],
+      "definition": "Monthly topical email themes paired with subject-line A/B testing drive 20–30% revenue uplift in reactivation campaigns.",
+      "ambiguity_notes": "20-30% lift figure is a quantified claim that requires attribution and conditions (list size, industry, time horizon). Flag for claim-level sourcing.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 359,
+      "canonical_name": "Pre-Tested Short-Form Content Repurposed into Long-Form",
+      "aliases": [
+        "Pre-Tested Content Repurposing Maximizes Long-Form ROI",
+        "Structure long-form as 20 shorts sewn together on one theme; use pre-tested material (top tweets)",
+        "A print-on-demand educator achieved 2% churn by providing weekly lists of trending products and logos"
+      ],
+      "avoid_terms": [
+        "content repurposing",
+        "content recycling",
+        "atomization strategy"
+      ],
+      "definition": "Long-form content assembled from 20 pre-validated short clips (top tweets, high-engagement pieces) on a single theme reduces production friction while leveraging proven engagement.",
+      "ambiguity_notes": "The print-on-demand 2% churn alias is a separate anecdote from a different context; should be an example node under a different concept, not an alias here. Flagged as misplaced.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 360,
+      "canonical_name": "Owner Delivery Time as Scaling Constraint",
+      "aliases": [
+        "Owner Time Consumed by Delivery Blocks Scaling",
+        "Problem is not money ($700K profit available) but owner's time; 80% clinical work leaves no room to scale operations",
+        "Scaling from 1 to 5+ locations requires owner business time; can't be done if owner is 80% clinical"
+      ],
+      "avoid_terms": [
+        "founder bottleneck",
+        "operator-owner trap",
+        "time constraint"
+      ],
+      "definition": "Capital availability does not constrain multi-location scaling; owner time allocation does. Owners spending 80%+ on delivery have zero bandwidth for operational expansion.",
+      "ambiguity_notes": "The $700K and 80% clinical figures are anecdotal examples, not load-bearing. Keep definition general; examples belong at L3.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 361,
+      "canonical_name": "Hiring Peer Clinician as Multi-Location Prerequisite",
+      "aliases": [
+        "Hiring Physician Is Entry Ticket to Multi-Location Scaling",
+        "Hiring the physician is not optional—it's the entry ticket to scaling; otherwise all growth bounces off time ceiling"
+      ],
+      "avoid_terms": [
+        "clinical hire",
+        "associate hire",
+        "co-provider"
+      ],
+      "definition": "In healthcare/professional-services, hiring a peer-licensed provider to absorb delivery is a non-negotiable prerequisite for scaling beyond one or two locations.",
+      "ambiguity_notes": "Vertical-specific (healthcare). Generalizes to any licensed-professional business where owner must deliver. Tag scope accordingly.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 362,
+      "canonical_name": "AI as Execution Leverage, Not Business Model Shift",
+      "aliases": [
+        "AI as Leverage Multiplier, Not Business Model Shift",
+        "AI and Business Fundamentals",
+        "AI as Tool Not Industry",
+        "Behavior Pattern Recognition",
+        "Long-Term Thinking In AI"
+      ],
+      "avoid_terms": [
+        "AI disruption",
+        "AI revolution",
+        "AI-first business"
+      ],
+      "definition": "AI changes execution leverage and tooling, not business fundamentals; teams with superior tools consistently outcompete teams with inferior tools, as in all prior technology transitions.",
+      "ambiguity_notes": "'Behavior Pattern Recognition' and 'Long-Term Thinking In AI' are loosely related aliases that may carry distinct claims. Disentangle at claim level. Role should be 'mental-model'.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 363,
+      "canonical_name": "Survival Mode as Financial Discipline Driver",
+      "aliases": [
+        "Survival Mode Motivation",
+        "Financial Discipline"
+      ],
+      "avoid_terms": [
+        "scarcity mindset",
+        "bootstrapping discipline",
+        "adversity motivation"
+      ],
+      "definition": "Financial scarcity and survival pressure instill spending discipline that persists as a behavioral pattern even after capital becomes available.",
+      "ambiguity_notes": "Definition was empty in source; reconstructed from cluster context (super_cluster 4, financial/business models) and member names. Verify against transcript content.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 364,
+      "canonical_name": "Delayed Reward Arbitrage in Wealth Compounding",
+      "aliases": [
+        "Arbitrage in Delayed Rewards",
+        "Delayed Gratification",
+        "Time Value of Money in Wealth Building",
+        "Wealth Compounding vs. Active Income"
+      ],
+      "avoid_terms": [
+        "compound interest",
+        "patience pays",
+        "long-term investing"
+      ],
+      "definition": "Wealth compounds in the gap between one's willingness to wait and the broader market's impatience; extreme time horizons generate exponential returns unavailable to short-horizon actors.",
+      "ambiguity_notes": "Overlaps with 355 (patience as action) on time-horizon theme. 364 is about wealth-building mechanics; 355 is about the behavioral definition of patience. Keep separate.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 365,
+      "canonical_name": "Build on Existing Competency Advantage",
+      "aliases": [
+        "Build on Existing Advantage",
+        "Channel Selection Criteria",
+        "Skill Selection"
+      ],
+      "avoid_terms": [
+        "play to your strengths",
+        "leverage existing skills",
+        "unfair advantage"
+      ],
+      "definition": "Select channels and skills that leverage existing competencies (networks, experience, domain knowledge) rather than chasing theoretically optimal but unfamiliar paths.",
+      "ambiguity_notes": "'Channel Selection Criteria' and 'Skill Selection' are operationally distinct (marketing vs capability development). Both fold into the same principle but may have divergent claims.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 366,
+      "canonical_name": "Free Trial with Card Penalty Conversion Model",
+      "aliases": [
+        "Free Trial Plus Penalty Model",
+        "Pricing & Trial Structure",
+        "Trial With Penalty"
+      ],
+      "avoid_terms": [
+        "freemium",
+        "free trial",
+        "risk reversal"
+      ],
+      "definition": "Offering free access backed by a credit-card penalty if the client fails to execute removes purchase friction while creating urgency and commitment, accelerating conversion.",
+      "ambiguity_notes": "Mechanism (urgency via penalty) is strong. Ensure underlying claim distinguishes this from standard free-trial (no penalty) and money-back guarantee (post-execution refund).",
+      "role": "domain"
+    },
+    {
+      "concept_id": 367,
+      "canonical_name": "Price as Expectation and Quality Frame",
+      "aliases": [
+        "Price Frames Expectations",
+        "Upselling to High-Ticket Customers"
+      ],
+      "avoid_terms": [
+        "price anchoring",
+        "premium positioning",
+        "price signal"
+      ],
+      "definition": "Charging a premium price shifts client self-perception and expectations upward, anchoring future negotiations and signaling quality before delivery.",
+      "ambiguity_notes": "'Upselling to High-Ticket Customers' is a tactic alias; the canonical concept is the psychological mechanism by which price frames perception. Separate tactic from mechanism at claim level.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 368,
+      "canonical_name": "Reverse Eulogy as Values Clarity Tool",
+      "aliases": [
+        "Reverse Eulogy Clarity",
+        "Death Creates Clarity (Reverse Eulogy)",
+        "Service & Character as Life Values"
+      ],
+      "avoid_terms": [
+        "memento mori",
+        "deathbed exercise",
+        "obituary writing"
+      ],
+      "definition": "Writing your own eulogy surfaces what truly matters (service and character), revealing which current worries are noise and clarifying priority values.",
+      "ambiguity_notes": "Role is 'domain' in source but this is a cognitive/mindset tool—better classified as 'mental-model'. Flagged for reclassification.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 369,
+      "canonical_name": "Context as Judgment Dissolvent",
+      "aliases": [
+        "Context Dissolves Judgment",
+        "Compassion Through Context",
+        "Understanding Over Judgment"
+      ],
+      "avoid_terms": [
+        "empathy",
+        "radical acceptance",
+        "non-judgment"
+      ],
+      "definition": "Mapping a person's full reinforcement history and constraints dissolves moral judgment and generates compassion; context is the mechanism by which grace is generated.",
+      "ambiguity_notes": "Mental-model concept placed in super_cluster 5 (interpersonal dynamics). Role should be 'mental-model'. Flag for reclassification.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 370,
+      "canonical_name": "Founder-Dependent Operations Resist Scaling",
+      "aliases": [
+        "Founder Dependency Limits Scaling",
+        "Founder Selection Bias",
+        "Portfolio Company Scaling Challenges"
+      ],
+      "avoid_terms": [
+        "key-person dependency",
+        "owner-operator trap",
+        "PE portfolio scaling"
+      ],
+      "definition": "Acquiring small businesses on the assumption of easy scaling is typically wrong; founder-dependent operations fail to scale when the founder's attention divides across a portfolio.",
+      "ambiguity_notes": "Closely related to 360 (owner delivery time) and 371 (GM incentive alignment). 370 is the diagnosis; 371 is the remedy. 360 is the time-allocation mechanism. Ensure cross-links exist.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 371,
+      "canonical_name": "Profit-Share Alignment for GM Independence",
+      "aliases": [
+        "Incentive Alignment for Operator Independence",
+        "General Manager Profit Share Structure"
+      ],
+      "avoid_terms": [
+        "revenue sharing",
+        "equity compensation",
+        "management buyout"
+      ],
+      "definition": "A GM profit-share structure ties compensation to location performance, aligning incentives and enabling founder withdrawal from day-to-day operations.",
+      "ambiguity_notes": "Remedy concept for 370 (founder dependency). Tag the builds-on edge explicitly at connection pass.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 372,
+      "canonical_name": "Multi-Touch Attribution Ambiguity",
+      "aliases": [
+        "Attribution Challenge",
+        "Attribution Modeling",
+        "Multi-Touch Complexity"
+      ],
+      "avoid_terms": [
+        "attribution problem",
+        "last-click attribution",
+        "marketing attribution"
+      ],
+      "definition": "When customers touch 5–10 channels before buying, determining which channel deserves credit becomes structurally ambiguous; longer sales cycles compound the problem.",
+      "ambiguity_notes": "Distinct from 377 (secondary touchpoints compound conversion). 372 is the measurement problem; 377 is the strategic response (run all channels). Ensure these are cross-linked as related.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 373,
+      "canonical_name": "Paid-Plus-Organic Parallel Market Entry",
+      "aliases": [
+        "Hybrid Market Entry Accelerates Time to Profitability",
+        "New Market Entry Strategy"
+      ],
+      "avoid_terms": [
+        "paid acquisition",
+        "organic growth",
+        "blended channel strategy"
+      ],
+      "definition": "New market entry requires simultaneous low-budget paid ads ($100–200/day fast path) and organic playbook (guaranteed path); neither alone achieves profitability on required timeline.",
+      "ambiguity_notes": "The $100–200/day figure is a quantified claim that requires sourcing and conditions (market size, industry). Flag for attribution.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 374,
+      "canonical_name": "Client-Financed Acquisition Loop",
+      "aliases": [
+        "Client-Financed Acquisition Scales Spend",
+        "Client-Financed Acquisition"
+      ],
+      "avoid_terms": [
+        "self-liquidating offer",
+        "funded offer",
+        "cash-flow positive acquisition"
+      ],
+      "definition": "Selling high-ticket offers generating immediate profit, then reinvesting all proceeds into ads, creates a self-financing acquisition loop that removes ad budget as a growth constraint.",
+      "ambiguity_notes": "Related to 366 (free trial with penalty) and 379 (contingent refund). 374 is a reinvestment loop; 366 is a conversion mechanism; 379 is a refund structure. Keep distinct.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 375,
+      "canonical_name": "Guided A/B Menu Upsell",
+      "aliases": [
+        "Guided Menu Upsell Increases Attach Rate",
+        "Menu Upsell"
+      ],
+      "avoid_terms": [
+        "upsell menu",
+        "order bump",
+        "cross-sell"
+      ],
+      "definition": "Prescribe what the customer needs, offer two options, and enable frictionless payment; this structure outperforms open menus on attach rate.",
+      "ambiguity_notes": "Mechanism (prescription reduces decision paralysis) should be explicit in underlying claim. Confirm A/B here means binary-choice offer, not split-testing.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 376,
+      "canonical_name": "Acquisition-Only vs Done-For-You Positioning Tradeoff",
+      "aliases": [
+        "Pure Acquisition vs. Done-For-You Tradeoff",
+        "Turnkey Vs. Done-For-You Positioning"
+      ],
+      "avoid_terms": [
+        "DFY vs DIY",
+        "full-service vs lead-gen",
+        "service delivery model"
+      ],
+      "definition": "Done-for-you reduces client friction but imposes operationalization burden; pure acquisition positioning is preferable when operationalization costs exceed margin gain.",
+      "ambiguity_notes": "The 'margin gain' threshold is underspecified—needs conditions in underlying claims (what cost ratio triggers the tradeoff). Flag for claim elaboration.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 377,
+      "canonical_name": "Cumulative Secondary Touchpoints Compound Conversion",
+      "aliases": [
+        "Secondary Touchpoints Compound Conversion",
+        "Branding Touchpoints",
+        "Content Strategy",
+        "Scientific Attribution"
+      ],
+      "avoid_terms": [
+        "omnichannel",
+        "multi-touch marketing",
+        "touchpoint accumulation"
+      ],
+      "definition": "Secondary touchpoints (events, milestones, content) accumulated over 30 days continue all active channels after primary channel identification; cumulative touch count increases conversion probability.",
+      "ambiguity_notes": "30-day window and 'all channels' instruction are quantified prescriptions requiring sourcing. Sibling to 372 (attribution ambiguity)—cross-link as related.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 378,
+      "canonical_name": "Burnout as Trainable Capacity Constraint",
+      "aliases": [
+        "Burnout as Capacity Constraint",
+        "Reframing Burnout",
+        "Work Capacity and Adaptation"
+      ],
+      "avoid_terms": [
+        "burnout prevention",
+        "work-life balance",
+        "recovery"
+      ],
+      "definition": "Burnout is a temporary capacity limit, not a ceiling; work capacity grows with increasing volume provided injury is avoided, analogous to athletic training.",
+      "ambiguity_notes": "The athletic-training analogy is the mechanism—ensure it is made explicit at claim level, not smuggled in implicitly. Role should be 'mental-model'.",
+      "role": "mental-model"
+    },
+    {
+      "concept_id": 379,
+      "canonical_name": "Contingent Refund for Dual Accountability",
+      "aliases": [
+        "Contingent Refund Structures Drive Accountability",
+        "Win Your Money Back"
+      ],
+      "avoid_terms": [
+        "money-back guarantee",
+        "performance guarantee",
+        "satisfaction guarantee"
+      ],
+      "definition": "Client pays upfront; refund is contingent on hitting defined goals or completing actions. Dual accountability (client executes, operator delivers) plus financial skin-in-the-game increases completion rates.",
+      "ambiguity_notes": "Distinct from 366 (free trial with penalty): 379 requires upfront payment and ties refund to performance; 366 ties penalty to non-execution. Both are accountability structures. Cross-link.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 380,
+      "canonical_name": "Community Peer Accountability with Selective Refund",
+      "aliases": [
+        "Community Support with Selective Refund",
+        "Commitment to Business"
+      ],
+      "avoid_terms": [
+        "community support",
+        "peer accountability group",
+        "cohort model"
+      ],
+      "definition": "Community-driven peer accountability supplements financial accountability; selective refund conditions reinforce commitment without requiring full financial risk.",
+      "ambiguity_notes": "Sibling to 379 (contingent refund). 380 adds the social/community layer; 379 is purely financial. Consider whether these are two mechanisms within a single 'accountability structure' framework.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 381,
+      "canonical_name": "Proof-Promise-Plan Video Introduction Framework",
+      "aliases": [
+        "Video Introduction Framework",
+        "Audience Assumption Errors",
+        "Proof-Promise-Plan Framework"
+      ],
+      "avoid_terms": [
+        "video hook",
+        "video intro structure",
+        "credibility opener"
+      ],
+      "definition": "Video introductions should establish credibility (proof), articulate the value promise, and outline the plan; assuming audience knows who you are is a common error.",
+      "ambiguity_notes": "'Audience Assumption Errors' is a distinct sub-claim (don't assume audience recognition); should be a practice or claim node, not just an alias. Flag for extraction.",
+      "role": "domain"
+    },
+    {
+      "concept_id": 382,
+      "canonical_name": "First-Party Data Pattern Extraction",
+      "aliases": [
+        "First-Party Data Analysis",
+        "First-Party Data Learning",
+        "First-Party Data and Iteration"
+      ],
+      "avoid_terms": [
+        "data analytics",
+        "customer data analysis",
+        "CRM insights"
+      ],
+      "definition": "Extract actionable patterns from proprietary sales, content, and customer data at scale; first-party data outperforms third-party signals for iteration decisions.",
+      "ambiguity_notes": "Definition was sparse in source. 'At scale' is underspecified—needs a threshold or comparison baseline in underlying claims.",
+      "role": "domain"
+    }
+  ],
+  "kicked_assignments": [
+    {
+      "topic": "Rented room for $400/month, then saved $400/month by moving to gym floor",
+      "assigned_to": "363",
+      "rationale": "This is a specific anecdote illustrating Survival Mode as Financial Discipline Driver (363). Assign as L3 Example node under 363's claims, not as a standalone concept. Both housing-cost variants describe the same illustrative fact."
+    },
+    {
+      "topic": "Monthly housing cost: $300-400 when splitting one bedroom in six-bedroom house",
+      "assigned_to": "363",
+      "rationale": "Second variant of the same gym-floor/shared-housing anecdote. Assign as L3 Example node under concept 363 (Survival Mode as Financial Discipline Driver), co-located with the prior anecdote."
+    },
+    {
+      "topic": "Academic Sales Hiring",
+      "assigned_to": "354",
+      "rationale": "Hiring an experienced academic sales rep is an implementation detail of Recruiting as Systematic Discipline (354). Assign as L4 Implementation Detail under 354; it adds no standalone mechanism or falsifiable claim."
+    },
+    {
+      "topic": "Recruitment Framework",
+      "assigned_to": "354",
+      "rationale": "Definitional stub that names the same concept as 354 (Recruiting as Systematic Discipline) without adding independent content. Fold into 354's aliases; do not create a separate node."
+    },
+    {
+      "topic": "Sales Hiring and Scaling",
+      "assigned_to": "351",
+      "rationale": "Scaling sales headcount maps to Talent Funnel Mirroring Customer Acquisition Funnel (351), which explicitly covers the app-gen → onboard → retain pipeline for salespeople. Assign as a practice note under 351."
+    },
+    {
+      "topic": "Communication of Expectations",
+      "assigned_to": "ORPHAN",
+      "rationale": "Fails NODE-QUALITY-RUBRIC §C: unbound referents ('owners'), no falsifiable comparison group, no mechanism for why standards go uncommunicated. Cannot be rescued by assignment to an existing concept without a rewrite grounded in a specific source transcript. Mark ORPHAN pending re-extraction."
+    }
+  ],
+  "in_batch_merges": [
+    {
+      "source_concept_id": 343,
+      "target_concept_id": 342,
+      "rationale": "Before/After Operationalization (343) is the practice-level how-to for Before/After Visual Proof as Highest-ROI Channel (342). No independent mechanism distinguishes 343 as a separate L0 concept; demote to L4' Practice under 342 at the next verification pass."
+    },
+    {
+      "source_concept_id": 380,
+      "target_concept_id": 379,
+      "rationale": "Community Peer Accountability with Selective Refund (380) adds only the community layer to Contingent Refund for Dual Accountability (379). Both originate from source_cluster 296 and share identical super_cluster (41). Merge 380 as a mechanism variant under 379 unless distinct claims surface at extraction."
+    }
+  ]
+}

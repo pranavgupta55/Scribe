@@ -1,0 +1,109 @@
+{
+  "n_orphans": 26,
+  "orphans": [
+    {
+      "topic": "Model Pivot",
+      "rationale": "Model Pivot is a case study / example illustrating a business decision, not a load-bearing concept. No concept in batch 02 covers strategic pivots at sufficient specificity to absorb it cleanly. Flag for batch 01 or batch 03 reviewer to check if a 'Business Model Transition' concept exists."
+    },
+    {
+      "topic": "Critical Thinking for Closing Deals",
+      "rationale": "Tautological as kicked: 'critical thinking is essential for closing' carries no actionable content and fails decontextualization (A9). Cannot be meaningfully absorbed into any concept without substantial rewriting. Drop from graph."
+    },
+    {
+      "topic": "Inflation and Future Dollar Value",
+      "rationale": "Generic personal-finance concept with no domain-specific anchoring to the business/hiring context of this corpus. Does not meet the 'changes how reader acts in their business' standard (CLAIM-DEFINITION \u00a74). Drop."
+    },
+    {
+      "topic": "Grand Opening Strategy",
+      "rationale": "No existing batch_03 concept covers launch/opening marketing tactics. The claim ('grand opening is the only time aggressive marketing is justified') is hortative without mechanism, conditions, or data \u2014 fails A2 and A7. Cannot be salvaged by assignment; recommend drop or re-extraction from source transcript."
+    },
+    {
+      "topic": "Blue Ocean Strategy",
+      "rationale": "The extracted member ('only one other player') is a context-specific observation from a single motel-conversion video, not a generalizable strategy claim. The canonical Blue Ocean Strategy framework (Kim/Mauborgne) is a separate corpus-level concept that would need independent extraction. No suitable home in batch_03; ORPHAN pending a Competitive Strategy concept from another batch."
+    },
+    {
+      "topic": "Lazy System",
+      "rationale": "No coherent load-bearing concept recoverable. 'Lazy System' as extracted is a feature-list label with no mechanism, conditions, or specificity (A2 + A7 fail). Cannot be rescued by assignment. Drop pending re-extraction from source."
+    },
+    {
+      "topic": "AI-Driven Lead Generation Without Ads",
+      "rationale": "All eight members of the original cluster share a boilerplate prefix, lack mechanism, conditions, and specificity (A2 + A7 fail across the board). Re-extraction from source transcripts required. Cannot be salvaged by assignment. Would likely map to concept 129 (Affiliate and Partner Channel Strategy) or 103 (Ad Creative Assembly and Variation) after clean re-extraction, but assignment before re-extraction would pollute those concepts."
+    },
+    {
+      "topic": "Reactivation Campaign",
+      "rationale": "All eight cluster-98 members share the AI-driven boilerplate extraction flaw. 'Reactivation Campaign' is a legitimate domain topic (re-engaging lapsed customers) but needs re-extraction. No concept in batch_04 covers reactivation specifically. Assign to ORPHAN and flag for Phase 2 re-extraction."
+    },
+    {
+      "topic": "AI-Driven Review/Referral Systems",
+      "rationale": "Overlaps with referral mechanics and AI implementation but no clean home in batch_04. Referral system claims belong in a referral/growth concept not present here. Assign to ORPHAN pending re-extraction with proper conditions and mechanisms."
+    },
+    {
+      "topic": "Structured Processes for Reviews/Referrals/Lead Re-engagement",
+      "rationale": "Compound topic spanning three distinct mechanisms (reviews, referrals, re-engagement). No single concept in batch_04 covers all three without distortion. Assign to ORPHAN; split into three targeted topics at re-extraction."
+    },
+    {
+      "topic": "Future UX Shift",
+      "rationale": "Speculative forward-looking UX claim (voice/text agents replacing UI in 12-24 months) is unfalsifiable, lacks a named source anchor, and has no mechanism. Cannot assign to any existing concept without contaminating it with an ungrounded assertion. Mark ORPHAN; do not surface in knowledge graph."
+    },
+    {
+      "topic": "Claude Code",
+      "rationale": "Claude Code as a product/tool name is a proper noun implementation detail, not a business/craft concept in the corpus. No existing concept covers AI developer tooling at a level that would absorb this without becoming a product feature list. Mark ORPHAN; demote to practices/implementation_details layer if any claims are retained."
+    },
+    {
+      "topic": "Claude Code Installation",
+      "rationale": "Installation steps are a feature-list implementation detail with no mechanism, conditions, or behavior-change implication. Cannot assign to any concept without violating CLAIM-DEFINITION.md \u00a72 (Implementation Detail rules). Mark ORPHAN; discard from claim graph."
+    },
+    {
+      "topic": "Decision Limbo and Purgatory",
+      "rationale": "No concept in this batch covers philosophical/meta-personal limbo states. The topic is too abstract and context-dependent (original kick rationale: fails B3 resolvable context and B4 load-bearing clarity). No safe absorption target without forcing a fit."
+    },
+    {
+      "topic": "Next.js Frontend",
+      "rationale": "Pure technical framework name with no domain-language meaning per ubiquitous-language.md rules. No business, craft, or mental-model concept in this batch absorbs it. Drop from knowledge graph."
+    },
+    {
+      "topic": "Building Framework",
+      "rationale": "Generic technical scaffolding term (Vercel, GitHub, Next.js, Tailwind cluster). No domain relevance per ubiquitous-language.md. No absorption target. Drop from knowledge graph."
+    },
+    {
+      "topic": "GitHub Integration",
+      "rationale": "Pure technical tool name with no domain meaning per ubiquitous-language.md ('Skip the names of modules or classes unless they have meaning in the domain language'). No business, craft, or mental-model concept can absorb this topic. Drop."
+    },
+    {
+      "topic": "Website Deployment",
+      "rationale": "Technical infrastructure topic (Vercel/deployment pipeline) with no domain relevance to the business and craft concepts in this corpus. No existing concept can absorb it without category contamination. Drop."
+    },
+    {
+      "topic": "Culture Definition and Codification",
+      "rationale": "unparseable assigned_to='C-CULTURE-01'"
+    },
+    {
+      "topic": "Cultural Foundation & Team Setup",
+      "rationale": "unparseable assigned_to='C-CULTURE-01'"
+    },
+    {
+      "topic": "Regulatory Compliance",
+      "rationale": "unparseable assigned_to='C-LEGAL-01'"
+    },
+    {
+      "topic": "Legal Compliance",
+      "rationale": "unparseable assigned_to='C-LEGAL-01'"
+    },
+    {
+      "topic": "Compliance and Law",
+      "rationale": "unparseable assigned_to='C-LEGAL-01'"
+    },
+    {
+      "topic": "Franchise vs Done-For-You",
+      "rationale": "unparseable assigned_to='C-LEGAL-02'"
+    },
+    {
+      "topic": "Supply of pest control technicians is the bottleneck, not demand for service",
+      "rationale": "Singleton with zero variance and extreme domain specificity (pest control labor market). Not generalizable to a broader L0 concept without fabrication. No existing concept in batch_07 or adjacent super_clusters can absorb a pest-control labor-supply observation. Drop. If pest-control-specific content accumulates in Phase 2, revisit as a domain-specific example under a Delivery Capacity Bottleneck concept."
+    },
+    {
+      "topic": "Communication of Expectations",
+      "rationale": "Fails NODE-QUALITY-RUBRIC \u00a7C: unbound referents ('owners'), no falsifiable comparison group, no mechanism for why standards go uncommunicated. Cannot be rescued by assignment to an existing concept without a rewrite grounded in a specific source transcript. Mark ORPHAN pending re-extraction."
+    }
+  ]
+}
