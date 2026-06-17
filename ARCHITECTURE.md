@@ -199,12 +199,12 @@ flowchart TD
 
         P6_samp --> P6_split --> P6_hai --> P6_decide
         P6_decide -->|yes, ≥80%| P6_repair
-        P6_decide -->|no, &lt;80%| P6_repair
+        P6_decide -->|no| P6_repair
         P6_repair --> P6_apply --> P6_done
     end
     NODES --> P6_samp
-    P6_apply -.feeds back: update nodes.jsonl.-> NODES
-    P6_apply -.triggers re-emit.-> P5_load
+    P6_apply -. update nodes .-> NODES
+    P6_apply -. trigger re-emit .-> P5_load
 
     %% ═══════════════════════════════ Phase 7 ═══════════════════════════════
     subgraph P7["Phase 7 · RAG plumbing (server.py + graph.js)"]
@@ -225,7 +225,7 @@ flowchart TD
 
     %% ═════════════════════ user-facing endpoints ═════════════════════
     GRAPH --> VIEW([graph viewer<br/>http://localhost:8000/graph/?graph=v2]):::endpoint
-    GRAPH -.optional Phase 8.-> P7_retrieve
+    GRAPH -. optional Phase 8 .-> P7_retrieve
 ```
 
 ### Recursive loops surfaced by the diagram
