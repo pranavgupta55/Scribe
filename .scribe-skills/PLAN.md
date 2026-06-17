@@ -8,6 +8,19 @@ Companion documents (read these first):
 - [HIERARCHY.md](./HIERARCHY.md) — the L0 Concept / L1 Framework / L2 Claim / L3 Example structure.
 - [skills/ubiquitous-language.md](./skills/ubiquitous-language.md), [skills/context-format.md](./skills/context-format.md), [skills/architecture-language.md](./skills/architecture-language.md), [skills/adr-format.md](./skills/adr-format.md), [skills/diagnose.md](./skills/diagnose.md) — verbatim mattpocock/skills sources we are borrowing.
 
+## §−1 — Phase 0a findings that revise this plan
+
+These decisions are fixed by Phase 0a research (see `research/0a-research-NN.md` files for sources). They supersede earlier hedges:
+
+- **Embedding model = `qwen3-embedding:0.6b`** (primary), `mxbai-embed-large` (fallback). Qwen3-0.6b scores 52.33 on MTEB clustering vs 46.71 for mxbai — material for collapsing 1472 → 300 concepts. 32K context window (handles long claims without truncation). 639 MB download. ~5–7 min full embed on M4. *[0a-04]*
+- **Clustering algorithm = Agglomerative Ward** on L2-normalized embeddings, not HDBSCAN. Direct `n_clusters=300` parameter. Full dendrogram for free → cut at `n_clusters=50` for super-concepts. No noise/orphan points (HDBSCAN produces 30–60% noise on short labels). One fit, multiple cuts via `scipy.cluster.hierarchy.fcluster`. *[0a-05]*
+- **GraphRAG's Leiden does not apply.** It clusters an entity co-occurrence graph, not raw embeddings, and merges only exact-name duplicates. Our Phase 1a/1b pipeline (embedding clusters + LLM rename) is correct and necessary. *[0a-01]*
+- **Cache minimum threshold for Haiku 4.5 is 4,096 tokens, NOT 3,000.** Below 4,096 the cache silently misses with no error. All Haiku agent system prompts must be padded to ≥4,096 tokens via inline rubric/claim-def/few-shot content (which is useful anyway). Sonnet 4.6 minimum is 1,024 tokens — Sonnet agents can cache smaller prompts. *[0a-10]*
+- **Use native structured outputs** (`output_config.format` with `json_schema`), GA on Haiku 4.5 as of 2026-02-04. Eliminates the JSON-syntax retry loop in Phase 3a/4. Keep all fields required (Haiku omits optional fields under token pressure). Flatten nested schemas. *[0a-10]*
+- **Set `max_tokens` to 1.5× estimated output** to prevent silent truncation. For 60-pair connection labeling (~6k expected output), use `max_tokens=9000`. Monitor `stop_reason` on every response. *[0a-10]*
+
+Other 0a findings (chunking, extraction prompts, claim-extraction prior art, contradiction detection, DDD discipline) will be folded into the Phase 0 synthesis doc once Phase 0c completes.
+
 ## §0 — Why this rebuild
 
 The current graph is **fragmented at the concept layer**: 204 sources produced 1472 unique topic strings, 1440 of them appearing in only one source. Universal concepts like Lead Generation are shattered into ~47 near-duplicate single-source nodes. The Haiku connection passes operate over topic strings, so they cannot merge those duplicates — they can only edge between them. Result: the most important nodes have the fewest connections.
