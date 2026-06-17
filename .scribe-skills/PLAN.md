@@ -47,9 +47,10 @@ All extraction/labeling agents are **Haiku 4.5**. Web research and complex criti
 - Cache TTL: 5 minutes default, 1 hour available
 
 ### Cache strategy
-- System prompts ≥ 3000 tokens that are shared by 3+ concurrent agents → mark as cached.
-- Per-batch payload (the actual data the agent processes) is fresh each call.
-- Launch concurrent batches inside the same 5-minute window so the cache write amortizes across agents.
+- System prompts ≥ **4,096 tokens** (Haiku 4.5 minimum; Sonnet is 1,024) that are shared by 3+ concurrent agents → mark as cached. Below 4,096 → silent miss with no error. Pad with inline rubric/claim-def/few-shot/schema as needed.
+- Per-batch payload (the actual data the agent processes) is fresh each call. Variable per-agent content stays in the user message, not in the cached prefix.
+- TTL selection: **5-minute** for parallel-dispatch phases (Phase 4); **1-hour** ($2/MTok write) for phases with staggered dispatch (Phase 1a, Phase 3a) — break-even after 1.11 reads within the hour.
+- Verify cache hits via `cache_creation_input_tokens > 0` on first agent's response.
 
 ### Optimal Haiku batch sizing (empirical anchors)
 

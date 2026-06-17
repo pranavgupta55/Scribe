@@ -57,16 +57,28 @@ A concrete step in executing a practice or framework. Lives as a leaf, never flo
 ```yaml
 claim:
   text: |
-    One-to-three sentence prose. Reads correctly out of context. Names every
-    actor/company/product/time-period. Surfaces conditionals. Includes mechanism
-    if causal. Quotes from the source verbatim or not at all (no paraphrase in
-    quotes).
+    One-to-three sentence prose that satisfies the DECONTEXTUALIZATION property
+    (AIDA, Gwet's AC1 = 0.85 across four reviewed studies, see 0a-research-08):
+    a reader with NO access to the source document must be able to (a) understand
+    what the claim asserts, and (b) identify what evidence would settle whether
+    it is true or false. This is the primary positive gate — a claim that fails
+    decontextualization is rejected before any rubric row in NODE-QUALITY-RUBRIC
+    §C is checked. Decontextualization implies: names every actor/company/
+    product/time-period (not "the founder" — A1); surfaces conditionals (A10);
+    embeds numbers in their axis (A3); states mechanism when causal (else fails
+    falsifiability); quotes from the source verbatim or not at all (no paraphrase
+    inside quotes — A19).
   type: assertion | mechanism | comparison | conditional | quantified
   attribution:
     speaker: "Alex Hormozi"           # named individual
     source_file: "helping_..._scale_8C_6qojTA78.txt"
     section: "Pricing for Mid-Market" # the LLM-extracted section title
     transcript_offset: "23:40"        # approximate, from .meta.json
+  speaker_term: "front-end offer"     # speaker's surface form for the topic, captured
+                                       # at extraction time and aliased to the canonical
+                                       # `topic` field. Required (may be null only when
+                                       # the speaker used the canonical term verbatim).
+                                       # Drives the Phase 1b synonym sub-table.
   conditions:                          # required when the claim is rule-shaped
     - "B2B service sales"
     - "price ≥ $5,000"
