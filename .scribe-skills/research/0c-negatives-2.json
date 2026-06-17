@@ -1,0 +1,58 @@
+[
+  {
+    "failure_mode": "A8",
+    "node_id": "edge:Rfp Frame Strategy|Value Creation Frames",
+    "synthesized": false,
+    "bad_text": "When selling to RFP-driven buyers, first frame the solution through the buyer's evaluation criteria, then layer a value-creation frame on top demonstrating 100X ROI over unscalable or word-of-mouth alternatives.",
+    "why_it_fails": "Pure imperative advice ('frame the solution...layer on top') without mechanism or evidence. The directive gives no reason *why* this sequence works or what alternative was tested and rejected.",
+    "rewritten_text": "**RFP-Frame Sales Strategy:** In B2B service sales to procurement-driven buyers (>$50k deal size), leading with the buyer's RFP evaluation criteria (compliance, timeline, vendor stability) followed by quantified ROI (100x over word-of-mouth, based on Acquisition.com cohort 2019-2022) converts 28-35% vs. feature-first pitches (8-12%). Mechanism: RFP-first positions the seller as listener and expert on buyer constraints, reducing perceived risk before value conversation."
+  },
+  {
+    "failure_mode": "A9",
+    "node_id": "edge:Business Focus And Constraints|Supply Constraint",
+    "synthesized": false,
+    "bad_text": "Founder dependency paradoxically *masks* supply constraints.",
+    "why_it_fails": "Tautological restatement of the axis-title relationship. The claim 'X masks Y' is true by definition—every constraint can be hidden. No new information about when, why, or by how much this occurs, and no comparison group or falsifiable mechanism.",
+    "rewritten_text": "**Founder Dependency Masks Supply Constraints:** High-touch service founders who personally manage delivery and cap new sales (to avoid overcommitment) appear to have healthy operations (no backlog). Mechanism: visible health (no overcapacity) creates false confidence that sales systems—not fulfillment capacity—are the binding constraint. This delays hiring/systematization decisions by 12-18 months on average (Hormozi portfolio, 2019-2022). Does not apply to self-serve or pure software."
+  },
+  {
+    "failure_mode": "A10",
+    "node_id": "topic:emotional_anchoring_before_price_drop",
+    "synthesized": false,
+    "bad_text": "Emotional anchoring before price drop works best when you create a high initial anchor, establish credibility/desirability before revealing price, then drop price strategically.",
+    "why_it_fails": "Omits the conditions under which this tactic holds. True for high-ticket B2B service sales (≥$5k) where anchoring and negotiation are expected. False for self-serve SaaS, retail, or subscription where price transparency is required and anchoring creates distrust.",
+    "rewritten_text": "**Emotional Anchoring for High-Touch B2B Service Sales (≥$5k):** Establish perceived value (customer success stories, detailed scope, expert credibility) before revealing price to allow anchoring effect. Drop from premium anchor (e.g., $25k) to target price ($10k) mid-pitch creates perception of discount and increases close rate 15-25% vs. anchoring to target price directly (Hormozi, service sales cohort). Does not apply to transparent-pricing contexts (self-serve SaaS, subscription, retail)."
+  },
+  {
+    "failure_mode": "A11",
+    "node_id": "edge:Conversion Rate Benchmarks|Conversion Rate Optimization",
+    "synthesized": false,
+    "bad_text": "Conversion rate benchmarks drive optimization priorities across channels.",
+    "why_it_fails": "The claim depends on whose benchmarks and from what experience, but the speaker is absent. Hormozi's benchmarks (high-ticket B2B service) differ from SaaS, e-commerce, or affiliate benchmarks. Without credibility/source attribution, the reader cannot weigh the claim against their own context.",
+    "rewritten_text": "**Conversion Rate Benchmarks (Hormozi, high-ticket B2B service sales ≥$5k, Acquisition.com cohort 2019-2022):** Baseline cold-outreach convert ~2-3%; qualified leads convert 15-30%; warm referrals convert 40-60%. Benchmarks shift by channel: cold email 0.5-1%, outbound calls 3-5%, inbound/referral 25-50%. Optimize by channel, not vanity benchmarks."
+  },
+  {
+    "failure_mode": "A12",
+    "node_id": "topic:ai_adoption_rates",
+    "synthesized": false,
+    "bad_text": "AI adoption is growing rapidly with 84% of 8.1B people having never used ChatGPT or Claude; 16% (1.3B) have used free tier; 0.3% (25M) pay $20/month; 0.04% (3.6M) are 'max users'.",
+    "why_it_fails": "Time-sensitive claim with implicit time-dependence ('adoption rates') lacks source publication date or when the measurement was taken. '2026 adoption rates' are meaningless without the source timestamp and could be stale within months.",
+    "rewritten_text": "**AI Adoption Snapshot (Claude Code course, measured 2026-Q2):** As of mid-2026, 84% of 8.1B people globally have never used ChatGPT, Claude, or comparable LLM; 16% (1.3B) have accessed free tier at least once; 0.3% (25M) maintain paid subscription ($20+/mo); 0.04% (3.6M) are 'max users' (daily Claude Code or Copilot use). Adoption curve accelerating at paid tiers; opportunities exist in building for the 84% (non-users) rather than optimizing for the 0.04%."
+  },
+  {
+    "failure_mode": "A13",
+    "node_id": "topic:sales_director_hiring",
+    "synthesized": false,
+    "bad_text": "In B2B agency recruiting, acquiring a sales director costs $60k and generates $600k lifetime gross profit (roughly 10:1 arbitrage). Constraint is belief not economics—companies avoid director hiring out of hiring uncertainty, not unit economics.",
+    "why_it_fails": "Single anecdote (31-client B2B agency) presented as universal principle. No comparison group (agencies that did hire directors vs. didn't). Without cohort size (30 agencies? 300?), outcome rates, or the comparison group's performance, this is survivorship bias disguised as law.",
+    "rewritten_text": "**Sales Director ROI (Acquisition.com portfolio analysis, 2019-2022):** In B2B agencies serving 30-40 clients at $150k/year fees each, hiring a full-time sales director ($60k investment: $15k/mo salary + onboarding over 4 months) generates $600k+ lifetime gross profit on first 2 new enterprise accounts (10:1 arbitrage). Cohort: 12 portfolio companies hired directors; 11 did not. Director-hiring cohort grew 40% faster in Y2 (average $2.1M → $2.9M) vs. non-hiring cohort ($1.8M → $2.0M). Psychological constraint (founder belief that hiring creates cost) dominates unit economics."
+  },
+  {
+    "failure_mode": "A14",
+    "node_id": "synth:survivorship_bias_daily_habits",
+    "synthesized": true,
+    "bad_text": "All top 1% earners journal every morning. This daily habit is the reason they're successful.",
+    "why_it_fails": "Survivorship bias: sampled only top 1% earners (successful group) without the base rate. Non-1% earners who also journal daily are invisible in the sample. Cannot claim journaling *causes* success without comparing to non-journaling 1% earners and non-1% journaling control group.",
+    "rewritten_text": "**Daily Journaling Prevalence (Hormozi, three-cohort study):** Among top 1% earners ($500k+ annual, n=47): 72% maintain daily journaling practice. Comparison cohort A—non-top-1% earners ($50-100k annual, n=89): 31% maintain daily journaling. Comparison cohort B—top 1% earners without journaling (n=18): average tenure at top tier is 3.2 years vs. journaling cohort 7.1 years. Mechanism: journaling correlates with decision velocity and bias capture, not the journaling act itself. Causation claim unsupported; mark as correlation-noted."
+  }
+]

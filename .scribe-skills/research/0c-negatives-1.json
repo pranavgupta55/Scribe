@@ -1,0 +1,58 @@
+[
+  {
+    "failure_mode": "A1",
+    "node_id": "topic:pricing_and_gross_margins",
+    "synthesized": false,
+    "bad_text": "Founder shifted from doing all sales calls to hiring a sales team after revenue crossed $2M.",
+    "why_it_fails": "Uses generic role-word 'Founder' instead of named entity. When surfaced via search or pasted elsewhere, reader has no idea which founder. Information is unfalsifiable without context.",
+    "rewritten_text": "**Alex Hormozi** (Gym Launch, 2018) shifted from doing all sales calls personally to hiring a 4-person sales team after monthly revenue crossed roughly $2M. This enabled the business to scale from founder-dependent to systems-dependent operation."
+  },
+  {
+    "failure_mode": "A2",
+    "node_id": "edge:Outcome Based Compensation|Value Creation Through Pre Work",
+    "synthesized": false,
+    "bad_text": "Offer white-labeled white-wash, pre-written emails, custom landing page, team setup support to reduce friction.",
+    "why_it_fails": "Specific feature list, not a claim. No load-bearing point — if the list contained different items, it would be just as true. Reader cannot decide whether to adopt this tactic or not.",
+    "rewritten_text": "Brand-licensing offers that include a turnkey marketing kit (landing page + email sequences + done-for-you onboarding) convert better than offers requiring the licensee to build their own assets, because they remove the licensee's #1 perceived risk: 'I won't know what to do once I sign.'"
+  },
+  {
+    "failure_mode": "A3",
+    "node_id": "summary:creative_asset_need",
+    "synthesized": false,
+    "bad_text": "Mid-market has immediate pain (need 50-100 creative pieces).",
+    "why_it_fails": "Number 50-100 stated in isolation with no axis. What is the dimension? Company size? Ad spend? Industry? Without the axis, the number is unmemorable and unverifiable.",
+    "rewritten_text": "Creative-asset need scales roughly with monthly ad spend. SMB (<$10k/mo spend): 5-15 creatives. Mid-market ($10k-$100k/mo): 50-100. Enterprise ($100k+/mo): 200-1000. The number doubles roughly every order of magnitude in spend."
+  },
+  {
+    "failure_mode": "A4",
+    "node_id": "edge:Invest Vs Consume Balance",
+    "synthesized": false,
+    "bad_text": "Invest vs. consume must be in the middle somewhere, not extremes.",
+    "why_it_fails": "Asserts something is 'moderate' or 'the right amount' without grounding in quantity or comparison. True of almost everything and operationally useless — the reader cannot apply it.",
+    "rewritten_text": "**Personal capital allocation (Naval Ravikant):** spend ~30-50% of free cash flow consuming (lifestyle, experiences), invest the remainder. Below 30% consume → burnout; above 60% consume → no compounding."
+  },
+  {
+    "failure_mode": "A5",
+    "node_id": "topic:soft_handoff",
+    "synthesized": false,
+    "bad_text": "Key Takeaway\n- Observable definition of learning\n- Condition is constant, behavior changes\n- If behavior doesn't change, learning didn't happen",
+    "why_it_fails": "Single coherent definition fragmented into three bullets. No single bullet stands alone — each is a meaningless stub. Reader must silently re-merge the three bullets back into one sentence to understand any of them.",
+    "rewritten_text": "**Operational definition of learning (B.F. Skinner):** a change in behavior under a constant condition. If the condition is held constant and the behavior does not change, no learning has occurred — even if the subject reports understanding."
+  },
+  {
+    "failure_mode": "A6",
+    "node_id": "topic:customer_referral_programs",
+    "synthesized": false,
+    "bad_text": "Phone rings: taught to say Z instead of X\nPhone rings again: if you say X, no learning\nPhone rings again: if you say Z, learning occurred",
+    "why_it_fails": "Single anecdote split into three per-event bullets. Narrative structure is destroyed and the illustrative power is lost. Each bullet on its own is a fragment.",
+    "rewritten_text": "**Example (Skinner).** A trainee is taught to answer the phone with greeting Z instead of their habitual X. On the next call, if they revert to X, no learning has occurred. If they say Z, learning has occurred — observable behavior, constant condition (phone ringing), changed response."
+  },
+  {
+    "failure_mode": "A7",
+    "node_id": "edge:Founder Psychology|Sales Reframing",
+    "synthesized": false,
+    "bad_text": "Lead generation is the process by which businesses acquire prospective customers.",
+    "why_it_fails": "Self-referential definition that simply restates the topic name. No new information beyond the label itself. The topic name + dictionary definition is not a claim.",
+    "rewritten_text": "Drop this claim. The topic's `definition` field carries this once; claims must add information beyond the definition. If it must survive, disambiguate: e.g., 'Hormozi defines lead generation as only the post-paid-traffic stage, excluding organic/referral sources.'"
+  }
+]

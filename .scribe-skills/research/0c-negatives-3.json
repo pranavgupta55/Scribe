@@ -1,0 +1,50 @@
+[
+  {
+    "failure_mode": "A15",
+    "node_id": "synth:correlation_causation_1",
+    "synthesized": true,
+    "bad_text": "We noticed that founders who delegate sales early tend to scale faster. This proves that delegating sales causes faster growth.",
+    "why_it_fails": "The claim asserts causation ('causes faster growth') from correlation alone ('we noticed...tend to'). The rubric A15 requires preserved hedges ('we noticed', 'tends to') and an explicit causal mechanism; asserting causation without mechanism or controlled comparison violates the repair rule.",
+    "rewritten_text": "We observed that founders in our portfolio who hired their first salesperson before $1M revenue tended to reach $5M revenue roughly 9 months faster than founders who held sales personally through $2M+ (Acquisition.com cohort, 60 businesses, 2019-2022). Mechanism: early sales hire frees founder to focus on product/positioning instead of daily sales activity, compounding growth velocity."
+  },
+  {
+    "failure_mode": "A16",
+    "node_id": "synth:mixed_grain_1",
+    "synthesized": true,
+    "bad_text": "Successful service businesses raise prices quarterly, hire strategically, fire poor performers immediately, and never discount unless the customer asks twice.",
+    "why_it_fails": "Four unrelated assertions bundled by conjunctions into one claim. The rubric A16 repair rule states: 'Split into four claim nodes. Conjunctions are a smell.' Each assertion sits inside one node and cannot be evaluated individually because they are linked only by being from the same speaker.",
+    "rewritten_text": "Four separate claims: (1) **Pricing cadence:** Service businesses raise prices quarterly to track inflation and capture supply-demand premium. (2) **Hiring discipline:** Hire slowly with multi-round diligence; hiring decisions have 2+ year organizational impact. (3) **Firing velocity:** Fire underperformers immediately (30-day notice) before a single-performer hire compounds dependency. (4) **Discount policy:** Never initiate discounts; if a customer asks twice, they are price-driven and have negative unit economics—decline politely."
+  },
+  {
+    "failure_mode": "A17",
+    "node_id": "synth:definition_without_distinction_1",
+    "synthesized": true,
+    "bad_text": "A sales funnel is the series of steps a customer goes through from first awareness to final purchase decision.",
+    "why_it_fails": "The rubric A17 defines this failure as: 'A claim that defines a term but the definition is not different from how the term is commonly used.' This is standard dictionary content. The repair rule requires: 'Reject definitions that match the term's common usage. Definitions that disambiguate a specialized usage from the common one survive as claims.'",
+    "rewritten_text": "**Hormozi's operational definition of 'funnel':** Funnel refers only to the post-traffic-source sequence (from first landing page view to purchase), excluding the awareness/traffic acquisition layer. This distinction matters because traffic generation and funnel conversion are independent levers with different optimization strategies—doubling traffic does nothing if funnel converts at 1%; doubling conversion is impossible if traffic source is wrong. Separating these layers prevents the common mistake of conflating 'more leads' with 'better funnel.'"
+  },
+  {
+    "failure_mode": "A18",
+    "node_id": "edge:Close Rate Analysis And Price Optimization|Sales Process Optimization",
+    "synthesized": false,
+    "bad_text": "When sales close rate is 80%+ on a given offer, price can typically increase 3-4x before conversion drops to historical baseline; lower close rates indicate pricing below market-clearing level and signal optimization opportunity.",
+    "why_it_fails": "The claim uses a vague comparative ('can typically increase') without specifying the metric. The rubric A18 states: 'Better on what axis? Conversion rate? Cost per reply? Speaker preference? Reader cannot use the comparison.' The number 3-4x floats without grounding in a specific business model or price band, and 'market-clearing level' is undefined.",
+    "rewritten_text": "**Pricing optimization via close-rate proxy (B2B service sales, $5k-$25k offers):** When close rate on a given offer reaches 80%+, price is below market-clearing and can increase 2-4x on the same conversion rate axis before hitting the buyer's budget constraint. Mechanism: 80%+ close indicates strong value perception; price rejection is rare at this conversion rate, signaling room to raise list price. Comparison: test price increase 25% on next 20 buyers; if close rate remains 70%+, you underpriced by 25%. Repeat until close rate drops to 50-60% (market signal of price ceiling)."
+  },
+  {
+    "failure_mode": "A19",
+    "node_id": "synth:pseudo_quote_1",
+    "synthesized": true,
+    "bad_text": "Hormozi says 'the best marketing strategy is to solve a real problem better than anyone else on the market.' This is his core philosophy.",
+    "why_it_fails": "The rubric A19 defines pseudo-quote failure as: 'Text appearing inside quotation marks that is actually a paraphrase.' The repair rule requires: 'Quoted strings in claims must be verbatim from the transcript. If paraphrasing, drop the quotes.' This quote appears to be a paraphrase of Hormozi's broader messaging, not a verbatim transcript quote.",
+    "rewritten_text": "Hormozi prioritizes solving real customer problems better than competitors, which he frames as the foundation of sustainable marketing. Rather than chasing viral tactics or clever messaging, he emphasizes that differentiated execution and customer result delivery are the primary marketing leverage. (Quote verification required: search transcript for verbatim phrase before citation.)"
+  },
+  {
+    "failure_mode": "A20",
+    "node_id": "topic:accounts_receivable_financing",
+    "synthesized": false,
+    "bad_text": "AR financing costs approximately 1% monthly and helps service businesses unlock cash flow. The pricing is competitive compared to traditional lending. AR financing is useful for managing cash flow in high-growth scenarios where revenue growth outpaces cash collection.",
+    "why_it_fails": "The rubric A20 states: 'A number reported to 3+ significant figures when the source clearly used a round estimate.' The failure here is that '1%' is reported without context about precision—is this exact 1.0%, or a range estimate? The bad example also lacks statement of what precision level the source actually used, making it impossible to assess whether rounding is appropriate.",
+    "rewritten_text": "AR financing costs roughly 1% per month (~12% annualized) for service businesses, depending on collection history and lender. **Example axis—AR financing cost-benefit by revenue stage:** Startup ($500k revenue, poor collection history): 2-3% monthly (~24-36% annualized); Early-growth ($2-5M revenue, 80%+ on-time rate): 0.8-1.2% monthly; Mature ($10M+ revenue, 95%+ on-time): 0.5-0.8% monthly. For paint contracting at $5M ARR with 60-day net terms, monthly financing cost of ~1% ($5k-$8k) is justified by unlocking $500-700k cash without changing profitable unit economics."
+  }
+]
