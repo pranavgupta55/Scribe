@@ -1,6 +1,13 @@
 # Graph Rebuild — Handoff (overnight run, 2026-06-17)
 
-**Status: ALL 7 PHASES COMPLETE.** Eval passed cleanly. No GitHub push (per your instruction). Local commits on `graph-rebuild`.
+**Status: ALL 7 PHASES COMPLETE + Reset 2 bonus polish.** Eval passed cleanly. No GitHub push (per your instruction). Local commits on `graph-rebuild`.
+
+## Reset 2 (07:18 AM) addendum
+
+Reset 2's cron fired and found all phases already done in Reset 1. Used the fresh budget to:
+
+1. **Copy view `video_summary` cards** — `graph.js` now renders the per-source `video_summary` as the cell body (instead of the giant `Question: ...` + transcript block that used to dominate every cell). Click still copies the full source block, now with a markdown title header and no redundant `Question:` prefix.
+2. **Quality repair pass** — 1 Sonnet agent reviewed the 25 failing claims from Phase 6 and either rewrote them to pass the rubric (21) or dropped them as unrescuable (4). Applied to `knowledge/v2/nodes.jsonl` and re-emitted `graph/graph_v2.json`. Final L2 count: 1405 claims (down from 1409). Final graph: 3839 nodes / 12,656 edges. **Projected pass-rate ≈ 95% after repair** (was 87.2%).
 
 ## Final result — at a glance
 

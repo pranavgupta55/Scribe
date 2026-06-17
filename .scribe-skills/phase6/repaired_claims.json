@@ -1,0 +1,255 @@
+[
+  {
+    "node_id": "claim:394",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi (Acquisition.com, ~2022) frames hiring a top-performing salesperson in a low-capex home-services or agency business as a capital-allocation decision: at roughly $200K all-in annual compensation and ~$1M gross profit generated per rep (50% margin on ~$2M revenue), the gross-profit-to-cost ratio is approximately 5:1. In a business valued at ~8x EBITDA, each such hire adds an estimated ~$8M in enterprise value per $200K invested.",
+    "new_conditions": [
+      "Low-capex service business (home services or agency)",
+      "Salesperson compensation ~$200K/year (top performer)",
+      "~50% gross margin on ~$2M revenue per rep",
+      "Business valued at ~8x EBITDA multiple"
+    ],
+    "new_mechanism": "When viewed as a capital investment rather than a headcount cost, each salesperson converts $200K of annual cost into ~$1M of gross profit; the enterprise value multiplier then compounds the economics further.",
+    "rationale": "Pruned 27-item conditions list to the 4 load-bearing constraints; consolidated the multiple overlapping business-type references into one scope statement; kept numbers on their axis."
+  },
+  {
+    "node_id": "claim:2021",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi observes that LinkedIn agencies offering content-plus-DM outreach as a service encounter a brand-risk ceiling as they target higher-revenue founder-CEOs (roughly $5M+ revenue): founders at that scale treat their personal LinkedIn account as a reputational asset and refuse to allow outsourced DMs sent from their name, blocking the agency's standard acquisition motion unless the offer is restructured (e.g., white-labeled sending identity or LinkedIn-ads-only variant).",
+    "new_conditions": [
+      "LinkedIn agency offering DM outreach as a service component",
+      "Target clients are founder-CEOs at roughly $5M+ revenue"
+    ],
+    "new_mechanism": "Higher-revenue founders have already built personal brand equity worth protecting; the perceived downside of a poorly-targeted outsourced DM exceeds the perceived upside of incremental outreach, making risk-aversion the dominant response.",
+    "rationale": "Resolved 'larger company sizes' to a concrete revenue threshold (~$5M+) and named the structural workarounds, eliminating the A1 unbound-generic failure."
+  },
+  {
+    "node_id": "claim:572",
+    "action": "drop",
+    "rationale": "Core assertion ('best talent is always in the future') is tautological and unfalsifiable — any counterexample can be restated as 'those weren't truly the best'; the rescuable version ('raise hiring standards over time') is advice-only and belongs in practices[], not claims[]."
+  },
+  {
+    "node_id": "claim:163",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that a content creator who is genuinely bored by or disengaged from a topic will produce lower-quality content on that topic than a creator who finds it intrinsically interesting — because disengagement reduces the depth of thinking, specificity of examples, and energy that audiences detect and reward with engagement. Content topic selection should therefore weight the creator's authentic interest alongside audience-fit, not treat them as independent variables.",
+    "new_conditions": [
+      "Organic long-form or short-form content creator (not paid-media copy)",
+      "Creator has a meaningful choice between topics with comparable audience demand"
+    ],
+    "new_mechanism": "Genuine interest drives the cognitive investment that produces specific, non-generic examples and unexpected angles; audiences detect and reward this specificity with higher engagement, compounding the performance gap over time.",
+    "rationale": "Added explicit mechanism (cognitive investment → specificity → audience signal) to fix A15 correlation-as-causation; grounded 'worse content' as lower depth/specificity/energy rather than leaving it as a vague blanket."
+  },
+  {
+    "node_id": "claim:1740",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts — drawing on his own pivot from gym-specific products to $100M Offers (a general business book) — that a personal brand audience built around a creator's expertise and character, rather than around a specific product category, can be redirected to a new product and achieve meaningful conversion, provided the new offer addresses a problem the audience already has. The brand acts as a trust transfer mechanism, not a category lock.",
+    "new_conditions": [
+      "Audience trust built through consistent personal brand content (not product-category advertising)",
+      "New offer addresses a problem the existing audience already experiences",
+      "Creator is the primary trust signal (not a company brand)"
+    ],
+    "new_mechanism": "Trust is transferable across categories when the audience's underlying belief is in the creator's judgment and track record, not in the specific domain; the new offer inherits that trust as long as it is congruent with the audience's known pain.",
+    "rationale": "Grounded the universal 'any product' claim with Hormozi's own named example (gym → $100M Offers) and added a mechanism; downgraded to experience-report intensity by naming the single-case evidence base."
+  },
+  {
+    "node_id": "claim:1169",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that in sales copy and sales conversations, accurately mirroring a prospect's own pain language — articulating their problem in more precise terms than they use themselves — generates stronger belief that the seller can solve it than a larger promised outcome does, because the buyer's first psychological gate is 'does this person understand my problem,' not 'is the outcome big enough.'",
+    "new_conditions": [
+      "Copy or sales conversation targeting a specific avatar with known, articulable pain points",
+      "Offer where the buyer must first believe the seller understands their situation before evaluating the outcome"
+    ],
+    "new_mechanism": "Buyers filter on comprehension before credibility: if the seller's language precisely matches the buyer's internal monologue, the buyer infers diagnostic accuracy, which is a prerequisite for trusting the prescription. An outcome promise without that diagnostic signal is discounted as generic.",
+    "rationale": "Added an explicit causal mechanism (comprehension gate precedes outcome evaluation) to fix A15; removed the tautology risk by framing it as a sequenced psychological gate rather than a definitional equivalence."
+  },
+  {
+    "node_id": "claim:2097",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi reports — as a first-person experience account — that sustained high work volume has compounded his productivity per hour over time rather than degrading it: each period of high output has raised both his skill ceiling and his tolerance for effort, making subsequent periods more efficient. He treats work ethic itself as a trainable capacity, not a fixed trait.",
+    "new_conditions": [
+      "Applies as an experience-report from Hormozi's own trajectory; not asserted as universal law"
+    ],
+    "new_mechanism": "Repeated high-volume work builds both domain skill (raising output quality per hour) and psychological resilience (raising sustainable effort duration); both compound, so the return per hour of work increases over time for the same individual.",
+    "rationale": "Downgraded from universal claim to explicitly labelled experience-report to fix A13; mechanism preserved but framed as within-person compounding rather than a cross-person law."
+  },
+  {
+    "node_id": "claim:989",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that distributor agencies in a white-label reseller model who receive no structured onboarding or activation journey will exhibit high churn regardless of the underlying service quality — because without a usage habit established in the first 30-60 days, distributors never reach the 'aha moment' that makes continued engagement feel worthwhile.",
+    "new_conditions": [
+      "Distributor agencies receiving a service to white-label and resell",
+      "No formal onboarding, activation sequence, or ongoing engagement program in place"
+    ],
+    "new_mechanism": "Distributors who do not establish a usage habit in the early activation window do not experience the product's value; without perceived value, churn is driven by inertia regardless of objective service quality.",
+    "rationale": "Replaced the opaque '$100M Leads book' condition with the operational behavior it prescribed (structured onboarding/activation), making the claim falsifiable without requiring access to the book."
+  },
+  {
+    "node_id": "claim:174",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that high performers pursuing a large, emotionally meaningful goal will voluntarily work past sustainable limits without registering the warning signs themselves — because the goal dominates their attention. Their direct leader is therefore the only party positioned to observe the pattern externally and authorize rest before performance-degrading burnout occurs.",
+    "new_conditions": [
+      "High performer with strong intrinsic motivation toward a large goal",
+      "Direct leader has visibility into the individual's work patterns and output quality"
+    ],
+    "new_mechanism": "Goal salience consumes the attentional bandwidth that would otherwise monitor fatigue signals; the individual's self-monitoring is crowded out by goal-pursuit, making external observation by the leader the primary early-warning mechanism.",
+    "rationale": "Added a specific mechanism (goal-salience crowding out self-monitoring) to fix the null-mechanism failure; scoped the universal 'all workers' to the named conditions (high-performer, large goal, direct leader visibility)."
+  },
+  {
+    "node_id": "claim:560",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that for an agency or coaching business experiencing high churn driven by activation failure, the highest-leverage fix is to identify which customer avatar segments have a demonstrably higher activation-and-retention rate from existing data, then restrict sales to only those segments — even if the narrower targeting raises CAC — because the improvement in LTV more than compensates. The principle: solve the stick problem before the scale problem.",
+    "new_conditions": [
+      "Agency or coaching business with measurable churn driven by customer activation failure",
+      "Sufficient historical data to segment activated vs. churned cohorts by avatar attributes",
+      "At least one avatar segment shows materially higher LTV than the current blended average"
+    ],
+    "new_mechanism": "Customers who cannot extract value from the service churn regardless of price or delivery quality; filtering to high-propensity avatars raises per-cohort LTV faster than it raises CAC, improving unit economics even as volume initially drops.",
+    "rationale": "Collapsed 28 over-fitted conditions to the 3 load-bearing structural requirements; removed single-case specifics (wildfire sprinkler, HNW clients) that belonged in examples[], not conditions[]."
+  },
+  {
+    "node_id": "claim:2164",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that in a high-volume inbound sales team of ~15-20 reps operating without process enforcement, rep churn (quits + fires) can match or exceed the hiring rate — meaning headcount stays flat at ~17 while the underlying sales process never improves. The steady-state headcount masks a treadmill dynamic: management bandwidth is consumed by constant replacement hiring rather than process improvement.",
+    "new_conditions": [
+      "High-volume inbound model with 15-20 sales reps",
+      "No culture enforcement or performance-management process in place"
+    ],
+    "new_mechanism": "Without process enforcement, the team continuously loses low-performers through firing and occasional high-performers through voluntary attrition; constant replacement hiring consumes the management bandwidth that would otherwise be invested in process improvement, locking the team's performance ceiling.",
+    "rationale": "Grounded the 'approximately equal' number to the ~17-rep team size Hormozi described, added the treadmill framing (headcount stable, process stuck) to make the outcome concrete and falsifiable."
+  },
+  {
+    "node_id": "claim:1066",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi observes — from a questioner's experience coaching financial advisors — that professional-credential audiences (e.g., licensed financial advisors) have an identity conflict with the word 'sales' that reduces their activation in sales-training programs. Renaming 'sales calls' to 'consults' and removing the word 'sales' from internal language reduced resistance and improved engagement for that cohort. The mechanism is semantic identity compatibility: the reframe allows the professional to adopt the behavior without adopting an identity label they reject.",
+    "new_conditions": [
+      "Audience holds a professional credential with a distinct occupational identity (e.g., financial advisor, licensed clinician)",
+      "Product is sales coaching or a sales-activity-heavy program sold to that audience"
+    ],
+    "new_mechanism": "Professional-credential holders have internalized an occupational identity incompatible with 'salesperson'; relabeling the activity preserves the behavior while removing the identity threat, lowering psychological resistance to adoption.",
+    "rationale": "Added the missing mechanism (semantic identity compatibility) to fix the null-mechanism failure; demoted the 'any reframe works' universalization by anchoring to the specific professional-credential context."
+  },
+  {
+    "node_id": "claim:1167",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi argues — using lawn care as a deliberate edge case — that any founder-operated service business can create a premium one-on-one tier by differentiating on direct founder access and personal execution (founder designs the plan, founder is the point of contact) versus standard service (crew executes, account rep handles communication). The premium tier is not industry-specific; it is access-specific.",
+    "new_conditions": [
+      "Founder is the primary operator and is identifiable as a named individual with a reputation",
+      "Service business where execution quality is attributable to the person doing the work (not a commodity process)"
+    ],
+    "new_mechanism": "Buyers in almost any service category will pay a premium for direct access to the highest-credibility individual in the business; the tiering mechanism is access asymmetry, which exists in any business where the founder is more valuable than a crew member.",
+    "rationale": "Replaced 'any business' universal with the named structural condition (founder-identifiable, execution-attributable) and added mechanism; grounded the lawn care example as an explicit edge-case illustration rather than a universal claim."
+  },
+  {
+    "node_id": "claim:2193",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that operators who prioritize efficiency metrics (margin %, ROAS, relative ROI) over raw advertising volume will systematically under-invest in spend, and therefore produce proportionally smaller absolute output — because at the volumes he operates (~$1M+/month ad spend), total sales output scales roughly linearly with volume, meaning optimizing a small input at high efficiency still yields less than a larger input at moderate efficiency.",
+    "new_conditions": [
+      "Direct-response advertising business where sales output scales roughly linearly with ad volume",
+      "Operator is not yet near market saturation for their offer"
+    ],
+    "new_mechanism": "At sub-saturation spend levels, the marginal return on each additional dollar is roughly constant; optimizing efficiency without increasing volume improves the ratio but not the numerator, keeping absolute output (and therefore absolute profit) artificially small.",
+    "rationale": "Grounded 'obsess over efficiency' and 'stay small' with a named volume context (~$1M+/month) and a falsifiable mechanism (linear scaling below saturation); removed the subjective 'obsessed' descriptor."
+  },
+  {
+    "node_id": "claim:631",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi describes a company he examined (an AI ad-production software business, circa 2024) that offered both a DIY ad-making tool and full-service ad production. Customers consistently rejected the DIY tool and demanded the full-service output, forcing the company to pivot to a pure marketing agency model and use the AI production technology as an internal efficiency lever rather than a customer-facing feature.",
+    "new_conditions": [
+      "AI ad-production market, circa 2024",
+      "Offer included both a self-serve tool and a done-for-you service variant"
+    ],
+    "new_mechanism": "Buyers want creative output, not access to creative tools; the tool-vs-service framing reflects a supply-side perspective that most buyers do not share — they are buying the outcome, not the capability to produce it themselves.",
+    "rationale": "Resolved 'a prior company' to the named context (AI ad-production software, 2024) that Hormozi described; the company itself is unnamed in the transcript but the industry and year are stated, satisfying the resolvable-referent standard without fabricating a name."
+  },
+  {
+    "node_id": "claim:414",
+    "action": "drop",
+    "rationale": "The core assertion ('both saying no and hearing no are required for business success') is a tautology accepted by every domain practitioner without evidence; there is no quantification, mechanism, or counterexample that could make it falsifiable, and the rescuable version is advice-only (practices[])."
+  },
+  {
+    "node_id": "claim:641",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi argues that in a tiered-pricing bundle structure, sales conversations should actively guide buyers toward the highest-margin option rather than presenting tiers neutrally — because neutral presentation leaves the margin outcome to buyer default behavior, which systematically under-selects premium tiers. Guided sales flows (anchoring, leading with the premium tier, framing downgrade as a choice) increase the share of buyers selecting the highest-margin bundle without changing the offer itself.",
+    "new_conditions": [
+      "Business offers multiple tiers or bundles with materially different margin profiles",
+      "Sales involves a human conversation or structured sales page (not fully self-serve checkout)"
+    ],
+    "new_mechanism": "Buyers default to middle or lower tiers when presented with neutral optionality; active guidance shifts the reference point, making the premium tier the path of least resistance rather than the upgrade requiring justification.",
+    "rationale": "Removed the seven over-specific conditions (enterprise RFP, AI-origin disclosure, broadcast budgets) that were single-case context rather than load-bearing constraints; retained the two structural conditions that actually gate the claim."
+  },
+  {
+    "node_id": "claim:2026",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that the majority of business owners hold standards that exist only as internal intuitions — the owner knows when something is done wrong but has never translated the standard into a written, observable behavior their team can check against. The failure mode is not low standards but unexported standards: the team cannot replicate what they cannot observe or measure.",
+    "new_conditions": [
+      "Owner-operated business where quality standards have not been documented or operationalized",
+      "Team expected to maintain quality without a written standard or scoring rubric"
+    ],
+    "new_mechanism": "Unexported standards create a read-your-mind accountability structure: the owner evaluates output against a private model the team cannot access, producing inconsistent feedback that the team cannot learn from and cannot self-correct against.",
+    "rationale": "Replaced the tautological 'standards are important' framing with a specific failure mechanism (unexported-standards / read-your-mind accountability); added conditions and mechanism to fix A4 and A9."
+  },
+  {
+    "node_id": "claim:1611",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi argues that the dominant social media framing of trauma — exemplified by influencer content that defines trauma as events that inevitably damage outcomes and position the subject exclusively as a victim — is empirically incomplete, because it excludes the class of cases where a negative event produces a permanent, measurable improvement in behavior and life trajectory. He proposes that 'trauma' should be defined behaviorally (did the event change behavior, and in which direction?) rather than emotionally.",
+    "new_conditions": [
+      "Applies as a definitional critique of the victim-framing common in mental-health-adjacent social media content (circa 2022-2024)"
+    ],
+    "new_mechanism": "Collapsing diverse behavioral outcomes (some positive, some negative) into a single victim-framing prevents the individual from accurately diagnosing what actually happened and selecting an appropriate response; the undefined emotional usage of 'trauma' blocks the causal analysis needed for effective action.",
+    "rationale": "Resolved 'common social media framing' to a named behavioral description (victim-framing in mental-health-adjacent influencer content, ~2022-2024) to fix A1; preserved the mechanism field."
+  },
+  {
+    "node_id": "claim:1814",
+    "action": "rewrite",
+    "new_text": "Jacob (an AI agency founder presenting his own recorded sales calls in an Acquisition.com coaching session, ~2024) asserts that local brick-and-mortar businesses with an existing lead database of hundreds to thousands of contacts are routinely advised by their current marketing agencies to run paid ads before exhausting lower-CAC options — specifically database reactivation and review/referral solicitation from active members. He attributes this to agencies relying on channel-specific playbooks (paid ads only) rather than diagnosing what would maximize a specific client's return first.",
+    "new_conditions": [
+      "Local brick-and-mortar business with an existing lead database (hundreds to thousands of contacts)",
+      "Currently paying a marketing agency for paid ads as the primary growth channel"
+    ],
+    "new_mechanism": null,
+    "rationale": "Resolved the speaker from 'unnamed AI agency founder' to the session context (Jacob, Acquisition.com coaching, ~2024); reframed the feature-list failure (A2) as a sequencing observation (ads before lower-CAC alternatives) with a named behavioral cause (channel-specific playbooks); dropped causal claim of mechanism since no evidence is provided."
+  },
+  {
+    "node_id": "claim:1143",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that when a coaching or consulting business founder is supply-constrained — already at full delivery capacity with demand exceeding it — changing demand-generation channels or selling cadence cannot increase revenue, because the bottleneck is delivery, not demand. The only levers that can expand revenue are hiring a second delivery person or restructuring the delivery format to serve more clients per unit of founder time.",
+    "new_conditions": [
+      "Coaching or consulting business where the founder is the sole delivery resource",
+      "Demand already exceeds current delivery capacity (supply-constrained, not demand-constrained)"
+    ],
+    "new_mechanism": "In a supply-constrained system, increasing demand inputs (more leads, more sales activity) produces no incremental revenue because the delivery ceiling is hit before additional revenue can be captured; only expanding delivery capacity removes the constraint.",
+    "rationale": "Added the explicit mechanism (supply-constrained systems don't respond to demand-side inputs) to fix the A8 hortative-without-mechanism failure; tightened conditions to the two load-bearing structural requirements."
+  },
+  {
+    "node_id": "claim:2233",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that standalone education products (courses, books, curriculum-based programs) have a structural recurring-revenue ceiling: the moment a customer fully acquires the skill or knowledge taught, the product's value drops to approximately zero and there is no rational basis for repurchase. This is why pure education businesses struggle to generate recurring revenue from the same customer cohort.",
+    "new_conditions": [
+      "Standalone education or information product (course, book, or curriculum) with no ongoing consumable component",
+      "Product outcome is skill or knowledge acquisition (not a tool, community, or credential requiring renewal)"
+    ],
+    "new_mechanism": "Once a learner possesses the skill, the pre-learning value (high) drops to near-zero post-learning; there is no consumption loop that would drive repurchase of the same information.",
+    "rationale": "Collapsed the 9-item redundant conditions list to the 2 structurally distinct conditions; removed near-duplicate entries (B2C/B2B education, knowledge-based, pure education, selling a skill) that all described the same constraint."
+  },
+  {
+    "node_id": "claim:2025",
+    "action": "drop",
+    "rationale": "The claim is unfalsifiable by construction — 'businesses perceived as excellent have standards, businesses perceived as poor lack them' defines excellence through standards, making it a tautology (A9); no mechanism, no comparison group, and no operational definition of 'standards' or 'excellent' can be rescued from the source text without fabricating content."
+  },
+  {
+    "node_id": "claim:12",
+    "action": "rewrite",
+    "new_text": "Alex Hormozi asserts that voluntarily sharing information with your team — including information they could use against you — is itself a trust-extension act that creates a social contract: the team now has something to live up to (or violate), making their subsequent behavior a revealed signal of their actual trustworthiness. Default trust extended is the team's to lose, not the leader's to give.",
+    "new_conditions": [
+      "Leader voluntarily shares context that creates personal exposure or vulnerability",
+      "Team is aware that the leader chose to share rather than withhold"
+    ],
+    "new_mechanism": "By accepting personal risk, the leader signals confidence in the team's integrity; this raises the perceived stakes of betrayal for team members (their behavior now carries moral weight) and generates reciprocal trustworthiness through social-commitment dynamics.",
+    "rationale": "Replaced the circular mechanism ('makes oneself punishable → raises stakes → team behaves') with a social-commitment framing that is independently falsifiable; tightened conditions to the structural requirements."
+  },
+  {
+    "node_id": "claim:1992",
+    "action": "drop",
+    "rationale": "The claim that 'undefined terms create confusion' is a tautology (A9) — it is true by definition that undefined shared terms produce misaligned understanding; no mechanism or comparison could make this falsifiable, and the rescuable version is a definitional observation that belongs in the topic's definition field, not in claims[]."
+  }
+]
