@@ -198,7 +198,7 @@ const sliderRanges = {
   linkDist:  [50,  250],    // default 50 → 150
   momentum:  [2,   12],     // default 50 → 7
   nodeSize:  [2,   10],     // default 50 → 6
-  edgeMin:   [80,  100],    // default 50 → threshold 0.90
+  edgeMin:   [0,   101],    // piecewise (see updateCfgFromSlider): 0→0, 50→0.90, 100→1.01 (drops every edge)
   gravity:   [20,  180],    // default 50 → 100
   edgeRepel: [0,   240],    // default 50 → 120 (push edges apart from each other)
 };
@@ -208,7 +208,15 @@ let cfg = { repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gra
 function updateCfgFromSlider(k, sliderVal) {
   const [lo, hi] = sliderRanges[k];
   const actual = lo + (sliderVal / 100) * (hi - lo);
-  cfg[k] = (k === 'edgeMin') ? (actual / 100) : actual;
+  if (k === 'edgeMin') {
+    // Piecewise so the center (50) keeps the old 0.90 threshold while the
+    // endpoints reach 0 (every edge kept) and 1.01 (every edge dropped).
+    cfg[k] = sliderVal <= 50
+      ? (sliderVal / 50) * 0.90
+      : 0.90 + ((sliderVal - 50) / 50) * 0.11;
+  } else {
+    cfg[k] = actual;
+  }
   const valEl = document.getElementById(k + '-val');
   if (valEl) valEl.textContent = (sliderVal / 100).toFixed(2);
 }
