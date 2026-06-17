@@ -1,0 +1,205 @@
+[
+  {
+    "cluster_id": 132,
+    "verdict": "rename",
+    "canonical_name": "Consultative Sales Process",
+    "aliases": ["Sales Framework", "RFP Strategy", "Structured Sales Approach"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Structured consultative process that discovers buyer needs holistically before pitching solutions.",
+    "rationale": "Centroid term too generic; framework is about discovery-first consultative selling, not generic 'sales framework.'"
+  },
+  {
+    "cluster_id": 133,
+    "verdict": "split",
+    "canonical_name": "Cash Conversion Cycle Optimization",
+    "aliases": ["Working Capital Management", "Payment Terms Strategy"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Payment Timing Optimization",
+        "members": ["30-Day Cash Collected", "Payback Period", "Accounts Receivable Financing"],
+        "definition": "Minimize cash gap between customer acquisition and payment collection to enable leverage."
+      },
+      {
+        "canonical_name": "Alternative Financing Structures",
+        "members": ["Alternative Mortgage Models", "Billing Cycles", "Continuity Discount Offers", "Payment Plan Downsells"],
+        "definition": "Non-traditional payment/financing structures (seller financing, installments, billing rhythm) to improve cash position."
+      },
+      {
+        "canonical_name": "Supplier Terms Negotiation",
+        "members": ["Supplier Terms Negotiation"],
+        "definition": "Shifting payment terms with suppliers to free cash without product changes."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Strategic management of cash inflows/outflows through payment timing, terms, and financing.",
+    "rationale": "Cluster bundles three distinct mechanisms: customer payment timing, alternative financing structures, and supplier terms—too heterogeneous, requires split."
+  },
+  {
+    "cluster_id": 134,
+    "verdict": "rename",
+    "canonical_name": "Single-Unit Mastery Before Replication",
+    "aliases": ["Nail It Then Scale It Framework", "Location Economics Sequencing"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Perfect a single unit's unit economics and operations before replicating to new locations.",
+    "rationale": "Centroid name overly branded; operative principle is testing single-unit viability before multiunit expansion."
+  },
+  {
+    "cluster_id": 135,
+    "verdict": "kick",
+    "canonical_name": "Decision Limbo and Purgatory",
+    "aliases": [],
+    "kick_members": ["Decision Limbo and Purgatory", "Situational Ethics", "The Value of Struggle"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "Cluster mixes philosophical/meta-personal concepts (situational ethics, life struggle) with operational risk (decision limbo); fails B3 (resolvable context) and B4 (load-bearing clarity); too abstract for actionable knowledge graph."
+  },
+  {
+    "cluster_id": 136,
+    "verdict": "merge_with",
+    "canonical_name": "Shared Knowledge Exposure",
+    "aliases": ["Relationship Context Building"],
+    "kick_members": ["Ignorance as Evil"],
+    "splits": [],
+    "merge_target_id": 135,
+    "definition": "Partners aligned by absorbing shared information reduce divergence in thinking and decision-making.",
+    "rationale": "Core claim is coherent (shared knowledge ↔ relationship capacity); 'Ignorance as Evil' is vague philosophy without mechanism—kick it; merge surviving pair into relationship/partnership concept."
+  },
+  {
+    "cluster_id": 137,
+    "verdict": "split",
+    "canonical_name": "Audience Targeting for Conversion",
+    "aliases": ["Audience Segmentation"],
+    "kick_members": ["Market Distribution"],
+    "splits": [
+      {
+        "canonical_name": "Audience Targeting via Platform Tools",
+        "members": ["Audience Targeting", "Audience-Specific Ad Targeting", "Decagon Matrix Marketing"],
+        "definition": "Use platform-native targeting to narrow cold audiences to highest-probability buyer segments."
+      },
+      {
+        "canonical_name": "Buying Power Qualification",
+        "members": ["Target Audience Qualification"],
+        "definition": "Close rates spike when messaging targets only those with actual buying power and decision authority."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Narrow audience targeting improves conversion by focusing spend on qualified, high-probability segments.",
+    "rationale": "Market Distribution (1.2M followers) is metric without context/mechanism—kick; split platform-targeting tactics from buyer-qualification principle."
+  },
+  {
+    "cluster_id": 138,
+    "verdict": "split",
+    "canonical_name": "AI Training Methodology",
+    "aliases": ["AI Systems Onboarding"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "AI Training Like New Employee",
+        "members": ["AI Training Methodology", "AI Agent Training"],
+        "definition": "Teach AI systems with explicit, granular, observable steps and iterative feedback—like onboarding a junior employee."
+      },
+      {
+        "canonical_name": "AI Implementation Maturity Mismatch",
+        "members": ["AI Implementation Pitfalls", "Build Plan", "Cloud to Dirt Knowledge"],
+        "definition": "Half-built AI systems fail vs. optimized human workflows because they lack equivalent training time and integration depth."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Effective AI deployment requires same training rigor and system integration as human workforce scaling.",
+    "rationale": "Cluster conflates training methodology with maturity/integration gotchas; 'Five AI Workers' is orphaned feature-list—kick it; split training principle from implementation risk."
+  },
+  {
+    "cluster_id": 139,
+    "verdict": "accept",
+    "canonical_name": "Capital Requirements for Scale",
+    "aliases": ["Capital Allocation for Growth", "Mass Market vs High-End Financing"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Mass-market scaling demands capital and operational excellence; high-end markets are bootstrappable.",
+    "rationale": "Coherent axis (market position ↔ capital need); all members load-bearing and conditional; centroid is strong."
+  },
+  {
+    "cluster_id": 140,
+    "verdict": "rename",
+    "canonical_name": "Pipeline Constraint Over Execution",
+    "aliases": ["Deal Flow Problem", "Gatekeeper Strategy"],
+    "kick_members": ["Building Under Uncertainty", "Lead Gen to Coaching Transition"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "In deal-dependent businesses, pipeline availability is the constraint, not execution skill; gatekeepers control access.",
+    "rationale": "Centroid clear but imprecise; operative insight is that pipeline is primary constraint; 'Building Under Uncertainty' lacks mechanism; 'Lead Gen to Coaching' is specific tactical pivot without general principle."
+  },
+  {
+    "cluster_id": 141,
+    "verdict": "accept",
+    "canonical_name": "E-Commerce Business Model Economics",
+    "aliases": ["E-Commerce Scaling Constraints", "Capital-Intensive Growth Model"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "E-commerce is capital-intensive with fast growth until supply chain or distribution constraints bind.",
+    "rationale": "Coherent model shape; all members directly address capital and operational tradeoffs; high min_intra_sim."
+  },
+  {
+    "cluster_id": 142,
+    "verdict": "accept",
+    "canonical_name": "Top Performer Behavior Codification",
+    "aliases": ["Sales Skills Duplication", "Behavior-Based Sales Training"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Extract top performer behaviors into teachable, codified systems; sales is exceptionally replicable skill.",
+    "rationale": "Strong centroid; all 10 members address same mechanism (extract and teach specific behaviors); high practical applicability."
+  },
+  {
+    "cluster_id": 143,
+    "verdict": "rename",
+    "canonical_name": "Top-Down Prioritization Strategy",
+    "aliases": ["Automation Prioritization", "Market Positioning Strategy"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Start at premium/high-impact tier (automation, positioning, channels); work downward rather than bootstrap-up.",
+    "rationale": "Cluster principle is clear (top-down > bottom-up); Tesla example anchors well; rename to reflect broader principle than 'Automation' alone."
+  },
+  {
+    "cluster_id": 144,
+    "verdict": "kick",
+    "canonical_name": "YouTube Multi-Format Strategy",
+    "aliases": [],
+    "kick_members": ["Channel ROI Analysis", "Short-Form to Long-Form Conversion", "Short-Form vs Long-Form Content", "YouTube Multi-Format Strategy"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "Cluster contains contradictory claims: members #2 and #3 directly contradict on whether shorts funnel to longs; fails B1 (self-identifying type); too specific/tactical (platform feature) without general principle; lacks mechanism."
+  },
+  {
+    "cluster_id": 145,
+    "verdict": "rename",
+    "canonical_name": "Proof Narrative Constraint",
+    "aliases": ["Proof Problem", "Social Proof Liability"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Clients resist public testimonials due to NDA, tax liability, and cancel-culture risk; implementation barrier, not strategic edge.",
+    "rationale": "Centroid weak; operative insight is market friction, not opportunity—rename to reflect constraint; valuable for practitioners planning proof strategies."
+  },
+  {
+    "cluster_id": 146,
+    "verdict": "accept",
+    "canonical_name": "Unit Economics at Scale",
+    "aliases": ["Ad Spend vs. Retention ROI", "LTV:CAC Optimization"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "SaaS/service unit economics vary by price tier; lower price (< $600/mo) trades higher churn for volume; optimize CAC accordingly.",
+    "rationale": "Coherent quantified axis (price band ↔ LTV/CAC/churn); all members load-bearing with numbers anchored; high practical diagnostic value."
+  }
+]

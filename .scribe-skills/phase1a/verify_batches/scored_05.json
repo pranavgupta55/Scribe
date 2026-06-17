@@ -1,0 +1,244 @@
+[
+  {
+    "cluster_id": 70,
+    "verdict": "split",
+    "canonical_name": "Brand as Behavioral Pairing",
+    "aliases": ["Branding Definition", "Deliberate Pairing"],
+    "kick_members": ["Livestock Branding History"],
+    "splits": [
+      {
+        "canonical_name": "Brand as Behavioral Pairing",
+        "members": [
+          "Branding Definition",
+          "Advertising vs Branding",
+          "Deliberate Pairing",
+          "Good vs Bad Branding",
+          "Reference Group Association",
+          "Weak to Strong Brand Progression",
+          "What Branding Is"
+        ],
+        "definition": "Deliberate pairing of product/brand with customer values or reference groups to drive behavior change."
+      },
+      {
+        "canonical_name": "Brand-Value Misalignment Risk",
+        "members": ["Pairing Products With Customer Values"],
+        "definition": "Failed pairings (e.g., Bud Light + Dylan Mulvaney) lose revenue and damage equity within target audience."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Brand is deliberate pairing of product with customer values; mispairings backfire.",
+    "rationale": "Cluster conflates two load-bearing claims: (1) what branding IS (mechanism-driven), vs (2) the risk when pairing fails. Split preserves both insights; kick livestock example (A7—topic name restatement with no new insight)."
+  },
+  {
+    "cluster_id": 71,
+    "verdict": "rename",
+    "canonical_name": "Compounding Skill Leverage",
+    "aliases": ["Skill Stacking", "Skill Accumulation", "Skill Acquisition as Bridge Building"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Each new skill multiplies the return on existing skills, creating exponential value as portfolio grows.",
+    "rationale": "Proposed name too buzzword-heavy. All members cohere around single mechanism: complementary skills compound leverage. Rename to emphasize the multiplier effect (not just 'stacking')."
+  },
+  {
+    "cluster_id": 72,
+    "verdict": "kick",
+    "canonical_name": "Talent Acquisition Economics",
+    "aliases": [],
+    "kick_members": ["Inflation and Future Dollar Value", "Investment Costs for Initial Month", "Spending Discipline and Opportunity Cost", "Unit Economics and ROI"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Hiring spend of $15K/month generates $60K CAC—6-month payoff on 10x profit per hire.",
+    "rationale": "Only centroid claim (Talent Acquisition Economics) carries load-bearing insight tied to hiring ROI. Other four members are either decontextualized numbers (A3), feature-list fragments (A2: '1-month investment cost $1,500' is a bare label, not a claim), or generic personal-finance rules. Demote non-load-bearing nodes; kick the cluster."
+  },
+  {
+    "cluster_id": 73,
+    "verdict": "accept",
+    "canonical_name": "Availability & Scheduling Multiplier",
+    "aliases": ["Four Pillars Framework"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Availability is strongest predictor of show/conversion; 7 days/week, extended hours, flexible slots drive outcome.",
+    "rationale": "Centroid claim is strong: quantified via 4,000+ appointments, named mechanism (time slot availability → show rate), and rooted in data. 'Four Pillars Framework' is a legitimate container. Minor: 'Reviews and AI Integration' and 'Sales Position Types' are tangential; consider demoting to examples, but centroid cohesion is sound."
+  },
+  {
+    "cluster_id": 75,
+    "verdict": "accept",
+    "canonical_name": "Ad Creative Assembly & Variation",
+    "aliases": ["Lead Generation & Marketing", "Hook Writing Strategy", "Scaling Ad Production"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Scale ad production via templated variations (headline types, copy angles, images) instead of hiring agencies.",
+    "rationale": "Cohesive cluster around mechanism: fragmenting ad creation into repeatable stages enables rapid scaling. All members support this load-bearing claim. 'Hook Writing Strategy' (80% of effectiveness) is the key insight. Centroid nails the practice."
+  },
+  {
+    "cluster_id": 76,
+    "verdict": "split",
+    "canonical_name": "Early Profitability Proof",
+    "aliases": ["Profitability Proof", "Licensing vs Franchising"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Early Profitability Proof",
+        "members": ["Early Acquisition Signals", "Profitability Proof"],
+        "definition": "Cheap acquisition early is misleading without LTV proof; easy acquisition hides bad unit economics."
+      },
+      {
+        "canonical_name": "Founder-Led Differentiation in Underdog Stage",
+        "members": ["Accessibility as Differentiation"],
+        "definition": "Founder accessibility (cell phone, high-touch service) differentiates underdogs; becomes scaling liability once credibility proven."
+      },
+      {
+        "canonical_name": "Licensing as Low-Margin Scalability",
+        "members": ["Licensing vs Franchising"],
+        "definition": "Licensing (6-8% top-line) better than franchising for low-margin businesses, post-team-scalability proof."
+      },
+      {
+        "canonical_name": "Profitability Over VC Speed",
+        "members": ["Venture-Backed Scaling Illusion"],
+        "definition": "VC-backed firms appear to scale fast but lack profitability and founder-service quality that beat lean competitors."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Profitability and unit-economics proof trump cheap early acquisition.",
+    "rationale": "Four distinct load-bearing claims bundled as one. Centroid (early signals) hits only one. Split into four separate concepts: (1) acquisition-vs-LTV mismatch, (2) founder accessibility window, (3) licensing mechanics, (4) VC vs profitable trade-off. Each is falsifiable and shifts reader behavior."
+  },
+  {
+    "cluster_id": 77,
+    "verdict": "kick",
+    "canonical_name": "Blue Ocean Strategy",
+    "aliases": [],
+    "kick_members": ["Blue Ocean Strategy", "Grand Opening Strategy"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Blue Ocean Strategy (motel conversion play with minimal competition) + grand opening marketing.",
+    "rationale": "Both members fail load-bearing test (A7 + A2). 'Only one other player' is a context-specific observation tied to a single video/business (motel conversion), not a generalizable claim. 'Grand opening is only time aggressive marketing justified' is hortative without mechanism or data. Kick both."
+  },
+  {
+    "cluster_id": 78,
+    "verdict": "accept",
+    "canonical_name": "Pay Less Now, Upsell Later",
+    "aliases": ["Discount Offers", "Two-Step Sales", "Irresistible Offers"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Low-friction front offer (discount/free) removes initial objection; card-on-file enables upsell at 2-3x margin.",
+    "rationale": "Cohesive framework around a proven mechanic. Centroid claim ties conditions (discount now, conditional guarantee), mechanism (removes friction), and measurable outcome (upsell close rate). All members support the same pattern. 'Rollover Upsell' and 'Giveaway' are solid implementation variants."
+  },
+  {
+    "cluster_id": 79,
+    "verdict": "rename",
+    "canonical_name": "High-Margin Supplement Resale via Partnerships",
+    "aliases": ["Affiliate Partnership Model", "Subcontractor Scalability"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Partner with drop-ship suppliers (no inventory risk) for 40-50% margin recurring revenue, reaching $25k/month at scale.",
+    "rationale": "Proposed name 'Supplement Sales & Distribution' is too narrow/product-specific. Core claim is about high-margin resale models (affiliate + drop-ship). Rename to emphasize the mechanism (partnership-based scaling, not sales/distribution focus). Alias 'Alternative Partnership Strategy' is vague—demote to example."
+  },
+  {
+    "cluster_id": 80,
+    "verdict": "split",
+    "canonical_name": "Risk Misprice Arbitrage",
+    "aliases": ["Risk Arbitrage and Mispricing", "The Danger Of Uncertainty Tolerance"],
+    "kick_members": ["Certainty kills excitement; uncertainty is what makes worthwhile pursuits worthwhile"],
+    "splits": [
+      {
+        "canonical_name": "Risk Misprice Arbitrage",
+        "members": ["Upside in Uncertainty", "Risk Arbitrage and Mispricing"],
+        "definition": "Biggest gains exist where others avoid due to loss-aversion bias; people misprice risk (fear losses > value gains)."
+      },
+      {
+        "canonical_name": "Uncertainty Tolerance as Capacity Ceiling",
+        "members": ["The Danger Of Uncertainty Tolerance"],
+        "definition": "Potential determined by uncertainty tolerance and time horizon, not talent; pre-emptive constraints trade certain upside for uncertain downside."
+      },
+      {
+        "canonical_name": "Psychological Barriers to Growth",
+        "members": ["Regulatory Uncertainty", "Leadership and Founder Capacity", "Family Time vs Growth"],
+        "definition": "Regulatory/capacity/family fears prevent growth that would never materialize; fear trades certain upside for phantom downside."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Biggest gains exist in high-uncertainty territories because most people misprice risk.",
+    "rationale": "Cluster has three load-bearing claims: (1) arbitrage via risk misprice (market-wide insight), (2) personal uncertainty tolerance as capacity ceiling (personal metric), (3) specific fears as phantom barriers (pattern). Centroid only hits #1. Split to preserve all three distinct claims. Kick the meta-observation ('certainty kills excitement') as A4 (vague blanket statement without measurability)."
+  },
+  {
+    "cluster_id": 81,
+    "verdict": "accept",
+    "canonical_name": "Social Proof Hierarchy in Sales",
+    "aliases": ["Proof & Testimonial Acquisition", "Testimonials as Currency"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Testimonials from paying clients > free clients > no proof; real voices overcome skepticism and multiply conversion.",
+    "rationale": "Centroid claim establishes a quantified hierarchy (70-90% savings + social proof + guarantees = perceived likelihood). 'Testimonials as Currency' refines the ranking. All members support the claim that proof de-risks buyer perception. 'B2B High-Ticket Creators' is a valid conditional. Cohesion is solid."
+  },
+  {
+    "cluster_id": 82,
+    "verdict": "accept",
+    "canonical_name": "Activation as Primary Churn Lever",
+    "aliases": ["Time to Value", "Activation Incentives"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Churn bottleneck is activation (first value moment), not product; 24-hour value delivery critical.",
+    "rationale": "Centroid nails a falsifiable, high-leverage insight: activation → churn collapses. 'Trial-to-Activation Problem' (10-day fence-deal window) quantifies and confirms. All members align on single mechanism. Minor: 'Continuity Revenue Model' is a separate model—could demote, but context is activation-driven, so connection holds."
+  },
+  {
+    "cluster_id": 83,
+    "verdict": "kick",
+    "canonical_name": "Review Process Gaps",
+    "aliases": [],
+    "kick_members": ["Lazy System", "Process Gaps", "Review Process Gaps"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Review Process Gaps Highlight Unaddressed Re-Engagement and Data Utilization Issues.",
+    "rationale": "All three members fail A7 (self-referential definitions) and A2 (feature-list claims masquerading as insights). They are topic-name restatements with no load-bearing assertion. '62% missed calls' is a bare data point (A3, axis-less). Kick entire cluster."
+  },
+  {
+    "cluster_id": 84,
+    "verdict": "split",
+    "canonical_name": "Founder Delegation Sequence",
+    "aliases": ["Scaling Through Delegation"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Founder Delegation Sequence",
+        "members": ["Scaling Through Others", "Scaling Through Delegation"],
+        "definition": "Success requires surrendering founder tasks in specific sequence (documenting → training → delegating)."
+      },
+      {
+        "canonical_name": "Control Paradox in Scaling",
+        "members": ["Control Relinquishment"],
+        "definition": "The trait that enabled early success (founder control) becomes the ceiling on scale; must be unlearned."
+      },
+      {
+        "canonical_name": "Founder Accountability Under Growth",
+        "members": ["Liability at Scale"],
+        "definition": "Founder becomes liable for outcomes they no longer directly control; liability expands faster than delegation."
+      },
+      {
+        "canonical_name": "Equity Dilution and Founder Displacement",
+        "members": ["Equity Dilution and Control"],
+        "definition": "Multiple funding rounds dilute control; example: Steve Jobs was voted out despite founding Apple."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Founder success requires relinquishing control through documented, sequenced delegation.",
+    "rationale": "Four distinct load-bearing ideas: (1) the sequence of delegation, (2) the control paradox, (3) liability expansion, (4) equity math. Centroid hits #1 only. Each claim is falsifiable and shifts behavior. Split to preserve granularity."
+  },
+  {
+    "cluster_id": 85,
+    "verdict": "accept",
+    "canonical_name": "Compound Work Payoff",
+    "aliases": ["Compounding Returns from Early Work", "Compounding Development"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Unglamorous early work accumulates into unique context; ability gaps compound into exponential market-value differences.",
+    "rationale": "Tight cluster around a single powerful mechanism: small early effort differences compound into outsized later returns. Centroid claim is load-bearing and falsifiable. All members reinforce the same insight. 'Disproportionate Effort' and 'The Exponential Payoff Paradox' refine the claim."
+  }
+]

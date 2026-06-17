@@ -1,0 +1,257 @@
+[
+  {
+    "cluster_id": 192,
+    "verdict": "split",
+    "canonical_name": "Pre-Call Signal Stacking",
+    "aliases": [
+      "Pre-Framing & Friction",
+      "Demand Conversion"
+    ],
+    "definition": "Small perception-shaping signals (credibility, scarcity, social proof) applied before sales interaction boost conversion without changing offer architecture.",
+    "rationale": "Centroid too vague; members split into distribution-lever (Demand Problem/Unlocking) vs. pre-call perception-framing (Pre-Framing) vs. membership upsell sequencing.",
+    "splits": [
+      {
+        "canonical_name": "Distribution Channel Selection",
+        "members": [
+          "Demand Problem",
+          "Demand Unlocking"
+        ],
+        "definition": "Growth bottleneck is distribution, not offer design; iterate existing channels before building new offers."
+      },
+      {
+        "canonical_name": "Pre-Call Signal Stacking",
+        "members": [
+          "Pre-Framing & Friction"
+        ],
+        "definition": "Small credibility/scarcity signals boost downstream conversion without altering the core offer."
+      },
+      {
+        "canonical_name": "Service-First Upsell Sequencing",
+        "members": [
+          "Membership Model Pitfalls"
+        ],
+        "definition": "Upsell membership after delivery of emergency/core service to leverage existing client relationship and proven pain."
+      }
+    ],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 193,
+    "verdict": "accept",
+    "canonical_name": "Multi-Stage Business Scaling Roadmap",
+    "aliases": [
+      "Business Scaling Roadmap",
+      "Operational Scaling Roadmap",
+      "Compounding Effort"
+    ],
+    "definition": "10-stage progression from zero revenue to $100M+, mapped across eight business functions, with clear graduation criteria. <1% of companies complete full roadmap.",
+    "rationale": "High intra-cluster cohesion (min_sim 0.932); all members reference the same 10-stage framework and completion rarity.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 194,
+    "verdict": "split",
+    "canonical_name": "Founder Authenticity & Audience Alignment",
+    "aliases": [
+      "Community & Parasocial Relationships"
+    ],
+    "definition": "Creator credibility increases when personal values align with audience expectations; perceived authenticity drives loyalty and repeat consumption.",
+    "rationale": "Centroid conflates parasocial connection (authenticity driving loyalty) with measurement method (engagement vs. follower count) and psychology (values vs. appearance matching). Split into persona-audience alignment and influence-measurement methodology.",
+    "splits": [
+      {
+        "canonical_name": "Founder Authenticity & Audience Alignment",
+        "members": [
+          "Authenticity & Personal Brand",
+          "Community & Parasocial Relationships"
+        ],
+        "definition": "Audiences build loyalty around perceived alignment with creator values; parasocial connection increases repeat consumption and brand defense."
+      },
+      {
+        "canonical_name": "Influence Measurement: Engagement Over Follower Count",
+        "members": [
+          "Influencer Type Categories"
+        ],
+        "definition": "Influence magnitude correlates with positive-interaction frequency, not absolute follower count; engagement is the operative metric."
+      },
+      {
+        "canonical_name": "Psychological & Literal Similarity Bias",
+        "members": [
+          "Likeness And Audience"
+        ],
+        "definition": "Audiences follow creators with whom they share values/vibe or perceive physical/demographic similarity; both psychological and literal matching drive followership."
+      }
+    ],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 195,
+    "verdict": "accept",
+    "canonical_name": "Identity Through Actions",
+    "aliases": [
+      "Identity as Behavior Aggregation",
+      "Behavioral Flexibility"
+    ],
+    "definition": "Identity is the aggregate of repeated actions, not a fixed essence or past circumstance; viewing identity as behavior-changeable removes emotional friction from change.",
+    "rationale": "Tight cohesion (min_sim 0.896) on core insight: actions > narrative, behavior > essence, agency > victimhood.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 196,
+    "verdict": "split",
+    "canonical_name": "Lead Qualification Friction",
+    "aliases": [
+      "Friction in Funnel Design"
+    ],
+    "definition": "Add qualification gates (questionnaire, wound-size scoring, budget pre-qualification) before consultation to eliminate unqualified leads and improve close efficiency.",
+    "rationale": "Core cluster is tight lead-filtering. 'Lead Quality vs Lead Form Trade-offs' is a quantified-axis node (5.25% show-up rate comparison) that belongs in a measurement/benchmarking cluster, not tactic design. Kick it to preserve cohesion.",
+    "splits": [],
+    "kick_members": [
+      "Lead Quality vs Lead Form Trade-offs"
+    ],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 197,
+    "verdict": "accept",
+    "canonical_name": "Funnel Conversion Rate Optimization",
+    "aliases": [
+      "Landing Page Optimization",
+      "Backend Sales Conversion"
+    ],
+    "definition": "Simplify landing-page friction, dedicate pages to ad traffic, optimize sales messaging and lead-scoring backend to improve conversion funnel by 2-3x.",
+    "rationale": "Cohesive (min_sim 0.929) on front-end and back-end conversion levers.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 198,
+    "verdict": "accept",
+    "canonical_name": "Luck Surface Area",
+    "aliases": [
+      "Network Expansion"
+    ],
+    "definition": "Daily geographic proximity and consistent networking expand serendipity surface area, accelerating opportunity clustering and mentorship access.",
+    "rationale": "Tight dyad (min_sim 0.981) with high face validity.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 199,
+    "verdict": "accept",
+    "canonical_name": "Motivation as Deprivation Inverse",
+    "aliases": [
+      "Motivation Definition",
+      "Founder Desperation"
+    ],
+    "definition": "Motivation is inverse of deprivation; individuals are driven by what they lack relative to reference point. Scarcity (desperation) drives action more than aspirational messaging.",
+    "rationale": "Tight cohesion (min_sim 0.925) on core mechanism: lack/deprivation → motivation > aspirational narratives.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 200,
+    "verdict": "rename",
+    "canonical_name": "Referral & Retention Economics",
+    "aliases": [
+      "Customer Referral Programs",
+      "Product-Market Goodwill"
+    ],
+    "definition": "Ongoing-share referral incentives (10-15%) outperform one-time spiffs; goodwill (value-minus-price gap) drives referral and repeat-purchase velocity.",
+    "rationale": "Cohesive theme of turning customer satisfaction into leverage (referral, retention). Rename to broaden beyond 'programs' to include goodwill as underlying driver.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 201,
+    "verdict": "accept",
+    "canonical_name": "Training Precision",
+    "aliases": [
+      "Skill Deconstruction",
+      "Trait Development"
+    ],
+    "definition": "Break abstract traits into observable micro-behaviors; train each discrete behavior via checklist/repetition rather than coaching abstract qualities.",
+    "rationale": "Tight cohesion (min_sim 0.929) on core pedagogical principle: decomposition > abstraction.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 202,
+    "verdict": "accept",
+    "canonical_name": "Content-Led Sales Strategy",
+    "aliases": [
+      "Paid Content Amplification"
+    ],
+    "definition": "Identify organic content winners first; measure engagement/CTR, then scale winners via paid distribution. Content and ads are one system, not separate channels.",
+    "rationale": "Cohesive (min_sim 0.945) on sequence: organic-first learning → paid leverage.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 203,
+    "verdict": "rename",
+    "canonical_name": "Benchmarking Against Winners, Not Medians",
+    "aliases": [
+      "Margin Improvement",
+      "Industry Standards Trap"
+    ],
+    "definition": "Industry averages guarantee mediocrity because they measure median performers; benchmark against top-decile operators and ignore 'good enough' frames.",
+    "rationale": "Rename to shift from outcome ('margin improvement') to methodology ('winner-vs-median benchmarking'). Frames the load-bearing lever clearly.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 204,
+    "verdict": "accept",
+    "canonical_name": "Wealth Distribution & Customer Targeting",
+    "aliases": [
+      "Wealth Distribution",
+      "Target Avatar Selection"
+    ],
+    "definition": "Top 10% holds disproportionate wealth; target affluent customers, not broad-base or bottom 50%. Profitability scales with customer wallet concentration.",
+    "rationale": "Tight cohesion (min_sim 0.945) on market-selection principle.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 205,
+    "verdict": "accept",
+    "canonical_name": "Creative Variation Strategy",
+    "aliases": [
+      "Creator Sustainability",
+      "Winning Hooks From Existing Content"
+    ],
+    "definition": "Test hundreds of content variations weekly on same themes; audiences need reminders more than novelty. Avoid burnout by committing to enjoyable format, then optimize.",
+    "rationale": "Cohesive (min_sim 0.894) on iteration discipline: variation > novelty, theme consistency > daily invention.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  },
+  {
+    "cluster_id": 206,
+    "verdict": "accept",
+    "canonical_name": "Overexpansion Risk",
+    "aliases": [
+      "Margin Degradation",
+      "Private Equity Growth Problems"
+    ],
+    "definition": "Premature scaling across locations/divisions compounds operational debt faster than slow single-market optimization. Fix unit economics before expanding.",
+    "rationale": "Tight cohesion (min_sim 0.951) on cautionary principle: single-market perfection > multi-market mediocrity.",
+    "splits": [],
+    "kick_members": [],
+    "merge_target_id": null
+  }
+]

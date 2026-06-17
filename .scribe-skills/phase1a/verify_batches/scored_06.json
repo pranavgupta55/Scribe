@@ -1,0 +1,231 @@
+[
+  {
+    "cluster_id": 86,
+    "verdict": "rename",
+    "canonical_name": "Constraint Identification",
+    "aliases": ["Operational Efficiency"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Systematically identify and solve the single constraint limiting business growth; visibility into operational constraints enables strategic focus.",
+    "rationale": "Centroid is too specific/axis-less. Members cohere around identifying constraints (operational, self-awareness, margin visibility) as prerequisite to solving them."
+  },
+  {
+    "cluster_id": 87,
+    "verdict": "accept",
+    "canonical_name": "Supply vs. Demand Constraints",
+    "aliases": [],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Diagnose whether business lacks customers (demand) or capacity (supply); misdiagnosis leads to wrong tactics.",
+    "rationale": "Tight semantic cluster; four distinct phrasings of the same concept; min_intra_sim 0.917 supports cohesion."
+  },
+  {
+    "cluster_id": 88,
+    "verdict": "split",
+    "canonical_name": "Tiered Offer Architecture",
+    "aliases": [],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Tiered Offer Pricing",
+        "members": [
+          "Pricing Tiers and Jumps",
+          "Tiered Offer Architecture",
+          "Wedding Cake Profit Model"
+        ],
+        "definition": "Stack multiple offer tiers with distinct pricing; high-margin premium funds low-margin volume."
+      },
+      {
+        "canonical_name": "Margin Concentration and Leverage",
+        "members": [
+          "Financial Modeling",
+          "High-Margin Business Model",
+          "Margin Improvement vs Revenue Growth",
+          "Profit Concentration",
+          "SaaS Valuation Multiples"
+        ],
+        "definition": "Profit concentrates at high-price tiers; margin improvement beats revenue growth in fixed-reimbursement models."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Multiple pricing models and margin strategies for business scaling.",
+    "rationale": "Cluster conflates tiering strategy (offer architecture) with margin concentration (where profit lives). Split by semantic boundary: pricing design vs. margin analysis."
+  },
+  {
+    "cluster_id": 89,
+    "verdict": "accept",
+    "canonical_name": "Content Format and Production Clarity",
+    "aliases": ["Content Format & Production"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Clarity and language beat razzle-dazzle in content; clear CTAs, thumbnails, and messaging drive action over production quality.",
+    "rationale": "Seven-member cluster cohesive on message clarity as differentiator; min_intra_sim 0.907 confirms tight grouping."
+  },
+  {
+    "cluster_id": 90,
+    "verdict": "rename",
+    "canonical_name": "Volume and Repetition Mastery",
+    "aliases": ["Rule of 100"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Base competence and mastery require sustained volume of deliberate actions; 100x repetition breaks through plateaus.",
+    "rationale": "Centroid 'Rule of 100' is catchphrase; members cohere around repetition/volume (20-hour baseline, 100x actions, hundreds of hours, skill compounding) as prerequisites for depth."
+  },
+  {
+    "cluster_id": 91,
+    "verdict": "kick",
+    "canonical_name": "Pricing Tiers and Jumps",
+    "aliases": [],
+    "kick_members": [
+      "Equity vs Stake Distinction",
+      "University Exclusivity Strategy"
+    ],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Jump price 5x, not 50%, to create distinct market tiers.",
+    "rationale": "Only one of three members (pricing jumps) coheres with canonical. Equity/stakes is financial structure; university exclusivity is partnership strategy — both orthogonal to pricing design. Kick outliers; keep only pricing-relevant member."
+  },
+  {
+    "cluster_id": 92,
+    "verdict": "split",
+    "canonical_name": "Member Lifecycle Management",
+    "aliases": [],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Member Lifecycle Progression",
+        "members": [
+          "Member Lifecycle Management",
+          "Narrative Transparency",
+          "Process Mapping"
+        ],
+        "definition": "Guide members through four milestones (Connect→Refer→Testify→Ascend) with transparent process and touchpoints."
+      },
+      {
+        "canonical_name": "Team Training and Scaling",
+        "members": [
+          "Employee Training and Leverage",
+          "Boiler Room Method",
+          "The Core Four Methods"
+        ],
+        "definition": "Scale teams through systematic training (Document-Demonstrate-Duplicate) and scripted processes (boiler room rotation, core four methods)."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Member and team progression through lifecycle and training.",
+    "rationale": "Cluster splits on lifecycle orchestration (member journey transparency) vs. training/scaling systems (DDD method, boiler room rotation). Different load-bearing claims."
+  },
+  {
+    "cluster_id": 93,
+    "verdict": "accept",
+    "canonical_name": "Affiliate and Partner Channel Strategy",
+    "aliases": ["Affiliate Program Building"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Recruit independent businesses (affiliates, coaches, agencies) to sell and promote; highest-leverage lead getter at scale.",
+    "rationale": "Six-member cluster cohesive on leveraging partners as lead and revenue multipliers; min_intra_sim 0.899 confirms tight grouping."
+  },
+  {
+    "cluster_id": 94,
+    "verdict": "accept",
+    "canonical_name": "Persistence as Competitive Advantage",
+    "aliases": ["Deliberate Practice and Commitment"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Sustained, full commitment to one skill beats competitors because 99% quit; persistence is invisible and rare.",
+    "rationale": "Four-member cluster tight on consistency/persistence as differentiator; all members articulate the same insight from different angles."
+  },
+  {
+    "cluster_id": 95,
+    "verdict": "split",
+    "canonical_name": "Delivery Model",
+    "aliases": [],
+    "kick_members": [
+      "Humanoid Robots"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Delivery Model Polarization",
+        "members": [
+          "Delivery Model",
+          "Barbell Strategy For Future",
+          "LTV to CAC Ratio"
+        ],
+        "definition": "Avoid middle ground; choose ultra-cheap (automation-heavy) or high-touch (sophisticated operators); adjust LTV:CAC targets accordingly."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Strategic choice between automation and human-in-loop delivery models.",
+    "rationale": "Humanoid robots is product-specific outlier unrelated to business delivery model design. Remaining members cohere on barbell strategy (cheap vs. high-touch, no middle)."
+  },
+  {
+    "cluster_id": 96,
+    "verdict": "accept",
+    "canonical_name": "Supply Constraint Recognition",
+    "aliases": ["Supply Constraint"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "When operationally constrained, stopping sales masks the real problem; solve capacity before pursuing growth.",
+    "rationale": "Four-member cluster cohesive on supply-side bottlenecks; min_intra_sim 0.919 confirms tight grouping; complements cluster 87 (demand vs. supply diagnosis)."
+  },
+  {
+    "cluster_id": 97,
+    "verdict": "accept",
+    "canonical_name": "Sales Team Scaling and Leadership",
+    "aliases": ["Sales Scalability"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Scale sales from founder-driven to multiplier role; train teams with role-play and process; directors build culture, not close deals.",
+    "rationale": "Seven-member cluster cohesive on founder-to-leader transition; identity shift, training, process structure all support sales team multiplication."
+  },
+  {
+    "cluster_id": 98,
+    "verdict": "kick",
+    "canonical_name": "AI-Driven Lead Nurturing",
+    "aliases": [],
+    "kick_members": [
+      "AI-Driven Lead Generation Without Ads",
+      "AI-Driven Lead Nurturing",
+      "AI-Driven Marketing",
+      "AI-Driven Review/Referral Systems",
+      "AI-Driven Website",
+      "Financial Structure",
+      "Reactivation Campaign",
+      "Structured Processes for Reviews/Referrals/Lead Re-engagement"
+    ],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "AI-driven systems enhance lead nurturing, engagement, and conversion.",
+    "rationale": "All eight members exhibit low-quality extraction: same boilerplate prefix, vague headlines, no load-bearing claims (no mechanism, no conditions, no specificity). Fails NODE-QUALITY-RUBRIC §A2 (feature list masquerading as claim) and §A7 (self-referential definition). Recommend re-extraction."
+  },
+  {
+    "cluster_id": 99,
+    "verdict": "accept",
+    "canonical_name": "Channel Optimization Before Expansion",
+    "aliases": ["Scaling Existing Channels"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Max out proven channels before opening new ones; improve existing business before pivoting.",
+    "rationale": "Seven-member cluster cohesive on optimization-first strategy; themes (acquisition channels, market dominance, leverage more) consistently oppose premature expansion."
+  },
+  {
+    "cluster_id": 100,
+    "verdict": "rename",
+    "canonical_name": "Progressive Pricing Tier Stacking",
+    "aliases": ["Advisory Practice Tiers"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Stack multiple tiers with escalating price, complexity, and personalization; each tier unlocks prerequisite knowledge for next.",
+    "rationale": "Five-member cluster cohesive on tiering as stacking mechanism (book series, career ladder, bonus tiers, custom orders); emphasis is progression, not just offering choice."
+  }
+]

@@ -8,11 +8,25 @@ Companion documents (read these first):
 - [HIERARCHY.md](./HIERARCHY.md) — the L0 Concept / L1 Framework / L2 Claim / L3 Example structure.
 - [skills/ubiquitous-language.md](./skills/ubiquitous-language.md), [skills/context-format.md](./skills/context-format.md), [skills/architecture-language.md](./skills/architecture-language.md), [skills/adr-format.md](./skills/adr-format.md), [skills/diagnose.md](./skills/diagnose.md) — verbatim mattpocock/skills sources we are borrowing.
 
+## §−2 — Constraint shift (2026-06-16, mid-execution)
+
+User signaled that **usage budget, not dollar cost, is the limiting factor**. Their account usage went 18% → 34% across Phase 0. Target finish at 80-90% (~50% more headroom).
+
+Plan revisions:
+
+- **Drop the local NLI pre-filter** (synthesis §2.5). The cross-encoder/nli-deberta-v3-base was a cost optimization — with usage as the true constraint, Haiku 4.5 directly judges every candidate pair without a local pre-screen. We avoid local-model latency, model-download overhead, and a separate failure surface; we trade ~$0.40 saved per the synthesis for hundreds of additional Haiku tokens that we now have headroom to spend.
+- **Promote selective Haiku → Sonnet 4.6** for high-judgment calls: Phase 1b concept naming, Phase 1a "hard clusters" tiebreaker, Phase 3a per-source second-opinion judge, Phase 4 ambiguous-edge tiebreaker, Phase 6 final auditor. Sonnet stays the minority — Haiku handles the bulk extraction; Sonnet handles the synthesis/audit/disagreement-resolution layers.
+- **Add cross-validation** to extraction-heavy phases: Phase 3a runs each source through 1 Haiku extractor + a Sonnet "second opinion" gate that compares the extraction against the rubric and either approves or sends back with annotated rejections. This ~doubles extraction work but materially improves the floor.
+- **Scale agent counts** upward where parallelization buys quality: Phase 1a 15 → 20 Haiku + 3 Sonnet judges; Phase 3a 40 → ~204 Haiku (one per source) + ~20 Sonnet seconds-opinion; Phase 4 30 → ~40 Haiku (full candidate set, no pre-filter); Phase 6 8 → 16 Haiku + 4 Sonnet auditors.
+- **Goal hierarchy:** maximize accuracy of extracted claims and graph connections > minimize agent count.
+
+Estimated revised agent total: ~310 (vs ~110 in original §1). Token spend ~3× Phase 0.
+
 ## §−1 — Phase 0a findings that revise this plan
 
 These decisions are fixed by Phase 0a research (see `research/0a-research-NN.md` files for sources). They supersede earlier hedges:
 
-- **Embedding model = `qwen3-embedding:0.6b`** (primary), `mxbai-embed-large` (fallback). Qwen3-0.6b scores 52.33 on MTEB clustering vs 46.71 for mxbai — material for collapsing 1472 → 300 concepts. 32K context window (handles long claims without truncation). 639 MB download. ~5–7 min full embed on M4. *[0a-04]*
+- **Embedding model = `qwen3-embedding:8b`** (primary), `qwen3-embedding:4b` (fallback if RAM-bound). 8B Qwen3 tops MTEB at 70.58 overall; clustering subscore is ~58+ (extrapolated from the 4b's 57.15 and the overall delta). 32K context window (handles long claims without truncation). 4.7 GB download. ~12–18 min full embed on M4 for ~15k items. Upgraded from 0.6b per user's "avoid smaller local models" directive (§−2). *[0a-04]*
 - **Clustering algorithm = Agglomerative Ward** on L2-normalized embeddings, not HDBSCAN. Direct `n_clusters=300` parameter. Full dendrogram for free → cut at `n_clusters=50` for super-concepts. No noise/orphan points (HDBSCAN produces 30–60% noise on short labels). One fit, multiple cuts via `scipy.cluster.hierarchy.fcluster`. *[0a-05]*
 - **GraphRAG's Leiden does not apply.** It clusters an entity co-occurrence graph, not raw embeddings, and merges only exact-name duplicates. Our Phase 1a/1b pipeline (embedding clusters + LLM rename) is correct and necessary. *[0a-01]*
 - **Cache minimum threshold for Haiku 4.5 is 4,096 tokens, NOT 3,000.** Below 4,096 the cache silently misses with no error. All Haiku agent system prompts must be padded to ≥4,096 tokens via inline rubric/claim-def/few-shot content (which is useful anyway). Sonnet 4.6 minimum is 1,024 tokens — Sonnet agents can cache smaller prompts. *[0a-10]*

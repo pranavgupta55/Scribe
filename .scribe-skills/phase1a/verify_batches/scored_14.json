@@ -1,0 +1,275 @@
+[
+  {
+    "cluster_id": 207,
+    "verdict": "split",
+    "canonical_name": "Difficulty as Narrative Reframing",
+    "aliases": ["Reframing Difficulty", "Hardship Reframe"],
+    "splits": [
+      {
+        "canonical_name": "Past Survival as Anchor",
+        "members": [
+          "Reframing Difficulty (centroid)",
+          "Resilience Building"
+        ],
+        "definition": "Reference past survival to sustain through new challenges."
+      },
+      {
+        "canonical_name": "Narrative Structure & Hero Identity",
+        "members": [
+          "The Hero's Journey Mindset",
+          "Future-Casting Your Narrative",
+          "Framing Life as Happening For You"
+        ],
+        "definition": "Construct a larger story about hardship to build identity and resilience."
+      },
+      {
+        "canonical_name": "Difficulty as Competitive Selection",
+        "members": [
+          "Reframing Hardship as Competitive Advantage",
+          "Workload Tolerance"
+        ],
+        "definition": "Hard paths act as selection filters; difficulty proves few follow."
+      }
+    ],
+    "definition": "Reframe hardship via narrative, reference, or competitive lens.",
+    "rationale": "Cluster conflates three distinct mechanisms: anchoring to past, narrative structure, and competitive advantage. Splits separate causation models."
+  },
+  {
+    "cluster_id": 208,
+    "verdict": "kick",
+    "canonical_name": "Deal Flow Acquisition",
+    "kick_members": [
+      {
+        "topic": "Agent Recruitment",
+        "headline": "Currently doing almost nothing to acquire agents despite 4 open desks",
+        "reason": "Context-dependent anecdote; fails resolvable referents (A1) without company/source binding. Vague actor reference ('you')."
+      }
+    ],
+    "definition": "Sustained deal flow volume as market penetration metric.",
+    "rationale": "Deal Flow is load-bearing; Agent Recruitment headline is too circumstantial and references undefined entity."
+  },
+  {
+    "cluster_id": 209,
+    "verdict": "accept",
+    "canonical_name": "Alumni Earnings Documentation",
+    "aliases": ["Graduate Value Proof", "Income Multiplier Evidence"],
+    "definition": "Document post-certification earnings lift as credible value signal.",
+    "rationale": "Two paraphrases of same claim; high similarity (0.96); centroid is clean. Accept as-is."
+  },
+  {
+    "cluster_id": 210,
+    "verdict": "accept",
+    "canonical_name": "Churn and Retention",
+    "aliases": ["Retention as Growth Lever", "Revenue Retention Stickiness"],
+    "kick_members": [
+      {
+        "topic": "Revenue Retention and Stickiness",
+        "headline": "Critical differentiator for business value; determines whether growth compounds or requires constant new customer acquisition",
+        "reason": "Duplicate of prior headline with marginal wording change. Keep line 138; drop line 144."
+      }
+    ],
+    "definition": "Retention >80% annual enables compounding growth; churn <20% is critical threshold.",
+    "rationale": "Tight clustering (0.91 min sim) on coherent theme. Remove duplicate line 144 before finalization."
+  },
+  {
+    "cluster_id": 211,
+    "verdict": "rename",
+    "canonical_name": "Sales Culture as Volatility Driver",
+    "aliases": ["Sales Culture and Consistency", "Mercenary vs. Mission Culture"],
+    "definition": "Feast-famine cycles reflect inconsistent culture favoring mercenary over mission alignment.",
+    "rationale": "Current name is passive; 'volatility driver' makes the causal claim active and load-bearing."
+  },
+  {
+    "cluster_id": 212,
+    "verdict": "split",
+    "canonical_name": "Single-Channel vs. Multi-Channel Focus",
+    "aliases": ["Channel Concentration", "Portfolio Simplification"],
+    "splits": [
+      {
+        "canonical_name": "Single-Channel Domination",
+        "members": [
+          "Compounding Growth Through One Channel",
+          "Lead Generation and Sales Strategy",
+          "Sales Channel Focus"
+        ],
+        "definition": "Dominate one lead source fully before adding others; concentration enables negotiating power."
+      },
+      {
+        "canonical_name": "Single-Product Portfolio",
+        "members": [
+          "Multi-Product vs Single-Product Strategy",
+          "Portfolio vs Single Brand",
+          "SKU Optimization"
+        ],
+        "definition": "Single strong brand with clear winner outperforms portfolio of 4-5 juggled products."
+      }
+    ],
+    "definition": "Focus beats diversification in both channels and products.",
+    "rationale": "Channel selection (inbound vs. outbound, repeatable vs. scattered) is distinct from product portfolio strategy (brand equity vs. SKU dilution)."
+  },
+  {
+    "cluster_id": 213,
+    "verdict": "rename",
+    "canonical_name": "Community Network Effects & Market Moat",
+    "aliases": ["Creator Community Network Effects", "Gated Community Differentiation"],
+    "definition": "First-mover community advantage creates permanent market lock-in via network density.",
+    "rationale": "Current name is passive; 'network effects & moat' surfaces the economic mechanism."
+  },
+  {
+    "cluster_id": 214,
+    "verdict": "accept",
+    "canonical_name": "Restaurant Profitability",
+    "aliases": ["Margin Optimization Benchmarking", "Panda Express Model Replication"],
+    "definition": "Target 27% net margins as profitability floor, benchmarked against Panda Express corporate efficiency.",
+    "rationale": "Two paraphrases; one has 3 source citations, indicating load-bearing claim. High similarity (0.98); accept with unified definition."
+  },
+  {
+    "cluster_id": 215,
+    "verdict": "accept",
+    "canonical_name": "Data Architecture First",
+    "aliases": ["Data-First AI-Ready", "Data Foundation Before AI Layer"],
+    "definition": "Data architecture must precede AI layer; AI amplifies existing data, not creates structure from nothing.",
+    "rationale": "Near-duplicate paraphrases (0.98 similarity). Accept as single claim; remove redundant member."
+  },
+  {
+    "cluster_id": 216,
+    "verdict": "split",
+    "canonical_name": "Business Measurement & Monetization",
+    "aliases": ["Brand Measurement & Metrics"],
+    "splits": [
+      {
+        "canonical_name": "Revenue Measurement (RPM as Quality Metric)",
+        "members": [
+          "Brand Measurement & Metrics (centroid)",
+          "RPM as Quality Metric",
+          "Advertising Metrics and ROI"
+        ],
+        "definition": "RPM (revenue per 1k views) and behavioral influence outperform vanity metrics like raw views."
+      },
+      {
+        "canonical_name": "Revenue Diversification Beyond Ads",
+        "members": [
+          "Revenue Models & Monetization"
+        ],
+        "definition": "Ad revenue is quality metric, not primary income; books, courses, affiliate drive real dollars."
+      }
+    ],
+    "definition": "Measure business impact via revenue efficiency, not engagement vanity metrics.",
+    "rationale": "Conflates two ideas: (1) what metric to use for a single revenue stream (RPM), and (2) which revenue streams to prioritize (diversification). Split separates measurement from strategy."
+  },
+  {
+    "cluster_id": 217,
+    "verdict": "kick",
+    "canonical_name": "Business Swamp Constraints",
+    "kick_members": [
+      {
+        "topic": "Two-Business Problem",
+        "headline": "The concrete business has $5M top line with 50% gross margin, but 10% net margin and is split across two businesses, making it impossible to exit or hire an operator.",
+        "reason": "Fails A1 (ambiguous actor reference—'the concrete business', 'it')—undefined entity. Too case-specific; not generalizable without company name and context."
+      }
+    ],
+    "definition": "1-3M revenue range traps founder between overwork and betting 50% profit on single hire.",
+    "rationale": "Swamp pattern is load-bearing; Two-Business headline is anecdotal and context-dependent. Kick it; keep cluster."
+  },
+  {
+    "cluster_id": 218,
+    "verdict": "split",
+    "canonical_name": "Licensing Model vs. Direct Service Delivery",
+    "aliases": ["Licensing vs. Agency"],
+    "splits": [
+      {
+        "canonical_name": "Licensing Model",
+        "members": [
+          "Licensing Model (centroid)",
+          "Licensing vs Direct Service"
+        ],
+        "definition": "License replicable service (video editing, social management) to partners at fixed margin."
+      },
+      {
+        "canonical_name": "Service Delivery Tactics",
+        "members": [
+          "New Service Launch"
+        ],
+        "definition": "Launch new service by solving avatar-specific problems in person."
+      }
+    ],
+    "kick_members": [
+      {
+        "topic": "Exercise Selection & Programming",
+        "headline": "Offer two-tier workouts (hard tier 1, regressive tier 2) so newbies train alongside OGs without needing separate sessions or complex progressions.",
+        "reason": "Fails topical coherence; about workout design, not licensing or service model. Outlier in cluster domain."
+      }
+    ],
+    "definition": "Scale via licensing leverage, not direct service delivery.",
+    "rationale": "Licensing (replicable, passive) vs. Services (bespoke, labor-intensive) are distinct business model choices. Exercise programming is unrelated tactic."
+  },
+  {
+    "cluster_id": 219,
+    "verdict": "accept",
+    "canonical_name": "Door-to-Door Acquisition Scaling",
+    "aliases": ["Door-Knocking", "Proven Acquisition Channel"],
+    "definition": "Door-to-door generates 20+ deals/month consistently; likely higher ROI than paid advertising.",
+    "rationale": "Tight cluster (0.91 min sim); all paraphrases of same claim. Accept as coherent, load-bearing assertion."
+  },
+  {
+    "cluster_id": 220,
+    "verdict": "split",
+    "canonical_name": "Churn as Growth Ceiling in Agency Models",
+    "aliases": ["Agency Avatar Problem"],
+    "splits": [
+      {
+        "canonical_name": "Avatar Mismatch in Agency Positioning",
+        "members": [
+          "Agency Avatar Problem (centroid)",
+          "Churn Problem",
+          "Agency Churn Root Cause"
+        ],
+        "definition": "Selling client acquisition to non-sales-capable founders creates churn; lack of usage activation is the bottleneck."
+      },
+      {
+        "canonical_name": "Churn as Hidden Growth Constraint",
+        "members": [
+          "Churn as Growth Ceiling",
+          "Conversion Rate Assumptions"
+        ],
+        "definition": "Annual churn 40-50% in agency/service models masks acquisition inefficiency; fixing churn >growth scaling."
+      },
+      {
+        "canonical_name": "Distribution Layer Strategy",
+        "members": [
+          "Churn and Cohort Dynamics",
+          "Distribution Layer Strategy"
+        ],
+        "definition": "Replace transactional customer acquisition with compounding distributor relationships."
+      }
+    ],
+    "definition": "Churn fundamentally constrains growth; must fix before scaling acquisition.",
+    "rationale": "Cluster mixes three distinct levers: (1) avatar selection mismatch, (2) churn as hidden constraint, (3) distribution model shift. Each requires different intervention."
+  },
+  {
+    "cluster_id": 221,
+    "verdict": "split",
+    "canonical_name": "Lead Nurture Definition & Mechanics",
+    "aliases": ["Audience to Leads to Buyers"],
+    "splits": [
+      {
+        "canonical_name": "Lead Nurture Definition",
+        "members": [
+          "Lead Nurture Definition (centroid)",
+          "Engaged Leads Definition"
+        ],
+        "definition": "Lead nurture maximizes show rates between ad impression and sales call; post-interest, pre-purchase."
+      },
+      {
+        "canonical_name": "Audience Building & Call-Out Mechanics",
+        "members": [
+          "Audience Building",
+          "Call-Out Techniques"
+        ],
+        "definition": "Build attention/audience pre-product; attention-grabbing tactics create leverage multiplier for future launches."
+      }
+    ],
+    "definition": "Nurture bridges awareness (audience) and action (sales) via engaged lead conversion.",
+    "rationale": "Conflates definitional (what is lead nurture) with tactical (how to grab attention). Split separates funnel stage from execution technique."
+  }
+]

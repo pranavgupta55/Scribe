@@ -1,0 +1,302 @@
+[
+  {
+    "cluster_id": 0,
+    "verdict": "split",
+    "canonical_name": "Sales Motion Fundamentals",
+    "aliases": [
+      "Close Rate Optimization",
+      "Sales Motion",
+      "Sales Process Optimization",
+      "Sales Process Redesign"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Sales Motion Fundamentals",
+        "members": [
+          "Sales Motion",
+          "Sales Motion Fundamentals",
+          "Sales Process Optimization",
+          "Sales Process Redesign",
+          "Close Rate Optimization"
+        ],
+        "definition": "Fix sales process to improve close rate via in-person closing before attempting pricing increases; process is the primary constraint, not leads or offer."
+      },
+      {
+        "canonical_name": "Pricing Anchoring",
+        "members": [
+          "Anchor Pricing",
+          "Sales Conviction"
+        ],
+        "definition": "Higher price anchors (10x upsell) improve base offer conversion by resetting perceived value; conviction in the offer drives sales success."
+      },
+      {
+        "canonical_name": "Sales Volume vs Close Rate",
+        "members": [
+          "Sales Volume vs Close Rate"
+        ],
+        "definition": "Optimize for volume and proof before optimizing for close rate; premature close-rate optimization wastes proof-building opportunities."
+      }
+    ],
+    "definition": "Optimize sales fundamentals: close rate via process, then pricing via anchoring, then volume.",
+    "rationale": "Cluster conflates three distinct concepts: (1) process optimization mechanics, (2) pricing psychology, and (3) when to optimize which metric. Clean splits preserve load-bearing distinctions."
+  },
+  {
+    "cluster_id": 1,
+    "verdict": "accept",
+    "canonical_name": "Courage and Fear",
+    "aliases": [
+      "Action Decoupled from Feeling",
+      "Courage & Risk Interval",
+      "Cringe as Status Play",
+      "Early Wins Build Confidence"
+    ],
+    "definition": "Courage is acting despite fear; the interval between perceiving risk and taking action defines courage; action builds confidence retroactively.",
+    "rationale": "Clean L0 concept—all members explore fear-action decoupling and the feedback loop between action and confidence. Proposed canonical captures the core."
+  },
+  {
+    "cluster_id": 3,
+    "verdict": "kick",
+    "canonical_name": "Content Strategy: Entertainment vs Education",
+    "aliases": [
+      "Educational Content Strategy",
+      "Entertainment vs. Education Audiences",
+      "Funnel Myth Debunking",
+      "Three Content Buckets"
+    ],
+    "kick_members": [
+      "Post-Acquisition Integration"
+    ],
+    "definition": "Educational content builds loyal, converting audiences; entertainment builds large, uncommitted audiences—they are distinct funnels, not conversion stages.",
+    "rationale": "Post-Acquisition Integration (\"keep platform separate via licensing\") is a legal/operational detail, not a content strategy concept. Kick the outlier; rest cohere."
+  },
+  {
+    "cluster_id": 4,
+    "verdict": "split",
+    "canonical_name": "Perks as Retention",
+    "aliases": [
+      "Community Design",
+      "Engagement Optimization"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Employee Retention Through Belonging",
+        "members": [
+          "Community Design",
+          "Engagement Optimization"
+        ],
+        "definition": "One trusted relationship with a peer inside the organization drives 5x longer tenure by anchoring belonging and identity."
+      },
+      {
+        "canonical_name": "Deal Structure and Ownership",
+        "members": [
+          "Deal Mechanics",
+          "Follow-the-Leader Model",
+          "Soft Handoff"
+        ],
+        "definition": "Structure equity and ownership to prevent holdouts; batch commitments before fulfillment; manage transitions through shared ownership."
+      },
+      {
+        "canonical_name": "Perks as Retention Lever",
+        "members": [
+          "Perks as Retention"
+        ],
+        "definition": "Alternate status/title bumps with perks to prevent clients or staff from accepting incentive then departing."
+      }
+    ],
+    "definition": "Retention is driven by belonging (people), deal structure (ownership), and mixed incentives (perks + status).",
+    "rationale": "Cluster spans three orthogonal retention mechanisms: psychological (belonging), legal (ownership structure), and tactical (perks mix). Each deserves its own L0."
+  },
+  {
+    "cluster_id": 5,
+    "verdict": "accept",
+    "canonical_name": "Sales Targeting and Lead Qualification",
+    "aliases": [
+      "Friction & Qualification",
+      "Lead Quality Over Quantity",
+      "Lead Scoring",
+      "Lead Scoring & Qualification",
+      "Sales Qualification and Avatar Targeting",
+      "Pricing Strategy"
+    ],
+    "definition": "Target wealthy, high-intent prospects via qualification friction and lead scoring; right avatar + close match drives high-ticket conversion; wrong avatar guarantees failure.",
+    "rationale": "All members reinforce same L0 principle: qualification > volume. Friction, scoring, and avatar targeting are tactics serving the same concept. Centroid name is canonical."
+  },
+  {
+    "cluster_id": 9,
+    "verdict": "accept",
+    "canonical_name": "Premium Positioning",
+    "aliases": [
+      "Brand as Competitive Advantage",
+      "Branding Economics & Pricing Power",
+      "Premium Pricing",
+      "Premium Pricing Power",
+      "Pricing Leverage",
+      "Pricing Power in Established Markets",
+      "Pricing Psychology",
+      "The Pricing Virtuous Cycle",
+      "Warren Buffett Pricing Power"
+    ],
+    "definition": "Strong brand enables premium pricing—higher prices trigger virtuous cycle of better margins, talent, reputation, and demand—until willingness to pay stops.",
+    "rationale": "Tight cluster on brand-pricing-margin compounding. All members articulate the same feedback loop from different angles. Proposed canonical captures the umbrella concept."
+  },
+  {
+    "cluster_id": 10,
+    "verdict": "rename",
+    "canonical_name": "Insurance-Driven Lead Generation",
+    "aliases": [
+      "Avatar Clarity from Insurance Constraints",
+      "Insurance Industry Economics",
+      "Lead Generation Strategy"
+    ],
+    "definition": "Insurance mandates (Medicare Part B at 65+) create predictable high-volume lead generation; broker commission structure misaligns incentives (keeping overcharge vs saving money).",
+    "rationale": "Centroid name \"Deal Structure Analysis\" is too generic. The real L0 is how insurance regulation and industry economics create a lead-gen moat. Rename to capture the actual insight."
+  },
+  {
+    "cluster_id": 11,
+    "verdict": "kick",
+    "canonical_name": "Continuity Upsell",
+    "aliases": [
+      "Event Strategy and Upselling",
+      "Internal Plays & Upsells",
+      "Large-Group Training Revenue",
+      "Recurring Revenue Architecture",
+      "Semi-Private (1-on-4) Training"
+    ],
+    "kick_members": [
+      "Distribution Layers",
+      "Launch Strategies",
+      "Lead Qualification Speed",
+      "Money Model Framework",
+      "Path Optimization",
+      "Urgency & Momentum"
+    ],
+    "definition": "Continuity: after initial program phase, upsell renewal or higher-tier continuation with guarantee, leveraging momentum and proof from first stage.",
+    "rationale": "Core cluster is about upsell timing and structure. Kicked members are about distribution, launch sequencing, and general revenue mechanics—orthogonal to continuity. Tighten the concept."
+  },
+  {
+    "cluster_id": 13,
+    "verdict": "kick",
+    "canonical_name": "Margins",
+    "aliases": [
+      "Gross Margins & Economics",
+      "Margins and Metrics"
+    ],
+    "kick_members": [
+      "Capital Efficiency",
+      "Capital Leverage and Returns"
+    ],
+    "definition": "High margins (50%+) enable reinvestment and faster growth; 50% margin business at $20M outperforms 10% margin business at $100M on compounding velocity.",
+    "rationale": "Kicked members are about capital deployment (fund math, reinvestment loops), not margin generation. Centroid \"Margins\" conflates business profitability with financial leverage. Narrow to pure margin economics."
+  },
+  {
+    "cluster_id": 15,
+    "verdict": "split",
+    "canonical_name": "Open-to-Goal Work Framework",
+    "aliases": [
+      "Outcome-Based Compensation"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Outcome-Based Work and Compensation",
+        "members": [
+          "Open-to-Goal Work Framework",
+          "Outcome-Based Compensation",
+          "Maker vs Manager Mindset"
+        ],
+        "definition": "Compensation and work design should be outcome-based (results regardless of hours), separating maker (deep work) from manager (meetings) modes."
+      },
+      {
+        "canonical_name": "Organizational Decentralization",
+        "members": [
+          "Shop-Level Decentralization"
+        ],
+        "definition": "Each location needs independent P&L ownership with dedicated ops manager; decentralization enables accountability without top-down micromanagement."
+      },
+      {
+        "canonical_name": "Discretionary Effort and Support",
+        "members": [
+          "Team & Personal Life",
+          "The 5% Problem"
+        ],
+        "definition": "High performance requires supportive personal life; most daily work supports a small passion core—accept this 95/5 split to avoid burnout."
+      }
+    ],
+    "definition": "Outcome-based work enables discretionary effort; organizational design (decentralization + support) unlocks it.",
+    "rationale": "Cluster spans work design, organizational structure, and team psychology. Three distinct levers: compensation model, reporting structure, and leader enablement."
+  },
+  {
+    "cluster_id": 16,
+    "verdict": "accept",
+    "canonical_name": "Behavioral Reinforcement Loops",
+    "aliases": [
+      "Behavior Prediction",
+      "Feedback Loops & Reinforcement",
+      "Identity Reinforcement Through Behavior",
+      "Influence Stack",
+      "Language as Behavior",
+      "Power Through Say-Do",
+      "Reinforcement and Behavior",
+      "Self-Reinforcing Patterns"
+    ],
+    "definition": "What happens after behavior determines if it repeats; consistent behavioral reinforcement hardens into identity; language and say-do consistency compound compliance.",
+    "rationale": "All members articulate behavioral psychology: stimulus-response-reinforcement chains shape identity and future behavior. Centroid name is slightly wonky but members cohere tightly—accept with alias suggestion."
+  },
+  {
+    "cluster_id": 17,
+    "verdict": "accept",
+    "canonical_name": "Workflow Automation",
+    "aliases": [
+      "Back Office Automation",
+      "Deal Flow Systemization",
+      "Role-Based to Workflow-Based Thinking",
+      "Task Automation Framework",
+      "Workflow-Based Organization"
+    ],
+    "definition": "Replace role-based hiring with workflow decomposition; map granular tasks across roles, then automate task-by-task; admin workflows are automation-ready now.",
+    "rationale": "Tight L0—all members articulate the same operational shift: from hiring for roles to automating workflows. Centroid is canonical; strong cluster."
+  },
+  {
+    "cluster_id": 18,
+    "verdict": "rename",
+    "canonical_name": "Price Communication",
+    "aliases": [
+      "Emotional Anchoring Before Price Drop",
+      "Language Optimization",
+      "Price Anchoring",
+      "Price as Market Signal",
+      "Pricing Tiers"
+    ],
+    "definition": "Pricing communicates quality and filters audiences; establish emotional context and perceived value before revealing price; set fixed price upfront to avoid renegotiation.",
+    "rationale": "Centroid focuses narrowly on the anchoring tactic. The real L0 is broader: how price communication (language, timing, anchors, signals) shapes buyer psychology and market selection. Rename to capture the umbrella."
+  },
+  {
+    "cluster_id": 20,
+    "verdict": "accept",
+    "canonical_name": "Emotional Authenticity",
+    "aliases": [
+      "Intrinsic Meaning",
+      "Passion Myth",
+      "Passion vs Purpose",
+      "Shame as Fuel"
+    ],
+    "definition": "Motivation source (pain, shame, meaning) doesn't matter—results do; passion is external fickle; purpose (why/how) is internal persistent; meaning justifies suffering.",
+    "rationale": "Coherent L0 on intrinsic motivation: all members explore how to tap emotional fuel (negative or positive), connect to larger purpose, and sustain effort through difficulty. Centroid captures the cluster."
+  },
+  {
+    "cluster_id": 21,
+    "verdict": "rename",
+    "canonical_name": "Ad Spend Optimization",
+    "aliases": [
+      "Ad Spend Scaling",
+      "Ad Spend Scalability",
+      "Attribution Tracking",
+      "Audience Awareness Pyramid",
+      "Creative Optimization",
+      "Creative Production",
+      "Google Ads Optimization",
+      "Marketing Metrics"
+    ],
+    "definition": "Scale ad spend after landing page and creative are optimized; maintain ROAS by improving quality (creative) before increasing quantity (budget); measurement is prerequisite.",
+    "rationale": "Centroid \"Ad Spend Scaling\" is directional. Broader L0 is optimization methodology: measure first, optimize creative, then scale spend. Rename to capture the causal chain."
+  }
+]

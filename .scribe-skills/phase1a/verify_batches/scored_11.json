@@ -1,0 +1,252 @@
+[
+  {
+    "cluster_id": 162,
+    "verdict": "split",
+    "canonical_name": "Deal Flow Generation",
+    "aliases": ["Demand Generation", "Brand-Driven Growth"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Deal Flow Generation",
+        "members": ["Deal Flow Generation"],
+        "definition": "Highest leverage activity is generating market demand; everything else (ops, service, fulfillment) flows from brand visibility."
+      },
+      {
+        "canonical_name": "Creator Leverage Strategy",
+        "members": ["Creator Influencer Power", "Influencer Leverage Strategy"],
+        "definition": "Creators and influencers drive all attention and trust in attention-based markets; leverage 3-5 big creators as brand ambassadors."
+      },
+      {
+        "canonical_name": "Content Volume as Moat",
+        "members": ["Creative Volume Demand"],
+        "definition": "Demand for creative output is accelerating; production volume becomes a sustainable competitive moat."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Market demand generation drives business growth; achieved via creator leverage and content volume.",
+    "rationale": "Centroid bundles distinct levers (demand, creator leverage, volume) that belong in separate load-bearing claims; aggressive split recovers three orthogonal nodes."
+  },
+  {
+    "cluster_id": 163,
+    "verdict": "accept",
+    "canonical_name": "Intelligence as Learning Rate",
+    "aliases": ["Learning Velocity", "Speed of Behavioral Change", "Intelligence as Speed"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Intelligence is measured by the speed at which behavior changes under constant conditions, not innate capacity.",
+    "rationale": "Tight semantic cluster (0.94 min sim); all four members express the same load-bearing claim with high cohesion; canonical captures shared definition."
+  },
+  {
+    "cluster_id": 164,
+    "verdict": "split",
+    "canonical_name": "Community as Recurring Revenue Model",
+    "aliases": ["Community Consumption", "Recurring Engagement"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Community as Recurring Revenue Model",
+        "members": ["Community Value", "Consumable Media", "Recurring Revenue Model"],
+        "definition": "Community generates recurring revenue by supplying monthly consumable inputs (education materials, resources) that anchor customer engagement."
+      },
+      {
+        "canonical_name": "Churn Prevention via Recurring Consumption",
+        "members": ["Churn Prevention", "Consumable Products"],
+        "definition": "Monthly recurring consumption of products anchors members to the platform and prevents churn."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Community monetization via recurring resource supply drives monthly engagement and revenue.",
+    "rationale": "Two orthogonal claims conflated: (1) business model (recurring revenue from monthly inputs), (2) retention mechanism (consumption anchors churn). Split recovers both."
+  },
+  {
+    "cluster_id": 165,
+    "verdict": "split",
+    "canonical_name": "Market Selection Over Saturation Narrative",
+    "aliases": ["Market Saturation Myth", "Geographic Scaling"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Market Saturation Narrative is Usually a Performance Problem",
+        "members": ["Market Saturation Myth"],
+        "definition": "Founders declaring market saturation often misdiagnose weak execution or poor positioning; comparable geographies succeed with same offer."
+      },
+      {
+        "canonical_name": "Market Selection Criteria: Growth + Pain + Targeting",
+        "members": ["Market Selection"],
+        "definition": "Picking the right market (growing >20% CAGR, clear pain, targeting ease) matters more than offer strength or persuasion skill."
+      },
+      {
+        "canonical_name": "Geographic Expansion Sequence: Dominate Local, Then Expand",
+        "members": ["Local Market Domination Before Expansion", "Geographic Expansion", "Market Expansion and Geographic Scaling"],
+        "definition": "Conquer one city fully before expanding to country/world; overexpansion before local dominance causes collapse."
+      },
+      {
+        "canonical_name": "Market Tailwinds Enable Growth by Default",
+        "members": ["Market Expansion & Growth Tailwinds", "Market Timing and Land Grabs"],
+        "definition": "Growing markets (20%+ CAGR) enable returns via default growth; shrinking markets require heroic execution. Outsized returns exist during market imbalances."
+      },
+      {
+        "canonical_name": "Keyword/Channel Market Capacity Often Underestimated",
+        "members": ["Scaling Media Buying and Keywords", "Expansion Hooks for New Markets"],
+        "definition": "Saturation is often false; markets have far more capacity than founders assume. Test broader hooks rather than optimize narrow channels."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Market selection and expansion strategy; saturation is usually misdiagnosis of execution gaps.",
+    "rationale": "Variance 0.098; min_sim 0.89 indicates loose cluster. Nine members express five distinct load-bearing ideas: (1) saturation myth, (2) selection criteria, (3) expansion sequence, (4) tailwinds, (5) capacity misjudgment. Aggressive split recovers all."
+  },
+  {
+    "cluster_id": 166,
+    "verdict": "rename",
+    "canonical_name": "Effort Compounds Relative to Starting Conditions",
+    "aliases": ["Work Ethic Substitution", "Speed of Learning Over Starting Point", "Natural Ability and Circumstance"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Extreme work ethic can overcome natural ability disadvantages; focus on controllables (effort, improvement) not luck.",
+    "rationale": "Centroid 'Work Ethic Substitution' is too narrow; cluster articulates broader claim: natural ability sets baseline, but effort + circumstance determine outcome. Rename to canonical."
+  },
+  {
+    "cluster_id": 167,
+    "verdict": "accept",
+    "canonical_name": "Leadership Sets Culture; Culture Determines Acceptable Effort",
+    "aliases": ["Leader as Culture Setter", "Owner Presence and Standards", "Sales Management Leadership"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "A leader sets the culture and acceptable effort standard; a declining unit reflects leadership problem, not market or team problem.",
+    "rationale": "Tight cohesion (0.896 min sim); all six members converge on same load-bearing claim: leadership quality drives culture → execution quality → business results."
+  },
+  {
+    "cluster_id": 168,
+    "verdict": "rename",
+    "canonical_name": "True CAC Differs from Reported CAC",
+    "aliases": ["CAC vs. True CAC", "Conversion Metrics Tracking"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Reported CAC (e.g., $130) obscures true CAC after conversion bottlenecks (e.g., trial-to-paying rate); funnel problems masquerade as targeting problems.",
+    "rationale": "Only two members but high cohesion (0.941 min sim). Rename from 'CAC vs. True CAC' to 'True CAC Differs' to emphasize the mechanism (discrepancy due to hidden conversion loss)."
+  },
+  {
+    "cluster_id": 169,
+    "verdict": "split",
+    "canonical_name": "Multi-Channel Retargeting and Revenue Mix",
+    "aliases": ["Cross-Platform Retargeting", "Revenue Channels"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Cross-Platform Retargeting Increases Touchpoints and Reduces CAC",
+        "members": ["Cross-Platform Retargeting"],
+        "definition": "Following customers across Google, Facebook, and other platforms increases touchpoints and lowers customer acquisition cost."
+      },
+      {
+        "canonical_name": "Revenue Mix: Recurring, Paid Search, and SEO",
+        "members": ["Revenue Channels"],
+        "definition": "Revenue splits across recurring (past customers), paid search (Google Ads), and organic (SEO); ratio varies by maturity."
+      },
+      {
+        "canonical_name": "Platform Choice and Backup Channels Matter",
+        "members": ["Marketing & Ad Management", "Paid Advertising Fundamentals", "Platform Monetization"],
+        "definition": "Primary channel failure requires backup channels (Meta, TikTok, LinkedIn); platform monetization varies by audience quality."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Multi-channel marketing requires retargeting, revenue diversification, and backup channel readiness.",
+    "rationale": "Variance 0.083; centroid 'Cross-Platform Retargeting' bundles distinct claims: (1) retargeting mechanism, (2) revenue mix analysis, (3) platform selection. Split recovers all."
+  },
+  {
+    "cluster_id": 170,
+    "verdict": "accept",
+    "canonical_name": "All Life Paths Have Equal Suffering; Outcome Differs by Choice",
+    "aliases": ["Suffering As Fixed Cost", "Suffering Fixed Cost"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "All career paths involve equal suffering; the variable is what you get for that suffering, not whether you suffer.",
+    "rationale": "Extremely tight cohesion (0.984 min sim); both members are semantic near-duplicates; canonical captures shared assertion."
+  },
+  {
+    "cluster_id": 171,
+    "verdict": "accept",
+    "canonical_name": "Capacity Expansion Through Stretching",
+    "aliases": ["Growth Through Adversity", "Mountain Climbing Metaphor", "Effort Scaling"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Each limit you break raises your belief in what you can handle; growth happens at capacity edge where pain signals stretching.",
+    "rationale": "Cohesive cluster (0.895 min sim); all five members express same metaphorical claim: growth ≈ breaking previous limits; pain is signal of capacity expansion."
+  },
+  {
+    "cluster_id": 172,
+    "verdict": "accept",
+    "canonical_name": "Scaling Performance Marketing Compresses Margins Until Breakeven",
+    "aliases": ["Margins Compression", "CAC and Margin Dynamics", "Direct Response Doom Loop"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Scaling direct response (paid ads) compresses margins as CAC rises, churn accelerates, and supply costs grow; eventually reaches unprofitable breakeven.",
+    "rationale": "High cohesion (0.914 min sim); all seven members converge on one mechanistic claim: growth via arbitrage (spend < margin) is unsustainable at scale. Canonical captures mechanism."
+  },
+  {
+    "cluster_id": 173,
+    "verdict": "split",
+    "canonical_name": "Sales Productivity: Parallel Dialing and Show-Up Rate Optimization",
+    "aliases": ["Sales Dialer Efficiency", "Conversion Funnel"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Parallel Dialer Maximizes Talk Time Over Waiting Time",
+        "members": ["Sales Dialer Efficiency"],
+        "definition": "Parallel dialer calling 10 numbers at ~5% pickup enables team to maximize talk time rather than waiting time between dials."
+      },
+      {
+        "canonical_name": "Show-Up Rate and Lead Nurture Optimization",
+        "members": ["Conversion Funnel", "Lead Nurture"],
+        "definition": "Booked calls have ~50% show-up baseline; lead nurture playbook improves show-up rate to ~70%."
+      },
+      {
+        "canonical_name": "Capacity Maximization Without Proportional Headcount",
+        "members": ["Capacity Maximization", "Toads to Kiss"],
+        "definition": "Five micro-levers (parallel dialing, nurture, capacity, volume) enable teams to serve more clients in same space without opening new facility or hiring proportionally."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Sales team productivity driven by parallel dialing, show-up rate optimization, and capacity maximization levers.",
+    "rationale": "Variance 0.085; min_sim 0.90 indicates loose fit. Five members address three orthogonal sales productivity mechanisms; split recovers all."
+  },
+  {
+    "cluster_id": 174,
+    "verdict": "accept",
+    "canonical_name": "High-Value Customers Are Less Demanding Per Dollar",
+    "aliases": ["Customer Concentration", "Customer Segmentation"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "High-value customers are less price-sensitive and less demanding per revenue dollar (e.g., $100K is 1% of net worth vs. $100 is 10% of savings).",
+    "rationale": "Cohesive cluster (0.894 min sim); all four members converge on same economic claim: customer quality inversely correlates with price sensitivity."
+  },
+  {
+    "cluster_id": 175,
+    "verdict": "accept",
+    "canonical_name": "Undefined Words Create Mythology and Prevent Clear Thinking",
+    "aliases": ["Communication Clarity", "Definition and Clarity", "Vague Terminology Problem"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Undefined abstract terms in conversation (e.g., 'quality', 'success') create mythology; both parties use words without shared meaning.",
+    "rationale": "Tight cohesion (0.950 min sim); all three members express same load-bearing claim: clarity requires explicit definitions before problem-solving."
+  },
+  {
+    "cluster_id": 176,
+    "verdict": "rename",
+    "canonical_name": "The Execution Gap: Knowledge Without Action",
+    "aliases": ["The Execution Gap: Why Entrepreneurs Get Stuck", "Accountability Systems", "Customer Activation"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Most people know what to do but don't act; requires three-tier accountability to bridge gap between knowledge and execution.",
+    "rationale": "Centroid is good; rename slightly to emphasize the load-bearing claim: knowledge ≠ execution. Four members all address reasons execution fails (delay gratification, pain, activation, accountability)."
+  }
+]

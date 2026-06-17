@@ -1,0 +1,185 @@
+[
+  {
+    "cluster_id": 116,
+    "verdict": "accept",
+    "canonical_name": "Founder Removal Test",
+    "aliases": ["Founder Dependency", "Business Independence Test"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Business viability independent of founder involvement; testable by founder exit from operations.",
+    "rationale": "Load-bearing concept with clear mechanism: founder dependency masks supply constraints and prevents scaling."
+  },
+  {
+    "cluster_id": 117,
+    "verdict": "split",
+    "canonical_name": "Performance-Based Compensation",
+    "aliases": ["Zero-Capital Business Models", "Commission-Based Earnings"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Training & Hiring Culture Gaps",
+        "members": ["Sales Training", "Hiring & Leverage"],
+        "definition": "Most businesses hire without structured training; actual training cadence near zero despite role complexity."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Revenue-share and commission models enable businesses with zero capital by aligning operator earnings with profit.",
+    "rationale": "Original cluster merges compensation structure (load-bearing) with cultural failure (training absence); these are orthogonal."
+  },
+  {
+    "cluster_id": 118,
+    "verdict": "accept",
+    "canonical_name": "Execution & Rapid Iteration",
+    "aliases": ["Volume Advantage", "Measured Scale-Up"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Build team, produce massive volume, measure winners, double down; competitive edge via execution speed and data.",
+    "rationale": "Exemplary framework with quantified examples (450/week, 1.44M record), mechanism (volume→selection), and time-anchor (4-year foundation)."
+  },
+  {
+    "cluster_id": 119,
+    "verdict": "accept",
+    "canonical_name": "Sales Team Structure and Compensation",
+    "aliases": ["Incentive Alignment", "Commission-Base Hybrid"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Separate inbound (reliable, lower per-deal) and outbound (high-variance high-reward) paths; align compensation to net profit.",
+    "rationale": "Named conditions (inbound vs. outbound), mechanisms (alignment prevents gaming), and specific numbers ($42k base, 10% assignment, 25% revenue share)."
+  },
+  {
+    "cluster_id": 120,
+    "verdict": "accept",
+    "canonical_name": "Tolerance & Emotional Threshold",
+    "aliases": ["Mental Toughness Component", "Fuse Length"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "How long you maintain intended behavior before disruption from hardship; improvable via practice and biology (sleep, food).",
+    "rationale": "Self-identifies as mental-toughness component; mechanism explicit (hardship reduces tolerance via biology); measurable via behavior persistence."
+  },
+  {
+    "cluster_id": 121,
+    "verdict": "rename",
+    "canonical_name": "Promise-Delivery Gap",
+    "aliases": ["Sales-Fulfillment Misalignment", "Commitment Overreach"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Gap between sales promises and fulfillment capability drives cancellations and churn; key constraint on sales growth.",
+    "rationale": "Original name vague; 'misalignment' passive. Renamed to 'Promise-Delivery Gap' for action and clarity."
+  },
+  {
+    "cluster_id": 122,
+    "verdict": "split",
+    "canonical_name": "Offer Simplification via Bundling",
+    "aliases": ["Product Bundling", "Feature Reduction"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Tiering via Downsell",
+        "members": ["Feature Downsells", "Offer Stacking & Upsells"],
+        "definition": "Create mid-tier by removing high-value features (e.g., guarantees) from premium; downgrade creates re-upsell path."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Combine and reduce features to single core value stack; overwhelm reduction (Planet Fitness model: 10-15% of competitor features, lower price).",
+    "rationale": "Original cluster merges two frameworks: bundling (simplify by combining) vs. tiering (differentiate by removing). Split for clarity."
+  },
+  {
+    "cluster_id": 123,
+    "verdict": "rename",
+    "canonical_name": "Content-Offer Congruence",
+    "aliases": ["Audience-Topic Matching", "Platform-Funnel Alignment"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Build audience on content naturally leading to offer; wrong audience on large platform worse than right audience on small.",
+    "rationale": "Original 'Bait-and-Switch Prevention' is symptom; root is content-offer congruence. Renamed for mechanism clarity."
+  },
+  {
+    "cluster_id": 124,
+    "verdict": "accept",
+    "canonical_name": "Talent Acquisition Levels",
+    "aliases": ["Leadership Levels", "Talent Ladder"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Hiring talent is a ladder; each level (SDR→manager→VP) unlocks discontinuous capability jumps and shifts what's possible.",
+    "rationale": "Load-bearing; operationalizes 'levels' with discontinuous jumps; aligns with 'Who Game' framework; scaling constraint (scaled $6M to $100M)."
+  },
+  {
+    "cluster_id": 125,
+    "verdict": "accept",
+    "canonical_name": "Education Product Ceiling",
+    "aliases": ["Info-Media Scalability", "One-Time Educational Value"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Education has zero post-learning value; one-time sale model caps retention at ~zero and revenue at $1-3M ceiling.",
+    "rationale": "Hard constraint with identified ceiling; falsifiable via revenue and retention metrics; retention zero by design, not failure."
+  },
+  {
+    "cluster_id": 126,
+    "verdict": "kick",
+    "canonical_name": null,
+    "aliases": [],
+    "kick_members": ["Facility Planning", "Future UX Shift"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "Speculative future claim lacks mechanism, source anchor, and falsifiability. Time-bound assertion (12-24 months, voice/text agents replacing UI) is unfalsifiable without evidence. Fails NODE-QUALITY-RUBRIC B6 (source-grounded); fails C5 (falsifiable). Remove."
+  },
+  {
+    "cluster_id": 127,
+    "verdict": "accept",
+    "canonical_name": "Trauma & Permanent Behavior Change",
+    "aliases": ["Post-Trauma Adaptation", "Aversive Stimulus Response"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Permanent behavior shift from aversive stimulus; direction (positive/negative) determined by adaptation; differs from resilience (recovery speed).",
+    "rationale": "Mechanism explicit; operationalizes 'permanent' with behavior trajectory shift; includes adaptation factor and comparison to resilience."
+  },
+  {
+    "cluster_id": 128,
+    "verdict": "accept",
+    "canonical_name": "Opportunity Cost Framework",
+    "aliases": ["Regrets as Trade-offs", "Path Elimination"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Every choice eliminates its alternative; regrets are psychological weight of paths not taken; unavoidable, so choose which ones to accept.",
+    "rationale": "Self-identifies framework; mechanism (imagined upsides without costs breed regret); source-grounded (Hitchens/Murray quoted exchange)."
+  },
+  {
+    "cluster_id": 130,
+    "verdict": "split",
+    "canonical_name": "Proof Types",
+    "aliases": ["Credibility Signals", "Proof Mechanisms"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Table-Stakes Accomplishments",
+        "members": ["Third-Party Credibility Signals"],
+        "definition": "Exits, revenue, companies, headcount are table-stakes for B2B trust; mention once, understood; static proof."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Two proof types: past accomplishment (static, hard to fake) and real-time demonstration (dynamic, harder to fake); stakes determine proof priority.",
+    "rationale": "Original cluster merges proof types (achievement vs. effort/real-time) with table-stakes accomplishments. Split into frameworks and component traits."
+  },
+  {
+    "cluster_id": 131,
+    "verdict": "kick",
+    "canonical_name": null,
+    "aliases": [],
+    "kick_members": ["AI-Generated Websites", "Claude Code", "Claude Code Installation"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "Feature-list claim (NODE-QUALITY-RUBRIC A2). 'Install Claude Code with VSCode and API keys' is implementation detail, not claim. No mechanism, no conditionals, no behavior-change implication. Demote to practice/implementation_details, not claim. Fails C1–C5 scoring matrix."
+  }
+]

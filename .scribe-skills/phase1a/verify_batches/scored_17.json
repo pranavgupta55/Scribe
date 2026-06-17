@@ -1,0 +1,189 @@
+[
+  {
+    "cluster_id": 252,
+    "verdict": "accept",
+    "canonical_name": "Conference and Events Strategy",
+    "aliases": ["High-Leverage Fundraising", "Trade Show Lead Generation"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Conferences and in-person events are high-leverage channels for founder fundraising and audience access due to face-to-face trust compression.",
+    "rationale": "Coherent concept with clean centroid; all three members align on the core insight (conferences/events as leverage mechanism). Minimal variance (0.062)."
+  },
+  {
+    "cluster_id": 253,
+    "verdict": "accept",
+    "canonical_name": "Investor Confidence Through De-Risking",
+    "aliases": ["Investor Confidence", "Valuation Narrative"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Investor confidence scales with the number of assumptions they must believe; build thesis around provably-true de-risked conditions, not aspirational facts.",
+    "rationale": "Both members converge on the core lever (reducing assumption load), not restating investor psychology. High similarity (0.959) indicates tight semantic overlap."
+  },
+  {
+    "cluster_id": 254,
+    "verdict": "rename",
+    "canonical_name": "Process Design Unlocks Junior Talent",
+    "aliases": ["Script Optimization", "Sales Process Design", "Sales Training Process"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Well-designed process (scripts, checklists, repeatable steps) reduces skill requirement and enables junior talent to execute consistently at scale.",
+    "rationale": "Proposed name (Script Optimization) is implementation detail, not the load-bearing concept. Core insight is that process substitutes for talent/specialization; rename to capture the mechanism."
+  },
+  {
+    "cluster_id": 255,
+    "verdict": "accept",
+    "canonical_name": "Transitive Skill Generalization",
+    "aliases": ["Generalization Across Domains", "Skill Transposition"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Success in one domain transfers to others because underlying skill-acquisition mechanisms are domain-agnostic; top performers apply this transitive property naturally.",
+    "rationale": "Both members assert the same mechanism (skill transfer across domains via universal learning principles). Tight variance (0.032) and high similarity (0.968)."
+  },
+  {
+    "cluster_id": 256,
+    "verdict": "split",
+    "canonical_name": "Brand as Escape from Performance Marketing",
+    "aliases": ["Brand Building"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Brand as Moat",
+        "members": ["Brand Building", "Brand Building Strategy"],
+        "definition": "Defensible brand via customer belief and ambassador evangelism (not patents or arbitrage) commands premium pricing and builds durable competitive advantage."
+      },
+      {
+        "canonical_name": "Brand and Customer Behavior",
+        "members": ["Brand Loyalty", "Customer Behavior Change"],
+        "definition": "Strong brand directly shifts customer choice and willingness-to-pay, driving repeat purchases and lifetime value."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Brand is the escape valve from performance marketing trap (low margins, commoditized). Drives premium pricing, retention, and defensibility.",
+    "rationale": "Cluster conflates two distinct load-bearing ideas: (1) brand as moat/competitive advantage, (2) brand as behavioral lever on customer choice. Split to clarify. Talent Retention outlier stays in parent (brand loyalty drives retention too)."
+  },
+  {
+    "cluster_id": 257,
+    "verdict": "rename",
+    "canonical_name": "Integration Captures Full Value",
+    "aliases": ["Fund vs. Operations", "Wholesale Integration"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Vertically integrating wholesale operations in-house gives you access to their full volume, not just their shared fraction. Cash flow from wholesale funds the high-multiple operations.",
+    "rationale": "Proposed name (Fund vs. Operations) is structural framing. Core insight is the leverage gain from integration; rename to clarify the mechanism (full volume capture)."
+  },
+  {
+    "cluster_id": 258,
+    "verdict": "accept",
+    "canonical_name": "Failure is Psychological Until Death",
+    "aliases": ["Small Bets and Iteration", "Psychological Nature of Failure"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "All operational failure is recoverable through iteration unless you die; reframe failure as a solvable iteration problem, not a terminal event.",
+    "rationale": "Both members assert the same provocative claim (mortality as the only real failure). Near-perfect overlap (0.981 similarity); minimal variance (0.019)."
+  },
+  {
+    "cluster_id": 259,
+    "verdict": "accept",
+    "canonical_name": "Emotion-Action Decoupling",
+    "aliases": ["Feelings vs Actions", "Evidence Over Emotion", "Separation of Feeling and Action"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Mature behavior decouples feeling from action; you can feel afraid/angry/uncertain while acting normally. Identity is determined by action, not emotion.",
+    "rationale": "All three members converge on the same mechanism (emotional regulation via decoupling). Centroid is clean; variance (0.051) indicates tight thematic alignment."
+  },
+  {
+    "cluster_id": 260,
+    "verdict": "accept",
+    "canonical_name": "Learning Requires Behavior Change Through Feedback",
+    "aliases": ["Learning Through Iteration", "Learning & Behavior Change", "Learning Definition", "Content Consumption Trap"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Learning is measurable only as behavior change in the same condition, proved by entering that condition again and responding differently. Content consumption without behavior change is entertainment.",
+    "rationale": "Four members all assert the same operational definition of learning (Skinnerian: condition constant, response changes). High cross-source agreement (2 sources on one headline). Tight cluster semantically."
+  },
+  {
+    "cluster_id": 261,
+    "verdict": "kick",
+    "canonical_name": null,
+    "aliases": [],
+    "kick_members": ["Compliance and Law", "Franchise vs Done-For-You", "Legal Compliance", "Regulatory Compliance"],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "Cluster is over-heterogeneous (variance 0.087, min_intra_sim 0.899—the weakest in batch). Members span three unrelated concepts: (1) ignorance-is-not-defense, (2) franchise legal structure, (3) regulatory gray zones. No load-bearing concept holds them together. Kick and rebuild as three separate L0 concepts."
+  },
+  {
+    "cluster_id": 262,
+    "verdict": "accept",
+    "canonical_name": "Close Rate as Pricing Calibration Signal",
+    "aliases": ["Close Rate vs Pricing", "Close Rate Analysis and Price Optimization", "Close Rate as Pricing Signal", "High-Ticket Sales Pricing"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Close rate reveals pricing power: 80%+ signals underpricing (3-4x room), 30-40% is calibrated, <30% indicates sales/qualification problem not pricing.",
+    "rationale": "Four members all leverage the same axis (close rate as pricing feedback loop). Proposed canonical is clean; members add quantified anchors (80%, 30-40%). Variance (0.049) is tight."
+  },
+  {
+    "cluster_id": 263,
+    "verdict": "rename",
+    "canonical_name": "Asymmetric Bet Framework",
+    "aliases": ["Overestimating Downside Risk", "Downside Capped Upside Uncapped", "Upside Asymmetry", "Downside Tolerance Framework"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Identify situations with bounded downside and uncapped upside; young person with time has capped loss (zero) and unlimited attempts. Arbitrage lives in the gap between downside and upside.",
+    "rationale": "Proposed name (Overestimating Downside Risk) is problem framing, not the core insight. Cluster is really about recognizing asymmetric-bet shapes and acting on them. Rename to framework name."
+  },
+  {
+    "cluster_id": 264,
+    "verdict": "accept",
+    "canonical_name": "Time Allocation Across Work and Skill-Building",
+    "aliases": ["Time Optimization", "The 4-4-4 Time Split", "Time Management"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Structure time blocks: day job pays present expenses (8am–5pm); morning/evening blocks (5–9am, 5–9pm) build future. Reclaim ~4-hour windows before/after employment for skill-building.",
+    "rationale": "Three members all propose time-slicing tactics with the same logic (present vs. future). Variance (0.041) is low; all align on the 4-hour block pattern."
+  },
+  {
+    "cluster_id": 265,
+    "verdict": "accept",
+    "canonical_name": "Monetizing Complexity Reduction",
+    "aliases": ["Value Creation Through Pre-Work", "Complexity Reduction", "Magical Product Experiences"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Capture value by pre-processing complexity and delivering simple output; the fortune is in doing the invisible work (research, distillation) so the customer receives effortless results.",
+    "rationale": "Three members converge on the same lever (pre-work compression). Centroid is clean; members provide illustrative angles (pre-chewed food, magical product feeling). Variance (0.059) is acceptable."
+  },
+  {
+    "cluster_id": 266,
+    "verdict": "split",
+    "canonical_name": "Qualitative Attribution for Channel Discovery",
+    "aliases": ["Directional Approach", "Qualitative Attribution"],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Audience Survey for Channel Prioritization",
+        "members": ["First Touch Analysis"],
+        "definition": "Ask audience survey: where did you first hear about us? Use qualitative results to identify and power-rank the primary discovery channel."
+      },
+      {
+        "canonical_name": "ICP Avatar Definition via Customer Language",
+        "members": ["Offer Bifurcation Strategy"],
+        "definition": "Define ICP phase 1 as emotional testimonials from representative customers at $15-25k upfront price point, using their native language for positioning."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Simplest attribution method: ask customers where they first discovered you. Use qualitative directional signal (not pixel tracking) to allocate media spend.",
+    "rationale": "Cluster mixes two unrelated tactics: (1) qualitative attribution for channel discovery, (2) customer avatar definition via testimonial language. 'Offer Bifurcation' is semantically remote (0.905 sim). Split to separate channel insights from positioning insights."
+  }
+]

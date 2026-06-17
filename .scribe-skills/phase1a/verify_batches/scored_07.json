@@ -1,0 +1,272 @@
+[
+  {
+    "cluster_id": 101,
+    "verdict": "accept",
+    "canonical_name": "Spending Skill Gap",
+    "aliases": [
+      "Capital Deployment Gap",
+      "Wealthy Capital Management"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Most high earners never learn to deploy capital effectively; wealth without spending skill fails to compound.",
+    "rationale": "Coherent concept with tight definition; min intra-similarity 0.898 supports cohesion."
+  },
+  {
+    "cluster_id": 102,
+    "verdict": "split",
+    "canonical_name": "Documentation of Struggle",
+    "aliases": [
+      "Journey Documentation",
+      "Progress Narrative"
+    ],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Documentation of Journey",
+        "members": [
+          "Building in Public",
+          "Documentation of Struggle"
+        ],
+        "definition": "Document the struggle and comeback, not just the destination; narrative visibility of progress."
+      },
+      {
+        "canonical_name": "Tracking & Measurement",
+        "members": [
+          "Data Tracking During Transition",
+          "Success Metrics and Quantification"
+        ],
+        "definition": "Set up tracking before it's harder; tracking mandatory for improvement—without it, no feedback signal exists."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Documentation of progress and metrics drive improvement; track struggle, not just success.",
+    "rationale": "Members split into narrative documentation (visibility) vs. measurement systems (feedback loops); different loads."
+  },
+  {
+    "cluster_id": 103,
+    "verdict": "split",
+    "canonical_name": "Claude Skills",
+    "aliases": [
+      "AI Skills Platform",
+      "Automation Framework"
+    ],
+    "kick_members": [
+      "AI Operating System Setup"
+    ],
+    "splits": [
+      {
+        "canonical_name": "AI Automation & Integration",
+        "members": [
+          "Composio Authentication",
+          "Hotline Workflow Example",
+          "Trigger.dev Automations"
+        ],
+        "definition": "Compose AI-driven workflows by integrating APIs and cloud automation (Composio, Trigger.dev)."
+      },
+      {
+        "canonical_name": "Claude Skills Platform",
+        "members": [
+          "Claude Skills",
+          "Service Delivery",
+          "AI Tools"
+        ],
+        "definition": "Portable Claude skills enable efficient automation on drives platform; automation reduces manual overhead."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "AI automation integrations (Composio, Trigger.dev) and Claude Skills platform enable scalable service delivery.",
+    "rationale": "Cluster conflates three concepts: API integration, platform-level skills, and configuration mechanics. Kick setup detail; split integration from platform."
+  },
+  {
+    "cluster_id": 104,
+    "verdict": "kick",
+    "canonical_name": "Time Delay",
+    "aliases": [],
+    "kick_members": [
+      "Expectation Management",
+      "Gratification Timing",
+      "Low-Ticket Products as Relationship Shifters",
+      "Opportunity Recognition",
+      "Pivot Timing"
+    ],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Members conflate timing decisions with temporal delay; no coherent load-bearing concept.",
+    "rationale": "Only 2/6 members address duration/delay; others cover timing strategy, decision windows, regulation phase-in. Centroid pulls in misaligned members. Kick cluster."
+  },
+  {
+    "cluster_id": 105,
+    "verdict": "rename",
+    "canonical_name": "Founder Control & Equity Structure",
+    "aliases": [
+      "Equity for Control",
+      "Ownership Incentives"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Maintain founder voting control while raising capital through structured equity and operator partnerships.",
+    "rationale": "Members focus on equity structuring and control maintenance, not fundraising process; rename for clarity."
+  },
+  {
+    "cluster_id": 106,
+    "verdict": "accept",
+    "canonical_name": "Leverage Mechanics",
+    "aliases": [
+      "Input-Output Multiplication",
+      "Scalable Effort Multiplier"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Define the specific input action that drives results, then multiply it via leverage while keeping founder effort constant or reduced.",
+    "rationale": "Coherent concept across all members; min intra-similarity 0.910 supports tight clustering."
+  },
+  {
+    "cluster_id": 107,
+    "verdict": "accept",
+    "canonical_name": "Brand Building and Competitive Moats",
+    "aliases": [
+      "Brand as Defensibility",
+      "Moats Over Patents"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Brand is the most cost-effective long-term competitive moat; creates pricing power, customer loyalty, and talent attraction.",
+    "rationale": "Clean concept; members cohesively support brand as primary defense against commoditization."
+  },
+  {
+    "cluster_id": 108,
+    "verdict": "rename",
+    "canonical_name": "Decision Framework: Consequence Analysis",
+    "aliases": [
+      "Consequence Mapping",
+      "Multi-Step Outcome Thinking"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Think two steps ahead—what happens after your action, then what happens after their reaction—to avoid reactive decisions.",
+    "rationale": "Concept is specifically about decision-making via consequence modeling, not generic consequence mapping."
+  },
+  {
+    "cluster_id": 109,
+    "verdict": "split",
+    "canonical_name": "Cost of Talent vs. ROI",
+    "aliases": [
+      "Talent Economics",
+      "Compensation ROI"
+    ],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Sales Compensation Benchmarks",
+        "members": [
+          "Cost of Talent vs. ROI",
+          "Hiring and Talent Acquisition",
+          "Real Estate Agent Arbitrage"
+        ],
+        "definition": "Top salespeople cost $100-200k/year; real estate agents earn 4-5% on massive deal values ($800k-$1M) with zero capital."
+      },
+      {
+        "canonical_name": "Commission & Incentive Structure",
+        "members": [
+          "Affiliate Commission Structure",
+          "Price Raise Implementation",
+          "Recruiting Economics"
+        ],
+        "definition": "Boost affiliate commission 5-10x when LTV/margins justify it; recruiting pays 20% of annual salary; align sales commission to pricing strategy."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Talent compensation structure and ROI; align incentives to business economics.",
+    "rationale": "Members split into compensation benchmarks vs. incentive structure; different decision contexts."
+  },
+  {
+    "cluster_id": 110,
+    "verdict": "accept",
+    "canonical_name": "Modeling High Performers",
+    "aliases": [
+      "Observational Learning from Winners",
+      "Black Box Performance Modeling"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Model high performers by observing inputs/outputs, not asking why; automatic behaviors don't reveal true causation.",
+    "rationale": "Cohesive concept; min intra-similarity 0.891 supports tight focus on observational learning."
+  },
+  {
+    "cluster_id": 111,
+    "verdict": "rename",
+    "canonical_name": "Unit Economics & Profit Focus",
+    "aliases": [
+      "Bottom-Line Over Top-Line",
+      "Gross Margin Prioritization"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Shift from top-line growth to bottom-line expansion; unit economics quality and absolute profit matter more than volume.",
+    "rationale": "Concept specifically emphasizes unit economics and margin focus over revenue growth; rename for accuracy."
+  },
+  {
+    "cluster_id": 112,
+    "verdict": "accept",
+    "canonical_name": "Cohort Analysis & Time-Based Churn",
+    "aliases": [
+      "Churn by Tenure Milestones",
+      "Trial-vs-Paid Churn Separation"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Churn drops dramatically with tenure; measure trial and paid cohorts separately; focus on day-90 and month-6 milestones.",
+    "rationale": "Clear concept about measurement separation and time-based analysis; min intra-similarity 0.878 supports cohesion."
+  },
+  {
+    "cluster_id": 113,
+    "verdict": "accept",
+    "canonical_name": "Recurring Service Monetization",
+    "aliases": [
+      "Discount-Plus-Fee Model",
+      "First-Month Acquisition Structure"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "For recurring services, combine deep first-month discount with setup fee, then charge full price recurring; reduces churn via commitment.",
+    "rationale": "Cohesive framework across all members; min intra-similarity 0.901 supports tight clustering."
+  },
+  {
+    "cluster_id": 114,
+    "verdict": "accept",
+    "canonical_name": "Kaleidoscope Creative Variations",
+    "aliases": [
+      "Creative Variation Loop",
+      "Winning Image Remixing"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Take one winning image and generate 20-30 variations via filters, AI, and remakes to extend reach across platforms.",
+    "rationale": "Specific, load-bearing tactic; members support single coherent concept."
+  },
+  {
+    "cluster_id": 115,
+    "verdict": "rename",
+    "canonical_name": "LTV-to-CAC Measurement Timeline",
+    "aliases": [
+      "LTV/CAC Validation Window",
+      "Cohort Measurement Patience"
+    ],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Wait minimum 1 month to calculate true LTV-to-CAC; spend 2x target CAC to gather sufficient feedback cadence before pivoting.",
+    "rationale": "Concept is about time window for valid measurement, not validation logic; rename for precision."
+  }
+]

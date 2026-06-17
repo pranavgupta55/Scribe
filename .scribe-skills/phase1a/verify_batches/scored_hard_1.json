@@ -1,0 +1,132 @@
+[
+  {
+    "cluster_id": 14,
+    "verdict": "split",
+    "canonical_name": "Sales Academy Model",
+    "aliases": [],
+    "kick_members": [
+      "GBT Training Data",
+      "Organic Growth Model"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Sales Talent Pipeline",
+        "members": [
+          "Sales Academy Model",
+          "Market vs. Model Issues"
+        ],
+        "definition": "The internal system a home-services or scale-stage business uses to recruit, train, and continuously replenish sales staff as a repeatable operational process."
+      },
+      {
+        "canonical_name": "Service Business Unit Economics",
+        "members": [
+          "Recurring Revenue",
+          "Service Business Economics",
+          "Tattoo Business Model"
+        ],
+        "definition": "The margin profiles, LTV-to-CAC ratios, and staffing densities that characterise labour-intensive service businesses at scale."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "The Ward cut forced together five conceptually unrelated domains: AI ad-training data (GBT), channel-mix analytics (Organic Growth), internal sales-training infrastructure, recurring-revenue unit economics, and staffing-per-location benchmarks. GBT Training Data is a narrow implementation detail with no peer; Organic Growth Model belongs with lead-generation clusters. The remaining five split cleanly into (a) how to build a hiring/training pipeline for sales reps and (b) the unit-economic benchmarks specific to labour-heavy service businesses."
+  },
+  {
+    "cluster_id": 74,
+    "verdict": "split",
+    "canonical_name": "Script Discipline",
+    "aliases": [],
+    "kick_members": [
+      "Vision vs. Plan Clarity",
+      "The Decision to Go Pro"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Script Compliance",
+        "members": [
+          "Script Discipline",
+          "Script Enforcement"
+        ],
+        "definition": "The operational standard requiring sales or service reps to deliver approved scripts word-for-word, with no ad-libbing, enforced as a condition of continued employment."
+      },
+      {
+        "canonical_name": "Operational Culture Norms",
+        "members": [
+          "Leadership by Example",
+          "Process-Over-Player Philosophy"
+        ],
+        "definition": "The organisational belief that process authority supersedes individual authority, and that leaders must personally model every standard they require of their team."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "Script Discipline and Script Enforcement are duplicates of the same concept (word-for-word compliance); merging them into one canonical sub-cluster is the right normalisation. Leadership by Example and Process-Over-Player share a coherent L0 concept about culture and authority. The two kicked members are motivational/identity framing with no structural fit here: 'Vision vs. Plan Clarity' is an army metaphor that is too vague to stand as a clean L0 node without more context, and 'The Decision to Go Pro' is a commitment/identity concept that belongs in a professional-identity or mindset cluster."
+  },
+  {
+    "cluster_id": 129,
+    "verdict": "split",
+    "canonical_name": "Loss and Capability",
+    "aliases": [],
+    "kick_members": [
+      "Enrollment Funnel",
+      "Payment & Checkout Infrastructure"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Founder Resilience Narrative",
+        "members": [
+          "Loss and Capability",
+          "Betrayal Consequences",
+          "Founder Reality"
+        ],
+        "definition": "The pattern of founder stories in which catastrophic loss, betrayal, or a constrained escape-route permanently shapes the founder's operating psychology and risk tolerance."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "This is the weakest cluster in the batch. Three of the five members share a genuine concept (founder war-stories about loss, betrayal, and escape costs), but the remaining two are unrelated ad-tech and e-commerce operations topics that landed here purely by vector proximity to 'things that went wrong.' Enrollment Funnel (Facebook targeting/age cap) belongs with lead-generation or paid-acquisition clusters. Payment & Checkout Infrastructure (Shopify routing bugs) belongs with e-commerce ops or technical infrastructure clusters. The three founder-narrative members are coherent enough to accept as a single L0 concept of one, pending additional sources."
+  },
+  {
+    "cluster_id": 8,
+    "verdict": "split",
+    "canonical_name": "Scaling Roadmap",
+    "aliases": [],
+    "kick_members": [
+      "Capital-Intensive Business"
+    ],
+    "splits": [
+      {
+        "canonical_name": "Revenue Stage Transitions",
+        "members": [
+          "Business Cash Flow",
+          "Long-term Growth Path",
+          "Scaling Roadmap",
+          "Time Horizon and Vision"
+        ],
+        "definition": "The predictable inflection points ($1M, $3M, $10M revenue) at which a business must shift strategy, hiring approach, or time horizon to avoid plateau."
+      },
+      {
+        "canonical_name": "Scaling Bottleneck Diagnosis",
+        "members": [
+          "E-commerce Scaling Bottlenecks",
+          "Paid Media Arbitrage Scaling Limits",
+          "Direct Response vs Brand Building",
+          "Mental Spending Barrier",
+          "Supply Chain Constraints"
+        ],
+        "definition": "The process of identifying the true constraint blocking growth at a given revenue stage, distinguishing perceived bottlenecks (ad budget, mindset) from structural ones (brand moat, supply chain)."
+      },
+      {
+        "canonical_name": "Hiring as Capital Allocation",
+        "members": [
+          "Sales Director Hiring",
+          "Core Business Focus"
+        ],
+        "definition": "The framing of key hires and client-acquisition targets as capital-allocation decisions, evaluated by ROI ratios rather than cost-avoidance instincts."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": null,
+    "rationale": "With 12 members and the lowest min_intra_sim (0.854) in the batch, this cluster is the largest grab-bag. Three clean fault lines emerge: (a) stage-of-business theory about when strategy must change (Revenue Stage Transitions), (b) constraint-type taxonomy for diagnosing what actually blocks growth (Scaling Bottleneck Diagnosis), and (c) the hire/focus decision framed as capital allocation (Hiring as Capital Allocation). Capital-Intensive Business is a single anecdote about a Mexican equipment rental company with no peer members and no generalised claim — it should be kicked and reattached when a capital-allocation or asset-heavy-business cluster accumulates more members."
+  }
+]

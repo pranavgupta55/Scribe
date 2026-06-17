@@ -1,0 +1,80 @@
+[
+  {
+    "cluster_id": 49,
+    "verdict": "split",
+    "canonical_name": "Content Surface Area Math",
+    "aliases": ["Content Surface Area Math", "Short-Form vs. Long-Form Strategy", "Work Multiplication"],
+    "kick_members": ["Career Path Decisions", "Life Stage Evolution", "Long-Tail Distribution in Business"],
+    "splits": [
+      {
+        "canonical_name": "Content Surface Area Math",
+        "members": ["Content Surface Area Math", "Short-Form vs. Long-Form Strategy", "Work Multiplication"],
+        "definition": "How total time-on-brand and content format (long vs. short) drive conversion and audience compounding for business creators."
+      },
+      {
+        "canonical_name": "Brand Attribution Windows",
+        "members": ["Attribution Expansion", "Long-Term Value"],
+        "definition": "Performance marketing returns in 30-60 days; brand marketing compounds over 6-12 months, requiring expanded attribution windows to measure real ROI."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Time on brand and content format shape conversion more than raw piece count; long-form drives more business outcomes than short-form.",
+    "rationale": "Career Path Decisions, Life Stage Evolution, and Long-Tail Distribution are unrelated domains (career advice, executive judgment, portfolio theory). Attribution Expansion and Long-Term Value belong together on brand/attribution measurement, not on content surface area math."
+  },
+  {
+    "cluster_id": 12,
+    "verdict": "split",
+    "canonical_name": "Channel Partner Quality",
+    "aliases": ["Founder Dependency", "Partner Quality", "Whale vs. Minnow Economics"],
+    "kick_members": ["Founding vs Joining Playbooks", "Venture Capital Strategy"],
+    "splits": [
+      {
+        "canonical_name": "Channel Partner Quality",
+        "members": ["Affiliate Channel Strategy", "Affiliate Integration", "Founder Dependency", "Partner Quality", "Whale vs. Minnow Economics"],
+        "definition": "Deep relationships with a few high-quality channel partners scale better than managing many low-quality ones; replace weak affiliates rather than accumulating them."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Deep relationships with a few high-quality channel partners scale better than managing many low-quality ones.",
+    "rationale": "Founding vs Joining Playbooks is career-stage advice unrelated to channel management; Venture Capital Strategy is portfolio investment theory in a different domain. The remaining five members coherently address affiliate/channel partner selection and depth."
+  },
+  {
+    "cluster_id": 2,
+    "verdict": "split",
+    "canonical_name": "Member Retention Follow-up Systems",
+    "aliases": ["Attendance Tracking & Follow-up", "Reach-Out Communication Systems"],
+    "kick_members": ["CRM Limitations and Manual Follow-Ups"],
+    "splits": [
+      {
+        "canonical_name": "Member Retention Follow-up Systems",
+        "members": ["Attendance Tracking & Follow-up", "Reach-Out Communication Systems"],
+        "definition": "Gym/membership businesses flag low-attendance members weekly and systematize personal (non-automated) outreach to prevent churn."
+      },
+      {
+        "canonical_name": "Appointment and Communication Cadence",
+        "members": ["BAMFAM Method", "Communication Cadence", "Communication Cycles & Meetings", "Volume & Follow-Up"],
+        "definition": "Structured reminder sequences and recurring meeting cadences (daily huddles, weekly one-on-ones, BAMFAM scheduling) that maximize show rates and team alignment."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Attendance-based early-warning systems and personal outreach protocols for preventing member churn in subscription/fitness businesses.",
+    "rationale": "CRM Limitations is a problem-statement fragment (A2 feature-list), not a concept node. The remaining members split cleanly into gym/member retention (domain-specific) vs. general appointment and communication cadence (broadly applicable sales/ops)."
+  },
+  {
+    "cluster_id": 19,
+    "verdict": "split",
+    "canonical_name": "Founder Bottleneck in Delivery and Sales",
+    "aliases": ["Delivery Model Redesign", "Founder Sales Dependency", "Founder-Driven Sales", "Scaling Limitations"],
+    "kick_members": ["Business Model Sustainability", "Podcast Reach Limitations", "DM Setter Bottleneck", "Sales vs Operations"],
+    "splits": [
+      {
+        "canonical_name": "Founder Bottleneck in Delivery and Sales",
+        "members": ["Delivery Model Redesign", "Founder Sales Dependency", "Founder-Driven Sales", "Scaling Limitations", "Cohort-Based Pricing"],
+        "definition": "When a founder is the primary delivery or sales vehicle, the business cannot scale beyond their personal capacity; restructuring delivery or hiring replaces the bottleneck."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Founder-as-delivery or founder-as-sales creates a hard ceiling; the fix is restructuring the delivery model or delegating before the bottleneck blocks scale.",
+    "rationale": "Business Model Sustainability (franchise market analysis), Podcast Reach Limitations (channel ROI), DM Setter Bottleneck (ops staffing detail), and Sales vs Operations (vague A4 stub — 'current constraint: sales and marketing limited') are kicked as either wrong-domain or rubric failures. The core five members coherently address founder dependency as a scale ceiling."
+  }
+]

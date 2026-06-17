@@ -1,0 +1,222 @@
+[
+  {
+    "cluster_id": 222,
+    "verdict": "accept",
+    "canonical_name": "Persistence Over Talent",
+    "aliases": ["Volume Threshold Persistence", "Quit Before Results", "Weak-Minded Quitting Pattern"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Achieving results requires persisting through volume work beyond the point where most competitors quit; talent is secondary to outlasting initial inefficiency.",
+    "rationale": "Tight semantic cluster (var=0.059, min_sim=0.932); centroid claim is load-bearing (directly actionable change in persistence strategy)."
+  },
+  {
+    "cluster_id": 223,
+    "verdict": "rename",
+    "canonical_name": "Trust & Integrity Framework",
+    "aliases": ["Authenticity & Context", "Behavioral Commitment", "Trustworthiness Maintenance"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Trust operates as a behavioral bet where you accept punishment risk; integrity is earned through consistent reinforcement and protected by never weaponizing information against others.",
+    "rationale": "Centroid 'authenticity definition' is A7-risk (self-referential); reframe cluster around actionable behavioral commitment (Trust Framework + Integrity + Trustworthiness) which are load-bearing."
+  },
+  {
+    "cluster_id": 224,
+    "verdict": "split",
+    "canonical_name": "Cold Email vs. Paid Ads ROI",
+    "aliases": [],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Cold Email as Skill Foundation",
+        "members": [
+          "Beginner Sales Skill Development",
+          "Cold Email vs. Paid Ads ROI"
+        ],
+        "definition": "Cold email teaches transferable sales fundamentals (volume, qualification, skeptic conversion) applicable across channels; ads teach platform-specific tactics only useful at scale."
+      },
+      {
+        "canonical_name": "Sales Process Maturity Routing",
+        "members": [
+          "High-Ticket Biz-Op Risk",
+          "Sales Process & Conversion",
+          "Sales to Fulfillment Continuum"
+        ],
+        "definition": "Early-stage founders should master soft-close sales before deploying premium offers; premium positions require proven process, strong copy, and deep avatar understanding."
+      },
+      {
+        "canonical_name": "Content & Knowledge Tier Strategy",
+        "members": [
+          "Content Strategy: Declarative vs. Procedural Knowledge"
+        ],
+        "definition": "Teach declarative knowledge (about) in free content to drive conversions; reserve procedural knowledge (how-to) for paid products to create value separation."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Cluster conflates three distinct business decisions: skill-building routing, sales maturity gating, and content pricing strategy.",
+    "rationale": "High variance (0.079) masks three load-bearing sub-themes; splitting surfaces each as actionable claim (B3: conditional routing by founder stage)."
+  },
+  {
+    "cluster_id": 225,
+    "verdict": "accept",
+    "canonical_name": "Capital Equipment Investment",
+    "aliases": ["Machine Defensibility", "Manufacturing Moat"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Investing $400k+ in manufacturing equipment justifies cost only when the machine is genuinely proprietary and creates defensibility competitors cannot copy.",
+    "rationale": "Tight cluster (var=0.058); all three members converge on single load-bearing principle: capex defensibility check (B3: conditional on true proprietary complexity)."
+  },
+  {
+    "cluster_id": 226,
+    "verdict": "accept",
+    "canonical_name": "Wealth Tiers",
+    "aliases": ["Income Plateaus", "Diminishing Returns on Income", "QoL Tier Jumps"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Quality-of-life impact from wealth follows distinct income plateaus ($0-150k, $150-650k, $650k+) with diminishing marginal returns per tier; beyond $650k, additional income yields minimal happiness gain.",
+    "rationale": "Tight cluster (var=0.055, min_sim=0.924); centroid is a quantified-axis claim (B2: multiple anchors along named dimension)."
+  },
+  {
+    "cluster_id": 227,
+    "verdict": "accept",
+    "canonical_name": "Market Expansion Sequencing",
+    "aliases": ["US First Expansion", "Geographic Concentration"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Prioritize dominating the largest, richest market first (US TikTok Shop creator space) before global expansion to maximize defensibility and cash flow.",
+    "rationale": "Tight pair (var=0.046, min_sim=0.954); actionable sequencing principle (B3: conditional on market size and wealth concentration)."
+  },
+  {
+    "cluster_id": 228,
+    "verdict": "rename",
+    "canonical_name": "Sleep Schedule Leverage",
+    "aliases": ["Risk Prevention Outcomes", "Health & Longevity via Sleep", "Sleep Consistency System"],
+    "kick_members": [
+      "Implementation Mechanism"
+    ],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Consistent sleep schedule prevents cascading life disruptions (health decline, appearance loss, cognitive impairment); one behavior lever prevents dozens of downstream problems.",
+    "rationale": "Member 'Implementation Mechanism' (alarm system) is overly concrete detail; demote to practice. Rename to surface load-bearing insight: sleep as high-leverage risk prevention (B4: mechanism present, one input → many outcomes)."
+  },
+  {
+    "cluster_id": 229,
+    "verdict": "accept",
+    "canonical_name": "Churn Reduction",
+    "aliases": ["Setup Fee Commitment", "Sunk Cost Activation"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "One-time setup fees increase customer commitment and reduce churn through sunk-cost effect; higher fees correlate directly with lower churn, especially for effort-intensive services.",
+    "rationale": "Tight cluster (var=0.023, min_sim=0.975); centroid is a quantified mechanism (B4: sunk cost → commitment → retention, tested on service cohort)."
+  },
+  {
+    "cluster_id": 230,
+    "verdict": "accept",
+    "canonical_name": "VSL Strategy",
+    "aliases": ["Video Sales Letter Framework", "VSL Qualification Layer", "Pre-Call Framing System"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "A 5-7 minute video sales letter serves as dual-function gate: (1) qualification filter via secret-word confirmation, (2) pre-frame mechanism (pricing, promise, proof, objection pre-handle) to ensure only aligned buyers book calls.",
+    "rationale": "Structured framework (L1) with named slots (hook, promise, proof, plan, pricing, objections, CTA); moderately coherent (var=0.071) and supports multiple implementation details (B5: named framework with conditional slots)."
+  },
+  {
+    "cluster_id": 231,
+    "verdict": "accept",
+    "canonical_name": "Lead Gen Channels",
+    "aliases": ["B2B Partnership Prioritization", "Channel Selection Routing"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "For new founders, prioritize B2B partnerships over webinars; partnerships require no technology setup and leverage existing relationships to generate leads faster and with lower risk.",
+    "rationale": "Tight cluster (var=0.066); all members converge on conditional routing principle: B2B-first for speed (B3: time-bounded condition, explicit comparative advantage)."
+  },
+  {
+    "cluster_id": 232,
+    "verdict": "accept",
+    "canonical_name": "Corporate Client Leverage",
+    "aliases": ["Time Liberation Premium", "Founder Time Buyback", "High-Income Service Positioning"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "For high-income buyers (>$70k/year), time-cost reduction motivates more than price reduction; positioning should emphasize convenience and speed (latency reduction) over feature lists, commanding 10x cost premium through service quality and friction removal.",
+    "rationale": "Coherent framework (var=0.084) around single load-bearing insight: time as capital above income threshold, with multiple reinforcing anchors (founder ROI, speed leverage, buyer psychology)."
+  },
+  {
+    "cluster_id": 233,
+    "verdict": "accept",
+    "canonical_name": "Resilience & Recovery Time",
+    "aliases": ["Fast Recovery Leverage", "Setback Recovery Speed"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Resilience measures speed of recovery from setbacks; fast recovery minimizes lifetime impact of bad events by shortening behavioral disruption window from years to minutes.",
+    "rationale": "Tight cluster (var=0.054); centroid is a well-bounded mechanism (B4: recovery speed × event impact = lifetime outcome, falsifiable by recovery-time measurement)."
+  },
+  {
+    "cluster_id": 234,
+    "verdict": "accept",
+    "canonical_name": "Fast Cash Plays",
+    "aliases": ["Resource Activation Revenue", "Existing Asset Monetization"],
+    "kick_members": [],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "Activate existing underutilized customer resources to generate quick revenue, self-funding further service development; resourcefulness with current assets beats waiting for external capital.",
+    "rationale": "Tight cluster (var=0.051); centroid is actionable (B2: bootstrap revenue mechanism for early-stage service founders)."
+  },
+  {
+    "cluster_id": 235,
+    "verdict": "split",
+    "canonical_name": "Value vs Price Positioning",
+    "aliases": [],
+    "kick_members": [],
+    "splits": [
+      {
+        "canonical_name": "Differentiation & Premium Positioning",
+        "members": [
+          "CAC vs Product",
+          "Market Positioning and Differentiation",
+          "Market-Driven vs. Strategy-Driven Pricing",
+          "Positioning for Premium Markets",
+          "Real Estate Agent Pricing Strategy",
+          "Value vs Price Positioning"
+        ],
+        "definition": "Compete on defensible offer (quality, speed, reliability, guarantee) not price; premium pricing works only when offer is differentiated and buyer perception aligns with price; position as strategy provider, not commodity vendor."
+      },
+      {
+        "canonical_name": "Value-Based Pricing & Margin Optimization",
+        "members": [
+          "Commodity Problem",
+          "Cost-Plus vs Value-Based Pricing",
+          "Price Optimization",
+          "Value-Based vs Cost-Plus Pricing"
+        ],
+        "definition": "Shift from cost-plus (showing customers the math) to value-based pricing (anchor high, hide cost structure); two-tier pricing with premium features and accountability beats commodity unlimited plans."
+      }
+    ],
+    "merge_target_id": null,
+    "definition": "Cluster conflates positioning strategy (how to market) with pricing mechanics (how to price); two distinct load-bearing decisions.",
+    "rationale": "Large cluster (10 members, var=0.077) masks two themes: (1) positioning for differentiation, (2) pricing-structure optimization. Splitting exposes each claim's actionability (B3: conditional on offer defensibility vs. buyer-value perception)."
+  },
+  {
+    "cluster_id": 236,
+    "verdict": "kick",
+    "canonical_name": "Building Framework",
+    "aliases": [],
+    "kick_members": [
+      "Building Framework",
+      "GitHub Integration",
+      "Next.js Frontend",
+      "Website Deployment"
+    ],
+    "splits": [],
+    "merge_target_id": null,
+    "definition": "N/A - technical implementation, not business domain.",
+    "rationale": "All four members are technical framework/tool names (Vercel, GitHub, Next.js, Tailwind) with no domain relevance per ubiquitous-language.md ('Skip the names of modules or classes unless they have meaning in the domain language'). Not a business, craft, or mental-model concept."
+  }
+]
