@@ -46,14 +46,16 @@ let pluginColors = {};
 
 // Semantic color scheme:
 //   - Source nodes (videos / plugin === null) → SOURCE_COLOR (accent red).
-//   - Topic nodes → cool gradient from TOPIC_LO (low-degree, dim slate) to
-//     TOPIC_HI (high-degree, bright sky). Color = how "hub-like" the topic is.
+//   - Topic nodes → warm/cool gradient where degree drives a coupled shift in
+//     hue (blue → red), saturation (low → high), and value (light → dark). So
+//     leaves read as pale, cool, recessive; hubs read as deep, saturated, hot
+//     — visually echoing source nodes, the most "hub-like" thing in the graph.
 // The legacy per-plugin palette was meaningless beyond 16 plugins (we have 200+)
 // — colour now carries semantics, not provenance.
 const SOURCE_COLOR = '#d9453a';
 const SOURCE_RING  = '#ece6dc';   // light outline ring around every source node
-const TOPIC_LO     = '#475569';   // slate-700 — leaf topic
-const TOPIC_HI     = '#5fa8d3';   // sky        — hub topic
+const TOPIC_LO     = '#a8c5e0';   // leaf — slightly light, less saturated blue
+const TOPIC_HI     = '#b22a22';   // hub  — slightly dark, more saturated red
 // Kept for back-compat with the legend (renderLegend uses STANDALONE_HUB).
 const STANDALONE_HUB = SOURCE_COLOR;
 
@@ -110,23 +112,26 @@ function computeDegrees() {
   });
 }
 
-// Topic colour by degree: log-scaled blend from TOPIC_LO (leaf) → TOPIC_HI (hub).
-// Saturates around degree ~16 (log2 = 4), which matches the upper tail of the
-// degree distribution — beyond that, all hub nodes look equally "hot".
+// Topic colour by degree: log-scaled HSL blend from TOPIC_LO (leaf, pale cool
+// blue) → TOPIC_HI (hub, deep warm red). Saturates around degree ~16 (log2 = 4),
+// which matches the upper tail of the degree distribution — beyond that, all
+// hub nodes look equally "hot".
 function topicColor(n) {
   const t = Math.min(1, Math.log2(Math.max(1, n.degree || 0)) / 4);
-  return mixHex(TOPIC_LO, TOPIC_HI, t);
+  return mixHsl(TOPIC_LO, TOPIC_HI, t);
 }
 
 function nodeColor(n) {
   if (!n.plugin) return SOURCE_COLOR;   // video source — always accent red
-  return topicColor(n);                 // topic — degree-graded cool ramp
+  return topicColor(n);                 // topic — blue (leaf) → red (hub) ramp
 }
 
 // Sources get a flat radius boost (+50 %) on top of the steeper degree curve,
-// so they read as distinct landmarks even without their outline ring.
+// so they read as distinct landmarks even without their outline ring. The
+// degree term uses an x^0.65 power curve (between √ and linear) so hubs get
+// notably bigger than the previous √ scaling without leaves shrinking to dots.
 function nodeRadius(d) {
-  const base = cfg.nodeSize + Math.sqrt(d.degree || 0) * 1.6;
+  const base = cfg.nodeSize + Math.pow(d.degree || 0, 0.65) * 2.4;
   return d.plugin ? base : base * 1.5 + 2;
 }
 
@@ -575,6 +580,62 @@ function mixHex(a, b, t) {
   const [br, bg, bb] = hexToRgb(b);
   const f = (l, h) => Math.round(l + (h - l) * t).toString(16).padStart(2, '0');
   return `#${f(ar, br)}${f(ag, bg)}${f(ab, bb)}`;
+}
+
+// HSL helpers. The topic ramp interpolates in HSL space so hue, saturation,
+// and lightness all shift smoothly between the endpoints — RGB lerp between
+// a desaturated blue and a saturated red would pass through a muddy mauve.
+function hexToHsl(hex) {
+  const [r, g, b] = hexToRgb(hex).map(c => c / 255);
+  const max = Math.max(r, g, b), min = Math.min(r, g, b);
+  const l = (max + min) / 2;
+  if (max === min) return [0, 0, l];
+  const d = max - min;
+  const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+  let h;
+  if (max === r)      h = ((g - b) / d) + (g < b ? 6 : 0);
+  else if (max === g) h = ((b - r) / d) + 2;
+  else                h = ((r - g) / d) + 4;
+  return [h * 60, s, l];
+}
+
+function hslToHex(h, s, l) {
+  if (s === 0) {
+    const v = Math.round(l * 255).toString(16).padStart(2, '0');
+    return `#${v}${v}${v}`;
+  }
+  const hue2rgb = (p, q, t) => {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1 / 6) return p + (q - p) * 6 * t;
+    if (t < 1 / 2) return q;
+    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    return p;
+  };
+  const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+  const p = 2 * l - q;
+  const hh = h / 360;
+  const r = hue2rgb(p, q, hh + 1 / 3);
+  const g = hue2rgb(p, q, hh);
+  const b = hue2rgb(p, q, hh - 1 / 3);
+  const toHex = c => Math.round(c * 255).toString(16).padStart(2, '0');
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+// HSL interpolation taking the SHORTER angular path between hues — for
+// blue (≈210°) → red (≈4°) that's via purple/magenta (CCW, ~155° span),
+// which gives a natural warm-up gradient instead of going the long way
+// through green/yellow.
+function mixHsl(a, b, t) {
+  const [h1, s1, l1] = hexToHsl(a);
+  const [h2, s2, l2] = hexToHsl(b);
+  let dh = h2 - h1;
+  if (dh >  180) dh -= 360;
+  if (dh < -180) dh += 360;
+  let h = h1 + dh * t;
+  if (h <    0) h += 360;
+  if (h >= 360) h -= 360;
+  return hslToHex(h, s1 + (s2 - s1) * t, l1 + (l2 - l1) * t);
 }
 
 // ─── Interaction ─────────────────────────────────────────────────────────────
