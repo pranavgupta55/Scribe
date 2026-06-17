@@ -57,91 +57,182 @@ This is what "voting" looks like in the graph: high-confidence nodes carry the w
 
 ## 2 · Pipeline: transcript → graph
 
+Shapes have meaning:
+- **Cylinder** = persistent file on disk
+- **Rectangle** = deterministic Python (no LLM)
+- **Parallelogram** = embedding step (local ollama model)
+- **Hexagon** = LLM agent invocation (model + count + prompt summary inside)
+- **Diamond** = decision / branch
+- **Stadium** = user-facing endpoint
+
+```mermaid
+flowchart TD
+    classDef file fill:#0d1117,stroke:#58a6ff,color:#c9d1d9,stroke-width:2px
+    classDef code fill:#161b22,stroke:#7d8590,color:#c9d1d9
+    classDef embed fill:#0e2218,stroke:#56d364,color:#c9d1d9,stroke-width:2px
+    classDef llm fill:#221610,stroke:#f78166,color:#c9d1d9,stroke-width:2px
+    classDef decision fill:#22200c,stroke:#f1e05a,color:#c9d1d9,stroke-width:2px
+    classDef endpoint fill:#1a1726,stroke:#bc8cff,color:#c9d1d9,stroke-width:3px
+
+    USER([user runs scribe.sh + updateDB.sh]):::endpoint
+    TXT[("transcripts/*.txt<br/>~200 files")]:::file
+    SRC[("knowledge/sources.json<br/>raw topic strings + metadata")]:::file
+    USER --> TXT
+    USER --> SRC
+
+    %% ═══════════════════════════════ Phase 1a ═══════════════════════════════
+    subgraph P1A["Phase 1a · normalize ~1.5k raw topic strings → ~300 clusters"]
+        direction TB
+        P1A_in[/"~1.5k raw topic strings"/]:::code
+        P1A_emb[/"qwen3-embedding:8b (local)<br/>input: 'name + headline'<br/>output: 4096-d vector per topic"/]:::embed
+        P1A_clu["Ward agglomerative (sklearn)<br/>L2-normalized · n_clusters=300<br/>+ second cut at n=50 for super-concepts"]:::code
+        P1A_rank["rank clusters by intra-cluster variance<br/>top-12 hardest split off for Sonnet"]:::code
+        P1A_hai{{"20 Haiku verifiers · ~15 clusters each<br/>system prompt: ubiquitous-language §rules +<br/>RUBRIC §B positive signals + FEW-SHOT positives<br/>output: verdict per cluster"}}:::llm
+        P1A_son{{"3 Sonnet judges · 4 hard clusters each<br/>extra instruction: 'be ruthless · default to split'"}}:::llm
+        P1A_dec{verdict?}:::decision
+        P1A_kick[("review queue<br/>~70 kicked 'orphan' topics")]:::file
+        P1A_draft[("~380 draft concepts<br/>(after splits/merges/kicks applied)")]:::file
+
+        P1A_in --> P1A_emb --> P1A_clu --> P1A_rank
+        P1A_rank -->|288 easy| P1A_hai
+        P1A_rank -->|12 hard| P1A_son
+        P1A_hai --> P1A_dec
+        P1A_son --> P1A_dec
+        P1A_dec -->|accept · rename · split · merge_with| P1A_draft
+        P1A_dec -->|kick a member| P1A_kick
+    end
+    SRC --> P1A_in
+
+    %% ═══════════════════════════════ Phase 1b ═══════════════════════════════
+    subgraph P1B["Phase 1b · polish concepts (ubiquitous-language discipline)"]
+        direction TB
+        P1B_in[/"~380 draft concepts + ~70 orphans<br/>split into 8 batches"/]:::code
+        P1B_son{{"8 Sonnet critics in parallel<br/>system prompt: ubiquitous-language.md verbatim +<br/>CONTEXT-FORMAT.md · 'be opinionated'<br/>per concept: refine canonical_name, build aliases[],<br/>list avoid_terms[], 1-line definition,<br/>flag ambiguity_notes, role ∈ {domain · mental-model · meta}<br/>also: assign each orphan, propose in-batch merges"}}:::llm
+        P1B_agg["aggregate · apply ~15 merges ·<br/>resolve orphan assignments"]:::code
+        CONCEPTS[("knowledge/concepts.json<br/>~370 canonical L0 Concepts<br/>300 domain · 68 mental-model · 1 meta")]:::file
+
+        P1B_in --> P1B_son --> P1B_agg --> CONCEPTS
+    end
+    P1A_draft --> P1B_in
+    P1A_kick --> P1B_in
+
+    %% ═══════════════════════════════ Phase 3a ═══════════════════════════════
+    subgraph P3A["Phase 3a · extract claims (204 Sonnet agents · one per transcript)"]
+        direction TB
+        P3A_index["build concepts_index.json<br/>(compact ~50KB glossary subset)"]:::code
+        P3A_dispatch["Workflow tool · concurrency cap 16<br/>fan-out 204 Sonnet agents"]:::code
+        P3A_agent{{"Sonnet 4.6 extractor (×204)<br/>reads: one transcript + concepts_index +<br/>NODE-QUALITY-RUBRIC §A + CLAIM-DEFINITION §3 +<br/>FEW-SHOT.md + HIERARCHY.md<br/>system prompt: decontextualization gate ·<br/>'never invent concepts; anchor topic to canonical_name'<br/>PASS 1: identify speakers + concepts addressed<br/>PASS 2: extract claims · frameworks · examples · practices"}}:::llm
+        P3A_gleam{"YES/NO gate ·<br/>'more entities missed?'"}:::decision
+        P3A_loop{{"gleaning pass (conditional)<br/>same agent, prompted to add missed entities only"}}:::llm
+        EXTRACT[(".scribe-skills/phase3a/extracted/{name}.json<br/>204 files · ~2.2k claims · ~320 frameworks ·<br/>~680 examples · ~870 practices")]:::file
+
+        P3A_index --> P3A_dispatch --> P3A_agent --> P3A_gleam
+        P3A_gleam -->|YES| P3A_loop --> EXTRACT
+        P3A_gleam -->|NO| EXTRACT
+    end
+    CONCEPTS --> P3A_index
+    TXT --> P3A_agent
+
+    %% ═══════════════════════════════ Phase 3b ═══════════════════════════════
+    subgraph P3B["Phase 3b · cross-source merge + hierarchy classify"]
+        direction TB
+        P3B_pool["aggregate all 204 extractions into one pool"]:::code
+        P3B_emb[/"qwen3-embedding:8b<br/>input: each claim's text<br/>output: ~2.2k × 4096-d vectors"/]:::embed
+        P3B_pairs["within each canonical topic, find pairs<br/>with cosine sim ≥ 0.85"]:::code
+        P3B_uf["union-find collapse paraphrases<br/>~2.2k claims → ~1.4k merged groups<br/>centroid text = canonical · members → attribution_list"]:::code
+        P3B_split["split into 12 batches × ~120 claims"]:::code
+        P3B_class{{"12 Haiku classifiers in parallel<br/>system prompt: HIERARCHY.md §1 + §2 promote/demote<br/>verdict per claim:<br/>L2 (claim) · L2a (mechanism) · L2b (quantified axis) ·<br/>L3 (example) · L4' (practice) · DROP"}}:::llm
+        NODES[("knowledge/v2/nodes.jsonl<br/>~3.3k nodes total:<br/>~1.4k claims · ~320 frameworks ·<br/>~680 examples · ~870 practices")]:::file
+
+        P3B_pool --> P3B_emb --> P3B_pairs --> P3B_uf --> P3B_split --> P3B_class --> NODES
+    end
+    EXTRACT --> P3B_pool
+
+    %% ═══════════════════════════════ Phase 4 ═══════════════════════════════
+    subgraph P4["Phase 4 · sibling edges (50 Haiku connection judges · no NLI pre-filter)"]
+        direction TB
+        P4_cemb[/"qwen3-embedding:8b<br/>input: 'concept_name + definition'<br/>output: 370 × 4096-d"/]:::embed
+        P4_cc["candidate concept↔concept pairs<br/>top-12 nearest per concept · sim ≥ 0.45<br/>= ~1.3k pairs"]:::code
+        P4_cl["candidate claim↔claim pairs (cross-concept only)<br/>top-8 nearest per claim · sim ≥ 0.45<br/>drop same-source pairs<br/>= ~13k pairs"]:::code
+        P4_split["mix concept + claim pairs ·<br/>trim text to 200 chars · split into 50 batches × ~290"]:::code
+        P4_hai{{"50 Haiku connection judges in parallel<br/>system prompt: CLAIM-DEFINITION §4 voting model +<br/>RUBRIC §A11 (attribution) + §A18 (vague comparatives)<br/>verdict per pair:<br/>agreement · builds-on · contradiction · related · none<br/>+ confidence ∈ [0,1] + substantive sentence"}}:::llm
+        P4_keep{conf ≥ 0.5?}:::decision
+        CONN[("knowledge/v2/connections.json<br/>~9.5k surviving edges:<br/>5.6k related · 2.5k builds-on ·<br/>1.2k agreement · 42 contradiction")]:::file
+        P4_drop["~5k 'none' verdicts discarded"]:::code
+
+        P4_cemb --> P4_cc
+        P4_cc --> P4_split
+        P4_cl --> P4_split
+        P4_split --> P4_hai --> P4_keep
+        P4_keep -->|yes · emit| CONN
+        P4_keep -->|no| P4_drop
+    end
+    CONCEPTS --> P4_cemb
+    NODES --> P4_cl
+
+    %% ═══════════════════════════════ Phase 5 ═══════════════════════════════
+    subgraph P5["Phase 5 · graph emission (export_graph_v2.py · pure code)"]
+        direction TB
+        P5_load["load concepts + nodes.jsonl + connections + sources.json"]:::code
+        P5_alias["build alias lookup table:<br/>every canonical_name and alias (lower-cased) →<br/>concept_id"]:::code
+        P5_hier["mechanically add hierarchy edges:<br/>concept --hosts--> claim or framework<br/>claim --illustrates--> example<br/>concept --practices--> practice"]:::code
+        P5_sib["attach sibling edges from connections.json<br/>resolve claim by position index → node_id"]:::code
+        GRAPH[("graph/graph_v2.json<br/>~3.8k nodes · ~12.7k edges<br/>hierarchy + sibling + source spokes")]:::file
+
+        P5_load --> P5_alias --> P5_hier --> P5_sib --> GRAPH
+    end
+    CONCEPTS --> P5_load
+    NODES --> P5_load
+    CONN --> P5_load
+    SRC --> P5_load
+
+    %% ═══════════════════════════════ Phase 6 ═══════════════════════════════
+    subgraph P6["Phase 6 · quality eval + repair loop"]
+        direction TB
+        P6_samp["stratified sample 200 claims<br/>(80 multi-source + 120 single-source)"]:::code
+        P6_split["split into 16 batches × ~12-13 claims"]:::code
+        P6_hai{{"16 Haiku scorers in parallel<br/>system prompt: NODE-QUALITY-RUBRIC §C rows 1-5<br/>+ §A failure modes (A1..A20)<br/>verdict per claim: each row binary · pass = all 5 true"}}:::llm
+        P6_decide{pass-rate ≥ 80%?}:::decision
+        P6_repair{{"1 Sonnet repair pass over the failing claims<br/>system prompt: §A failure modes + §3 claim shape<br/>action per claim: rewrite (fix conditions/mechanism/<br/>numbers) OR drop if unrescuable"}}:::llm
+        P6_apply["apply rewrites · drop irrecoverable<br/>nodes.jsonl: ~1409 → ~1405 claims"]:::code
+        P6_done([eval passed · ship · 87% → ~95% post-repair]):::endpoint
+
+        P6_samp --> P6_split --> P6_hai --> P6_decide
+        P6_decide -->|yes, ≥80%| P6_repair
+        P6_decide -->|no, &lt;80%| P6_repair
+        P6_repair --> P6_apply --> P6_done
+    end
+    NODES --> P6_samp
+    P6_apply -.feeds back: update nodes.jsonl.-> NODES
+    P6_apply -.triggers re-emit.-> P5_load
+
+    %% ═══════════════════════════════ Phase 7 ═══════════════════════════════
+    subgraph P7["Phase 7 · RAG plumbing (server.py + graph.js)"]
+        direction TB
+        CHROMA[(".chroma/<br/>chunks + facts collections<br/>nomic-embed-text 768-d (v1, legacy)")]:::file
+        P7_q["user query · embed via nomic-embed-text"]:::code
+        P7_retrieve["retrieve_structured()<br/>top-50 chunks + top-50 facts (was 25 + 30)"]:::code
+        P7_attach["attach title + video_summary + url<br/>per source from sources.json"]:::code
+        P7_chat([RAG chat answer<br/>(Gemini 2.5 Flash)]):::endpoint
+        P7_copy([Copy-view source cards<br/>summary visible · click copies full block]):::endpoint
+
+        P7_q --> CHROMA
+        CHROMA --> P7_retrieve --> P7_attach
+        P7_attach --> P7_chat
+        P7_attach --> P7_copy
+    end
+    SRC --> P7_attach
+
+    %% ═════════════════════ user-facing endpoints ═════════════════════
+    GRAPH --> VIEW([graph viewer<br/>http://localhost:8000/graph/?graph=v2]):::endpoint
+    GRAPH -.optional Phase 8.-> P7_retrieve
 ```
-transcripts/*.txt   (204 raw transcripts)
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 1a  Topic normalization  (mechanical + 23 verification agents)   │
-│   embed 1472 raw topic strings with qwen3-embedding:8b                 │
-│   → Agglomerative Ward, n_clusters=300                                 │
-│   → 20 Haiku batch verifiers + 3 Sonnet hard-cluster judges            │
-│   verdicts: accept | rename | kick | split | merge_with                │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 1b  Concept polish  (8 Sonnet critics)                           │
-│   ubiquitous-language discipline:                                      │
-│     canonical_name · aliases · avoid_terms · definition                │
-│     · ambiguity_notes · role (domain | mental-model | meta)            │
-│   → 369 canonical L0 concepts  ─────────────►  knowledge/concepts.json │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 3a  Extraction  (204 Sonnet agents, one per transcript)          │
-│   reads transcript + concepts_index.json (49k-token compact glossary)  │
-│   TWO-PASS:                                                            │
-│     (a) identify speakers + concepts addressed                         │
-│     (b) extract claims · frameworks · examples · practices anchored    │
-│         to canonical concept names                                     │
-│   decontextualization gate (CLAIM-DEFINITION §3, AIDA Gwet AC1=0.85)   │
-│   → 2245 claims, 318 frameworks, 676 examples, 867 practices           │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 3b  Cross-source merge + hierarchy classify                      │
-│   embed every claim, find pairs within same concept @ sim ≥ 0.85      │
-│   → union-find collapses paraphrases → 1413 merged claims              │
-│     (244 multi-source confirmed, top has 25 sources backing it)       │
-│   12 Haiku classify each into L2 | L2a | L2b | L3 | L4' | DROP         │
-│   → 1405 surviving claims after Reset-2 repair pass                    │
-│                              ─────────────►  knowledge/v2/nodes.jsonl │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 4  Sibling edges  (50 Haiku connection judges)                   │
-│   candidate generation (mechanical):                                   │
-│     concept↔concept: top-12 cosine neighbors per concept, sim ≥ 0.45  │
-│     claim↔claim:     top-8 cross-concept neighbors per claim, ≥ 0.45  │
-│   Haiku labels each pair:                                              │
-│     agreement | builds-on | contradiction | related | none             │
-│   → 9395 edges        ────────────────►  knowledge/v2/connections.json │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 5  Graph emission  (export_graph_v2.py — purely mechanical)      │
-│   joins concepts.json + nodes.jsonl + connections.json + sources.json  │
-│   builds parent→child hierarchy edges                                  │
-│   resolves aliases → canonical concept for any claim's `topic` field   │
-│   → 3839 nodes, 12,656 edges  ────────────►  graph/graph_v2.json      │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 6  Quality eval  (16 Haiku scorers + 1 Sonnet repair pass)       │
-│   sample 200 claims; score against NODE-QUALITY-RUBRIC §C rows 1–5    │
-│   → 87.2% pass (v1 baseline 36.8%, +50pp / 2.4× improvement)          │
-│   Sonnet repair on the 25 failing claims → 21 rewritten, 4 dropped    │
-│   → projected ≈ 95% pass-rate                                          │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-┌────────────────────────────────────────────────────────────────────────┐
-│ PHASE 7  RAG plumbing                                                   │
-│   server.py bumps retrieval to 50 chunks / 50 facts per query          │
-│   surfaces title + video_summary + url per source                      │
-│   graph.js Copy view renders per-source summary cards                  │
-│   click copies the full source block (passages + facts + url)         │
-└────────────────────────────────────────────────────────────────────────┘
-        │
-        ▼
-   graph viewer (?graph=v2)  ·  RAG chat  ·  Copy view
-```
+
+### Recursive loops surfaced by the diagram
+
+- **Phase 3a gleaning** — each Sonnet extractor checks a YES/NO gate ("did I miss entities?") and, if YES, runs a second pass on the same transcript focused only on recovering missed entities. GraphRAG-style efficiency: one conditional re-prompt per source instead of a full plan→draft→verify cycle.
+- **Phase 6 repair feedback** — failing claims feed back into `nodes.jsonl` after Sonnet rewrites, which re-triggers Phase 5 graph emission. The eval cutoff (≥80%) gates whether repair is even needed; in practice Reset-2 hit 87% raw and we ran the Sonnet repair anyway to lift the long-tail failures into the rebuilt graph.
+- **Phase 1a verdict branching** — the verifier can `kick` individual members from an otherwise-good cluster; kicked members loop forward into Phase 1b's orphan-assignment step rather than dropping. No member is lost without an explicit `DROP` verdict somewhere.
 
 ---
 
