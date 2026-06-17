@@ -46,8 +46,8 @@ N_FACTS  = 10    # facts retrieved (precise grounding + consulted-topic surfacin
 N_CHUNKS = 5     # full-context passages for the answer
 MAX_TOPICS = 8
 # Copy-paste RAG mode: wider net since the output goes to a larger external model
-RAG_N_FACTS  = 30
-RAG_N_CHUNKS = 25
+RAG_N_FACTS  = 50
+RAG_N_CHUNKS = 50
 RAG_MAX_TOPICS = 24
 
 _SYSTEM = (
@@ -196,7 +196,23 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
         by_src.setdefault(s, {"passages": [], "facts": []})
         by_src[s]["facts"].append(doc)
 
-    sources = [{"name": s, **blk} for s, blk in by_src.items()]
+    # Attach video_summary from knowledge/sources.json so the Copy view can
+    # surface per-source summary cards (and clipboard-copy retains full claim
+    # block).  Lazily load once per call; the file is small.
+    try:
+        src_meta = json.loads((SCRIPT_DIR / "knowledge" / "sources.json").read_text())
+    except Exception:
+        src_meta = {}
+    sources = []
+    for s, blk in by_src.items():
+        meta = src_meta.get(s, {})
+        sources.append({
+            "name": s,
+            "title": meta.get("title", ""),
+            "video_summary": meta.get("video_summary", ""),
+            "url": meta.get("url", ""),
+            **blk,
+        })
     return {"topics": topics, "sources": sources}
 
 

@@ -60,11 +60,21 @@ const TOPIC_HI     = '#b22a22';   // hub  — slightly dark, more saturated red
 const STANDALONE_HUB = SOURCE_COLOR;
 
 async function loadGraph() {
-  const candidates = ['./graph.json'];
+  // ?graph=v2 in the URL selects the rebuilt graph (Phase 5 of graph-rebuild branch).
+  // Default = v1 to keep the old behavior available for A/B comparison.
+  const params = new URLSearchParams(window.location.search);
+  const version = params.get('graph') === 'v2' ? 'v2' : 'v1';
+  const candidates = version === 'v2'
+    ? ['./graph_v2.json', './graph.json']
+    : ['./graph.json'];
   for (const url of candidates) {
     try {
       const res = await fetch(url);
-      if (res.ok) return await res.json();
+      if (res.ok) {
+        const data = await res.json();
+        data._version = version;
+        return data;
+      }
     } catch {
       /* try next */
     }
