@@ -1874,9 +1874,54 @@ async function sendCopy(opts = {}) {
   computeKeystoneLinks();
   setView('graph');           // ensure initial chrome state is correct
   requestAnimationFrame(() => {
+    // ── Intro animation ────────────────────────────────────────────────
+    // Boot with EXTREME repulsion + edge-spread and zero gravity so the
+    // graph fans out from its PCA seeds, then ease all three sliders back
+    // to their resting 0.50 over 3 s on a smoothstep curve. Two centering
+    // passes — one immediately so the PCA layout is fit to the viewport,
+    // and one at the end so the relaxed layout fills it too.
+    const INTRO_DURATION = 3000;
+    const INTRO_START = { repulsion: 100, edgeRepel: 100, gravity:  0 };
+    const INTRO_END   = { repulsion:  50, edgeRepel:  50, gravity: 50 };
+
+    const setSliderUI = (k, sliderVal) => {
+      const el = document.getElementById(k);
+      if (el) el.value = String(Math.round(sliderVal));
+      updateCfgFromSlider(k, sliderVal);  // smooth (un-rounded) cfg
+    };
+    const applyForces = () => {
+      if (!sim) return;
+      const ch = sim.force('charge');    if (ch) ch.strength(-cfg.repulsion);
+      const gx = sim.force('gravityX');  if (gx) gx.strength(cfg.gravity / 1000);
+      const gy = sim.force('gravityY');  if (gy) gy.strength(cfg.gravity / 1000);
+      const er = sim.force('edgeRepel'); if (er) er.strength(cfg.edgeRepel);
+    };
+
+    // Seed sliders to the intro-start values BEFORE the sim is built so
+    // the initial force config is the "extreme" one — no restart needed.
+    for (const k in INTRO_START) setSliderUI(k, INTRO_START[k]);
     rebuildSim();
-    // Auto-fit the graph after the sim has had a moment to relax. The PCA
-    // seed positions are reasonable so 350ms is enough for a clean zoom.
-    setTimeout(centerView, 350);
+    centerView();   // first center: fits the PCA seeds
+
+    const smoothstep = p => p * p * (3 - 2 * p);
+    const t0 = performance.now();
+    function step(now) {
+      const p = Math.min((now - t0) / INTRO_DURATION, 1);
+      const e = smoothstep(p);
+      for (const k in INTRO_START) {
+        const v = INTRO_START[k] + (INTRO_END[k] - INTRO_START[k]) * e;
+        setSliderUI(k, v);
+      }
+      applyForces();
+      if (p < 1) {
+        requestAnimationFrame(step);
+      } else {
+        // Snap to exact end values so the slider thumbs land at a clean 50.
+        for (const k in INTRO_END) setSliderUI(k, INTRO_END[k]);
+        applyForces();
+        centerView();   // second center: fits the relaxed layout
+      }
+    }
+    requestAnimationFrame(step);
   });
 })();
