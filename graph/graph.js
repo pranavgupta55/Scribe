@@ -179,8 +179,8 @@ const sliderRanges = {
   momentum:  [2,   12],     // default 50 → 7
   nodeSize:  [2,   10],     // default 50 → 6
   edgeMin:   [80,  100],    // default 50 → threshold 0.90
-  gravity:   [20,  100],    // default 50 → 60
-  edgeRepel: [0,   120],    // default 50 → 60 (push edges apart from each other)
+  gravity:   [20,  180],    // default 50 → 100
+  edgeRepel: [0,   240],    // default 50 → 120 (push edges apart from each other)
 };
 
 let cfg = { repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0, edgeRepel: 0 };
