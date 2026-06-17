@@ -113,12 +113,17 @@ function computeDegrees() {
 }
 
 // Topic colour by degree: log-scaled HSL blend from TOPIC_LO (leaf, pale cool
-// blue) → TOPIC_HI (hub, deep warm red). Saturates around degree ~16 (log2 = 4),
-// which matches the upper tail of the degree distribution — beyond that, all
-// hub nodes look equally "hot".
+// blue) → TOPIC_HI (hub, deep warm red), travelling the LONG way around the
+// wheel (blue → cyan → green → yellow → orange → red) so mid-degree topics
+// pass through warm earth tones rather than purple. Saturates around degree
+// ~16 (log2 = 4) — beyond that, all hub nodes look equally "hot". A gentle
+// bias (p = 0.75) nudges t away from 0.5 toward either endpoint so topics
+// are slightly more likely to read as clearly cool or clearly warm than as
+// an ambiguous mid-tone.
 function topicColor(n) {
-  const t = Math.min(1, Math.log2(Math.max(1, n.degree || 0)) / 4);
-  return mixHsl(TOPIC_LO, TOPIC_HI, t);
+  const raw = Math.min(1, Math.log2(Math.max(1, n.degree || 0)) / 4);
+  const t = biasToExtremes(raw, 0.75);
+  return mixHsl(TOPIC_LO, TOPIC_HI, t, 'long');
 }
 
 function nodeColor(n) {
@@ -622,20 +627,36 @@ function hslToHex(h, s, l) {
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
-// HSL interpolation taking the SHORTER angular path between hues — for
-// blue (≈210°) → red (≈4°) that's via purple/magenta (CCW, ~155° span),
-// which gives a natural warm-up gradient instead of going the long way
-// through green/yellow.
-function mixHsl(a, b, t) {
+// HSL interpolation. `hueDir` picks which way around the wheel to travel:
+//   'short' — shorter angular path (default; e.g. blue → red via purple)
+//   'long'  — longer angular path (e.g. blue → cyan → green → yellow → red)
+function mixHsl(a, b, t, hueDir = 'short') {
   const [h1, s1, l1] = hexToHsl(a);
   const [h2, s2, l2] = hexToHsl(b);
   let dh = h2 - h1;
-  if (dh >  180) dh -= 360;
-  if (dh < -180) dh += 360;
+  if (hueDir === 'short') {
+    if (dh >  180) dh -= 360;
+    if (dh < -180) dh += 360;
+  } else {
+    // Force the long way: flip dh if it currently represents the short arc.
+    if (dh > 0 && dh <  180) dh -= 360;
+    if (dh < 0 && dh > -180) dh += 360;
+  }
   let h = h1 + dh * t;
   if (h <    0) h += 360;
   if (h >= 360) h -= 360;
   return hslToHex(h, s1 + (s2 - s1) * t, l1 + (l2 - l1) * t);
+}
+
+// Push t away from 0.5 toward the endpoints (0 or 1). For p < 1, the curve
+// rises steeply near the edges and flattens through the middle, so most
+// values land closer to an extreme than to dead center. p = 1 is a no-op.
+function biasToExtremes(t, p) {
+  if (t <= 0) return 0;
+  if (t >= 1) return 1;
+  return t < 0.5
+    ? 0.5 - 0.5 * Math.pow(1 - 2 * t, p)
+    : 0.5 + 0.5 * Math.pow(2 * t - 1, p);
 }
 
 // ─── Interaction ─────────────────────────────────────────────────────────────
