@@ -1,0 +1,311 @@
+{
+ "batch_id": 13,
+ "claims": [
+  {
+   "node_id": "claim:283",
+   "level": "L2",
+   "topic": "Business Model Financial Rules Divergence",
+   "text": "Alex Hormozi warns that a founder who adds software without achieving the specific SaaS economics (viral growth, high gross margin, net negative churn) will not receive a software valuation multiple at exit. The business will be valued on its existing service/education economics regardless of the software component.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "software multiple",
+   "conditions": [
+    "founder adds software to an existing service or education business",
+    "software lacks viral growth, high gross margins, and net negative churn"
+   ],
+   "mechanism": "Acquirers value businesses based on the revenue characteristics they demonstrate, not the category label. A software product that behaves like a service (high marginal cost, low retention) will be valued like a service.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2189",
+   "level": "L2",
+   "topic": "Motivation Source",
+   "text": "Alex Hormozi argues that if shame, deprivation, or a negative past produced a positive outcome \u2014 such as going to the gym regularly and living 20 years longer \u2014 then labeling those drivers 'bad' is irrational, because the functional output determines value, not the emotional valence of the source.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "The motivational driver (shame, deprivation, etc.) produced a net positive behavioral outcome"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Does not assert that shame is universally beneficial \u2014 only that its quality is evaluated by the actions it produces, not its emotional label"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1687",
+   "level": "L2a",
+   "topic": "Creator Vulnerability to AI Disruption",
+   "text": "Alex Hormozi asserts that B2B expert creators who demonstrate their expertise in real time (e.g., on live calls, audits, or events) are substantially more protected from AI displacement than creators who rely only on stated accomplishments, because real-time demonstration is currently difficult to fake with AI.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "demonstration in real time",
+   "conditions": [
+    "B2B content category where advice has meaningful financial or operational consequences for the consumer",
+    "Current AI state as of approximately 2025-2026"
+   ],
+   "mechanism": "Real-time demonstration provides live, unfakeable proof; audiences accept stated accomplishments once but need ongoing proof to sustain trust over time.",
+   "numbers": null,
+   "bounded_by": [
+    "Hormozi acknowledges AI may be able to take calls and demonstrate expertise within one to two years"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1000",
+   "level": "L2a",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Alex Hormozi argues that behaviors persist not because of what triggered them but because of what was rewarded after them the last time they occurred. People misdiagnose their own recurring behaviors by looking for their triggers rather than examining what reward followed the behavior in the past.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "close interpersonal relationships where the desired behavior must continue to occur"
+   ],
+   "mechanism": "Operant conditioning: the probability of a behavior recurring is set by its reinforcement history, not its antecedent. Analyzing antecedents without analyzing consequences fails to reveal the true driver of behavioral persistence.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1073",
+   "level": "L2a",
+   "topic": "Uncertainty Tolerance as Capacity Ceiling",
+   "text": "Alex Hormozi claims that most people refuse to pursue uncertain opportunities not because the downside is genuinely catastrophic but because they cannot tolerate not knowing (a) how bad the worst case will be and (b) how long they will have to endure before a resolution. The refusal to bear this double uncertainty is the primary mechanism by which they trade real possible upside for phantom safety.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Founder has a growth-positive path available under current conditions",
+    "Uncertainty is external (regulatory, market) and not yet resolved"
+   ],
+   "mechanism": "The unknown magnitude and unknown duration of pain are more aversive than the pain itself; people exit before reaching the upside because they cannot pre-commit to an open-ended unknown cost.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to activities where the outcome is trivially guaranteed \u2014 the claim only holds for uncertain, difficult endeavors.",
+    "Does not apply when a pivot requires long lead times that cannot be compressed at the moment of confirmed regulatory change",
+    "Does not apply when the downside risk is catastrophic and irreversible (company insolvency, criminal liability)"
+   ],
+   "n_sources": 5
+  },
+  {
+   "node_id": "claim:2233",
+   "level": "L2a",
+   "topic": "Education Product Revenue Ceiling",
+   "text": "Alex Hormozi asserts that education, as a standalone product, has a fundamental revenue ceiling: the moment a customer learns the skill, the educational product loses all value for them, making repeat purchase and retention near-impossible. This is why educational businesses struggle to generate recurring revenue from the same customer.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "education as a product",
+   "conditions": [
+    "B2C or B2B education/info product (course, book)",
+    "Knowledge-based or curriculum-based education business",
+    "Membership or community business model where ongoing retention is the goal",
+    "One-time or cohort-based delivery model",
+    "Outcome depends primarily on buyer implementation, not delivery",
+    "customer fully acquires the skill taught",
+    "education or information product business",
+    "pure education product with no ongoing consumable component",
+    "selling a skill or knowledge outcome to individuals"
+   ],
+   "mechanism": "Once a learner has the skill, the pre-learning value (infinitely high) drops to approximately zero post-learning; there is no reason to repurchase what you already possess.",
+   "numbers": null,
+   "bounded_by": [
+    "Consumables alone are insufficient; the sales motion and community mechanics must also be built out",
+    "Does not apply to done-for-you services or coaching with accountability built in",
+    "Does not apply when ongoing consumable inputs are bundled with the education",
+    "Education businesses with world-class real-world proof (e.g., large documented exits) command premium pricing that extends the ceiling",
+    "Formal education systems work around this by inventing infinite credential layers (bachelor's, master's, PhD)",
+    "Operators who successfully add consumable recurring elements (community, updated content, continued-education credits) can break through this ceiling"
+   ],
+   "n_sources": 5
+  },
+  {
+   "node_id": "claim:493",
+   "level": "L2b",
+   "topic": "Activity-Based Time Valuation",
+   "text": "Alex Hormozi contends that for a founder producing $4M personally in a high-margin services business, the difference in cost between negotiating an office lease to $300k vs. $350k per year (a $50k delta) is economically trivial relative to the opportunity cost of the negotiating time \u2014 the founder generates approximately $500k per month, meaning two and a half days of selling recoups the entire annual lease savings.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "founder billing $500k/month or more",
+    "lease delta of $50k or less annually"
+   ],
+   "mechanism": "At $500k/month in personal production, opportunity cost per day is ~$20k; a $50k annual savings is recovered in 2.5 days of selling, making extended lease negotiation a negative-ROI activity.",
+   "numbers": {
+    "axis": "Days of selling required to recover lease negotiation savings",
+    "anchors": [
+     {
+      "region": "Founder monthly revenue",
+      "value": "$500k/month (~$20k/day)"
+     },
+     {
+      "region": "Lease delta to recover",
+      "value": "$50k savings = 2.5 days of selling"
+     },
+     {
+      "region": "Implication",
+      "value": "Negotiate quickly and move on; time spent is worth more than lease savings"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply when founder is not billing or has no active revenue-generating activities to defer"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1629",
+   "level": "L2b",
+   "topic": "Founder Performance Decay",
+   "text": "Alex Hormozi claims that when a founder delegates a function to someone else, performance in that function will decrease by approximately 30%, and business models must be designed with that decay baked in for scale to work.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "founder magic",
+   "conditions": [
+    "Function was previously performed by the founder directly",
+    "Replacement is a non-founder hire",
+    "founder is personally executing activities that are replaceable by others"
+   ],
+   "mechanism": "Founders apply disproportionate care, context, and personal reputation to tasks they own; replacements lack that combination even when technically proficient.",
+   "numbers": {
+    "axis": "Performance relative to founder-performed baseline",
+    "anchors": [
+     {
+      "region": "Founder performing function",
+      "value": "100% baseline"
+     },
+     {
+      "region": "Non-founder performing same function",
+      "value": "~70% of baseline (30% decay)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "If 30% decay is pre-modeled into financials, the business can still scale profitably"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:559",
+   "level": "L2a",
+   "topic": "Value Bifurcation in Subscription Pricing",
+   "text": "Alex Hormozi argues that for education, information, or coaching businesses, the core product delivers a one-time skill or transformation (high value, one-time purchase), while any recurring continuity layer only delivers consumable materials (lower value, ongoing). Because the one-time value dramatically exceeds the recurring value, bundling them at the same price point creates churn when customers feel the post-transformation value drop.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "you have to separate out the consumables from the one-time things",
+   "conditions": [
+    "attempting to add recurring revenue beyond the core knowledge product",
+    "community or membership business with an underlying methodology or system",
+    "education or info-media business",
+    "information product, coaching, or education business with recurring membership component",
+    "information, coaching, or education businesses",
+    "inputs to the system are genuinely consumed monthly",
+    "primary value is a teachable skill or transformation",
+    "subscription or recurring coaching offers with multiple bundled deliverables",
+    "where the primary front-end value is a skill that can be learned and retained"
+   ],
+   "mechanism": "Once a customer acquires the core skill, the ongoing membership delivers only consumables (content, community) which they could acquire cheaply elsewhere; if the membership is priced as if it still delivers the full original transformation value, perceived value drops sharply after acquisition, triggering churn.",
+   "numbers": null,
+   "bounded_by": [
+    "Community alone is described as less valuable than education and insufficient to justify recurring billing equal to the education price",
+    "Does not apply to pure software tools where the value is access, not content",
+    "Does not apply when each deliverable is genuinely used by the majority of clients",
+    "Does not apply when ongoing consumables (e.g., monthly lead generation creative) are the primary value driver",
+    "Does not apply when the recurring product delivers genuinely new transformative skills each period (e.g., a recurring software that improves)",
+    "Fails when customers lack the upfront capital to pay for the high-value one-time component",
+    "Requires that the consumable inputs have demonstrably high standalone value"
+   ],
+   "n_sources": 5
+  },
+  {
+   "node_id": "claim:828",
+   "level": "L2",
+   "topic": "Psychological Barriers to Growth",
+   "text": "Alex Hormozi asserts that a person's baseline level of subjective well-being is largely fixed by temperament and genetics and does not change dramatically across life circumstances; achieving a goal does not produce the lasting happiness anticipated, because the brain returns to its dispositional baseline.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": "The brain is evolved to identify problems and threats, not sustain contentment; once a problem is solved it identifies the next one, so net subjective well-being oscillates around a genetic set-point rather than ratcheting up with achievement.",
+   "numbers": null,
+   "bounded_by": [
+    "Speaker notes genetic range can be influenced: people can operate at the high or low end of their genetic potential for happiness"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1166",
+   "level": "L2",
+   "topic": "Time-Cost Positioning for High-Income Buyers",
+   "text": "Alex Hormozi argues that for high-income or wealthy buyers, time savings is a stronger motivator for purchase than monetary savings, because money has a computable but static implicit value while their time becomes increasingly scarce and valuable over time.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "latency beats magnitude seven days a week and twice on Sunday",
+   "conditions": [
+    "buyer is wealthy or high-income",
+    "earner can generate or enjoy >$50 of value per freed hour",
+    "earner makes more than $70k/year"
+   ],
+   "mechanism": "Wealthy buyers have accumulated money and can generate more; their remaining productive time is finite and irreplaceable, making time-value higher than money-value at the margin.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not hold for earners below $70k/year for whom $60k/year delegation spend would represent a large fraction of income",
+    "does not apply to buyers who are cash-constrained; price/monetary savings remain primary motivator for low-income buyers"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1190",
+   "level": "L2b",
+   "topic": "Content-Offer Congruence",
+   "text": "Alex Hormozi reports that after shifting to deep business education content, weekly email opt-ins increased by 26% and book sales approximately doubled (2x), despite lower absolute view counts per video. He attributes this directly to attracting business owners who are the natural buyers of business education books and content upgrades, versus lifestyle or entertainment viewers who have no purchase intent for that category.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Approximately 3-4 weeks post content strategy shift",
+    "Book titles: $100M Offers and $100M Leads, previously ranked #1 and #2 on Amazon marketing/sales category"
+   ],
+   "mechanism": "Content-audience alignment: viewers who watch business education content are the natural buyers of business education books and resources; misaligned audiences (lifestyle, entertainment) have near-zero purchase intent for business books.",
+   "numbers": {
+    "axis": "downstream commercial metrics change post content shift",
+    "anchors": [
+     {
+      "region": "pre-shift",
+      "value": "baseline opt-ins, baseline book sales"
+     },
+     {
+      "region": "post-shift (3-4 weeks)",
+      "value": "+26% weekly opt-ins, approximately 2x book sales"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1796",
+   "level": "L2",
+   "topic": "Profitability Over VC Speed",
+   "text": "Alex Hormozi advised a TikTok Shop creator-community business (doing $3.6M in year one) not to raise external capital because sufficient cash flow already exists to fund growth, and having more money impairs strategic thinking by defaulting problem-solving to spending rather than skill.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "you have sufficient cash flow now to fund the growth",
+   "conditions": [
+    "business already generating positive cash flow",
+    "growth not blocked by capital shortage"
+   ],
+   "mechanism": "Money availability shifts founder problem-solving from skill-based solutions to spending-based solutions, reducing the quality of strategic thinking.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when a fundamental capital constraint blocks growth that cash flow cannot solve"
+   ],
+   "n_sources": 1
+  }
+ ]
+}

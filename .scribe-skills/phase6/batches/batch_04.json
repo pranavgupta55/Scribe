@@ -1,0 +1,371 @@
+{
+ "batch_id": 4,
+ "claims": [
+  {
+   "node_id": "claim:1057",
+   "level": "L2a",
+   "topic": "Daily Sales Role-Play as Training Cadence",
+   "text": "Alex Hormozi describes Gym Launch's daily boiler room training as a group role-play session held every morning for gym staff (trainers and front desk personnel), covering one stage of the sales script per session and rotating through five stages across the week. The mechanism is cadence rather than intensity: reviewing each script stage frequently enough that no part degrades.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "boiler room",
+   "conditions": [
+    "applied to gym staff, not professional salespeople",
+    "clients are small businesses with a sales team or front desk staff",
+    "daily cadence mandatory",
+    "group training format (not one-on-one coaching)",
+    "lead generation or coaching company whose clients churn because clients cannot close the leads provided"
+   ],
+   "mechanism": "Rotating through each script stage on a fixed cadence prevents skill decay in any individual stage; the 'sword stays sharp' because each part is practiced before it can atrophy.",
+   "numbers": null,
+   "bounded_by": [
+    "Hormozi distinguishes this from one-on-one sales coaching",
+    "Requires clients to have actual sales staff to train; solo operators or fully automated models require a different activation approach",
+    "Specific structure was tailored to Gym Launch's five script stages; may differ for different sales processes"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1781",
+   "level": "L2",
+   "topic": "Supply Constraint Recognition",
+   "text": "Alex Hormozi argues that for an operationally constrained service business, the correct growth sequence is: (1) increase delivery capacity via offshore leverage, (2) build data architecture, (3) add AI layer, (4) re-open sales, and only then (5) use existing marketing assets to expand demand if further growth is needed.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Owner has existing content/course assets not yet deployed",
+    "Strong retention, paused sales",
+    "Supply-constrained service business (~$3M revenue)"
+   ],
+   "mechanism": "Solving supply before demand prevents the common failure mode of selling past fulfillment capacity, which drives churn and reverses growth; demand-creation assets should be deployed only after sufficient capacity exists to absorb new clients.",
+   "numbers": null,
+   "bounded_by": [
+    "Assumes existing marketing assets (books, courses) can function as demand-generation when the time comes",
+    "Does not apply to demand-constrained businesses"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:760",
+   "level": "L2a",
+   "topic": "Sales Targeting and Lead Qualification",
+   "text": "Alex Hormozi argues that sellers should qualify prospects to ensure they have sufficient wealth before pitching high-ticket offers, because a seller talking exclusively to qualified (million-dollar-plus business owner) prospects achieves significantly higher close rates on expensive offers than a seller talking to unqualified prospects.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "lead scoring or lead qualification",
+   "conditions": [
+    "AI creative agency selling to direct-response advertisers",
+    "High-ticket B2B service sales",
+    "High-volume creative production service",
+    "Seller has an expensive anchor offer",
+    "application-gated sales call funnel",
+    "applies to businesses running paid lead-generation funnels",
+    "business is already profitable ($2M on $5M = 40% net margin)",
+    "businesses with a sales call step before purchase",
+    "businesses with lead qualification data available",
+    "businesses with multiple sales reps of varying skill levels",
+    "current opt-in is a generic form that self-cancels rather than pre-qualifies",
+    "deal value varies materially by a quantifiable patient/client characteristic",
+    "high-ticket consulting or service offer",
+    "high-ticket offer",
+    "luxury service business with opt-in lead flow",
+    "offer can serve both high- and low-wealth buyers",
+    "paid ad-driven inbound funnel",
+    "seller has not filtered for buyer wealth tier",
+    "service businesses where delivery effort does not scale linearly with client count",
+    "the bottleneck is rep time wasted on unqualified leads, not total lead volume",
+    "the business has not yet added qualification gates to the funnel",
+    "the business has sufficient lead volume that screening is worth gating"
+   ],
+   "mechanism": "Prospect wealth is a direct predictor of price tolerance; filtering to only wealthy prospects removes the largest source of price objections and raises close rate independent of offer or pitch quality.",
+   "numbers": null,
+   "bounded_by": [
+    "Bad friction (slow pages, hard-to-find forms) turns off all prospects regardless of fit \u2014 only good friction (explicit qualification gates) creates the separation",
+    "Does not apply to premium customers with unrealistic ROI expectations; assumes offer delivers clear value commensurate with price",
+    "Does not eliminate the need to differentiate offer; qualified prospects still compare alternatives if offers appear equivalent",
+    "If lead volume is very low, gating the scheduler may cut total booked calls below minimum viable pipeline",
+    "If the ad audience is genuinely wrong (targeting people who cannot afford the service or who are ineligible by hard criteria), targeting changes are warranted before friction gates",
+    "Requires a well-designed questionnaire that surfaces budget without alienating high-value prospects",
+    "requires a functioning lead-scoring system (e.g., 1-5 or red-yellow-green) and multiple reps at different skill levels"
+   ],
+   "n_sources": 8
+  },
+  {
+   "node_id": "claim:1171",
+   "level": "L2b",
+   "topic": "Niche Down to Scale Up",
+   "text": "Alex Hormozi argues that a founder should allocate roughly 5-10% of their time to an unscalable premium one-on-one tier charged at 10x their standard rate, using income from that tier to fund aggressive reinvestment into the scalable business rather than drawing on the business's operating cash.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "take five, 10% of your time, charge 10 times more",
+   "conditions": [
+    "early-to-mid stage business needing growth capital",
+    "founder who also operates a scalable lower-priced offering",
+    "information products or training",
+    "same core content repositioned to progressively narrower avatars"
+   ],
+   "mechanism": "Premium one-on-one income isolates founder living expenses from the business's reinvestment pool, allowing 100% of business revenue to be deployed offensively into growth.",
+   "numbers": {
+    "axis": "founder time allocation to premium vs. scalable tier",
+    "anchors": [
+     {
+      "region": "premium one-on-one tier",
+      "value": "5-10% of total time"
+     },
+     {
+      "region": "scalable offering management",
+      "value": "90-95% of total time"
+     },
+     {
+      "region": "price premium on one-on-one tier",
+      "value": "10x standard rate"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Applies primarily before $10M/year revenue; above $10M, broadening avatar may be necessary depending on total addressable market size",
+    "strategy is specifically for early-to-mid stage; at scale, the one-on-one tier can become a distraction"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:163",
+   "level": "L2",
+   "topic": "Attention-to-Revenue Funnel",
+   "text": "Alex Hormozi asserts that a creator who is bored by or disengaged from a content topic will produce worse content on that topic, reducing the effectiveness of that content as a marketing channel, suggesting that content topic selection must account for the creator's genuine interest level, not only audience fit.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "organic long-form or short-form content creator",
+    "topics the creator finds uninteresting relative to alternatives"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to scripted or ghostwritten content where creator disengagement is not visible to audience"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1740",
+   "level": "L2",
+   "topic": "Attention-to-Revenue Funnel",
+   "text": "Alex Hormozi asserts that a personal brand, once established, can direct its audience to any product or offer and achieve strong conversion, as long as the audience trusts the creator; the brand is not locked to a single product category.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Audience trust has been established through consistent personal brand content",
+    "New product is congruent with the problems the audience cares about"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Requires the new offer to be relevant to the audience's existing desires or problems; trust does not transfer to unrelated categories without re-building"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1169",
+   "level": "L2",
+   "topic": "Avatar Targeting Strategy",
+   "text": "Alex Hormozi asserts that if a founder can articulate a customer's pain more accurately than the customer can describe it themselves, the customer will inherently believe the founder can solve that problem \u2014 making pain articulation a more powerful conversion lever than a larger outcome promise.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pain and persuasion only exist in the specific, never the vague",
+   "conditions": [
+    "copy or sales conversation that mirrors the avatar's own language",
+    "offer targeting a specific avatar with known pain points"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2097",
+   "level": "L2a",
+   "topic": "Compound Work Payoff",
+   "text": "Alex Hormozi asserts that the more he works, the more productive he becomes per unit of time \u2014 a compounding dynamic in which work ethic itself grows with volume, eventually making external outcomes secondary to the intrinsic reward of increased capacity. The mechanism is within-person skill compounding: higher volume raises both output quality and resilience.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "the more I work, the better I get at working, the more productive I am per unit of time",
+   "conditions": [],
+   "mechanism": "Repeated high-volume work builds work ethic as a trainable skill, compounding both output per hour and tolerance for sustained effort over time.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:219",
+   "level": "L2a",
+   "topic": "Ad Spend Optimization",
+   "text": "Alex Hormozi recommends a graduated ad spend increase (e.g., from $2,000 to $4,000 or $6,000 per month) rather than jumping to full scale immediately, with each increment validated by attribution data before the next step.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "go from two to four or two to six",
+   "conditions": [
+    "Ad creative is suboptimal (small text, logo-heavy, offer not prominent)",
+    "Attribution tracking is in place",
+    "Current channel is showing positive ROI",
+    "E-commerce business with existing positive-ROAS keyword set and current monthly ad spend of $15,000-$20,000",
+    "Existing ROAS >= 13x",
+    "Gross margins sufficient to absorb a testing period loss",
+    "Landing page is suboptimal (homepage, poor mobile, offer buried below fold)",
+    "Multiple messaging hooks are being tested against the same target audience",
+    "Operator has limited budget and cannot fund all hooks at meaningful spend simultaneously",
+    "Paid channel with no attribution data",
+    "Service business with existing working channels",
+    "business has already reached a daily spend ceiling",
+    "current $500/month generates 2-3 leads/week",
+    "local PPC (Google Local Services Ads) for pool service in a metropolitan market",
+    "paid advertising at scale",
+    "paid social advertising (Meta/TikTok)",
+    "platform-distributed spend",
+    "visually-driven consumer product"
+   ],
+   "mechanism": "Incremental scaling preserves the ability to isolate whether spend increases produce proportional revenue increases, preventing overcommitment to a channel whose efficiency may degrade at higher volume.",
+   "numbers": {
+    "axis": "monthly ad spend increment",
+    "anchors": [
+     {
+      "region": "current baseline",
+      "value": "$2,000/month"
+     },
+     {
+      "region": "first test increment",
+      "value": "$4,000 or $6,000/month"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Assumes fulfillment capacity can be expanded to match demand",
+    "Assumes local market is not saturated at $5,000/month spend level",
+    "Does not apply when margins are too thin to absorb a testing period",
+    "Does not apply when product-market fit is unproven",
+    "Does not apply when the binding constraint is budget (not enough capital to spend more)",
+    "Does not apply when the constraint is supply (too few customers can be served)",
+    "Requires reliable attribution to confirm which campaigns are producing the ROAS before scaling",
+    "Specific to paid social/display platforms where creative rotation is the primary spend lever; may not apply to search-intent platforms where keyword budget is the primary lever."
+   ],
+   "n_sources": 8
+  },
+  {
+   "node_id": "claim:1640",
+   "level": "L2b",
+   "topic": "Lead Response Time",
+   "text": "The Gym Members Now founder asserts that local brick-and-mortar businesses in the US miss an average of 62% of inbound phone calls from potential customers, representing a directly addressable revenue leak that an AI missed-call text-back system can capture without spending on new advertising.",
+   "type": "quantified",
+   "speaker": "Gym Members Now founder",
+   "speaker_term": null,
+   "conditions": [
+    "AI voice agent installed and connected to booking system",
+    "call IVR in place to segment prospect vs. active-member calls",
+    "fitness center with organic inbound prospect calls",
+    "local brick-and-mortar businesses in the US"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "inbound call answer rate for US local brick-and-mortar businesses",
+    "anchors": [
+     {
+      "region": "calls missed (no answer)",
+      "value": "62% of inbound calls on average"
+     },
+     {
+      "region": "calls answered",
+      "value": "38% of inbound calls on average"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:536",
+   "level": "L2",
+   "topic": "Channel Optimization Before Expansion",
+   "text": "Alex Hormozi asserts that in a multi-channel funnel for high-ticket services, the primary discovery channel identified via first-touch survey should receive more than double the current investment, while all other brand-touch channels should be maintained at their current levels because they likely perform a conversion-nudging function rather than a discovery function.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "First-touch channel has been identified via qualitative survey",
+    "High-touch, high-ticket service with complex buyer journey",
+    "Secondary channels confirmed to be active in conversion pathway",
+    "high-touch service business",
+    "multi-touchpoint sales cycle",
+    "primary first-touch channel identified via customer survey"
+   ],
+   "mechanism": "High-touch service buyers require multiple conversion nudges after initial discovery; reducing non-discovery channels removes touchpoints that push already-interested prospects to close.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to simple direct-response offers where last-touch dominates",
+    "Requires first-touch survey to be conducted first"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:659",
+   "level": "L2a",
+   "topic": "Free-to-Paid Funnel Architecture",
+   "text": "Alex Hormozi recommends using a decoy offer architecture for cold outbound in B2B service businesses: present a free component that appears complete, then reveal it is only one part of a larger system, positioning the paid offer as the logical upgrade the prospect genuinely wants.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "decoy offer",
+   "conditions": [
+    "B2B service offer where the full solution has multiple components",
+    "business has a premium version ready to present side-by-side",
+    "cold outbound channel (email or similar)",
+    "founder has no existing client results or testimonials",
+    "founder is seeking first paying clients",
+    "lead has expressed interest in a free or discounted attraction offer",
+    "ongoing client relationships",
+    "service businesses with recurring potential",
+    "service is deliverable one-on-one (e.g., consulting, coaching, lead generation management)",
+    "target prospect is a business owner seeking a specific outcome (e.g., business funding)"
+   ],
+   "mechanism": "The free component creates entry-level engagement and perceived value; reframing it as one part of a larger system shifts the perceived cost-to-value ratio on the paid offer, making the upgrade feel obvious rather than coercive.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not eliminate prospect hesitation when prospect still bears advertising spend during the free engagement period",
+    "If lead explicitly asks for the decoy first, the business is legally required to present it before pivoting to premium"
+   ],
+   "n_sources": 4
+  },
+  {
+   "node_id": "claim:96",
+   "level": "L2",
+   "topic": "Ad Creative Assembly and Variation",
+   "text": "Alex Hormozi asserts that 80% of ad preparation time should be spent on hooks and only 20% on the meat (body copy), because if a viewer does not make it through the hook, the body of the ad is never seen and contributes nothing to conversion.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "eighty percent of your time",
+   "conditions": [
+    "paid video ads on social platforms"
+   ],
+   "mechanism": "Hook failure is terminal for that impression; body content is only consumed after hook retention, so allocating effort proportionally to drop-off risk maximizes conversion per dollar of creative investment.",
+   "numbers": {
+    "axis": "ad preparation time allocation",
+    "anchors": [
+     {
+      "region": "hooks",
+      "value": "80%"
+     },
+     {
+      "region": "meat (body)",
+      "value": "20%"
+     },
+     {
+      "region": "CTAs",
+      "value": "~0% (minimal)"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

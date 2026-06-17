@@ -1,0 +1,337 @@
+{
+ "batch_id": 14,
+ "claims": [
+  {
+   "node_id": "claim:2033",
+   "level": "L2",
+   "topic": "Founder Bottleneck",
+   "text": "Alex Hormozi asserts that in med spas and any one-on-one personal-service business (tattoo, injections, personal training), top providers will leave and take a significant portion of the client base with them unless the business structures loyalty to the brand rather than to the individual provider.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "High-rapport provider category (injectors, trainers, stylists)",
+    "One-on-one personal-service business"
+   ],
+   "mechanism": "Customers develop personal trust with the individual provider through repeated one-on-one sessions; when the provider departs, the customer's loyalty follows the individual because the relationship was never anchored to the brand.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to businesses where service is standardized and interchangeable (e.g., commodity haircuts, urgent care)"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:220",
+   "level": "L2b",
+   "topic": "Service Business Unit Economics",
+   "text": "Alex Hormozi observes that a residential power washing business generating $500,000 in revenue and $250,000 in profit (50% net margin) has healthy unit economics, and that the binding growth constraint is an underdeveloped or unmeasured paid acquisition channel rather than margins or product.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "50% margins, not bad",
+   "conditions": [
+    "$150 CAC via PPC",
+    "50% gross margin",
+    "Residential service business",
+    "Revenue around $500,000",
+    "Revenue primarily from referrals and door knocking",
+    "Service business with 50% net margins",
+    "recurring service contract at $4,500/year"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "revenue to profit conversion for residential power washing",
+    "anchors": [
+     {
+      "region": "gross revenue",
+      "value": "$500,000/year"
+     },
+     {
+      "region": "owner profit",
+      "value": "$250,000/year (50% margin)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Assumes 93% annual retention holds as volume scales",
+    "Does not account for supply constraint \u2014 model breaks if fulfillment cannot absorb new demand"
+   ],
+   "n_sources": 3
+  },
+  {
+   "node_id": "claim:2025",
+   "level": "L2",
+   "topic": "Operational Culture Norms",
+   "text": "According to Alex Hormozi, every business that customers perceive as excellent has clear standards, and every business customers perceive as poor lacks them \u2014 and the presence or absence of standards is entirely the owner's responsibility, not the team's.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:596",
+   "level": "L2a",
+   "topic": "Constraint Identification",
+   "text": "Alex Hormozi states that the absence of a weekly outreach metric in a recruiting operation is itself a leading indicator of under-investment in recruiting, because what is not measured is not managed and therefore not scaled.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "outbound recruiting operation"
+   ],
+   "mechanism": "If a recruiter cannot report outreach volume per week, recruiting is reactive (only pursuing candidates found organically) rather than proactive (generating candidates through systematic outreach), which caps hiring velocity.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2217",
+   "level": "L2",
+   "topic": "Conscious Trade Accounting",
+   "text": "Alex Hormozi claims that short-term physical strain \u2014 going to bed late and waking up early for a few days to complete important work \u2014 does not cause burnout and will not produce lasting harm. He uses this as an argument that the popular work-life balance framing overstates the risk of temporary intensity.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "applies to voluntary high-effort work toward a goal the person cares about",
+    "bounded to short-term periods (days, not months)"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Speaker does not address chronic multi-month sleep deprivation \u2014 only the temporary push scenario"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:109",
+   "level": "L2b",
+   "topic": "Availability as Conversion Multiplier",
+   "text": "Alex Hormozi found, through analysis of 4,000+ daily appointments in his ALAN software (2020-2021), that four data points correlate most strongly with appointment show rates: (1) more available time slots, (2) fewer days between scheduling and the appointment, (3) more follow-up attempts, and (4) higher lead response rate to follow-ups.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "four data points",
+   "conditions": [
+    "appointment-based businesses",
+    "mixed phone and video sales environments"
+   ],
+   "mechanism": "Each driver addresses a separate failure mode: no slots means no scheduling; distant appointments give leads time to disengage; few follow-ups leave non-responders uncontacted; low response rate signals mismatched communication or value framing.",
+   "numbers": {
+    "axis": "correlation strength with positive appointment outcomes",
+    "anchors": [
+     {
+      "driver": "available time slots",
+      "relationship": "highest single predictor of throughput per Vlad's analysis"
+     },
+     {
+      "driver": "days-to-appointment",
+      "relationship": "negative correlation \u2014 closer appointment = higher show rate"
+     },
+     {
+      "driver": "follow-up volume",
+      "relationship": "positive correlation \u2014 more attempts = more shows"
+     },
+     {
+      "driver": "lead response rate",
+      "relationship": "positive correlation \u2014 responding leads show more often"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:210",
+   "level": "L2",
+   "topic": "Supply vs. Demand Constraint Diagnosis",
+   "text": "Alex Hormozi contends that when a service business generates approximately 30% seller discretionary earnings margins on $3M revenue, sales is not the primary constraint even if sales could be improved. The reason: improving sales by $300K in additional profit would not materially change the owner's life or the business's trajectory, whereas freeing owner time from clinical delivery would.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "sales is not the constraint",
+   "conditions": [
+    "Business at ~$3M revenue with ~30% seller discretionary earnings margins",
+    "Owner bandwidth (not leads or close rate) is identified as the operational bottleneck",
+    "Owner is already scattered across delivery and business development"
+   ],
+   "mechanism": "Fixing a secondary constraint (sales) while the primary constraint (owner time) remains unsolved produces half-built bridges; the incremental revenue gain from solving a non-binding constraint is too small relative to the life-change required to pursue it.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply if the owner has already hired out clinical delivery",
+    "Does not apply when margins are thin (e.g., 10-15%) where sales improvement is the only lever to fund a first hire"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:83",
+   "level": "L2b",
+   "topic": "Scarcity as Value Driver",
+   "text": "Alex Hormozi's fundraiser anecdote illustrates that cutting the number of event tickets from a larger quantity to 100 while raising price from $15,000 to $25,000 per ticket increased total event revenue dramatically: the fundraiser raised ~$5,400,000 from 100 attendees (~$54,000 per head) in its most successful year to date, compared to prior years at lower prices and higher attendance.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "charity fundraiser context",
+    "high-net-worth donor audience",
+    "limited-ticket auction format with social proof and scarcity cues"
+   ],
+   "mechanism": "Cutting supply raised perceived exclusivity, attracting higher-quality donors willing to pay more, and auction dynamics with scarcity per item extracted maximum willingness-to-pay.",
+   "numbers": {
+    "axis": "fundraiser revenue per attendee",
+    "anchors": [
+     {
+      "region": "prior format (lower price, more tickets)",
+      "value": "$15,000/ticket"
+     },
+     {
+      "region": "scarcity format (100 tickets at $25,000 each)",
+      "value": "$54,000 per head average, ~$5,400,000 total"
+     }
+    ]
+   },
+   "bounded_by": [
+    "High-net-worth charity context; demand was pre-existing and deep; general businesses must build comparable pre-existing demand before applying extreme scarcity pricing"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:54",
+   "level": "L2a",
+   "topic": "Payment Timing Optimization",
+   "text": "Alex Hormozi asserts that covering total customer acquisition cost plus delivery cost within 30 days is the threshold that separates a viable Money Model from a cash-starving one, because most businesses can access 30-day interest-free credit via credit card, allowing them to pay off acquisition spend and reuse it for the next customer.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to bootstrapped businesses using credit card float or self-funding",
+    "Most practical for service businesses with controllable payment timing",
+    "business has access to credit card float",
+    "cost recovery occurs within 30 days"
+   ],
+   "mechanism": "30-day credit card float provides interest-free capital; if the customer pays back the acquisition cost within that window, the credit card is cleared and the same float is reused, creating a self-financing loop.",
+   "numbers": {
+    "axis": "days to cost recovery",
+    "anchors": [
+     {
+      "region": "viable",
+      "value": "<=30 days"
+     },
+     {
+      "region": "capital-constrained",
+      "value": "2 years"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply to businesses that require year-long LTV to recover CAC without access to bridge capital",
+    "Manufacturing businesses with large COGS have structurally different cash cycles",
+    "VC-backed or capital-rich businesses can afford longer payback periods"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:12",
+   "level": "L2",
+   "topic": "Trust & Integrity Framework",
+   "text": "Alex Hormozi asserts that sharing information about yourself with your team, even information they could use against you, is itself an act of trust that creates an opportunity for team members to earn or lose that trust, and that default trust extended to others is effectively theirs to lose, not yours to give.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Leader voluntarily shares context with their team"
+   ],
+   "mechanism": "By making oneself punishable, the leader signals belief in the team's trustworthiness, which raises the stakes for the team to behave consistently with that belief.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:351",
+   "level": "L2a",
+   "topic": "Tradeoffs & Conscious Sacrifice",
+   "text": "Alex Hormozi frames the practitioner transition decision as a short-term versus permanent tradeoff: transitioning clients causes short-term revenue loss, but failing to transition means the founder is permanently the delivery bottleneck. The asymmetry favors transitioning.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Business currently has demand it cannot fulfill",
+    "Business is in exterior remodeling or a comparable skilled-trade service",
+    "Current business model has founder in both sales and delivery roles",
+    "Founder has built and grown a business with emotional attachment",
+    "Founder has chosen to train rather than continue solo selling",
+    "Founder is currently the primary revenue generator",
+    "Founder is in an active scale-up phase with young children or time-sensitive family relationships",
+    "Founder is running two businesses where one is retained primarily for credibility or identity, not for financial return",
+    "Founder operates two businesses simultaneously",
+    "Founder wants to reach $100M without adding personal working hours",
+    "One business has a clearly higher-value exit path (rollup) than the other",
+    "Service business moving from high-touch over-delivery to scaled delivery model",
+    "Service founder targeting 10x revenue growth",
+    "Strategic clarity requires eliminating that business to pursue another path",
+    "The ego-business is the less profitable and less scalable of the two",
+    "founder at growth inflection point",
+    "founder is also building a new licensing or adjacent offer",
+    "founder is running two separate businesses with different avatars",
+    "founder is simultaneously scaling an existing profitable service business",
+    "multiple small portfolio companies with recurring operational fires",
+    "operator has the skills to build a business independently",
+    "portfolio operator with limited personal bandwidth",
+    "service operator who controls all build decisions",
+    "target revenue is dramatically higher than current revenue (100x in this case)"
+   ],
+   "mechanism": "Short-term losses from client churn are bounded and recoverable once a reliable paid acquisition channel is operating; permanent founder-delivery dependency is unbounded and compounds over time as the business cannot scale.",
+   "numbers": null,
+   "bounded_by": [
+    "Applies to genuinely incompatible goals, not to goals that can be sequenced",
+    "Does not apply if both businesses are equally scalable and strategic",
+    "Does not apply if both businesses serve the same avatar and can share infrastructure",
+    "Does not apply if the first business is already fully delegated with no founder re-entry required",
+    "If a founder chooses all-in on the new model and fully stops growing the old one, the argument does not apply",
+    "Profit recoverability depends on the business remaining viable and the market remaining available in the long term",
+    "Requires that the founder has the character and vision that would attract high-level executives; does not work if neither is present",
+    "Requires the hire to survive the training period and reach productivity \u2014 if the hire fails, the revenue dip yields no return"
+   ],
+   "n_sources": 12
+  },
+  {
+   "node_id": "claim:1992",
+   "level": "L2",
+   "topic": "Undefined Words Create Mythology and Prevent Clear Thinking",
+   "text": "Alex Hormozi contends that undefined abstract terms create mythology rather than understanding, and that both parties in a conversation can use the same word without shared meaning, blocking clear thinking and effective communication.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "mindset",
+   "conditions": [
+    "offer language uses spiritual or identity-based terminology rather than behavioral outcomes",
+    "organic or paid social traffic to a webinar or checkout funnel"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Audiences that have self-selected around the specific spiritual terminology (e.g. a dedicated spiritual community) may not be confused by the language"
+   ],
+   "n_sources": 5
+  },
+  {
+   "node_id": "claim:1390",
+   "level": "L2a",
+   "topic": "Decision Limbo and Purgatory",
+   "text": "Alex Hormozi argues that operating from uncertainty about future regulatory change is a permanent, self-perpetuating trap: without a firm decision rule to continue normal operations until confirmed information changes, a business owner can remain indefinitely paralyzed and forgo actual growth for hypothetical protection.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Business facing regulatory uncertainty without confirmed legislative action",
+    "Growth decision is to expand sales team or distribution footprint"
+   ],
+   "mechanism": "Without a pre-committed behavior rule tied to confirmed information (not fear), the operator stays in a permanent holding pattern because each new piece of uncertain news restarts the paralysis cycle.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when regulatory change has already been confirmed with an effective date"
+   ],
+   "n_sources": 1
+  }
+ ]
+}

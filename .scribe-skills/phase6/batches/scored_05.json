@@ -1,0 +1,189 @@
+[
+  {
+    "node_id": "claim:113",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Clean claim with three third-party research anchors (Velocify, HBR, Lead Connect), explicitly named speaker (Hormozi), quantified axis with multiple comparison points, detailed conditions and bounded_by. Resolvable entities, standalone meaning clear, highly falsifiable. Type is declared (quantified)."
+  },
+  {
+    "node_id": "claim:989",
+    "scores": {
+      "1": true,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": false
+    },
+    "passing": false,
+    "failure_modes": [
+      "A8—Hortative without mechanism: 'will exhibit high churn' lacks explanation of *why* churn occurs; mechanism provided but vague ('no established habit... perceived value is low'). Would benefit from clearer causal statement.",
+      "No falsifiable anchor: claim depends on external book ($100M Leads) but provides no specific, verifiable claim about what happens if the book's strategy is *not* applied. Churn is asserted but no counterfactual baseline is provided."
+    ],
+    "notes": "Speaker and topic resolvable. Conditions clearly stated (distributor agencies, white-label). Type declared (conditional). But mechanism is thin and no evidence base cited; the claim rests on 'reads the book and applies it' as the condition, making it unfalsifiable without knowing what the book actually prescribes. n_sources=1 is thin."
+  },
+  {
+    "node_id": "claim:2158",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Strong assertion claim. Named speaker (Hormozi), clear conditions (high-volume inbound, script exists), explicit mechanism (variance in process → variance in close rates). Falsifiable: enforce script adherence, measure close-rate variance before/after. Type declared. Bounded_by clarifies when it does NOT apply (lead source change, leader enforcement limits)."
+  },
+  {
+    "node_id": "claim:174",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": false
+    },
+    "passing": false,
+    "failure_modes": [
+      "A8—Hortative assertion without mechanism: claim is 'leaders are responsible for monitoring proximity to burnout' but provides no evidence, comparison, or condition where this applies or fails. No counterfactual. Unsupported advice.",
+      "Unverifiable assertion: 'hard workers run themselves into the ground when goal is large enough' — this is a universal claim without scope (all industries? all workers?) or falsifiability test."
+    ],
+    "notes": "Speaker named, conditions narrow (large goal, high performer). Mechanism field is null—no causal explanation. n_sources=1. Type is 'assertion'. The core assertion is motivational/hortative rather than empirical and lacks any anchor point to test it."
+  },
+  {
+    "node_id": "claim:1669",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Mechanism claim with clear loop structure (price ↑ → margin ↑ → talent ↑ → reputation ↑ → price ↑). Named speaker, extensive conditions (labor-intensive, selective demand, no founder brand dependency). Explicit mechanism. Bounded_by carefully lists 7 exceptions (SaaS, commodity, solo practitioners, etc.). Type declared. Falsifiable: test businesses with price increases vs. decreases on talent/reputation outcomes."
+  },
+  {
+    "node_id": "claim:1421",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Assertion claim with comparison structure (4 years inside 10x→100x growth vs. early-stage ownership). Named speaker, clear conditions (early-career, large-business goal). Mechanism explains why (frameworks, networks, pattern recognition captured, risk outsourced). Quantified axis with revenue scale anchors ($2M–$20M optimal target). Type declared (assertion). Falsifiable via cohort comparison."
+  },
+  {
+    "node_id": "claim:560",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false
+    },
+    "passing": false,
+    "failure_modes": [
+      "A1—Ambiguous/over-parameterized conditions: 23 conditions listed, many contradictory ('agency or coaching company' appears twice in slightly different forms; 'Meta or TikTok' channel-specific; 'tenant-only commercial' is a single example, not a category). Claim is obscured by over-fitting to one case.",
+      "A2—Feature-list disguised as claim: the node reads as a collection of specific contexts ('wildfire sprinkler', 'HNW clients', 'commercial real estate') rather than a generalizable principle. Core claim is load-bearing (avatar targeting reduces churn) but the conditions list drowns it.",
+      "A3—Axis-less comparison: 'raise CAC' is mentioned but no quantified axis on CAC, LTV, or churn tradeoff is provided; the numbers field is null. Claims like 'stick-rate improvement more than compensates' are unanchored.",
+      "Not standalone (row 2): without the 23 conditions, the reader cannot understand the scope. The claim's applicability is buried in the condition list."
+    ],
+    "notes": "Speaker named (Hormozi), type declared (conditional), mechanism clear (high-propensity avatars extract more value). But the 23 conditions and multiple bounded_by examples create a claim that is specific to a single case study (wildfire sprinkler, HNW clients) rather than a principle. The core insight is strong but overconditioned and not independently intelligible. n_sources=11 but many are example-driven."
+  },
+  {
+    "node_id": "claim:1293",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Mechanism claim: pain-removal motivation → lower acceptance threshold → lower-caliber hires. Named speaker, clear conditions (filling key role under pressure, recent departure). Explicit mechanism. Type declared (mechanism). Falsifiable: compare hire quality outcomes when hiring from pain vs. desire. Straightforward and load-bearing."
+  },
+  {
+    "node_id": "claim:1745",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Comparison claim (resilience ≠ fortitude). Named speaker, clear distinction between two independent variables. Type declared (comparison). Falsifiable: measure magnitude of initial reaction and speed of recovery in observed subjects. Bounded_by clarifies what it does NOT address (tolerance, snapping). Load-bearing: resolves a common conflation. Clean."
+  },
+  {
+    "node_id": "claim:2164",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": false
+    },
+    "passing": false,
+    "failure_modes": [
+      "A3—Decontextualized number: 'churn rate approximately equal to hiring rate' is stated in isolation. What is the hiring rate in a 17-person team? What does 'approximately equal' mean (±10%? ±30%)? The axis is missing. Without a baseline from other teams or a quantified definition of steady-state, the claim is unverifiable.",
+      "Unfalsifiable steady-state assertion: 'keeps the team permanently stuck' — stuck on what metric? Close rate? Revenue? Quality? The outcome is vague."
+    ],
+    "notes": "Speaker named (Hormozi), conditions clear (high-volume inbound, 15-20 reps, no process enforcement). Mechanism provided. Type declared (mechanism). But the core claim relies on a number ('approximately equal hiring and churn rates') that is not anchored to actual figures or comparison points. n_sources=1. Needs quantified axis."
+  },
+  {
+    "node_id": "claim:1005",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Assertion claim about trait decomposition. Named speaker (Hormozi). Clear mechanism: traits are bundles of observable behaviors, each teachable. Type declared (assertion). Falsifiable: train a cohort on isolated micro-behaviors (eye contact, active listening, action under uncertainty) and measure confidence-perception increase. Load-bearing: changes how confidence is taught. Bounded_by not needed; claim is tight."
+  },
+  {
+    "node_id": "claim:401",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Conditional claim with mechanism and quantified axis. Named speaker (Hormozi). Conditions clear (multi-month fulfillment delay, customer has cancel option). Mechanism: upfront transparency + first-mover framing reduce cancellation. Quantified axis: ~40% cancellation (timeline withheld) vs. near-zero expected (timeline + framing). Type declared (conditional). Falsifiable: A/B test disclosure timing and framing. Bounded_by clarifies scope (customer's primary objection is wait, not price)."
+  },
+  {
+    "node_id": "claim:1066",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false
+    },
+    "passing": false,
+    "failure_modes": [
+      "A2—Feature-list claim disguised as load-bearing claim: 'banning the word sales, renaming to consulting' is a specific tactic, not a principle. The claim reads as 'we did X and activation improved' without explaining *why* semantic reframing works or *when* it fails. If the list of renamed terms were different (e.g., 'professional engagement' instead of 'consulting'), the claim would be equally true.",
+      "Row 5 (Falsifiable): claim depends on a semantic choice (word choice) rather than a mechanism. No clear test: does the word change matter, or was it correlated with a deeper change in positioning? Confounded.",
+      "Low load-bearing: Hormozi explicitly notes in bounded_by that 'reframing is an activation tactic, not a retention or product solution.' This weakens the claim's fundamental importance."
+    ],
+    "notes": "Speaker named, conditions clear (professional-credential audiences, sales coaching). Type declared (assertion). But the core claim is tactically specific (semantic replacement) without principled explanation. Mechanism field is null. The bounded_by statement undermines the claim's own importance. n_sources=1. Reads as an anecdote that was over-generalized."
+  }
+]

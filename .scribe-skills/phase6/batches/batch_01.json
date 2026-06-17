@@ -1,0 +1,392 @@
+{
+ "batch_id": 1,
+ "claims": [
+  {
+   "node_id": "claim:1332",
+   "level": "L2a",
+   "topic": "Multi-Touch Attribution Ambiguity",
+   "text": "Alex Hormozi argues that for service businesses with complex, multi-month sales cycles (where customers may research for 1-3 years before buying), pure last-touch attribution systematically over-credits direct-response channels and will eventually cause operators to prune brand-building channels that actually drive first awareness.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "scientific attribution",
+   "conditions": [
+    "Average sale price $22,000+",
+    "Business is running both brand-building and direct-response channels simultaneously",
+    "Customers exposed to multiple channels before purchase",
+    "Customers may consume content for 3+ years before purchasing",
+    "Sales cycle 4+ months from appointment to full cash received",
+    "Sales cycle longer than 30 days",
+    "complex, multi-touchpoint B2C or B2B service business",
+    "conversion more than 30 days after first touchpoint: first-touch credit",
+    "conversion within 30 days of touchpoint: last-touch credit",
+    "high average deal value ($600K-$1M purchase price, $22K service fee)",
+    "high-touch service business",
+    "multiple digital touchpoints before conversion",
+    "sales cycle longer than 30 days",
+    "sales cycle spanning multiple months to multiple years",
+    "service business",
+    "sign-to-payment cycle exceeding 30 days"
+   ],
+   "mechanism": "Last-touch models assign credit to the most recent interaction, which is disproportionately a direct-response hook. Over time, operators A/B test toward those hooks, defunding awareness channels, until the top-of-funnel collapses.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to e-commerce or transactional services with same-session purchase behavior",
+    "Does not apply to impulse-purchase or low-consideration offers",
+    "Does not apply to purely direct-response businesses with very short sales cycles",
+    "Does not resolve ambiguity for customers who take multi-year journeys",
+    "Scientific attribution still requires tracking infrastructure to execute"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:2022",
+   "level": "L2a",
+   "topic": "Psychological Barriers to Growth",
+   "text": "For LinkedIn agency founders facing brand-risk objections, the highest-leverage response is to sell the prospect on the direct link between business growth and personal brand strength: a CEO whose business is bigger has a stronger personal brand, making the objection self-defeating.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Client is a founder-CEO whose personal brand is tied to their business success",
+    "The objection is brand risk from DM outreach, not a technical or compliance concern"
+   ],
+   "mechanism": "A founder-CEO's personal brand value scales with their business success; therefore, growing the business via outbound DMs increases, not decreases, brand strength \u2014 reframing the perceived risk as the opposite of the actual outcome.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when the DM content itself is low-quality or misaligned with the founder's positioning",
+    "Does not apply when the founder's brand is deliberately independent of their company (e.g., a celebrity who happens to own a business)"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:919",
+   "level": "L2",
+   "topic": "Talent Acquisition Levels",
+   "text": "Alex Hormozi asserts that a scaling business with multiple missing leadership roles should hire them in priority order \u2014 solving the role that is causing the most operational damage first \u2014 rather than attempting all hires simultaneously, so the founder's management bandwidth is not spread too thin and each new leader can be properly onboarded before the next hire begins.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "one that's the most on fire",
+   "conditions": [
+    "Founder is still managing direct reports while recruiting",
+    "Multiple leadership roles are unfilled simultaneously"
+   ],
+   "mechanism": "Sequential hiring prevents overlapping onboarding that degrades the quality of each leader's integration and keeps the founder's daily management load stable during the transition period.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:133",
+   "level": "L2",
+   "topic": "Long-Term Horizon Advantage",
+   "text": "Alex Hormozi, citing Sam Altman of OpenAI, asserts that long-term thinking (1-year, 5-year, 10-year time horizons) remains one of the last genuine competitive advantages because so few people are willing or able to sustain it. The edge is not in the insight but in the rarity of sustained long-horizon commitment.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Requires financial stability sufficient to tolerate uncertainty; people with unpaid bills cannot realistically hold long time horizons",
+    "time horizon must be reverse-engineered to at least some grounding in reality, not purely fantasy"
+   ],
+   "mechanism": "Most operators optimize for the shortest visible reward cycle; those who can hold a 1-10 year horizon face fewer competitors at that time scale, creating asymmetric returns.",
+   "numbers": null,
+   "bounded_by": [
+    "Long-term thinking is inaccessible without at minimum covering basic survival needs first",
+    "Vision length is constrained by financial security: it is very difficult to plan 10 years out when you have bills to pay; basic financial stability must come first"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:666",
+   "level": "L2a",
+   "topic": "Commission and Incentive Structure Design",
+   "text": "Alex Hormozi asserts that in a geographically constrained (local/regional) service business, a growth-increment percentage bonus (e.g., 30% of year-over-year growth) is a poor incentive structure because local market capacity limits prevent reliable growth, discouraging and demoralizing the operator. A straight profit-share percentage of total profit is preferred for these businesses.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "geographically constrained business (local/regional)",
+    "non-geographically constrained fast-growth businesses are the comparison"
+   ],
+   "mechanism": "Local market capacity caps growth potential; tying compensation to growth rate punishes operators for market constraints outside their control, reducing motivation.",
+   "numbers": {
+    "axis": "growth-incentive percentage for non-geographically constrained businesses",
+    "anchors": [
+     {
+      "region": "example growth bonus for fast-growth unconstrained business",
+      "value": "30% of year-over-year growth"
+     }
+    ]
+   },
+   "bounded_by": [
+    "growth-increment bonus is appropriate for businesses not geographically constrained"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:394",
+   "level": "L2a",
+   "topic": "Hiring as Capital Allocation",
+   "text": "Alex Hormozi frames investing in a salesperson as a capital-allocation decision with a measurable ROI: in a home-services business with roughly $1M gross profit per salesperson and $200K all-in annual compensation, the investment yields approximately a 5:1 gross-profit-to-cost ratio, plus an estimated 8x enterprise value multiplier on the incremental gross profit generated.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "cost to acquire talent versus lifetime gross profit per employee",
+   "conditions": [
+    "$5M top-line revenue",
+    "50% gross margin on $2M per salesperson revenue",
+    "Agency is supply constrained",
+    "Business has sufficient retained profit to fund operations without the owner's salary redirected",
+    "Business is considering whether to use an external recruiter vs. build an internal recruiting function",
+    "Done-for-you client-acquisition agency",
+    "Gross profit per salesperson approximately $1M (50% gross margin on $2M revenue per rep)",
+    "Hire is a leadership role expected to generate measurable business output",
+    "Hire is intended to generate incremental revenue",
+    "Home-services business at approximately $20M revenue",
+    "Low capex service business",
+    "Owner has end-of-year profit to allocate",
+    "Owner is taking a medical director draw approximately equal to market rate for a replacement physician",
+    "Owner is unwilling to raise prices",
+    "Salesperson compensation approximately $200K/year (top performers)",
+    "Sufficient existing cash flow to fund hire",
+    "context: investor evaluating founder-led company",
+    "founder at $1M-$10M revenue",
+    "founder currently producing $4M personally",
+    "founder is the primary value-creator in the business",
+    "founder unwilling to increase personal working hours",
+    "high-margin services where each deal is significant",
+    "home-services business with $20M revenue",
+    "incremental hires reach full productivity and are retained",
+    "professional services firm valued at ~8x EBITDA multiple",
+    "sales director managing ~3 agency clients",
+    "team of 7+ agents each capable of incremental improvement",
+    "~31 clients paying ~$150k/year each"
+   ],
+   "mechanism": "When viewed as a capital investment rather than a headcount cost, each salesperson hire converts $200K of cost into $1M of gross profit, with enterprise value creation multiplying the economics further.",
+   "numbers": {
+    "axis": "gross-profit-to-salesperson-cost ratio",
+    "anchors": [
+     {
+      "region": "Salesperson cost (top performer, annual)",
+      "value": "$200K"
+     },
+     {
+      "region": "Gross profit generated per salesperson",
+      "value": "~$1M"
+     },
+     {
+      "region": "GP-to-cost ratio",
+      "value": "~5:1"
+     },
+     {
+      "region": "Enterprise value multiplier on incremental GP (estimated 8x)",
+      "value": "~$8M per $200K invested"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Assumes 8x EBITDA multiple holds at exit",
+    "Assumes deal size is sufficient that 7 incremental deals exceed $1M total; specific to high-ticket professional services",
+    "Assumes gross margin is correctly measured (cost of goods at ~50%)",
+    "Assumes the sales director successfully manages ~3 client accounts",
+    "Does not apply if founder is willing to personally increase time invested",
+    "Does not apply if margins are too thin to absorb the salary before payback",
+    "Does not apply if replacement physician market rate significantly exceeds owner's current draw",
+    "Does not apply when building an in-house recruiting team is more cost-effective for recurring, high-volume hiring needs",
+    "Enterprise value multiplier depends on business being valued on EBITDA basis and current multiple holding",
+    "Gross profit figure, not revenue \u2014 margin assumptions not stated",
+    "Illustrative math based on a $20M home-services business with 10 salespeople; actual ratios vary by gross margin and compensation structure",
+    "Only applies when the founder is the binding growth constraint, not capital or distribution",
+    "Requires the owner's market-rate draw to approximately equal replacement hire cost",
+    "Tax treatment of enterprise value gain differs from cash flow gains (referred to as 'tax-free' in transcript but depends on deal structure)"
+   ],
+   "n_sources": 10
+  },
+  {
+   "node_id": "claim:203",
+   "level": "L2a",
+   "topic": "Pre-Call Signal Stacking",
+   "text": "Alex Hormozi states that embedding a secret word or compliance check inside the VSL (e.g., asking the prospect to text back a piece of information from the video) is the mechanism to verify and enforce pre-call viewing, because prospects commit to watching by saying they will, and the secret word surfaces whether they actually did.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "secret word",
+   "conditions": [
+    "VSL used to pre-frame prospects before a sales call",
+    "prospects are given the option to watch alone vs. together"
+   ],
+   "mechanism": "Offering prospects the choice to watch on their own generates a verbal commitment to watch. The secret word (e.g., ask for head count or a specific detail from the video) serves as a compliance check; if the prospect texts it back, they watched. If they did not, the sales rep has a non-confrontational script to re-engage before the call.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1623",
+   "level": "L2a",
+   "topic": "Niche Down to Scale Up",
+   "text": "Alex Hormozi distinguishes between recruiting lower-ticket roles (e.g., virtual assistants at $5,000 per placement) and executive headhunting (e.g., placements at $750,000 salary yielding $150,000 fee), arguing that the language and positioning must shift accordingly \u2014 headhunting implies targeting whale clients, not commodity placements.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "head hunter vs recruiter",
+   "conditions": [
+    "deciding which segment of the recruiting market to target"
+   ],
+   "mechanism": "The label used (recruiter vs. headhunter) signals the market segment and client expectation; to attract whale clients who can write large checks, the positioning language must match the premium positioning.",
+   "numbers": {
+    "axis": "placement fee by candidate seniority",
+    "anchors": [
+     {
+      "region": "VA-level placement",
+      "value": "$5,000 per placement"
+     },
+     {
+      "region": "executive at $750k salary, 20% fee",
+      "value": "$150,000 per placement"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:197",
+   "level": "L2",
+   "topic": "Sales Team Scaling and Leadership",
+   "text": "Alex Hormozi confirms that having three closers handling 10-15 booked calls per day with 50% show rate represents adequate closer capacity, and that hiring more closers is not the solution when the upstream DM setter constraint limits call volume.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "closers",
+   "conditions": [
+    "15-20 calls booked per day, ~10 showing up",
+    "DM setter function is the upstream constraint",
+    "Three closers currently staffed",
+    "inbound/opt-in lead pool of ~300 contacts per day",
+    "outbound phone sales model",
+    "parallel dialer in use"
+   ],
+   "mechanism": "Hiring more closers before solving the upstream setter constraint creates excess downstream capacity that goes unused; the closer bottleneck does not exist until DM setter output increases.",
+   "numbers": {
+    "axis": "closers needed vs. calls showing up per day",
+    "anchors": [
+     {
+      "region": "current call show rate",
+      "value": "~10 calls/day"
+     },
+     {
+      "region": "closers staffed",
+      "value": "3"
+     },
+     {
+      "region": "Hormozi verdict",
+      "value": "sufficient capacity, no new hires needed"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Rough estimate based on Hormozi's on-the-fly math; not drawn from a controlled study"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:961",
+   "level": "L2a",
+   "topic": "Sales Team Scaling and Leadership",
+   "text": "Alex Hormozi argues that a founder transitioning from solo sales to leading a sales team must shift their identity from being a skilled closer to being a skilled sales trainer and sales leader. The measure of success is no longer how well the founder closes, but how well the founder can teach others to close on their behalf.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "sales training god",
+   "conditions": [
+    "Agency sales team where directors manage multiple teams (10-15 reps per director)",
+    "Directors are not required to take sales calls",
+    "Founder is still being pulled into closing meetings by sales reps",
+    "Founder is willing to invest training time before seeing revenue return",
+    "Founder or COO is the primary closer and wants to build a scalable sales team",
+    "Lead quality and volume are held constant",
+    "Reps receive commission on closed deals",
+    "Service or sales-dependent business where the founder is the primary closer",
+    "The business has defined the complete list of required sales ops practices",
+    "founder has already proven personal sales ability",
+    "founder is currently the primary or sole salesperson",
+    "founder-dependent sales business targeting 5-10x headcount growth",
+    "growth path requires proportional headcount expansion",
+    "labor-dependent professional services at sub-$24M scale",
+    "multi-rep sales team on cold outbound",
+    "ready to scale beyond single-person sales capacity",
+    "roofing company or comparable field-sales business",
+    "scripted close process installed"
+   ],
+   "mechanism": "A founder who remains attached to being the best closer cannot shift mental bandwidth toward coaching and system-building, which is the actual constraint on team-based scaling.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply once brand scale enables passive inbound agent recruitment via reputation alone",
+    "Does not apply to player-coach sales directors who also carry a quota",
+    "Revenue will hypothetically dip during the training period before the hire becomes productive",
+    "The founder should maintain some personal selling to stay aspirational and keep their skills current, especially in luxury/status-driven markets"
+   ],
+   "n_sources": 7
+  },
+  {
+   "node_id": "claim:1868",
+   "level": "L2",
+   "topic": "Motivation Source",
+   "text": "Alex Hormozi argues that knowing you have already won \u2014 receiving confirmation of a record mid-performance \u2014 makes you want to keep winning and sustains momentum, because winning creates a desire to continue winning rather than coast.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "ongoing live performance with multiple days remaining"
+   ],
+   "mechanism": "Positive reinforcement from a confirmed win alleviates accumulated tension and converts the emotional frame from anxiety to momentum, producing above-baseline continued effort.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1528",
+   "level": "L2a",
+   "topic": "Payment Timing Optimization",
+   "text": "Alex Hormozi advises that when a facility move would cost roughly 45% of one year's free cash flow, the sequence that makes strategic sense is: first grow sales to expand the cash pool, then fund the move from a larger base \u2014 rather than funding the move now and delaying sales investment.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Move cost is approximately 45% of annual free cash flow",
+    "Sales and marketing investment has positive expected ROI",
+    "The facility constraint allows at least 24-36 months before becoming existential"
+   ],
+   "mechanism": "Investing in sales first raises the denominator (annual free cash flow), making the fixed move cost a smaller percentage of total capital and reducing the relative financial strain of the project.",
+   "numbers": {
+    "axis": "facility move cost as a percentage of annual free cash flow",
+    "anchors": [
+     {
+      "region": "stated scenario (triggers sales-first recommendation)",
+      "value": "~45% of annual free cash flow"
+     },
+     {
+      "region": "implied threshold where move might be prioritized first",
+      "value": "not explicitly stated; implied to be near 100%+ or when timeline forces action"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Assumes sales investment generates measurable cash flow increase within the deferral window",
+    "Does not apply if the facility timeline is imminent and cannot be deferred"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2240",
+   "level": "L2a",
+   "topic": "Community as Recurring Revenue Model",
+   "text": "Alex Hormozi argues that the highest-leverage form of consumable media is research, analysis, and distillation of information that saves the member time \u2014 specifically pre-chewing work the member would otherwise have to do themselves. The net gain to the member is time saved, which they can convert to revenue using the system you sold them previously.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pre-chew the food",
+   "conditions": [
+    "inputs to the skill/system require recurring research or identification work",
+    "member has already acquired the underlying skill or system"
+   ],
+   "mechanism": "Research, analysis, and distillation convert time-intensive work (finding winning ads, vetting properties, identifying trending products) into a ready-to-use deliverable; members trade a monthly fee for time they would otherwise spend, and that time has computable dollar value.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

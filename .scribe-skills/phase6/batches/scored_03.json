@@ -1,0 +1,93 @@
+[
+  {
+    "node_id": "claim:1473",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Named entities (Hormozi), quantified axis (13+ launches), standalone, load-bearing, falsifiable."
+  },
+  {
+    "node_id": "claim:1808",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named (Jacob), mechanism clear, concrete numbers (100+ leads, 5 shows), axis-anchored."
+  },
+  {
+    "node_id": "claim:141",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Named speaker (Hormozi), three specific tolerances enumerated, load-bearing and falsifiable."
+  },
+  {
+    "node_id": "claim:1617",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named, specific number (20%), axis-anchored with comparison (real estate 4-5%), falsifiable."
+  },
+  {
+    "node_id": "claim:1777",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named (Hormozi), mechanism stated, bounds defined (excludes pure generative AI), falsifiable."
+  },
+  {
+    "node_id": "claim:2021",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": true},
+    "passing": false,
+    "failure_modes": ["A1 — Ambiguous actor reference: uses generic role-word 'founders' and 'larger company sizes' instead of named entities. Speaker is Hormozi but the subject of the claim is unbound generic actors."],
+    "notes": "FAILS row 1. Claim refers to generic 'founders' and 'larger company sizes' without resolution to specific named referents. Repair: 'LinkedIn agency founders targeting companies above $X revenue' or name the company types explicitly."
+  },
+  {
+    "node_id": "claim:360",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named (Hormozi), specific product example (beef protein chip), conditions listed, mechanism clear, falsifiable."
+  },
+  {
+    "node_id": "claim:572",
+    "scores": {"1": true, "2": true, "3": true, "4": false, "5": false},
+    "passing": false,
+    "failure_modes": ["A9 — Tautology/truism: 'best talent is always in the future' is trivially true by definition; adds no information. A4 — Vague blanket: 'superior people are available ahead' is an unqualified assertion with no quantifier or comparison.", "Row 5 (Falsifiable) fails: 'talent is in the future' is unfalsifiable because any counterfact can be restated as 'those weren't truly the best'."],
+    "notes": "FAILS rows 4-5. The core claim conflates 'always upgrade hiring standards' (load-bearing) with 'best talent is in the future' (tautology). Repair: either reframe as 'raising hiring standards over time unlocks access to a larger talent pool' (mechanism: selection effect) or drop as advice-only (demote to practices[])."
+  },
+  {
+    "node_id": "claim:1036",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Named speaker and company (Hormozi, Klarna), specific numbers (700, $40M), axis-anchored, bounded by use case (repetitive queries), falsifiable."
+  },
+  {
+    "node_id": "claim:814",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named (Hormozi), mechanism stated (skills multiply, not add), conditions enumerated (early career, income-generating), falsifiable."
+  },
+  {
+    "node_id": "claim:1776",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named, margin threshold quantified (20-25%), multiplier axis-anchored (2-3x), conditions specific, mechanism clear, falsifiable."
+  },
+  {
+    "node_id": "claim:1414",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named (Hormozi), highly conditional (18-year-old, $10M target, 50-year horizon specified), bounded_by lists (applies only before capital deployment stage), falsifiable."
+  },
+  {
+    "node_id": "claim:947",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All criteria met. Speaker named (Hormozi), mechanism stated (high-skill behavior is automatic; self-report is separate behavior), falsifiable via observation studies."
+  }
+]

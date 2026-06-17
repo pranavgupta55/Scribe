@@ -1,0 +1,93 @@
+[
+  {
+    "node_id": "claim:1501",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Resolvable entities (Hormozi, $10k, $100, $1M), standalone, load-bearing (changes pricing logic), mechanism clear, falsifiable via cohort data."
+  },
+  {
+    "node_id": "claim:182",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named entity, Gym Launch, 11 directors, 12 months. Clear narrative arc. Load-bearing (when to abandon). Falsifiable outcome."
+  },
+  {
+    "node_id": "claim:1167",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A1: Ambiguous actor reference — 'any founder,' 'any business' are unbound generics. Needs specific example or company anchor.", "A5: Universalized anecdote — 'every business can do this' lacks evidence, comparison, or counterexample. Needs cohort data or named instance."],
+    "notes": "Too generic; no specific founder, business, industry, or outcome anchor. Claim is a universal assertion without proof."
+  },
+  {
+    "node_id": "claim:2193",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A3: Decontextualized number (implicit) — mechanism states 'roughly proportional' but no axis given. What is the relationship? At what volume threshold does this hold? Comparison missing.", "A4: Vague blanket statement — 'obsess over efficiency' and 'stay small' lack operational boundaries. How much obsession? How small is 'small'? No metric."],
+    "notes": "Mechanism stated but unfalsifiable without quantified axis. 'Obsessed' and 'small' are subjective descriptors."
+  },
+  {
+    "node_id": "claim:631",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": true},
+    "passing": false,
+    "failure_modes": ["A1: Ambiguous actor reference — 'a prior company' is unbound. No company name, industry, scale, or time period. Speaker attribution weak (no source file/offset)."],
+    "notes": "Narrative is clear and load-bearing, but 'prior company' violates resolvable referents rule. Needs company name, founding year, or public identifier."
+  },
+  {
+    "node_id": "claim:414",
+    "scores": {"1": true, "2": true, "3": false, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A4: Vague blanket statement — 'both must be present' and 'prevents sustained effective execution' lack operationalization. How is 'sustained effective execution' measured? Falsifiability depends on a metric or comparison, neither of which is provided.", "A9: Tautology — The claim is self-evident in business contexts; every domain practitioner already agrees that saying no (prioritization) and hearing no (resilience) are both important."],
+    "notes": "True but trivial. No comparison, no counterexample, no mechanism that would change if the claim were false."
+  },
+  {
+    "node_id": "claim:1887",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Resolvable (Hormozi, high-ticket, opt-in forms). Standalone. Load-bearing (changes application strategy). Mechanism clear (psychology of pre-sold readiness). Falsifiable via A/B design test."
+  },
+  {
+    "node_id": "claim:1880",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Resolvable entities ($10k, ROAS, paid ads). Standalone. Load-bearing (contradicts intuition). Mechanism clear. Falsifiable via $200→$500 cost per call and 3x→6x ROAS metrics."
+  },
+  {
+    "node_id": "claim:794",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Resolvable (100 cycles/day vs. 1/week, behavioral skills). Standalone. Load-bearing (prioritizes feedback frequency). Mechanism clear (100x compounding advantage). Falsifiable via learning curve comparison."
+  },
+  {
+    "node_id": "claim:641",
+    "scores": {"1": false, "2": false, "3": true, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A1: Ambiguous actor reference — conditions reference 'true enterprise clients,' 'AI origin,' 'broadcast commercial budgets' without grounding. Who specifically are these clients? What is their purchasing process?", "A2: Specific-but-not-load-bearing detail — conditions list (B2B, enterprise procurement, RFP, margin profiles) reads like a feature checklist rather than load-bearing context. The core claim is clear but the conditions are disconnected.", "A18: Vague comparative — 'lead customers toward the most profitable option' lacks a metric. Compared to what baseline? How much does guided flow increase selection?"],
+    "notes": "Core claim is sound but resolvability and falsifiability are undermined by vague conditions and missing metrics."
+  },
+  {
+    "node_id": "claim:372",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Resolvable (Hormozi, contractors, VAs, $3M, 2-20 hours). Standalone. Load-bearing (hiring vs. contractor tradeoff). Mechanism clear (flexible bench reduces overhead). Falsifiable via time reduction metrics."
+  },
+  {
+    "node_id": "claim:2026",
+    "scores": {"1": true, "2": true, "3": false, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A4: Vague blanket statement — 'vast majority of business owners fail' is descriptive but not actionable. 'Observable, actionable behaviors' is stated as the solution but not operationalized. How do you convert a standard to an observable behavior? No mechanism or example given.", "A9: Tautology — The claim is self-evident; everyone agrees standards should be clear and measurable. No reader's behavior would change if this were false."],
+    "notes": "Observation is true but not load-bearing. Needs a specific mechanism or example of how to operationalize standards."
+  },
+  {
+    "node_id": "claim:670",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Resolvable (Hormozi, residential concrete, cost-plus, custom bid). Standalone. Load-bearing (shifts focus to pricing). Mechanism clear (no itemization = no cost reference). Falsifiable via comparison of contractors with vs. without breakdown."
+  }
+]

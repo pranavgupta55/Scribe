@@ -1,0 +1,93 @@
+[
+  {
+    "node_id": "claim:2033",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All referents resolved (Hormozi, med spas, personal-service categories). Mechanism explicit. Falsifiable through brand-vs-provider loyalty testing."
+  },
+  {
+    "node_id": "claim:220",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Strong axis anchoring ($500k revenue, $250k profit, 50% margin). Conditions explicit. Bounded by retention and supply constraints."
+  },
+  {
+    "node_id": "claim:2025",
+    "scores": {"1": false, "2": true, "3": false, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A1-Ambiguous actor reference (what constitutes excellent/poor is undefined)", "A4-Vague blanket statement (standards presumed but undefined)", "A7-Self-referential definition (asserts standards are necessary without load-bearing mechanism)", "A9-Tautology (owners who have standards are perceived as excellent by definition)"],
+    "notes": "Terms 'excellent' and 'standards' are undefined. No mechanism or comparison. Risk of tautology: if excellent businesses have standards and poor ones lack them, this is unfalsifiable."
+  },
+  {
+    "node_id": "claim:596",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Clear mechanism: unmeasured = unmanaged = unscaled. Falsifiable through hiring velocity comparison. Scoped to recruiting operation."
+  },
+  {
+    "node_id": "claim:2217",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Conditions tightly bounded (voluntary, short-term days, valued goal). Falsifiable burnout outcome comparison. Explicit conditional limits."
+  },
+  {
+    "node_id": "claim:109",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Empirical correlational study (4,000+ appointments, 2020-2021, ALAN software). Four drivers ranked by correlation strength. Mechanism for each driver specified."
+  },
+  {
+    "node_id": "claim:210",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Falsifiable tradeoff: fixing secondary constraint (sales +$300k) vs. primary (owner time). Bounded to $3M revenue, 30% margin context. Clear asymmetry argument."
+  },
+  {
+    "node_id": "claim:83",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Quantified axis: $15k/ticket → $54k/head average. Scarcity mechanism explicit. Bounded to high-net-worth donor context with pre-existing demand."
+  },
+  {
+    "node_id": "claim:54",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "30-day credit card float threshold well-anchored. Mechanism: float reusable within window, creates self-financing loop. Falsifiable cash-flow comparison. Bounded conditions clear."
+  },
+  {
+    "node_id": "claim:12",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A9-Tautology risk (trust extended creates opportunity for trust to be earned or lost—tautological restatement)", "A15-Mechanism undersupported (behavioral outcome claimed but causal chain is assumed not proven)"],
+    "notes": "Resolvable referents and type-label correct, but mechanism 'raises stakes for team' is mechanism-restating-outcome. Falsifiable element weak: testing whether vulnerability → higher trust-behavior would require isolating confounds."
+  },
+  {
+    "node_id": "claim:351",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Clear short-term vs. permanent tradeoff framing. Multiple bounded conditions (two businesses, founder in delivery, growth phase, specific exit paths). Asymmetry argument load-bearing. Falsifiable outcome comparison."
+  },
+  {
+    "node_id": "claim:1992",
+    "scores": {"1": false, "2": true, "3": false, "4": true, "5": false},
+    "passing": false,
+    "failure_modes": ["A1-Ambiguous actor reference (undefined abstract terms listed without examples)", "A2-Specific-but-not-load-bearing ('spiritual terminology' and 'behavioral outcomes' named but not defined)", "A4-Vague blanket statement (both parties can use same word without shared meaning—tautological)", "A7-Self-referential definition (restates that undefined words create confusion)", "A9-Tautology (if terms are undefined, communication fails by definition)"],
+    "notes": "Conditions list (offer language, social traffic) vague and context-dependent. No concrete example of mythologized term. Falsifiable element missing: how would you test whether undefined term *itself* blocks thinking vs. poor communication in general?"
+  },
+  {
+    "node_id": "claim:1390",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Mechanism explicit: decision rule locks behavior until confirmed info arrives, preventing paralysis cycle. Falsifiable through growth outcome + decision-rule adherence comparison. Bounded to regulatory uncertainty (not confirmed action)."
+  }
+]
