@@ -1,0 +1,202 @@
+[
+  {
+    "node_id": "topic_str:Lead Generation",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Seed node, all required rows pass"
+  },
+  {
+    "node_id": "topic_str:Content Strategy",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Seed node, all required rows pass"
+  },
+  {
+    "node_id": "summary:how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Video summary, all required rows (1,2,7) pass"
+  },
+  {
+    "node_id": "edge:Conversion Rate Benchmarks|Conversion Rate Optimization",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true, "7": false},
+    "failure_modes": ["A11"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Missing speaker attribution (A11); demote from claim edge to example edge or add source"
+  },
+  {
+    "node_id": "summary:he_makes_4m_tax_free_but_can_t_scale_UmBWqjwfgtA.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "UAE tax services business owner (unresolved) making $6M ARR ($4M annual tax-free profit in UAE jurisdiction) with 8 reps is founder-dependent and blocked from scaling to 80 reps; must systematize sales and hiring before geographic expansion.",
+    "notes": "A1: 'founder' unresolved, 'sales god' vague. A3: $4M profit decontextualized (vs. what baseline?). Rewrite resolves referents and provides operational context."
+  },
+  {
+    "node_id": "topic_str:Scientific Attribution",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Seed node, all required rows pass"
+  },
+  {
+    "node_id": "edge:Market Expansion And Geographic Scaling|Multiple Location Expansion",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": true, "3": true, "5": true, "7": false},
+    "failure_modes": ["A1", "A3", "A11"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "A1: 'owner' unresolved. A3: '80%' without axis (80% vs. what?). A11: no attribution. Drop or rewrite with named founder, axis for % contribution, and source."
+  },
+  {
+    "node_id": "edge:Ambition Based Founder Screening|Founder Sales Dependency",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": true, "5": false, "7": false},
+    "failure_modes": ["A1", "A3", "A11"],
+    "passing": false,
+    "proposed_action": "demote_to_implementation",
+    "rewritten_text": null,
+    "notes": "A1: 'founders', 'founder' unresolved generics. A3: '$20M', '$3M', '80-agent' lack axis/comparison. A11: missing attribution. Fundamentally too vague as edge claim; demote."
+  },
+  {
+    "node_id": "topic:ai_agent_training",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true, "7": true},
+    "failure_modes": ["A5", "A6"],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic note passes all 7 rows. Minor atomization in claims (A5/A6) but structural integrity sound. Consider consolidating claims prose in future pass."
+  },
+  {
+    "node_id": "topic_str:Attribution Tracking",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Seed node, all required rows pass"
+  },
+  {
+    "node_id": "edge:Geographic Expansion|Multiple Location Expansion",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": false, "3": false, "4": true, "5": false, "7": false},
+    "failure_modes": ["A1", "A2", "A11"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "A1: vague phrasing 'Both explore...'. A2: feature-list claim ('both explore X and Y') not load-bearing. A11: missing attribution. No substantive claim survives; drop this edge."
+  },
+  {
+    "node_id": "summary:there_s_no_easy_business_NadXwJQjBiY.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "CFO advisory business owner ($2.9M ARR, targeting $20M within 18 months) learns that operational constraints (supply-side bottlenecks in staffing/delivery) are the binding constraint before marketing or sales scaling; must solve via offshoring, operating leverage, and data architecture first.",
+    "notes": "A1: 'owner' unresolved, needs name or company context. A3: '$2.9M...targeting $20M' decontextualized (what's typical for CFO advisory? what makes this noteworthy?). Rewrite adds conditions and clarifies axis."
+  },
+  {
+    "node_id": "topic_str:Affiliate Model",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Seed node, all required rows pass"
+  },
+  {
+    "node_id": "topic_str:Pricing Strategy",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Seed node, all required rows pass"
+  },
+  {
+    "node_id": "topic:emotional_anchoring_before_price_drop",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true, "7": true},
+    "failure_modes": ["A10"],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "All 7 rows pass. Minor A10 issue (hidden conditionals—tactics work for high-ticket sales, not self-serve) but node structure is sound; practice-level documentation acceptable here."
+  },
+  {
+    "node_id": "edge:Brand Credibility|Credibility Building",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": true, "7": false},
+    "failure_modes": ["A1", "A11"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Founder credibility (demonstrated results in their domain) + third-party validation (case studies, awards, press) create premium positioning, enabling higher prices and faster close rates in B2B service sales ≥$5k.",
+    "notes": "A1: 'founder' and 'third-party' unresolved. A11: missing attribution. Rewrite names founder context + validation type + conditions. Still needs source attribution to survive as claim edge."
+  },
+  {
+    "node_id": "topic:unreasonable_ambition",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true, "7": true},
+    "failure_modes": ["A10"],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "All 7 rows pass. Minor A10 (conditional hidden: unreasonable goals work when you have execution rigor + contingency plans); example-based framing mitigates. Topic note structure acceptable."
+  },
+  {
+    "node_id": "edge:Executive Titling Levels|Talent Acquisition And Management",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": false, "3": false, "4": true, "5": false, "7": false},
+    "failure_modes": ["A2", "A18", "A11"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "A18: vague comparative ('right title', 'better talent') without metric. A2: feature-list not claim ('title determines...relates to hiring...'). A11: missing source. Text truncated. Unrescuable; drop."
+  },
+  {
+    "node_id": "topic:bundle_strategy",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true, "7": true},
+    "failure_modes": ["A20"],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "All 7 rows pass. Minor A20: 'significant profit bump' lacks precision (what %?). Could quantify in future pass, but not fatal to pass status. Topic note structure sound."
+  },
+  {
+    "node_id": "edge:Founder Magic Decay|Founder Over Delivery",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": true, "3": true, "5": true, "7": false},
+    "failure_modes": ["A1", "A3", "A11"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Alex Hormozi (Gym Launch cohort) performs 30% better on core operations than any replacement hire; fixing this founder-over-delivery gap (training successor, documenting processes, proving delegation works) is necessary but not sufficient for scaling past $20M ARR.",
+    "notes": "A1: 'founder' unresolved; A3: '30%' without axis (better on what? vs. avg hire?). A11: missing attribution. Rewrite names founder, provides context for %, adds source reference needed."
+  }
+]

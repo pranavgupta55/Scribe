@@ -1,0 +1,202 @@
+[
+  {
+    "node_id": "summary:3m_med_spa_owner_wants_to_scale_to_20m_rqJM6mFhyes.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Med-spa owner at $3M ARR with $700K+ annual net profit targets $20M revenue through multi-location expansion; identifies personal bandwidth as the bottleneck, not capital; solutions include hiring an operational physician to free the founder's time for business scaling.",
+    "notes": "A1: 'personal bandwidth' is unbound; needs named founder identity + company context."
+  },
+  {
+    "node_id": "topic_str:The Danger Of Uncertainty Tolerance",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source seed; no claim content to evaluate. Row 1 only applies."
+  },
+  {
+    "node_id": "edge:Franchise Referrals|Franchising Strategy",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": true, "6": false},
+    "failure_modes": ["A3", "A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Franchising model (e.g., Acquisition.com franchise cohort) leverages external capital to reach 100+ locations within 3–5 years; pre-sold franchise owners reduce go-to-market friction vs. greenfield expansion.",
+    "notes": "A3: bare number '100+' without axis (time, capital, company size); A1: no named speaker or source."
+  },
+  {
+    "node_id": "topic_str:Behavior-Change Framing",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source seed; no claim content to evaluate. Row 1 only applies."
+  },
+  {
+    "node_id": "topic_str:Communication of Expectations",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source seed; no claim content to evaluate. Row 1 only applies."
+  },
+  {
+    "node_id": "topic_str:Pricing Leverage",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source seed; no claim content to evaluate. Row 1 only applies."
+  },
+  {
+    "node_id": "edge:Identity Shift To Trainer|Sales Training At Scale",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": true, "4": false},
+    "failure_modes": ["A1", "A7"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "A1: 'founder domain' is unbound role-word; A7: self-referential—just restates topic names with 'explores' verb."
+  },
+  {
+    "node_id": "topic:google_ads_optimization",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "6": false},
+    "failure_modes": ["A5_or_A6"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Google Ads optimization: with a proven ROAS (13:1 at $5k/month spend), scale spend infinitely by optimizing the funnel first, then increasing budget. Example: after landing-page + ad funnel optimization, estimated ROAS increases to 26:1, enabling scale from $5k to $30k/month.",
+    "notes": "A5/A6: Framework and Claims sections atomized into bullets; merge back to prose."
+  },
+  {
+    "node_id": "edge:Sales Motion Fundamentals|Sales Process Refinement",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "4": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Edge text is clear: improves close rate first, then raises prices. Named comparison, resolvable actors."
+  },
+  {
+    "node_id": "summary:scale_any_business_with_these_3_levers_3xrL1nQcqlU.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Pool service company at $1.2M annual revenue generates $2,250 gross profit per customer acquisition (at ~$150 CAC); to reach next growth milestone, must increase ad spend per acquisition ceiling and improve inbound sales response SLA to <4 hours.",
+    "notes": "A3: '$2,250 gross profit per $150 CAC' lacks axis context—is this an outlier or median for the segment? Needs comparison."
+  },
+  {
+    "node_id": "summary:never_give_real_equity_do_this_instead_lqKx0GDHFX8.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear topic; no unbound actors. Lacks specific claims/numbers but frame is load-bearing."
+  },
+  {
+    "node_id": "summary:scaling_a_50m_pest_control_company_to_1b_bYGRh4ZOdUo.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Pest control company at $50M ARR targeting $1B (20x growth) identifies delivery-team retention as the constraint (not recruitment). Solution: expand career ladder from 3 rungs to 9–18 advancement steps, spaced 3–6 months apart, to reduce churn and increase avg. tenure.",
+    "notes": "A3: bare numbers '9-18 rungs', '3-6 months' without axis—what's the baseline industry ladder? What retention % uplift is expected?"
+  },
+  {
+    "node_id": "edge:Premium Pricing|Pricing And Premium Offers",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": false, "5": false},
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Higher prices increase perceived-value anchoring and buyer commitment (measured by contract-completion rate); guarantee-backed pricing filters for customers with lower refund-request rates vs. no-guarantee baseline.",
+    "notes": "A18: 'higher prices increase perceived value' and 'guarantee filters for better customers' lack metrics (which dimension? close rate? NPS? refund rate?)."
+  },
+  {
+    "node_id": "edge:Deal Mechanics|Leverage Mechanics",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": false},
+    "failure_modes": ["A1", "A3", "A2"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "A1: 'founder effort' unbound; A3: bare '100% of business'; A2: feature list ('drag-along rights...') without load-bearing claim. Text is truncated/corrupted."
+  },
+  {
+    "node_id": "topic:alternative_mortgage_models",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "6": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Alternative mortgage model (Easy Dwell): investor buys residential property with 2% seller financing or subject-to mortgage, transfers title to buyer's LLC, collects $25K upfront + $800/month for 30–40 years (~60% cash-on-cash return). Compare: traditional mortgage buyer pays 5-6.5% interest; this model yields 12-15% IRR to investor.",
+    "notes": "A1: 'buyer' and 'owner' are unresolved roles; A3: '$25K + $800/month' and '60%' lack comparison axis."
+  },
+  {
+    "node_id": "topic:gratification_timing",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": false, "3": false},
+    "failure_modes": ["A3", "A4"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Gratification timing / Third Marshmallow Fallacy: delaying gratification indefinitely wastes capital and human lifespan. Framework by career stage: early stage (0–5 years in business), longer delay correlates with bigger outcomes (~10x return per year delayed); later stage (5+ years), risk-adjust future cash flows using discount rate 10-15%. Example: $100M today > $uncertain $1B 10 years away (5-year runway to deploy capital). Personal anecdote: $4K/month cash from PT client unlocked survival during gym-launch phase (non-scalable but immediate).",
+    "notes": "A3: '$100M today' vs. '$1B 10 years' lacks discount rate or survival/runway context; A4: 'must be in the middle' is vague hortative."
+  },
+  {
+    "node_id": "summary:we_re_profiting_75_but_can_t_get_continuity_kYUXKevbChg.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": false},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "BCBA test-prep business with 75% gross margins and $80K/month revenue ($960K/year ARR) targets $1M/year; constraints are (1) proof of graduate employment outcomes to universities, (2) exclusive university partnerships to lock in volume. New revenue model: career placement service capturing 15-20% of grad first-year salary.",
+    "notes": "A3: '$80K/month', '75% margins', '$1M/year' are bare numbers; what's the path from $960K to $1M? What's the placement take-rate baseline?"
+  },
+  {
+    "node_id": "topic:self_reinforcing_patterns",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear mechanism: join community → say words → get approval → keep saying them (belief follows reward). Load-bearing. Row 1,2,3 pass; 5,7 N/A for topic notes."
+  },
+  {
+    "node_id": "topic:fear_and_risk_taking",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear claims with mechanisms and named speaker (Aurelius quote); fear dissolves when crystallized into specific scenarios. Load-bearing; row 1,2,3 pass."
+  },
+  {
+    "node_id": "summary:why_warren_buffett_calls_this_industry_a_scam_K9YN5sbwR94.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Health insurance broker industry analysis: commission-based model misaligns incentives—brokers profit from volume/complexity, not client outcomes; Buffett calls this a scam. Better model: centers-of-influence partnerships (e.g., CPAs, financial advisors) who refer clients directly, shifting margin from commissions to relationship value.",
+    "notes": "A18: 'broken value proposition' vs. 'better value proposition' lacks metric (which dimension? cost? transparency? client satisfaction?)."
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "node_id": "summary:how_a_22_year_old_built_a_2_4m_pizza_shop_pobfyHIItag.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Alex Hormozi** (Gym Launch founder): A 22-year-old pizza shop operator scaled one location to $2.4M revenue with 30% margins; before expanding to a second location, he prioritized installing a general manager to run the original store autonomously, ensuring the business could operate without founder involvement — a prerequisite for multi-location growth.",
+    "notes": "Unresolved \"founder\" reference and isolated numbers (30%, $2.4M) without axis context."
+  },
+  {
+    "node_id": "topic:soft_handoff",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": false, "3": false, "4": true, "5": false, "6": true, "7": false},
+    "failure_modes": ["A1", "A3", "A5"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Framework bullets lack cohesion; unresolved pronouns (founder, new practitioner); isolated contact frequency (5x) with no axis. Demote entire topic to examples under a claim about client transition models."
+  },
+  {
+    "node_id": "topic_str:Outbound Sales for Capital",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string is unambiguous and resolves to a clear concept; no further action needed."
+  },
+  {
+    "node_id": "topic_str:Skill Monetization",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear, unambiguous topic concept."
+  },
+  {
+    "node_id": "topic_str:Liability at Scale",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string is resolvable to a distinct concept."
+  },
+  {
+    "node_id": "topic_str:LTV to CAC Ratio",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Well-defined financial metric concept."
+  },
+  {
+    "node_id": "summary:hormozi_reveals_the_marketing_lie_costing_you_leads_R5Ay82ZvwWM.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear summary with resolvable referent (Hormozi); standalone meaning intact; source-grounded by title."
+  },
+  {
+    "node_id": "topic:churn_and_retention",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": true, "6": true, "7": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "B2B businesses with 80%+ annual retention (20% maximum churn) achieve 2.5x higher customer lifetime value compared to 50% retention, enabling more aggressive acquisition spend. Example: $100/year customer at 50% retention = ~$200 LTV; same customer at 80% retention = ~$500 LTV, all else equal. Mechanism: high retention allows arbitrage on CAC and eliminates constant customer-replacement costs.",
+    "notes": "Numbers lack proper axis framing; generic role references (new practitioner) unresolved. Claims lack source attribution in rendered text."
+  },
+  {
+    "node_id": "edge:Outcome Based Compensation|Value Creation Through Pre Work",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": true, "4": false, "5": false, "6": true, "7": false},
+    "failure_modes": ["A1", "A2", "A4"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Edge text is feature-list non-claim (A2) with no load-bearing assertion; vague blanket (A4) without operationalizable mechanism. \"Get paid when x happens\" is not falsifiable without specifying X."
+  },
+  {
+    "node_id": "topic:pricing_and_gross_margins",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": true, "6": true, "7": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Service business pricing: founders should raise prices consistently as demand exceeds supply; margin pressure decreases when reputation and supply-side constraint grow. SaaS: gross margins reach 70-90% post-PMF but consumer monetization is constrained ($9-13/mo); enterprise SaaS commands $100k+/year. E-commerce: margin reinvestment into inventory is non-optional for growth; arbitrage (buy $10, sell $11) leaves zero margin for brand.",
+    "notes": "Generic references ('founder', 'the buyer') unresolved in source context; needs named speaker attribution."
+  },
+  {
+    "node_id": "edge:Close Rate Analysis And Price Optimization|Sales Process Optimization",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": true, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A3", "A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "When sales close rate is 80%+ on a given offer, price can typically increase 3-4x before conversion drops to historical baseline; lower close rates indicate pricing below market-clearing level and signal optimization opportunity.",
+    "notes": "Decontextualized number (3-4x) with no comparison axis; vague comparative (optimal pricing). Needs conditions and mechanism."
+  },
+  {
+    "node_id": "summary:scared_of_debt_your_business_will_stall_gOG7zvp2ub0.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear summary; resolvable entity (Hormozi by context); standalone meaning; source-grounded."
+  },
+  {
+    "node_id": "topic_str:Recruiting Economics",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Unambiguous concept resolving to hiring cost and efficiency metrics."
+  },
+  {
+    "node_id": "topic_str:Workflow Automation",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear, well-defined topic concept."
+  },
+  {
+    "node_id": "summary:how_to_hire_the_right_leadership_team_as_you_scale_n7CYRXrdebU.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A skincare company at $4.5M monthly revenue ($54M ARR) targeting $25M annual revenue requires top-layer leadership hires; CEO involvement in key hiring (C-suite, VP roles) differs by function, with network strategy (internal vs. external sourcing) varying by role criticality.",
+    "notes": "Generic actor reference ('the CEO'); decontextualized numbers ($4.5M, $25M) without growth axis or time frame."
+  },
+  {
+    "node_id": "topic:pricing_tiers_and_jumps",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "3": true, "4": true, "5": true, "6": true, "7": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Price tier jumps should be 5-10x, not 50% increments, to create market segmentation. Example: product at $1K tier; next tier should be $5K-$10K (not $1.5K), signaling material upgrade and justifying feature/service differentiation. Mechanism: large jumps allow 80% of buyers to stay in lower tier (higher volume) while top 20% ascend to premium tier with better unit economics.",
+    "notes": "Generic 'the buyer' reference; needs speaker attribution (appears to be Hormozi from source file)."
+  },
+  {
+    "node_id": "summary:how_to_find_motivated_sellers_in_a_frozen_real_estate_market_960cDVNgTC8.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear, resolvable summary; standalone meaning; source-grounded."
+  },
+  {
+    "node_id": "edge:Location Expansion Dynamics|Market Expansion And Geographic Scaling",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": true, "4": false, "5": false, "6": true, "7": false},
+    "failure_modes": ["A1", "A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Founder-concentrated single-location business maintains higher margins than multi-location operations due to founder leverage; geographic expansion requires brand premium (higher prices or superior perceived quality) to offset coordination and communication costs, or unit economics erode.",
+    "notes": "Vague comparative (superior margins) without metric; generic reference (founder). Needs quantified axis (margin % at 1 vs. 2+ locations)."
+  },
+  {
+    "node_id": "edge:Long Term Growth Path|Raising Capital Path",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": false, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A3", "A2"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Edge text is truncated fragment (\"hit $1-3M revenue, re...\"); incomplete thought with isolated number and no comparison axis. Unfinished and unverifiable."
+  },
+  {
+    "node_id": "topic:video_sales_letter_framework",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "3": false, "4": true, "5": false, "6": true, "7": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Video Sales Letter (VSL) Framework** — a 5-7 minute presale format used by B2B service and physical product sellers. Structure: (1) Hook — specific benefit + ROI quantifier (e.g., 'railings cost 5% of resale value added'); (2) Promise — outcome the buyer gets; (3) Proof — 2-3 named customer examples with before/after; (4) Plan — 3-4 steps buyer takes; (5) Pricing — transparent tier ladder + objection pre-handling; (6) CTA — book call or watch testimonial. Mechanism: VSL qualifies high-intent buyers before sales calls, reducing no-shows and increasing close rate.",
+    "notes": "Missing speaker attribution (appears to be Hormozi); example numbers (railings = 'basically free') lack axis context."
+  }
+]

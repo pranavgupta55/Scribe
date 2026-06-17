@@ -1,0 +1,202 @@
+[
+  {
+    "node_id": "topic_str:Niche Down to Scale Up",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source topic seed; no failure modes. Row 6 N/A (not a number node)."
+  },
+  {
+    "node_id": "edge:Client S Current Marketing Inefficiencies|Word Of Mouth Marketing",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A3", "A18"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Edge text is axis-less fragment (A3) + vague comparative (A18). No metric, no axis, no mechanism."
+  },
+  {
+    "node_id": "summary:helping_a_5_5m_auto_hail_repair_company_scale_to_15m_k8-xbMrcUtA.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "4": true, "7": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A $5.5M auto hail repair company owned by [name needed] aims for $15M next year; [founder name] designs a VP/ops role with profit-share, phantom equity, and decentralized shop-level incentives to scale without losing control.",
+    "notes": "Unbound actor 'the founder'; video_summary row 1/2/7 applies; speaker unresolvable without context."
+  },
+  {
+    "node_id": "topic_str:Proof Problem",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Multi-source topic seed; no failure modes. Row 6 N/A."
+  },
+  {
+    "node_id": "topic_str:Scaling Discipline",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Multi-source topic seed; no failure modes. Row 6 N/A."
+  },
+  {
+    "node_id": "topic:story_ads",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "4": true, "5": false, "6": true, "7": true},
+    "failure_modes": ["A3", "A5_or_A6"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Story ads create emotional resonance and lifestyle aspiration through narrative arc, emotional content, and humor, which motivate purchase action beyond rational product benefits. Example: storytelling with narrative arc and lifestyle content showing customer aspirations.",
+    "notes": "Examples section (A5/A6 smell: bullets fragment the narrative). Claims section lacks axis anchors (A3)."
+  },
+  {
+    "node_id": "topic_str:Client-Financed Acquisition",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Multi-source topic seed; no failure modes. Row 6 N/A."
+  },
+  {
+    "node_id": "topic:sales_training_and_behavioral_language",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "4": true, "5": true, "6": true, "7": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Teach salespeople via concrete, observable behaviors (raise voice, talk faster, shoulders back) instead of amorphous qualities (charisma), because observable behaviors are replicable and enable 2-3x training compression — Alex Hormozi's method across multiple business contexts.",
+    "notes": "First claim has unbound actor 'A salesperson trained as copy-paste of founder'; second claim lacks source attribution inline. Row 7 fails (attribution present in markdown but not in claim text itself)."
+  },
+  {
+    "node_id": "edge:Continuity Revenue Model|Revenue Model Transition",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": false, "4": false, "5": false, "6": true, "7": false},
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Edge text uses vague comparative ('Superior') with no metric. Axis-less assertion (A18)."
+  },
+  {
+    "node_id": "summary:tiktok_has_the_worst_audience_monetization_ever__9Wiua_4SJ8.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A welding supply creator with 300K TikTok followers generating $1.7M revenue reported content burnout; the core bottleneck is not audience size but sustainable content cadence—reverse-engineer what type of content you enjoy creating and expect 35+ years of repetition to build moat (per Dave Ramsey precedent).",
+    "notes": "Row 1/2/7 for video_summary; axis-less 'content burnout' fragment needs context."
+  },
+  {
+    "node_id": "summary:pick_one_sales_channel_or_stay_broke_Yjt_YfzF1kQ.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "4": true, "6": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "The [owner name]-led $1M junk removal business testing multiple sales channels (email, LinkedIn, social, networking) should pick one and master it; given the owner's proven strength in networking, expand from a few events/week to several daily to hit $3M before diversifying.",
+    "notes": "Unbound actor 'owner's strength' in row 1. Video_summary row 1/2/7 applies."
+  },
+  {
+    "node_id": "summary:why_most_med_spa_owners_stall_at_7m_wRe3Umk2hec.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "4": true, "6": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Med spa owners stall at 3-location expansion (roughly $7M ARR) due to founder dependency and low margins (15%), plus lack of systematized sales motion; fix margins first before scaling because higher margins fund reinvestment.",
+    "notes": "A1: unbound 'most med spa owners'; A3: low-margin '15%' is axis-less (what's the baseline? what's high?). Rows 1/2/7 for video_summary."
+  },
+  {
+    "node_id": "summary:what_branding_actually_is_and_how_to_build_one_fast_Vt4D1qgo9ic.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "4": true, "6": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "[Speaker name] defines branding as deliberate pairing of a product with desired customer outcomes through the buyer's lens; good branding changes customer behavior in your favor, commanding premium pricing and customer loyalty.",
+    "notes": "Unbound speaker in A1; video_summary rows 1/2/7."
+  },
+  {
+    "node_id": "topic_str:Compensation Structure",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Multi-source topic seed; no failure modes. Row 6 N/A."
+  },
+  {
+    "node_id": "summary:doing_10_tasks_inside_a_3m_brand_YLLes93QigQ.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "4": true, "6": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A founder of a $3M e-commerce paid-media business (4 SKUs, targeting $15M) is drowning in miscellaneous tasks; the real bottleneck is not media-spend optimization but building a defensible brand through differentiation.",
+    "notes": "A1: unbound 'founder'; A3: misc tasks/bottleneck axis-less. Rows 1/2/7 for video_summary."
+  },
+  {
+    "node_id": "topic_str:Future UX Shift",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source topic seed; no failure modes. Row 6 N/A."
+  },
+  {
+    "node_id": "summary:he_spends_6_700_to_make_22_000_is_that_good_RRFXliltxFM.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "4": true, "6": false},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A property buyers advisory service at $22M ARR with $6,700 CAC and $22,500 LTV (LTV/CAC ratio 3.4x) seeks to reduce CAC and replicate top sales talent to reach $54M, hampered by attribution confusion across email, social, and paid channels.",
+    "notes": "A3: CAC/LTV are axis-less without baseline or comparison (3.4x is good? for whom?). Rows 1/2/7 for video_summary."
+  },
+  {
+    "node_id": "edge:Free Attraction With Paid Upsell|Offer Stacking Upsells",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "4": false, "5": false, "6": true, "7": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Edge describes a valid relationship with minimal text; absence of detail is acceptable for edge. Agreement shape is sound."
+  },
+  {
+    "node_id": "edge:Short Form Vs Long Form Content|Youtube Multi Format Strategy",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "4": false, "5": false, "6": true, "7": false},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Edge describes a valid relationship (both relate to content format). Minimal text acceptable for edge."
+  },
+  {
+    "node_id": "topic:gross_margins_economics",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "4": true, "5": true, "6": true, "7": true},
+    "failure_modes": ["A2", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Gross margin determines net margin and business viability: a $20M business at 50% margins generates same net profit as a $100M business at 10% margins, but the high-margin business compounds 5x incremental EBITDA per dollar earned—applies to media (podcast ads, 70%+), software (60%+), pharmaceuticals vs. grocery, farming, restaurants (10-20%). Use margins to fund growth and employee retention.",
+    "notes": "A2: Examples bullet list is feature-list (podcasts, pharma, etc.) without load-bearing assertion. A3: 'high', 'low' in claims section lack axis anchors (missing 'above/below X% is high'). Needs full rubric but provides good structure."
+  }
+]

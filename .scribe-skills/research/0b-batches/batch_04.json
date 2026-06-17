@@ -1,0 +1,250 @@
+{
+  "batch_id": 4,
+  "nodes": [
+    {
+      "node_id": "topic_str:Lead Generation",
+      "node_kind": "topic_string_cluster_seed",
+      "source": "knowledge/sources.json (topic dedup)",
+      "topic_string": "Lead Generation",
+      "sources": [
+        "start_a_1_person_business_with_claude_4_hour_course_2026.txt",
+        "the_lazy_way_i_make_money_with_ai_2026.txt"
+      ],
+      "n_sources": 2,
+      "text": "Topic string 'Lead Generation' appears in 2 source(s).",
+      "surface_modes": []
+    },
+    {
+      "node_id": "topic_str:Content Strategy",
+      "node_kind": "topic_string_cluster_seed",
+      "source": "knowledge/sources.json (topic dedup)",
+      "topic_string": "Content Strategy",
+      "sources": [
+        "i_m_a_physics_tutor_making_80k_how_do_i_scale_bBm70Ojep80.txt",
+        "why_your_content_isn_t_attracting_the_customers_you_want_2Abd02X4PnA.txt"
+      ],
+      "n_sources": 2,
+      "text": "Topic string 'Content Strategy' appears in 2 source(s).",
+      "surface_modes": []
+    },
+    {
+      "node_id": "summary:how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt",
+      "node_kind": "video_summary",
+      "source": "knowledge/sources.json::how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt",
+      "title": "How to Get Your Customers to Stay FOREVER",
+      "text": "Strategies to reduce churn and improve customer retention in recurring revenue businesses by tracking metrics, removing friction, and building community.",
+      "surface_modes": []
+    },
+    {
+      "node_id": "edge:Conversion Rate Benchmarks|Conversion Rate Optimization",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Conversion Rate Benchmarks",
+      "b": "Conversion Rate Optimization",
+      "kind": "builds-on",
+      "cross_source": true,
+      "text": "Use channel-specific benchmarks to identify where to optimize backend conversion and scoring.",
+      "surface_modes": []
+    },
+    {
+      "node_id": "summary:he_makes_4m_tax_free_but_can_t_scale_UmBWqjwfgtA.txt",
+      "node_kind": "video_summary",
+      "source": "knowledge/sources.json::he_makes_4m_tax_free_but_can_t_scale_UmBWqjwfgtA.txt",
+      "title": "He Makes $4M Tax-Free but Can't Scale",
+      "text": "Tax services business making $6M revenue ($4M tax-free profit) in UAE is founder-dependent\u2014needs to systematize sales and hiring to scale from 8 reps to 80, shifting identity from sales god to sales training god.",
+      "surface_modes": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "node_id": "topic_str:Scientific Attribution",
+      "node_kind": "topic_string_cluster_seed",
+      "source": "knowledge/sources.json (topic dedup)",
+      "topic_string": "Scientific Attribution",
+      "sources": [
+        "he_spends_6_700_to_make_22_000_is_that_good_RRFXliltxFM.txt",
+        "our_cac_is_6_700_and_we_don_t_know_what_s_working_15CxTygzVio.txt"
+      ],
+      "n_sources": 2,
+      "text": "Topic string 'Scientific Attribution' appears in 2 source(s).",
+      "surface_modes": []
+    },
+    {
+      "node_id": "edge:Market Expansion And Geographic Scaling|Multiple Location Expansion",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Market Expansion And Geographic Scaling",
+      "b": "Multiple Location Expansion",
+      "kind": "builds-on",
+      "cross_source": true,
+      "text": "Geographic expansion requires owner business time; can't scale locations if owner is delivering 80% of work.",
+      "surface_modes": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "node_id": "edge:Ambition Based Founder Screening|Founder Sales Dependency",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Ambition Based Founder Screening",
+      "b": "Founder Sales Dependency",
+      "kind": "builds-on",
+      "cross_source": true,
+      "text": "Founders who scale to $20M likely outperform those exiting at $3M; founder dependency blocks 80-agent scale.",
+      "surface_modes": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "node_id": "topic:ai_agent_training",
+      "node_kind": "topic_note",
+      "source": "knowledge/topics/ai_agent_training.md",
+      "headline": "AI agents learn like toddlers: explicit, granular, observable steps, but never forget.",
+      "text": "# AI Agent Training\n\n> AI agents learn like toddlers: explicit, granular, observable steps, but never forget.\n\n## How-To / Method\n- Break a role into 16 actual activities\n- Take one activity at a time\n- Train an agent via prompt on that single activity\n- Iterate and update the prompt (updating training)\n\n## Common Mistakes\n- Telling an agent nothing and expecting it to work = same mistake as with humans, but we believe machines should do it anyway\n\n## Claims\n- Teaching an AI agent requires the same specificity as teaching a toddler, down to granular actions, except the machine never forgets. \u2014 [why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt]\n\n## Connections\n- Train AI like new employees with explicit steps, samples, and iterative feedback; agents learn but never forget. _(connects to: Ai Training Methodology)_\n- AI agents learn explicitly but fail when compared to unoptimized human process; both require equal training time. _(connects to: Ai Implementation Pitfalls)_\n- AI agents and humans both learn through pattern matching; explicit, granular steps scale expertise without forgetting. _(connects to: Behavior Pattern Recognition)_\n- AI agents learn like toddlers through explicit steps and observable feedback, enabling vast automation opportunities for skilled trainers. _(connects to: Ai Business Opportunities)_\n- AI agents learn like toddlers with explicit steps; implementing sales AI requires same training as human salespeople. _(connects to: Sales Ai Application)_\n\n---\n_Source: why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt \u00b7 1 claim(s)_",
+      "surface_modes": [
+        "A3",
+        "A5_or_A6"
+      ]
+    },
+    {
+      "node_id": "topic_str:Attribution Tracking",
+      "node_kind": "topic_string_cluster_seed",
+      "source": "knowledge/sources.json (topic dedup)",
+      "topic_string": "Attribution Tracking",
+      "sources": [
+        "500k_power_washing_business_stuck_on_referrals_gRQLYWfwRIA.txt",
+        "he_makes_250k_cleaning_driveways_GUaphMvD9Tc.txt"
+      ],
+      "n_sources": 2,
+      "text": "Topic string 'Attribution Tracking' appears in 2 source(s).",
+      "surface_modes": []
+    },
+    {
+      "node_id": "edge:Geographic Expansion|Multiple Location Expansion",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Geographic Expansion",
+      "b": "Multiple Location Expansion",
+      "kind": "related",
+      "cross_source": true,
+      "text": "Both explore Geographic Expansion and Multiple Location Expansion in the founder domain.",
+      "surface_modes": [
+        "A1"
+      ]
+    },
+    {
+      "node_id": "summary:there_s_no_easy_business_NadXwJQjBiY.txt",
+      "node_kind": "video_summary",
+      "source": "knowledge/sources.json::there_s_no_easy_business_NadXwJQjBiY.txt",
+      "title": "There\u2019s No Easy Business",
+      "text": "A CFO advisory business owner ($2.9M revenue targeting $20M) learns they're operationally constrained and need to solve supply constraints through offshoring, operating leverage, and data architecture before trying to market or sell courses.",
+      "surface_modes": [
+        "A1",
+        "A3"
+      ]
+    },
+    {
+      "node_id": "topic_str:Affiliate Model",
+      "node_kind": "topic_string_cluster_seed",
+      "source": "knowledge/sources.json (topic dedup)",
+      "topic_string": "Affiliate Model",
+      "sources": [
+        "doing_10_tasks_inside_a_3m_brand_YLLes93QigQ.txt",
+        "he_wants_3m_but_he_s_the_bottleneck_EbcqyxLLWN4.txt",
+        "how_to_raise_capital_without_using_your_personal_network_EjBgv-DGJ-M.txt"
+      ],
+      "n_sources": 3,
+      "text": "Topic string 'Affiliate Model' appears in 3 source(s).",
+      "surface_modes": []
+    },
+    {
+      "node_id": "topic_str:Pricing Strategy",
+      "node_kind": "topic_string_cluster_seed",
+      "source": "knowledge/sources.json (topic dedup)",
+      "topic_string": "Pricing Strategy",
+      "sources": [
+        "100m_offers.txt",
+        "building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt",
+        "helping_a_3m_balloon_arch_business_fix_their_offer_lJ6jkoD5ApA.txt",
+        "helping_a_concrete_business_owner_fix_his_margins_f0AY76fE9GI.txt",
+        "how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt"
+      ],
+      "n_sources": 9,
+      "text": "Topic string 'Pricing Strategy' appears in 9 source(s).",
+      "surface_modes": []
+    },
+    {
+      "node_id": "topic:emotional_anchoring_before_price_drop",
+      "node_kind": "topic_note",
+      "source": "knowledge/topics/emotional_anchoring_before_price_drop.md",
+      "headline": "Prepare the listener psychologically before the price to ensure proper reception regardless of buyer type.",
+      "text": "# Emotional Anchoring Before Price Drop\n\n> Prepare the listener psychologically before the price to ensure proper reception regardless of buyer type.\n\n## Tactic 1\n- Say before price: 'it's super expensive'\n- Rich person thinks their own high number, then hears yours, usually finds it reasonable\n- Poor person braces for something big, makes the anchor feel less shocking\n\n## Tactic 2\n- Write price on paper, slide it across table\n- Use calculator, turn screen to show them\n- Prevents you from choking on the price (nervous delivery kills the sale)\n\n## Claims\n- Emotional anchoring tactic: before saying the price, say 'it's super expensive'; rich people immediately think their own number, then hear your number and adjust; poor people brace themselves \u2014 [how_i_made_my_first_high_ticket_sale_B7P5WCVfnPE.txt]\n- Another tactic: write price on paper and slide it over, or use calculator; prevents you from choking on the number and keeps emotional tone steady \u2014 [how_i_made_my_first_high_ticket_sale_B7P5WCVfnPE.txt]\n\n## Connections\n- Prepare psychologically before price reveal; avoid middle by selling expensive to few or cheap to many. _(connects to: Pricing Strategy Anchoring)_\n\n---\n_Source: how_i_made_my_first_high_ticket_sale_B7P5WCVfnPE.txt \u00b7 2 claim(s)_",
+      "surface_modes": [
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "node_id": "edge:Brand Credibility|Credibility Building",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Brand Credibility",
+      "b": "Credibility Building",
+      "kind": "agreement",
+      "cross_source": true,
+      "text": "Founder credibility and proven results plus third-party validation create premium positioning.",
+      "surface_modes": [
+        "A1"
+      ]
+    },
+    {
+      "node_id": "topic:unreasonable_ambition",
+      "node_kind": "topic_note",
+      "source": "knowledge/topics/unreasonable_ambition.md",
+      "headline": "Setting unreasonable goals is normal path to extraordinary results; never apologize for them.",
+      "text": "# Unreasonable Ambition\n\n> Setting unreasonable goals is normal path to extraordinary results; never apologize for them.\n\n## Examples\n- Broke Guinness World Record for fastest-selling nonfiction book\n- Outsold Obama and Prince Harry combined in 24 hours\n- People said goal wasn't realistic but response was: we dare greatly\n\n## Framework\n- What if we don't hit the goal? We still try in earnest\n- Have five different versions of this thing going wrong and still hit goal\n- Need to be unreasonable because world wants you reasonable\n\n## Claims\n- Breaking the Guinness World Record for fastest-selling nonfiction book required setting an unreasonable goal against conventional wisdom \u2014 [why_ambitious_people_stay_mediocre_A248pGXTSoY.txt]\n- When people said the book goal wasn't realistic, the response was: we dare greatly; what if we don't hit it? We still try in earnest \u2014 [why_ambitious_people_stay_mediocre_A248pGXTSoY.txt]\n- Never apologize for unreasonable goals; the world wants you to be reasonable and you need to be unreasonable instead \u2014 [why_ambitious_people_stay_mediocre_A248pGXTSoY.txt]\n\n---\n_Source: why_ambitious_people_stay_mediocre_A248pGXTSoY.txt \u00b7 3 claim(s)_",
+      "surface_modes": [
+        "A3",
+        "A4"
+      ]
+    },
+    {
+      "node_id": "edge:Executive Titling Levels|Talent Acquisition And Management",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Executive Titling Levels",
+      "b": "Talent Acquisition And Management",
+      "kind": "related",
+      "cross_source": true,
+      "text": "Right title and level determine recruitment d... relates to Hiring better talent at each level unlocks bu... via level.",
+      "surface_modes": [
+        "A18"
+      ]
+    },
+    {
+      "node_id": "topic:bundle_strategy",
+      "node_kind": "topic_note",
+      "source": "knowledge/topics/bundle_strategy.md",
+      "headline": "Raise a-la-carte prices high, then discount bundles steeply to guide customers to profitable packages",
+      "text": "# Bundle Strategy\n\n> Raise a-la-carte prices high, then discount bundles steeply to guide customers to profitable packages\n\n## How-To / Method\n- Increase a-la-carte item prices significantly\n- Create bundles with steep discounts vs a-la-carte\n- Map bundle pricing mathematically to ensure profit lift\n\n## Key Takeaway\n- Implementation led to significant profit increase but messaging complexity caused customer hesitation\n\n## Caveats\n- Clarity on bundle naming (e.g., tier 1-2-3) needed to reduce confusion\n\n## Claims\n- A-la-carte price increases with steep bundle discounts led to significant profit bump; bundle messaging clarity needed \u2014 [helping_a_3m_balloon_arch_business_fix_their_offer_lJ6jkoD5ApA.txt]\n\n## Connections\n- Raise a-la-carte prices high, then discount bundles to guide toward profitable packages. _(connects to: Pricing Strategy Value Stacking)_\n- Both use price anchoring and strategic discounting to guide customers toward high-margin bundled packages. _(connects to: Buy X Get Y Free)_\n- Price a-la-carte items high to create anchors, then discount bundles steeply to guide customers to your most profitable packages. _(connects to: High End Pricing Strategy)_\n\n---\n_Source: helping_a_3m_balloon_arch_business_fix_their_offer_lJ6jkoD5ApA.txt \u00b7 1 claim(s)_",
+      "surface_modes": []
+    },
+    {
+      "node_id": "edge:Founder Magic Decay|Founder Over Delivery",
+      "node_kind": "edge",
+      "source": "knowledge/connections.json",
+      "a": "Founder Magic Decay",
+      "b": "Founder Over Delivery",
+      "kind": "agreement",
+      "cross_source": true,
+      "text": "Both founder magic decay and founder over delivery reinforce that founder does things 30% better than anyone else.",
+      "surface_modes": [
+        "A1",
+        "A3"
+      ]
+    }
+  ]
+}

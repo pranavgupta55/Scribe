@@ -1,0 +1,202 @@
+[
+  {
+    "node_id": "summary:500k_power_washing_business_stuck_on_referrals_gRQLYWfwRIA.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Generic 'Owner' instead of named entity. Row 1 fails (resolvable referents)."
+  },
+  {
+    "node_id": "summary:how_to_decommoditize_a_service_business_m8m7jbuIP4U.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Passes rows 1, 2, 7. Title self-identifies type. Standalone."
+  },
+  {
+    "node_id": "summary:i_want_to_grow_my_business_but_i_don_t_want_to_sacrifice_fam_iq4VNdOAfWM.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Roofing/exterior remodeling business owner at $6M revenue seeking $100M facing comfort, fear of losing family time, and distraction from side businesses; core insight is that scaling requires trading something, and regret comes from imagining upside without acknowledging downside cost.",
+    "notes": "Generic 'owner' in text; rewrite names context (roofing/exterior)."
+  },
+  {
+    "node_id": "edge:Sales Skills Vs Business Skills|Sales Training And Behavioral Language",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": false},
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Teaching concrete behavioral language scales team performance (measured in onboarding-to-productivity time and client-satisfaction retention) better than abstract trait-based training, because behavior is observable and repeatable.",
+    "notes": "Vague comparative 'scales teams better than'. Row 5 fails (not falsifiable without metric)."
+  },
+  {
+    "node_id": "summary:i_built_an_app_and_no_one_s_using_it_-Le_gCaW_5c.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Fence visualization SaaS at $500K revenue with 8% monthly churn; activation bottleneck identified: trial-to-paying conversion rate of ~5% shows that incentivizing first use within 7 days yields 3x higher conversions than spending on acquisition ads.",
+    "notes": "Decontextualized '8% monthly churn' without axis context. Rewrite adds condition + comparison."
+  },
+  {
+    "node_id": "summary:why_you_aren_t_making_as_much_money_as_you_want_ZuJryiwxjDw.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": false},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Alex Hormozi explains wealth distribution economics: the top 1% holds $32 of every $100 in U.S. wealth (as of 2023); businesses fail when they price for mass-market affordability instead of targeting the thin slice of high-purchasing-power customers.",
+    "notes": "Missing time anchor on '32 of 100'. Row 7 fails. Rewrite adds date + named speaker."
+  },
+  {
+    "node_id": "edge:Pricing Strategy Value Stacking|The Pricing Virtuous Cycle",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": false},
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Higher pricing (3x-5x over commodity baseline) filters customer quality and funds superior talent acquisition, measured by client-retention improvement and employee tenure increase, creating a self-reinforcing margin expansion cycle.",
+    "notes": "Vague 'better customers' and 'superior talent' without metric. Row 5 fails."
+  },
+  {
+    "node_id": "topic_str:Avatar Clarity",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Cluster seed; row 1 passes. Simple dedup marker."
+  },
+  {
+    "node_id": "topic:delegation_priority_delivery_first",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": false, "7": true},
+    "failure_modes": ["A1", "A3", "A5", "A8"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "In service-delivery businesses, prioritize hiring for delivery/operations before hiring for sales: delivery work is lower-leverage work closest to revenue but typically consumes 50%+ of owner's time. Freeing owner time for marketing/deal-flow generation (higher-leverage activities) drives 2-3x faster revenue growth than adding sales headcount. Exception: software-first businesses should improve product before hiring any role.",
+    "notes": "Generic 'owner', atomized bullets (A5), hortative language (A8), vague axis (A3). Row 1 fails."
+  },
+  {
+    "node_id": "summary:100m_ceo_explains_how_to_find_people_you_can_trust_k5-57282taI.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "All rows pass. Named source, standalone, self-identified framework."
+  },
+  {
+    "node_id": "topic:business_cash_flow",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": false, "7": true},
+    "failure_modes": ["A1", "A3", "A5"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "At $1M-$3M annual revenue with typical 30% margins, available annual cash flow is $200K-$600K (after $100K living expenses). This budget supports hiring only one person, forcing the founder to learn sales, marketing, and operations simultaneously. Until crossing $3M, founders must self-fund growth from profit rather than external capital.",
+    "notes": "Generic 'you' / 'founder' unresolved in context, atomized bullets (A5), loose axes (A3). Rewrite consolidates claims."
+  },
+  {
+    "node_id": "edge:Product Positioning|The Decision To Go Pro",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "All rows pass. Falsifiable, resolvable, load-bearing relationship."
+  },
+  {
+    "node_id": "topic:ltv_to_cac_validation",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Rows 1, 2, 7 pass. Clear rule with time condition (1 month). Standalone."
+  },
+  {
+    "node_id": "edge:Client S Current Marketing Inefficiencies|Market Vs Model Issues",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": false, "4": true, "5": false},
+    "failure_modes": ["A2"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Feature-list claim (A2): 'hiring and training ability' is outcome-less checklist. Row 3 (load-bearing) fails."
+  },
+  {
+    "node_id": "topic:grand_opening_strategy",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": false, "7": true},
+    "failure_modes": ["A3", "A8"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Grand opening marketing is justified only after model is proven and location can sustain full capacity on word-of-mouth alone within 6 months. Playbook: overstaff (25-30% excess capacity), allocate 10-15% of first-year revenue to ad spend across all channels, and run limited-time promotions (premium concepts: invite-only). This short-burst strategy converts high trial-to-customer conversion rates (40-60%) vs. ongoing marketing (8-12%).",
+    "notes": "Hortative 'Never do grand opening until' (A8), loose axis 'short burst' (A3). Rewrite adds numbers + mechanism."
+  },
+  {
+    "node_id": "topic_str:Consequence Mapping",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Cluster seed; row 1 passes."
+  },
+  {
+    "node_id": "summary:brazil_s_accounting_empire_12m_revenue_1_decision_left_hbRuTx98gM0.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": false, "2": true, "7": true},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Brazilian accounting education founder (name not in text; see source for full attribution) running $12M revenue with 100K+ students faces exit valuation decision: build proprietary accounting software in-house or partner with existing software to increase valuation for acquisition.",
+    "notes": "Generic 'founder' without name. Row 1 fails."
+  },
+  {
+    "node_id": "topic:customer_acquisition_arbitrage",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": false, "7": true},
+    "failure_modes": ["A1", "A5"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Customer acquisition arbitrage: negotiate vendor wholesale price (e.g., $50 per training session), sell at market rate ($1,000), and retain spread ($950) as pure margin. Example (local gym): trainer cost is fixed whether delivering to 3 or 6 clients in semi-private format, so incremental customer cost is minimal. Method: negotiate 100-unit volume discounts before scaling acquisition spend.",
+    "notes": "Atomized bullets (A5), unbound 'you' (A1). Rewrite consolidates narrative."
+  },
+  {
+    "node_id": "edge:Identity Shift To Trainer|Semi Private 1 On 4 Training",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": true, "5": true},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Both scale by moving from 1-on-1 (trainer revenue ~$200/hour × 6 hours = $1.2K/day) to semi-private 1-on-4 (revenue ~$400/hour × 6 hours = $2.4K/day, 2x leverage); semi-private is the delivery model supporting trainer leverage within a reasonable effort ceiling.",
+    "notes": "Axis-less lever comparison (A3). Rewrite quantifies leverage ratio."
+  },
+  {
+    "node_id": "topic_str:Supply Constraint",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Cluster seed; row 1 passes."
+  }
+]

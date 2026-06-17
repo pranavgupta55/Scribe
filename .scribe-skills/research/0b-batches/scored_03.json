@@ -1,0 +1,361 @@
+[
+  {
+    "node_id": "edge:Founder Removal Test|Liability At Scale",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A1"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Both tests address whether a business can operate without its founder and the liability implications as founders scale beyond their direct control.",
+    "notes": "Generic 'founder' needs named entity context; edge text is vague."
+  },
+  {
+    "node_id": "edge:Onboarding Activation|Trial To Activation Problem",
+    "node_kind": "edge",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A3"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Activation within first 24 hours is load-bearing constraint, not product quality; this pattern holds cross-source.",
+    "notes": "Number '24 hours' needs axis context; what varies this constraint (product type, cohort)?"
+  },
+  {
+    "node_id": "topic_str:Profit Concentration",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string with 2 sources, no immediate issues at row-1 level."
+  },
+  {
+    "node_id": "topic:acquisition_structure",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A1",
+      "A3",
+      "A5"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Dental practice valuation: solo practices command ~4x EBITDA; consolidation (roll-ups) trade at 10-12x. Incentive structure offers 7x as bridge to encourage consolidation.",
+    "notes": "Needs named context (dental), axis for multiples, coherent prose framework."
+  },
+  {
+    "node_id": "summary:how_to_use_ai_in_your_business_in_2026_fr78adfAnuA.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A18"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "AI increases operational velocity and reduces capital risk when paired with domain expertise; non-AI-first approach increases execution speed.",
+    "notes": "Comparatives lack metrics; 'better/faster/cheaper' are ungrounded."
+  },
+  {
+    "node_id": "edge:Rollover Upsell|Satisfaction Guarantee",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": false
+    },
+    "failure_modes": [
+      "A3",
+      "A2"
+    ],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Text is corrupted or incomplete; semantically incoherent. Drop and re-extract."
+  },
+  {
+    "node_id": "topic_str:Talent Recruitment and Training",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Single-source topic string, passes row-1 gate."
+  },
+  {
+    "node_id": "summary:he_buys_businesses_but_can_t_make_them_grow_6WPNzaWuAic.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A1",
+      "A3"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "[Speaker name] runs a 4-company software portfolio targeting $90M ARR by 2030, but remains operational bottleneck because each acquisition is small and founder-dependent.",
+    "notes": "Needs named founder, time context ($90M by when), and axis for why founder is constraint."
+  },
+  {
+    "node_id": "summary:the_two_channels_with_the_highest_return_right_now_zb1eSorqNps.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": true,
+      "2": true,
+      "7": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Clear, passes video_summary rows 1/2/7."
+  },
+  {
+    "node_id": "topic:comfort_as_constraint",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A1",
+      "A3",
+      "A5"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "[Speaker] engineered a 2–3 hour/week business at $6M ARR through hiring delegation; the constraint to $100M is founder comfort/risk appetite, not capital or market.",
+    "notes": "Generic founder reference; numbers need business-model axis (what business type, what levers compress time)."
+  },
+  {
+    "node_id": "edge:Acquisition Vs Organic Growth|Organic Growth Model",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A1",
+      "A18"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Organic scaling surfaces founder quality (ability to build repeatable motion without acquisition); acquisitions require deal flow but depend on founder's ability to integrate.",
+    "notes": "Generic 'better founders' needs operationalization (speed to first $X, retention, ops skill)."
+  },
+  {
+    "node_id": "topic:multiple_location_expansion",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A1",
+      "A3",
+      "A5"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Scaling from 1 to 5+ locations (targeting $20M) requires owner as business operator; if owner spends >70% clinical time, growth is constrained by attention bandwidth, not capital.",
+    "notes": "Generic 'owner'; numbers need context (medical spa, dental, etc.); mechanism underdeveloped."
+  },
+  {
+    "node_id": "topic_str:Product-Market Fit",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "2-source topic string, passes row-1."
+  },
+  {
+    "node_id": "edge:High Margin Business Model|Margin Compression",
+    "node_kind": "edge",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A3"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "High-margin arbitrage (80% margins on $300K/month) compresses as scaling spend increases; margin preservation requires differentiation beyond cost arbitrage.",
+    "notes": "Metrics need business-model axis (what type of arbitrage, channel, geography)."
+  },
+  {
+    "node_id": "edge:Guarantees|Pricing And Premium Offers",
+    "node_kind": "edge",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": [
+      "A3"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Service guarantees (satisfaction or performance-based) increase conversion 2–4x vs. non-guaranteed offers; premium pricing filters for higher-intent customers with lower churn.",
+    "notes": "Conversion lift axis unclear (vs. what baseline, in what category)."
+  },
+  {
+    "node_id": "summary:fence_company_stuck_at_20m_here_s_why_bHOR3aMRs1U.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A1"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "[Speaker] coaches a $20M fence company to $50M by building talent-acquisition funnel parallel to lead-generation; founder talent limits growth ceiling.",
+    "notes": "Generic 'founder talent' needs definition (hiring speed, vetting rigor, retention ability)."
+  },
+  {
+    "node_id": "edge:Brand Credibility|Brand Risk Perception",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A1"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Premium positioning built on [named founder/operator] credibility; high-ARR founders protect personal account reputation as key asset.",
+    "notes": "Generic 'founder/founders' reference; needs named entity."
+  },
+  {
+    "node_id": "summary:raising_100m_almost_got_me_kicked_out_of_my_own_company_Uw9weyjJL1A.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A1"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "[Named founder] raised $100M while scaling valuation from $24M to $500M in biotech, navigating investor control dilution and risk assessment.",
+    "notes": "Generic founder reference; needs name, company context."
+  },
+  {
+    "node_id": "summary:how_to_get_your_first_clients_with_zero_proof_QgvX_5km_Yo.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A1"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "To bootstrap first clients without track record, offer service at owner-operator engagement; aligned incentives and free proof-building convert into testimonials.",
+    "notes": "Generic 'yourself' needs clarification (what type of service provider, market)."
+  },
+  {
+    "node_id": "topic:team_personal_life",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": false,
+      "6": true,
+      "7": true
+    },
+    "failure_modes": [
+      "A3"
+    ],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Unsupportive home environment (spouse/partner opposition to work) is load-bearing constraint on discretionary effort and career upside; leaders unlock potential by protecting team rest and ensuring psychological safety at home.",
+    "notes": "Second claim borders on A14 (survivorship bias); needs clarification of base rate."
+  }
+]

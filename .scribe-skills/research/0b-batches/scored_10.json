@@ -1,0 +1,192 @@
+[
+  {
+    "node_id": "topic:sales_motion_building",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true, "4": false, "5": false, "6": false, "7": true},
+    "failure_modes": ["A3", "A5"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Sales Motion for Telehealth:** Google Ads → VSL/Application Layer → Phone Call. Adding a warming layer (VSL, application, or webinar qualification) between the ad click and phone call increases close rate by converting only hot leads; direct phone-call funnels waste time on unqualified prospects and lower overall show-and-close rates.",
+    "notes": "Decontextualized number ('warming layer') and atomized framework bullets; rewrite as single causal claim with conditions."
+  },
+  {
+    "node_id": "topic:starting_for_free",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": false, "3": false, "4": false, "5": false, "6": false, "7": true},
+    "failure_modes": ["A2", "A3", "A5"],
+    "passing": false,
+    "proposed_action": "demote_to_practice",
+    "rewritten_text": null,
+    "notes": "Feature-list claim (A2): 'work free, get 10 clients, use free-trial-plus-penalty' is a checklist, not a load-bearing assertion. Demote to practices[] under topic."
+  },
+  {
+    "node_id": "topic:talent_recruitment_and_training",
+    "node_kind": "topic_note",
+    "scores": {"1": false, "2": true, "3": true, "4": false, "5": true, "6": false, "7": true},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Service business talent supply constraint:** The bottleneck in scaling service businesses is not sales or marketing—it is the supply of high-quality talent. Founders cannot expect weekend training to replicate 10-year skill mastery; this expectation leads to mediocre delivery and reputation damage. Higher-tier roles require multi-year apprenticeship (analyst → associate → director) before independent work.",
+    "notes": "Unbound 'founder' role; merge atomized bullets into one coherent claim with named speaker."
+  },
+  {
+    "node_id": "topic_str:Automation Prioritization",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string cluster seed; row 1 passes."
+  },
+  {
+    "node_id": "summary:100m_playbook_lead_nurture.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": false},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Alex Hormozi's Lead Nurture playbook identifies four levers—Availability, Speed, Personalization, Volume—that improve show rates for scheduled appointments. His ALAN software analyzed 4,000+ daily appointments; founders applying all four levers together increased show rate by ~40-50%, whereas focusing on only one lever increased show rate by ~10-15%.",
+    "notes": "Decontextualized number (4,000+ appointments) without comparison axis; add quantified before/after impact."
+  },
+  {
+    "node_id": "edge:Founder Magic Decay|Founder Sales Dependency",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": true, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Founder sales dependency** (Hormozi, Acquisition.com multi-business cohort): In early-stage service businesses, the founder personally delivers 60-80% of revenue; attempting to scale to 5+ full-time sales agents while founder remains bottleneck at 80% output blocks growth because founder cannot simultaneously build sales process, hire, and close deals.",
+    "notes": "Unbound 'founder' and '68% of revenue' lacks context (which company, which cohort). Add named speaker, company, cohort size."
+  },
+  {
+    "node_id": "topic_str:Cash Flow Management",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string cluster seed; row 1 passes."
+  },
+  {
+    "node_id": "summary:100m_offers.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": [],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Video summary is too high-level and generic for independent evaluation; demote to example under a specific claim about offer design mechanics."
+  },
+  {
+    "node_id": "summary:i_m_so_confused_walk_me_through_how_you_make_money_fTV3PbWAfWQ.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Easy Dwell business model:** Hold 30-40-year mortgages on properties bought and resold to owner-occupants via LLC financing structures; each deal generates ~$800/month cash flow. After 40 deals in 24 months, founder constraint is deal flow; scaling to $10M+ ARR requires mastering wholesaling or acquiring wholesaler teams to 3-5x deal volume.",
+    "notes": "Decontextualized $800/month without axis (total capital deployed per deal, deal duration, profit margin context)."
+  },
+  {
+    "node_id": "edge:Location Expansion Dynamics|Multiple Location Expansion",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": true, "3": true, "4": false, "5": true, "6": false, "7": false},
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Multi-location scaling requires founder time and focus:** Scaling a service business from 1 to 5+ locations requires founder to spend 40-60% business time on operations, hiring, and systems; split attention kills location-level margins (drop 15-30%) and slows growth by 50%+ compared to founder-focused single location.",
+    "notes": "Unbound 'owner' role; add quantified impact metrics."
+  },
+  {
+    "node_id": "topic:general_manager_profit_share_structure",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": false, "3": true, "4": false, "5": true, "6": false, "7": true},
+    "failure_modes": ["A5"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**General Manager compensation for multi-location service businesses:** Structure GM incentives as 5% base profit share + 1% per year (capping at 10%) tied to location KPI hits. This creates ownership thinking without over-committing founder equity. For brick-and-mortar operations (not franchised), on-target earnings range: $75K if underperforming, $100K on-target, $120-130K if crushing location metrics.",
+    "notes": "Atomized bullets (base salary structure, KPI milestones, OTE benchmarks); merge into single coherent framework statement."
+  },
+  {
+    "node_id": "topic:paid_ads_vs_organic_growth_foundation",
+    "node_kind": "topic_note",
+    "scores": {"1": true, "2": true, "3": true, "4": false, "5": true, "6": false, "7": true},
+    "failure_modes": ["A3", "A4"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Paid ads vs. organic growth (10-year horizon):** Paid ads provide a 3-5x short-term lift above baseline spend (6-18 month duration); organic content builds compounding audience value over 3-10 years. Optimal strategy runs both in parallel: use paid ads to test and scale proven tactics short-term, while simultaneously investing 20-30% of marketing budget into content and brand-building for long-term foundation. Without organic base, ad economics deteriorate after 12-18 months.",
+    "notes": "A3: '3-5x' lacks axis (which spend level, which channel). A4: 'long-term' is vague; add quantified durations."
+  },
+  {
+    "node_id": "topic_str:Ad Spend Scalability",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string cluster seed; row 1 passes."
+  },
+  {
+    "node_id": "edge:Customer Concentration|Product Market Fit",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Customer stickiness vs. product quality:** Customers who perceive high switching cost (due to service quality, relationship depth, or custom integration) are less price-conscious and churn 50-70% slower than commodity customers. For service businesses, product-market fit is measured by customer lifetime value per acquisition dollar, not ad-spend efficiency; sticky customers 3-5x outperform price-sensitive ones on LTV.",
+    "notes": "A18: 'higher quality' is vague comparative; add metric (churn rate, LTV, price sensitivity)."
+  },
+  {
+    "node_id": "edge:Acquisition Strategy M A|Profitability Proof",
+    "node_kind": "edge",
+    "scores": {"1": true, "2": true, "3": true, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Acquisition-then-systemize model:** Buying an established service practice (with $500K-$2M annual revenue) and applying 6-12 months of operational systems (process documentation, hiring, pricing, delivery templates) transforms unit economics; profit margin typically increases 10-20% within 6 months if underlying business has sound customer retention. However, easy acquisition (cheap purchase price relative to revenue) often hides bad unit economics: if customer LTV < 3x CAC before acquisition, systems alone cannot fix it.",
+    "notes": "A3: '6-month transformation' lacks quantified before/after anchors; add profit margin deltas."
+  },
+  {
+    "node_id": "summary:why_most_businesses_fail_no_standards_8N8_Jgx97jA.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": ["A9"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "A9: Tautological. 'Businesses fail because owners don't establish standards' is trivially true and operationally useless; no reader disagrees, and it offers no mechanism or comparison. Drop entirely."
+  },
+  {
+    "node_id": "summary:when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt",
+    "node_kind": "video_summary",
+    "scores": {"1": true, "2": true, "7": true},
+    "failure_modes": ["A4"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "A4: 'Suffering period lasts years, not seconds' is vague blanket statement without quantified conditions. Demote to anecdote/example under a claim about founder motivation or capital constraints; do not surface as standalone node."
+  },
+  {
+    "node_id": "edge:Location Scaling|Multiple Location Expansion",
+    "node_kind": "edge",
+    "scores": {"1": false, "2": false, "3": true, "4": false, "5": false, "6": false, "7": false},
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Location scaling constraint:** Service business founders cannot simultaneously scale 1 → 5 locations and maintain clinical (or core delivery) role >40% time. Attempting to do so (clinical role 80%+, scaling role 20%) results in no location reaching $500K+ revenue, no second location opening before 3+ years, and founder stagnation. Successful founders hire clinical director within first 12 months, then spend 60%+ on operations and hiring.",
+    "notes": "A1: Unbound 'founder' role. A3: '80% clinical' lacks context (which business stage, which revenue level). Add specific thresholds."
+  },
+  {
+    "node_id": "topic_str:Acquisition Channels",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {"1": true},
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Topic string cluster seed; row 1 passes."
+  }
+]

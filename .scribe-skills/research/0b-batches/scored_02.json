@@ -1,0 +1,309 @@
+[
+  {
+    "node_id": "edge:Rfp Frame Strategy|Value Creation Frames",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A2", "A8"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**RFP-Frame Sales Strategy (related to Value Creation Frames):** When selling to RFP-driven buyers, first frame the solution through the buyer's evaluation criteria, then layer a value-creation frame on top demonstrating 100X ROI over unscalable or word-of-mouth alternatives.",
+    "notes": "Needs named conditions, removes imperative, adds mechanism."
+  },
+  {
+    "node_id": "summary:building_a_12_000_000_business_for_a_stranger_in_25_minutes_MH-IMJxbUY4.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": true,
+      "2": true,
+      "7": false
+    },
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Summary lacks time-anchor and speaker attribution in rendered form; no transcript offset."
+  },
+  {
+    "node_id": "edge:Fulfillment Bottleneck|Marketing Vs Delivery Time Split",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A3", "A10"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Founder Leverage via Hiring (builds-on Fulfillment Bottleneck):** When delivery workload exceeds founder capacity, hiring frees 10+ hours/week for founder to focus 100% on growth/promotion; promotion is the primary business lever for revenue acceleration.",
+    "notes": "Names actor, surfaces conditional (when delivery exceeds capacity), clarifies metric from vague percentage."
+  },
+  {
+    "node_id": "topic:customer_referral_programs",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "7": true
+    },
+    "failure_modes": ["A5", "A6", "A2"],
+    "passing": false,
+    "proposed_action": "demote_to_practice",
+    "rewritten_text": null,
+    "notes": "Content is atomized bullets + feature lists (Seven asking methods, incentive structures). Reorganize as practice; claims need load-bearing assertions."
+  },
+  {
+    "node_id": "topic:service_business_churn_patterns",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": true
+    },
+    "failure_modes": ["A1", "A3", "A4"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**SMB Service Churn Zone (Context: Hormozi, 2019-2022 cohort):** Service businesses charging SMBs $1,500–$3,000/month achieve only 4–6 month stickiness because SMB cash flow volatility causes churn regardless of service quality. Escape by pricing below $400–$500/month (achieves 30–40 month stick) or moving upmarket to $5k+ (high-touch model).",
+    "notes": "Adds speaker/year, surfaces axis (churn vs. price band), names comparison (below/above), clarifies mechanic (SMB volatility)."
+  },
+  {
+    "node_id": "edge:Founder Psychology|Sales Reframing",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A7"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Edge text is self-referential restatement of node titles; adds no load-bearing connection logic."
+  },
+  {
+    "node_id": "topic:r_d_budget_model",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": true
+    },
+    "failure_modes": ["A1", "A3", "A5"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**R&D Budget Allocation Model (Hormozi, Acquisition.com cohort, 2019-2022):** Allocate 10–15% of operating budget monthly to test the #1 distribution bottleneck across 10–20 representative markets. Expect 50% test failure rate; value lies in learning what fails, not just wins, which reduces founder's decision uncertainty. Results roll out across distribution base if successful.",
+    "notes": "Merges atomized bullets into coherent claim; adds context, mechanism, failure expectation."
+  },
+  {
+    "node_id": "summary:we_have_more_demand_than_we_can_handle_how_do_i_get_to_10m_lCmdlNNJkBw.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": true,
+      "2": true,
+      "7": false
+    },
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Summary text lacks speaker attribution and section anchor; video title/text alone insufficient for claim surfaces."
+  },
+  {
+    "node_id": "edge:Audience Awareness Pyramid|Creative Optimization",
+    "node_kind": "edge",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": false
+    },
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Creative Quality as Primary Ad Spend Constraint (builds-on Audience Awareness Pyramid):** In cold-traffic acquisition, creative quality is the primary constraint on budget scaling; moving from mediocre to top-10% creative quality unlocks 2–4x higher daily budgets and reach 50–200% larger cold audiences before cost-per-acquisition degrades.",
+    "notes": "Specifies metric (daily budget scaling factor, audience reach %), clarifies what 'better' and 'larger' mean quantitatively."
+  },
+  {
+    "node_id": "topic_str:Referrals",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": false
+    },
+    "failure_modes": ["A7"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Metadata node; dedup seed is not a claim or load-bearing unit. Role is clustering only."
+  },
+  {
+    "node_id": "topic:leadership_hiring_strategy",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": true
+    },
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Leadership Hiring by Urgency (Hormozi, skincare case study, 2023):** A founder at $4.5M monthly revenue with $0 top-layer leadership (no COO, CMO, CFO, CTO, CHRO) trying to reach $25M is bottlenecked on decision-making throughput. Hire the #1 most urgent leadership role first (e.g., COO to unblock operations), then move to the next; this approach saves 6–12 months vs. hiring all roles in parallel.",
+    "notes": "Names speaker, case domain, timeline; resolves 'company' to specific business type; quantifies hiring tempo benefit."
+  },
+  {
+    "node_id": "summary:the_offer_structure_a_stranger_pitched_me_in_a_parking_lot_GMiOc8RKYEo.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": true,
+      "2": true,
+      "7": false
+    },
+    "failure_modes": [],
+    "passing": false,
+    "proposed_action": "demote_to_practice",
+    "rewritten_text": null,
+    "notes": "Summary is well-formed but video_summary nodes without attribution data in rendered form fail row 7. Needs speaker + transcript offset inline."
+  },
+  {
+    "node_id": "topic_str:Free Attraction with Paid Upsell",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": false
+    },
+    "failure_modes": ["A7"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Metadata seed, not a claim. Role is dedup clustering."
+  },
+  {
+    "node_id": "topic:email_nurture_long_term_retention",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": true
+    },
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "**Long-Term Email Nurture for Repeat Purchase (building_a_1_000_000_business case, 2023):** At $2.5M revenue, maintain a high-quality email list (10k subscribers = ~0.4% of revenue, vs. typical 2–5% list size) via 2x weekly cadence rotating three formats: (1) before/after transformation imagery, (2) new project showcases, (3) FAQ rotation addressing objections. Maintains brand salience for repeat/expansion purchases without high CAC acquisition.",
+    "notes": "Adds speaker/timeline, quantifies 'small list' (axis), clarifies 'keeps top-of-mind' into mechanism (repeat purchase driver)."
+  },
+  {
+    "node_id": "topic_str:Customer Acquisition Cost",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": false
+    },
+    "failure_modes": ["A7"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Metadata dedup seed, not a claim node. Clustering artifact."
+  },
+  {
+    "node_id": "summary:building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": true,
+      "7": false
+    },
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Summary text references 'Corey, an HVAC cleaning business owner' (good on A1 specificity) but lacks timestamp/section anchor. Video_summary nodes need attribution in body text per scoring row 7."
+  },
+  {
+    "node_id": "edge:Comfort As Constraint|Founder Over Delivery",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Text is truncated/incomplete ('trying to es...'); generic 'Founder' reference; vague parallel ('relates to'). Insufficient basis for rewrite; drop and re-extract."
+  },
+  {
+    "node_id": "summary:why_you_re_still_the_only_closer_in_your_business_fECT6E27oi8.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": true,
+      "2": true,
+      "7": false
+    },
+    "failure_modes": [],
+    "passing": false,
+    "proposed_action": "demote_to_practice",
+    "rewritten_text": null,
+    "notes": "Summary is well-formed but lacks attribution data. Video_summary nodes fail row 7 without speaker + section + offset in rendered text."
+  },
+  {
+    "node_id": "edge:Insurance Industry Economics|Pricing And Gross Margins",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": false,
+      "5": false,
+      "7": false
+    },
+    "failure_modes": ["A7", "A1"],
+    "passing": false,
+    "proposed_action": "drop",
+    "rewritten_text": null,
+    "notes": "Edge text is self-referential tautology ('both build recurring cash flow') — no load-bearing connection logic. Adds no information beyond the node titles themselves."
+  },
+  {
+    "node_id": "summary:helping_a_4m_tattoo_business_scale_to_35m_cvn8nPtLtfc.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": false,
+      "7": false
+    },
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "demote_to_example",
+    "rewritten_text": null,
+    "notes": "Generic 'Owner' in text; summary is incomplete/unfocused (mentions three separate paths without resolving one). Needs specificity and attribution + section."
+  }
+]

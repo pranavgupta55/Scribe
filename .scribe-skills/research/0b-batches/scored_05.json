@@ -1,0 +1,362 @@
+[
+  {
+    "node_id": "summary:how_do_i_make_my_crm_sexy_on_the_front_end_IKRBA9ALc68.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Missing speaker attribution; 'fitness CRM platform owner' is generic role. Section 1,2: No named entity, generic actor."
+  },
+  {
+    "node_id": "topic:prepayment_and_cash_flow",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": ["A3", "A4"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Along axis prepayment-discount-level, adoption varies: minimum-10% discount generates baseline compliance; 'buy-10-get-2-free' (15-20% effective discount) generates 15-20% adoption; moderate-discount plus ancillary benefits (priority concierge guarantee) generates 30-40% adoption. Numbers appear in isolation without full axis context in original.",
+    "notes": "A3: numbers lack full axis anchoring (what is baseline? what's the alternative?); A4: 'moderate discount' is vague without quantification."
+  },
+  {
+    "node_id": "topic_str:Process-Over-Player Philosophy",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Row 1 only required for topic_string_cluster_seed per constraints. Passes."
+  },
+  {
+    "node_id": "topic_str:Quality of Life Variables",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Row 1 only. Passes."
+  },
+  {
+    "node_id": "topic_str:Cohort-Based Pricing",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Row 1 only. Passes."
+  },
+  {
+    "node_id": "topic_str:Decoy Offers",
+    "node_kind": "topic_string_cluster_seed",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Row 1 only. Passes."
+  },
+  {
+    "node_id": "edge:Equity Dilution And Control|Founder Selection Bias",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": false,
+      "5": false,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A1", "A10"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Founder selection bias (screening for ambition/capital at hiring) and equity dilution represent dual constraints on scaling: founders selected for capital end up diluting early, founders selected for operation preserve equity but lack growth capital. Trade-off is context-dependent on stage.",
+    "notes": "A1: 'complementary aspects' is vague generic language, no named entities or examples; A10: Hidden conditional on what context makes them related. Full rubric required for edge."
+  },
+  {
+    "node_id": "topic:franchise_and_payment_control",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Payment processor control in franchising: the franchisor (e.g., Acquisition.com model) structures the payment flow so the franchisor's payments clear first, then remaining cash remits to franchisees. This ensures the franchisor is paid regardless of franchisee unit performance.",
+    "notes": "A1: Generic references to 'franchisees', 'you', 'merchants' without naming a specific company/person making the claim. Missing speaker attribution in original."
+  },
+  {
+    "node_id": "topic:founder_sales_dependency",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": false
+    },
+    "failure_modes": ["A1", "A5_or_A6"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A UAE tax services business (unnamed, ~$6M revenue, 7 agents) has founder doing $4M (68%) and agents doing $2M combined (~$300k each). Scaling to $24M target requires 80 agents instead of 8—but founder is bottleneck and hasn't built repeatable hiring/training system. Founder's closing rate is disproportionately high.",
+    "notes": "A1: 'Founder' is unbound generic role; company unnamed; A5_or_A6: Claims and numbers are fragmented into 'Key Numbers' + 'Claims' sections; 'Why It Works' is orphaned explanation."
+  },
+  {
+    "node_id": "topic:premium_offers",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Along axis offer-price-band, CAC scales differently: free-to-$100 offers use low CAC (e.g., $5-20), premium $5k-10k offers justify 5-10x higher CAC (~$50-200). Example: $10k offer at 5% conversion beats $100 offer at 10% conversion by 9.5x profit on same traffic. Pricing must match CAC tier.",
+    "notes": "A3: '5-10x higher CAC' floats without full axis context—what is the baseline? numbers appear decontextualized."
+  },
+  {
+    "node_id": "topic:business_model_selection",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": ["A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Service businesses (78-80% of market) have unscalable unit economics: marginal cost ≈ labor, only lever is price-per-transaction. SaaS (5% of market) has scalable unit economics: marginal cost ≈ zero, tradeoff is price-vs-growth-rate. Service businesses always raise prices (virtuous); SaaS balances margin vs growth.",
+    "notes": "A3: '80% of market', '5% of market' appear isolated without the comparative axis fully articulated in original."
+  },
+  {
+    "node_id": "summary:stop_selling_done_for_you_sell_franchises_instead_2RYARn7GMek.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A18"],
+    "passing": false,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "A18: 'more legitimate, more profitable' lacks metric. Better on what axis? Specific numbers needed (e.g., margins, scaling speed)."
+  },
+  {
+    "node_id": "topic:service_business_model",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "Service business model (78% of US market): scaling decision at $1-3M revenue where founder chooses: raise prices (virtuous: premium service model) or lower prices (vicious: race-to-bottom). Growth is slow, talent-constrained. White-collar roles require multi-year training; founders who stay hands-on become bottleneck.",
+    "notes": "A1: Generic role references ('founder', 'talent', 'hiring') throughout; missing named speaker/company. Text cut off mid-sentence."
+  },
+  {
+    "node_id": "topic:problem_solution_framework",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "failure_modes": [],
+    "passing": true,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "Framework explicitly labeled and structured. Claims are well-grounded and source-attributed."
+  },
+  {
+    "node_id": "topic:sales_fundamentals",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A3", "A5_or_A6", "A8"],
+    "passing": false,
+    "proposed_action": "demote_to_practice",
+    "rewritten_text": null,
+    "notes": "A1: 'Find the customer' is generic; A3: '$16' appears in isolation without axis (margins? LTV?); A5_or_A6: Three-bullet 'How-To' is atomized steps, not claims; A8: Hortative 'Promise meaningful help' without mechanism. Demote second claim to practice/advice."
+  },
+  {
+    "node_id": "summary:the_real_problem_with_done_for_you_businesses_iL5v-37Vm48.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A1"],
+    "passing": false,
+    "proposed_action": "keep",
+    "rewritten_text": null,
+    "notes": "A1: 'founder' is unbound generic role; should be named speaker."
+  },
+  {
+    "node_id": "summary:helping_a_3m_balloon_arch_business_fix_their_offer_lJ6jkoD5ApA.txt",
+    "node_kind": "video_summary",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A3"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "A $3M balloon arch business (unnamed founder, consulting case) has 18-19% COGS margins and 34% recurring revenue. Four load-bearing problems: weak customer avatar clarity (targeting too broad), vague offer positioning (unclear what unique value), weak messaging hierarchy (doesn't communicate primary benefit), poor handling of objections.",
+    "notes": "A1: 'founder' unbound; company name mentioned but not person; A3: percentages appear without axis—18-19% vs. what? Industry benchmark? vs. founder's goal?"
+  },
+  {
+    "node_id": "topic:sales_director_hiring",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": true,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": true
+    },
+    "failure_modes": ["A3", "A5_or_A6", "A13"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "In B2B agency recruiting (unnamed company, ~31 clients at ~$150k fees each), acquiring a sales director costs $60k ($15k/month spend over 4 months) and generates $600k lifetime gross profit (roughly 10:1 arbitrage). Constraint is belief not economics—companies avoid director hiring out of hiring uncertainty, not unit economics. Comparison cohort needed: which agencies do hire directors vs. don't?",
+    "notes": "A3: '$60k', '$600k', '$150k' are axis-less; A5_or_A6: 'Common Mistakes' is orphaned without flowing into claims; A13: 'anecdote-as-law'—cohort size (31 clients) is mentioned but comparison group (agencies that didn't hire directors) is missing."
+  },
+  {
+    "node_id": "topic:ai_adoption_rates",
+    "node_kind": "topic_note",
+    "scores": {
+      "1": false,
+      "2": false,
+      "3": false,
+      "4": true,
+      "5": false,
+      "6": false,
+      "7": false
+    },
+    "failure_modes": ["A1", "A3", "A4", "A12"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "AI adoption as of 2026 (per Claude Code course): 84% of 8.1B people have never used ChatGPT or Claude; 16% (1.3B) have used free tier; 0.3% (25M) pay $20/month; 0.04% (3.6M) are 'max users' on Claude Code or Codex. Adoption curve is steep at top (paid tier → enterprise). Opportunity: build products for the 84%, not the 0.04%.",
+    "notes": "A1: Speaker unattributed in original; A3: Percentages without context—84% of what? Globally? Developed markets only?; A4: 'should become a number one priority' lacks mechanism; A12: Time anchor missing (course released when?)."
+  },
+  {
+    "node_id": "edge:Service Business Reinvestment Strategy|Talent Retention Strategy",
+    "node_kind": "edge",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": false,
+      "6": null,
+      "7": false
+    },
+    "failure_modes": ["A1", "A10", "A18"],
+    "passing": false,
+    "proposed_action": "rewrite",
+    "rewritten_text": "In service businesses, reinvesting into talent development and compensation (rather than owner draw) creates brand loyalty independent of individual employees, enabling scaling beyond founder. Virtuous cycle: better retention → better delivery → reputation → attracts better hires. Breaks down if founder extracts excess owner compensation early.",
+    "notes": "A1: 'brand loyalty' is vague; A10: Hidden conditional (applies only to service, not SaaS); A18: 'virtuous cycle' is vague comparative without metrics."
+  }
+]
