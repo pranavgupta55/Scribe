@@ -116,13 +116,13 @@ function computeDegrees() {
 // blue) → TOPIC_HI (hub, deep warm red), travelling the LONG way around the
 // wheel (blue → cyan → green → yellow → orange → red) so mid-degree topics
 // pass through warm earth tones rather than purple. Saturates around degree
-// ~16 (log2 = 4) — beyond that, all hub nodes look equally "hot". A gentle
-// bias (p = 0.75) nudges t away from 0.5 toward either endpoint so topics
-// are slightly more likely to read as clearly cool or clearly warm than as
-// an ambiguous mid-tone.
+// ~16 (log2 = 4) — beyond that, all hub nodes look equally "hot". A strong
+// bias (p = 0.4) pushes t hard away from 0.5 toward either endpoint, so
+// only the narrowest middle band of degrees actually renders as green/yellow;
+// almost every topic reads as clearly cool or clearly warm.
 function topicColor(n) {
   const raw = Math.min(1, Math.log2(Math.max(1, n.degree || 0)) / 4);
-  const t = biasToExtremes(raw, 0.75);
+  const t = biasToExtremes(raw, 0.4);
   return mixHsl(TOPIC_LO, TOPIC_HI, t, 'long');
 }
 
@@ -1983,7 +1983,10 @@ async function sendCopy(opts = {}) {
     // the initial force config is the "extreme" one — no restart needed.
     for (const k in INTRO_START) setSliderUI(k, INTRO_START[k]);
     rebuildSim();
-    centerView();   // first center: fits the PCA seeds
+    // First center: a short delay lets the high-repulsion sim fan the
+    // tightly packed PCA seeds apart before we fit the viewport, so we
+    // zoom to the expanded layout instead of the original seed cluster.
+    setTimeout(centerView, 350);
 
     const smoothstep = p => p * p * (3 - 2 * p);
     const t0 = performance.now();
