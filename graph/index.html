@@ -359,6 +359,33 @@
     #right-toggle .rt-icon { display: inline-block; transition: transform 0.22s; }
     body.right-collapsed #right-toggle .rt-icon { transform: rotate(180deg); }
 
+    /* Dev-panel collapse toggle — mirror of #right-toggle, pinned top-LEFT.
+       Only visible in chat view. Slides #dev-panel off to the left so
+       #chat-main fills the freed width. */
+    #dev-toggle {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      width: 28px;
+      height: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      color: var(--text-dim);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 13;
+      transition: color 0.12s, border-color 0.12s;
+      user-select: none;
+      font-size: 13px;
+      line-height: 1;
+    }
+    #dev-toggle.show { display: flex; }
+    #dev-toggle:hover { color: var(--accent-red); border-color: var(--accent-red); }
+    #dev-toggle .dt-icon { display: inline-block; transition: transform 0.22s; }
+    body.dev-collapsed #dev-toggle .dt-icon { transform: rotate(180deg); }
+
     /* Column 1: node list */
     #node-list-col {
       width: 160px;
@@ -549,11 +576,13 @@
 
     /* ── Top-right: Graph | Chat | Copy toggle ──
        Stronger border + solid black bg so the selector reads clearly even
-       when older copy-turn panels stack behind it. */
+       when older copy-turn panels stack behind it. Anchored close to
+       #right-toggle (10px gap) so the chat-header can claim more horizontal
+       room for its mode buttons. */
     #view-toggle {
       position: absolute;
       top: 16px;
-      right: 96px;
+      right: 54px;
       display: flex;
       align-items: center;
       background: var(--bg-card);
@@ -630,11 +659,18 @@
     }
     #dev-panel {
       transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
-                  opacity 0.25s ease;
+                  opacity 0.25s ease,
+                  margin-left 0.32s cubic-bezier(0.4,0,0.2,1);
     }
     #dev-panel.is-hidden {
       transform: translateX(-110%);
       opacity: 0;
+      pointer-events: none;
+    }
+    /* User-collapsed (chat view only) — slide off and use a negative
+       margin so #chat-main flexes into the freed space. */
+    #dev-panel.collapsed {
+      transform: translateX(-100%);
       pointer-events: none;
     }
 
@@ -647,6 +683,7 @@
       flex-direction: column;
       border-right: 1px solid #1e1e1e;
       background: var(--bg-base);
+      flex-shrink: 0;
     }
     #dev-header {
       flex-shrink: 0;
@@ -683,6 +720,20 @@
       justify-content: space-between;
       gap: 8px;
     }
+    .dev-label .dev-name { display: flex; align-items: center; gap: 8px; }
+    .dev-count {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #5d5d5d;
+      padding: 1px 5px;
+      border: 1px solid #232323;
+      border-radius: 0;
+      white-space: nowrap;
+    }
+    .dev-count.empty { opacity: 0.35; }
 
     /* Copy buttons (dev blocks + chat) */
     .copy-btn {
@@ -933,41 +984,47 @@
 
     /* ── Chat header bar (status pill + mode toggles) ──
        Anchored top-left of #chat-main. Stops well short of the right edge so
-       it never collides with #view-toggle (which lives at right:96px and is
-       ~180px wide). Buttons wrap to a second row if width gets very tight. */
+       it never collides with #view-toggle (which lives at right:54px and is
+       ~180px wide). nowrap so buttons stay on one row; sizing is tuned so
+       the row fits even when the right sidebar is open. */
     #chat-header {
       position: absolute;
       top: 0;
       left: 0;
-      right: 300px;
+      right: 250px;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: flex-start;
-      gap: 6px;
+      gap: 5px;
       padding: 10px 16px 10px;
       background: linear-gradient(to bottom, var(--bg-base) 80%, transparent);
       z-index: 4;
       pointer-events: none;
-      transition: right 0.32s cubic-bezier(0.4,0,0.2,1);
+      transition: right 0.32s cubic-bezier(0.4,0,0.2,1),
+                  padding-left 0.32s cubic-bezier(0.4,0,0.2,1);
     }
     #chat-header > * { pointer-events: auto; }
+    /* When dev is collapsed the dev-toggle button sits at top-left; push the
+       header buttons over so the toggle isn't covered. */
+    body.dev-collapsed #chat-header { padding-left: 56px; }
 
     /* Status pill */
     #status-pill {
       display: flex;
       align-items: center;
       gap: 5px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       color: #777;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 0;
-      padding: 4px 10px;
+      padding: 3px 8px;
       letter-spacing: 0.02em;
       user-select: none;
-      min-width: 80px;
+      white-space: nowrap;
+      min-width: 70px;
     }
     .status-dot {
       width: 7px;
@@ -985,18 +1042,19 @@
       display: flex;
       align-items: center;
       gap: 5px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       font-family: inherit;
       color: #666;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 0;
-      padding: 4px 10px;
+      padding: 3px 8px;
       cursor: pointer;
       letter-spacing: 0.02em;
       transition: color 0.15s, border-color 0.15s, background 0.15s;
       user-select: none;
+      white-space: nowrap;
     }
     #gemini-only-btn:hover { color: var(--text-main); border-color: var(--accent-red-dim); }
     #gemini-only-btn.on {
@@ -1019,18 +1077,19 @@
       display: flex;
       align-items: center;
       gap: 5px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
       font-family: inherit;
       color: #666;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 0;
-      padding: 4px 10px;
+      padding: 3px 8px;
       cursor: pointer;
       letter-spacing: 0.02em;
       transition: color 0.15s, border-color 0.15s, background 0.15s;
       user-select: none;
+      white-space: nowrap;
     }
     #qwen-only-btn:hover { color: var(--text-main); border-color: #56d36466; }
     #qwen-only-btn.on {
@@ -1149,6 +1208,51 @@
     }
     .copy-col.new-panel { flex: 3; }
     .copy-col.all-panel { flex: 2; }
+
+    /* Vertical strip between the two panels — one labeled card per
+       sub-query, color-matched to its group's bounding box. */
+    .query-strip {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      padding: 36px 6px;
+      min-width: 0;
+      min-height: 0;
+    }
+    .qs-card {
+      flex: 1 1 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 6px 8px;
+      border: 1px solid #2a2a2a;
+      background: var(--bg-card);
+      overflow: hidden;
+    }
+    .qs-tag {
+      flex-shrink: 0;
+      align-self: flex-start;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0;
+      padding: 1px 6px;
+      line-height: 1.3;
+    }
+    .qs-text {
+      flex: 1;
+      min-height: 0;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow: hidden;
+      word-break: break-word;
+    }
 
     /* Eyebrow label — Inter caps, tight tracking, dim. */
     .copy-count {
@@ -1591,6 +1695,10 @@
       <span class="rt-icon">→</span>
     </button>
 
+    <button id="dev-toggle" title="Hide / show dev panel">
+      <span class="dt-icon">←</span>
+    </button>
+
     <button id="center-btn" title="Fit all nodes in view">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="1" y="1" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.2"/>
@@ -1617,23 +1725,23 @@
         <div id="dev-header">Dev · last round-trip</div>
         <div id="dev-scroll">
           <section class="dev-section">
-            <div class="dev-label"><span>System prompt</span><button class="copy-btn" data-copy="dev-system">Copy</button></div>
+            <div class="dev-label"><div class="dev-name"><span>System prompt</span><span class="dev-count empty" id="dev-system-count">—</span></div><button class="copy-btn" data-copy="dev-system">Copy</button></div>
             <pre class="dev-body" id="dev-system"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label"><span>Query decomposition</span></div>
+            <div class="dev-label"><div class="dev-name"><span>Query decomposition</span><span class="dev-count empty" id="dev-decomp-count">—</span></div></div>
             <pre class="dev-body" id="dev-decomp"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label"><span>RAG context (retrieved passages + facts)</span><button class="copy-btn" data-copy="dev-context">Copy</button></div>
+            <div class="dev-label"><div class="dev-name"><span>RAG context (retrieved passages + facts)</span><span class="dev-count empty" id="dev-context-count">—</span></div><button class="copy-btn" data-copy="dev-context">Copy</button></div>
             <pre class="dev-body" id="dev-context"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label"><span>Full user prompt (as sent)</span><button class="copy-btn" data-copy="dev-prompt">Copy</button></div>
+            <div class="dev-label"><div class="dev-name"><span>Full user prompt (as sent)</span><span class="dev-count empty" id="dev-prompt-count">—</span></div><button class="copy-btn" data-copy="dev-prompt">Copy</button></div>
             <pre class="dev-body" id="dev-prompt"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
-            <div class="dev-label"><span>Raw model response (un-rendered Markdown)</span><button class="copy-btn" data-copy="dev-response">Copy</button></div>
+            <div class="dev-label"><div class="dev-name"><span>Raw model response (un-rendered Markdown)</span><span class="dev-count empty" id="dev-response-count">—</span></div><button class="copy-btn" data-copy="dev-response">Copy</button></div>
             <pre class="dev-body" id="dev-response"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
         </div>
@@ -1649,7 +1757,7 @@
           </div>
           <button id="gemini-only-btn" title="Only use Gemini; error instead of falling back to local model">
             <span class="go-indicator"></span>
-            Gemini only
+            Gem only
           </button>
           <button id="qwen-only-btn" title="Skip Gemini and use local qwen3 only">
             <span class="qo-indicator"></span>

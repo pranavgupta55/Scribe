@@ -986,6 +986,9 @@ function setView(view) {
   // copy view already hides the sidebar via its own .is-hidden class).
   const rtEl = document.getElementById('right-toggle');
   if (rtEl) rtEl.classList.toggle('show', isGraph || isChat);
+  // Dev-panel toggle: only meaningful in chat view.
+  const dtEl = document.getElementById('dev-toggle');
+  if (dtEl) dtEl.classList.toggle('show', isChat);
 
   // Don't auto-focus the input when entering chat/copy — the user wants the
   // arrow keys to swap pages without first clicking out of the textarea.
@@ -1013,6 +1016,24 @@ if (rightToggleBtn && rightSidebar) {
     }
     rightSidebar.classList.toggle('collapsed', collapsing);
     document.body.classList.toggle('right-collapsed', collapsing);
+  });
+}
+
+// Dev-panel collapse — mirrors the right-sidebar pattern: slide off via
+// transform + negative margin so #chat-main flex-grows into the freed space.
+const devToggleBtn = document.getElementById('dev-toggle');
+const devPanelEl   = document.getElementById('dev-panel');
+if (devToggleBtn && devPanelEl) {
+  devToggleBtn.addEventListener('click', () => {
+    const collapsing = !devPanelEl.classList.contains('collapsed');
+    if (collapsing) {
+      const w = devPanelEl.offsetWidth;
+      devPanelEl.style.marginLeft = `-${w}px`;
+    } else {
+      devPanelEl.style.marginLeft = '';
+    }
+    devPanelEl.classList.toggle('collapsed', collapsing);
+    document.body.classList.toggle('dev-collapsed', collapsing);
   });
 }
 
@@ -1201,6 +1222,27 @@ document.addEventListener('click', e => {
   if (el) copyText(el.textContent, btn);
 });
 
+// Cheap token approximation — GPT-style BPE averages ~3.8 chars/tok on
+// English prose, more like ~3.3 for code/structured text. 3.5 is a fair
+// midpoint. Good enough for a dev-panel indicator (we're not budgeting).
+function _approxTokens(s) {
+  if (!s) return 0;
+  return Math.ceil(s.length / 3.5);
+}
+function _updateDevCount(id, text) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (text == null || text === '') {
+    el.textContent = '—';
+    el.classList.add('empty');
+  } else {
+    const t = _approxTokens(text);
+    const c = text.length;
+    el.textContent = `~${t.toLocaleString()}t · ${c.toLocaleString()}c`;
+    el.classList.remove('empty');
+  }
+}
+
 function setDevField(el, text) {
   if (!el) return;
   if (text == null || text === '') {
@@ -1208,6 +1250,8 @@ function setDevField(el, text) {
   } else {
     el.textContent = text; // monospaced, exact, un-rendered
   }
+  // Update the matching token-count badge (id = `<el.id>-count`).
+  if (el.id) _updateDevCount(`${el.id}-count`, text);
 }
 
 function resetDevPanel() {
@@ -1792,29 +1836,34 @@ function shortenSource(name) {
   return prettifySource(name).slice(0, 36);
 }
 
-const QUERY_COLORS = ['#4a9eff', '#56d364', '#bc8cff', '#e3b341'];
+const QUERY_COLORS = ['#4a9eff', '#56d364', '#bc8cff', '#e3b341', '#ff7b9c'];
 
+// Draw the colored bounding boxes around card groups in a bento grid.
+// Each source belongs to exactly ONE group, identified by its primary
+// sub-query index (the sub-query that retrieved it most often). Since the
+// server already sorts sources by primary_query_idx, the groups land
+// contiguously in DOM order and each rectangle is distinct.
 function drawQueryOverlays(grid, cards, sources, subQueries) {
+  if (!grid) return;
   grid.querySelectorAll('.query-overlay').forEach(el => el.remove());
   if (!subQueries || subQueries.length <= 1) return;
 
   const gridRect = grid.getBoundingClientRect();
-  // Group card elements by each query index they contributed to.
+  if (gridRect.width < 10 || gridRect.height < 10) return;
+
   const groups = {};  // qi -> [card elements]
   cards.forEach(({ card }, i) => {
     const src = sources[i];
     if (!src) return;
-    const qidxs = src.query_indices && src.query_indices.length ? src.query_indices : [src.primary_query_idx || 0];
-    qidxs.forEach(qi => {
-      if (!groups[qi]) groups[qi] = [];
-      groups[qi].push(card);
-    });
+    const qi = src.primary_query_idx ?? 0;
+    if (!groups[qi]) groups[qi] = [];
+    groups[qi].push(card);
   });
 
   Object.entries(groups).forEach(([qiStr, groupCards]) => {
     const qi = parseInt(qiStr);
     const color = QUERY_COLORS[qi % QUERY_COLORS.length];
-    const MARGIN = 5;
+    const MARGIN = 4;
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
     groupCards.forEach(card => {
       if (card.style.display === 'none') return;
@@ -1834,13 +1883,6 @@ function drawQueryOverlays(grid, cards, sources, subQueries) {
     overlay.style.height     = `${maxY - minY + MARGIN * 2}px`;
     overlay.style.border     = `1.5px solid ${color}99`;
     overlay.style.background = `${color}0a`;
-
-    const label = document.createElement('div');
-    label.className   = 'query-overlay-label';
-    label.style.color = color;
-    const sq = subQueries[qi] || `Query ${qi + 1}`;
-    label.textContent = sq.length > 44 ? sq.slice(0, 41) + '…' : sq;
-    overlay.appendChild(label);
     grid.insertBefore(overlay, grid.firstChild);
   });
 }
@@ -1865,6 +1907,7 @@ function buildCopyTurn(query, data) {
       <div class="bento-grid new-grid"></div>
       <button class="copy-all-btn new-copy-all">Copy all new</button>
     </div>
+    <div class="query-strip"></div>
     <div class="copy-col all-panel">
       <div class="copy-count">
         All sources <span class="count-num">${sources.length}</span>
@@ -1875,8 +1918,29 @@ function buildCopyTurn(query, data) {
   `;
   const newGrid = turn.querySelector('.new-grid');
   const allGrid = turn.querySelector('.all-grid');
+  const queryStrip = turn.querySelector('.query-strip');
   const newCopyAll = turn.querySelector('.new-copy-all');
   const allCopyAll = turn.querySelector('.all-copy-all');
+
+  // Build the sub-query strip — one colored card per sub-query. Hidden when
+  // the query didn't split (single sub-query = no useful grouping signal).
+  if (subQueries.length > 1) {
+    subQueries.forEach((sq, qi) => {
+      const color = QUERY_COLORS[qi % QUERY_COLORS.length];
+      const card = document.createElement('div');
+      card.className = 'qs-card';
+      card.style.borderColor = `${color}88`;
+      card.style.background  = `${color}10`;
+      card.innerHTML = `
+        <div class="qs-tag" style="background:${color};color:#000">${qi + 1}</div>
+        <div class="qs-text" style="color:${color}"></div>
+      `;
+      card.querySelector('.qs-text').textContent = sq;
+      queryStrip.appendChild(card);
+    });
+  } else {
+    queryStrip.style.display = 'none';
+  }
 
   // Bulk text for the copy-all buttons. Left button: sources first, then a
   // separator, then the user prompt (helps a downstream model treat the user
@@ -1939,12 +2003,43 @@ function buildCopyTurn(query, data) {
   copyStage.appendChild(turn);
   copyEmpty.classList.add('hidden');
 
-  copyTurns.push({
+  const turnObj = {
     el: turn, query, sources, newSources,
-    newGrid, allGrid, newCards, allCards, promptCard, subQueries,
-  });
+    newGrid, allGrid, queryStrip, newCards, allCards, promptCard, subQueries,
+  };
+  copyTurns.push(turnObj);
+
+  // Sync overlay redraw on grid resize — fixes the lag-frame artifact where
+  // overlays kept their old size for ~1 frame after a zoom/resize.
+  if (subQueries.length > 1 && 'ResizeObserver' in window) {
+    const ro = new ResizeObserver(() => {
+      drawQueryOverlays(turnObj.newGrid, turnObj.newCards, turnObj.newSources, turnObj.subQueries);
+      drawQueryOverlays(turnObj.allGrid, turnObj.allCards, turnObj.sources,    turnObj.subQueries);
+      fitQueryStrip(turnObj.queryStrip);
+    });
+    ro.observe(turnObj.newGrid);
+    ro.observe(turnObj.allGrid);
+    turnObj._ro = ro;
+  }
+
   copyFocus = copyTurns.length - 1;
   layoutCopyStack();
+}
+
+// Dynamic font-fit for the query-strip text — shrink until every line fits
+// without horizontal overflow. Cap at 12px (don't grow above the design max).
+function fitQueryStrip(strip) {
+  if (!strip || strip.style.display === 'none') return;
+  const cards = strip.querySelectorAll('.qs-card .qs-text');
+  cards.forEach(t => {
+    let fs = 12;
+    t.style.fontSize = fs + 'px';
+    // Shrink until scrollHeight fits inside the card's text region.
+    while (fs > 7 && (t.scrollHeight > t.clientHeight || t.scrollWidth > t.clientWidth)) {
+      fs -= 0.5;
+      t.style.fontSize = fs + 'px';
+    }
+  });
 }
 
 function layoutBentoFor(turn) {
@@ -2022,6 +2117,7 @@ function layoutBentoFor(turn) {
   requestAnimationFrame(() => {
     drawQueryOverlays(turn.newGrid, turn.newCards, turn.newSources, turn.subQueries);
     drawQueryOverlays(turn.allGrid, turn.allCards, turn.sources,    turn.subQueries);
+    fitQueryStrip(turn.queryStrip);
   });
 }
 
