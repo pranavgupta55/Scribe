@@ -997,6 +997,8 @@
     }
     .composer-meta.warn  { color: #d4a83a; }
     .composer-meta.alert { color: #d96354; }
+    .composer-meta .meta-sep { color: var(--text-mute); opacity: 0.6; }
+    #chat-meta-conv { color: var(--text-mute); }
     #chat-send {
       flex-shrink: 0;
       width: 32px; height: 32px; border-radius: 0; border: none;
@@ -1803,7 +1805,11 @@
               </svg>
             </button>
           </div>
-          <div class="composer-meta" id="chat-meta">0 tokens</div>
+          <div class="composer-meta" id="chat-meta">
+            <span id="chat-meta-input">0 tokens</span>
+            <span class="meta-sep"> · </span>
+            <span id="chat-meta-conv" title="System prompt + chat history + your current input — the running total sent to the model on next send">0 conv</span>
+          </div>
         </div>
       </div>
     </div>

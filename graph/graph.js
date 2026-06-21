@@ -1292,15 +1292,37 @@ function autoGrow() {
   chatInput.style.height = Math.min(chatInput.scrollHeight, 200) + 'px';
 }
 // Live token counter under the textarea. Approx via 3.5 chars/token.
-const _chatMeta = document.getElementById('chat-meta');
+// Two counters:
+//   #chat-meta-input → tokens of the current draft (just the textarea)
+//   #chat-meta-conv  → running total sent to the model on next send
+//                      = system prompt + prior chat history + draft input
+const _chatMeta      = document.getElementById('chat-meta');
+const _chatMetaInput = document.getElementById('chat-meta-input');
+const _chatMetaConv  = document.getElementById('chat-meta-conv');
+// Updated on every debug event from the server (the source of truth).
+let _systemTokens  = 0;   // tokens used by the system prompt
+let _historyTokens = 0;   // tokens used by prior turns ONLY (no current draft)
+const _approxTok = s => (s && s.length) ? Math.ceil(s.length / 3.5) : 0;
 function updateChatMeta() {
-  if (!_chatMeta) return;
+  if (!_chatMeta || !_chatMetaInput || !_chatMetaConv) return;
   const txt = chatInput.value || '';
-  const t = txt.length ? Math.ceil(txt.length / 3.5) : 0;
-  _chatMeta.textContent = `${t.toLocaleString()} token${t === 1 ? '' : 's'}`;
+  const inputT = _approxTok(txt);
+  const convT  = _systemTokens + _historyTokens + inputT;
+  _chatMetaInput.textContent = `${inputT.toLocaleString()} token${inputT === 1 ? '' : 's'}`;
+  _chatMetaConv.textContent  = `${convT.toLocaleString()} conv`;
+  // warn / alert tier reflects the conversation total, not the draft.
   _chatMeta.classList.remove('warn', 'alert');
-  if (t > 6000) _chatMeta.classList.add('alert');
-  else if (t > 2000) _chatMeta.classList.add('warn');
+  if (convT > 24_000)      _chatMeta.classList.add('alert');
+  else if (convT > 12_000) _chatMeta.classList.add('warn');
+}
+// Recompute history tokens from the locally-tracked chatHistory. Called
+// after each turn settles so the conv counter advances. The server sends
+// authoritative numbers via the debug event; this is the fallback used
+// before the first debug event arrives (e.g., on chat-view-show with a
+// fresh history loaded from a prior session).
+function _recalcHistoryTokens() {
+  _historyTokens = (chatHistory || []).reduce(
+    (sum, m) => sum + _approxTok(m.content || ''), 0);
 }
 chatInput.addEventListener('input', () => { autoGrow(); updateChatMeta(); });
 updateChatMeta();
@@ -1488,7 +1510,13 @@ async function sendChat(opts = {}) {
             setDevField(devDecomp, '(atomic — no split)');
           }
           setDevField(devContext, evt.context);
-          setDevField(devPrompt, evt.prompt);
+          setDevField(devPrompt, evt.prompt);  // FULL wire payload (ADR follow-up)
+          // Pin the system-prompt token count from the server (authoritative)
+          // so the conv-total counter under the chat input is exact.
+          if (typeof evt.system_tokens === 'number') {
+            _systemTokens = evt.system_tokens;
+            updateChatMeta();
+          }
         } else if (evt.type === 'backend') {
           // Which engine is answering this turn
           updateStatusFromBackend(evt.backend);
@@ -1537,6 +1565,10 @@ async function sendChat(opts = {}) {
     if (answer) {
       chatHistory.push({ role: 'assistant', content: answer });
     }
+    // History grew → recompute the conv-total token counter so the
+    // baseline reflects what'll be sent on the NEXT turn.
+    _recalcHistoryTokens();
+    updateChatMeta();
     chatBusy = false;
     chatSend.disabled = false;
     if (refocus) chatInput.focus();

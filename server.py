@@ -619,6 +619,20 @@ def build_prompt(query, context):
             f"Question: {query}\n\nAnswer:")
 
 
+def assemble_wire(system, entries):
+    """Render the full wire payload that goes to the model as a single
+    flat string for the Dev panel. Surfaces system prompt + every history
+    turn + this turn's user message exactly as the model sees them, in
+    order, with role labels so the user can read the conversation stack."""
+    parts = [f"===== SYSTEM =====\n{system}"]
+    for e in entries:
+        label = (e.get("role") or "").upper()
+        if e.get("compressed"):
+            label += " [compacted]"
+        parts.append(f"===== {label} =====\n{e.get('content', '')}")
+    return "\n\n".join(parts)
+
+
 # ── Chat history + tiered token-budget compaction ────────────────────────────
 # Layer the conversation onto Gemini's 32k context window. Tier 1 fires at
 # 75% (24k): compress oldest assistant responses to a short truncation.
@@ -942,11 +956,17 @@ class Handler(SimpleHTTPRequestHandler):
         entries, total_tokens = build_chat_entries(history, query, context)
 
         # ── Debug round-trip (Dev panel): the exact strings we send ──
+        # `prompt` is the FULL wire payload (system + every turn + current
+        # question), not just the latest user message — that lets the dev
+        # panel show exactly what the model receives. `system_tokens` and
+        # `total_tokens` let the client compute a live conversation-total
+        # token counter under the chat input.
         self._sse({"type": "debug",
                    "system": _SYSTEM,
                    "context": context,
-                   "prompt": build_prompt(query, context),
+                   "prompt": assemble_wire(_SYSTEM, entries),
                    "sub_queries": sub_queries,
+                   "system_tokens": _approx_tokens(_SYSTEM),
                    "history_tokens": total_tokens,
                    "history_msgs": len(entries)})
 
