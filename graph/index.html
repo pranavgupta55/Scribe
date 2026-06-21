@@ -1216,23 +1216,26 @@
       min-width: 0;
       padding: 4px 6px;
     }
-    /* ADR 0004 D3: NEW gets a 900 px cap so on wide viewports its cells
-       don't balloon while ALL stays cramped. Below the cap the 3:2 split
-       still applies; above it, the leftover width grows ALL via flex:2. */
-    .copy-col.new-panel { flex: 3; max-width: 900px; }
-    .copy-col.all-panel { flex: 2; }
+    /* ADR 0005 D5: equal flex on NEW and ALL so the .query-strip between
+       them sits at the horizontal centre of .copy-turn. NEW retains the
+       900 px cap from ADR 0004 D3 so it doesn't balloon on ultrawide
+       viewports; leftover width flows into ALL via its `flex: 1`. */
+    .copy-col.new-panel { flex: 1; max-width: 900px; }
+    .copy-col.all-panel { flex: 1; }
 
     /* Vertical strip between the two panels — DECOMP header + one labeled
        card per sub-query, color-matched to its primary group. Display:none
        collapses it cleanly when there's no decomp.
 
-       ADR 0004 D2: widened from 70 → 140 px and cards sized to content
-       (flex: 0 0 auto) so the stack vertically centers via justify-content
-       instead of stretching to fill the panel height. */
+       ADR 0005 D4: now a flex sibling (was `flex: 0 0 140px` fixed in ADR
+       0004 D2) so it scales with viewport / zoom alongside the NEW and
+       ALL panels. Min / max keep it readable at any width. */
     .query-strip {
       position: relative;
       z-index: 1;
-      flex: 0 0 140px;
+      flex: 1 1 0;
+      min-width: 140px;
+      max-width: 200px;
       align-self: stretch;
       display: flex;
       flex-direction: column;
@@ -1240,7 +1243,6 @@
       align-items: center;
       gap: 8px;
       padding: 12px 10px;
-      min-width: 0;
       min-height: 0;
       box-sizing: border-box;
     }
@@ -1335,9 +1337,10 @@
     }
     .bento-card:hover { background: var(--bg-elev-2); }
     .copy-turn.off .bento-card { cursor: default; }
+    /* ADR 0005 D6: bento text shrunk one step for density. */
     .bento-card .bc-head {
       font-family: var(--font-sans);
-      font-size: 9.5px;
+      font-size: 8.5px;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
@@ -1356,8 +1359,8 @@
       overflow: hidden;
       flex: 1;
       min-height: 0;
-      font-size: 8px;
-      line-height: 1.4;
+      font-size: 7px;
+      line-height: 1.35;
     }
 
     /* User-prompt cell — IMPORTANT surface = saturated red, white text. */
@@ -1751,7 +1754,7 @@
     <div id="chat-panel">
       <!-- Left: Dev / Debug round-trip for the most recent turn -->
       <div id="dev-panel">
-        <div id="dev-header">Dev · last round-trip</div>
+        <div id="dev-header">Dev</div>
         <div id="dev-scroll">
           <section class="dev-section">
             <div class="dev-label"><div class="dev-name"><span>System prompt</span><span class="dev-count empty" id="dev-system-count">—</span></div><button class="copy-btn" data-copy="dev-system">Copy</button></div>

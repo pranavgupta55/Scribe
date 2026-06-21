@@ -1037,41 +1037,15 @@ if (devToggleBtn && devPanelEl) {
   });
 }
 
-// Keep the chat content visually centered in the VIEWPORT, not just inside
-// the (variable-width) #chat-main flex column. When dev-panel collapses but
-// the right sidebar is still open, #chat-main expands left — without this
-// shim, the text column slides off-center to the left.
-//
-// ADR 0004 D1: clamp the shift to the slack chat-inner has inside chat-main.
-// Without the clamp, when dev-panel is much wider than the right sidebar,
-// the negative translateX slides the inner past chat-main's left edge and
-// the title / bullets / composer end up clipped behind the dev-panel.
+// ADR 0005 D1: chat content centers naturally inside #chat-main via
+// `.chat-inner { max-width: 720px; margin: 0 auto }`. The prior
+// viewport-centering shim (ADR 0002 D2, ADR 0004 D1 clamp) computed
+// translateX from sidebar widths — math was off and the inner ended up
+// pinned to chat-main's edge. The function survives as a no-op that
+// clears any leftover inline transform; call sites stay untouched.
 function centerChatToViewport() {
-  const inner = document.querySelector('.chat-inner');
-  const innerComp = document.querySelector('.composer-inner');
-  const meta = document.querySelector('.composer-meta');
-  if (!inner) return;
-  const devColRoot   = document.getElementById('dev-panel');
-  const rightColRoot = document.getElementById('right');
-  const chatMain     = document.getElementById('chat-main');
-  const devVisible   = devColRoot && !devColRoot.classList.contains('collapsed') && !devColRoot.classList.contains('is-hidden');
-  const rightVisible = rightColRoot && !rightColRoot.classList.contains('collapsed') && !rightColRoot.classList.contains('is-hidden');
-  const devW   = devVisible   ? devColRoot.getBoundingClientRect().width   : 0;
-  const rightW = rightVisible ? rightColRoot.getBoundingClientRect().width : 0;
-  // chat-inner currently centers inside #chat-main, which spans
-  // [devW, body - rightW]. Its midpoint sits at body/2 + devW/2 - rightW/2.
-  // We want the midpoint at body/2, so apply translateX(rightW/2 - devW/2)…
-  const desired = (rightW - devW) / 2;
-  // …but only as far as chat-inner's slack inside chat-main allows, or it
-  // overflows the column and gets clipped by whichever panel is wider.
-  const chatMainW = chatMain ? chatMain.getBoundingClientRect().width : 0;
-  const innerW    = Math.min(720, chatMainW);
-  const slack     = Math.max(0, (chatMainW - innerW) / 2);
-  const shift     = Math.round(Math.max(-slack, Math.min(slack, desired)));
-  const t = shift ? `translateX(${shift}px)` : '';
-  inner.style.transform = t;
-  if (innerComp) innerComp.style.transform = t;
-  if (meta) meta.style.transform = t;
+  document.querySelectorAll('.chat-inner, .composer-inner, .composer-meta')
+    .forEach(el => { el.style.transform = ''; });
 }
 
 // ─── Chat (RAG over the knowledge base) ───────────────────────────────────────
@@ -2107,18 +2081,23 @@ function layoutBentoFor(turn) {
       grid.style.height = '';
       grid.style.gridTemplateColumns = '1fr';
       grid.style.gridTemplateRows = '1fr';
+      col.style.overflowY = '';
       return;
     }
-    const colRect = col.getBoundingClientRect();
+    // ADR 0005 D3: read offsetWidth/offsetHeight, NOT
+    // getBoundingClientRect(). offset* returns the layout box and is
+    // immune to the .copy-turn carousel's transform; the prior code
+    // sampled rect mid-transition and produced shrunken cells until a
+    // browser zoom refired the ResizeObserver.
     const headerEl = col.querySelector('.copy-count');
     const btnEl    = col.querySelector('.copy-all-btn');
     const headerH  = headerEl ? headerEl.offsetHeight : 0;
     const btnH     = btnEl    ? btnEl.offsetHeight    : 0;
 
-    const availW = colRect.width  - PAD_H;
+    const availW = col.offsetWidth  - PAD_H;
     // 4 gaps with space-evenly: above-header / header-bento / bento-button /
     // below-button — reserve MIN_GAP for each so the bento doesn't crowd them.
-    const availH = colRect.height - PAD_V - headerH - btnH - 4 * MIN_GAP;
+    const availH = col.offsetHeight - PAD_V - headerH - btnH - 4 * MIN_GAP;
     if (availW < 50 || availH < 50) return;
 
     const lens = sources.map(s =>
@@ -2127,10 +2106,17 @@ function layoutBentoFor(turn) {
     const spec = bentoPackSquare(lens.length, lens, availW, availH, reserved);
     if (!spec) return;
 
-    const cellSize = Math.floor(Math.min(
+    let cellSize = Math.floor(Math.min(
       (availW - GAP * (spec.W - 1)) / spec.W,
       (availH - GAP * (spec.H - 1)) / spec.H
     ));
+    // ADR 0005 D7: when the source count would force unreadable cells,
+    // floor cellSize at 60 px and let the col scroll vertically instead
+    // of spilling out the bottom of the panel.
+    const MIN_CELL = 60;
+    const overflowing = cellSize < MIN_CELL;
+    if (overflowing) cellSize = MIN_CELL;
+    col.style.overflowY = overflowing ? 'auto' : '';
     grid.style.gridTemplateColumns = `repeat(${spec.W}, ${cellSize}px)`;
     grid.style.gridTemplateRows    = `repeat(${spec.H}, ${cellSize}px)`;
     grid.style.width  = `${spec.W * cellSize + GAP * (spec.W - 1)}px`;
@@ -2152,7 +2138,9 @@ function layoutBentoFor(turn) {
     // without re-running the bento packer.
     grid._lastPlacements = spec.placements;
     requestAnimationFrame(() => {
-      cards.forEach(({ body }) => fitTextToBox(body, 9, 4));
+      // ADR 0005 D6: bento body text shrinks one step; floor lowered to
+      // match the smaller 7 px starting size.
+      cards.forEach(({ body }) => fitTextToBox(body, 8, 3));
       if (hasPrompt) fitTextToBox(turn.promptCard.body, 13, 6);
     });
   }
