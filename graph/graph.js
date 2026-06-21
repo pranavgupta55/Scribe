@@ -151,7 +151,11 @@ function nodeRadius(d) {
 }
 
 function screenToWorld(sx, sy) {
-  return [(sx - W / 2 - tx) / scale, (sy - H / 2 - ty) / scale];
+  // sx/sy come in as e.clientX/Y (viewport-relative); convert to canvas-local
+  // first so the fixed #topbar (48px) and any other offset don't skew the hit
+  // test. Earlier code assumed canvas was at (0,0) of the viewport.
+  const rect = canvas.getBoundingClientRect();
+  return [(sx - rect.left - W / 2 - tx) / scale, (sy - rect.top - H / 2 - ty) / scale];
 }
 
 function hitTest(sx, sy) {
