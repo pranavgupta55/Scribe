@@ -693,9 +693,11 @@
       background: var(--bg-base);
       flex-shrink: 0;
     }
+    /* ADR 0004 D4b: extra top padding so the header doesn't sit flush
+       against the (now invisible) topbar reserve. */
     #dev-header {
       flex-shrink: 0;
-      padding: 12px 16px;
+      padding: 20px 16px 12px;
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -1214,22 +1216,30 @@
       min-width: 0;
       padding: 4px 6px;
     }
-    .copy-col.new-panel { flex: 3; }
+    /* ADR 0004 D3: NEW gets a 900 px cap so on wide viewports its cells
+       don't balloon while ALL stays cramped. Below the cap the 3:2 split
+       still applies; above it, the leftover width grows ALL via flex:2. */
+    .copy-col.new-panel { flex: 3; max-width: 900px; }
     .copy-col.all-panel { flex: 2; }
 
     /* Vertical strip between the two panels — DECOMP header + one labeled
        card per sub-query, color-matched to its primary group. Display:none
-       collapses it cleanly when there's no decomp. */
+       collapses it cleanly when there's no decomp.
+
+       ADR 0004 D2: widened from 70 → 140 px and cards sized to content
+       (flex: 0 0 auto) so the stack vertically centers via justify-content
+       instead of stretching to fill the panel height. */
     .query-strip {
       position: relative;
       z-index: 1;
-      flex: 0 0 70px;
+      flex: 0 0 140px;
       align-self: stretch;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 6px;
-      padding: 8px 0;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 10px;
       min-width: 0;
       min-height: 0;
       box-sizing: border-box;
@@ -1237,24 +1247,23 @@
     .qs-header {
       flex-shrink: 0;
       font-family: var(--font-sans);
-      font-size: 9.5px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--text-mute);
       text-align: center;
-      padding: 2px 0 6px;
+      padding: 2px 0 4px;
     }
     .qs-card {
-      flex: 1 1 0;
-      min-height: 0;
+      flex: 0 0 auto;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 4px;
-      padding: 6px 5px;
+      padding: 8px 10px;
       border: 2px solid #2a2a2a;
       background: transparent;
-      overflow: hidden;
       box-sizing: border-box;
     }
     .qs-tag {
@@ -1268,12 +1277,9 @@
       line-height: 1.3;
     }
     .qs-text {
-      flex: 1;
-      min-height: 0;
       font-family: var(--font-mono);
-      font-size: 10px;
-      line-height: 1.3;
-      overflow: hidden;
+      font-size: 11px;
+      line-height: 1.4;
       word-break: break-word;
     }
 

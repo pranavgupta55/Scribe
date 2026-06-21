@@ -1041,6 +1041,11 @@ if (devToggleBtn && devPanelEl) {
 // the (variable-width) #chat-main flex column. When dev-panel collapses but
 // the right sidebar is still open, #chat-main expands left — without this
 // shim, the text column slides off-center to the left.
+//
+// ADR 0004 D1: clamp the shift to the slack chat-inner has inside chat-main.
+// Without the clamp, when dev-panel is much wider than the right sidebar,
+// the negative translateX slides the inner past chat-main's left edge and
+// the title / bullets / composer end up clipped behind the dev-panel.
 function centerChatToViewport() {
   const inner = document.querySelector('.chat-inner');
   const innerComp = document.querySelector('.composer-inner');
@@ -1048,14 +1053,21 @@ function centerChatToViewport() {
   if (!inner) return;
   const devColRoot   = document.getElementById('dev-panel');
   const rightColRoot = document.getElementById('right');
+  const chatMain     = document.getElementById('chat-main');
   const devVisible   = devColRoot && !devColRoot.classList.contains('collapsed') && !devColRoot.classList.contains('is-hidden');
   const rightVisible = rightColRoot && !rightColRoot.classList.contains('collapsed') && !rightColRoot.classList.contains('is-hidden');
   const devW   = devVisible   ? devColRoot.getBoundingClientRect().width   : 0;
   const rightW = rightVisible ? rightColRoot.getBoundingClientRect().width : 0;
   // chat-inner currently centers inside #chat-main, which spans
   // [devW, body - rightW]. Its midpoint sits at body/2 + devW/2 - rightW/2.
-  // We want the midpoint at body/2, so apply translateX(rightW/2 - devW/2).
-  const shift = Math.round((rightW - devW) / 2);
+  // We want the midpoint at body/2, so apply translateX(rightW/2 - devW/2)…
+  const desired = (rightW - devW) / 2;
+  // …but only as far as chat-inner's slack inside chat-main allows, or it
+  // overflows the column and gets clipped by whichever panel is wider.
+  const chatMainW = chatMain ? chatMain.getBoundingClientRect().width : 0;
+  const innerW    = Math.min(720, chatMainW);
+  const slack     = Math.max(0, (chatMainW - innerW) / 2);
+  const shift     = Math.round(Math.max(-slack, Math.min(slack, desired)));
   const t = shift ? `translateX(${shift}px)` : '';
   inner.style.transform = t;
   if (innerComp) innerComp.style.transform = t;
@@ -2018,6 +2030,9 @@ function buildCopyTurn(query, data) {
     newGrid.innerHTML = '<div class="bc-empty">— no new sources —</div>';
     newGrid.style.gridTemplateColumns = '1fr';
     newGrid.style.gridTemplateRows = '1fr';
+    // ADR 0004 D4a: nothing to copy → hide the bulk button entirely so it
+    // doesn't read as an actionable affordance on the empty state.
+    newCopyAll.style.display = 'none';
   } else {
     newSources.forEach(s => {
       const c = makeCard(shortenSource(s.name), summaryForCell(s),
@@ -2056,16 +2071,17 @@ function buildCopyTurn(query, data) {
   layoutCopyStack();
 }
 
-// Dynamic font-fit for the query-strip text — shrink until every line fits
-// without horizontal overflow. Cap at 12px (don't grow above the design max).
+// Dynamic font-fit for the query-strip text — defensive shrink for very
+// long sub-queries that would still overflow the (now 140 px) strip card.
+// ADR 0004 D2: floor raised from 7 → 9 px since the strip is wide enough
+// that normal queries shouldn't trip the shrink at all.
 function fitQueryStrip(strip) {
   if (!strip || strip.style.display === 'none') return;
   const cards = strip.querySelectorAll('.qs-card .qs-text');
   cards.forEach(t => {
     let fs = 12;
     t.style.fontSize = fs + 'px';
-    // Shrink until scrollHeight fits inside the card's text region.
-    while (fs > 7 && (t.scrollHeight > t.clientHeight || t.scrollWidth > t.clientWidth)) {
+    while (fs > 9 && t.scrollWidth > t.clientWidth) {
       fs -= 0.5;
       t.style.fontSize = fs + 'px';
     }
