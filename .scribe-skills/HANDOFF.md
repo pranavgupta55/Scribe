@@ -135,3 +135,23 @@ The second cron (`cc5bc233` at 07:18 PDT) will still fire — it'll see all phas
 ### Args plumbing fix in workflow.js
 - Added `typeof cfg === 'string'` handling so args accepts both inline object and JSON-encoded string
 - First attempt failed with `args.sources undefined` — workflow now defensively unwraps
+
+---
+
+## Wave 2 addendum (2026-06-21 13:14 PDT)
+
+**Status:** Wave 2 Sonnet extraction complete. Downstream Phase 3b/4/5 IN PROGRESS (pulling qwen3-embedding:8b first).
+
+### Phase 3a Wave 2 (Sonnet longs, 13:14–13:22 PDT)
+- 15/15 ok, 0 failed, 1.79M tokens, 456s wall, ~119k tokens/agent
+- Claims per long: 12-26 (Transform Your Choices peaked at 26)
+- Total extracted on disk: 285 (+15 from wave 2)
+
+### Outstanding before graph rebuild
+- qwen3-embedding:8b model pull (~5GB, in progress)
+- Phase 3b prepass + merge + 12 Haiku classify batches
+- Phase 4 candidate computation + ~40 Haiku connection-judge batches
+- Phase 5 export_graph_v2.py
+
+### Deferred
+- 20 remaining longs still in transcripts/ but not extracted — defer to a later cron/day
