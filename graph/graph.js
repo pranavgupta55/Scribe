@@ -158,11 +158,20 @@ function screenToWorld(sx, sy) {
   return [(sx - rect.left - W / 2 - tx) / scale, (sy - rect.top - H / 2 - ty) / scale];
 }
 
+// True iff this node's level is currently toggled visible. v1 graphs (no
+// `level` field) are always visible — preserves back-compat with `?graph=v1`.
+function isVisible(n) {
+  if (!n) return false;
+  if (n.level == null) return true;
+  return cfg.visibleLevels.has(n.level);
+}
+
 function hitTest(sx, sy) {
   const [wx, wy] = screenToWorld(sx, sy);
   for (let i = nodes.length - 1; i >= 0; i--) {
     const n = nodes[i];
     if (n.x == null) continue;
+    if (!isVisible(n)) continue;
     const r = nodeRadius(n) + 4;
     if ((n.x - wx) ** 2 + (n.y - wy) ** 2 <= r ** 2) return n;
   }
@@ -207,7 +216,13 @@ const sliderRanges = {
   edgeRepel: [0,   240],    // default 50 → 120 (push edges apart from each other)
 };
 
-let cfg = { repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0, edgeRepel: 0 };
+let cfg = {
+  repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0, edgeRepel: 0,
+  // ADR-0001 v2 viewer adaptation: per-tier visibility. Default reduces the
+  // 4865-node v2 hairball to ~1089 nodes (L0 + L1 + source). Hidden levels
+  // skip rendering, force-tick physics, and the sidebar TOPICS list.
+  visibleLevels: new Set(['L0', 'L1', 'source']),
+};
 
 function updateCfgFromSlider(k, sliderVal) {
   const [lo, hi] = sliderRanges[k];
@@ -238,6 +253,27 @@ Object.keys(sliderRanges).forEach(k => {
   });
 });
 
+// ─── Level filter + source search wiring ─────────────────────────────────────
+// Checkboxes live in #right > #node-list-col > #list-header (kept outside the
+// re-rendered .node-item list so the input keeps focus across keystrokes).
+// Declared here (NOT down in the buildNodeList block) so the early wiring
+// can resolve the input element without hitting a temporal-dead-zone error.
+let sourceSearchInput = document.getElementById('source-search');
+if (sourceSearchInput) {
+  sourceSearchInput.addEventListener('input', () => {
+    buildNodeList();
+  });
+}
+document.querySelectorAll('.level-filter input[type="checkbox"]').forEach(cb => {
+  cb.addEventListener('change', () => {
+    const lvl = cb.dataset.level;
+    if (cb.checked) cfg.visibleLevels.add(lvl);
+    else            cfg.visibleLevels.delete(lvl);
+    rebuildSim();
+    draw();
+  });
+});
+
 // Set of link references that are the highest-weight edge for at least one
 // of their endpoints. These are NEVER filtered out, so no node ever becomes
 // completely orphaned by the edge-weight threshold.
@@ -259,7 +295,19 @@ function computeKeystoneLinks() {
 }
 
 function activeLinks() {
-  return links.filter(l => (l.weight ?? 0) >= cfg.edgeMin || keystoneLinks.has(l));
+  return links.filter(l => {
+    if ((l.weight ?? 0) < cfg.edgeMin && !keystoneLinks.has(l)) return false;
+    // Drop edges whose endpoint level is hidden — keeps the link force from
+    // tugging visible nodes toward an invisible (and now stationary) sibling.
+    const s = typeof l.source === 'object' ? l.source : nodes.find(n => n.id === l.source);
+    const t = typeof l.target === 'object' ? l.target : nodes.find(n => n.id === l.target);
+    if (!isVisible(s) || !isVisible(t)) return false;
+    return true;
+  });
+}
+
+function activeNodes() {
+  return nodes.filter(isVisible);
 }
 
 // ─── Simulation ──────────────────────────────────────────────────────────────
@@ -335,7 +383,10 @@ function rebuildSim() {
   // was the dominant reason edges looked uneven. Tightened to 0.85×–1.15× so
   // every visible edge sits in a similar length band; heavier edges still pull
   // a bit harder so the cluster structure is preserved.
-  sim = forceSimulation(nodes)
+  // Pass only visible nodes to the sim so hidden tiers don't participate in
+  // physics. Hidden nodes keep their `x/y` (so toggling back on resumes from
+  // their last position rather than springing in from (0,0)).
+  sim = forceSimulation(activeNodes())
     .force('link', forceLink(activeLinks())
       .id(d => d.id)
       .distance(l => cfg.linkDist * (1.15 - 0.30 * weightT(l.weight)))
@@ -357,22 +408,79 @@ function rebuildSim() {
 // ─── Right panel ──────────────────────────────────────────────────────────────
 
 function buildNodeList() {
-  const sorted = [...nodes].sort((a, b) => a.id.localeCompare(b.id));
   const scrollTop = listCol.scrollTop;
 
-  listCol.querySelectorAll('.node-item').forEach(el => el.remove());
+  // Remove only the .node-item children + any prior search section headers.
+  // The #list-header (which now contains the level-filter and search input)
+  // is preserved across re-renders so the input never loses focus.
+  listCol.querySelectorAll('.node-item, .topic-section').forEach(el => el.remove());
 
-  sorted.forEach(n => {
-    const item = document.createElement('div');
-    item.className = 'node-item' + (n === selectedNode ? ' active' : '');
-    item.innerHTML = `<span class="node-item-name">${n.id}</span><span class="node-item-degree">${n.degree ?? 0}</span>`;
-    item.addEventListener('click', () => selectNode(n, true));
-    n._listEl = item;
-    listCol.appendChild(item);
-  });
+  const query = (sourceSearchInput && sourceSearchInput.value || '').trim();
+  if (query) {
+    // Source-search mode: filter SOURCE nodes by tf-style match on label
+    // (title) + description. Concepts / frameworks / claims / etc. are not
+    // included in search results — search is scoped to the source library.
+    const tokens = tokenize(query);
+    const sources = nodes.filter(n => isVisible(n) && (n.level === 'source' || (n.plugin == null && /\.txt$/i.test(n.id))));
+    const scored = sources.map(n => ({ n, ...scoreSource(n, tokens) }))
+      .filter(s => s.score > 0);
+    const title = scored.filter(s => s.titleHits > 0).sort((a, b) => b.score - a.score);
+    const desc  = scored.filter(s => s.titleHits === 0).sort((a, b) => b.score - a.score);
+
+    const appendSection = (label, list) => {
+      if (!list.length) return;
+      const head = document.createElement('div');
+      head.className = 'topic-section';
+      head.textContent = label;
+      listCol.appendChild(head);
+      list.forEach(({ n }) => appendNodeItem(n));
+    };
+    appendSection('Title matches', title);
+    appendSection('All other matches', desc);
+  } else {
+    const sorted = [...nodes]
+      .filter(isVisible)
+      .sort((a, b) => (a.label || a.id).localeCompare(b.label || b.id));
+    sorted.forEach(appendNodeItem);
+  }
 
   listCol.scrollTop = scrollTop;
 }
+
+function appendNodeItem(n) {
+  const item = document.createElement('div');
+  item.className = 'node-item' + (n === selectedNode ? ' active' : '');
+  item.innerHTML = `<span class="node-item-name">${escapeHtml(n.label || n.id)}</span><span class="node-item-degree">${n.degree ?? 0}</span>`;
+  item.addEventListener('click', () => selectNode(n, true));
+  n._listEl = item;
+  listCol.appendChild(item);
+}
+
+// Lowercase tokens; drop punctuation + the existing source-stopword set.
+function tokenize(s) {
+  return (s || '')
+    .toLowerCase()
+    .split(/[\s\p{P}_]+/u)
+    .filter(Boolean)
+    .filter(t => !SOURCE_STOPWORDS.has(t));
+}
+
+// Tf-style scorer: each token hit on the source's label adds 4 (title weight),
+// each token hit on description adds 1. titleHits separates the two sections.
+function scoreSource(node, queryTokens) {
+  if (!queryTokens.length) return { titleHits: 0, descHits: 0, score: 0 };
+  const titleTokens = tokenize(node.label || node.id);
+  const descTokens  = tokenize(node.description || '');
+  let titleHits = 0, descHits = 0;
+  for (const q of queryTokens) {
+    if (titleTokens.some(t => t.includes(q))) titleHits++;
+    if (descTokens.some(t => t.includes(q)))  descHits++;
+  }
+  return { titleHits, descHits, score: titleHits * 4 + descHits };
+}
+
+// `sourceSearchInput` is declared above (next to its event-listener wiring)
+// so this section just consumes it.
 
 function neighborsOf(n) {
   const out = [];
@@ -506,6 +614,7 @@ function draw() {
     // Hide edges below threshold UNLESS this is the keystone (max-weight)
     // edge for at least one of its endpoints
     if ((l.weight ?? 0) < cfg.edgeMin && !keystoneLinks.has(l)) return;
+    if (!isVisible(s) || !isVisible(t)) return;
     const isSelEdge = selectedNode && (s === selectedNode || t === selectedNode);
     const isHoverEdge = hoveredNode && (s === hoveredNode || t === hoveredNode);
     const ti = weightT(l.weight);
@@ -530,6 +639,7 @@ function draw() {
 
   nodes.forEach(n => {
     if (n.x == null) return;
+    if (!isVisible(n)) return;
     const r = nodeRadius(n);
     const isHover = n === hoveredNode;
     const isDrag = n === dragNode;
@@ -820,8 +930,68 @@ function renderMarkdown(md) {
 
 // `>` is &gt; after escaping; bullets are - or *; headings are #… (unescaped).
 const RE_QUOTE   = /^\s*&gt;\s?/;
-const RE_BULLET  = /^\s*[-*]\s+/;
+const RE_BULLET  = /^(\s*)[-*]\s+(.*)$/;
+const RE_ORDERED = /^(\s*)\d+\.\s+(.*)$/;
 const RE_HEADING = /^\s*(#{1,6})\s+(.*)$/;
+
+// Build a <ul>/<ol> from a contiguous run of list-item lines.
+//   - Top-level items: zero / minimal indent (matched by either RE_BULLET or
+//     RE_ORDERED). The OUTER list type is decided by the first matching line.
+//   - Sub-bullets: lines indented 2+ spaces or a tab matching `^\s+[-*]\s+`
+//     are folded into a nested <ul> on the most-recently-opened top-level <li>.
+//   - Order vs. unordered mixing at the SAME level keeps the outer tag; we
+//     don't try to honor a numbering switch mid-list.
+//
+// Smoke inputs that must render correctly (kept as comments to anchor future
+// regressions):
+//   "1. Foo\n    * sub one\n    * sub two\n2. Bar"   → <ol> with nested <ul>
+//   "- a\n- b"                                       → flat <ul>
+//   "1. a\n2. b"                                     → flat <ol>
+function buildListHtml(lines) {
+  // Determine outer type from the first matching line.
+  let outer = 'ul';
+  for (const l of lines) {
+    if (RE_ORDERED.test(l)) { outer = 'ol'; break; }
+    if (RE_BULLET.test(l))  { outer = 'ul'; break; }
+  }
+  // Indent threshold: anything > 0 (i.e. 2+ spaces or a tab on a bullet) is a
+  // sub-bullet. Top-level items have indent 0 (or only \s before the marker if
+  // the whole list is uniformly indented — measure relative to the minimum).
+  let minIndent = Infinity;
+  for (const l of lines) {
+    const m = l.match(RE_BULLET) || l.match(RE_ORDERED);
+    if (m) minIndent = Math.min(minIndent, m[1].length);
+  }
+  if (!isFinite(minIndent)) minIndent = 0;
+
+  const items = [];
+  let cur = null;          // current top-level item {text, subs:[]}
+  for (const l of lines) {
+    let m = l.match(RE_ORDERED);
+    let isOrdered = !!m;
+    if (!m) m = l.match(RE_BULLET);
+    if (!m) continue;
+    const indent = m[1].length;
+    const text = m[2];
+    if (indent <= minIndent) {
+      cur = { text, subs: [] };
+      items.push(cur);
+    } else {
+      // Sub-bullet folded into the current top-level item. If none exists yet
+      // (degenerate input), promote to top-level.
+      if (!cur) { cur = { text, subs: [] }; items.push(cur); }
+      else cur.subs.push({ text, ordered: isOrdered });
+    }
+  }
+  const renderSubs = subs => {
+    if (!subs.length) return '';
+    const subOrdered = subs[0].ordered;
+    const tag = subOrdered ? 'ol' : 'ul';
+    return `<${tag}>${subs.map(s => `<li>${renderInline(s.text)}</li>`).join('')}</${tag}>`;
+  };
+  const lis = items.map(it => `<li>${renderInline(it.text)}${renderSubs(it.subs)}</li>`).join('');
+  return `<${outer}>${lis}</${outer}>`;
+}
 
 function renderBlocks(blocks) {
   const out = [];
@@ -856,12 +1026,11 @@ function renderBlocks(blocks) {
       continue;
     }
 
-    // Unordered list: every non-empty line is a bullet
-    if (nonEmpty.every(l => RE_BULLET.test(l))) {
-      const items = nonEmpty
-        .map(l => `<li>${renderInline(l.replace(RE_BULLET, ''))}</li>`)
-        .join('');
-      out.push(`<ul>${items}</ul>`);
+    // List block: every non-empty line is either a bullet (- / *) OR an
+    // ordered item (`N. `). Mixed bullets + numbered + indented sub-bullets
+    // are all routed through buildListHtml.
+    if (nonEmpty.every(l => RE_BULLET.test(l) || RE_ORDERED.test(l))) {
+      out.push(buildListHtml(nonEmpty));
       continue;
     }
 
@@ -898,17 +1067,26 @@ function shortLabelFor(filename) {
 function buildSourceLabels(rawNodes) {
   sourceLabels = {};
   const used = new Set();
+  // v2 source ids are like `source:foo.txt`; chat output cites bare `foo.txt`.
+  // Key sourceLabels by the BARE filename so applySourceShorthand matches the
+  // chat output. Also stash sourceLabels[full id] as a fallback for any caller
+  // that resolves by full id (e.g. selectedNode title lookup).
+  const bareNames = [];
   rawNodes
-    .filter(n => n.plugin == null && /\.txt$/i.test(n.id))
+    .filter(n => /\.txt$/i.test(n.id) &&
+                 (n.plugin == null || n.level === 'source' || n.id.startsWith('source:')))
     .forEach(n => {
-      let label = shortLabelFor(n.id);
+      const bare = n.id.replace(/^source:/, '');
+      let label = shortLabelFor(bare);
       let candidate = label, k = 2;
       while (used.has(candidate.toLowerCase())) candidate = `${label} ${k++}`;
       used.add(candidate.toLowerCase());
-      sourceLabels[n.id] = candidate;
+      sourceLabels[bare] = candidate;
+      if (bare !== n.id) sourceLabels[n.id] = candidate;   // legacy resolver path
+      bareNames.push(bare);
     });
 
-  const names = Object.keys(sourceLabels)
+  const names = bareNames
     .sort((a, b) => b.length - a.length)        // longest-first so prefixes don't shadow
     .map(n => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   _sourceRegex = names.length ? new RegExp(names.join('|'), 'g') : null;
@@ -1287,7 +1465,12 @@ const chatHistory = [];
 
 function selectNodeById(id) {
   const target = id.trim().toLowerCase();
-  const node = nodes.find(n => n.id.toLowerCase() === target);
+  // v2 source ids carry a `source:` prefix; chat / shorthand strips it. Match
+  // either form so a bare filename click still finds the node.
+  const node = nodes.find(n => {
+    const nid = n.id.toLowerCase();
+    return nid === target || nid === `source:${target}` || nid.replace(/^source:/, '') === target;
+  });
   if (node) selectNode(node, false);
 }
 

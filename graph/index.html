@@ -401,9 +401,10 @@
     body.right-collapsed #right-toggle .rt-icon { transform: rotate(180deg); }
     body.dev-collapsed   #dev-toggle   .dt-icon { transform: rotate(180deg); }
 
-    /* Column 1: node list */
+    /* Column 1: node list. Width bumped from 160→200 px so the 2-col
+       level-filter checkbox grid fits without wrapping awkwardly. */
     #node-list-col {
-      width: 160px;
+      width: 200px;
       overflow-y: auto;
       overflow-x: hidden;
       padding: 12px 0 12px;
@@ -415,13 +416,102 @@
     #node-list-col::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 0; }
 
     #list-header {
+      padding: 0 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    #list-header .lh-title {
       font-size: 10px;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: #444;
-      padding: 0 14px 10px;
     }
+    /* Level filter — compact two-column checkbox grid. Sharp corners, dim
+       baseline text, red checked state. */
+    .level-filter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 8px;
+      padding: 4px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .level-filter label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10px;
+      color: var(--text-mute);
+      cursor: pointer;
+      user-select: none;
+      line-height: 1.4;
+      padding: 2px 0;
+    }
+    .level-filter input[type="checkbox"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: 0;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .level-filter input[type="checkbox"]:checked {
+      background: var(--accent-red);
+      border-color: var(--accent-red);
+    }
+    .level-filter input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 0px;
+      width: 3px;
+      height: 6px;
+      border: solid #fff;
+      border-width: 0 1.5px 1.5px 0;
+      transform: rotate(45deg);
+    }
+    .level-filter label:hover { color: var(--text-dim); }
+    .level-filter input:checked + span { color: var(--text-dim); }
+
+    /* Source search input — black surface, monospace text. Lives inside
+       #list-header so it survives buildNodeList() re-renders without losing
+       focus. */
+    #source-search {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0;
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 6px 8px;
+      letter-spacing: 0;
+      box-sizing: border-box;
+      transition: border-color 0.12s;
+    }
+    #source-search::placeholder { color: var(--text-mute); }
+    #source-search:focus { border-color: var(--accent-red); }
+
+    /* Section header inside the #node-list-col when search mode partitions
+       the matches into "Title matches" / "All other matches". */
+    .topic-section {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-red);
+      padding: 10px 14px 4px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 4px;
+    }
+    .topic-section:first-of-type { border-top: none; margin-top: 0; }
 
     .node-item {
       display: flex;
@@ -1881,7 +1971,25 @@
 
   <div id="right">
     <div id="node-list-col">
-      <div id="list-header">Topics</div>
+      <div id="list-header">
+        <div class="lh-title">Topics</div>
+        <!-- Level filter — checkboxes live OUTSIDE the .node-item list region
+             that buildNodeList() recreates on every render, so this group
+             survives re-renders without re-binding. -->
+        <div class="level-filter">
+          <label><input type="checkbox" data-level="L0"     checked /><span>L0 Concepts</span></label>
+          <label><input type="checkbox" data-level="L1"     checked /><span>L1 Frameworks</span></label>
+          <label><input type="checkbox" data-level="L2"             /><span>L2 Claims</span></label>
+          <label><input type="checkbox" data-level="L2a"            /><span>L2a Claims</span></label>
+          <label><input type="checkbox" data-level="L2b"            /><span>L2b Claims</span></label>
+          <label><input type="checkbox" data-level="L3"             /><span>L3 Examples</span></label>
+          <label><input type="checkbox" data-level="L4'"            /><span>L4&prime; Practices</span></label>
+          <label><input type="checkbox" data-level="source" checked /><span>Sources</span></label>
+        </div>
+        <!-- Source search — sits ABOVE the rebuilt list region so the input
+             never loses focus when the list re-renders on each keystroke. -->
+        <input id="source-search" type="text" placeholder="Search sources…" autocomplete="off" spellcheck="false" />
+      </div>
       <!-- populated by graph.js -->
     </div>
 
