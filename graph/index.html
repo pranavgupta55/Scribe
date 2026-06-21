@@ -59,6 +59,8 @@
       font-family: var(--font-sans);
       color: var(--text-main);
       font-feature-settings: 'ss01', 'cv11';
+      padding-top: 36px;   /* room for fixed #topbar */
+      box-sizing: border-box;
     }
 
     /* ── Unified top bar — single horizontal bar across all views. ──
@@ -68,20 +70,21 @@
     #topbar {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 44px;
+      height: 36px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 12px;
+      padding: 0 8px;
       background: var(--bg-base);
       border-bottom: 1px solid var(--border-subtle);
       z-index: 30;
       user-select: none;
+      box-sizing: border-box;
     }
     #topbar .tb-left, #topbar .tb-right {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
     }
     /* Per-view visibility — defaults hide chat-only controls + center. */
     body[data-view="graph"] #dev-toggle,
@@ -117,8 +120,8 @@
 
     #controls {
       position: absolute;
-      top: 56px;
-      left: 16px;
+      top: 12px;
+      left: 12px;
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -321,7 +324,7 @@
     /* Empty / error state */
     #empty-state {
       position: absolute;
-      inset: 44px 0 0 0;
+      inset: 0;
       display: none;
       flex-direction: column;
       align-items: center;
@@ -620,7 +623,7 @@
     /* ── Chat panel (swaps in for the canvas): Dev | Chat split ── */
     #chat-panel {
       position: absolute;
-      inset: 44px 0 0 0;
+      inset: 0;
       display: flex;
       flex-direction: row;
       background: var(--bg-base);
@@ -940,26 +943,39 @@
     /* Composer */
     #chat-composer {
       flex-shrink: 0;
-      padding: 14px 24px 22px;
+      padding: 10px 20px 14px;
       background: linear-gradient(to top, var(--bg-base) 70%, transparent);
     }
     .composer-inner {
       max-width: 720px; margin: 0 auto;
-      display: flex; align-items: flex-end; gap: 8px;
+      display: flex; flex-direction: column; gap: 4px;
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 0;
-      padding: 8px 8px 8px 16px;
+      padding: 8px 10px 6px 14px;
       transition: border-color 0.15s;
     }
     .composer-inner:focus-within { border-color: var(--accent-red); }
+    .composer-input-row {
+      display: flex; align-items: flex-end; gap: 8px;
+    }
     #chat-input {
       flex: 1;
       background: transparent; border: none; outline: none; resize: none;
-      color: var(--text-main); font-family: var(--font-sans); font-size: 14px; line-height: 1.5;
-      max-height: 160px; padding: 6px 0;
+      color: var(--text-main); font-family: var(--font-sans); font-size: 14px; line-height: 1.45;
+      max-height: 200px; min-height: 38px; padding: 2px 0;
     }
     #chat-input::placeholder { color: var(--text-mute); }
+    .composer-meta {
+      display: flex; justify-content: flex-end;
+      font-family: var(--font-mono);
+      font-size: 9.5px; color: var(--text-mute);
+      letter-spacing: 0; user-select: none;
+      padding-top: 2px; border-top: 1px solid #1a1a1a;
+      margin-top: 2px;
+    }
+    .composer-meta.warn  { color: #d4a83a; }
+    .composer-meta.alert { color: #d96354; }
     #chat-send {
       flex-shrink: 0;
       width: 32px; height: 32px; border-radius: 0; border: none;
@@ -1082,7 +1098,7 @@
        for action surfaces (prompt cell, copy buttons, send). No drop shadows. */
     #copy-panel {
       position: fixed;
-      inset: 44px 0 0 0;
+      inset: 36px 0 0 0;
       display: block;
       background: var(--bg-base);
       z-index: 5;
@@ -1136,18 +1152,18 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: calc(100% - 180px);
+      width: calc(100% - 32px);
       max-width: 1900px;
-      height: 84%;
+      height: 90%;
       transform: translate(-50%, -50%);
       transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
                   opacity 0.25s ease,
                   filter 0.25s ease;
       display: flex;
       flex-direction: row;
-      gap: 6px;
+      gap: 4px;
       min-height: 0;
-      padding: 4px;
+      padding: 2px;
       box-sizing: border-box;
       will-change: transform, opacity;
     }
@@ -1174,25 +1190,38 @@
       align-items: center;
       min-height: 0;
       min-width: 0;
-      padding: 6px 8px;
+      padding: 4px 6px;
     }
     .copy-col.new-panel { flex: 3; }
     .copy-col.all-panel { flex: 2; }
 
-    /* Vertical strip between the two panels — one labeled card per
-       sub-query, color-matched to its group's overlay. Kept compact so the
-       bento panels stay visually dominant. */
+    /* Vertical strip between the two panels — DECOMP header + one labeled
+       card per sub-query, color-matched to its primary group. Display:none
+       collapses it cleanly when there's no decomp. */
     .query-strip {
       position: relative;
       z-index: 1;
-      flex: 0 0 120px;
+      flex: 0 0 110px;
+      align-self: stretch;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      gap: 6px;
-      padding: 40px 4px;
+      justify-content: flex-start;
+      gap: 4px;
+      padding: 8px 0;
       min-width: 0;
       min-height: 0;
+      box-sizing: border-box;
+    }
+    .qs-header {
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      text-align: center;
+      padding: 2px 0 4px;
     }
     .qs-card {
       flex: 1 1 0;
@@ -1200,10 +1229,11 @@
       display: flex;
       flex-direction: column;
       gap: 3px;
-      padding: 5px 6px;
+      padding: 4px 5px;
       border: 1px solid #2a2a2a;
       background: transparent;
       overflow: hidden;
+      box-sizing: border-box;
     }
     .qs-tag {
       flex-shrink: 0;
@@ -1256,17 +1286,8 @@
     .bento-grid {
       flex-shrink: 0;
       display: grid;
-      gap: 4px;
+      gap: 3px;
       position: relative;
-    }
-    /* Overlay is a real grid child — its grid-column / grid-row are set in
-       JS to span the primary-query group's extent. Auto-resizes with the
-       grid; no pixel math, no observers. Slight translucency so cards
-       remain visually dominant. */
-    .query-overlay {
-      pointer-events: none;
-      z-index: 0;
-      border-radius: 3px;
     }
     /* Source cell = pure black (darker than the elevated panel — reads as a
        cut-out data slot). Hover lifts to a mid-grey without adding a border. */
@@ -1741,13 +1762,16 @@
         </div>
         <div id="chat-composer">
           <div class="composer-inner">
-            <textarea id="chat-input" rows="1" placeholder="Ask about your sources…"></textarea>
-            <button id="chat-send" title="Send">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor"
-                      stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
+            <div class="composer-input-row">
+              <textarea id="chat-input" rows="2" placeholder="Ask about your sources…"></textarea>
+              <button id="chat-send" title="Send">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 13V3M8 3L3.5 7.5M8 3l4.5 4.5" stroke="currentColor"
+                        stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="composer-meta" id="chat-meta">0t · 0c</div>
           </div>
         </div>
       </div>

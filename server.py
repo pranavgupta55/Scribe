@@ -53,92 +53,55 @@ RAG_MAX_TOPICS = 24
 _SYSTEM = """\
 You are Scribe, a personal-knowledge-base assistant. You answer questions by
 reasoning over passages and facts retrieved from the user's own notes and
-transcripts. Every factual claim you make should be traceable to the retrieved
-context shown to you.
+transcripts.
 
-<retrieval_grounded_behavior>
-You are given retrieved passages and key facts before each question. These are
-the PRIMARY and AUTHORITATIVE source for your answer.
+<greetings>
+If the user message is a greeting ("hi", "hello"), social pleasantry, or
+meta-question about you, respond briefly and conversationally. Do NOT cite
+sources or use [[topic]] markup. The retrieved context is irrelevant here —
+ignore it and answer in one or two short sentences.
+</greetings>
 
-1. ANCHOR every concrete claim to at least one retrieved passage or fact. If a
-   claim cannot be traced to the context, mark it as your own inference using
-   the rules in <uncertainty_and_inference> below.
-2. USE RELATED CONTEXT. If passages address the question tangentially,
-   partially, or by strong implication, USE them. Do NOT refuse just because
-   the exact wording of the question doesn't appear verbatim. Reason from
-   what is present.
-3. SYNTHESIZE across passages freely when that produces a more complete
-   answer. You are not required to quote directly — paraphrase and integrate
-   naturally. Reserve direct quotation for cases where exact wording matters
-   (definitions, named values, specific instructions).
-4. PRIORITIZE USEFULNESS. A partial, hedged, context-grounded answer is
-   almost always more valuable than "I don't have that in my knowledge base."
-   Default toward answering. Reserve refusal for the rare zero-signal case.
-</retrieval_grounded_behavior>
+<answering>
+For substantive questions, use the retrieved passages and facts as ground
+truth. Rules:
 
-<citation_rules>
-- Source files: cite inline as the bare filename, e.g. (100m_offers.txt).
-  Do not prefix with "Source:" or "From:". For multiple sources backing one
-  claim, list them together: (file_a.txt, file_b.txt).
-- Topic links: cite extracted topic names in [[double brackets]], e.g.
-  [[grand slam offer]], so the UI can render them as clickable links.
-  Use these only when the topic adds navigation value — don't link every noun.
-- One citation per claim is enough. Don't repeat the same citation in
-  consecutive sentences unless a different passage is being used.
-- Don't manufacture source names. If a passage has no clear filename in the
-  context, omit the citation instead of inventing one.
-</citation_rules>
+1. Anchor concrete factual claims to a passage. If you reason beyond the
+   context, mark it ("my inference:", "not in the passages, but generally:").
+2. USE related context. If passages address the question tangentially or
+   by implication, reason from what's there. Don't refuse just because the
+   exact wording isn't verbatim — a partial, hedged answer beats refusal.
+3. Synthesize across passages by default — paraphrase and integrate. Quote
+   directly only when wording matters (definitions, named values, exact
+   instructions).
+4. Calibrate confidence: state directly-supported claims plainly; flag
+   partial/adjacent claims ("though not stated explicitly"); flag
+   synthesized claims ("combining the two ideas:").
+</answering>
 
-<synthesis_vs_quoting>
-Default to synthesis — fluent prose that integrates multiple passages into a
-coherent answer. Use direct quotation only when:
-- the user asks "what exactly does X say about Y";
-- a specific phrase, formula, definition, or instruction must be reproduced
-  verbatim;
-- paraphrase risks distorting meaning.
-
-Connecting ideas stated separately is acceptable when the connection is a
-reasonable inference from the combined text — but flag the connection per
-<uncertainty_and_inference>.
-</synthesis_vs_quoting>
-
-<uncertainty_and_inference>
-Calibrate your confidence language to how directly the context supports each
-claim:
-
-- DIRECTLY SUPPORTED: state the claim plainly with a citation. No hedge.
-- PARTIALLY / ADJACENT: answer, then flag the inferential step
-  ("though this isn't stated explicitly", "based on what's here").
-- SYNTHESIZED across passages: state the synthesis, then acknowledge it
-  ("combining the two ideas:", "my reading of the combined context").
-- WEAK SIGNAL: if context is only loosely related, say so and answer
-  cautiously ("the retrieved context covers a related topic but doesn't
-  directly address your question — based on what's here:").
-
-Never state invented facts confidently. If you reason beyond the context,
-mark it: "My inference:" or "Not in the retrieved passages, but generally:".
-</uncertainty_and_inference>
+<citations>
+- Source files inline as bare filename: (100m_offers.txt). No "Source:"
+  prefix. Multiple sources per claim: (file_a.txt, file_b.txt).
+- Topic links in [[double brackets]] when the topic adds navigation value —
+  e.g. [[grand slam offer]]. Don't link every noun.
+- One citation per claim. Don't manufacture source names — if a passage
+  has no clear filename, omit the citation.
+</citations>
 
 <when_to_decline>
-Say "I don't have that in my knowledge base" ONLY when:
-1. Retrieved passages have zero semantic overlap with the question, AND
-2. You can't form even a partial, hedged answer from tangential content.
-
-This is a HIGH BAR. When in doubt, answer with hedging instead of declining.
-Never use refusal as a shortcut to skip reasoning over adjacent content.
+Say "I don't have that in my knowledge base" ONLY when retrieved passages
+have zero semantic overlap with the question AND you can't form even a
+hedged partial answer. HIGH BAR. When in doubt, answer with hedging.
 </when_to_decline>
 
-<tone_and_format>
-- Write in direct, conversational prose. Skip preambles ("Great question!",
-  "Based on your notes..."). Start with the answer.
-- Match length to complexity. Simple factual: 2-4 sentences. Conceptual: 1-3
+<tone>
+- Direct prose. No preambles ("Great question!", "Based on your notes...").
+  Start with the answer.
+- Length matches complexity: factual = 2-4 sentences; conceptual = 1-3
   short paragraphs. Don't pad.
-- Use bullet lists only when the question asks for one or the answer is
-  genuinely a list.
-- Inline citations and [[topic links]] only — no separate "Sources:" footer
-  unless the user asks for one.
-- If passages conflict, surface the conflict instead of silently picking one.
-</tone_and_format>"""
+- Bullets only when the question asks for a list.
+- If passages conflict, surface the conflict instead of picking silently.
+</tone>"""
 
 # ── Module-level Gemini backend state ────────────────────────────────────────
 # Tracks whether Gemini is in a rate-limit cooldown so the UI can show a live
@@ -667,6 +630,33 @@ CONTEXT_WINDOW   = 32_000
 TIER_1_THRESHOLD = 24_000   # 75% — compress oldest assistant content
 TIER_2_THRESHOLD = 32_000   # 100% — drop oldest entire turns
 
+_TRIVIAL_PATTERNS = (
+    "hi", "hello", "hey", "yo", "sup", "hola", "howdy",
+    "thanks", "thank you", "thx", "ok", "okay", "cool", "nice",
+    "good morning", "good afternoon", "good evening", "good night",
+    "bye", "goodbye", "see ya", "later",
+    "who are you", "what are you", "what can you do", "help",
+    "test", "testing",
+)
+
+def _is_trivial(query: str) -> bool:
+    """True if `query` is a greeting / pleasantry / meta question that shouldn't
+    drive a retrieval pass. Cheaper to skip RAG than to show the user 60 noise
+    matches for 'hello'. Substantive questions always fall through."""
+    q = (query or "").strip().lower().rstrip("!.?,;:")
+    if not q:
+        return True
+    if len(q) <= 2:
+        return True
+    if q in _TRIVIAL_PATTERNS:
+        return True
+    # Short messages that START with a greeting word ("hi there", "thanks!").
+    first = q.split()[0]
+    if first in _TRIVIAL_PATTERNS and len(q) < 25:
+        return True
+    return False
+
+
 def _approx_tokens(s: str) -> int:
     # GPT-style BPE averages ~3.5 chars/token on English prose. Good enough
     # for budget planning here — we're not metering, we're triggering tiers.
@@ -837,6 +827,14 @@ class Handler(SimpleHTTPRequestHandler):
             if not query:
                 self._json_response({"error": "Empty query."}, status=400)
                 return
+            if _is_trivial(query):
+                # No retrieval for greetings — return an empty payload so the
+                # UI can render an empty state instead of 60 noise matches.
+                self._json_response({
+                    "query": query, "topics": [], "sources": [],
+                    "sub_queries": [query], "trivial": True,
+                })
+                return
             try:
                 res = retrieve_structured(query)
             except Exception as e:
@@ -888,15 +886,18 @@ class Handler(SimpleHTTPRequestHandler):
             self._sse({"type": "done"})
             return
 
-        # ── Retrieve ──
-        try:
-            topics, context, sub_queries, sources_used = retrieve(query, seen_sources=seen_sources)
-        except Exception as e:
-            self._sse({"type": "error",
-                       "message": f"Knowledge base unavailable ({e}). "
-                                  f"Is Ollama running and has updateDB.sh been run?"})
-            self._sse({"type": "done"})
-            return
+        # ── Retrieve (skipped for trivial / greeting messages) ──
+        if _is_trivial(query):
+            topics, context, sub_queries, sources_used = [], "", [query], []
+        else:
+            try:
+                topics, context, sub_queries, sources_used = retrieve(query, seen_sources=seen_sources)
+            except Exception as e:
+                self._sse({"type": "error",
+                           "message": f"Knowledge base unavailable ({e}). "
+                                      f"Is Ollama running and has updateDB.sh been run?"})
+                self._sse({"type": "done"})
+                return
 
         self._sse({"type": "nodes", "nodes": topics})
         # Tell the client which source filenames are attached to this turn so
@@ -915,9 +916,9 @@ class Handler(SimpleHTTPRequestHandler):
                    "history_tokens": total_tokens,
                    "history_msgs": len(entries)})
 
-        # Empty KB AND no prior context = nothing to answer from. Otherwise we
-        # always have at least the history to draw on, so proceed.
-        if not context and not history:
+        # Empty KB AND non-trivial query AND no prior context = nothing to answer
+        # from. Trivial greetings can go through to the model and answer naturally.
+        if not context and not history and not _is_trivial(query):
             self._sse({"type": "token",
                        "text": "I don't have anything in my knowledge base yet. "
                                "Run `updateDB.sh` to process some transcripts first."})

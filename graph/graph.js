@@ -1276,9 +1276,22 @@ function selectNodeById(id) {
 
 function autoGrow() {
   chatInput.style.height = 'auto';
-  chatInput.style.height = Math.min(chatInput.scrollHeight, 160) + 'px';
+  chatInput.style.height = Math.min(chatInput.scrollHeight, 200) + 'px';
 }
-chatInput.addEventListener('input', autoGrow);
+// Live token + char counter under the textarea. Approx via 3.5 chars/token.
+const _chatMeta = document.getElementById('chat-meta');
+function updateChatMeta() {
+  if (!_chatMeta) return;
+  const txt = chatInput.value || '';
+  const c = txt.length;
+  const t = c ? Math.ceil(c / 3.5) : 0;
+  _chatMeta.textContent = `${t.toLocaleString()}t · ${c.toLocaleString()}c`;
+  _chatMeta.classList.remove('warn', 'alert');
+  if (t > 6000) _chatMeta.classList.add('alert');
+  else if (t > 2000) _chatMeta.classList.add('warn');
+}
+chatInput.addEventListener('input', () => { autoGrow(); updateChatMeta(); });
+updateChatMeta();
 chatInput.addEventListener('keydown', e => {
   if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();
@@ -1388,6 +1401,7 @@ async function sendChat(opts = {}) {
   chatSend.disabled = true;
   chatInput.value = '';
   autoGrow();
+  updateChatMeta();
 
   addUserMessage(text);
   const ui = addAssistantShell();
@@ -1863,51 +1877,22 @@ function shortenSource(name) {
 // distinguishable without fighting the theme.
 const QUERY_COLORS = ['#e16352', '#e8943a', '#d4b34a', '#c08560', '#a55b48'];
 
-// Render overlays AS grid children. Each overlay spans the min→max grid-row
-// and grid-column extent of its primary-query group, so it resizes natively
-// with the grid (no pixel math, no ResizeObserver, no stale-frame lag). The
-// inset margin step per qi prevents visually-touching edges between adjacent
-// groups that share a grid line.
-function drawQueryOverlays(grid, cards, sources, subQueries, placements) {
-  if (!grid) return;
-  grid.querySelectorAll('.query-overlay').forEach(el => el.remove());
-  if (!subQueries || subQueries.length <= 1) return;
-  if (!placements || !placements.length) return;
-
-  const groups = {};  // qi -> [placements]
+// Color each source card by its PRIMARY sub-query — a sub-pixel outline that
+// doesn't affect layout (box-shadow inset). When a source matched multiple
+// sub-queries, we just use the primary (largest-contribution) color. Cards
+// from a single-query result get no outline (no useful signal to convey).
+function applyCardColors(cards, sources, subQueries) {
+  const multi = subQueries && subQueries.length > 1;
   cards.forEach(({ card }, i) => {
     const src = sources[i];
-    const p   = placements[i];
-    if (!src || !p) return;
+    if (!multi || !src) {
+      card.style.boxShadow = '';
+      return;
+    }
     const qi = src.primary_query_idx ?? 0;
-    if (!groups[qi]) groups[qi] = [];
-    groups[qi].push(p);
-  });
-
-  Object.entries(groups).forEach(([qiStr, group]) => {
-    const qi = parseInt(qiStr);
     const color = QUERY_COLORS[qi % QUERY_COLORS.length];
-    let minR = Infinity, minC = Infinity, maxR = -Infinity, maxC = -Infinity;
-    group.forEach(p => {
-      minR = Math.min(minR, p.r);
-      minC = Math.min(minC, p.c);
-      maxR = Math.max(maxR, p.r + p.h - 1);
-      maxC = Math.max(maxC, p.c + p.w - 1);
-    });
-    if (!isFinite(minR)) return;
-
-    // Inset margin alternates per group so adjacent groups don't share an
-    // edge — 2/4/6 px depending on qi parity / triplet position.
-    const inset = 2 + (qi % 3) * 2;
-    const overlay = document.createElement('div');
-    overlay.className = 'query-overlay';
-    overlay.style.gridColumn  = `${minC + 1} / span ${maxC - minC + 1}`;
-    overlay.style.gridRow     = `${minR + 1} / span ${maxR - minR + 1}`;
-    overlay.style.margin      = `-${inset}px`;
-    overlay.style.padding     = `${inset}px`;
-    overlay.style.boxShadow   = `inset 0 0 0 1.5px ${color}66`;
-    overlay.style.background  = `${color}0a`;
-    grid.insertBefore(overlay, grid.firstChild);
+    // 1.5px inset border — no layout impact.
+    card.style.boxShadow = `inset 0 0 0 1.5px ${color}aa`;
   });
 }
 
@@ -1946,9 +1931,13 @@ function buildCopyTurn(query, data) {
   const newCopyAll = turn.querySelector('.new-copy-all');
   const allCopyAll = turn.querySelector('.all-copy-all');
 
-  // Build the sub-query strip — one colored card per sub-query. Hidden when
-  // the query didn't split (single sub-query = no useful grouping signal).
+  // Build the sub-query strip — DECOMP header + one colored card per
+  // sub-query. Hidden completely when there's only one sub-query.
   if (subQueries.length > 1) {
+    const header = document.createElement('div');
+    header.className = 'qs-header';
+    header.textContent = 'DECOMP';
+    queryStrip.appendChild(header);
     subQueries.forEach((sq, qi) => {
       const color = QUERY_COLORS[qi % QUERY_COLORS.length];
       const card = document.createElement('div');
@@ -2131,10 +2120,9 @@ function layoutBentoFor(turn) {
   applyPanel(newCol, turn.newGrid, turn.newCards, turn.newSources, null);
   applyPanel(allCol, turn.allGrid, turn.allCards, turn.sources, { r: 0, c: 0, w: 2, h: 2 });
 
-  // Overlays are grid children — they resize natively with the grid. Draw
-  // once after placements are settled; no resize observer needed.
-  drawQueryOverlays(turn.newGrid, turn.newCards, turn.newSources, turn.subQueries, turn.newGrid._lastPlacements);
-  drawQueryOverlays(turn.allGrid, turn.allCards, turn.sources,    turn.subQueries, turn.allGrid._lastPlacements);
+  // Color cards by primary sub-query (no overlay layer needed).
+  applyCardColors(turn.newCards, turn.newSources, turn.subQueries);
+  applyCardColors(turn.allCards, turn.sources,    turn.subQueries);
   fitQueryStrip(turn.queryStrip);
 }
 
@@ -2245,7 +2233,18 @@ async function sendCopy(opts = {}) {
 
   computeDegrees();
   computeKeystoneLinks();
-  setView('graph');           // ensure initial chrome state is correct
+  // Honor ?view= for quick deep-linking (and for headless screenshot testing).
+  // ?cq=<query> auto-submits a copy turn on load (also for screenshot tests).
+  const _params = new URLSearchParams(location.search);
+  const _initialView = _params.get('view');
+  setView(_initialView === 'chat' || _initialView === 'copy' ? _initialView : 'graph');
+  const _cq = _params.get('cq');
+  if (_cq && _initialView === 'copy') {
+    setTimeout(() => {
+      copyInput.value = _cq;
+      sendCopy({ refocus: false });
+    }, 300);
+  }
   requestAnimationFrame(() => {
     // ── Intro animation ────────────────────────────────────────────────
     // Boot with EXTREME repulsion + edge-spread and zero gravity so the
