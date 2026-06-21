@@ -448,6 +448,7 @@
       color: var(--text-main);
       margin-bottom: 8px;
       line-height: 1.15;
+      padding-right: 36px;
     }
 
     #detail-meta {
@@ -930,20 +931,25 @@
     .chat-empty .ce-title { font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--text-main); letter-spacing: -0.01em; }
     .chat-empty .ce-sub { font-size: 12.5px; line-height: 1.7; max-width: 360px; }
 
-    /* ── Chat header bar (status pill + Gemini-only toggle) ── */
+    /* ── Chat header bar (status pill + mode toggles) ──
+       Anchored top-left of #chat-main. Stops well short of the right edge so
+       it never collides with #view-toggle (which lives at right:96px and is
+       ~180px wide). Buttons wrap to a second row if width gets very tight. */
     #chat-header {
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
+      right: 300px;
       display: flex;
       align-items: center;
-      justify-content: flex-start;   /* left-aligned so it clears the centered Graph|Chat toggle */
-      gap: 8px;
-      padding: 12px 24px 10px;
-      background: linear-gradient(to bottom, var(--bg-base) 70%, transparent);
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 6px;
+      padding: 10px 16px 10px;
+      background: linear-gradient(to bottom, var(--bg-base) 80%, transparent);
       z-index: 4;
       pointer-events: none;
+      transition: right 0.32s cubic-bezier(0.4,0,0.2,1);
     }
     #chat-header > * { pointer-events: auto; }
 
@@ -961,7 +967,7 @@
       padding: 4px 10px;
       letter-spacing: 0.02em;
       user-select: none;
-      min-width: 110px;
+      min-width: 80px;
     }
     .status-dot {
       width: 7px;
@@ -1007,6 +1013,40 @@
       transition: background 0.15s;
     }
     #gemini-only-btn.on .go-indicator { background: var(--accent-red); }
+
+    /* Qwen-only toggle */
+    #qwen-only-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 500;
+      font-family: inherit;
+      color: #666;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0;
+      padding: 4px 10px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      user-select: none;
+    }
+    #qwen-only-btn:hover { color: var(--text-main); border-color: #56d36466; }
+    #qwen-only-btn.on {
+      color: var(--text-main);
+      background: #56d36415;
+      border-color: #56d36466;
+    }
+    .qo-indicator {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: #333;
+      transition: background 0.15s;
+    }
+    #qwen-only-btn.on .qo-indicator { background: #56d364; }
 
     /* ── Copy-paste view: high-contrast red-on-black layout ──
        Surface rules: pure black for background/data surfaces, saturated red
@@ -1143,6 +1183,26 @@
       display: grid;
       gap: 4px;
       position: relative;
+    }
+    .query-overlay {
+      position: absolute;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .query-overlay-label {
+      position: absolute;
+      top: -9px;
+      left: 6px;
+      font-size: 9px;
+      font-family: var(--font-mono);
+      padding: 0 4px;
+      border-radius: 2px;
+      background: var(--bg-base);
+      white-space: nowrap;
+      max-width: 180px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     /* Source cell = pure black (darker than the elevated panel — reads as a
        cut-out data slot). Hover lifts to a mid-grey without adding a border. */
@@ -1561,6 +1621,10 @@
             <pre class="dev-body" id="dev-system"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
           <section class="dev-section">
+            <div class="dev-label"><span>Query decomposition</span></div>
+            <pre class="dev-body" id="dev-decomp"><span class="dev-empty">— no turn yet —</span></pre>
+          </section>
+          <section class="dev-section">
             <div class="dev-label"><span>RAG context (retrieved passages + facts)</span><button class="copy-btn" data-copy="dev-context">Copy</button></div>
             <pre class="dev-body" id="dev-context"><span class="dev-empty">— no turn yet —</span></pre>
           </section>
@@ -1586,6 +1650,10 @@
           <button id="gemini-only-btn" title="Only use Gemini; error instead of falling back to local model">
             <span class="go-indicator"></span>
             Gemini only
+          </button>
+          <button id="qwen-only-btn" title="Skip Gemini and use local qwen3 only">
+            <span class="qo-indicator"></span>
+            Qwen only
           </button>
         </div>
         <div id="chat-scroll">

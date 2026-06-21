@@ -409,7 +409,7 @@ function selectNode(n, panTo = false) {
   const home = n.plugin ? n.plugin.replace(/\.txt$/, '') : 'source';
 
   detailCol.classList.add('open');
-  detailTitle.textContent = n.id;
+  detailTitle.textContent = sourceLabels[n.id] || prettifySource(n.id);
   detailMeta.textContent = `${home} · ${deg} connection${deg !== 1 ? 's' : ''}`;
   detailDesc.innerHTML = renderMarkdown(n.description || 'No description available.');
   bindNodeLinks(detailDesc);
@@ -1036,31 +1036,85 @@ if (geminiOnlyBtn) {
   geminiOnlyBtn.addEventListener('click', () => {
     geminiOnly = !geminiOnly;
     geminiOnlyBtn.classList.toggle('on', geminiOnly);
+    // qwen-only and gemini-only are mutually exclusive
+    if (geminiOnly && qwenOnly) {
+      qwenOnly = false;
+      qwenOnlyBtn?.classList.remove('on');
+    }
   });
 }
 
-function updateStatusPill(status) {
+// ── Qwen-only toggle ──────────────────────────────────────────────────────────
+const qwenOnlyBtn = document.getElementById('qwen-only-btn');
+let qwenOnly = false;
+
+if (qwenOnlyBtn) {
+  qwenOnlyBtn.addEventListener('click', () => {
+    qwenOnly = !qwenOnly;
+    qwenOnlyBtn.classList.toggle('on', qwenOnly);
+    // qwen-only and gemini-only are mutually exclusive
+    if (qwenOnly && geminiOnly) {
+      geminiOnly = false;
+      geminiOnlyBtn?.classList.remove('on');
+    }
+  });
+}
+
+let _lastStatusData = null;
+let _statusTickInterval = null;
+
+function _startStatusTick() {
+  if (_statusTickInterval) return;
+  _statusTickInterval = setInterval(_tickStatus, 1000);
+}
+function _stopStatusTick() {
+  if (_statusTickInterval) { clearInterval(_statusTickInterval); _statusTickInterval = null; }
+}
+
+function _tickStatus() {
+  if (!_lastStatusData) return;
+  _renderStatusPill(_lastStatusData);
+}
+
+function _renderStatusPill(status) {
   if (!statusDot || !statusLabel) return;
-  if (!status) {
-    statusDot.className = 'status-dot grey';
-    statusLabel.textContent = 'server offline';
-    return;
-  }
+  const now = Date.now() / 1000;
   if (status.gemini_ok) {
     statusDot.className = 'status-dot green';
-    statusLabel.textContent = 'Gemini';
+    const elapsed = status.last_success_ts ? Math.floor(now - status.last_success_ts) : null;
+    const rpm14 = (status.recent_calls_60s ?? 0) >= 14;  // approaching 15 RPM limit
+    let txt = 'Gemini';
+    if (elapsed !== null && elapsed > 0) txt += ` · ${elapsed}s ago`;
+    if (rpm14) txt += ' · near limit';
+    statusLabel.textContent = txt;
   } else {
     statusDot.className = 'status-dot amber';
     let txt = 'Local (qwen)';
     if (status.in_cooldown) {
       if (status.retry_known && status.cooldown_remaining != null) {
-        txt += ` · retry in ${status.cooldown_remaining}s`;
+        // Tick down the remaining seconds live
+        const serverAge = Math.floor(now - (status._fetchedAt || now));
+        const live = Math.max(0, status.cooldown_remaining - serverAge);
+        txt += ` · Gemini in ${live}s`;
       } else {
-        txt += ' · retry time unknown';
+        txt += ' · Gemini cooldown';
       }
     }
     statusLabel.textContent = txt;
   }
+}
+
+function updateStatusPill(status) {
+  if (!status) {
+    _stopStatusTick();
+    statusDot.className = 'status-dot grey';
+    statusLabel.textContent = 'server offline';
+    return;
+  }
+  status._fetchedAt = Date.now() / 1000;
+  _lastStatusData = status;
+  _renderStatusPill(status);
+  _startStatusTick();
 }
 
 // Also update from per-turn backend event
@@ -1071,7 +1125,6 @@ function updateStatusFromBackend(backend) {
     statusLabel.textContent = 'Gemini';
   } else if (backend === 'qwen') {
     statusDot.className = 'status-dot amber';
-    // Don't overwrite cooldown info — re-poll will fix it shortly
     if (!statusLabel.textContent.startsWith('Local')) {
       statusLabel.textContent = 'Local (qwen)';
     }
@@ -1110,6 +1163,7 @@ function stopStatusPoll() {
 
 // Dev / Debug panel (left side of chat view)
 const devSystem     = document.getElementById('dev-system');
+const devDecomp     = document.getElementById('dev-decomp');
 const devContext    = document.getElementById('dev-context');
 const devPrompt     = document.getElementById('dev-prompt');
 const devResponse   = document.getElementById('dev-response');
@@ -1158,6 +1212,7 @@ function setDevField(el, text) {
 
 function resetDevPanel() {
   setDevField(devSystem, '');
+  setDevField(devDecomp, '');
   setDevField(devContext, '');
   setDevField(devPrompt, '');
   setDevField(devResponse, '');
@@ -1310,7 +1365,7 @@ async function sendChat(opts = {}) {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: text, gemini_only: geminiOnly }),
+      body: JSON.stringify({ query: text, gemini_only: geminiOnly, qwen_only: qwenOnly }),
     });
     if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
 
@@ -1343,6 +1398,11 @@ async function sendChat(opts = {}) {
         } else if (evt.type === 'debug') {
           // Exact round-trip sent to the model (after retrieval, pre-generation)
           setDevField(devSystem, evt.system);
+          if (evt.sub_queries && evt.sub_queries.length > 1) {
+            setDevField(devDecomp, evt.sub_queries.map((q, i) => `${i + 1}. ${q}`).join('\n'));
+          } else {
+            setDevField(devDecomp, '(atomic — no split)');
+          }
           setDevField(devContext, evt.context);
           setDevField(devPrompt, evt.prompt);
         } else if (evt.type === 'backend') {
@@ -1721,12 +1781,73 @@ function clipboardForSource(query, src) {
   return `${summaryHeader}===== SOURCE: ${src.name} =====\n${passages}${facts}${url}`;
 }
 
+function prettifySource(name) {
+  return name
+    .replace(/\.txt$/i, '')
+    .replace(/_/g, ' ')
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
 function shortenSource(name) {
-  return name.replace(/\.txt$/, '').replace(/_/g, ' ').slice(0, 32);
+  return prettifySource(name).slice(0, 36);
+}
+
+const QUERY_COLORS = ['#4a9eff', '#56d364', '#bc8cff', '#e3b341'];
+
+function drawQueryOverlays(grid, cards, sources, subQueries) {
+  grid.querySelectorAll('.query-overlay').forEach(el => el.remove());
+  if (!subQueries || subQueries.length <= 1) return;
+
+  const gridRect = grid.getBoundingClientRect();
+  // Group card elements by each query index they contributed to.
+  const groups = {};  // qi -> [card elements]
+  cards.forEach(({ card }, i) => {
+    const src = sources[i];
+    if (!src) return;
+    const qidxs = src.query_indices && src.query_indices.length ? src.query_indices : [src.primary_query_idx || 0];
+    qidxs.forEach(qi => {
+      if (!groups[qi]) groups[qi] = [];
+      groups[qi].push(card);
+    });
+  });
+
+  Object.entries(groups).forEach(([qiStr, groupCards]) => {
+    const qi = parseInt(qiStr);
+    const color = QUERY_COLORS[qi % QUERY_COLORS.length];
+    const MARGIN = 5;
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    groupCards.forEach(card => {
+      if (card.style.display === 'none') return;
+      const r = card.getBoundingClientRect();
+      minX = Math.min(minX, r.left - gridRect.left);
+      minY = Math.min(minY, r.top  - gridRect.top);
+      maxX = Math.max(maxX, r.right  - gridRect.left);
+      maxY = Math.max(maxY, r.bottom - gridRect.top);
+    });
+    if (!isFinite(minX)) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'query-overlay';
+    overlay.style.left       = `${minX - MARGIN}px`;
+    overlay.style.top        = `${minY - MARGIN}px`;
+    overlay.style.width      = `${maxX - minX + MARGIN * 2}px`;
+    overlay.style.height     = `${maxY - minY + MARGIN * 2}px`;
+    overlay.style.border     = `1.5px solid ${color}99`;
+    overlay.style.background = `${color}0a`;
+
+    const label = document.createElement('div');
+    label.className   = 'query-overlay-label';
+    label.style.color = color;
+    const sq = subQueries[qi] || `Query ${qi + 1}`;
+    label.textContent = sq.length > 44 ? sq.slice(0, 41) + '…' : sq;
+    overlay.appendChild(label);
+    grid.insertBefore(overlay, grid.firstChild);
+  });
 }
 
 function buildCopyTurn(query, data) {
   const sources = data.sources || [];
+  const subQueries = data.sub_queries || [];
   const newSources = sources.filter(s => !copySeen.has(s.name));
   newSources.forEach(s => copySeen.add(s.name));
 
@@ -1806,7 +1927,7 @@ function buildCopyTurn(query, data) {
 
   // All panel: 3×3 user-prompt cell + source cards
   const allCards = [];
-  const promptCard = makeCard('Your question', query, query, 'prompt-cell');
+  const promptCard = makeCard('question', query, query, 'prompt-cell');
   allGrid.appendChild(promptCard.card);
   sources.forEach(s => {
     const c = makeCard(shortenSource(s.name), formatOneSource(query, s),
@@ -1820,7 +1941,7 @@ function buildCopyTurn(query, data) {
 
   copyTurns.push({
     el: turn, query, sources, newSources,
-    newGrid, allGrid, newCards, allCards, promptCard,
+    newGrid, allGrid, newCards, allCards, promptCard, subQueries,
   });
   copyFocus = copyTurns.length - 1;
   layoutCopyStack();
@@ -1896,6 +2017,12 @@ function layoutBentoFor(turn) {
   const allCol = turn.el.querySelector('.copy-col.all-panel');
   applyPanel(newCol, turn.newGrid, turn.newCards, turn.newSources, null);
   applyPanel(allCol, turn.allGrid, turn.allCards, turn.sources, { r: 0, c: 0, w: 2, h: 2 });
+
+  // Draw sub-query grouping overlays after layout so getBoundingClientRect() is accurate.
+  requestAnimationFrame(() => {
+    drawQueryOverlays(turn.newGrid, turn.newCards, turn.newSources, turn.subQueries);
+    drawQueryOverlays(turn.allGrid, turn.allCards, turn.sources,    turn.subQueries);
+  });
 }
 
 function layoutCopyStack() {

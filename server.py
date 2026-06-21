@@ -70,6 +70,8 @@ _SYSTEM = (
 _gemini_cooldown_until: float = 0.0   # epoch seconds; 0 means not in cooldown
 _gemini_retry_known: bool = False      # True when we parsed a real retry delay
 _gemini_last_backend: str | None = None  # "gemini" | "qwen" | None
+_gemini_last_success_ts: float | None = None   # epoch time of last successful Gemini call
+_gemini_call_timestamps: list = []             # recent call epoch times (rolling, last 90s)
 
 
 def _parse_retry_seconds(exc_str: str) -> int | None:
@@ -94,9 +96,15 @@ def _parse_retry_seconds(exc_str: str) -> int | None:
 
 def _record_gemini_success():
     global _gemini_cooldown_until, _gemini_retry_known, _gemini_last_backend
+    global _gemini_last_success_ts, _gemini_call_timestamps
     _gemini_cooldown_until = 0.0
     _gemini_retry_known = False
     _gemini_last_backend = "gemini"
+    now = time.time()
+    _gemini_last_success_ts = now
+    _gemini_call_timestamps.append(now)
+    # Keep only last 90s
+    _gemini_call_timestamps = [t for t in _gemini_call_timestamps if now - t <= 90]
 
 
 def _record_gemini_ratelimit(exc_str: str):
@@ -133,6 +141,8 @@ def _gemini_status() -> dict:
         "cooldown_remaining": remaining,
         "retry_known": _gemini_retry_known,
         "last_backend": _gemini_last_backend,
+        "last_success_ts": _gemini_last_success_ts,
+        "recent_calls_60s": len([t for t in _gemini_call_timestamps if time.time() - t <= 60]),
     }
 
 
@@ -145,6 +155,234 @@ def _topic_display(topic):
     return _slug(topic).replace("_", " ").title()
 
 
+_DECOMPOSE_SYSTEM = """\
+<instructions>
+Split the user question into atomic sub-questions if it covers multiple distinct topics.
+An atomic sub-question covers exactly one topic or asks one thing.
+If the input already asks about one thing, output it unchanged.
+Causal questions like "what impact did X have on Y" must be split into the factual components (e.g. "What is X?" and "What is Y?") so each can be looked up independently.
+Output ONLY the sub-questions, one per line, inside <output> tags. No numbering, no explanation, no other text.
+Maximum 5 sub-questions.
+</instructions>
+
+<examples>
+<example>
+<input>What are Alex's thoughts on sales funnels and how does he recommend structuring an offer?</input>
+<output>
+What are Alex's thoughts on sales funnels?
+How does Alex recommend structuring an offer?
+</output>
+</example>
+<example>
+<input>Tell me about Alex Hormozi's background and his early business failures.</input>
+<output>
+What is Alex Hormozi's background?
+What were Alex Hormozi's early business failures?
+</output>
+</example>
+<example>
+<input>I want to understand Alex's strategy for acquiring businesses and his philosophy on team building.</input>
+<output>
+What is Alex's strategy for acquiring businesses?
+What is Alex's philosophy on team building?
+</output>
+</example>
+<example>
+<input>How does Alex approach marketing for a new product, and what metrics does he track for success?</input>
+<output>
+How does Alex approach marketing for a new product?
+What metrics does Alex track for marketing success?
+</output>
+</example>
+<example>
+<input>What's the difference between lead generation and customer retention in Alex's view, and which does he prioritize?</input>
+<output>
+What is the difference between lead generation and customer retention in Alex's view?
+Which does Alex prioritize: lead generation or customer retention?
+</output>
+</example>
+<example>
+<input>Alex's advice on pricing strategies and getting customers to pay more.</input>
+<output>
+What is Alex's advice on pricing strategies?
+How does Alex advise getting customers to pay more?
+</output>
+</example>
+<example>
+<input>What are Alex's key principles for scaling a business and delegating tasks effectively?</input>
+<output>
+What are Alex's key principles for scaling a business?
+What are Alex's key principles for delegating tasks effectively?
+</output>
+</example>
+<example>
+<input>Can you explain Alex's concept of Grand Slam Offers and how it relates to value delivery?</input>
+<output>
+What is Alex's concept of Grand Slam Offers?
+How does Alex's concept of Grand Slam Offers relate to value delivery?
+</output>
+</example>
+<example>
+<input>Hormozi's thoughts on building a strong company culture and motivating employees.</input>
+<output>
+What are Alex Hormozi's thoughts on building a strong company culture?
+What are Alex Hormozi's thoughts on motivating employees?
+</output>
+</example>
+<example>
+<input>What's Alex's take on venture capital funding versus bootstrapping, and which path does he typically recommend?</input>
+<output>
+What is Alex's take on venture capital funding versus bootstrapping?
+Which path does Alex typically recommend: venture capital funding or bootstrapping?
+</output>
+</example>
+<example>
+<input>What's Alex Hormozi's definition of a "Grand Slam Offer"?</input>
+<output>
+What's Alex Hormozi's definition of a "Grand Slam Offer"?
+</output>
+</example>
+<example>
+<input>How does Alex recommend structuring a compensation plan for sales staff?</input>
+<output>
+How does Alex recommend structuring a compensation plan for sales staff?
+</output>
+</example>
+<example>
+<input>What are Alex's top 3 books he recommends for entrepreneurs?</input>
+<output>
+What are Alex's top 3 books he recommends for entrepreneurs?
+</output>
+</example>
+<example>
+<input>Tell me about Alex Hormozi's experience with the gym industry.</input>
+<output>
+Tell me about Alex Hormozi's experience with the gym industry.
+</output>
+</example>
+<example>
+<input>What is Alex's perspective on the importance of lead generation?</input>
+<output>
+What is Alex's perspective on the importance of lead generation?
+</output>
+</example>
+<example>
+<input>How does Alex's approach to lead generation differ from traditional marketing methods, and why does he prefer his method?</input>
+<output>
+How does Alex's approach to lead generation differ from traditional marketing methods?
+Why does Alex prefer his lead generation method?
+</output>
+</example>
+<example>
+<input>What impact did Alex's early failures have on his current business philosophy?</input>
+<output>
+What are Alex's early business failures?
+What is Alex's current business philosophy?
+</output>
+</example>
+<example>
+<input>If an entrepreneur implements Alex's advice on offer creation, what results can they expect to see in their business?</input>
+<output>
+If an entrepreneur implements Alex's advice on offer creation, what results can they expect to see in their business?
+</output>
+</example>
+<example>
+<input>What are the pros and cons of using Alex's "Grand Slam Offer" framework, and who is it best suited for?</input>
+<output>
+What are the pros of using Alex's "Grand Slam Offer" framework?
+What are the cons of using Alex's "Grand Slam Offer" framework?
+Who is Alex's "Grand Slam Offer" framework best suited for?
+</output>
+</example>
+<example>
+<input>Alex's thoughts on creating urgency in sales. Is it ethical, and does he use specific tactics?</input>
+<output>
+What are Alex's thoughts on creating urgency in sales?
+Is creating urgency in sales ethical according to Alex?
+Does Alex use specific tactics for creating urgency in sales?
+</output>
+</example>
+</examples>"""
+
+
+def _decompose_query(query: str) -> list[str]:
+    """Split a multi-topic query into atomic sub-queries using local qwen3:1.7b.
+    Falls back to Gemini, then to [query] on any error."""
+    import re as _re
+    import ollama as _ollama
+
+    def _parse(text: str) -> list[str] | None:
+        # Strip any residual <think>...</think> blocks before parsing
+        text = _re.sub(r'<think>.*?</think>', '', text, flags=_re.DOTALL)
+        m = _re.search(r'<output>\s*(.*?)\s*</output>', text, _re.DOTALL)
+        raw = m.group(1) if m else text
+        lines = [l.strip() for l in raw.splitlines() if l.strip()]
+        # Drop any stray xml-ish lines
+        lines = [l for l in lines if not l.startswith('<') and not l.startswith('>')]
+        # Trim common trailing junk (markdown bullets, numbering)
+        lines = [_re.sub(r'^[\d]+[\.\)]\s*|^[-*]\s+', '', l).strip() for l in lines]
+        lines = [l for l in lines if l]
+        if 1 <= len(lines) <= 5:
+            return lines
+        return None
+
+    # Try qwen3 first (local, free, no rate limit).
+    # think=True: qwen3 reasons in `thinking` field, returns clean answer in `content`.
+    # Quality > speed here — decomp drives all retrieval, payload is small (single query).
+    try:
+        resp = _ollama.chat(
+            model=QWEN_MODEL,
+            messages=[
+                {"role": "system", "content": _DECOMPOSE_SYSTEM},
+                {"role": "user",   "content": f"<input>{query}</input>"},
+            ],
+            think=True,
+            options={"num_predict": 800, "temperature": 0},
+        )
+        result = _parse(resp["message"]["content"])
+        if result:
+            return result
+    except Exception:
+        pass
+
+    # Gemini fallback
+    try:
+        client = _gemini_client()
+        from google.genai import types as _types
+        resp = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=_DECOMPOSE_SYSTEM + f"\n\n<input>{query}</input>",
+            config=_types.GenerateContentConfig(
+                temperature=0, max_output_tokens=200,
+                thinking_config=_types.ThinkingConfig(thinking_budget=0),
+            ),
+        )
+        result = _parse(resp.text)
+        if result:
+            return result
+    except Exception:
+        pass
+
+    return [query]
+
+
+def _merge_chroma_results(results_list, cap):
+    """Merge ChromaDB results across sub-queries. Returns (docs, metas, query_indices_per_doc).
+    query_indices_per_doc[i] = sorted list of sub-query indices that retrieved doc i."""
+    seen = {}  # text -> [doc, meta, hits, set_of_sq_indices]
+    for sq_idx, (docs, metas) in enumerate(results_list):
+        for doc, meta in zip(docs, metas):
+            if doc not in seen:
+                seen[doc] = [doc, meta, 0, set()]
+            seen[doc][2] += 1
+            seen[doc][3].add(sq_idx)
+    ranked = sorted(seen.values(), key=lambda x: -x[2])
+    docs    = [x[0] for x in ranked[:cap]]
+    metas   = [x[1] for x in ranked[:cap]]
+    indices = [sorted(x[3]) for x in ranked[:cap]]
+    return docs, metas, indices
+
+
 def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
                         max_topics=RAG_MAX_TOPICS):
     """Wider RAG used by the copy-paste view. Returns
@@ -154,23 +392,28 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
     import chromadb, ollama
     from collections import OrderedDict
 
+    sub_queries = _decompose_query(query)
+
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     facts_col  = client.get_collection("facts")
     chunks_col = client.get_collection("chunks")
 
-    q_emb = ollama.embeddings(model=EMBED_MODEL, prompt=query)["embedding"]
-
-    def _q(col, n):
+    def _q(col, n, emb):
         c = col.count()
         if c == 0:
             return {"documents": [[]], "metadatas": [[]]}
-        return col.query(query_embeddings=[q_emb], n_results=min(n, c))
+        return col.query(query_embeddings=[emb], n_results=min(n, c))
 
-    fres = _q(facts_col, n_facts)
-    cres = _q(chunks_col, n_chunks)
+    fact_results, chunk_results = [], []
+    for sq in sub_queries:
+        emb = ollama.embeddings(model=EMBED_MODEL, prompt=sq)["embedding"]
+        fr = _q(facts_col, n_facts, emb)
+        cr = _q(chunks_col, n_chunks, emb)
+        fact_results.append((fr["documents"][0], fr["metadatas"][0]))
+        chunk_results.append((cr["documents"][0], cr["metadatas"][0]))
 
-    fact_docs, fact_metas = fres["documents"][0], fres["metadatas"][0]
-    chunk_docs, chunk_metas = cres["documents"][0], cres["metadatas"][0]
+    fact_docs, fact_metas, fact_qidxs     = _merge_chroma_results(fact_results, n_facts)
+    chunk_docs, chunk_metas, chunk_qidxs = _merge_chroma_results(chunk_results, n_chunks)
 
     topics, seen = [], set()
     for meta in fact_metas:
@@ -182,6 +425,20 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
             seen.add(disp.lower())
             topics.append(disp)
     topics = topics[:max_topics]
+
+    # Track which sub-queries contributed to each source (for frontend grouping).
+    from collections import Counter
+    src_qi_hits = {}  # source_name -> Counter of sub-query indices
+    for meta, qidxs in zip(chunk_metas, chunk_qidxs):
+        s = meta.get("source", "?")
+        src_qi_hits.setdefault(s, Counter())
+        for qi in qidxs:
+            src_qi_hits[s][qi] += 1
+    for meta, qidxs in zip(fact_metas, fact_qidxs):
+        s = meta.get("source", "?")
+        src_qi_hits.setdefault(s, Counter())
+        for qi in qidxs:
+            src_qi_hits[s][qi] += 1
 
     by_src = OrderedDict()
     for doc, meta in zip(chunk_docs, chunk_metas):
@@ -196,9 +453,6 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
         by_src.setdefault(s, {"passages": [], "facts": []})
         by_src[s]["facts"].append(doc)
 
-    # Attach video_summary from knowledge/sources.json so the Copy view can
-    # surface per-source summary cards (and clipboard-copy retains full claim
-    # block).  Lazily load once per call; the file is small.
     try:
         src_meta = json.loads((SCRIPT_DIR / "knowledge" / "sources.json").read_text())
     except Exception:
@@ -206,39 +460,48 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
     sources = []
     for s, blk in by_src.items():
         meta = src_meta.get(s, {})
+        hits = src_qi_hits.get(s, Counter())
+        primary_idx = hits.most_common(1)[0][0] if hits else 0
         sources.append({
             "name": s,
             "title": meta.get("title", ""),
             "video_summary": meta.get("video_summary", ""),
             "url": meta.get("url", ""),
+            "primary_query_idx": primary_idx,
+            "query_indices": sorted(hits.keys()),
             **blk,
         })
-    return {"topics": topics, "sources": sources}
+    # Sort sources by primary sub-query so frontend groups are contiguous.
+    sources.sort(key=lambda s: s["primary_query_idx"])
+    return {"topics": topics, "sources": sources, "sub_queries": sub_queries}
 
 
 def retrieve(query):
     """Return (consulted_topic_names, context_block). Raises on backend failure."""
     import chromadb, ollama
 
+    sub_queries = _decompose_query(query)
+
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     facts_col  = client.get_collection("facts")
     chunks_col = client.get_collection("chunks")
 
-    q_emb = ollama.embeddings(model=EMBED_MODEL, prompt=query)["embedding"]
-
-    def _query(col, n):
+    def _query(col, n, emb):
         count = col.count()
         if count == 0:
             return {"documents": [[]], "metadatas": [[]]}
-        return col.query(query_embeddings=[q_emb], n_results=min(n, count))
+        return col.query(query_embeddings=[emb], n_results=min(n, count))
 
-    fres = _query(facts_col, N_FACTS)
-    cres = _query(chunks_col, N_CHUNKS)
+    fact_results, chunk_results = [], []
+    for sq in sub_queries:
+        emb = ollama.embeddings(model=EMBED_MODEL, prompt=sq)["embedding"]
+        fr = _query(facts_col, N_FACTS, emb)
+        cr = _query(chunks_col, N_CHUNKS, emb)
+        fact_results.append((fr["documents"][0], fr["metadatas"][0]))
+        chunk_results.append((cr["documents"][0], cr["metadatas"][0]))
 
-    fact_docs  = fres["documents"][0]
-    fact_metas = fres["metadatas"][0]
-    chunk_docs  = cres["documents"][0]
-    chunk_metas = cres["metadatas"][0]
+    fact_docs,  fact_metas,  _ = _merge_chroma_results(fact_results,  N_FACTS)
+    chunk_docs, chunk_metas, _ = _merge_chroma_results(chunk_results, N_CHUNKS)
 
     # Consulted topics, in relevance order, deduped → graph node ids.
     # facts metadata carries a single canonical `topic` (see process.py schema).
@@ -279,7 +542,7 @@ def retrieve(query):
             parts.extend(f"- {f}" for f in blk["facts"])
         parts.append("")  # blank line between sources
 
-    return topics, "\n".join(parts).strip()
+    return topics, "\n".join(parts).strip(), sub_queries
 
 
 def _gemini_client():
@@ -412,9 +675,11 @@ class Handler(SimpleHTTPRequestHandler):
             body = json.loads(self.rfile.read(length) or b"{}")
             query = (body.get("query") or "").strip()
             gemini_only = bool(body.get("gemini_only", False))
+            qwen_only = bool(body.get("qwen_only", False))
         except json.JSONDecodeError:
             query = ""
             gemini_only = False
+            qwen_only = False
 
         # Close the connection when the handler returns. Without this the
         # keep-alive socket stays open, the browser's stream reader never
@@ -433,7 +698,7 @@ class Handler(SimpleHTTPRequestHandler):
 
         # ── Retrieve ──
         try:
-            topics, context = retrieve(query)
+            topics, context, sub_queries = retrieve(query)
         except Exception as e:
             self._sse({"type": "error",
                        "message": f"Knowledge base unavailable ({e}). "
@@ -447,7 +712,8 @@ class Handler(SimpleHTTPRequestHandler):
         self._sse({"type": "debug",
                    "system": _SYSTEM,
                    "context": context,
-                   "prompt": build_prompt(query, context)})
+                   "prompt": build_prompt(query, context),
+                   "sub_queries": sub_queries})
 
         if not context:
             self._sse({"type": "token",
@@ -457,6 +723,20 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         # ── Generate: prefer Gemini, fall back to local qwen unless gemini_only ──
+        # qwen_only: skip Gemini entirely and go straight to local model.
+        if qwen_only:
+            self._sse({"type": "backend", "backend": "qwen"})
+            _record_qwen_used()
+            try:
+                for tok in qwen_stream(query, context):
+                    self._sse({"type": "token", "text": tok})
+            except BrokenPipeError:
+                return
+            except Exception as e:
+                self._sse({"type": "error", "message": f"Local generation failed: {e}"})
+            self._sse({"type": "done"})
+            return
+
         client = None
         try:
             client = _gemini_client()

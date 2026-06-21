@@ -75,6 +75,14 @@ INDEX_FILE      = KNOWLEDGE_DIR / "_index.md"
 CHROMA_DIR      = SCRIPT_DIR / ".chroma"
 TRANSCRIPTS_DIR = SCRIPT_DIR / "transcripts"
 
+
+def _prettify_source_name(name: str) -> str:
+    """Turn 'how_to_build_a_brand.txt' → 'How To Build A Brand'.
+    Used as a default title when meta lacks one — same transform graph.js
+    applies at render, but persisted so downstream consumers don't need it."""
+    stem = re.sub(r'\.txt$', '', name, flags=re.IGNORECASE)
+    return stem.replace('_', ' ').title()
+
 EXTRACT_MODEL = "qwen3:1.7b"
 EMBED_MODEL   = "nomic-embed-text"
 
@@ -1803,7 +1811,7 @@ def process_transcript(transcript_path, force=False):
         "entity_count":      entity_count,
         # task 4 — enrich source nodes: link, lengths, times
         "url":               meta.get("url", ""),
-        "title":             meta.get("title", ""),
+        "title":             (meta.get("title") or "").strip() or _prettify_source_name(name),
         "duration_seconds":  meta.get("duration_seconds"),
         "transcribe_seconds":meta.get("transcribe_seconds"),
         "process_seconds":   process_seconds,
