@@ -155,3 +155,54 @@ The second cron (`cc5bc233` at 07:18 PDT) will still fire — it'll see all phas
 
 ### Deferred
 - 20 remaining longs still in transcripts/ but not extracted — defer to a later cron/day
+
+---
+
+## Wave 2 downstream complete (2026-06-21 ~13:55 PDT)
+
+### Pipeline summary
+
+| Phase | Agents | Tokens | Wall | Output |
+|---|---|---|---|---|
+| 3a wave 1 (Haiku shorts) | 51 | 2.73M | 161s | 51 extractions |
+| 3a wave 1 (Sonnet longs) | 15 | 1.67M | 351s | 15 extractions |
+| 3a wave 2 (Sonnet longs) | 15 | 1.79M | 456s | 15 extractions |
+| 3b prepass (local embed) | 0 | n/a | ~8min | 2880 claims, 4096-d embeddings |
+| 3b merge_and_batch | 0 | n/a | ~10s | 1850 merged claims, 281 multi-source |
+| 3b classify (Haiku) | 12 | 660k | 187s | level distribution: L2 780, L2a 721, L2b 308, DROP 41 |
+| 4 candidate compute (local) | 0 | n/a | ~7min | 14556 candidate pairs (concept+claim) |
+| 4 judge (Haiku) | 40 | 1.49M | 590s | 14976 edges (1365 agreement, 3751 builds-on, 9709 related, 151 contradiction) |
+| 5 export_graph_v2 | 0 | n/a | <30s | graph/graph_v2.json |
+
+### Final graph_v2 stats
+
+| Metric | v1 (prior) | v2 (this run) | Δ |
+|---|---|---|---|
+| Total nodes | 3843 | **4865** | +1022 |
+| - Sources | 204 | **305** | +101 |
+| - L1 frameworks | 318 | **415** | +97 |
+| - L2/L2a/L2b claims | 1409 | **1809** | +400 |
+| - L3 examples | 676 | **928** | +252 |
+| - L4' practices | 867 | **1039** | +172 |
+| Total edges | 12725 | **19154** | +6429 |
+| - agreement | 1311 | **1365** | +54 |
+| - builds-on | n/a* | **3751** | new |
+| - related | n/a* | **9709** | new |
+| - contradiction | n/a* | **151** | new |
+| Cross-source confirmed (top) | "Focus Through Subtraction" 25 | "Brand as Behavioral Pairing" **27** | new theme leader |
+
+*v1 edge-kind breakdown was different aggregate
+
+### Outstanding
+- 20 long-form Rory transcripts still in transcripts/ but not extracted (deferred — would push to ~3rd cron window)
+- sources.json backfilled with minimal metadata (title from yt-dlp .meta.json) for the 101 new sources; richer fields (chunk_count, claim_count) absent
+
+### Files added/modified this wave
+- .scribe-skills/phase3a/workflow.js (args plumbing fix)
+- .scribe-skills/phase3b/workflow.js (new — Haiku classifier)
+- .scribe-skills/phase4/workflow.js (new — Haiku edge judges)
+- .scribe-skills/scripts/phase3a_build_sources.py (incremental builder)
+- knowledge/v2/nodes.jsonl (4191 nodes, was 3266)
+- knowledge/v2/connections.json (14976 edges, was 9464)
+- knowledge/sources.json (305 entries, was 204)
+- graph/graph_v2.json (4865 nodes / 19154 edges)

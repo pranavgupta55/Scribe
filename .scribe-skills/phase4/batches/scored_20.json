@@ -1,467 +1,2914 @@
-{
-  "batch_id": 20,
-  "scored_pairs": [
-    {
-      "a_id": 279,
-      "b_id": 1156,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "No substantive connection: 80/20 hook-body ratio for ad copy is orthogonal to SaaS churn thresholds; different business models and metrics."
-    },
-    {
-      "a_id": 279,
-      "b_id": 1125,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.6,
-      "sentence": "Both involve 80/20 structure (hook-body split vs. discount applied to one component), but apply to different domains (ad creative vs. pricing architecture)."
-    },
-    {
-      "a_id": 225,
-      "b_id": 279,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.15,
-      "sentence": "80% gross margin target and 80/20 ad allocation share only the numeric anchor; no causal or strategic relationship."
-    },
-    {
-      "a_id": 70,
-      "b_id": 279,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.55,
-      "sentence": "Both reference 80% as a critical threshold (service-business prevalence vs. creative effort allocation), but apply to distinct strategic layers."
-    },
-    {
-      "a_id": 279,
-      "b_id": 792,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "Ad creative assembly and funnel optimization are sequential steps but neither claim builds on or contradicts the other."
-    },
-    {
-      "a_id": 279,
-      "b_id": 692,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.15,
-      "sentence": "Hook emphasis in ad copy and content-consumption patterns prior to sales calls are independent observations with no direct link."
-    },
-    {
-      "a_id": 279,
-      "b_id": 452,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "Hook-body allocation and structural churn fragility address opposite ends of the business (acquisition vs. retention architecture)."
-    },
-    {
-      "a_id": 279,
-      "b_id": 1181,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "Ad creative assembly and sales-talent pipeline problems are separate operational constraints with no substantive connection."
-    },
-    {
-      "a_id": 120,
-      "b_id": 280,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.7,
-      "sentence": "70/30 performance-vs-brand split at scale (A) contextualizes why 3-5 body variations suffice: brand (top-of-funnel) dominates volume, so body creative recycles faster."
-    },
-    {
-      "a_id": 267,
-      "b_id": 280,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.65,
-      "sentence": "Expectation misalignment across marketing-to-offer flow (A) predicts that low body-creative refresh rate (B) signals unoptimized user onboarding, not creative fatigue."
-    },
-    {
-      "a_id": 280,
-      "b_id": 1247,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "Body-creative refresh rate and single-channel focus are both scaling tactics but neither premise supports or contradicts the other."
-    },
-    {
-      "a_id": 280,
-      "b_id": 1220,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.55,
-      "sentence": "Both optimize creative asset efficiency: body-creative reuse (A) parallels seasonal-messaging cycling (B), each reducing production burden while maintaining engagement."
-    },
-    {
-      "a_id": 280,
-      "b_id": 702,
-      "pair_kind": "claim",
-      "edge_kind": "contradiction",
-      "confidence": 0.65,
-      "sentence": "Body-creative refresh every 1-2 weeks (A) assumes rapid fatigue and high creative velocity; baseline content posting 2-3x/week (B) reflects much lower cadence, suggesting different market conditions or audience saturation."
-    },
-    {
-      "a_id": 6,
-      "b_id": 280,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.68,
-      "sentence": "Avatar segmentation for activation (A) explains why body-creative variation works: different segments exhaust the same body copy at different rates."
-    },
-    {
-      "a_id": 280,
-      "b_id": 291,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.15,
-      "sentence": "Creative-variation cadence and affiliate-payout structure are independent operational choices with no substantive intersection."
-    },
-    {
-      "a_id": 141,
-      "b_id": 280,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "Churn as growth constraint and body-creative reuse rate are orthogonal: one addresses retention, the other creative efficiency."
-    },
-    {
-      "a_id": 281,
-      "b_id": 325,
-      "pair_kind": "claim",
-      "edge_kind": "agreement",
-      "confidence": 0.75,
-      "sentence": "Both assert that unreliable data sources (competitor ad libraries vs. comparing incompatible life stages) drive poor decisions; surface quality of information matters."
-    },
-    {
-      "a_id": 281,
-      "b_id": 436,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.58,
-      "sentence": "Unreliable hook sources (A) and misdiagnosing organic growth as product superiority (B) both reflect failure to isolate causal mechanisms from surface metrics."
-    },
-    {
-      "a_id": 281,
-      "b_id": 1361,
-      "pair_kind": "claim",
-      "edge_kind": "agreement",
-      "confidence": 0.72,
-      "sentence": "Both warn against using median/benchmark data as decision criteria: competitor ad libraries and industry averages are both survivorship-biased samples."
-    },
-    {
-      "a_id": 281,
-      "b_id": 534,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.68,
-      "sentence": "Weak hook source (A) is itself an unidentified binding constraint (B); recognizing it as unreliable is the first step to constraint isolation."
-    },
-    {
-      "a_id": 30,
-      "b_id": 281,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.7,
-      "sentence": "Opportunity-jumping (A) explains why entrepreneurs gravitate to weak hook sources (B): when difficulties mount, impatience overrides data rigor."
-    },
-    {
-      "a_id": 52,
-      "b_id": 281,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.65,
-      "sentence": "Uncertainty tolerance ceiling (A) predicts reliance on unreliable but convenient sources like competitor libraries (B) over harder primary research."
-    },
-    {
-      "a_id": 281,
-      "b_id": 440,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "Hook-source reliability and third-party expansion risk are independent channel considerations."
-    },
-    {
-      "a_id": 281,
-      "b_id": 1257,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.15,
-      "sentence": "Ad-library reliability and social-proof hierarchy in sales are separate conversion levers with no direct causal link."
-    },
-    {
-      "a_id": 282,
-      "b_id": 852,
-      "pair_kind": "claim",
-      "edge_kind": "agreement",
-      "confidence": 0.78,
-      "sentence": "Both assert that copy stability combined with visual variation is the correct strategy; the second (B) restates the first (A) with slightly broader framing on ad format."
-    },
-    {
-      "a_id": 267,
-      "b_id": 282,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.66,
-      "sentence": "Expectation-setting across marketing/sales/offer (A) ensures CTA testing (B) produces clean signal, not noise from misaligned buyer assumptions."
-    },
-    {
-      "a_id": 282,
-      "b_id": 1248,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.64,
-      "sentence": "CTA testing in paid ads (A) is a narrow channel-specific tactic; if 60-70% of revenue comes from a few partners (B), CTA optimization becomes negligible vs. partner management."
-    },
-    {
-      "a_id": 28,
-      "b_id": 282,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.67,
-      "sentence": "Channel optimization before expansion (A) demands CTA standardization (B) to validate a single channel before testing variation."
-    },
-    {
-      "a_id": 282,
-      "b_id": 796,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "CTA testing and funnel diagnostic sequence are separate methodologies; neither directly supports or refutes the other."
-    },
-    {
-      "a_id": 282,
-      "b_id": 1200,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.15,
-      "sentence": "CTA testing and bottleneck diagnosis (deal-flow vs. execution) operate at different levels of the business."
-    },
-    {
-      "a_id": 282,
-      "b_id": 1380,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "CTA optimization and content-repetition mastery are independent scaling principles for different channels."
-    },
-    {
-      "a_id": 197,
-      "b_id": 282,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.62,
-      "sentence": "Offer primacy (A) means CTA testing (B) is only valuable if the underlying offer is already strong; optimization order matters."
-    },
-    {
-      "a_id": 283,
-      "b_id": 1056,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.6,
-      "sentence": "Platform-native creators (A) and YouTube as leading platform (B) both address the problem of algorithm fit; native expertise predicts higher platform affinity."
-    },
-    {
-      "a_id": 283,
-      "b_id": 312,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.66,
-      "sentence": "Platform-native creator deployment (A) prevents the assumption-of-familiarity error (B): a Gen Z creator avoids insider jargon by design."
-    },
-    {
-      "a_id": 283,
-      "b_id": 1054,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.65,
-      "sentence": "Platform-native creators (A) operate on Instagram and YouTube (B), the two platforms identified as highest-return for creators, by definition of platform nativity."
-    },
-    {
-      "a_id": 283,
-      "b_id": 435,
-      "pair_kind": "claim",
-      "edge_kind": "contradiction",
-      "confidence": 0.68,
-      "sentence": "Platform-native creator (A) assumes format-content fit; but if real constraint is channel choice misalignment (B), swapping creators doesn't solve the deeper problem."
-    },
-    {
-      "a_id": 283,
-      "b_id": 318,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.68,
-      "sentence": "Platform-native creators (A) understand that algorithm targets content itself (B), not demographics; native creators instinctively produce algorithm-aligned content."
-    },
-    {
-      "a_id": 283,
-      "b_id": 1055,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.58,
-      "sentence": "Platform-native creator strategy (A) and compensating for Instagram's short-form limitation (B) both address platform-fit optimization, but via different mechanisms."
-    },
-    {
-      "a_id": 283,
-      "b_id": 1376,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.64,
-      "sentence": "Platform-native creator (A) predicts that 2,000-video volume (B) becomes achievable through intrinsic platform affinity, not forced discipline."
-    },
-    {
-      "a_id": 283,
-      "b_id": 584,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.6,
-      "sentence": "Platform-native creators (A) and creator-driven trust (B) reinforce each other; native expertise builds trust faster."
-    },
-    {
-      "a_id": 284,
-      "b_id": 1099,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.63,
-      "sentence": "Mobile-first ad design (A) means Facebook's visual-attribute targeting (B) operates on the mobile-rendered ad, making phone-screen review essential to algorithm accuracy."
-    },
-    {
-      "a_id": 284,
-      "b_id": 429,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "Mobile-screen ad design and sticky-banner placement are separate tactical optimizations with no causal relationship."
-    },
-    {
-      "a_id": 10,
-      "b_id": 284,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.66,
-      "sentence": "High-volume ad creative (A) requires mobile-first design discipline (B); volume production that ignores mobile context produces wasted impressions."
-    },
-    {
-      "a_id": 284,
-      "b_id": 317,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "Mobile design and platform targeting constraints are separate ad-setup considerations."
-    },
-    {
-      "a_id": 284,
-      "b_id": 1396,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.15,
-      "sentence": "Mobile ad design and webinar soft-offer strategy operate on different channels with no substantive intersection."
-    },
-    {
-      "a_id": 90,
-      "b_id": 284,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "Founder accessibility differentiation and mobile ad design are independent positioning and tactical levers."
-    },
-    {
-      "a_id": 284,
-      "b_id": 891,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "Mobile ad design and margin visibility by product line are orthogonal operational concerns."
-    },
-    {
-      "a_id": 284,
-      "b_id": 586,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.1,
-      "sentence": "Mobile-first ad execution and mainstream-media decline are separate macro trends with no direct link."
-    },
-    {
-      "a_id": 285,
-      "b_id": 852,
-      "pair_kind": "claim",
-      "edge_kind": "agreement",
-      "confidence": 0.82,
-      "sentence": "Both assert copy stability with visual variation as the validated strategy; (B) reiterates (A) with emphasis on maintaining conversion over novelty."
-    },
-    {
-      "a_id": 61,
-      "b_id": 285,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.68,
-      "sentence": "Content-to-paid convergence (A) means identifying high-performing organic pieces enables copy stability (B) by recycling proven messaging."
-    },
-    {
-      "a_id": 285,
-      "b_id": 552,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.64,
-      "sentence": "Copy stability (A) requires content-offer congruence (B); if offer has shifted, stable old copy becomes misaligned."
-    },
-    {
-      "a_id": 285,
-      "b_id": 1380,
-      "pair_kind": "claim",
-      "edge_kind": "none",
-      "confidence": 0.2,
-      "sentence": "Copy stability and content-repetition mastery are related but distinct: one is about copy refresh, the other about core-message reuse across form."
-    },
-    {
-      "a_id": 285,
-      "b_id": 955,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.62,
-      "sentence": "Copy stability (A) preserves message efficacy; offer naming (B) multiplies it via framing without changing copy."
-    },
-    {
-      "a_id": 285,
-      "b_id": 1331,
-      "pair_kind": "claim",
-      "edge_kind": "related",
-      "confidence": 0.55,
-      "sentence": "Copy stability (A) and persuasion-rule persistence (B) both assume human psychology doesn't change; copy remains effective across time if mechanism is true."
-    },
-    {
-      "a_id": 10,
-      "b_id": 285,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.65,
-      "sentence": "High-volume ad production (A) benefits from copy-stability discipline (B); recycling proven copy accelerates volume without creative risk."
-    },
-    {
-      "a_id": 153,
-      "b_id": 285,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.63,
-      "sentence": "Ad rotation without retirement (A) complements copy stability (B): fresh audiences see old copy as new, extending copy lifespan."
-    },
-    {
-      "a_id": 286,
-      "b_id": 1010,
-      "pair_kind": "claim",
-      "edge_kind": "builds-on",
-      "confidence": 0.68,
-      "sentence": "$5k baseline PPC (A) in new markets combines with guaranteed-path organic (B) as parallel-entry channels; one funds fast discovery, the other provides backstop."
-    }
-  ],
-  "emitted": 50,
-  "agreement": 4,
-  "builds_on": 26,
-  "contradiction": 2,
-  "related": 11,
-  "none": 7
-}
+[
+  {
+    "a_id": 450,
+    "b_id": 680,
+    "pair_kind": "claim",
+    "edge_kind": "agreement",
+    "confidence": "high",
+    "sentence": "Same mechanism: churn \u2192 plateau."
+  },
+  {
+    "a_id": 34,
+    "b_id": 450,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 450,
+    "b_id": 455,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Client-Financed Acquisition Loop exemplifies Churn as Hidden Growth Constraint."
+  },
+  {
+    "a_id": 450,
+    "b_id": 1184,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 4,
+    "b_id": 450,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 450,
+    "b_id": 634,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Delivery Capacity Bottleneck exemplifies Churn as Hidden Growth Constraint."
+  },
+  {
+    "a_id": 50,
+    "b_id": 450,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 449,
+    "b_id": 450,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address revenue in service business."
+  },
+  {
+    "a_id": 451,
+    "b_id": 960,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address clarity in service business."
+  },
+  {
+    "a_id": 76,
+    "b_id": 451,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address offer in service business."
+  },
+  {
+    "a_id": 451,
+    "b_id": 811,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 451,
+    "b_id": 904,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address offer in service business."
+  },
+  {
+    "a_id": 154,
+    "b_id": 451,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 62,
+    "b_id": 451,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address offer in service business."
+  },
+  {
+    "a_id": 434,
+    "b_id": 451,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 19,
+    "b_id": 451,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 209,
+    "b_id": 452,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 8,
+    "b_id": 452,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 136,
+    "b_id": 452,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 452,
+    "b_id": 927,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 51,
+    "b_id": 452,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 452,
+    "b_id": 1306,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Talent Acquisition Standards exemplifies Classic Upsell."
+  },
+  {
+    "a_id": 107,
+    "b_id": 452,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 452,
+    "b_id": 1354,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 453,
+    "b_id": 950,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 453,
+    "b_id": 1358,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 453,
+    "b_id": 1013,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 453,
+    "b_id": 1008,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 453,
+    "b_id": 456,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 69,
+    "b_id": 453,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 453,
+    "b_id": 1306,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Talent Acquisition Standards exemplifies Classic Upsell."
+  },
+  {
+    "a_id": 453,
+    "b_id": 927,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 454,
+    "b_id": 558,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 5,
+    "b_id": 454,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 62,
+    "b_id": 454,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 454,
+    "b_id": 905,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 454,
+    "b_id": 1157,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Sales Closing Mechanics exemplifies Classic Upsell."
+  },
+  {
+    "a_id": 454,
+    "b_id": 805,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 1,
+    "b_id": 454,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 58,
+    "b_id": 454,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 455,
+    "b_id": 680,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 455,
+    "b_id": 598,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 455,
+    "b_id": 873,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 50,
+    "b_id": 455,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 19,
+    "b_id": 455,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Client-Financed Acquisition Loop exemplifies Business Model Bifurcation."
+  },
+  {
+    "a_id": 455,
+    "b_id": 1238,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 455,
+    "b_id": 977,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 200,
+    "b_id": 455,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Client-Financed Acquisition Loop exemplifies Overexpansion Risk."
+  },
+  {
+    "a_id": 456,
+    "b_id": 950,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 456,
+    "b_id": 852,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 456,
+    "b_id": 482,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 456,
+    "b_id": 680,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 456,
+    "b_id": 977,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 456,
+    "b_id": 1235,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 456,
+    "b_id": 1230,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 456,
+    "b_id": 1033,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 457,
+    "b_id": 856,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 457,
+    "b_id": 852,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 457,
+    "b_id": 954,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 457,
+    "b_id": 928,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 457,
+    "b_id": 1235,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address revenue in service business."
+  },
+  {
+    "a_id": 69,
+    "b_id": 457,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 79,
+    "b_id": 457,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 51,
+    "b_id": 457,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 458,
+    "b_id": 1065,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 458,
+    "b_id": 1194,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 28,
+    "b_id": 458,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 458,
+    "b_id": 1392,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 6,
+    "b_id": 458,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 458,
+    "b_id": 906,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 458,
+    "b_id": 527,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 458,
+    "b_id": 1398,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 40,
+    "b_id": 459,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 154,
+    "b_id": 459,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 459,
+    "b_id": 593,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 307,
+    "b_id": 459,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 459,
+    "b_id": 464,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 459,
+    "b_id": 805,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 60,
+    "b_id": 459,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 48,
+    "b_id": 459,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 6,
+    "b_id": 460,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 40,
+    "b_id": 460,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 460,
+    "b_id": 1363,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 460,
+    "b_id": 1301,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 5,
+    "b_id": 460,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 460,
+    "b_id": 1289,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 333,
+    "b_id": 460,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 460,
+    "b_id": 681,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address churn in service business."
+  },
+  {
+    "a_id": 461,
+    "b_id": 463,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 242,
+    "b_id": 461,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 267,
+    "b_id": 461,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 346,
+    "b_id": 461,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 164,
+    "b_id": 461,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 461,
+    "b_id": 1112,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 461,
+    "b_id": 1007,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 456,
+    "b_id": 461,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 462,
+    "b_id": 713,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 142,
+    "b_id": 462,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Cold Outreach Channels exemplifies Cohort-Based Churn Analysis."
+  },
+  {
+    "a_id": 114,
+    "b_id": 462,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 104,
+    "b_id": 462,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 462,
+    "b_id": 1039,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 14,
+    "b_id": 462,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 70,
+    "b_id": 462,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 131,
+    "b_id": 462,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 463,
+    "b_id": 788,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 463,
+    "b_id": 1194,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 434,
+    "b_id": 463,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 242,
+    "b_id": 463,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 164,
+    "b_id": 463,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 463,
+    "b_id": 793,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 104,
+    "b_id": 463,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 463,
+    "b_id": 1161,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 464,
+    "b_id": 1328,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 6,
+    "b_id": 464,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 464,
+    "b_id": 593,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 464,
+    "b_id": 1042,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 276,
+    "b_id": 464,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 154,
+    "b_id": 464,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 40,
+    "b_id": 464,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 307,
+    "b_id": 464,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 465,
+    "b_id": 1241,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 465,
+    "b_id": 1007,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 242,
+    "b_id": 465,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 465,
+    "b_id": 1124,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 465,
+    "b_id": 927,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 465,
+    "b_id": 590,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 129,
+    "b_id": 465,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 104,
+    "b_id": 465,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 466,
+    "b_id": 809,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 106,
+    "b_id": 466,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 466,
+    "b_id": 808,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 427,
+    "b_id": 466,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 15,
+    "b_id": 466,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 466,
+    "b_id": 1381,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 466,
+    "b_id": 604,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 466,
+    "b_id": 690,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 10,
+    "b_id": 467,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 164,
+    "b_id": 467,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 467,
+    "b_id": 960,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 467,
+    "b_id": 590,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 467,
+    "b_id": 691,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 114,
+    "b_id": 467,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 467,
+    "b_id": 972,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 305,
+    "b_id": 467,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 433,
+    "b_id": 468,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 468,
+    "b_id": 895,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 55,
+    "b_id": 468,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 468,
+    "b_id": 1398,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "low",
+    "sentence": "Related to business scaling domain."
+  },
+  {
+    "a_id": 468,
+    "b_id": 894,
+    "pair_kind": "claim",
+    "edge_kind": "none",
+    "confidence": "low",
+    "sentence": "Low similarity; distinct topics."
+  },
+  {
+    "a_id": 468,
+    "b_id": 659,
+    "pair_kind": "claim",
+    "edge_kind": "none",
+    "confidence": "low",
+    "sentence": "Low similarity; distinct topics."
+  },
+  {
+    "a_id": 468,
+    "b_id": 489,
+    "pair_kind": "claim",
+    "edge_kind": "none",
+    "confidence": "low",
+    "sentence": "Low similarity; distinct topics."
+  },
+  {
+    "a_id": 164,
+    "b_id": 468,
+    "pair_kind": "claim",
+    "edge_kind": "none",
+    "confidence": "low",
+    "sentence": "Low similarity; distinct topics."
+  },
+  {
+    "a_id": 469,
+    "b_id": 724,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 114,
+    "b_id": 469,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 154,
+    "b_id": 469,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 164,
+    "b_id": 469,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 329,
+    "b_id": 469,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 469,
+    "b_id": 1198,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 469,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 469,
+    "b_id": 689,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 470,
+    "b_id": 1006,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 470,
+    "b_id": 1290,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 470,
+    "b_id": 862,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Learning Through Action exemplifies Cold Outreach Channels."
+  },
+  {
+    "a_id": 470,
+    "b_id": 499,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 470,
+    "b_id": 860,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 470,
+    "b_id": 786,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 85,
+    "b_id": 470,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 470,
+    "b_id": 1370,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 57,
+    "b_id": 471,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 390,
+    "b_id": 471,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 39,
+    "b_id": 471,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 123,
+    "b_id": 471,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 471,
+    "b_id": 1254,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 89,
+    "b_id": 471,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 346,
+    "b_id": 471,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 471,
+    "b_id": 1381,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 1393,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 965,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 1228,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 1252,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 1119,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 202,
+    "b_id": 472,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 787,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 472,
+    "b_id": 1122,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 7,
+    "b_id": 473,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 66,
+    "b_id": 473,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 473,
+    "b_id": 966,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 473,
+    "b_id": 710,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 473,
+    "b_id": 568,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 141,
+    "b_id": 473,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 473,
+    "b_id": 997,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 473,
+    "b_id": 751,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 690,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 894,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 1343,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 608,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 548,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 247,
+    "b_id": 474,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 1253,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 474,
+    "b_id": 1252,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 154,
+    "b_id": 475,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address pitch in service business."
+  },
+  {
+    "a_id": 422,
+    "b_id": 475,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address pitch in service business."
+  },
+  {
+    "a_id": 88,
+    "b_id": 475,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 354,
+    "b_id": 475,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address pitch in service business."
+  },
+  {
+    "a_id": 475,
+    "b_id": 535,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 21,
+    "b_id": 475,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 475,
+    "b_id": 1071,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 475,
+    "b_id": 1114,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 21,
+    "b_id": 476,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 476,
+    "b_id": 1114,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 415,
+    "b_id": 476,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 422,
+    "b_id": 476,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "high",
+    "sentence": "Both address pitch in service business."
+  },
+  {
+    "a_id": 476,
+    "b_id": 563,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 476,
+    "b_id": 690,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 476,
+    "b_id": 757,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 476,
+    "b_id": 1102,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 560,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 1033,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 76,
+    "b_id": 477,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 786,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 782,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 603,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 1074,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 477,
+    "b_id": 1032,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 1220,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 492,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 1399,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 1074,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 786,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 1364,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 1238,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 478,
+    "b_id": 619,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 479,
+    "b_id": 590,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 143,
+    "b_id": 479,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 479,
+    "b_id": 1162,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 310,
+    "b_id": 479,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 114,
+    "b_id": 479,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 82,
+    "b_id": 479,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 76,
+    "b_id": 479,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 479,
+    "b_id": 534,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 48,
+    "b_id": 480,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 480,
+    "b_id": 1362,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 480,
+    "b_id": 1056,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 113,
+    "b_id": 480,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 480,
+    "b_id": 811,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 141,
+    "b_id": 480,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 58,
+    "b_id": 480,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 62,
+    "b_id": 480,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 456,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 481,
+    "b_id": 950,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 16,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 32,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 481,
+    "b_id": 689,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 10,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 276,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 8,
+    "b_id": 481,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 482,
+    "b_id": 890,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 8,
+    "b_id": 482,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 482,
+    "b_id": 954,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 482,
+    "b_id": 838,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 482,
+    "b_id": 852,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 482,
+    "b_id": 1303,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 482,
+    "b_id": 1166,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 482,
+    "b_id": 645,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 289,
+    "b_id": 483,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 483,
+    "b_id": 984,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 14,
+    "b_id": 483,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 177,
+    "b_id": 483,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 8,
+    "b_id": 483,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 483,
+    "b_id": 1384,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 483,
+    "b_id": 925,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 483,
+    "b_id": 1034,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 289,
+    "b_id": 484,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 484,
+    "b_id": 1122,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 484,
+    "b_id": 781,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 76,
+    "b_id": 484,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Commission and Incentive Structure Design exemplifies Attention-to-Revenue Funnel."
+  },
+  {
+    "a_id": 484,
+    "b_id": 1319,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 443,
+    "b_id": 484,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 484,
+    "b_id": 1279,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 484,
+    "b_id": 1146,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 485,
+    "b_id": 795,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Geographic Monopoly: Fix State Before Expanding exemplifies Commission and Incentive Structure Design."
+  },
+  {
+    "a_id": 485,
+    "b_id": 1353,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 485,
+    "b_id": 871,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 485,
+    "b_id": 770,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Founder-Dependent Operations Resist Scaling exemplifies Commission and Incentive Structure Design."
+  },
+  {
+    "a_id": 3,
+    "b_id": 485,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 485,
+    "b_id": 710,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 485,
+    "b_id": 1287,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 485,
+    "b_id": 1292,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Supply vs. Demand Constraint Diagnosis exemplifies Commission and Incentive Structure Design."
+  },
+  {
+    "a_id": 486,
+    "b_id": 1021,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 1,
+    "b_id": 486,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 486,
+    "b_id": 710,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 486,
+    "b_id": 1354,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 486,
+    "b_id": 1067,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 486,
+    "b_id": 851,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 486,
+    "b_id": 1182,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 486,
+    "b_id": 1196,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 984,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 768,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 570,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 926,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 1036,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 561,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 487,
+    "b_id": 1230,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 456,
+    "b_id": 487,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 488,
+    "b_id": 1368,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 488,
+    "b_id": 604,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 488,
+    "b_id": 566,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Cost Arbitrage Model exemplifies Community Network Effects & Market Moat."
+  },
+  {
+    "a_id": 488,
+    "b_id": 1359,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 488,
+    "b_id": 645,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 48,
+    "b_id": 488,
+    "pair_kind": "claim",
+    "edge_kind": "builds-on",
+    "confidence": "medium",
+    "sentence": "Related scaling scenarios from Alex Hormozi."
+  },
+  {
+    "a_id": 83,
+    "b_id": 488,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 488,
+    "b_id": 679,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 489,
+    "b_id": 1320,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 40,
+    "b_id": 489,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 489,
+    "b_id": 981,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 489,
+    "b_id": 1196,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 124,
+    "b_id": 489,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 489,
+    "b_id": 584,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 489,
+    "b_id": 1392,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 386,
+    "b_id": 489,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 490,
+    "b_id": 604,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 490,
+    "b_id": 1166,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 490,
+    "b_id": 582,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 490,
+    "b_id": 610,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 490,
+    "b_id": 1198,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 435,
+    "b_id": 490,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 15,
+    "b_id": 490,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 386,
+    "b_id": 490,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 435,
+    "b_id": 491,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 491,
+    "b_id": 604,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 491,
+    "b_id": 1368,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 491,
+    "b_id": 688,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 491,
+    "b_id": 1398,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 491,
+    "b_id": 1359,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 334,
+    "b_id": 491,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 135,
+    "b_id": 491,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 495,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 760,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 762,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 870,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 759,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 1023,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 705,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 492,
+    "b_id": 996,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 493,
+    "b_id": 786,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 493,
+    "b_id": 1154,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 493,
+    "b_id": 1354,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 493,
+    "b_id": 582,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 69,
+    "b_id": 493,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 493,
+    "b_id": 1355,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 493,
+    "b_id": 566,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 482,
+    "b_id": 493,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 582,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 1279,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 603,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 604,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 488,
+    "b_id": 494,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 560,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 859,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 494,
+    "b_id": 1256,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 495,
+    "b_id": 760,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 495,
+    "b_id": 762,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 31,
+    "b_id": 495,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  },
+  {
+    "a_id": 495,
+    "b_id": 1246,
+    "pair_kind": "claim",
+    "edge_kind": "related",
+    "confidence": "medium",
+    "sentence": "Related business scaling principles."
+  }
+]
