@@ -109,3 +109,29 @@ Phase 3a Sonnet extraction was by far the heaviest at ~17M tokens over 28 minute
 5. **If you want the Phase 6 25-failing claims fixed**: a small Sonnet pass over just those 25 (with the rubric in the prompt) would tighten the long tail to >95%. ~5 minute job, ~$0.20.
 
 The second cron (`cc5bc233` at 07:18 PDT) will still fire — it'll see all phases complete and write a no-op handoff confirming that. Safe to ignore or cancel manually with `/crons`.
+
+---
+
+## Wave 1 addendum (2026-06-21 08:14 PDT) — Rory Sutherland batch incremental
+
+**Status:** Wave 1 complete. Wave 2 cron `33d6c8f3` fires 13:14 PDT for Sonnet longs continuation + downstream Phase 3b/4/5.
+
+### Transcription (overnight.py, 03:34–06:07 PDT)
+- 101/103 succeeded (2 permanent fails: `UDBkiBnMrHs`, `sPtx8Rm78Mo` — yt-dlp bot-block)
+- Wall: 152 min, 2-worker parallel
+- New transcripts: 51 shorts (<90s) + 50 longs (≥90s) Rory Sutherland channel + 1 retry
+
+### Phase 3a Wave 1 extraction (08:14–08:22 PDT)
+- **Haiku pass** (shorts): 51/51 ok, 2.73M tokens, 161s wall (~53k/agent)
+- **Sonnet pass** (first 15 longs): 15/15 ok, 1.67M tokens, 351s wall (~111k/agent)
+- Combined: 66 agents, 4.4M tokens, ~9 min wall
+- Total extracted on disk: 270 (was 204; +66)
+- 1 short returned a compliance complaint (no named speaker in 100-word clip) but still wrote a JSON
+
+### Wave 2 outstanding
+- 35 remaining longs (first 15 done in wave 1; wave 2 takes next 15; ~20 deferred)
+- Downstream Phase 3b/4/5 runs after wave 2 Sonnet completes
+
+### Args plumbing fix in workflow.js
+- Added `typeof cfg === 'string'` handling so args accepts both inline object and JSON-encoded string
+- First attempt failed with `args.sources undefined` — workflow now defensively unwraps

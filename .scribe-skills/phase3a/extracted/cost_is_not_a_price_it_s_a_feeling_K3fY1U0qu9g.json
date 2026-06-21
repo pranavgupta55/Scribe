@@ -1,0 +1,112 @@
+{
+  "source_file": "cost_is_not_a_price_it_s_a_feeling_K3fY1U0qu9g.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Price Communication",
+    "Wealth-Relative Value Perception",
+    "Conscious Trade Accounting"
+  ],
+  "frameworks": [
+    {
+      "name": "Mental Accounting and Prepaid Cost Absorption",
+      "definition": "Costs that are paid upfront and mentally committed (stored value cards, advance hotel/airline payments) feel like sunk costs, making subsequent expenditures feel smaller than their absolute price.",
+      "concept": "Price Communication"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Cost is a feeling, not a number. When a customer has prepaid or committed funds (e.g., $30 on a Starbucks Stored Value Card), spending $20 from that pool feels like a $10 expense because the prepaid amount is mentally written off as sunk cost.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "prepaid or stored-value context",
+        "customer has mentally committed funds"
+      ],
+      "mechanism": "Mental accounting treats prepaid funds as already spent; drawing from the pool feels like reducing loss, not incurring new cost",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Approximately $1 billion in Starbucks Stored Value funds sit unused globally at any moment, indicating the psychological power of prepayment to decouple actual spending from perceived cost.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [],
+      "mechanism": null,
+      "numbers": {
+        "axis": "prepaid funds globally held across all Starbucks cards",
+        "anchors": [
+          {
+            "region": "global Starbucks card float",
+            "value": "~$1 billion"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "When customers have paid for the base product or service upfront (airline seat, hotel room), they mentally write off that cost as sunk. Subsequent upsell offers (upgrades) are evaluated only against the marginal upgrade price, not the total cost.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "upfront payment made 3+ months prior",
+        "upsell or upgrade offer presented at time of service"
+      ],
+      "mechanism": "Sunk cost mental accounting causes customers to ignore the base payment and evaluate only the marginal cost, making upgrades appear cheaper than they would if evaluated as total incremental spend",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when customer has paid at time of service (no sunk-cost decoupling)",
+        "Does not apply to low-price impulse purchases where mental accounting is minimal"
+      ]
+    },
+    {
+      "text": "As a pricing strategy, make customers pay twice: once upfront (via prepayment, stored value, or deposit) and again at the time of service. This separation makes the second payment feel smaller.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "customer willingness to prepay or deposit",
+        "service or product with deferred consumption"
+      ],
+      "mechanism": "Double payment architecture leverages mental accounting; the upfront commitment is mentally separated from consumption-time expenditure, reducing perceived total cost",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply in low-trust contexts where prepayment creates friction",
+        "Does not apply to subscription models where payment is continuous"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A customer with $30 on a Starbucks Stored Value Card spends $20 on coffee. Because they have mentally written off the $30 as already committed to Starbucks, the $20 transaction feels like only a $10 expense (the reduction in their remaining balance), not a full $20 cost.",
+      "claim_index": 0,
+      "topic": "Price Communication"
+    },
+    {
+      "text": "An airline passenger who purchased a ticket 3 months ago for $400 is offered a $150 seat upgrade at check-in. Because they have mentally written off the original $400 ticket cost, the upgrade offer is evaluated only against the $150 price, making it feel like a marginal $150 addition rather than a $550 total spend.",
+      "claim_index": 2,
+      "topic": "Price Communication"
+    },
+    {
+      "text": "A hotel guest who booked and paid for a room 3 months earlier is offered a suite upgrade for $80 at check-in. The guest mentally separates the upfront payment (written off as sunk cost) from the upgrade offer, evaluating the upgrade only on its $80 marginal cost, not the true incremental total.",
+      "claim_index": 2,
+      "topic": "Price Communication"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Collect payment for the core product or service upfront and as far in advance as possible. This front-loads the sunk cost and creates mental separation between the base investment and any subsequent upsells or upgrades.",
+      "topic": "Price Communication"
+    },
+    {
+      "text": "When presenting upsells or upgrades, show only the incremental price, not the total cost. Customers who have prepaid will naturally anchor to the marginal cost.",
+      "topic": "Price Communication"
+    }
+  ]
+}

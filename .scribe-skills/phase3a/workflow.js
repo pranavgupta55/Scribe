@@ -92,13 +92,23 @@ REPLY with ONE line in the format:
 }
 
 phase('Extract')
-log(`Phase 3a extraction starting — ${args.sources.length} sources`)
+
+// args may be the object literal or a JSON-encoded string of it
+let cfg = args
+if (typeof cfg === 'string') cfg = JSON.parse(cfg)
+const sources = cfg && cfg.sources
+const modelChoice = (cfg && cfg.model) || 'sonnet'
+if (!sources) {
+  throw new Error(`args.sources missing — typeof args=${typeof args}, keys=${args && Object.keys(args)}`)
+}
+
+log(`Phase 3a extraction starting — ${sources.length} sources, model=${modelChoice}`)
 
 const results = await parallel(
-  args.sources.map((s) => () =>
+  sources.map((s) => () =>
     agent(buildExtractionPrompt(s), {
       label: `extract:${s.name.replace(/\.txt$/, '').slice(0, 32)}`,
-      model: 'sonnet',
+      model: modelChoice,
       phase: 'Extract',
     })
       .then((reply) => ({ name: s.name, reply: String(reply || '').slice(0, 300), ok: true }))

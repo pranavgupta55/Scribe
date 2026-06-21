@@ -1,0 +1,96 @@
+{
+  "source_file": "easiest_way_of_solving_complex_problems_behaviouralscience_r_ZNe_DazDw2M.txt",
+  "primary_speaker": "Rory Sutherland",
+  "concepts_addressed": [
+    "Constraint-Based Strategy",
+    "Observable Reality Framework",
+    "Focus Through Subtraction"
+  ],
+  "frameworks": [
+    {
+      "name": "Lateral Category Analysis",
+      "definition": "A problem-solving approach that recognizes most complex problems have already been solved in different domains, requiring transfer of solutions across category boundaries.",
+      "concept": "Constraint-Based Strategy"
+    },
+    {
+      "name": "TRIZ Problem Definition Linkage",
+      "definition": "A framework for identifying how poor problem definitions create false constraints that prevent recognition of solutions already existing in other domains.",
+      "concept": "Observable Reality Framework"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Most complex problems have already been solved somewhere, but in a different domain from where you are trying to solve them, and people struggle to make the linkage across domains (Rory Sutherland, TRIZ framework).",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Constraint-Based Strategy",
+      "conditions": [],
+      "mechanism": "TRIZ identified that problem solutions cluster by physical constraint patterns rather than by industry or domain, making solutions transferable when the underlying constraint is recognized.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires recognizing structural similarity between different domains",
+        "Difficulty in cross-domain pattern transfer is primarily cognitive, not mechanical"
+      ]
+    },
+    {
+      "text": "Poor problem definition creates false constraints: defining train overcrowding as 'anyone standing' masks the distinction between intermittent (100 people standing 10% of the time) versus continuous crowding (10 people standing 100% of the time), which are different problems requiring different solutions.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Observable Reality Framework",
+      "conditions": [
+        "High-volume, time-variable usage systems (public transit)"
+      ],
+      "mechanism": "Imprecise definitions conflate multiple constraint patterns into a single label, hiding the real constraint and preventing solution transfer from domains where that constraint has been solved.",
+      "numbers": {
+        "axis": "usage pattern distribution",
+        "anchors": [
+          {
+            "region": "intermittent high-volume",
+            "value": "100 people standing 10% of the time"
+          },
+          {
+            "region": "continuous low-volume",
+            "value": "10 people standing 100% of the time"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Example uses train/tube transit; principle applies to any variable-demand system"
+      ]
+    },
+    {
+      "text": "Definition quality determines solution search space: when a problem is defined incorrectly, the solver looks in the wrong category for solutions and misses solutions already deployed in other domains where the actual constraint is visible.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Observable Reality Framework",
+      "conditions": [
+        "Complex problems with cross-domain solution precedents"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Requires domain expertise or external perspective to recognize hidden constraints"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Train overcrowding in UK transit is commonly defined as 'anyone standing on a train.' Rory Sutherland notes this definition misses the real constraint: time-distribution of demand. A passenger standing for a short trip (10% of their commute) experiences minimal discomfort; a passenger forced to stand for 90% of their journey has a different problem. This hidden distinction prevents transit planners from recognizing that solutions from variable-demand industries (e.g., retail shelf-stocking systems, theatrical staging for intermittent crowds) could solve the *actual* problem but not the *defined* problem.",
+      "claim_index": 1,
+      "topic": "Observable Reality Framework"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When facing a complex problem, ask: has this constraint been solved elsewhere? Search adjacent industries and domains for precedents before inventing a new solution.",
+      "topic": "Constraint-Based Strategy"
+    },
+    {
+      "text": "Interrogate your problem definition: does it distinguish between qualitatively different patterns that happen to look similar at first glance? Redefinition often reveals solutions already deployed in other fields.",
+      "topic": "Observable Reality Framework"
+    }
+  ]
+}

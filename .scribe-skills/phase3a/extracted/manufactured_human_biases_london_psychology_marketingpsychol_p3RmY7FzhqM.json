@@ -1,0 +1,120 @@
+{
+  "source_file": "manufactured_human_biases_london_psychology_marketingpsychol_p3RmY7FzhqM.txt",
+  "primary_speaker": "Charlie Munger",
+  "concepts_addressed": [
+    "Behavioral Reinforcement Loops",
+    "Price Anchoring"
+  ],
+  "frameworks": [
+    {
+      "name": "First Impression Anchoring Framework",
+      "definition": "Initial decisions and impressions on a stimulus (like checking into a hotel) anchor all subsequent perceptions of that same stimulus, with evidence-seeking behavior reinforcing the initial judgment.",
+      "concept": "Behavioral Reinforcement Loops"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Charlie Munger (via Warren Buffett's partnership) describes the human brain as functioning like an egg: once an initial decision, first impression, or prejudice enters the brain, it closes down to further stimuli and prevents contradictory information from changing the initial perception.",
+      "type": "mechanism",
+      "speaker": "Charlie Munger",
+      "speaker_term": null,
+      "topic": "Behavioral Reinforcement Loops",
+      "conditions": [],
+      "mechanism": "The brain commits to an initial decision and then selectively seeks affirmatory evidence while dismissing contradictory perceptions, creating a closed feedback loop.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Hotel guests who experienced a good check-in within three minutes rated all subsequent aspects of the hotel (service, amenities, even subjective features like ice sculptures) as good, because they made an initial decision that the hotel was good and then looked for affirmatory evidence to confirm it.",
+      "type": "assertion",
+      "speaker": "Charlie Munger",
+      "speaker_term": null,
+      "topic": "Behavioral Reinforcement Loops",
+      "conditions": [
+        "hospitality service context",
+        "check-in experience within first three minutes"
+      ],
+      "mechanism": "First impression anchors subsequent perception through selective evidence-seeking behavior.",
+      "numbers": {
+        "axis": "check-in wait time (minutes)",
+        "anchors": [
+          {
+            "region": "good check-in",
+            "value": "within 3 minutes"
+          },
+          {
+            "region": "poor check-in",
+            "value": "15-20 minute queue"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Hotel guests who experienced a 15-20 minute wait for check-in rated everything about the hotel negatively, including subjective features unrelated to service (the ice sculpture in the garden), demonstrating that initial negative impressions reframe all subsequent perceptions.",
+      "type": "assertion",
+      "speaker": "Charlie Munger",
+      "speaker_term": null,
+      "topic": "Behavioral Reinforcement Loops",
+      "conditions": [
+        "hospitality service context",
+        "check-in experience requiring 15-20 minute wait"
+      ],
+      "mechanism": "Negative first impression triggers systematic reframing of all subsequent observations through a negative filter.",
+      "numbers": null,
+      "bounded_by": [
+        "Limited to observable satisfaction questionnaire responses from hotel guests"
+      ]
+    },
+    {
+      "text": "Guests who queued for 20 minutes at check-in were measurably eager to express negative satisfaction with unrelated hotel features (ice sculpture) on satisfaction questionnaires, indicating that initial emotional negative experiences contaminate all subsequent judgments.",
+      "type": "quantified",
+      "speaker": "Charlie Munger",
+      "speaker_term": null,
+      "topic": "Behavioral Reinforcement Loops",
+      "conditions": [
+        "satisfaction questionnaire response context",
+        "20-minute check-in wait"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "eagerness to express negative satisfaction",
+        "anchors": [
+          {
+            "region": "check-in within 3 minutes",
+            "value": "positive satisfaction ratings across features"
+          },
+          {
+            "region": "20-minute check-in wait",
+            "value": "negative satisfaction ratings on unrelated features"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Observed only in questionnaire responses; does not measure actual service quality or feature properties"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A hotel guest checks in and waits three minutes, experiencing efficient service and positive interaction. They then tour the hotel, evaluate the ice sculpture in the garden, eat at the restaurant, and sleep in the room. Their initial positive impression anchors their perception: they notice and remember positive aspects, overlook minor inconveniences, and rate the ice sculpture favorably on their departure survey because their decision to like the hotel is locked in.",
+      "claim_index": 1,
+      "topic": "Behavioral Reinforcement Loops"
+    },
+    {
+      "text": "A different hotel guest queues for 20 minutes at check-in, growing frustrated and forming a negative impression. They then tour the same hotel with identical physical features, but their initial negative decision reframes everything: the same ice sculpture now looks tacky, the restaurant service feels slow, the room feels small. On their departure survey, they actively mark negative ratings on features—even ones they did not directly experience—because their brain is locked into the negative decision.",
+      "claim_index": 2,
+      "topic": "Behavioral Reinforcement Loops"
+    }
+  ],
+  "practices": [
+    {
+      "text": "In service-oriented contexts, optimize the first customer touchpoint (check-in, onboarding, initial call) to deliver a positive experience, as this initial decision will anchor all downstream perceptions and satisfaction.",
+      "topic": "Behavioral Reinforcement Loops"
+    },
+    {
+      "text": "Avoid creating friction in early customer interactions, as negative first impressions trigger systematic reframing of all subsequent experiences, including unrelated aspects of the service or product.",
+      "topic": "Behavioral Reinforcement Loops"
+    }
+  ]
+}
