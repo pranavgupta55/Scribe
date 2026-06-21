@@ -66,7 +66,12 @@
     /* ── Unified top bar — single horizontal bar across all views. ──
        Holds: [dev-toggle | status-pill | gem-only | qwen-only] on the left,
        [center-btn | view-toggle | right-toggle] on the right. Child groups
-       hidden per-view via body[data-view=...] selectors below. */
+       hidden per-view via body[data-view=...] selectors below.
+
+       Surface invisibility: no border, transparent background. Reserves 48 px
+       of layout space (via body's `padding-top: 48px`) and continues to host
+       all interactive controls — only the *bar itself* is unseen. The buttons
+       inside keep their own backgrounds/borders so they remain visible. */
     #topbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -75,8 +80,8 @@
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       padding: 0 12px;
-      background: var(--bg-base);
-      border-bottom: 1px solid var(--border-subtle);
+      background: transparent;
+      border-bottom: none;
       z-index: 30;
       user-select: none;
       box-sizing: border-box;
