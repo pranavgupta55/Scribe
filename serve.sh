@@ -14,8 +14,11 @@ PORT=8765
 
 cd "$SCRIPT_DIR"
 
-echo "📊 Generating graph data..."
+echo "📊 Generating graph data (v1 + v2)..."
 python3 "${SCRIPT_DIR}/export_graph.py"
+if [ -f "${SCRIPT_DIR}/export_graph_v2.py" ] && [ -f "${SCRIPT_DIR}/knowledge/v2/nodes.jsonl" ]; then
+  python3 "${SCRIPT_DIR}/export_graph_v2.py"
+fi
 
 echo ""
 echo "🌐 Starting server at http://localhost:${PORT}/graph/index.html"

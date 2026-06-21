@@ -60,10 +60,10 @@ const TOPIC_HI     = '#b22a22';   // hub  — slightly dark, more saturated red
 const STANDALONE_HUB = SOURCE_COLOR;
 
 async function loadGraph() {
-  // ?graph=v2 in the URL selects the rebuilt graph (Phase 5 of graph-rebuild branch).
-  // Default = v1 to keep the old behavior available for A/B comparison.
+  // Default = v2 (newest + largest, additive across rebuilds). Opt back to v1
+  // with ?graph=v1 in the URL for A/B comparison.
   const params = new URLSearchParams(window.location.search);
-  const version = params.get('graph') === 'v2' ? 'v2' : 'v1';
+  const version = params.get('graph') === 'v1' ? 'v1' : 'v2';
   const candidates = version === 'v2'
     ? ['./graph_v2.json', './graph.json']
     : ['./graph.json'];
