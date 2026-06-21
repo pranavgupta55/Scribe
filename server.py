@@ -639,20 +639,54 @@ _TRIVIAL_PATTERNS = (
     "test", "testing",
 )
 
+# Strict-mode word list — a sentence must contain at least one of these
+# stop/question/connective words to be treated as substantive English. This
+# rules out random keystrokes ("asldkjas dlksajd"), which embedding search
+# happily matches to ~50 noise sources. Borderline keyword searches like
+# "alex urgency" deliberately fail this — they're better routed through the
+# graph view or rephrased into a question.
+_ENGLISH_ANCHORS = frozenset({
+    # Question words
+    "what","who","where","when","why","how","which","whose","whom",
+    # Modal / auxiliary verbs
+    "is","are","was","were","be","been","being","am","do","does","did",
+    "have","has","had","can","could","should","would","may","might",
+    "will","shall","must",
+    # Pronouns / articles / conjunctions
+    "i","me","my","mine","you","your","yours","he","him","his","she",
+    "her","hers","it","its","we","us","our","they","them","their",
+    "this","that","these","those","a","an","the","and","or","but",
+    "if","then","so","because","as","of","in","on","at","to","for",
+    "with","by","about","from","into",
+    # Common verbs
+    "tell","explain","describe","show","find","give","get","say","said",
+    "make","made","think","know","want","need","like","use","work",
+    "summarize","compare","list",
+})
+
+def _word_tokens(q: str) -> list[str]:
+    return re.findall(r"[a-z']+", q.lower())
+
 def _is_trivial(query: str) -> bool:
-    """True if `query` is a greeting / pleasantry / meta question that shouldn't
-    drive a retrieval pass. Cheaper to skip RAG than to show the user 60 noise
-    matches for 'hello'. Substantive questions always fall through."""
+    """True if `query` is a greeting / pleasantry / meta question / pure
+    gibberish — anything that shouldn't drive an embedding search. Skipping
+    RAG here saves the user from 50 noise matches on 'hello' or
+    'asldkjas dlksajd'."""
     q = (query or "").strip().lower().rstrip("!.?,;:")
-    if not q:
-        return True
-    if len(q) <= 2:
+    if not q or len(q) <= 2:
         return True
     if q in _TRIVIAL_PATTERNS:
         return True
-    # Short messages that START with a greeting word ("hi there", "thanks!").
-    first = q.split()[0]
+    first = q.split()[0] if q.split() else ""
     if first in _TRIVIAL_PATTERNS and len(q) < 25:
+        return True
+
+    # Gibberish gate — strict: must have an English anchor word AND at least
+    # 3 word-like tokens total. Either condition failing → skip retrieval.
+    toks = _word_tokens(query)
+    if len(toks) < 3:
+        return True
+    if not any(t in _ENGLISH_ANCHORS for t in toks):
         return True
     return False
 

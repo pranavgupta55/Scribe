@@ -992,6 +992,7 @@ function setView(view) {
   // arrow keys to swap pages without first clicking out of the textarea.
   if (isChat) startStatusPoll(); else stopStatusPoll();
   if (isCopy) requestAnimationFrame(layoutCopyStack);
+  if (isChat) requestAnimationFrame(centerChatToViewport);
 }
 
 btnGraph.addEventListener('click', () => setView('graph'));
@@ -1014,11 +1015,11 @@ if (rightToggleBtn && rightSidebar) {
     }
     rightSidebar.classList.toggle('collapsed', collapsing);
     document.body.classList.toggle('right-collapsed', collapsing);
+    centerChatToViewport();
   });
 }
 
-// Dev-panel collapse — mirrors the right-sidebar pattern: slide off via
-// transform + negative margin so #chat-main flex-grows into the freed space.
+// Dev-panel collapse — mirrors the right-sidebar pattern.
 const devToggleBtn = document.getElementById('dev-toggle');
 const devPanelEl   = document.getElementById('dev-panel');
 if (devToggleBtn && devPanelEl) {
@@ -1032,7 +1033,33 @@ if (devToggleBtn && devPanelEl) {
     }
     devPanelEl.classList.toggle('collapsed', collapsing);
     document.body.classList.toggle('dev-collapsed', collapsing);
+    centerChatToViewport();
   });
+}
+
+// Keep the chat content visually centered in the VIEWPORT, not just inside
+// the (variable-width) #chat-main flex column. When dev-panel collapses but
+// the right sidebar is still open, #chat-main expands left — without this
+// shim, the text column slides off-center to the left.
+function centerChatToViewport() {
+  const inner = document.querySelector('.chat-inner');
+  const innerComp = document.querySelector('.composer-inner');
+  const meta = document.querySelector('.composer-meta');
+  if (!inner) return;
+  const devColRoot   = document.getElementById('dev-panel');
+  const rightColRoot = document.getElementById('right');
+  const devVisible   = devColRoot && !devColRoot.classList.contains('collapsed') && !devColRoot.classList.contains('is-hidden');
+  const rightVisible = rightColRoot && !rightColRoot.classList.contains('collapsed') && !rightColRoot.classList.contains('is-hidden');
+  const devW   = devVisible   ? devColRoot.getBoundingClientRect().width   : 0;
+  const rightW = rightVisible ? rightColRoot.getBoundingClientRect().width : 0;
+  // chat-inner currently centers inside #chat-main, which spans
+  // [devW, body - rightW]. Its midpoint sits at body/2 + devW/2 - rightW/2.
+  // We want the midpoint at body/2, so apply translateX(rightW/2 - devW/2).
+  const shift = Math.round((rightW - devW) / 2);
+  const t = shift ? `translateX(${shift}px)` : '';
+  inner.style.transform = t;
+  if (innerComp) innerComp.style.transform = t;
+  if (meta) meta.style.transform = t;
 }
 
 // ─── Chat (RAG over the knowledge base) ───────────────────────────────────────
@@ -1278,14 +1305,13 @@ function autoGrow() {
   chatInput.style.height = 'auto';
   chatInput.style.height = Math.min(chatInput.scrollHeight, 200) + 'px';
 }
-// Live token + char counter under the textarea. Approx via 3.5 chars/token.
+// Live token counter under the textarea. Approx via 3.5 chars/token.
 const _chatMeta = document.getElementById('chat-meta');
 function updateChatMeta() {
   if (!_chatMeta) return;
   const txt = chatInput.value || '';
-  const c = txt.length;
-  const t = c ? Math.ceil(c / 3.5) : 0;
-  _chatMeta.textContent = `${t.toLocaleString()}t · ${c.toLocaleString()}c`;
+  const t = txt.length ? Math.ceil(txt.length / 3.5) : 0;
+  _chatMeta.textContent = `${t.toLocaleString()} token${t === 1 ? '' : 's'}`;
   _chatMeta.classList.remove('warn', 'alert');
   if (t > 6000) _chatMeta.classList.add('alert');
   else if (t > 2000) _chatMeta.classList.add('warn');
@@ -2174,6 +2200,7 @@ function layoutCopyStack() {
 
 window.addEventListener('resize', () => {
   if (copyPanel.classList.contains('show')) layoutCopyStack();
+  if (chatPanel.classList.contains('show')) centerChatToViewport();
 });
 
 async function sendCopy(opts = {}) {
