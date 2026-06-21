@@ -956,6 +956,8 @@ function setView(view) {
   const isChat = view === 'chat';
   const isCopy = view === 'copy';
   const isGraph = view === 'graph';
+  // Stamp the body so #topbar's per-view CSS can hide/show groups.
+  document.body.dataset.view = view;
   // Toggle pill position via class (handles 0% / 100% / 200%)
   viewToggle.classList.toggle('chat', isChat);
   viewToggle.classList.toggle('copy', isCopy);
@@ -967,7 +969,7 @@ function setView(view) {
   chatPanel.classList.toggle('show', isChat);
   copyPanel.classList.toggle('show', isCopy);
   // canvas/center/hint only visible in graph mode (no need to animate these)
-  [canvas, centerBtn, hintEl].forEach(el => {
+  [canvas, hintEl].forEach(el => {
     if (el) el.style.display = isGraph ? '' : 'none';
   });
 
@@ -984,11 +986,7 @@ function setView(view) {
   if (hkEl) hkEl.classList.toggle('off', !isCopy);
   // The right-sidebar minimize button: only useful in graph + chat (the
   // copy view already hides the sidebar via its own .is-hidden class).
-  const rtEl = document.getElementById('right-toggle');
-  if (rtEl) rtEl.classList.toggle('show', isGraph || isChat);
-  // Dev-panel toggle: only meaningful in chat view.
-  const dtEl = document.getElementById('dev-toggle');
-  if (dtEl) dtEl.classList.toggle('show', isChat);
+  // (right-toggle / dev-toggle visibility is CSS-driven via body[data-view])
 
   // Don't auto-focus the input when entering chat/copy — the user wants the
   // arrow keys to swap pages without first clicking out of the textarea.
@@ -1263,6 +1261,12 @@ function resetDevPanel() {
 }
 
 let chatBusy = false;
+// Chat history — replayed to the server on each turn so the model has
+// conversational context. Each entry: {role, content, sources?:[filenames]}.
+// Sources are tracked per turn so the server can dedup retrieval (sources
+// already in history aren't re-injected; older turns' assistant prose has
+// them already).
+const chatHistory = [];
 
 function selectNodeById(id) {
   const target = id.trim().toLowerCase();
@@ -1397,6 +1401,7 @@ async function sendChat(opts = {}) {
   let answer = '';        // raw model markdown (un-rendered) — also feeds Dev
   let gotToken = false;
   let reader = null;
+  let turnSources = [];   // filenames attached to this turn's context
 
   const finishBody = () => {
     ui.body.innerHTML = linkifyNodes(renderMarkdown(answer || '*No response.*'));
@@ -1409,7 +1414,12 @@ async function sendChat(opts = {}) {
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: text, gemini_only: geminiOnly, qwen_only: qwenOnly }),
+      body: JSON.stringify({
+        query: text,
+        gemini_only: geminiOnly,
+        qwen_only: qwenOnly,
+        history: chatHistory,
+      }),
     });
     if (!res.ok || !res.body) throw new Error(`HTTP ${res.status}`);
 
@@ -1432,7 +1442,11 @@ async function sendChat(opts = {}) {
         let evt;
         try { evt = JSON.parse(line.slice(5).trim()); } catch { continue; }
 
-        if (evt.type === 'nodes') {
+        if (evt.type === 'sources') {
+          // Filenames attached to THIS turn's context — store so the next
+          // turn's request can list them in history and the server can dedup.
+          turnSources = evt.sources || [];
+        } else if (evt.type === 'nodes') {
           ui.head.classList.remove('searching');
           ui.head.innerHTML = `<span class="dot generating"></span>Consulted ${evt.nodes.length} topic${evt.nodes.length !== 1 ? 's' : ''}`;
           renderNodeChips(ui.nodes, evt.nodes);
@@ -1489,6 +1503,14 @@ async function sendChat(opts = {}) {
   } finally {
     if (reader) { try { await reader.cancel(); } catch { /* ignore */ } }
     finishBody();
+    // Commit this turn to chat history — user msg + final assistant msg.
+    // Sources are attached to the user turn (they were retrieved FOR it).
+    if (text) {
+      chatHistory.push({ role: 'user',      content: text,           sources: turnSources });
+    }
+    if (answer) {
+      chatHistory.push({ role: 'assistant', content: answer });
+    }
     chatBusy = false;
     chatSend.disabled = false;
     if (refocus) chatInput.focus();
@@ -1836,53 +1858,55 @@ function shortenSource(name) {
   return prettifySource(name).slice(0, 36);
 }
 
-const QUERY_COLORS = ['#4a9eff', '#56d364', '#bc8cff', '#e3b341', '#ff7b9c'];
+// Warm palette — red → orange → amber → sand → rose. Same hue family as the
+// app accent, with stepped value/saturation so adjacent groups remain
+// distinguishable without fighting the theme.
+const QUERY_COLORS = ['#e16352', '#e8943a', '#d4b34a', '#c08560', '#a55b48'];
 
-// Draw the colored bounding boxes around card groups in a bento grid.
-// Each source belongs to exactly ONE group, identified by its primary
-// sub-query index (the sub-query that retrieved it most often). Since the
-// server already sorts sources by primary_query_idx, the groups land
-// contiguously in DOM order and each rectangle is distinct.
-function drawQueryOverlays(grid, cards, sources, subQueries) {
+// Render overlays AS grid children. Each overlay spans the min→max grid-row
+// and grid-column extent of its primary-query group, so it resizes natively
+// with the grid (no pixel math, no ResizeObserver, no stale-frame lag). The
+// inset margin step per qi prevents visually-touching edges between adjacent
+// groups that share a grid line.
+function drawQueryOverlays(grid, cards, sources, subQueries, placements) {
   if (!grid) return;
   grid.querySelectorAll('.query-overlay').forEach(el => el.remove());
   if (!subQueries || subQueries.length <= 1) return;
+  if (!placements || !placements.length) return;
 
-  const gridRect = grid.getBoundingClientRect();
-  if (gridRect.width < 10 || gridRect.height < 10) return;
-
-  const groups = {};  // qi -> [card elements]
+  const groups = {};  // qi -> [placements]
   cards.forEach(({ card }, i) => {
     const src = sources[i];
-    if (!src) return;
+    const p   = placements[i];
+    if (!src || !p) return;
     const qi = src.primary_query_idx ?? 0;
     if (!groups[qi]) groups[qi] = [];
-    groups[qi].push(card);
+    groups[qi].push(p);
   });
 
-  Object.entries(groups).forEach(([qiStr, groupCards]) => {
+  Object.entries(groups).forEach(([qiStr, group]) => {
     const qi = parseInt(qiStr);
     const color = QUERY_COLORS[qi % QUERY_COLORS.length];
-    const MARGIN = 4;
-    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-    groupCards.forEach(card => {
-      if (card.style.display === 'none') return;
-      const r = card.getBoundingClientRect();
-      minX = Math.min(minX, r.left - gridRect.left);
-      minY = Math.min(minY, r.top  - gridRect.top);
-      maxX = Math.max(maxX, r.right  - gridRect.left);
-      maxY = Math.max(maxY, r.bottom - gridRect.top);
+    let minR = Infinity, minC = Infinity, maxR = -Infinity, maxC = -Infinity;
+    group.forEach(p => {
+      minR = Math.min(minR, p.r);
+      minC = Math.min(minC, p.c);
+      maxR = Math.max(maxR, p.r + p.h - 1);
+      maxC = Math.max(maxC, p.c + p.w - 1);
     });
-    if (!isFinite(minX)) return;
+    if (!isFinite(minR)) return;
 
+    // Inset margin alternates per group so adjacent groups don't share an
+    // edge — 2/4/6 px depending on qi parity / triplet position.
+    const inset = 2 + (qi % 3) * 2;
     const overlay = document.createElement('div');
     overlay.className = 'query-overlay';
-    overlay.style.left       = `${minX - MARGIN}px`;
-    overlay.style.top        = `${minY - MARGIN}px`;
-    overlay.style.width      = `${maxX - minX + MARGIN * 2}px`;
-    overlay.style.height     = `${maxY - minY + MARGIN * 2}px`;
-    overlay.style.border     = `1.5px solid ${color}99`;
-    overlay.style.background = `${color}0a`;
+    overlay.style.gridColumn  = `${minC + 1} / span ${maxC - minC + 1}`;
+    overlay.style.gridRow     = `${minR + 1} / span ${maxR - minR + 1}`;
+    overlay.style.margin      = `-${inset}px`;
+    overlay.style.padding     = `${inset}px`;
+    overlay.style.boxShadow   = `inset 0 0 0 1.5px ${color}66`;
+    overlay.style.background  = `${color}0a`;
     grid.insertBefore(overlay, grid.firstChild);
   });
 }
@@ -1929,11 +1953,10 @@ function buildCopyTurn(query, data) {
       const color = QUERY_COLORS[qi % QUERY_COLORS.length];
       const card = document.createElement('div');
       card.className = 'qs-card';
-      card.style.borderColor = `${color}88`;
-      card.style.background  = `${color}10`;
+      card.style.borderColor = `${color}55`;
       card.innerHTML = `
-        <div class="qs-tag" style="background:${color};color:#000">${qi + 1}</div>
-        <div class="qs-text" style="color:${color}"></div>
+        <div class="qs-tag" style="background:${color}cc;color:#0d0d0d">${qi + 1}</div>
+        <div class="qs-text" style="color:${color}d0"></div>
       `;
       card.querySelector('.qs-text').textContent = sq;
       queryStrip.appendChild(card);
@@ -2003,23 +2026,15 @@ function buildCopyTurn(query, data) {
   copyStage.appendChild(turn);
   copyEmpty.classList.add('hidden');
 
-  const turnObj = {
+  copyTurns.push({
     el: turn, query, sources, newSources,
     newGrid, allGrid, queryStrip, newCards, allCards, promptCard, subQueries,
-  };
-  copyTurns.push(turnObj);
-
-  // Sync overlay redraw on grid resize — fixes the lag-frame artifact where
-  // overlays kept their old size for ~1 frame after a zoom/resize.
+  });
+  // Strip text refits when the column resizes. Overlays don't need this —
+  // they're grid children and resize natively.
   if (subQueries.length > 1 && 'ResizeObserver' in window) {
-    const ro = new ResizeObserver(() => {
-      drawQueryOverlays(turnObj.newGrid, turnObj.newCards, turnObj.newSources, turnObj.subQueries);
-      drawQueryOverlays(turnObj.allGrid, turnObj.allCards, turnObj.sources,    turnObj.subQueries);
-      fitQueryStrip(turnObj.queryStrip);
-    });
-    ro.observe(turnObj.newGrid);
-    ro.observe(turnObj.allGrid);
-    turnObj._ro = ro;
+    const ro = new ResizeObserver(() => fitQueryStrip(queryStrip));
+    ro.observe(queryStrip);
   }
 
   copyFocus = copyTurns.length - 1;
@@ -2102,6 +2117,9 @@ function layoutBentoFor(turn) {
       card.style.gridColumn = `${p.c + 1} / span ${p.w}`;
       card.style.gridRow    = `${p.r + 1} / span ${p.h}`;
     });
+    // Stash the placements on the grid so overlay draws can re-use them
+    // without re-running the bento packer.
+    grid._lastPlacements = spec.placements;
     requestAnimationFrame(() => {
       cards.forEach(({ body }) => fitTextToBox(body, 9, 4));
       if (hasPrompt) fitTextToBox(turn.promptCard.body, 13, 6);
@@ -2113,12 +2131,11 @@ function layoutBentoFor(turn) {
   applyPanel(newCol, turn.newGrid, turn.newCards, turn.newSources, null);
   applyPanel(allCol, turn.allGrid, turn.allCards, turn.sources, { r: 0, c: 0, w: 2, h: 2 });
 
-  // Draw sub-query grouping overlays after layout so getBoundingClientRect() is accurate.
-  requestAnimationFrame(() => {
-    drawQueryOverlays(turn.newGrid, turn.newCards, turn.newSources, turn.subQueries);
-    drawQueryOverlays(turn.allGrid, turn.allCards, turn.sources,    turn.subQueries);
-    fitQueryStrip(turn.queryStrip);
-  });
+  // Overlays are grid children — they resize natively with the grid. Draw
+  // once after placements are settled; no resize observer needed.
+  drawQueryOverlays(turn.newGrid, turn.newCards, turn.newSources, turn.subQueries, turn.newGrid._lastPlacements);
+  drawQueryOverlays(turn.allGrid, turn.allCards, turn.sources,    turn.subQueries, turn.allGrid._lastPlacements);
+  fitQueryStrip(turn.queryStrip);
 }
 
 function layoutCopyStack() {

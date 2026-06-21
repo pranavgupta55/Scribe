@@ -50,17 +50,95 @@ RAG_N_FACTS  = 50
 RAG_N_CHUNKS = 50
 RAG_MAX_TOPICS = 24
 
-_SYSTEM = (
-    "You are Scribe, a retrieval assistant answering ONLY from the user's "
-    "personal knowledge base. Use the provided context passages and facts as "
-    "ground truth. Rules:\n"
-    "- Answer concisely and specifically, grounded in the context.\n"
-    "- If the context does not contain the answer, say you don't have that in "
-    "your knowledge base. Never invent facts.\n"
-    "- Cite source filenames inline when useful.\n"
-    "- When you reference one of the listed topics, wrap its name in [[double "
-    "brackets]] so the UI can link it."
-)
+_SYSTEM = """\
+You are Scribe, a personal-knowledge-base assistant. You answer questions by
+reasoning over passages and facts retrieved from the user's own notes and
+transcripts. Every factual claim you make should be traceable to the retrieved
+context shown to you.
+
+<retrieval_grounded_behavior>
+You are given retrieved passages and key facts before each question. These are
+the PRIMARY and AUTHORITATIVE source for your answer.
+
+1. ANCHOR every concrete claim to at least one retrieved passage or fact. If a
+   claim cannot be traced to the context, mark it as your own inference using
+   the rules in <uncertainty_and_inference> below.
+2. USE RELATED CONTEXT. If passages address the question tangentially,
+   partially, or by strong implication, USE them. Do NOT refuse just because
+   the exact wording of the question doesn't appear verbatim. Reason from
+   what is present.
+3. SYNTHESIZE across passages freely when that produces a more complete
+   answer. You are not required to quote directly — paraphrase and integrate
+   naturally. Reserve direct quotation for cases where exact wording matters
+   (definitions, named values, specific instructions).
+4. PRIORITIZE USEFULNESS. A partial, hedged, context-grounded answer is
+   almost always more valuable than "I don't have that in my knowledge base."
+   Default toward answering. Reserve refusal for the rare zero-signal case.
+</retrieval_grounded_behavior>
+
+<citation_rules>
+- Source files: cite inline as the bare filename, e.g. (100m_offers.txt).
+  Do not prefix with "Source:" or "From:". For multiple sources backing one
+  claim, list them together: (file_a.txt, file_b.txt).
+- Topic links: cite extracted topic names in [[double brackets]], e.g.
+  [[grand slam offer]], so the UI can render them as clickable links.
+  Use these only when the topic adds navigation value — don't link every noun.
+- One citation per claim is enough. Don't repeat the same citation in
+  consecutive sentences unless a different passage is being used.
+- Don't manufacture source names. If a passage has no clear filename in the
+  context, omit the citation instead of inventing one.
+</citation_rules>
+
+<synthesis_vs_quoting>
+Default to synthesis — fluent prose that integrates multiple passages into a
+coherent answer. Use direct quotation only when:
+- the user asks "what exactly does X say about Y";
+- a specific phrase, formula, definition, or instruction must be reproduced
+  verbatim;
+- paraphrase risks distorting meaning.
+
+Connecting ideas stated separately is acceptable when the connection is a
+reasonable inference from the combined text — but flag the connection per
+<uncertainty_and_inference>.
+</synthesis_vs_quoting>
+
+<uncertainty_and_inference>
+Calibrate your confidence language to how directly the context supports each
+claim:
+
+- DIRECTLY SUPPORTED: state the claim plainly with a citation. No hedge.
+- PARTIALLY / ADJACENT: answer, then flag the inferential step
+  ("though this isn't stated explicitly", "based on what's here").
+- SYNTHESIZED across passages: state the synthesis, then acknowledge it
+  ("combining the two ideas:", "my reading of the combined context").
+- WEAK SIGNAL: if context is only loosely related, say so and answer
+  cautiously ("the retrieved context covers a related topic but doesn't
+  directly address your question — based on what's here:").
+
+Never state invented facts confidently. If you reason beyond the context,
+mark it: "My inference:" or "Not in the retrieved passages, but generally:".
+</uncertainty_and_inference>
+
+<when_to_decline>
+Say "I don't have that in my knowledge base" ONLY when:
+1. Retrieved passages have zero semantic overlap with the question, AND
+2. You can't form even a partial, hedged answer from tangential content.
+
+This is a HIGH BAR. When in doubt, answer with hedging instead of declining.
+Never use refusal as a shortcut to skip reasoning over adjacent content.
+</when_to_decline>
+
+<tone_and_format>
+- Write in direct, conversational prose. Skip preambles ("Great question!",
+  "Based on your notes..."). Start with the answer.
+- Match length to complexity. Simple factual: 2-4 sentences. Conceptual: 1-3
+  short paragraphs. Don't pad.
+- Use bullet lists only when the question asks for one or the answer is
+  genuinely a list.
+- Inline citations and [[topic links]] only — no separate "Sources:" footer
+  unless the user asks for one.
+- If passages conflict, surface the conflict instead of silently picking one.
+</tone_and_format>"""
 
 # ── Module-level Gemini backend state ────────────────────────────────────────
 # Tracks whether Gemini is in a rate-limit cooldown so the UI can show a live
@@ -476,10 +554,16 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
     return {"topics": topics, "sources": sources, "sub_queries": sub_queries}
 
 
-def retrieve(query):
-    """Return (consulted_topic_names, context_block). Raises on backend failure."""
+def retrieve(query, seen_sources=None):
+    """Return (consulted_topic_names, context_block, sub_queries, source_names).
+    `seen_sources`: iterable of source filenames already attached to prior turns
+    in the conversation — those are filtered OUT of this turn's context block
+    so we don't waste tokens re-injecting them. The dedup is per-turn, not
+    per-passage — once a source has been seen, the model already has it via
+    earlier history and only needs the new sources fresh."""
     import chromadb, ollama
 
+    seen = set(seen_sources or [])
     sub_queries = _decompose_query(query)
 
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
@@ -505,14 +589,14 @@ def retrieve(query):
 
     # Consulted topics, in relevance order, deduped → graph node ids.
     # facts metadata carries a single canonical `topic` (see process.py schema).
-    topics, seen = [], set()
+    topics, _topic_seen = [], set()
     for meta in fact_metas:
         t = meta.get("topic")
         if not t:
             continue
         disp = _topic_display(t)
-        if disp and disp.lower() not in seen:
-            seen.add(disp.lower())
+        if disp and disp.lower() not in _topic_seen:
+            _topic_seen.add(disp.lower())
             topics.append(disp)
     topics = topics[:MAX_TOPICS]
 
@@ -530,8 +614,14 @@ def retrieve(query):
         by_src[s]["facts"].append(doc)
 
     parts = []
-    for i, (s, blk) in enumerate(by_src.items(), 1):
-        parts.append(f"===== SOURCE {i}: {s} =====")
+    used_sources = []
+    new_idx = 0
+    for s, blk in by_src.items():
+        if s in seen:
+            continue  # already attached in a prior turn; rely on history
+        new_idx += 1
+        parts.append(f"===== SOURCE {new_idx}: {s} =====")
+        used_sources.append(s)
         if blk["passages"]:
             parts.append("Passages:")
             for title, doc in blk["passages"]:
@@ -542,7 +632,7 @@ def retrieve(query):
             parts.extend(f"- {f}" for f in blk["facts"])
         parts.append("")  # blank line between sources
 
-    return topics, "\n".join(parts).strip(), sub_queries
+    return topics, "\n".join(parts).strip(), sub_queries, used_sources
 
 
 def _gemini_client():
@@ -560,16 +650,104 @@ def _gemini_client():
 
 def build_prompt(query, context):
     """The exact user prompt sent to Gemini (also surfaced in the Dev panel)."""
-    return (f"Context from the knowledge base:\n\n{context}\n\n"
+    if not context:
+        return f"Question: {query}\n\nAnswer:"
+    return (f"Context from the knowledge base (sources new this turn):\n\n{context}\n\n"
             f"Question: {query}\n\nAnswer:")
 
 
-def generate_stream(client, query, context):
+# ── Chat history + tiered token-budget compaction ────────────────────────────
+# Layer the conversation onto Gemini's 32k context window. Tier 1 fires at
+# 75% (24k): compress oldest assistant responses to a short truncation.
+# Tier 2 fires at 100% (32k): drop oldest entire turns from the wire context.
+# User messages are preserved verbatim until Tier 2 evicts the whole turn —
+# their intent signal is small and irreplaceable.
+
+CONTEXT_WINDOW   = 32_000
+TIER_1_THRESHOLD = 24_000   # 75% — compress oldest assistant content
+TIER_2_THRESHOLD = 32_000   # 100% — drop oldest entire turns
+
+def _approx_tokens(s: str) -> int:
+    # GPT-style BPE averages ~3.5 chars/token on English prose. Good enough
+    # for budget planning here — we're not metering, we're triggering tiers.
+    return max(1, (len(s) if s else 0) // 4)
+
+
+def build_chat_entries(history, query, context):
+    """Build a list of {role: 'user'|'assistant', content: str} entries
+    for the conversation, applying tiered compaction so the wire payload
+    fits Gemini's 32k window. The current question (with this-turn context
+    block) is appended at the end. Returns (entries, total_tokens)."""
+    reserved = _approx_tokens(_SYSTEM) + 800  # response headroom
+
+    entries = []
+    for turn in history or []:
+        role = turn.get("role")
+        content = turn.get("content") or ""
+        if role not in ("user", "assistant") or not content:
+            continue
+        entries.append({
+            "role": role,
+            "content": content,
+            "tokens": _approx_tokens(content),
+            "compressed": bool(turn.get("compressed", False)),
+        })
+
+    # Final turn: this question + its context block. Context is only the NEW
+    # (un-seen) sources — older sources came in via prior turns' messages.
+    current_text = build_prompt(query, context)
+    entries.append({
+        "role": "user",
+        "content": current_text,
+        "tokens": _approx_tokens(current_text),
+        "compressed": False,
+    })
+
+    total = sum(e["tokens"] for e in entries) + reserved
+
+    # Tier 1 — compress oldest assistant turns to a short summary line.
+    if total > TIER_1_THRESHOLD:
+        for e in entries[:-1]:  # never touch the current question
+            if e["role"] == "assistant" and not e["compressed"]:
+                # Naive truncation; matches the architecture-doc compaction
+                # contract (assistant content is reducible, user msgs aren't).
+                trimmed = e["content"][:400].rstrip()
+                if len(e["content"]) > 400:
+                    trimmed += " […compacted]"
+                new_tok = _approx_tokens(trimmed)
+                if new_tok < e["tokens"]:
+                    total -= (e["tokens"] - new_tok)
+                    e["content"] = trimmed
+                    e["tokens"] = new_tok
+                    e["compressed"] = True
+            if total <= TIER_1_THRESHOLD:
+                break
+
+    # Tier 2 — drop oldest entire turns until we fit. Keep the most recent
+    # exchange + current question intact at minimum.
+    while total > TIER_2_THRESHOLD and len(entries) > 2:
+        oldest = entries.pop(0)
+        total -= oldest["tokens"]
+
+    return entries, total
+
+
+def _entries_to_gemini_contents(entries):
+    """Gemini's `contents` schema uses role 'model' for assistant turns."""
+    return [
+        {"role": "user" if e["role"] == "user" else "model",
+         "parts": [{"text": e["content"]}]}
+        for e in entries
+    ]
+
+
+def generate_stream(client, entries):
     """Yield generated text chunks from Gemini, trying the primary model then
-    the fallback. Raises on hard failure (after the fallback also fails)."""
+    the fallback. `entries` is the compacted message history (list of
+    {role, content, ...}). Raises on hard failure (after fallback also fails)."""
     from google.genai import types
 
-    prompt = build_prompt(query, context)
+    contents = _entries_to_gemini_contents(entries)
 
     last_err = None
     for model in (GEMINI_MODEL, GEMINI_MODEL_FALLBACK):
@@ -586,7 +764,7 @@ def generate_stream(client, query, context):
                     pass
             config = types.GenerateContentConfig(**kwargs)
             stream = client.models.generate_content_stream(
-                model=model, contents=prompt, config=config)
+                model=model, contents=contents, config=config)
             for chunk in stream:
                 text = getattr(chunk, "text", None)
                 if text:
@@ -598,16 +776,18 @@ def generate_stream(client, query, context):
     raise RuntimeError(str(last_err) if last_err else "Gemini generation failed.")
 
 
-def qwen_stream(query, context):
-    """Local fallback generation — stream from Ollama qwen3:1.7b. Used when Gemini
-    is rate-limited or unavailable so the chat still answers."""
+def qwen_stream(entries):
+    """Local fallback generation — stream from Ollama qwen3:1.7b. `entries` is
+    the compacted message history. Used when Gemini is rate-limited or
+    unavailable so the chat still answers."""
     import ollama
     import re as _re
-    prompt = build_prompt(query, context)
+    messages = [{"role": "system", "content": "/no_think\n" + _SYSTEM}]
+    for e in entries:
+        messages.append({"role": e["role"], "content": e["content"]})
     stream = ollama.chat(
         model=QWEN_MODEL,
-        messages=[{"role": "system", "content": "/no_think\n" + _SYSTEM},
-                  {"role": "user",   "content": prompt}],
+        messages=messages,
         stream=True,
         options={"temperature": 0.2, "num_ctx": 32768, "num_predict": 1024},
     )
@@ -676,10 +856,22 @@ class Handler(SimpleHTTPRequestHandler):
             query = (body.get("query") or "").strip()
             gemini_only = bool(body.get("gemini_only", False))
             qwen_only = bool(body.get("qwen_only", False))
+            history = body.get("history") or []  # [{role, content, sources?}]
+            if not isinstance(history, list):
+                history = []
         except json.JSONDecodeError:
             query = ""
             gemini_only = False
             qwen_only = False
+            history = []
+
+        # Sources already attached in prior turns — filter them out of this
+        # turn's context block (model still has them via prior assistant msgs).
+        seen_sources = []
+        for h in history:
+            for s in (h.get("sources") or []):
+                if s not in seen_sources:
+                    seen_sources.append(s)
 
         # Close the connection when the handler returns. Without this the
         # keep-alive socket stays open, the browser's stream reader never
@@ -698,7 +890,7 @@ class Handler(SimpleHTTPRequestHandler):
 
         # ── Retrieve ──
         try:
-            topics, context, sub_queries = retrieve(query)
+            topics, context, sub_queries, sources_used = retrieve(query, seen_sources=seen_sources)
         except Exception as e:
             self._sse({"type": "error",
                        "message": f"Knowledge base unavailable ({e}). "
@@ -707,15 +899,25 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         self._sse({"type": "nodes", "nodes": topics})
+        # Tell the client which source filenames are attached to this turn so
+        # it can include them in the history payload on the NEXT request.
+        self._sse({"type": "sources", "sources": sources_used})
+
+        # Build the compacted message list (history + current question).
+        entries, total_tokens = build_chat_entries(history, query, context)
 
         # ── Debug round-trip (Dev panel): the exact strings we send ──
         self._sse({"type": "debug",
                    "system": _SYSTEM,
                    "context": context,
                    "prompt": build_prompt(query, context),
-                   "sub_queries": sub_queries})
+                   "sub_queries": sub_queries,
+                   "history_tokens": total_tokens,
+                   "history_msgs": len(entries)})
 
-        if not context:
+        # Empty KB AND no prior context = nothing to answer from. Otherwise we
+        # always have at least the history to draw on, so proceed.
+        if not context and not history:
             self._sse({"type": "token",
                        "text": "I don't have anything in my knowledge base yet. "
                                "Run `updateDB.sh` to process some transcripts first."})
@@ -728,7 +930,7 @@ class Handler(SimpleHTTPRequestHandler):
             self._sse({"type": "backend", "backend": "qwen"})
             _record_qwen_used()
             try:
-                for tok in qwen_stream(query, context):
+                for tok in qwen_stream(entries):
                     self._sse({"type": "token", "text": tok})
             except BrokenPipeError:
                 return
@@ -773,7 +975,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self._sse({"type": "backend", "backend": "qwen"})
                 _record_qwen_used()
                 try:
-                    for tok in qwen_stream(query, context):
+                    for tok in qwen_stream(entries):
                         self._sse({"type": "token", "text": tok})
                 except BrokenPipeError:
                     return
@@ -787,7 +989,7 @@ class Handler(SimpleHTTPRequestHandler):
             yielded = False
             try:
                 self._sse({"type": "backend", "backend": "gemini"})
-                for tok in generate_stream(client, query, context):
+                for tok in generate_stream(client, entries):
                     yielded = True
                     self._sse({"type": "token", "text": tok})
                 if yielded:
@@ -840,7 +1042,7 @@ class Handler(SimpleHTTPRequestHandler):
                 # Local fallback after Gemini empty/error
                 self._sse({"type": "backend", "backend": "qwen"})
                 _record_qwen_used()
-                for tok in qwen_stream(query, context):
+                for tok in qwen_stream(entries):
                     self._sse({"type": "token", "text": tok})
         except BrokenPipeError:
             return
