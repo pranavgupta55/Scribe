@@ -15,6 +15,7 @@ ADRs are **immutable once accepted**. New decisions that change a prior choice c
 | [0005](decisions/0005-visual-bug-batch-two.md) | Visual-bug batch (round 2): drop chat shim, transform-immune bento, proportional strip, overflow | Accepted | 2026-06-21 |
 | [0006](decisions/0006-v2-viewer-adaptation-and-source-search.md) | v2 viewer fixes: sidebar labels, source pills, ordered/nested markdown, level filter, source-search bar | Accepted | 2026-06-21 |
 | [0007](decisions/0007-exec-python-in-serve-sh.md) | `exec python3` in `serve.sh` so the wrapper bash PID doesn't linger | Accepted | 2026-06-21 |
+| [0008](decisions/0008-repo-restructure-and-gitignore-cleanup.md) | Repo restructure: consolidate ADR dirs, gitignore heavy phase artifacts, setup.sh pulls qwen3-embedding:8b | Accepted | 2026-06-21 |
 
 ## Conventions
 
