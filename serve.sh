@@ -26,6 +26,6 @@ echo "   Graph + RAG chat · Press Ctrl+C to stop"
 echo ""
 
 open "http://localhost:${PORT}/graph/index.html"
-# ADR-0002: exec hands the script over to python so we don't carry a
+# ADR-0007: exec hands the script over to python so we don't carry a
 # bash parent waiting on the child. Nothing after this line will run.
 exec python3 "${SCRIPT_DIR}/server.py"

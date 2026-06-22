@@ -218,7 +218,7 @@ const sliderRanges = {
 
 let cfg = {
   repulsion: 0, linkDist: 0, momentum: 0, nodeSize: 0, edgeMin: 0, gravity: 0, edgeRepel: 0,
-  // ADR-0001 v2 viewer adaptation: per-tier visibility. Default reduces the
+  // ADR-0006 v2 viewer adaptation: per-tier visibility. Default reduces the
   // 4865-node v2 hairball to ~1089 nodes (L0 + L1 + source). Hidden levels
   // skip rendering, force-tick physics, and the sidebar TOPICS list.
   visibleLevels: new Set(['L0', 'L1']),
