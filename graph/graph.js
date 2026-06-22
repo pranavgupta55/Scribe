@@ -2533,6 +2533,12 @@ async function sendCopy(opts = {}) {
     // the initial force config is the "extreme" one — no restart needed.
     for (const k in INTRO_START) setSliderUI(k, INTRO_START[k]);
     rebuildSim();
+    // Keep the sim warm for the whole intro ramp; otherwise alpha decays
+    // toward 0 faster than gravity ramps up, leaving the layout stuck at
+    // the wide INTRO_START radius until the user agitates it (slider tweak
+    // / drag) and re-heats the sim. alphaTarget(0.3) keeps energy in the
+    // system so the rising gravity actually pulls nodes inward as it ramps.
+    sim.alphaTarget(0.3).alpha(0.6).restart();
     // First center: a short delay lets the high-repulsion sim fan the
     // tightly packed PCA seeds apart before we fit the viewport, so we
     // zoom to the expanded layout instead of the original seed cluster.
@@ -2554,7 +2560,10 @@ async function sendCopy(opts = {}) {
         // Snap to exact end values so the slider thumbs land at a clean 50.
         for (const k in INTRO_END) setSliderUI(k, INTRO_END[k]);
         applyForces();
-        centerView();   // second center: fits the relaxed layout
+        // Release the alphaTarget so the sim cools to equilibrium under
+        // the final force balance, then re-fit the now-contracted layout.
+        sim.alphaTarget(0);
+        setTimeout(centerView, 600);
       }
     }
     requestAnimationFrame(step);
