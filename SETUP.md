@@ -35,8 +35,9 @@ echo 'export GEMINI_API_KEY="AIza..."' >> ~/.zshrc && source ~/.zshrc
 | `brew install ollama` | Local LLM runtime | ~200 MB |
 | `pip3 install torch torchaudio transformers ...` | ML stack | ~2 GB, ~5 min |
 | `pip3 install chromadb ollama yt-dlp numpy google-genai` | Knowledge base + downloader + Gemini chat SDK | ~150 MB |
-| `ollama pull qwen3:1.7b` | Extraction model → `models/ollama/` | **1.4 GB**, ~2 min |
-| `ollama pull nomic-embed-text` | Embedding model → `models/ollama/` | **274 MB**, ~30 sec |
+| `ollama pull qwen3:1.7b` | Lightweight extraction model (v1 `updateDB.sh`) → `models/ollama/` | **1.4 GB**, ~2 min |
+| `ollama pull nomic-embed-text` | RAG embedding model → `models/ollama/` | **274 MB**, ~30 sec |
+| `ollama pull qwen3-embedding:8b` | v2 graph-rebuild embedding (Phase 1a/3b/4) → `models/ollama/` | **4.7 GB**, ~5 min |
 | Shell env vars | `SCRIBE_HOME`, `SCRIBE_REPO`, `HF_HOME`, `OLLAMA_MODELS`, `PATH` | instant |
 
 All models land inside the Scribe folder under `models/` and are gitignored.

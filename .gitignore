@@ -9,3 +9,15 @@ graph/graph.json
 Archive/
 .haiku/
 .queue/
+
+# .scribe-skills/ heavy regenerable artifacts (embeddings, candidate-pair
+# JSONs, large per-batch input files). Lightweight outputs (scored_*.json,
+# merged_claims.jsonl, dispatch.json, source_list*.json) stay tracked.
+.scribe-skills/phase*/embeddings.npy
+.scribe-skills/phase*/claim_embeddings.npy
+.scribe-skills/phase*/concept_embeddings.npy
+.scribe-skills/phase*/candidate_pairs.json
+.scribe-skills/phase*/candidates.json
+.scribe-skills/phase*/candidates_top.json
+.scribe-skills/phase*/batches/batch_*.json
+.scribe-skills/phase*/classify_batches/batch_*.json

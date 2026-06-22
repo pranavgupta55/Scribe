@@ -40,9 +40,13 @@ mkdir -p "${MODELS_DIR}/hf"
 mkdir -p "${MODELS_DIR}/ollama"
 
 # 6. Pull Ollama models into the Scribe models directory
-echo "🤖 Pulling Ollama models into ${MODELS_DIR}/ollama (~1.4 GB)..."
+echo "🤖 Pulling Ollama models into ${MODELS_DIR}/ollama (~6.4 GB total)..."
 OLLAMA_MODELS="${MODELS_DIR}/ollama" ollama pull qwen3:1.7b
 OLLAMA_MODELS="${MODELS_DIR}/ollama" ollama pull nomic-embed-text
+# qwen3-embedding:8b is used by the v2 graph-rebuild pipeline (Phase 1a/3b/4)
+# for high-quality 4096-d clustering + connection candidates. Skip if you
+# only run the v1 lightweight pipeline (updateDB.sh + process.py).
+OLLAMA_MODELS="${MODELS_DIR}/ollama" ollama pull qwen3-embedding:8b
 
 # 7. Make all scripts executable
 chmod +x "${REPO_DIR}/scribe.sh"
