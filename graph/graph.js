@@ -221,7 +221,7 @@ let cfg = {
   // ADR-0001 v2 viewer adaptation: per-tier visibility. Default reduces the
   // 4865-node v2 hairball to ~1089 nodes (L0 + L1 + source). Hidden levels
   // skip rendering, force-tick physics, and the sidebar TOPICS list.
-  visibleLevels: new Set(['L0', 'L1', 'source']),
+  visibleLevels: new Set(['L0', 'L1']),
 };
 
 function updateCfgFromSlider(k, sliderVal) {
@@ -1996,6 +1996,16 @@ document.addEventListener('keydown', (e) => {
       copyText(f.query);
       flashCopied(f.promptCard && f.promptCard.card);
     }
+    return;
+  }
+  // Graph view: Escape closes the right-sidebar description sub-panel.
+  // Scoped to graph so chat/copy retain their own Escape semantics.
+  if (view === 'graph' && e.key === 'Escape' && detailCol.classList.contains('open')) {
+    e.preventDefault();
+    detailCol.classList.remove('open');
+    selectedNode = null;
+    listCol.querySelectorAll('.node-item').forEach(el => el.classList.remove('active'));
+    draw();
     return;
   }
   // Graph + Chat views
