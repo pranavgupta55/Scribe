@@ -21,3 +21,7 @@ Archive/
 .scribe-skills/phase*/candidates_top.json
 .scribe-skills/phase*/batches/batch_*.json
 .scribe-skills/phase*/classify_batches/batch_*.json
+
+# Local batch logs (per-run scratch, don't clutter remote)
+ingest_*.log
+/tmp/scribe_*.log
