@@ -27,7 +27,8 @@ The 20-30s delay when starting `server.py` is **NOT** the pipeline — it's cold
 
 ## Alternative pipelines
 
-- **`claudeProcess.py`** (new, added 2026-07-04) — Anthropic Claude API port of `process.py` (Opus manager + Haiku worker pool). Same schema, same CLI, ~$0.20-2 per transcript. Use when Gemini quota is exhausted or when you want faster wall-clock. Preserves `process.py` for future use.
+- **`claudeProcess.py`** at repo root (added 2026-07-04) — Anthropic Claude API port of `process.py` (Opus manager + Haiku worker pool of 8). Same schema, same CLI (`--all`, `--rebuild`, `--connect`, `--rebuild-index`, `<file>`), plus `--knowledge-dir DIR` for dual-run testing. ~$0.20 for a 2k-word transcript, ~$1-2 for a 40k-word one. Requires `ANTHROPIC_API_KEY` env var. Use when Gemini quota is exhausted or when you want fast wall-clock. `process.py` is preserved untouched — same downstream schema — so you can flip between backends.
+- Historical note (from an older memory): a prior "haiku pipeline" existed as a laptop-only cheat kept OUT of the repo. That decision is REVERSED — `claudeProcess.py` is now the canonical in-repo Claude path. Ignore any older instruction to keep it local.
 
 ## Known bugs
 
