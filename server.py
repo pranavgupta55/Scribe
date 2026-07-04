@@ -863,15 +863,20 @@ class Handler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_POST(self):
-        if self.path == "/api/rag":
-            # Wider retrieval, no LLM — used by the Copy-paste view to surface
-            # raw RAG sources for pasting into an external model.
+        if self.path == "/api/rag" or self.path == "/api/retrieve":
+            # /api/rag  → default wide retrieval (copy-paste view, 50/50/24).
+            # /api/retrieve → same underlying function, but callers pass k params
+            #                 to control fanout (used by Atlas workers, 8/8/6).
             length = int(self.headers.get("Content-Length", 0))
             try:
                 body = json.loads(self.rfile.read(length) or b"{}")
                 query = (body.get("query") or "").strip()
-            except json.JSONDecodeError:
+                k_facts   = int(body.get("k_facts",   RAG_N_FACTS))
+                k_chunks  = int(body.get("k_chunks",  RAG_N_CHUNKS))
+                max_topics = int(body.get("max_topics", RAG_MAX_TOPICS))
+            except (json.JSONDecodeError, ValueError, TypeError):
                 query = ""
+                k_facts, k_chunks, max_topics = RAG_N_FACTS, RAG_N_CHUNKS, RAG_MAX_TOPICS
             if not query:
                 self._json_response({"error": "Empty query."}, status=400)
                 return
@@ -884,7 +889,8 @@ class Handler(SimpleHTTPRequestHandler):
                 })
                 return
             try:
-                res = retrieve_structured(query)
+                res = retrieve_structured(query, n_facts=k_facts,
+                                          n_chunks=k_chunks, max_topics=max_topics)
             except Exception as e:
                 self._json_response({"error": f"Retrieval failed: {e}"}, status=500)
                 return
