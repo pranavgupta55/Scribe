@@ -1,0 +1,200 @@
+{
+  "source_file": "million_dollar_convos_serial.txt",
+  "primary_speaker": "Greg (co-founder, Bloom Nutrition)",
+  "concepts_addressed": [
+    "E-Commerce Business Model Economics",
+    "Payment Timing Optimization",
+    "Brand as Behavioral Pairing",
+    "Reality-Sourced Content",
+    "Content-Offer Congruence",
+    "Attention-to-Revenue Funnel",
+    "Intermediary as Primary Customer",
+    "Avatar Targeting Strategy",
+    "Motivated Buyer Targeting",
+    "Prepayment Cash Flow Control",
+    "Channel Optimization Before Expansion",
+    "Educational vs Entertainment Content"
+  ],
+  "frameworks": [
+    {
+      "name": "Bootstrap-First Retail Entry Sequencing",
+      "definition": "Sell only through fast-pay channels until sufficient capital cushion is built; only then enter slow-pay retailers (30-90 day terms) to avoid cash-flow insolvency despite profitability.",
+      "concept": "Payment Timing Optimization"
+    },
+    {
+      "name": "Event-as-Content Frame",
+      "definition": "Design every in-person event primarily for digital content output rather than live attendance experience; the content artifact outlasts the event and multiplies reach.",
+      "concept": "Reality-Sourced Content"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Greg (co-founder, Bloom Nutrition) kept Bloom bootstrapped by selling exclusively through fast-pay retail channels in the company's early years, avoiding 30-90 day payment-term retailers entirely until a large capital cushion was established. This prevented cash-flow insolvency that would have occurred even while the business was technically profitable.",
+      "type": "mechanism",
+      "speaker": "Greg",
+      "speaker_term": "bootstrap status",
+      "topic": "Payment Timing Optimization",
+      "conditions": [
+        "Early-stage CPG brand reinvesting nearly all revenue in real time",
+        "No outside capital or investors on the cap table"
+      ],
+      "mechanism": "Slow-pay retailers (30-90 day terms) create a cash-flow gap that compounds for brands reinvesting every dollar in near-real time; even a profitable business can become insolvent if inventory capital is locked in unpaid receivables for three months.",
+      "numbers": {
+        "axis": "Retailer payment delay by relationship stage",
+        "anchors": [
+          {"region": "large retailers (e.g. Walmart) early relationship", "value": "30-90 day payment terms"},
+          {"region": "fast-pay channels (early Bloom strategy)", "value": "payment on or near inventory receipt"}
+        ]
+      },
+      "bounded_by": [
+        "Once a sufficient capital cushion is built, slower-pay large retailers (Walmart, Costco) become viable",
+        "Does not apply to businesses with patient investors or credit facilities covering receivables gaps"
+      ]
+    },
+    {
+      "text": "Greg (Bloom Nutrition) asserts that whitelisting ads — running paid social ads from a creator's handle rather than the brand's own handle — is the primary mechanism by which direct-to-consumer brands generate trackable ROI from creator partnerships, because the brand can attribute conversions directly to the ad spend through the creator's account.",
+      "type": "mechanism",
+      "speaker": "Greg",
+      "speaker_term": "whitelisting",
+      "topic": "Intermediary as Primary Customer",
+      "conditions": [
+        "Direct-to-consumer brand with Meta (Facebook/Instagram) advertising capability",
+        "Creator with established audience trust on the platform"
+      ],
+      "mechanism": "Running the ad from the creator's handle means the brand can track click-to-purchase attribution on Meta; the creator's pre-existing audience trust reduces skepticism of the ad, lifting conversion rates versus running the same creative from the brand's own account.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to brands sold primarily through retail (e.g., Walmart, Costco) where Meta attribution is unavailable because purchases happen off-platform",
+        "Bloom itself does not use whitelisting for this reason — their distribution is retail-first"
+      ]
+    },
+    {
+      "text": "Greg (Bloom Nutrition) asserts that choosing a large total addressable market is one of the most important early brand decisions, comparing it to how Mr. Beast chose chocolate (a large market) over umbrellas or socks (smaller markets). Bloom chose energy drinks specifically because of the market's size, not because of product preference.",
+      "type": "assertion",
+      "speaker": "Greg",
+      "speaker_term": "picking the right lane",
+      "topic": "Avatar Targeting Strategy",
+      "conditions": [
+        "Founder choosing a product category for a consumer brand",
+        "Pre-launch or early stage where category selection is still live"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Market size alone does not guarantee success if the founder cannot execute differentiated positioning within that market"
+      ]
+    },
+    {
+      "text": "Greg (Bloom Nutrition) asserts that in 2026, content from operating nine-figure businesses started from dorm rooms or small beginnings is aspirational rather than unrelatable, and that very few founders at this scale are making content — making the category relatively uncrowded despite the scale of the operators within it.",
+      "type": "assertion",
+      "speaker": "Greg",
+      "speaker_term": null,
+      "topic": "Reality-Sourced Content",
+      "conditions": [
+        "Content documenting the lifestyle and operations of a scaled ($100M+) consumer brand founder",
+        "YouTube as the primary platform being referenced"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Founder content creators by business scale (as of early 2026)",
+        "anchors": [
+          {"region": "nine-figure business founders making regular content", "value": "very few (Greg describes the category as nearly empty)"},
+          {"region": "aspirational audience perception", "value": "content is relatable, not unrelatable, per Greg's framing"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Greg (Bloom Nutrition) asserts that designing in-real-life events primarily for digital content output is the correct frame: even a low-energy live event can succeed if the resulting Instagram or social content looks compelling. The content artifact is the primary product of the event, not the live experience.",
+      "type": "assertion",
+      "speaker": "Greg",
+      "speaker_term": "if it looks lit on Instagram, that's all that kind of matters",
+      "topic": "Reality-Sourced Content",
+      "conditions": [
+        "Consumer brand with social media audience as primary growth channel",
+        "Event budget is justified by content output, not by live attendance alone"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Greg notes not to take this to the extreme — the live event experience still matters, but content output is the primary frame for event ROI"
+      ]
+    },
+    {
+      "text": "Greg (Bloom Nutrition) asserts that moving to Austin alongside their NutriBolt/C4 partnership headquarters was a deliberate signal of commitment to a major corporate partner — and that proximity to a partner's HQ can itself function as a trust and relationship-building investment that influences partner confidence in a young brand.",
+      "type": "assertion",
+      "speaker": "Greg",
+      "speaker_term": null,
+      "topic": "Channel Partner Quality",
+      "conditions": [
+        "Early-stage brand receiving a major distribution or co-manufacturing partnership",
+        "Founder aged ~28 seeking to establish credibility with corporate partner"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Greg (Bloom Nutrition) argues that retail brands distributing through Walmart or Costco cannot generate trackable ROI from Meta creator whitelisting ads, because the purchase event happens in-store rather than on a tracked digital endpoint. These brands should instead use creator partnerships for brand awareness (billboards, in-store activations) rather than for performance marketing.",
+      "type": "conditional",
+      "speaker": "Greg",
+      "speaker_term": null,
+      "topic": "Brand Attribution Window",
+      "conditions": [
+        "CPG brand with primary distribution through brick-and-mortar retail (Walmart, Costco)",
+        "Creator partnership being evaluated for paid social / Meta ads"
+      ],
+      "mechanism": "Attribution requires a traceable digital purchase event; retail purchases break that attribution chain, so creator whitelisting cannot generate closed-loop ROI data for retail-first brands.",
+      "numbers": null,
+      "bounded_by": [
+        "DTC (direct-to-consumer) brands with online checkout can use whitelisting for full attribution",
+        "Retail brands can use creators for one-time activations (in-store events, limited campaigns) where brand awareness is the metric"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Greg and Mari kept the entire Bloom Nutrition cap table to just the two of them — no investors — in the company's early years. During this period, they avoided large retailers like Walmart entirely, selling only through channels where payment arrived quickly upon inventory delivery. Only after building a meaningful capital cushion did they enter Walmart and Costco, which pay on 30-90 day terms. This sequencing kept them solvent despite reinvesting nearly every dollar generated back into inventory and operations.",
+      "claim_index": 0,
+      "topic": "Payment Timing Optimization"
+    },
+    {
+      "text": "Bloom's New York City activation occurred on a day when it was seven degrees outside, causing the cans they were handing out to freeze. Despite the poor live conditions, the event generated strong social media content and views. Greg cited this as evidence that event content output can succeed even when the live experience fails — the visual presentation of the bar (styled as an ice block, which was intentional) and the energy of attendees who had traveled to the event drove the online engagement.",
+      "claim_index": 4,
+      "topic": "Reality-Sourced Content"
+    },
+    {
+      "text": "Greg described using Eric, an endurance athlete and fitness content creator, as a potential whitelist ad partner for brands like Bloom. He explained the mechanism: a brand pays Eric to run a Meta ad from Eric's own Instagram handle, not from the brand's handle. The ad appears to come from a trusted creator's account, borrowing his audience trust, and the DTC brand can track conversions because the purchase flows through a digital endpoint. Greg noted this is why new DTC brands commonly use creator whitelisting for launch — to borrow trust when their own brand is unproven.",
+      "claim_index": 1,
+      "topic": "Intermediary as Primary Customer"
+    },
+    {
+      "text": "Greg contrasted Mr. Beast's choice to sell chocolate versus selling umbrellas or socks as an illustration of market-size-driven product selection. He noted that Bloom deliberately chose energy drinks — a large category with high total addressable market — rather than a niche product, and credited part of Bloom's scale to this early choice of operating in a massive market.",
+      "claim_index": 2,
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "Greg mentioned that Bloom's Sam's Club variety pack post received strong engagement from their audience, with Sam's Club itself commenting on the post. Bloom had greens, colostrum, energy, pop, and creatine at Sam's Club — a full product line at a club retailer. This was cited as evidence of the brand's retail presence growth and the social media engagement value of documenting retail milestones.",
+      "claim_index": -1,
+      "topic": "Channel Optimization Before Expansion"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When designing in-real-life events, frame the event primarily as a content production opportunity. Brief the creative team on what shots, moments, and visual content need to be captured before and during the event.",
+      "topic": "Reality-Sourced Content"
+    },
+    {
+      "text": "For early-stage CPG brands reinvesting most revenue into inventory: sell exclusively through fast-pay channels first, build a capital cushion, then enter 30-90 day payment term retailers.",
+      "topic": "Payment Timing Optimization"
+    },
+    {
+      "text": "For DTC brands using creator partnerships: negotiate whitelist ad access (permission to run Meta ads from the creator's handle) as part of the partnership structure rather than paying only for organic posts.",
+      "topic": "Intermediary as Primary Customer"
+    },
+    {
+      "text": "Select your product category with TAM (total addressable market) as a primary filter, not just personal passion — operating in a large market creates more compounding opportunity than operating in a niche market even with equivalent execution quality.",
+      "topic": "Avatar Targeting Strategy"
+    }
+  ]
+}

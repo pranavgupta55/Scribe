@@ -1,0 +1,193 @@
+{
+  "source_file": "moremozi_the_best_offer_for_a_construction_company_cXnRN1Hw4ik.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Price Anchoring",
+    "Sales Closing Mechanics",
+    "Deal Structure and Ownership"
+  ],
+  "frameworks": [
+    {
+      "name": "On-Time On-Budget Guarantee for Home Builders",
+      "definition": "A contract structure where the builder guarantees project completion within timeline and budget, with the guarantee enforced by a contingent profit-sharing clause and a constraint that prevents scope creep.",
+      "concept": "Deal Structure and Ownership"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Most custom home builders go over budget by 10-20% (Alex Hormozi). For a $2 million home project, a typical 15% overrun costs the homeowner $300,000. When a builder commits to an on-time on-budget guarantee, the builder's fee (e.g., $250,000) becomes negligible to the homeowner because they are already ahead by $300,000 vs. typical contractors.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Anchoring",
+      "conditions": [
+        "custom home building",
+        "price point $2M+",
+        "homeowner does not change scope"
+      ],
+      "mechanism": "The $300,000 cost avoided (typical overrun) reframes the builder's premium fee as a bargain, anchoring the perceived value relative to the overrun risk.",
+      "numbers": {
+        "axis": "cost overrun percentage and dollar impact",
+        "anchors": [
+          {
+            "region": "typical builders",
+            "value": "10-20% overrun ($300k on $2M project)"
+          },
+          {
+            "region": "on-time on-budget builder fee",
+            "value": "$250k (appears premium but customer already breaks even)"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if homeowner changes scope mid-project",
+        "Does not apply to fixed-price jobs without contingency clauses"
+      ]
+    },
+    {
+      "text": "Custom home builders typically deliver projects 3-9 months late (Alex Hormozi). This delay compounds cost: (1) homeowner loses 6+ months of property appreciation (assuming midpoint 6-month delay); (2) homeowner pays the overrun costs on top of delay costs; (3) builder inefficiency creates additional waste. An on-time guarantee addresses all three vectors simultaneously.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "custom home building",
+        "construction timeline enforcement"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "typical project delay (months)",
+        "anchors": [
+          {
+            "region": "typical builders",
+            "value": "3-9 months late (midpoint 6 months)"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi pairs the on-time on-budget guarantee with a 20% price increase on the base fee. The guarantee costs the builder almost nothing in practice because homeowners rarely execute the contingency (do not change scope), making the guarantee a low-risk upsell that justifies the premium price.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Anchoring",
+      "conditions": [
+        "custom home building",
+        "homeowner scope stability is high (>95% do not change mind)"
+      ],
+      "mechanism": "Homeowners perceive the guarantee as valuable risk-reduction (they fear overruns and delays), so they accept a 20% price premium. Because actual scope-change events are rare (<5%), the builder's expected cost of the guarantee is minimal, creating an arbitrage opportunity where perceived risk is worth more than actual risk.",
+      "numbers": {
+        "axis": "rate of homeowner scope changes",
+        "anchors": [
+          {
+            "region": "typical deal outcomes",
+            "value": ">95% (no scope changes); <5% (scope change triggers)"
+          },
+          {
+            "region": "price increase paired with guarantee",
+            "value": "20%"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Breaks down if homeowner scope-change rate exceeds ~20% (guarantee becomes too costly)"
+      ]
+    },
+    {
+      "text": "The on-time on-budget guarantee closes deals because homeowners fear overruns and delays. The guarantee framing (e.g., 'other builders will go over budget 10-20%, I won't') positions the builder's certainty and expertise as the primary differentiator, shifting the sale from price comparison to risk-mitigation comparison.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "high-ticket custom home building ($2M+)"
+      ],
+      "mechanism": "Homeowners are loss-averse: they perceive a 15% overrun ($300k loss) as more painful than a 20% premium ($250k cost) because losses loom larger than equivalent gains. By anchoring to the typical overrun, the guarantee transforms the price objection into a risk-reduction frame.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not work if homeowner is price-shopping commoditized construction services"
+      ]
+    },
+    {
+      "text": "When a builder frames the constraint ('you cannot change scope'), homeowners accept it because they recognize the constraint is load-bearing on the guarantee. The explicit framing (e.g., 'if you want golden toilets, I can't keep the guarantee') makes the constraint transactional and non-punitive, increasing deal-closing probability.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "custom home building",
+        "guarantee is the primary value proposition"
+      ],
+      "mechanism": "By explaining the constraint as a logical prerequisite for the guarantee (not a punishment), the homeowner understands the trade-off and accepts it voluntarily. Explicit constraints reduce post-sale friction because expectations are clear.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "The home builder can achieve returns on excess on ~95% of deals (no scope change) that more than cover the rare deals where the guarantee is triggered (scope change forces the builder to absorb the overrun cost). The expected value of the guarantee is positive even accounting for losses on the small percentage of deals where it is called.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "custom home building",
+        "builder operates with thin margins and excess capacity"
+      ],
+      "mechanism": "Law of large numbers: high hit rate (95%+) of deal success with excess profit offsets low-probability events (scope changes) where losses occur.",
+      "numbers": {
+        "axis": "percentage of deals with triggered guarantee",
+        "anchors": [
+          {
+            "region": "deals with no scope change (guarantee not called)",
+            "value": "~95%"
+          },
+          {
+            "region": "deals with scope change (guarantee triggered)",
+            "value": "~5%"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi specializes in home value optimization: ensuring the home is built correctly so that the final appraisal reflects true value and does not inflate costs. He advises clients to avoid low-ROI aesthetic changes (e.g., gold fixtures) that add cost without proportional property value.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Anchoring",
+      "conditions": [
+        "custom home building",
+        "value-engineering (optimizing cost vs. appraisal value)"
+      ],
+      "mechanism": "A builder who optimizes for appraisal value (not just cosmetic preferences) creates defensibility for premium pricing because the homeowner's final property value is higher, justifying the builder's fee.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A homeowner plans to build a $2 million home. If they hire a typical builder, the builder will likely go over budget by 15% ($300,000) and also deliver 3-9 months late (assume 6 months). The delay costs them 6 months of property appreciation plus the $300,000 overrun. When presented with Hormozi's on-time on-budget guarantee at a 20% premium ($250,000 fee), the homeowner saves $300,000 (the typical overrun) minus the $250,000 fee = net $50,000 savings, making the premium price a bargain.",
+      "claim_index": 0,
+      "topic": "Price Anchoring"
+    },
+    {
+      "text": "A homeowner says mid-project, 'I want golden toilets.' Hormozi responds: 'If you want golden toilets, I can't keep the on-time on-budget guarantee because I have to source them and they're expensive.' The homeowner accepts this because the framing makes clear that scope changes invalidate the guarantee. The constraint is not punitive; it is a logical prerequisite. This clarity prevents post-sale resentment and keeps the deal intact.",
+      "claim_index": 4,
+      "topic": "Sales Closing Mechanics"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When pitching a premium offer (e.g., on-time on-budget guarantee), lead with the typical failure case (10-20% overrun, 3-9 month delay) so the homeowner anchors to that loss before hearing the price premium. This anchoring reframes the premium fee as small relative to the avoided loss.",
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Pair a risk-reduction guarantee with an explicit constraint that prevents the guarantee from being exploited (e.g., 'no scope changes'). Explain the constraint clearly and positively so the homeowner understands it as a prerequisite, not a punishment.",
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Specialize in value optimization (ensuring the home will appraise high) so that you can justify premium pricing without being seen as simply charging more. The higher appraisal is the evidence for the premium fee.",
+      "topic": "Price Anchoring"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "source_file": "moremozi_i_make_1myear_teaching_arts_and_crafts_how_do_i_scale_dgQj5lEkzns.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Prepayment Cash Flow Control",
+    "Continuity Upsell",
+    "Price Anchoring",
+    "Service Business Model Economics",
+    "Offer Value Architecture",
+    "Revenue Stage Transitions"
+  ],
+  "frameworks": [
+    {
+      "name": "Cart Close Sequencing for Membership Launch",
+      "definition": "A two-phase launch strategy that maximizes annual prepayment by closing the annual tier with exclusive bonuses first, then reopening with monthly-only option at lower value.",
+      "concept": "Prepayment Cash Flow Control"
+    },
+    {
+      "name": "Physical Product Premium Bundle",
+      "definition": "Bundling a tangible product (e.g., printer, paper kit) with a digital membership to increase conversion willingness and justify higher price points to end users.",
+      "concept": "Offer Value Architecture"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Membership businesses collecting $60 in cash within 30 days while spending $90 on customer acquisition cannot scale profitably on an evergreen basis without restructuring their cash collection.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "Membership business model",
+        "Front-loaded ad spend model",
+        "Low initial cash collection relative to CAC"
+      ],
+      "mechanism": "The founder must collect payment in advance of work delivery and take acquisition costs upfront, requiring 6+ months to break even rather than the 1-2 month target.",
+      "numbers": {
+        "axis": "Cash collection and acquisition cost ratio",
+        "anchors": [
+          {
+            "region": "initial 30-day cash collected",
+            "value": "$60"
+          },
+          {
+            "region": "ad acquisition cost",
+            "value": "$90"
+          },
+          {
+            "region": "calculated LTV at 7% churn",
+            "value": "$385"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes membership churn of 93% and LTV of $300 (or $385 calculated)"
+      ]
+    },
+    {
+      "text": "In a five-day event selling to a consumer audience, the impulse purchase window is $300-$600; pricing below this range (e.g., recurring $27/month) leaves money on the table and prevents sufficient upfront cash collection.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Anchoring",
+      "conditions": [
+        "Consumer audience",
+        "Five-day selling event duration",
+        "Direct offer presentation"
+      ],
+      "mechanism": "Consumers at events have heightened purchase intent and capital availability in short windows; pricing in the $300-$600 range aligns with psychological willingness to spend on discretionary offerings.",
+      "numbers": {
+        "axis": "Impulse purchase price window for consumer event sales",
+        "anchors": [
+          {
+            "region": "low end of impulse range",
+            "value": "$300"
+          },
+          {
+            "region": "high end of impulse range",
+            "value": "$600"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to B2B sales or long-consideration-cycle purchases"
+      ]
+    },
+    {
+      "text": "Offering annual membership with exclusive bonuses (not offered to monthly subscribers) during an event, then removing those bonuses post-event to run a 'scoop-up campaign' to the $27/month offer, creates a psychological anchor that makes monthly pricing feel like a discount while extending the effective prepayment window.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "Multi-tiered membership offer",
+        "Time-limited bonus exclusivity",
+        "Sequential cart closes (annual first, then monthly)"
+      ],
+      "mechanism": "Exclusive bonuses tied to annual commitment anchor premium pricing during the event; post-event removal signals bonus cost to monthly buyers, making the $27 option feel like a forced downgrade rather than an alternative, reducing takes while preserving repeat customer potential.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires clear bonus communication and transparency (do not misrepresent monthly offering as including bonuses)"
+      ]
+    },
+    {
+      "text": "Adding a physical product (printer, paper kit, or bundled materials) to a digital membership offer increases consumer willingness to purchase and can justify doubling or tripling the price point because the physical product provides tangible legitimacy for the purchase.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer Value Architecture",
+      "conditions": [
+        "Offering sold to consumer audience",
+        "Product has a physical component that end user can justify to a third party (spouse, family)",
+        "Item cost is manageable for bundling (e.g., printer <$300)"
+      ],
+      "mechanism": "Physical products provide psychological justification (an 'excuse') for purchase that digital-only offers lack. A consumer can rationalize the spend to a spouse by pointing to the tangible asset: 'I got this printer so I can generate income,' not just a digital login.",
+      "numbers": {
+        "axis": "Price lift from physical product bundling",
+        "anchors": [
+          {
+            "region": "digital-only offer ceiling",
+            "value": "$300-$600"
+          },
+          {
+            "region": "with physical product bundle",
+            "value": "$1000 achievable"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Only applicable when product delivery is feasible (not fully digital-only services)"
+      ]
+    },
+    {
+      "text": "LTV of a membership at 7% monthly churn (93% retention) is calculated by dividing annual price by the churn rate: a $270/year membership with 7% churn yields ~$385 LTV, which is a healthy 4.3x multiple over a typical $90 CAC.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Model Economics",
+      "conditions": [
+        "Membership business model",
+        "Annual pricing structure",
+        "Cohort-trackable churn rate"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "LTV calculation from membership pricing and churn",
+        "anchors": [
+          {
+            "region": "annual membership price",
+            "value": "$270"
+          },
+          {
+            "region": "monthly churn rate",
+            "value": "7%"
+          },
+          {
+            "region": "resulting LTV",
+            "value": "$385"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes stable churn over time; does not account for seasonal variations or launch-specific cohort effects"
+      ]
+    },
+    {
+      "text": "To confirm LTV and troubleshoot churn, a membership business should implement cohort tracking (e.g., via Teachable or manual tracking) to follow a single cohort of customers from the launch month through their lifetime; this reveals whether churn is uniform or concentrated in early months.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "Membership business",
+        "Funnel runs on ad channels",
+        "Cohort-level tracking is available or can be manually implemented"
+      ],
+      "mechanism": "Cohort tracking allows differentiation between stable long-term retention and early-stage front-loaded churn; without it, blended churn figures hide the true shape of customer lifetime value.",
+      "numbers": null,
+      "bounded_by": [
+        "Most manual tracking requires light data engineering; some platforms (Teachable, others) do this automatically"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A sticker-crafting membership business generating $1.2M revenue with $27/month or $270/year annual pricing across a primarily 45+ female audience runs paid ads generating $90 CAC while collecting only $60 in cash within the first 30 days. The founder reports true LTV (across all members) is ~$300-$385, but spends six months recovering ad costs rather than the desired one month. By shifting to annual-only during events with exclusive bonuses and then mopping up with a lower-bonus monthly offer afterward, the founder can compress breakeven to two months or faster.",
+      "claim_index": 0,
+      "topic": "Prepayment Cash Flow Control"
+    },
+    {
+      "text": "During a five-day paid event ($10 entry) selling membership, the founder had been offering both $27/month and $270/year with the same incentive (no bonus differentiation). By reserving joining bonuses for annual-only membership during the event and later removing them for monthly offers in the post-event scoop-up campaign, the founder can signal value difference and make monthly pricing feel like a downgrade rather than an alternative.",
+      "claim_index": 2,
+      "topic": "Prepayment Cash Flow Control"
+    },
+    {
+      "text": "A creative/crafts business could bundle the membership with a physical printer, ink, and sticker paper—items the customer will use to execute on the course content. This tangible asset justifies the purchase to a spouse (\"I bought this so I can make money\") and allows price testing at $500-$1000 instead of the $300-$600 digital-only ceiling.",
+      "claim_index": 3,
+      "topic": "Offer Value Architecture"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When running a five-day selling event for a membership, make the annual tier the exclusive offer during the event window, with clear annual-only bonuses. After the event closes, run a second cart-close phase with the monthly option ($27/month) but strip out 2-3 of the bonuses, keeping only 1 bonus to signal value difference.",
+      "topic": "Prepayment Cash Flow Control"
+    },
+    {
+      "text": "If a prospect asks for monthly pricing during the event (or post-event), respond transparently: 'We offer monthly options, but you won't get these bonuses that I just spent time explaining, and they're valuable.' Do not lie, but you can make monthly less convenient relative to annual.",
+      "topic": "Prepayment Cash Flow Control"
+    },
+    {
+      "text": "Track membership cohorts by launch month to separate stable long-term churn from early-stage cancellations; if your platform does not do this automatically (like Teachable), build a simple manual tracker or spreadsheet to follow one month's cohort.",
+      "topic": "Service Business Model Economics"
+    },
+    {
+      "text": "Test adding a physical product to the membership offer in your next launch; even a single item (e.g., printer, sticker paper bundle) can justify a 2-3x price increase if it provides the end user with a tangible excuse to justify the purchase to a third party.",
+      "topic": "Offer Value Architecture"
+    }
+  ]
+}

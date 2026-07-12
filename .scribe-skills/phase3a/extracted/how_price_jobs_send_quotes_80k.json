@@ -1,0 +1,240 @@
+{
+  "source_file": "how_price_jobs_send_quotes_80k.txt",
+  "primary_speaker": "Eric Velch",
+  "concepts_addressed": [
+    "Cost Arbitrage Model",
+    "Service Business Unit Economics",
+    "Margins",
+    "Tiered Offer Pricing",
+    "Founder Bottleneck",
+    "Progressive Pricing Tier Stacking",
+    "Revenue Stage Transitions",
+    "Cold Outreach Channels"
+  ],
+  "frameworks": [
+    {
+      "name": "Three-Category Drop-Servicing Pricing Framework",
+      "definition": "A decision tree for structuring drop-servicing margins across three service types: (1) phone-priceable low-ticket services at 50% markup, (2) on-site contractor-priced trade services at a 60/40 split, and (3) high-ticket multi-visit services at 20% markup.",
+      "concept": "Cost Arbitrage Model"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In drop-servicing businesses (home service lead generation with contractor fulfillment), the operator's markup percentage is determined primarily by service type and ticket size: low-ticket phone-priceable services (car detailing, house cleaning, carpet cleaning, pool cleaning) support a 50% markup; trade services completed on the first visit (plumbing, HVAC, electrical) support a 40% cut to the operator; and high-ticket multi-visit services (remodeling, landscaping, paving, masonry) support approximately a 20% markup, because higher ticket prices make large absolute markups uncompetitive.",
+      "type": "quantified",
+      "speaker": "Eric Velch",
+      "speaker_term": "drop servicing business",
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Drop-servicing / home-service lead-gen business model",
+        "Contractor fulfillment (operator does not perform the service)"
+      ],
+      "mechanism": "Higher absolute ticket prices shrink the operator's competitive room to add markup without exceeding market-rate pricing; lower ticket services have commoditized pricing that allows a fixed percentage to remain invisible to the end customer.",
+      "numbers": {
+        "axis": "Operator markup percentage by service tier",
+        "anchors": [
+          {"region": "Low-ticket phone-priceable (car detailing, cleaning, carpet)", "value": "~50% markup"},
+          {"region": "Mid-ticket on-site trade services (plumbing, HVAC, electrical)", "value": "~40% of net after materials"},
+          {"region": "High-ticket multi-visit (remodeling, landscaping, paving, masonry)", "value": "~20% markup"}
+        ]
+      },
+      "bounded_by": [
+        "Very high single-job values (e.g., $300,000 landscaping contract) may require taking less than 20% to remain price-competitive",
+        "Does not apply to services where pricing cannot be determined without an on-site assessment and a longer quote-to-approval cycle if the operator wants to price over the phone"
+      ]
+    },
+    {
+      "text": "For drop-servicing low-ticket phone-priceable services (car detailing, house cleaning, carpet cleaning), Eric Velch charges customers $200-$250 per car detail and pays contractors $100-$130 per job, yielding a roughly 50% operator markup. Velch reports that this level of markup is achievable because a large pool of contractors already charge low rates due to low business volume or early-stage positioning, and those contractors value the guaranteed volume more than the per-job margin.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "pricing over the phone",
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Low-ticket services where price varies little between jobs",
+        "Contractor has low existing business volume and values guaranteed job flow"
+      ],
+      "mechanism": "Contractors with low volume accept below-market per-job rates in exchange for consistent work flow delivered by the operator, allowing the operator to retain the spread as margin.",
+      "numbers": {
+        "axis": "Car detailing: customer price vs contractor payout",
+        "anchors": [
+          {"region": "Customer charge", "value": "$200-$250 per car"},
+          {"region": "Contractor payout", "value": "$100-$130 per car"},
+          {"region": "Operator markup", "value": "~50%"}
+        ]
+      },
+      "bounded_by": [
+        "Contractor may charge 20-30 more than target; requires negotiation by framing operator as providing bulk volume and handling all marketing/scheduling"
+      ]
+    },
+    {
+      "text": "For drop-servicing trade services (plumbing, HVAC, electrical) where the job is completed on-site in a single visit, the operator cannot price over the phone because the scope is unknown until the contractor assesses it. Instead, the contractor prices and closes the customer on-site, then informs the operator of the approved price; the operator invoices the customer and retains approximately 40% of the net (after materials), paying the contractor ~60%.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "services where the contractor takes care of the pricing",
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Emergency or urgent trade service (plumbing, HVAC, electrical)",
+        "Job completed on the first visit (no multi-visit quoting cycle)",
+        "Customer motivated to approve quickly due to urgency"
+      ],
+      "mechanism": "Unknown job scope prevents upfront pricing; contractor's on-site assessment and immediate execution collapses the sales cycle, enabling same-day close and payment collection through the operator.",
+      "numbers": {
+        "axis": "Operator/contractor revenue split for on-site trade services",
+        "anchors": [
+          {"region": "Contractor share (after materials)", "value": "~60%"},
+          {"region": "Operator share (after materials)", "value": "~40%"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when the contractor must return for a second visit or when the customer collects competing quotes before approving",
+        "Some customers pay cash directly to contractor, bypassing operator invoice"
+      ]
+    },
+    {
+      "text": "For high-ticket drop-servicing niches (remodeling, landscaping, asphalt, masonry, paving) with longer sales cycles, the operator targets approximately a 20% markup over the contractor's quoted price. The operator collects the 20% as a deposit before work begins, which represents the operator's profit; the contractor then earns their full quoted amount from remaining payments.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "really high ticket services",
+      "topic": "Margins",
+      "conditions": [
+        "High-ticket services ($4,000-$300,000 range per job)",
+        "Multi-visit sales cycle: contractor on-site assessment, then customer approval",
+        "Customer solicits multiple competing quotes before deciding"
+      ],
+      "mechanism": "High absolute job values make large percentage markups uncompetitive; a 20% markup on a $10,000 job ($2,000) keeps the operator within competitive market pricing while the deposit structure ensures the operator's profit is collected before any risk of non-payment.",
+      "numbers": {
+        "axis": "High-ticket operator markup and deposit structure",
+        "anchors": [
+          {"region": "Contractor quote (example)", "value": "$10,000"},
+          {"region": "Customer invoice (with 20% markup)", "value": "$12,000"},
+          {"region": "Operator deposit collected upfront (= operator profit)", "value": "$2,000"},
+          {"region": "Contractor paid after job completion", "value": "$10,000"}
+        ]
+      },
+      "bounded_by": [
+        "Very large single jobs (e.g., $300,000) may require a markup below 20% to remain competitive; a 20% markup on $300,000 is $60,000 which likely exceeds market tolerance",
+        "Requires contractor on-site assessment before quoting; operator cannot price without contractor input"
+      ]
+    },
+    {
+      "text": "Eric Velch reports generating his first $30,000 profit month within two months of starting his drop-servicing plumbing business using entirely organic marketing (no paid advertising). He reports earning $108,000 in revenue across his drop-servicing and coaching businesses in the most recent 28-day period shown in the video (recorded June 12).",
+      "type": "quantified",
+      "speaker": "Eric Velch",
+      "speaker_term": "drop servicing business",
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "Organic marketing only (no paid advertising)",
+        "Plumbing niche with local contractor partners",
+        "Combined drop-servicing and coaching revenue included in $108k figure"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Eric Velch drop-servicing revenue milestones",
+        "anchors": [
+          {"region": "Month 2 of starting", "value": "$30,000 profit"},
+          {"region": "Most recent 28-day window (June 12 recording)", "value": "$108,000 revenue (drop-servicing + coaching combined)"}
+        ]
+      },
+      "bounded_by": [
+        "Revenue includes coaching business in addition to drop-servicing; breakdown between the two is not given",
+        "Student Cole achieved $100,000+ revenue in his third month in a different niche (landscaping), showing replication is possible but not guaranteed"
+      ]
+    },
+    {
+      "text": "In drop-servicing for on-site trade services, the operator should target contractors who have low existing business volume, identifiable on Google (last pages of results) or on Facebook Marketplace groups where contractors actively solicit work. Low-volume contractors are more likely to accept a 60/40 split in the operator's favor because guaranteed job flow compensates for the reduced per-job rate.",
+      "type": "conditional",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Cold Outreach Channels",
+      "conditions": [
+        "Operator is starting and has no brand leverage to attract top contractors",
+        "Target contractor has low existing pipeline and needs volume"
+      ],
+      "mechanism": "Contractors with sparse job pipelines have a high willingness to trade per-job margin for volume certainty; the operator's marketing function (even when entirely organic) is framed to the contractor as advertising spend, justifying the split.",
+      "numbers": null,
+      "bounded_by": [
+        "High-volume established contractors are unlikely to accept a 60/40 split favoring the operator",
+        "Operator may need to negotiate upward from 60/40 if a desired contractor charges 20-30 more than target rate"
+      ]
+    },
+    {
+      "text": "For drop-servicing high-ticket services with longer sales cycles, the operator's structural advantage is that their profit is captured as a deposit before work begins, making the operator's return independent of whether the contractor completes the job on budget. The deposit equals the 20% markup, so the operator's profit is de-risked at job approval rather than at job completion.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "High-ticket services ($4,000+ per job)",
+        "Multi-visit sales cycle with upfront deposit norm in the industry"
+      ],
+      "mechanism": "Customer deposits are industry-standard for high-ticket home improvement; this allows the operator to collect their profit margin at approval rather than at job completion, removing completion risk from the operator's P&L.",
+      "numbers": {
+        "axis": "Deposit as profit capture mechanism",
+        "anchors": [
+          {"region": "Contractor quote", "value": "$10,000"},
+          {"region": "Operator deposit collected (= full profit)", "value": "$2,000 (20% of $12,000 customer price)"},
+          {"region": "Remaining payment to contractor after completion", "value": "$10,000"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to low-ticket services where deposits are not industry-standard"
+      ]
+    },
+    {
+      "text": "Eric Velch asserts that operators can achieve a 50% markup on low-ticket home services despite skepticism from observers, because the pool of contractors who already charge low rates (due to being early-stage or having low business volume) is large enough to supply the business without negotiating from premium-priced contractors.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Low-ticket home services (car detailing, cleaning, carpet cleaning)",
+        "Operator sources from early-stage or low-volume contractors"
+      ],
+      "mechanism": "The supply of low-priced service contractors is abundant in many markets because new and low-volume tradespeople accept below-market rates to build their client base, giving the operator ready access to the 50% spread.",
+      "numbers": null,
+      "bounded_by": [
+        "Assumes operator sources from underpriced contractors, not established premium contractors",
+        "Requires operator to provide volume that justifies the contractor's reduced per-job rate"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Eric Velch's first drop-servicing niche was car detailing. He charged customers $200-$250 per detail and recruited contractors via a form specifying a payout of $100-$130 per car. Contractors who agreed were added to his fulfillment pool. This structure gave him roughly a 50% markup. Within two months of starting, his plumbing drop-servicing operation (which uses the contractor-priced model) generated his first $30,000 profit month.",
+      "claim_index": 1,
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "Eric Velch shows a real December invoice from his plumbing drop-servicing business. A plumbing job was invoiced to the customer at $3,322. After material costs, the net was $2,602. Velch retained 40% ($1,040) and sent the contractor $1,562 (approximately 60%). The transaction processed through Stripe, with Velch sending a separate payout to the contractor after receiving customer payment. This illustrates the 60/40 operator/contractor split for on-site trade services.",
+      "claim_index": 2,
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "Velch references his student Cole, who operates a landscaping drop-servicing business. Cole sent quotes of $4,000, $6,000, $7,000, $8,000, $10,000, and $20,000 for individual jobs, and one quote reached $300,000 for a single job. Cole made over $100,000 in revenue in his third month. The landscaping niche exemplifies the high-ticket model where the operator targets a 20% markup, the contractor does an on-site assessment and quotes, and the operator adds markup before sending the customer invoice.",
+      "claim_index": 3,
+      "topic": "Margins"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When sourcing contractors for on-site trade services, search Google for businesses on the last pages of results and Facebook Marketplace groups where tradespeople post asking for extra work; these low-visibility contractors are most likely to accept the operator's split terms.",
+      "topic": "Cold Outreach Channels"
+    },
+    {
+      "text": "When negotiating contractor rates, frame the operator's role as handling all advertising and marketing (even if the operator uses organic-only methods), and offer the prospect of steady volume (e.g., three jobs per day) as the value proposition in exchange for accepting a lower per-job rate.",
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "For high-ticket drop-servicing jobs, always collect the full operator markup as a deposit before any work begins, so profit is captured at approval rather than at completion.",
+      "topic": "Prepayment Cash Flow Control"
+    },
+    {
+      "text": "Invoice customers directly through the operator's account (Stripe, Square) and separately remit contractor payment after customer payment clears; this keeps payment flow under operator control and enables clean record-keeping.",
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "For low-ticket services, use a contractor intake form specifying the payout range upfront so contractors self-select based on willingness to work at that rate, reducing negotiation friction.",
+      "topic": "Cost Arbitrage Model"
+    }
+  ]
+}

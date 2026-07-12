@@ -1,0 +1,194 @@
+{
+  "source_file": "moremozi_helping_a_wellness_clinic_doing_67myear_get_to_25m_snUpRK_0YAk.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Founder Performance Decay",
+    "Founder Bottleneck",
+    "Supply Constraint Levers",
+    "Service Business Model Economics",
+    "Scaling Bottleneck Diagnosis",
+    "Premium Positioning",
+    "Delivery Session Compression",
+    "Perks as Retention Lever",
+    "Non-Dilutive Ownership Incentives",
+    "Recurring Revenue Architecture",
+    "Focus Through Subtraction",
+    "Service Business Unit Economics",
+    "Talent Acquisition Economics"
+  ],
+  "frameworks": [
+    {
+      "name": "Med Spa Margin Recovery Through Founder Extraction",
+      "definition": "Systematically rebuild unit economics and scale a founder-dependent med spa by fixing sales motion first, then membership model, then talent retention, enabling margin expansion from 15% to 35-40% before opening additional locations.",
+      "concept": "Founder Performance Decay"
+    },
+    {
+      "name": "Phantom Stock Structure for Med Spa Provider Retention",
+      "definition": "Non-dilutive equity program where each location holds phantom stock for its dedicated provider (injector/technician), vesting tied to schedule commitment rather than multi-location oversight, creating brand loyalty instead of provider dependency.",
+      "concept": "Non-Dilutive Ownership Incentives"
+    }
+  ],
+  "claims": [
+    {
+      "text": "A founder's attention-split across multiple locations reduces margins in each location proportionally. When Alex Hormozi observed a three-location med spa, the first location had superior margins compared to the second and third; founders opening a second location while maintaining equal involvement in both see the first location decline in profitability while the second underperforms initial expectations.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Performance Decay",
+      "conditions": ["multi-location service business", "founder personal involvement critical to delivery", "locations opened sequentially"],
+      "mechanism": "Founder attention is finite; splitting it across locations means each location receives sub-optimal founder involvement, causing both to underperform the first location's initial baseline",
+      "numbers": null,
+      "bounded_by": ["Does not apply to self-serve models where founder involvement is not revenue-critical", "Does not apply to fully systematized businesses with established management layers"]
+    },
+    {
+      "text": "Med spa owners transitioning from supply-constrained (not enough injectors) to talent-saturated (multiple injectors) must solve a different constraint: customer awareness and sales motion. Once injector capacity exists, the scaling lever shifts from hiring to customer acquisition and membership model optimization, not further hiring.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": ["med spa business stage", "injector capacity >= customer demand", "existing organic customer acquisition"],
+      "mechanism": "Supply constraint lifted reveals the true bottleneck: acquisition and revenue-per-visit are now binding, not chair capacity",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "A 15% net margin med spa business (like the three-location Austin med spa Hormozi analyzed) indicates over-expansion relative to operational capability. The path to viability is margin recovery in existing locations to 35-40% before opening additional units, not simultaneous expansion.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Model Economics",
+      "conditions": ["med spa / aesthetics service business", "current net margin < 20%", "founder still critical to delivery"],
+      "mechanism": "Thin margins signal under-systematization and founder dependency; adding capacity without fixing unit economics multiplies liability without proportional revenue",
+      "numbers": {
+        "axis": "net margin target by business maturity",
+        "anchors": [
+          {"region": "over-expanded multi-location with founder dependency", "value": "~15% net margin"},
+          {"region": "target for repeatable unit", "value": "35-40% net margin"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Membership models in med spas solve three problems simultaneously: (1) they guarantee revenue retention by converting per-visit pricing to recurring revenue, (2) they enable scheduling optimization, which increases sessions per technician per hour, and (3) they provide the path to higher margins through improved utilization.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Recurring Revenue Architecture",
+      "conditions": ["service business with variable utilization", "technician capacity exists but not fully booked", "customer lifetime value undefined"],
+      "mechanism": "Membership commits customer to recurring visits; predictable booking allows technician scheduling to optimize, increasing throughput per technician per hour",
+      "numbers": null,
+      "bounded_by": ["Does not apply to purely one-off transaction services where repeat purchases are rare"]
+    },
+    {
+      "text": "In med spas where one provider (e.g. Brooke, a top 100 injector) drives the majority of revenue (~60% of revenue before backfill), the business is not scalable; the revenue concentration reflects founder dependency, not a replicable business model. Systematization requires reducing founder/star-provider revenue contribution below 25% through deliberate talent acquisition and process systemization.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": ["high-touch service business", "one provider is >50% of revenue", "multi-location expansion intended"],
+      "mechanism": "Star provider dependency masks poor business model; when the star leaves or reduces hours, the business loses proportional revenue, indicating no repeatable customer-acquisition or service-delivery system",
+      "numbers": {
+        "axis": "founder/provider revenue concentration as indicator of scalability",
+        "anchors": [
+          {"region": "founder/star provider dependency signal", "value": ">50% of revenue from one person"},
+          {"region": "business is repeatable/scalable", "value": "<25% of revenue from founder/top provider"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Injectors (and similar one-on-one service providers) in med spas have high departure risk because customer relationships are personal; when an injector leaves, customers follow. The mitigation is two-part: (1) career path and pay increase to retain the provider, and (2) model restructuring so the brand, not the provider name, is the customer's loyalty anchor.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Perks as Retention Lever",
+      "conditions": ["one-on-one service delivery", "provider-customer relationship is personal", "customers know provider by name"],
+      "mechanism": "Provider departure causes customer churn because the relationship is to the person, not the brand; retention requires both financial incentive and brand reinforcement to shift loyalty",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "The job of the business is to satisfy customer needs, not the owners' entrepreneurial itches. When a business model works (e.g. small, high-ROI med spa locations in Austin), additional expansion or service lines that don't map to customer need are distractions; focus means repeating the working model, not inventing new ones.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Focus Through Subtraction",
+      "conditions": ["business has a proven, repeatable model", "customers show clear preference for existing offering"],
+      "mechanism": "Customers leave when served by owner preference over customer preference; focus on customer need is the binding constraint to scale",
+      "numbers": null,
+      "bounded_by": ["Does not apply to early-stage businesses still discovering product-market fit"]
+    },
+    {
+      "text": "Organic customer acquisition in med spas (SEO, word-of-mouth, local reputation) works only because supply-demand in the market is extremely favorable (e.g. Austin's growing wealth + aging demographics + demand for aesthetics). This is not a repeatable business practice; it is market luck. Once that market's supply-demand curve normalizes, the business will stall unless it develops paid customer acquisition skills (PPC, social ads).",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Premium Positioning",
+      "conditions": ["service business relying on organic acquisition", "market supply-demand curve is currently favorable"],
+      "mechanism": "Favorable market (undersupply relative to demand) masks poor business model; when supply normalizes, organic acquisition stops and paid acquisition capability becomes essential",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "To scale a med spa from 3 locations to 5+ locations while maintaining margins, the operator must follow a specific sequence: (1) optimize sales motion and create membership bundles (number one), (2) increase revenue per square foot via membership scheduling optimization, (3) increase technician/injector pay and career path to retain talent before opening new locations, (4) then open new locations with the replicable, tested model.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": ["med spa business", "currently 3 locations with 15% net margin", "founder still critical to operations"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "For med spa locations, the four supply constraint levers are: (1) price (raise membership fees), (2) delivery ratio (compress session length or increase sessions per day), (3) productization (bundle services into membership tiers), and (4) hiring (add more technicians). The choice of lever depends on which resource is most constrained (technician bandwidth, available market, or operational complexity).",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply Constraint Levers",
+      "conditions": ["service business at capacity", "growth is constrained by supply"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A med spa owner in Austin operating three locations ($6.7M revenue, 15% net margin) initially planned a 10,000-square-foot integrated wellness center in downtown Austin. After analysis, the owners realized the large-footprint model would not reach their $20-25M revenue target and would overextend operational capacity. They pivoted to smaller 1,200-1,500 square foot locations, selecting only the highest-ROI service offerings (aesthetics + wellness) from the larger model and repeating that unit. The first location had superior margins to the second and third locations, illustrating how founder split attention degrades subsequent units.",
+      "claim_index": 0,
+      "topic": "Founder Performance Decay"
+    },
+    {
+      "text": "Brooke, the med spa CEO and top-100 injector, generated approximately 60% of the aesthetic revenue initially, and was therefore the binding constraint on scaling. After hiring and backfilling additional injectors to remove the supply constraint, the conversation revealed that Brooke's revenue concentration had dropped to 23%, indicating progress toward a repeatable model. However, the next constraint was not hiring more injectors but instead developing a membership model and sales motion to improve utilization and customer retention.",
+      "claim_index": 1,
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "To retain a high-performing injector in the med spa context, the owners created a phantom stock program where each location's dedicated provider vests equity into a schedule commitment (not a multi-location override role). The provider holds phantom stock at that location and is incentivized to stay and build that unit, creating loyalty to the brand location rather than pure personal income incentive.",
+      "claim_index": 6,
+      "topic": "Perks as Retention Lever"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Create a membership model specifically for the wellness side and a beauty bank model for the aesthetics side, ensuring every customer leaves with a membership enrollment and establishing a predictable recurring revenue base.",
+      "topic": "Recurring Revenue Architecture"
+    },
+    {
+      "text": "Walk through the specific sales motion for the membership bundle so that a high percentage of customers enroll; this improves revenue retention and enables scheduling optimization across all three locations.",
+      "topic": "Recurring Revenue Architecture"
+    },
+    {
+      "text": "Develop a career path and competitive pay structure for injectors and estheticians to prevent them from leaving and taking customers with them; the career path and brand loyalty strategy matter as much as pay.",
+      "topic": "Perks as Retention Lever"
+    },
+    {
+      "text": "Before opening a fourth location, fix the unit economics of the existing three locations: raise net margins from 15% to 35-40%, optimize the membership model, and retain key talent. Only then expand.",
+      "topic": "Service Business Model Economics"
+    },
+    {
+      "text": "Develop paid customer acquisition capability (PPC, social ads) to reduce reliance on organic acquisition; organic will not sustain growth as the market matures.",
+      "topic": "Premium Positioning"
+    }
+  ]
+}

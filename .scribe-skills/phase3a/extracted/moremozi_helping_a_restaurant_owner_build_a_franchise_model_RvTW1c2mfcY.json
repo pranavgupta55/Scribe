@@ -1,0 +1,262 @@
+{
+  "source_file": "moremozi_helping_a_restaurant_owner_build_a_franchise_model_RvTW1c2mfcY.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Business Leverage Through Founder Dependency",
+    "Capital Deployment Paths",
+    "Franchising Strategy",
+    "Service Business Unit Economics",
+    "Margins",
+    "Service Business Model Economics",
+    "Premium Positioning",
+    "Founder Performance Decay",
+    "Scaling Bottleneck Diagnosis",
+    "Focus Through Subtraction"
+  ],
+  "frameworks": [
+    {
+      "name": "North Star Metric for Franchising",
+      "definition": "Unit economics (restaurant profitability per location) is the single core lever that determines franchise sellability and growth speed.",
+      "concept": "Service Business Unit Economics"
+    },
+    {
+      "name": "Capital Deployment Trade-off Analysis",
+      "definition": "Comparing return on equity across three paths: scaling corporate locations to 100 (franchise-heavy model), scaling to 20 corporate locations with improved margins, or franchising strategically.",
+      "concept": "Capital Deployment Paths"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Franchises cannot be sold through active sales tactics because franchise purchase represents a lifestyle change; they can only be purchased by self-motivated buyers who must make the decision themselves.",
+      "type": "assertion",
+      "speaker": "Restaurant owner (guest)",
+      "speaker_term": null,
+      "topic": "Capital Deployment Paths",
+      "conditions": [
+        "franchise business model",
+        "lifestyle transition for buyer"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "The core franchising problem is solved by fixing unit economics: if a single restaurant location costs $100k to open and generates $500k year-one profit, franchisees sell themselves without additional sales effort.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "franchise model",
+        "unit-level profitability proven"
+      ],
+      "mechanism": "Compelling unit economics eliminate the need for active franchise sales; the offer becomes self-liquidating.",
+      "numbers": {
+        "axis": "unit economics (opening cost vs year-one profit)",
+        "anchors": [
+          {
+            "region": "example attractive franchise",
+            "value": "$100k opening cost, $500k year-one profit"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes historical profitability of existing locations can be disclosed under FTC franchise disclosure requirements"
+      ]
+    },
+    {
+      "text": "A franchisee should buy based on observable facts of existing location performance, not promises: disclose actual metrics from your open locations and tell the truth about what they have achieved.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "franchise disclosure context",
+        "FTC compliance required"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "For a barbecue restaurant franchise with $100M system-wide revenue goal at 7% royalty, franchisee economics are: $7M annual royalty revenue, approximately $2.8M annual EBITDA at 40% net franchise margins, resulting in a ~$36M enterprise value exit (multiplied by 12x) with 30%+ founder rollover requirement, yielding $22-23M post-rollover equity value.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Capital Deployment Paths",
+      "conditions": [
+        "franchise system at scale ($100M system-wide revenue)",
+        "7% royalty rate",
+        "40% net franchise margins",
+        "12x EBITDA exit multiple",
+        "30% founder rollover"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "franchise exit value calculation chain",
+        "anchors": [
+          {
+            "region": "royalty revenue at $100M system-wide",
+            "value": "$7M"
+          },
+          {
+            "region": "EBITDA at 40% net margin",
+            "value": "$2.8M (call it $3M)"
+          },
+          {
+            "region": "pre-rollover exit value at 12x multiple",
+            "value": "$36M"
+          },
+          {
+            "region": "post-rollover equity after 30% holdback",
+            "value": "$22-23M"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes 12x exit multiple; realistically may be 10-15x",
+        "Assumes clean 40% net margins at franchise level, which requires operational excellence"
+      ]
+    },
+    {
+      "text": "An alternative growth path for the barbecue franchise is to scale from 4 corporate locations to 20 corporate locations (instead of pursuing 100-location system-wide growth), improve per-location profitability from $500k to $1M per location, and exit at approximately $80M (20 locations x $10M EBITDA / $1M per location profit x 8x multiple) which may exceed the 100-location franchise path's post-rollover value.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Capital Deployment Paths",
+      "conditions": [
+        "high-margin service business",
+        "owner-operator scaling model preferred over franchise-heavy model"
+      ],
+      "mechanism": "Corporate ownership compounds exit value faster than franchise royalty streams when unit profitability is high and founder margin contribution is significant.",
+      "numbers": {
+        "axis": "exit value comparison: 100-location franchise vs 20-location corporate scaling",
+        "anchors": [
+          {
+            "region": "100-location franchise post-rollover",
+            "value": "$22-23M"
+          },
+          {
+            "region": "20-location corporate at $10M EBITDA with 8x multiple",
+            "value": "$80M"
+          },
+          {
+            "region": "per-location profitability improvement target",
+            "value": "from $500k to $1M per location"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes founder can efficiently operate 20 locations; Hormozi's founder-decay model (§46) suggests 20-location corporate may underperform relative to founder availability",
+        "Does not account for franchise system's brand leverage or multi-unit leverage"
+      ]
+    },
+    {
+      "text": "Panda Express runs 27% net margins with infrastructure to support 3,000 stores and corporate overhead; a smaller regional barbecue franchise should be able to achieve comparable net margins if unit economics are optimized.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Model Economics",
+      "conditions": [
+        "regional franchise brand",
+        "centralized supply chain and operations"
+      ],
+      "mechanism": "Scale and process discipline compress costs relative to revenue; Panda Express provides a systems benchmark for achievable margin structures.",
+      "numbers": {
+        "axis": "net margin benchmark by operator scale",
+        "anchors": [
+          {
+            "region": "Panda Express (3,000+ stores)",
+            "value": "27% net margin"
+          },
+          {
+            "region": "target for smaller regional franchise",
+            "value": "27% (implied achievable)"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Panda Express operates centralized commissaries and supply chain; regional operator overhead may be proportionally higher",
+        "Assumes no fundamental operational or cost-structure differences between Panda Express and barbecue franchise"
+      ]
+    },
+    {
+      "text": "Current barbecue restaurant group ($9M top-line revenue, 4 corporate + 1 franchised location) is generating approximately $1.2M profit, which implies roughly 13% net margin; fixing restaurant unit profitability is a prerequisite to scaling franchises, because poor franchise unit economics prevent both scaling the franchise system and scaling corporate ownership.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "current revenue stage: $9M",
+        "mixed corporate/franchise portfolio"
+      ],
+      "mechanism": "Unit-level profitability is the bottleneck that blocks both growth paths (franchise and corporate); addressing it unblocks both.",
+      "numbers": {
+        "axis": "profitability and scaling constraint",
+        "anchors": [
+          {
+            "region": "current top-line revenue",
+            "value": "$9M"
+          },
+          {
+            "region": "current profit",
+            "value": "$1.2M"
+          },
+          {
+            "region": "implied net margin",
+            "value": "13% (~$1.2M / $9M)"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "The path forward is a 24-month effort to optimize every dollar of unit economics to make the restaurant significantly more profitable; the outcome is fixable and the direction is clear, even though the work is non-trivial.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "willingness to commit 24 months to operational optimization",
+        "restaurant with clear profitability improvement levers"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "timeline for unit economics optimization",
+        "anchors": [
+          {
+            "region": "optimization commitment period",
+            "value": "24 months"
+          }
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "The barbecue restaurant owner described their model: 4 corporate-owned locations generating $9M system-wide revenue, 1 franchised location (test case), and 2 additional signed franchise agreements. The goal is $100M system-wide revenue. Current per-location profit is approximately $300k (implied from $1.2M profit / 4 corporate locations). This concrete case demonstrates the tension between scaling via franchising (which requires proof of compelling unit economics) and scaling corporate-owned locations (which requires founder bandwidth and capital).",
+      "claim_index": 6,
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "Alex Hormozi walked through a specific financial model: if the barbecue franchise scales to 20 corporate locations at $1M profit per location, they would achieve $20M EBITDA, which at an 8x exit multiple yields $160M gross value. With 30% founder rollover, the founder nets roughly $80M post-exit. This contrasts with the 100-location franchise model yielding $22-23M post-rollover, illustrating that corporate scaling can provide superior returns if profitability per location is sufficiently high.",
+      "claim_index": 4,
+      "topic": "Capital Deployment Paths"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Disclose actual performance metrics from your existing franchise locations transparently; state the facts about what your open locations have achieved and let those results speak for themselves.",
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "Spend 24 months optimizing restaurant unit economics down to the penny, treating every cost as a variable to improve; test new operational structures, supply chain approaches, and delivery ratios before scaling the franchise system.",
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "Model multiple capital deployment paths (franchise to 100 locations, corporate to 20 locations, franchise + corporate hybrid) and calculate post-rollover equity value for each to determine which path aligns with founder goals and capital return expectations.",
+      "topic": "Capital Deployment Paths"
+    }
+  ]
+}

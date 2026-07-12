@@ -1,0 +1,79 @@
+{
+  "source_file": "greg_short_egvbj1NMVME.txt",
+  "primary_speaker": "Greg Short",
+  "concepts_addressed": [
+    "E-Commerce Business Model Economics",
+    "Early Profitability Proof",
+    "Channel Optimization Before Expansion"
+  ],
+  "frameworks": [],
+  "claims": [
+    {
+      "text": "Greg Short recommends that e-commerce entrepreneurs launch simultaneously on Shopify, Amazon, and TikTok Shop once a product has passed an initial consumer validation batch, rather than sequencing platforms one at a time. Condition: proof-of-concept validation via a first consumer batch must precede simultaneous multi-platform launch to avoid locking in negative reviews on Amazon.",
+      "type": "conditional",
+      "speaker": "Greg Short",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "product has completed at least one consumer batch",
+        "initial product tweaks have been made based on first-batch feedback",
+        "seller wants to avoid 1-star reviews on Amazon from an unrefined product"
+      ],
+      "mechanism": "Launching on all three platforms simultaneously maximizes total addressable revenue surface; Amazon's review system permanently penalizes early-batch defects, so pre-validation removes the primary risk of simultaneous launch.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply before proof-of-concept consumer batch is complete"
+      ]
+    },
+    {
+      "text": "Greg Short asserts that among e-commerce businesses running the Shopify + Amazon + TikTok Shop combination (as of approximately 2024-2025), Shopify represents the smallest share of revenue, Amazon represents close to the majority share, and TikTok Shop represents a solid 30-40% of revenue.",
+      "type": "quantified",
+      "speaker": "Greg Short",
+      "speaker_term": "e-commerce trifecta",
+      "topic": "E-Commerce Business Model Economics",
+      "conditions": [
+        "business is operating on all three platforms simultaneously",
+        "approximately 2024-2025 time period"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "share of total e-commerce revenue by platform",
+        "anchors": [
+          {"region": "Shopify", "value": "minority share (smallest)"},
+          {"region": "Amazon", "value": "close to majority share (largest)"},
+          {"region": "TikTok Shop", "value": "~30-40%"}
+        ]
+      },
+      "bounded_by": [
+        "Pattern observed only in businesses running all three channels; single-channel businesses excluded"
+      ]
+    },
+    {
+      "text": "Greg Short argues that a new e-commerce product should be run through a first consumer batch before launching on Amazon, because Amazon's star-rating system permanently records early 1-star reviews that are difficult to recover from, and all first batches tend to generate some negative reviews.",
+      "type": "mechanism",
+      "speaker": "Greg Short",
+      "speaker_term": null,
+      "topic": "Early Profitability Proof",
+      "conditions": [
+        "new physical product with no prior consumer validation",
+        "Amazon launch is planned"
+      ],
+      "mechanism": "First-batch products invariably have defects that generate 1-star reviews; Amazon's review system weights early reviews heavily in product ranking and buyer trust, making early negative reviews disproportionately damaging to long-term sales velocity.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to products with prior validation data (e.g., existing brick-and-mortar sales)"
+      ]
+    }
+  ],
+  "examples": [],
+  "practices": [
+    {
+      "text": "Start your e-commerce business on Shopify first to gain a proof-of-concept before expanding to Amazon and TikTok Shop.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "Run your initial product batch through consumers and make product tweaks before launching on Amazon to avoid locking in 1-star reviews on an unrefined product.",
+      "topic": "Early Profitability Proof"
+    }
+  ]
+}

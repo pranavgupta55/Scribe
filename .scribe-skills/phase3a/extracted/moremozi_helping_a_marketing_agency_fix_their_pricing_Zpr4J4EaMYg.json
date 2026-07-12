@@ -1,0 +1,185 @@
+{
+  "source_file": "moremozi_helping_a_marketing_agency_fix_their_pricing_Zpr4J4EaMYg.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Service Business Model Economics",
+    "SMB Volatility Risk",
+    "Service Business Unit Economics",
+    "Business Model Bifurcation",
+    "Service Business Scaling Strategy",
+    "Premium Positioning"
+  ],
+  "frameworks": [
+    {
+      "name": "SMB Scaling Bifurcation Model",
+      "definition": "Service agencies targeting SMBs must choose between two poles—low-cost high-volume with near-zero delivery cost, or premium high-touch serving only businesses with proven models and metrics—with the middle ground as a dead zone.",
+      "concept": "Business Model Bifurcation"
+    },
+    {
+      "name": "CAC-LTV-Churn Trap",
+      "definition": "As SMB service businesses scale, SMB churn increases unpredictably, margins compress, CAC rises, and hiring increases to offset churn, creating a negative-feedback loop that stops growth around $100K monthly revenue.",
+      "concept": "SMB Volatility Risk"
+    }
+  ],
+  "claims": [
+    {
+      "text": "SMB service businesses (like cleaning companies, yard work, averaging $500k–$2.5M revenue each) transfer their operational dysfunction into their vendor's revenue, causing the vendor to experience high churn independent of service quality. Average LTV for an SMB at $1,500–$3K monthly price point is 4–6 months.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "SMB Volatility Risk",
+      "conditions": [
+        "Service business selling to SMBs",
+        "Price point $1,500–$3,000 per month",
+        "SMB customer size: $500k–$2.5M revenue"
+      ],
+      "mechanism": "SMB business owners lack operational discipline and sales systems, so they churn when results don't arrive instantly, regardless of the vendor's execution quality.",
+      "numbers": {
+        "axis": "average monthly price point to LTV relationship",
+        "anchors": [
+          {
+            "region": "SMB at $1,500–$3K/mo",
+            "value": "4–6 month average stick"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to businesses with $3M+ revenue or CFO-level financial discipline",
+        "Does not apply to agencies selling below $400/month or above $5K/month (different churn dynamics)"
+      ]
+    },
+    {
+      "text": "When a service agency selling to SMBs hits ~$100K monthly recurring revenue (10 customers × $2K/month × 5 turns on monthly fee), further growth stalls because unit economics require either increasing units sold (unsustainable CAC growth) or increasing LTV (which SMB churn prevents).",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "SMB service business",
+        "Price point $2K per month per customer",
+        "~5 customer turns per month (renewal rate proxy)"
+      ],
+      "mechanism": "SMB churn + rising CAC + margin compression = growth stalls when cost to acquire exceeds LTV recovery capacity.",
+      "numbers": {
+        "axis": "monthly revenue ceiling for SMB service model",
+        "anchors": [
+          {
+            "region": "10 customers/month × $2K/month × 5 turns",
+            "value": "~$100K monthly recurring revenue ceiling"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if unit price is below $400/month (different CAC-LTV ratio)",
+        "Does not apply if serving mid-market ($3M+) where churn is lower"
+      ]
+    },
+    {
+      "text": "For SMB service agencies, the only economically viable paths are either going upmarket to serve businesses with proven sales processes and financial discipline (raising price point to $5K+ monthly and accepting lower volume), or going downmarket with heavily automated, low-touch offerings at $300–$500 monthly with 30–40 month stick rates.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Business Model Bifurcation",
+      "conditions": [
+        "Service-based business model",
+        "Current customer: SMBs with $500k–$2.5M revenue"
+      ],
+      "mechanism": "High-price/low-volume model: customer maturity and metrics mean longer LTV and lower churn. Low-price/high-volume model: automated delivery (e.g., local SEO ranking, review management) requires almost no fulfillment cost, so CAC is recoverable at 3–4 month break-even.",
+      "numbers": {
+        "axis": "SMB service pricing strategy and resulting stick rates",
+        "anchors": [
+          {
+            "region": "Upmarket premium services ($5K+/mo)",
+            "value": "lower volume, 12+ month LTV"
+          },
+          {
+            "region": "Downmarket automated ($300–$500/mo)",
+            "value": "high volume, 30–40 month stick rate"
+          },
+          {
+            "region": "Mid-market ($1.5K–$3K/mo, high-touch)",
+            "value": "4–6 month stick; dead zone"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Mid-market high-touch model (middle price, middle margin) is not viable long-term"
+      ]
+    },
+    {
+      "text": "Increasing the price point of an SMB service offering to serve higher-quality customers (business owners who understand metrics and have proven sales models) eliminates churn volatility and CAC-driven margin compression, making the business sustainable at scale.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Premium Positioning",
+      "conditions": [
+        "Service business currently selling to SMBs",
+        "Ability to articulate premium positioning and higher price point"
+      ],
+      "mechanism": "Customers with existing sales processes and financial discipline churn less (LTV extends), maintain margins longer (they understand value), and refer better (network effects in higher-tier business community).",
+      "numbers": null,
+      "bounded_by": [
+        "Requires sales motion redesign and potentially new positioning messaging",
+        "Does not work if the agency's service is not genuinely differentiated or if customer acquisition is dependent on cheap paid channels that don't reach mature business owners"
+      ]
+    },
+    {
+      "text": "As an SMB service business grows from $500K to $3M and then toward $10M revenue, the founder must shift from hands-on delivery to systems-dependent operations and eventually move out of delivery entirely; the binding constraint changes from 'Can we sell?' to 'Can we run this without me?'",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Scaling Strategy",
+      "conditions": [
+        "Service-based business",
+        "Founder currently involved in delivery",
+        "Growth target: $3M–$10M+ annual revenue"
+      ],
+      "mechanism": "Founder delivery capacity is fixed (~500–1000 hours/year); scaling beyond that requires hired delivery teams, documented processes, and eventually founder exit from delivery to prevent the business from capping at founder capacity.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to self-serve SaaS (no founder delivery constraint)",
+        "Does not apply if the service is genuinely non-duplicable (e.g., specialized expert advice)"
+      ]
+    },
+    {
+      "text": "Many founders believe that increasing responsibility and adding nurture/sales support to SMB customers will fix churn, but this is a logical error: the churn root cause is SMB customer inability to execute marketing themselves, not the vendor's lack of effort; taking on that responsibility compounds the margin problem and delays the inevitable pivot.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "SMB Volatility Risk",
+      "conditions": [
+        "SMB service business experiencing rising churn",
+        "Founder considering adding customer success or sales support layers"
+      ],
+      "mechanism": "Customers churn because their underlying business is dysfunctional; the vendor cannot fix a business owner's execution, only offer the service. Trying to do so increases delivery headcount, lowers margins, and pushes the business further down the unprofitable path.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A digital marketing agency in Australia selling complete marketing services (social, paid, content) to cleaning companies, yard work services, and other SMBs at $450/week (~$2K/month) grew from zero to $500K in revenue in four months. The founder was considering pivoting again because of rising pressure from customer churn and the need to hire more delivery staff to handle complaints. At $500K revenue with 10 customers/month selling at 5 turns, the founder will hit the $100K monthly revenue wall within 2–3 months where CAC rises, churn accelerates, margins compress, and further growth becomes nearly impossible without a fundamental model change.",
+      "claim_index": 0,
+      "topic": "SMB Volatility Risk"
+    },
+    {
+      "text": "A local services business offering local SEO ranking and review management services at $300–$500 per month achieves 30–40 month stick rates because the service is almost entirely automated (no billable hours per customer), the result is visible and measurable to the customer (first three Google Maps results), and the CAC is immediately recovered by month 2–3 of the annual contract. This contrasts with the high-touch digital marketing agency at $2K/month, which has 4–6 month stick because customers expect hands-on campaign optimization and churn when immediate results aren't visible.",
+      "claim_index": 2,
+      "topic": "Business Model Bifurcation"
+    }
+  ],
+  "practices": [
+    {
+      "text": "If considering a pivot away from SMB service sales, benchmark the actual pricing options: upmarket positioning ($5K+/month, smaller volume, mature customers) or downmarket automated offering ($300–$500/month, high volume, near-zero delivery cost).",
+      "topic": "Business Model Bifurcation"
+    },
+    {
+      "text": "Track CAC trend weekly and LTV (average customer lifetime in months × monthly fee) monthly; when CAC is rising faster than LTV, the model is broken and a pivot is required before reaching the $100K monthly revenue wall.",
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "Do not add customer success, nurture, or advisory layers to an SMB-focused service business in an attempt to reduce churn; this compounds margin compression and delays the required business model pivot.",
+      "topic": "SMB Volatility Risk"
+    }
+  ]
+}

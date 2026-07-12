@@ -1,0 +1,158 @@
+{
+  "source_file": "moremozi_i_sell_on_amazon_how_do_i_scale_fBF8_wSAs_A.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Scaling Bottleneck Diagnosis",
+    "Ad Spend Optimization",
+    "Volume-First Scaling",
+    "Premium Positioning",
+    "Growth Path Selection",
+    "Supply Constraint Levers"
+  ],
+  "frameworks": [
+    {
+      "name": "Amazon Channel Scaling Decision Tree",
+      "definition": "Four-phase diagnostic to determine whether a product's scaling constraint is the channel saturation, product quality, or adjacent distribution; distinguishes between buying more impressions vs. entering new channels.",
+      "concept": "Scaling Bottleneck Diagnosis"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Amazon's advertising platform charges sellers a share of their profits by automatically raising ad costs to extract seller margins, effectively capturing all economic gain from ad spending increases.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Ad Spend Optimization",
+      "conditions": [
+        "Amazon FBA or sponsored ads model",
+        "seller using Amazon as primary distribution"
+      ],
+      "mechanism": "Amazon has full visibility into seller profitability and uses this information to raise advertising rates until seller margins approach zero, creating a zero-sum dynamic where additional ad spend produces no profit gain.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to sellers using other sales channels",
+        "Does not apply to off-platform advertising (influencer, B2B partnerships)"
+      ]
+    },
+    {
+      "text": "Product ranking on Amazon follows winner-take-all economics where the #1 product generates dramatically higher revenue than #3; raw ad spend alone cannot overcome product quality or market position differences.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Amazon marketplace ranking",
+        "same product category"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "product rank and revenue",
+        "anchors": [
+          {
+            "region": "#1 product in category",
+            "value": "$250,000+ monthly revenue"
+          },
+          {
+            "region": "#3 product in category",
+            "value": "$34,000 monthly revenue"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes comparable product quality and reviews",
+        "Does not apply to new entrants without established reviews/credibility"
+      ]
+    },
+    {
+      "text": "Increasing Amazon ad spend from $3,500 to higher budgets yields diminishing returns on dental products; the binding constraint is customer conversion on the product page (reviews, perceived quality), not raw ad volume.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Amazon dental products market",
+        "product already ranked #3 in category",
+        "20% net margin at current scale"
+      ],
+      "mechanism": "Amazon's algorithm rewards high-converting product pages (better reviews, higher perceived quality) with better placement and impression efficiency; doubling ad spend without improving the page's conversion rate simply increases spend without proportional revenue increase because the bottleneck is conversion, not visibility.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when product quality is demonstrably lower than competitor",
+        "Does not apply to newly launched products without review history"
+      ]
+    },
+    {
+      "text": "Competitors dominating an Amazon category may not actually be spending proportionally more on that channel; they may be using multiple acquisition channels (influencer partnerships, B2B wholesale, direct dentist outreach) that are invisible to a single-channel competitor.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Growth Path Selection",
+      "conditions": [
+        "multi-channel competitor analysis",
+        "assuming single observed channel (Amazon) is sole acquisition source"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Requires access to competitor spend data across all channels to verify",
+        "Does not apply to fully transparent marketplaces with public spend disclosure"
+      ]
+    },
+    {
+      "text": "Scaling within a single channel (Amazon) requires exhausting that channel's growth lever—for dental products, this is not higher ad spend but rather exploring off-platform channels: micro-influencer partnerships, B2B wholesaling to dentist offices, or private-label co-packing.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "product already in top 3 of Amazon category",
+        "ad spend increases yield <10% revenue improvement",
+        "private label physical product (dental goods)"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to SaaS or digital products without B2B wholesale opportunity",
+        "Does not apply if influencer partnerships already saturated in niche"
+      ]
+    },
+    {
+      "text": "Product quality (formulation, customer satisfaction) determines Amazon market share more than marketing efficiency; a materially better product will consistently outsell a mediocre one regardless of advertising spend parity.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Premium Positioning",
+      "conditions": [
+        "Amazon marketplace competition",
+        "same product category"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Assumes adequate visibility (both products shown to customers)",
+        "Does not apply to unknown brands without review history competing on unknown products"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A dental product seller is doing $34,000/month at rank #3 with 20% net margin and $3,500 ad spend. The #1 competitor is doing $250,000/month. The rank-#3 seller assumes the competitor must be spending proportionally more on Amazon ads. Hormozi pushes back: the competitor might have better reviews (improving page conversion rate), a back-end upsell funnel (customers buying complementary products), or multiple acquisition channels (dentist partnerships, influencer deals, B2B wholesaling) that are invisible when viewed through the Amazon-only lens. Simply increasing ad spend from $3,500/month without improving product quality or adding distribution channels will only increase costs without increasing revenue proportionally.",
+      "claim_index": 3,
+      "topic": "Scaling Bottleneck Diagnosis"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Test multiple acquisition channels before scaling ad spend on a single platform: explore micro-influencer partnerships, B2B wholesale to relevant professionals (e.g., dentist offices for dental products), and direct partnerships with category experts.",
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Diagnose whether a competitor's market dominance stems from product quality, reviews/social proof, a back-end upsell funnel, or multi-channel distribution before assuming they are simply outspending you on the same channel.",
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "Focus product improvement efforts on the attributes that drive Amazon conversion: customer reviews, perceived quality relative to price, and complementary product ecosystem before investing heavily in paid acquisition volume.",
+      "topic": "Premium Positioning"
+    }
+  ]
+}

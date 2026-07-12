@@ -1,0 +1,155 @@
+{
+  "source_file": "moremozi_helping_an_electrical_contractor_scale_KXBOgKvqPQ4.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Process Optimization",
+    "Price Anchoring",
+    "Founder Bottleneck",
+    "Supply Constraint Levers",
+    "Service Business Unit Economics",
+    "Scaling Bottleneck Diagnosis",
+    "Intermediary as Primary Customer",
+    "Premium Positioning",
+    "Hiring as Capital Allocation"
+  ],
+  "frameworks": [
+    {
+      "name": "Constraint Cascade for Service Scale",
+      "definition": "A multi-step sequence where business pricing must increase first to generate cash flow, which enables hiring redundancy, which enables founder offload.",
+      "concept": "Scaling Bottleneck Diagnosis"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In service businesses where the founder is capacity-constrained (can handle work only when the full crew is present), the binding constraint is not lead volume but team size and redundancy. Alex Hormozi identifies this explicitly: 'You can handle it when the whole crew's here. Okay. And then as soon as one guy's gone, I'm back in the van.'",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "Service business (electrical contracting)"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Raising prices for service businesses should precede hiring new team members because the price increase generates the cash flow required to sustain the higher payroll. Without the cash-flow raise, the business cannot afford multiple redundant team members.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Service business with cash-flow constraint"
+      ],
+      "mechanism": "Price increase → cash flow → payroll capacity for redundant staff → founder offload",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "A service business should implement a price-guarantee offer structure (e.g., 'if we don't meet all qualifications, work is free') to justify a 20-40% price increase, because the guarantee demonstrates contractor confidence that competitors lack.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Premium Positioning",
+      "conditions": [
+        "Service business",
+        "20-40% price increase"
+      ],
+      "mechanism": "Guarantee ties contractor credibility to on-time, on-budget delivery. Competitors cannot replicate because they lack operational confidence. Buyer perceives guarantee as risk elimination.",
+      "numbers": {
+        "axis": "price increase range",
+        "anchors": [
+          {
+            "region": "modest increase",
+            "value": "20%"
+          },
+          {
+            "region": "aggressive increase",
+            "value": "40%"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Customer complaints about price ('they always complain about the cost') are not signals to lower price; they are constant friction independent of price level. Hormozi states: 'Customers will always want it cheaper. They will always want it faster. They will always want it guaranteed. That will not change. So when I'm moving my prices, don't even think about it.'",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Anchoring",
+      "conditions": [
+        "Service business"
+      ],
+      "mechanism": "Customer preferences for lower price are constant; actual purchasing behavior (six-year retention despite price complaints) reveals true willingness to pay.",
+      "numbers": {
+        "axis": "customer retention despite price complaints",
+        "anchors": [
+          {
+            "region": "tenure with one customer",
+            "value": "6 years"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "A service contractor dependent on a small number of channel partners (e.g., 6-7 heating and cooling companies supplying all work) should diversify by conducting outreach to other heating and cooling companies, because the current channel partners have all the leverage and can reduce work allocation at will.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Intermediary as Primary Customer",
+      "conditions": [
+        "Service contractor with dependent channel relationships"
+      ],
+      "mechanism": "Multiple channel partners reduce single-channel dependency. Additional quotes to other companies give contractor leverage in price negotiations and work allocation.",
+      "numbers": {
+        "axis": "number of channel partners",
+        "anchors": [
+          {
+            "region": "current state",
+            "value": "6-7 partners"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Scaling problems in service businesses are rarely single-factor; they typically require multi-step solutions that address root causes in sequence, because the symptom is often a downstream effect of a prior constraint.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [],
+      "mechanism": "If the root cause were obvious, the business owner would have already identified it. Multi-step diagnosis is required to reverse-engineer from symptom to underlying constraint.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "An electrical contractor generating $1.6M revenue with $650k net profit (40.6% margin) wants to reach $5M revenue but cannot scale beyond current capacity. When one team member is absent, the contractor must return to hands-on work in the van, eliminating his ability to manage or grow the business. The contractor has no formal marketing function; all work comes from referrals with six heating and cooling companies (15 years with one, post-launch relationships with five others).",
+      "claim_index": 0,
+      "topic": "Founder Bottleneck"
+    },
+    {
+      "text": "The electrical contractor raises price objections: 'I feel weird charging more because other people in my market charge even less than I do. And I'm a little bit above the market.' Hormozi's response isolates this as a psychological constraint, not a market constraint. The contractor has retained the same heating and cooling company for six years despite price complaints, and objections are constant regardless of price level.",
+      "claim_index": 3,
+      "topic": "Price Anchoring"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Start outreach to other heating and cooling companies to gain quoting leverage and reduce dependency on existing channel partners.",
+      "topic": "Intermediary as Primary Customer"
+    },
+    {
+      "text": "Implement team redundancy (two or three backups for each key role) so founder departure for absence does not halt operations.",
+      "topic": "Supply Constraint Levers"
+    },
+    {
+      "text": "Continuously advertise and hire to backfill redundancy slots, which keeps the business supply-side healthy and allows sustained growth.",
+      "topic": "Hiring as Capital Allocation"
+    }
+  ]
+}

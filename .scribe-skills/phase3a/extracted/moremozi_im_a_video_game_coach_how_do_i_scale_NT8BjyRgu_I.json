@@ -1,0 +1,190 @@
+{
+  "source_file": "moremozi_im_a_video_game_coach_how_do_i_scale_NT8BjyRgu_I.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Pricing Strategy & Anchoring",
+    "Service Business Model Economics",
+    "Recurring Revenue Architecture",
+    "Offer Value Architecture",
+    "Classic Upsell",
+    "Educational vs Entertainment Content",
+    "Service Business Scaling Strategy"
+  ],
+  "frameworks": [
+    {
+      "name": "Education vs Recurring Product Distinction",
+      "definition": "Separate education (one-time, consumable) from community and services (recurring); each has different billing and value durability across time.",
+      "concept": "Service Business Model Economics"
+    },
+    {
+      "name": "Consumable vs One-Time Product Segmentation",
+      "definition": "Products split into consumables (recurring value, lower price, month-over-month) and one-time learnings (higher price upfront, zero repeat value).",
+      "concept": "Offer Value Architecture"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Education alone is not a recurring product; community and services are recurring products. Revenue models must match billing structure to value-delivery timing.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Model Economics",
+      "conditions": [
+        "education/coaching business model"
+      ],
+      "mechanism": "Mismatching billing (monthly recurring) to value (one-time consumption) creates retention friction when customer knowledge increases and perceived value drops.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to truly consumable services (e.g., sandwich shop repeat purchases)",
+        "Does not apply to community-only or subscription-only models"
+      ]
+    },
+    {
+      "text": "Education has significantly more value one-time (when the buyer does not know how to perform the skill) than spread monthly; once the student learns the skill, the education product loses value.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer Value Architecture",
+      "conditions": [
+        "educational content or coaching"
+      ],
+      "mechanism": "Customer perceives full utility of education only before possession of knowledge; post-acquisition, marginal value of the same content drops to zero.",
+      "numbers": {
+        "axis": "value by knowledge state",
+        "anchors": [
+          {
+            "region": "before learning (no knowledge)",
+            "value": "high: full education value realized"
+          },
+          {
+            "region": "after learning (with knowledge)",
+            "value": "zero: education no longer required"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to consumables (bread, meat, lettuce) that deplete and recur naturally"
+      ]
+    },
+    {
+      "text": "Community and calls are consumable elements with recurring value; they should be priced lower than one-time education and renewed monthly as the customer's needs shift.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Recurring Revenue Architecture",
+      "conditions": [
+        "customer has completed education/training",
+        "community or calls are the primary delivery mechanism"
+      ],
+      "mechanism": "Community and peer connection have no knowledge-depletion endpoint—they remain valuable regardless of skill acquisition, sustaining monthly renewal.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Bill one-time education upfront at high value, then offer lower-priced recurring elements (community, calls, services) as the customer's needs change post-education.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer Value Architecture",
+      "conditions": [
+        "education-to-community business model",
+        "customer is transitioning from learning to practice/community phase"
+      ],
+      "mechanism": "Pricing structure alignment with value lifecycle prevents false expectations; customers who learn a skill no longer see reason to pay for the same education repeatedly.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "A common mistake in education/services businesses is assuming that a customer who pays upfront when lacking knowledge will continue paying at the same rate three months later when they now possess the knowledge.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Scaling Strategy",
+      "conditions": [
+        "education/coaching/community service model"
+      ],
+      "mechanism": "Customer retention depends on perceived value of product relative to price; once education is consumed, the original high value disappears, making the monthly price unjustifiable.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "A sandwich shop example of recurring revenue: a customer repurchases a sandwich monthly because they consume it and still need another one tomorrow; the behavior (eating) drives the recurrence.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Recurring Revenue Architecture",
+      "conditions": [
+        "consumable physical product",
+        "customer need is natural/biological"
+      ],
+      "mechanism": "Recurrence is driven by natural consumption/depletion, not by customer willingness to pay for the same information repeatedly.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "If a student learns to make sandwiches, the skill (education) is no longer valuable, but a recurring subscription to bread, meat, lettuce (consumables) becomes the new revenue stream.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Recurring Revenue Architecture",
+      "conditions": [
+        "education model transitioning to consumable model"
+      ],
+      "mechanism": "Products with natural recurrence (ingredients that deplete) replace products with one-time utility (education that stays consumed).",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Video game coaching at $30/month with 50-60 new students monthly and high turn rate (same number turning as entering) suggests misalignment between product (education) and pricing (recurring).",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Scaling Strategy",
+      "conditions": [
+        "coaching/education business with monthly churn equal to monthly acquisition",
+        "price point $30/month"
+      ],
+      "mechanism": "Flat churn despite steady acquisition indicates customers view monthly billing as unjustified once learning is complete; structure should front-load education cost and reduce recurring fee.",
+      "numbers": {
+        "axis": "monthly cohort flow for video game coaching",
+        "anchors": [
+          {
+            "region": "new enrollments",
+            "value": "50-60/month"
+          },
+          {
+            "region": "churn",
+            "value": "50-60/month (approximately equal to acquisition)"
+          }
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A customer joins a video game coaching program at $30/month to learn technique. After three months of instruction, they have learned the skill and no longer perceive value in continuing the $30/month subscription; they churn. Meanwhile, new students arrive at the same rate. The result is a flat, non-growing cohort where learning completion drives churn, not product satisfaction.",
+      "claim_index": 0,
+      "topic": "Service Business Scaling Strategy"
+    },
+    {
+      "text": "A sandwich customer repurchases weekly because the sandwich is consumed daily; the product naturally recurs. In contrast, a customer who learns sandwich-making from an instructor will not repurchase the same education monthly once the skill is acquired. However, that customer would recur on supplies (bread, meat, lettuce) needed to make sandwiches repeatedly.",
+      "claim_index": 5,
+      "topic": "Recurring Revenue Architecture"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Raise price on education upfront or convert to an annual billing structure to appropriately value information; keep community/call access as a smaller, lower-priced recurring element.",
+      "topic": "Offer Value Architecture"
+    },
+    {
+      "text": "Separate your product offering into consumable (recurring, lower price) and one-time (upfront, higher price) components; bill each component according to its true recurrence and value lifecycle.",
+      "topic": "Offer Value Architecture"
+    },
+    {
+      "text": "When billing for community, calls, or services, price them as recurring add-ons only after the customer has completed the one-time education phase.",
+      "topic": "Recurring Revenue Architecture"
+    }
+  ]
+}

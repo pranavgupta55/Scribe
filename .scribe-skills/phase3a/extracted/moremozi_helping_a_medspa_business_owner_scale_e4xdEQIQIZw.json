@@ -1,0 +1,168 @@
+{
+  "source_file": "moremozi_helping_a_medspa_business_owner_scale_e4xdEQIQIZw.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Founder Bottleneck",
+    "Activity-Based Time Valuation",
+    "Scaling Bottleneck Diagnosis",
+    "Revenue Stage Transitions",
+    "Founder Performance Decay",
+    "Service Business Model Economics",
+    "Supply Constraint Levers"
+  ],
+  "frameworks": [
+    {
+      "name": "Time Allocation Diagnosis for Founder Bottleneck",
+      "definition": "Quantify founder time spent on clinical delivery versus business operations; if delivery work exceeds 50%, hiring a replacement practitioner at the founder's draw salary frees time to address actual constraints.",
+      "concept": "Founder Bottleneck"
+    },
+    {
+      "name": "Profit Sufficiency Test for Growth Constraint",
+      "definition": "Determine whether revenue growth is constrained by cash availability or bandwidth; calculate seller discretionary earnings and test whether additional profit would materially change the founder's life.",
+      "concept": "Scaling Bottleneck Diagnosis"
+    }
+  ],
+  "claims": [
+    {
+      "text": "A MedSpa owner with $3M revenue and $700k seller discretionary earnings (23% profit) lacks a money constraint; the binding constraint is founder bandwidth spent on clinical delivery (80% of time) rather than business ownership functions (20% of time).",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Service business model",
+        "Founder actively delivering services",
+        "Seller discretionary earnings > 20% of revenue"
+      ],
+      "mechanism": "When profit margins are healthy enough to fund a replacement practitioner salary, the missing variable is founder time allocated to business systems, not capital for hiring.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if net profit is below replacement practitioner cost",
+        "Does not apply if founder is not actively delivering services"
+      ]
+    },
+    {
+      "text": "Identifying whether a growth constraint is real (bandwidth, supply chain) versus perceived (marketing, sales) requires calculating the financial impact of solving each; if solving the constraint would not materially change the founder's personal earnings, it is not the actual constraint.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Founder asking about growth limits",
+        "Business generating profit"
+      ],
+      "mechanism": "Constraints are distinguished by their impact on founder economics; perceived constraints feel large due to cognitive availability bias (seeing problems that are salient), while real constraints block direct founder earnings.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "For a founder spending 80% of time on clinical delivery and 20% on business operations, hiring a replacement practitioner at the founder's $200k salary frees full-time founder capacity for business improvement; this is viable when seller discretionary earnings exceed twice the replacement salary.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "Service business model",
+        "Founder actively delivering billable services",
+        "Replacement practitioner salary is known",
+        "Seller discretionary earnings >= 2x replacement salary"
+      ],
+      "mechanism": "Paying someone else to do founder delivery work transfers opportunity cost (business systems work) from practitioner to founder; founder retains $700k profit and now controls the leverage point (time) to implement growth initiatives.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if business cannot maintain service quality with replacement practitioner",
+        "Does not apply if founder has no scalable business improvements to implement with freed time"
+      ]
+    },
+    {
+      "text": "When a business owner reports multiple simultaneous constraints (sales issues, bandwidth, money), the constraint-free way to sequence solutions is: first eliminate the bandwidth constraint (hire), then verify whether the perceived constraint (sales) was real or masking another problem.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Founder reports multiple blockers",
+        "Founder can afford to hire replacement labor",
+        "Time allocation reveals delivery work consuming majority of founder hours"
+      ],
+      "mechanism": "Founders scattered across multiple roles cannot reliably diagnose systemic problems; removing the obvious bandwidth constraint (founder in the chair doing delivery) clarifies whether remaining constraints are structural (product, market) or operational (systems, sales).",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "In service businesses, a founder reporting that the business performs one service excellently (weight loss) and many other services poorly should eliminate or separate the non-core services rather than improve all of them.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply Constraint Levers",
+      "conditions": [
+        "Service business model",
+        "Multiple service lines with unequal profitability",
+        "Founder bandwidth is the constraint"
+      ],
+      "mechanism": "Each additional service line divides founder attention and creates operational complexity; eliminating the weakest services preserves margin and focus without reducing absolute profit.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if all service lines are profitable and scalable",
+        "Does not apply if service lines are already separated (different teams, systems)"
+      ]
+    },
+    {
+      "text": "A business owner calculating monthly cash flow (bank account growth between first and last day of month) as the primary health metric misses EBITDA adjustments; converting revenue to sustainable profit requires accounting for equipment capital, labor cost allocation, and non-cash charges.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Model Economics",
+      "conditions": [
+        "Service business with equipment purchases",
+        "Payroll processed monthly",
+        "Business tracks both cash and accrual metrics"
+      ],
+      "mechanism": "Cash flow is a calendar artifact (when checks arrive), not a measure of operational profitability; EBITDA adjusts for capital equipment and non-cash items to show the true recurring earnings available for distribution.",
+      "numbers": {
+        "axis": "business profitability measurement",
+        "anchors": [
+          {
+            "region": "cash flow only",
+            "value": "$20-50k monthly (MedSpa example) — masks capital equipment impact"
+          },
+          {
+            "region": "EBITDA / seller discretionary earnings",
+            "value": "$700k annually (~$58k monthly) — includes business economics"
+          }
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A MedSpa owner with one location, $3M revenue, and $700k in seller discretionary earnings ($200k medical director salary + $500k profit-sharing draw) reports being unable to grow because of bandwidth and sales constraints. Alex diagnoses that the real constraint is founder time: 80% spent doing clinical work (weight loss consultations, medical aesthetics procedures), 20% on business operations. The founder wants to scale to $20M across multiple locations but is unable to develop sales systems because she is performing clinical delivery. Alex recommends hiring another physician for $200k annually to replace her clinical hours, freeing her to focus on business systems and sales improvements. The founder's resistance ('I am trying to find a unicorn physician') is reframed as a finding-and-hiring problem, not an economics problem, because the business already generates enough profit to pay the replacement salary.",
+      "claim_index": 0,
+      "topic": "Founder Bottleneck"
+    },
+    {
+      "text": "When asked whether fixing the sales process would enable 50% growth ($300k additional profit), the MedSpa owner answers 'Not really' — indicating that incremental profit alone would not change her life or motivation. Alex uses this response to argue that sales is not the constraint: if solving sales would not materially improve outcomes for the founder, then sales is a symptom, not the root cause. The root cause is founder bandwidth — she cannot implement or sustain a new sales system if 80% of her time is consumed by clinical delivery. Fixing sales while the founder is still in the chair is like optimizing the sales process for a business that cannot fulfill additional demand.",
+      "claim_index": 2,
+      "topic": "Scaling Bottleneck Diagnosis"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Calculate and clearly separate salary draws (medical director compensation) from profit distributions (profit-sharing, discretionary earnings) to accurately measure true business profitability and owner take-home pay.",
+      "topic": "Service Business Model Economics"
+    },
+    {
+      "text": "When a founder reports bandwidth constraints, explicitly quantify the time allocation across major role categories (clinical delivery, sales, operations, management) rather than relying on founder intuition.",
+      "topic": "Activity-Based Time Valuation"
+    },
+    {
+      "text": "For scaling challenges, use the profit-sufficiency test: ask the founder whether solving the proposed constraint (more sales, better marketing) would materially change their personal financial outcome. If the answer is 'no,' the proposed constraint is not the binding constraint.",
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "In multi-location scaling plans, clarify whether the growth target ($20M) will be achieved through one location or multiple locations early in the conversation, as this determines the fundamental scaling model and bottleneck diagnosis.",
+      "topic": "Revenue Stage Transitions"
+    }
+  ]
+}

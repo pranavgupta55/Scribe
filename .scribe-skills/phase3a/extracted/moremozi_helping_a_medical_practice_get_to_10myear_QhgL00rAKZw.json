@@ -1,0 +1,248 @@
+{
+  "source_file": "moremozi_helping_a_medical_practice_get_to_10myear_QhgL00rAKZw.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Targeting and Lead Qualification",
+    "Sales Process Optimization",
+    "Sales Closing Mechanics",
+    "Avatar Targeting Strategy",
+    "Educational vs Entertainment Content",
+    "Motivated Buyer Targeting",
+    "Customer Awareness Levels",
+    "Revenue Stage Transitions"
+  ],
+  "frameworks": [
+    {
+      "name": "Input-Output Problem Diagnosis",
+      "definition": "A structured diagnosis of funnel performance that separates three independent variables: absolute volume of leads, percentage qualified (quality), and absolute qualified leads (qualified volume).",
+      "concept": "Sales Process Optimization"
+    },
+    {
+      "name": "Friction and Qualification Lever System",
+      "definition": "A four-stage approach to optimizing funnel quality: measure baseline metrics, add friction filters, evaluate quality improvement vs. volume impact, then scale volume independently to restore absolute qualified throughput.",
+      "concept": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "name": "Content-to-Avatar Attribution Framework",
+      "definition": "A system for identifying which content types attract which avatar segments by tracking customer source data, save-to-engagement ratios, and direct feedback on sales calls.",
+      "concept": "Educational vs Entertainment Content"
+    }
+  ],
+  "claims": [
+    {
+      "text": "When adding friction filters (price disclosure, non-insurance eligibility) to a sales application, the percentage of qualified applicants increases, but absolute volume decreases—both outcomes indicate success, not failure.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "Application-based qualification funnel",
+        "Explicit disqualification filters in place",
+        "Tracking both percentage-qualified and absolute volume metrics"
+      ],
+      "mechanism": "Friction removes bottom-of-funnel unqualified prospects before they consume sales team time, leaving a higher-percentage pool, while absolute count drops because the true qualified audience size is smaller than the unfiltered pool.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when friction is psychological (confusing form design) rather than informational (clear disqualification criteria)",
+        "Does not apply if the absolute volume drop falls below the point where qualified-lead volume is insufficient to scale"
+      ]
+    },
+    {
+      "text": "For a high-ticket service business at $3.8M revenue targeting $10M+, the binding constraint after fixing sales-process quality is traffic volume: drive more qualified leads through the now-improved funnel rather than further optimizing close rate.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "Service business with high price point ($15k-$20k per transaction)",
+        "Close rate has already improved via qualification friction (demonstrating sales process strength)",
+        "Current traffic comes primarily from organic YouTube (150k followers)"
+      ],
+      "mechanism": "Once the sales funnel's percentage-qualified metric improves, further closing-rate optimization yields diminishing returns; the binding constraint becomes the numerator (absolute qualified leads), not the denominator (close rate).",
+      "numbers": {
+        "axis": "practice revenue stage and constraint transition",
+        "anchors": [
+          {
+            "region": "current state ($3.8M revenue)",
+            "value": "friction-improved sales process, organic-only traffic"
+          },
+          {
+            "region": "next inflection ($10M revenue target)",
+            "value": "dual-channel traffic (organic + paid), same sales process quality"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if close rate is still <30% (indicating sales-process weakness remains)",
+        "Does not apply if the audience is geographically or demographically constrained"
+      ]
+    },
+    {
+      "text": "High-save-rate short-form content (reels, shorts) correlates with purchase intent more strongly than high-view or high-share content; identify the top 10% of content by save-to-engagement ratio and run those as paid ads to scale traffic.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Educational vs Entertainment Content",
+      "conditions": [
+        "Short-form video platform (TikTok, Instagram Reels, YouTube Shorts)",
+        "Existing organic audience (>100k followers)",
+        "Content mix includes both educational lists/breakdowns and general mindset/lifestyle content"
+      ],
+      "mechanism": "Save behavior signals intent to apply the content (e.g., a checklist or process to follow), whereas shares signal entertainment value; purchase-intent audiences self-select into the save behavior, making save-rate a better avatar-match signal than raw views or shares.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to content designed for awareness-stage (cold traffic) where view volume is the correct metric",
+        "Does not apply if saves are driven by platform virality rather than avatar-specific value (requires manual audit of saved content type)"
+      ]
+    },
+    {
+      "text": "Content performance metrics measured in-person (e.g., room of $4M+ business owners) reveal avatar-specific preference patterns invisible in aggregate view counts, because the room's composition filters for audience quality.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Customer Awareness Levels",
+      "conditions": [
+        "In-person workshop, retreat, or event with self-selected attendee base",
+        "Ask attendees directly which content types resonate (e.g., 'brutally honest mindset' vs. 'business breakdown')",
+        "Compare response patterns to YouTube view counts for the same content"
+      ],
+      "mechanism": "A room of high-revenue owners has already filtered for the avatar; asking them what content attracted them reveals the true draw, whereas YouTube's aggregate view count includes broad low-intent audiences—the mismatch between 'this video got fewer views' but 'everyone in this room came from it' signals that low-view content outperforms for high-intent targeting.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the in-person event attendees paid to attend and selected based on event topic (sampling bias toward the event, not the content)"
+      ]
+    },
+    {
+      "text": "For regulated service businesses (sexual health, insurance, compliance-heavy), paid-ad platforms that previously failed (e.g., Google Ads suspension for sexual-health content) can be relaunched after the sales funnel is fixed, because quality traffic + qualified funnel compound to offset platform friction.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Previous paid-ad attempt failed due to platform policy (sexual-health category, insurance-related content, compliance issue)",
+        "Sales funnel has been independently strengthened with friction-based qualification",
+        "Platform policy violation was compliance/category-based, not account-based"
+      ],
+      "mechanism": "A strong funnel (high % qualified) accepts a lower traffic volume from compliance-constrained platforms; weak funnel + platform friction = double penalty. Strong funnel + platform friction = acceptable trade-off.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the platform explicitly bans the category (e.g., current Google Ads policy on sexual health)",
+        "Does not apply if the account is permanently suspended (requires a new account + platform audit)"
+      ]
+    },
+    {
+      "text": "Meta ads outperform YouTube ads as a starting point for cold traffic in constrained categories because Meta's targeting and audience overlap (Instagram, Facebook) is broader and more forgiving than YouTube's compliance restrictions.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "Cold-traffic paid ads (not retargeting)",
+        "Regulated category (sexual health, insurance, compliance-sensitive content)",
+        "Existing YouTube audience 100k+ followers",
+        "Geographic reach national or multi-state"
+      ],
+      "mechanism": "Meta's advertiser ecosystem is more permissive for sexual-health and wellness content; YouTube's compliance review is stricter. For audiences already on both platforms, Meta is the faster path to scale.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the audience is geographically restricted (local-only service)",
+        "Does not apply if Meta's compliance has tightened post-2026"
+      ]
+    },
+    {
+      "text": "Medical practice's disqualification of applicants via upfront information (price, insurance non-coverage) is operating correctly when percentage-qualified increases, even if total applicant volume falls.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "Two-stage funnel: application form + calendar booking",
+        "Disqualification happens before sales-team time",
+        "Price is explicit ($15k-$20k range)",
+        "Insurance coverage is clearly stated as non-applicable"
+      ],
+      "mechanism": "Self-disqualification on price and insurance eligibility reduces sales-team conversation waste; the people who proceed despite those filters are higher intent, raising close rate.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the practice is discounting or offering alternative lower-price paths (which muddy the signal)"
+      ]
+    },
+    {
+      "text": "Existing customer surveys or sales-call follow-up questions (\"Which video brought you here? Which content type?\") are the fastest way to map content performance to avatar fit without running expensive paid experiments.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Content-to-Avatar Attribution Framework",
+      "conditions": [
+        "Established customer base (existing list to email)",
+        "Multiple content types already produced",
+        "Sales calls have opportunity to ask attribution question (5-10 seconds)"
+      ],
+      "mechanism": "Existing customers self-report their entry point; one email to the list asking for a prize/giveaway response costs near-zero and reveals the content bucket (or small set of buckets) that drove the most conversions.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the business is early-stage with <50 customers (sample too small)",
+        "Does not apply if sales calls do not ask the attribution question (data collection fails)"
+      ]
+    },
+    {
+      "text": "Dr. Ann Truong's medical practice had incorrectly interpreted a lower absolute applicant volume as a failure of the friction-based qualification system, when the correct metric is percentage-qualified throughput.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Practice recently added friction (price, insurance non-coverage) to application",
+        "Observed metric: absolute applicant count declined",
+        "Interpreted as: friction caused failure"
+      ],
+      "mechanism": "Confusion between input-output variables (absolute volume vs. percentage qualified vs. absolute qualified volume) led to incorrect diagnosis. Friction reduced unqualified volume, leaving a higher-percentage pool—this is success.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex asks Dr. Truong about the disqualification filters in her application. She had added two explicit disqualifiers: (1) 'This is not insurance covered,' and (2) 'This is the price.' Applicants who saw those disqualifiers could choose not to proceed. As a result, the percentage of people on the calendar (qualified pool) increased, and the absolute number decreased. This is the correct pattern: friction removes low-intent volume, raising percentage-qualified. The next step is to drive more total volume through that improved funnel via paid ads.",
+      "claim_index": 0,
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "When Alex asks about content performance, Dr. Truong mentions running YouTube and Meta ads. YouTube ads were shut down in three days due to sexual-health category compliance. Meta ads ran but brought unqualified applicants. Alex's diagnosis: the Meta ads ran into an unqualified funnel, so it made sense to stop them. Now that the funnel is fixed (higher percentage qualified), re-running Meta ads should work, because the funnel will filter and convert the traffic.",
+      "claim_index": 5,
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "Alex describes an in-person workshop where he asks attendees about content preference. When asked 'Do you like brutally honest mindset videos?' a small percentage raised hands. When asked 'Do you like the breakdown videos where I analyze businesses?' the entire room raised hands. Those breakdown videos get fewer views than the mindset videos on YouTube, but in a room of $4M+ business owners (self-selected avatar), the breakdown videos clearly resonate more. This reveals that low-view content can outperform for high-intent targeting—the aggregate view count hides the avatar-specific signal.",
+      "claim_index": 3,
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "Alex instructs Dr. Truong to identify her top-performing short-form content by save-to-like ratio. He specifically says: 'Find the shorts that are save-worthy rather than share-worthy. The type of things that are like lists of processes and stuff, stuff where you really teach stuff that did medium well, those are typically going to be the ones that have the highest purchase intent.' He then tells her to look at the last year of Instagram Reels, find the ones with the highest saves-to-likes percentage, and run the top 10% as ads on Meta, directing them into the fixed funnel.",
+      "claim_index": 2,
+      "topic": "Educational vs Entertainment Content"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Email your existing customer list with a prize or giveaway incentive, asking them to identify which piece of content (or type of content) brought them to the business.",
+      "topic": "Content-to-Avatar Attribution Framework"
+    },
+    {
+      "text": "On sales calls, ask every prospect 'What type of content got you here?' or 'Which video brought you to us?' to build a data set of content-to-avatar mapping.",
+      "topic": "Content-to-Avatar Attribution Framework"
+    },
+    {
+      "text": "Audit your paid-ad compliance (especially for regulated categories like sexual health or insurance) and relaunch on Meta if the funnel strength has improved since the previous attempt.",
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Run paid ads on Meta targeting the top 10% of your short-form content by save-to-engagement ratio, directing traffic into your optimized sales funnel.",
+      "topic": "Educational vs Entertainment Content"
+    },
+    {
+      "text": "Run paid ads nationally if your service attracts customers who will travel or relocate for the service.",
+      "topic": "Sales Targeting and Lead Qualification"
+    }
+  ]
+}

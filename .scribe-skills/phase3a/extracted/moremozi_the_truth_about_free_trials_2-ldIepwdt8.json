@@ -1,0 +1,171 @@
+{
+  "source_file": "moremozi_the_truth_about_free_trials_2-ldIepwdt8.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Process Optimization",
+    "Price Communication",
+    "Premium Positioning",
+    "Continuity Upsell",
+    "Customer Awareness Levels"
+  ],
+  "frameworks": [
+    {
+      "name": "Free Trial Conversion Architecture",
+      "definition": "A multi-stage analysis comparing free trial vs paid-first models across three vectors: landing page conversion, paid conversion rate, and post-trial churn.",
+      "concept": "Sales Process Optimization"
+    },
+    {
+      "name": "Earnings-Per-Click Model",
+      "definition": "A decision framework that factors clicks, conversion rate, customer LTV, and churn into a single unit-economics calculation to compare acquisition models.",
+      "concept": "Sales Process Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Free trials increase initial landing-page conversion while decreasing subsequent paid conversion, creating two conversion points instead of one (Hormozi).",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "membership or group-based offers",
+        "where free access can be granted upfront"
+      ],
+      "mechanism": "Offering free access removes friction on the initial decision but creates a second friction point where a customer must commit payment after experiencing the product.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Post-trial churn is lower than month-one churn from paid-first acquisition because customers have already experienced the product before committing (Hormozi).",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "subscription or membership offers",
+        "where trial experience precedes payment"
+      ],
+      "mechanism": "Trial experience reduces perceived risk and commitment hesitation, anchoring customers before the first renewal decision.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "To decide between free-trial and paid-first models, build a spreadsheet comparing: clicks to page, trial-conversion rate, paid-conversion rate, LTV by model, and churn by model; the model with higher total revenue is the winner (Hormozi).",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "when choosing between two acquisition models",
+        "when sufficient data exists for both paths"
+      ],
+      "mechanism": "Quantifying all three vectors (landing-page conversion, paid conversion, churn-driven LTV) makes the comparison falsifiable and removes emotion from the decision.",
+      "numbers": {
+        "axis": "trial conversion outcome",
+        "anchors": [
+          {
+            "region": "4x click conversion increase with 50% paid conversion",
+            "value": "2x net sales (same LTV math works)"
+          },
+          {
+            "region": "4x click conversion increase with 66% paid conversion",
+            "value": "50% net uplift"
+          },
+          {
+            "region": "4x click conversion increase with 75% paid conversion",
+            "value": "net even (break-even on LTV)"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when insufficient data or runway exists to measure both full cycles"
+      ]
+    },
+    {
+      "text": "Free trials succeed or fail based on earnings-per-click: the cost to generate a click must account for both the increased landing-page conversion (free CTA) and the downstream paid conversion and LTV (Hormozi).",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "when comparing paid-first and free-trial acquisition",
+        "when click source cost is measurable (organic or paid)"
+      ],
+      "mechanism": "A free CTA generates more clicks than a paid CTA because the initial ask is lower; this increases cost-per-sale unless the higher volume compounds downstream revenue.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "When 4x more customers convert to a free trial than to a paid offer, the business doubles sales even if two-thirds of trial users cancel before paying, because the cost of acquisition is distributed across remaining customers (Hormozi).",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "free-trial model with measurable conversion lift",
+        "when cancel rate on free trial is pre-measured"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "trial-to-paying conversion outcome by cancel rate",
+        "anchors": [
+          {
+            "region": "4x landing conversion, 50% paid conversion",
+            "value": "doubled sales"
+          },
+          {
+            "region": "4x landing conversion, 33% paid conversion (2/3 cancel)",
+            "value": "net +50% sales"
+          },
+          {
+            "region": "4x landing conversion, 25% paid conversion (3/4 cancel)",
+            "value": "net even (break-even)"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Do not back out of a free-trial test before collecting at least one full billing cycle of data, because early exit prevents discovering whether the economics work or not (Hormozi).",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "when running a free-trial experiment",
+        "when churn data is needed to finalize the decision"
+      ],
+      "mechanism": "One month is the minimum window to capture trial-to-paid conversion and initial churn; exiting early leaves the experiment inconclusive.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if the business cannot sustain the experiment cost for one full cycle"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi's portfolio company (School HQ) experienced 4x conversion increase when offering a free trial compared to paid-first model, generating 40 customers per day in the first week. The speaker generated 100k followers across YouTube and Instagram in four months with a free community product, then offered paid continuity upsells.",
+      "claim_index": 0,
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "A speaker's experiment with free trials on a group offer showed high initial conversion but some immediate cancellation post-trial. When modeled: at 4x landing conversion and 50% paid-trial conversion, the business still doubled sales despite trial cancellation.",
+      "claim_index": 4,
+      "topic": "Sales Process Optimization"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Use earnings-per-click as the decision unit: track clicks to landing page, trial-conversion percentage, paid-conversion percentage, and LTV by model.",
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Run the free-trial experiment for at least one full month before making a go/no-go decision on churn and economics.",
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Build a spreadsheet comparing free-trial and paid-first models with all three vectors (landing conversion, paid conversion, churn-driven LTV) to remove emotion from the decision.",
+      "topic": "Sales Process Optimization"
+    }
+  ]
+}

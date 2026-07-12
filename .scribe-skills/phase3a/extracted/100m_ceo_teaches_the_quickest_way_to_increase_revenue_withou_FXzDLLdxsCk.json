@@ -1,0 +1,228 @@
+{
+  "source_file": "100m_ceo_teaches_the_quickest_way_to_increase_revenue_withou_FXzDLLdxsCk.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Unit Economics at Scale",
+    "Churn and Retention",
+    "Churn as Hidden Growth Constraint",
+    "Customer Retention Mechanics",
+    "Margins",
+    "Scaling Bottleneck Diagnosis",
+    "Supply vs. Demand Constraint Diagnosis",
+    "Revenue Stage Transitions",
+    "Service Business Unit Economics"
+  ],
+  "frameworks": [
+    {
+      "name": "Three Methods for Calculating Customer LTV",
+      "definition": "Three back-of-napkin approaches to estimating customer lifetime value: (1) Lifetime Revenue divided by total customers, (2) Average monthly price divided by monthly churn rate, (3) Sales velocity method using stable monthly revenue divided by monthly new sales count.",
+      "concept": "Unit Economics at Scale"
+    },
+    {
+      "name": "Revenue Asymptote Model",
+      "definition": "A business with fixed new-sales rate, price, and churn will converge toward a maximum monthly revenue ceiling equal to (new sales per month x price) / churn rate; businesses above that ceiling shrink toward it, businesses below it grow toward it.",
+      "concept": "Churn and Retention"
+    },
+    {
+      "name": "Three Levers to Break a Revenue Plateau",
+      "definition": "When a recurring-revenue business is stagnant, exactly three variables can change its asymptote: (1) increase new-sales volume, (2) raise price, or (3) reduce churn — and reducing churn first multiplies the impact of the other two.",
+      "concept": "Churn as Hidden Growth Constraint"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi argues that for growing recurring-revenue businesses, the lifetime-revenue-divided-by-total-customers method systematically underestimates LTV because it counts payments already received but ignores future payments from customers still active.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "back of napkin",
+      "topic": "Unit Economics at Scale",
+      "conditions": ["recurring-revenue business", "business is still growing (not mature)"],
+      "mechanism": "Active customers continue to pay in the future; dividing cumulative historical revenue by cumulative historical customer count treats them as already ended, so the result is always below true LTV.",
+      "numbers": null,
+      "bounded_by": ["Overestimates if the business is declining and most customers are already churned"]
+    },
+    {
+      "text": "Alex Hormozi states that LTV calculated via churn equals average monthly revenue per customer divided by monthly churn rate. For example, a business earning $1,000/month per customer with 5% monthly churn has a $20,000 LTV.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Unit Economics at Scale",
+      "conditions": ["recurring-revenue business", "churn rate is measured on a monthly basis"],
+      "mechanism": "If 5% of customers leave each month, the average customer stays for 20 months; 20 months x $1,000/month = $20,000.",
+      "numbers": {
+        "axis": "monthly churn rate and resulting LTV at $1,000/month average revenue per customer",
+        "anchors": [
+          {"churn": "5% monthly", "LTV": "$20,000"},
+          {"churn": "10% monthly", "LTV": "$10,000"},
+          {"churn": "20% monthly", "LTV": "$5,000"}
+        ]
+      },
+      "bounded_by": ["Overestimates if churn rate is highly variable month-to-month without averaging; use average of recent months"]
+    },
+    {
+      "text": "Alex Hormozi states that for businesses where monthly revenue has been roughly flat for three to four months, LTV can be estimated by dividing stable monthly revenue by the number of new sales per month. A business doing $100,000/month with 10 new sales per month has an implied LTV of $10,000.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "sales velocity",
+      "topic": "Unit Economics at Scale",
+      "conditions": ["monthly revenue has been approximately stable for 3-4 months", "business has reached a near-equilibrium between new sales and churn"],
+      "mechanism": "At equilibrium, new sales rate equals churn rate times total customers; therefore revenue / new-sales count approximates average customer value.",
+      "numbers": {
+        "axis": "implied LTV as a function of monthly revenue and new sales at equilibrium",
+        "anchors": [
+          {"monthly_revenue": "$100,000", "new_sales_per_month": 10, "implied_LTV": "$10,000"},
+          {"monthly_revenue": "$500,000", "new_sales_per_month": 10, "implied_LTV": "$50,000"}
+        ]
+      },
+      "bounded_by": ["Does not apply if revenue is growing or declining rapidly — business is not at equilibrium"]
+    },
+    {
+      "text": "Alex Hormozi asserts that a recurring-revenue business with fixed new-sales volume, price, and churn converges to a maximum monthly revenue asymptote equal to (new sales per month x monthly price) / churn rate. A business selling 10 clients per month at $5,000/month with 20% monthly churn will converge to $250,000/month regardless of whether it starts above or below that level.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Churn and Retention",
+      "conditions": ["recurring-revenue business", "new-sales rate, price, and churn rate are all held constant"],
+      "mechanism": "Each month the business adds (new_sales x price) in revenue and loses (churn_rate x current_revenue). When these are equal, growth stops. The equilibrium point is (new_sales x price) / churn_rate.",
+      "numbers": {
+        "axis": "revenue asymptote as a function of monthly new sales, price, and churn rate",
+        "anchors": [
+          {"new_sales": 10, "price": "$5,000/mo", "churn": "20%", "asymptote": "$250,000/mo"},
+          {"new_sales": 40, "price": "$5,000/mo", "churn": "20%", "asymptote": "$1,000,000/mo"},
+          {"new_sales": 10, "price": "$5,000/mo", "churn": "10%", "asymptote": "$500,000/mo"}
+        ]
+      },
+      "bounded_by": ["Assumes churn rate is constant; in practice churn often drops as business matures"]
+    },
+    {
+      "text": "Alex Hormozi claims that reducing monthly churn from 20% to 10% — a seemingly modest improvement — doubles the revenue ceiling of a recurring-revenue business, making churn reduction a higher-leverage lever than doubling new-sales volume at the same churn rate.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Churn as Hidden Growth Constraint",
+      "conditions": ["recurring-revenue business", "holding new-sales volume and price constant", "starting at 20% monthly churn"],
+      "mechanism": "The revenue asymptote is inversely proportional to churn rate; halving churn doubles the ceiling without requiring additional sales infrastructure.",
+      "numbers": {
+        "axis": "revenue asymptote impact of churn reduction vs. sales increase, at 10 sales/month x $5,000/month base",
+        "anchors": [
+          {"lever": "halve churn (20% to 10%)", "new_asymptote": "$500,000/mo", "asymptote_change": "+$250,000 (+100%)"},
+          {"lever": "4x new sales (10 to 40/mo), churn unchanged at 20%", "new_asymptote": "$1,000,000/mo", "asymptote_change": "+$750,000 (+300%)"}
+        ]
+      },
+      "bounded_by": ["4x new-sales growth produces a larger absolute ceiling increase, but requires building acquisition infrastructure; churn reduction is achievable by improving the product/experience without external spend"]
+    },
+    {
+      "text": "Alex Hormozi argues that fixing churn before scaling sales volume is the strategically superior sequencing for stagnant recurring-revenue businesses, because improving churn first expands LTV, which allows profitable reinvestment in acquisition — whereas scaling acquisition first at high churn compresses margins and locks the business into a hamster-wheel dynamic.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Churn as Hidden Growth Constraint",
+      "conditions": ["recurring-revenue business at a revenue plateau", "churn is elevated (e.g., 20% monthly)", "business is considering whether to scale acquisition or fix retention first"],
+      "mechanism": "At high churn, adding acquisition volume compresses margins because CAC rises while LTV stays low. Fixing churn first raises LTV, enabling profitable spend on acquisition. If you fix churn and then 4x sales, the asymptote is 4 million vs. 1 million from just 4x-ing sales at high churn.",
+      "numbers": {
+        "axis": "monthly revenue asymptote under different sequencing strategies (base: 10 sales/mo, $5,000/mo, 20% churn)",
+        "anchors": [
+          {"strategy": "fix churn to 10% then 4x sales", "asymptote": "$4,000,000/mo"},
+          {"strategy": "4x sales at 20% churn, no churn fix", "asymptote": "$1,000,000/mo"},
+          {"strategy": "do nothing", "asymptote": "$250,000/mo"}
+        ]
+      },
+      "bounded_by": ["Does not apply if churn is already low (e.g., below 5% monthly); in that case, scaling acquisition is the correct first move"]
+    },
+    {
+      "text": "Alex Hormozi states that for businesses in the $3-$10 million revenue range, weak LTV (insufficient revenue per customer and compressed margins) is the most common constraint blocking further scale, because it prevents them from outspending competitors on customer acquisition.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": ["service or recurring-revenue business", "$3-$10M annual revenue range"],
+      "mechanism": "Low LTV means the maximum profitable CAC is low, which caps the amount that can be spent on ads/outreach, which caps growth velocity.",
+      "numbers": {
+        "axis": "revenue stage at which LTV compression most commonly becomes the binding growth constraint",
+        "anchors": [
+          {"revenue_range": "$0-$3M", "typical_constraint": "sales volume and offer-market fit"},
+          {"revenue_range": "$3M-$10M", "typical_constraint": "LTV compression limiting acquisition spend"}
+        ]
+      },
+      "bounded_by": ["Capital-constrained businesses may hit this limit earlier; capital-rich businesses may not notice until above $10M"]
+    },
+    {
+      "text": "Alex Hormozi states that a business at equilibrium (revenue has been flat for several months) can determine its implied LTV by observing that the number of new sales per month equals the number of churned customers per month; therefore revenue / new_sales_count = average customer value.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Unit Economics at Scale",
+      "conditions": ["recurring-revenue business", "monthly revenue approximately flat for 3+ months"],
+      "mechanism": "At equilibrium, gains equal losses. New_sales = churn_count, so total_revenue / new_sales = total_revenue / churn_count = price / churn_rate = LTV. The three LTV calculation methods converge at equilibrium.",
+      "numbers": null,
+      "bounded_by": ["Valid only at equilibrium; will overstate LTV if revenue is declining, understate if growing"]
+    },
+    {
+      "text": "Alex Hormozi claims that scaling new sales volume without first fixing high churn forces the business into a trap where it must continuously sell just to offset churn, preventing it from becoming a sellable asset with meaningful enterprise value.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Churn as Hidden Growth Constraint",
+      "conditions": ["recurring-revenue service business", "monthly churn is high (e.g., 20%)", "business is scaling acquisition volume"],
+      "mechanism": "High churn means every new client gained is nearly offset by one lost. The business must continuously sell at full pace just to stay flat. Enterprise value is a multiple of earnings; compressed margins from high CAC at low LTV destroy enterprise value.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that monthly churn should be averaged across the most recent months, and that historical churn from periods with a different sales model is not a valid input — because adding a sales machine increases volume but often degrades fulfillment personalization, changing the churn rate structurally.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Churn and Retention",
+      "conditions": ["recurring-revenue business that has recently changed its sales volume significantly"],
+      "mechanism": "Higher sales volume without proportional fulfillment investment reduces per-client attention, raising churn. Using pre-scale churn data to project future LTV will systematically overestimate it.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi describes a hypothetical business doing $1M in year one, $2M in year two, and $3M in year three, with 600 total customers across all three years. Total revenue of $6M divided by 600 customers yields a $10,000 implied LTV — but because many of those 600 customers are still active and will generate future revenue, the true LTV is higher than $10,000. This illustrates why the lifetime-division method is a floor estimate for growing businesses.",
+      "claim_index": 0,
+      "topic": "Unit Economics at Scale"
+    },
+    {
+      "text": "Alex Hormozi illustrates churn calculation: a business with 100 customers at the start of the month and 95 at the end has lost 5 customers regardless of how many new customers were acquired during the month. Churn = 5/100 = 5%. He emphasizes that new sales during the period do not enter the churn calculation — a point entrepreneurs commonly confuse.",
+      "claim_index": 1,
+      "topic": "Churn and Retention"
+    },
+    {
+      "text": "Alex Hormozi walks through two scenarios both with 10 new sales per month at $5,000/month and 20% churn, one at $100,000/month revenue and one at $500,000/month revenue. Both converge to the same $250,000/month asymptote: the first scenario grows toward it while the second shrinks toward it. The takeaway is that knowing LTV and churn lets an operator predict their revenue ceiling without needing a spreadsheet.",
+      "claim_index": 3,
+      "topic": "Churn and Retention"
+    },
+    {
+      "text": "Alex Hormozi compares three paths to reach $1,000,000/month from a $250,000/month asymptote starting point (10 sales/mo, $5,000/mo, 20% churn): (1) quadruple new sales to 40/month — requires major acquisition investment; (2) quadruple price to $20,000/month — high risk if value does not support it; (3) halve churn to 5% — doubles asymptote to $500,000 without extra acquisition cost. He concludes that fixing churn is the highest-probability first move, because it does not require as much external infrastructure and sets up the business to then scale acquisition profitably.",
+      "claim_index": 5,
+      "topic": "Churn as Hidden Growth Constraint"
+    },
+    {
+      "text": "Alex Hormozi describes a business owner who applied to become an Acquisition.com portfolio company but could not answer the basic question of what their LTV was. Hormozi frames this as the proximate cause for making the video: LTV is one of the most important metrics in entrepreneurship, yet even operators seeking institutional backing do not know how to calculate it.",
+      "claim_index": 6,
+      "topic": "Unit Economics at Scale"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Average churn rate across the most recent three to six months before using it in an LTV calculation; never use a single month's churn figure because monthly volatility distorts the result.",
+      "topic": "Churn and Retention"
+    },
+    {
+      "text": "When a stagnant recurring-revenue business is deciding which growth lever to pull, fix churn first (improve product and client experience), then scale acquisition — not the reverse.",
+      "topic": "Churn as Hidden Growth Constraint"
+    },
+    {
+      "text": "Use back-of-napkin LTV math to determine whether the current business configuration is growing toward an asymptote, shrinking toward one, or already at equilibrium — then choose the lever (sales volume, price, or churn) that most efficiently moves the asymptote to the desired revenue level.",
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "Before attributing a revenue plateau to insufficient sales effort, calculate the revenue asymptote to confirm whether the current churn rate is the binding constraint rather than sales volume.",
+      "topic": "Supply vs. Demand Constraint Diagnosis"
+    }
+  ]
+}

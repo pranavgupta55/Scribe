@@ -1,0 +1,177 @@
+{
+  "source_file": "moremozi_you_need_to_do_more_nvXoDtjdU5o.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Volume-First Scaling",
+    "Leverage",
+    "Mistaking Low Volume for Volatility",
+    "Founder Performance Decay",
+    "Scaling Bottleneck Diagnosis"
+  ],
+  "frameworks": [
+    {
+      "name": "Volume-Output Scaling Progression",
+      "definition": "A three-stage growth model where initial founder-driven output scales through hiring identical roles (2x), then through strategic innovation (new channels), then through reinvestment into building infrastructure.",
+      "concept": "Volume-First Scaling"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Small businesses fundamentally underestimate their volume requirements. Most small businesses are doing so little and think they are doing so much, and this gap in understanding is the core constraint on their growth.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "small businesses (<$1M revenue stage)"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Low volume appears as sporadic sales (one to two sales per month) and is misdiagnosed as market volatility when it is actually the natural output of minimal marketing activity. Competitors doing one to two sales per day are executing the same month's worth of activity every single day.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "early-stage service or product businesses"
+      ],
+      "mechanism": "low output (flyers, outreach, content) compounds into perceived volatility rather than volatility being a market signal",
+      "numbers": {
+        "axis": "monthly sales frequency and activity volume ratio",
+        "anchors": [
+          {
+            "region": "struggling business (1-2 sales/month, minimal activity)",
+            "value": "300 flyers test, no repeated daily activity"
+          },
+          {
+            "region": "scaling business (1-2 sales/day, repeated activity)",
+            "value": "5,000 flyers test, then 5,000 flyers daily = 150,000 over 30 days"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Competitive advantage in audience building scales directly with output volume, not channel or tactics. Publishing 450 pieces of content per week produces a personal brand approximately 450x larger than publishing one piece per week, holding all other variables constant.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "personal brand or content business"
+      ],
+      "mechanism": "raw output volume compounds into audience size via distribution frequency",
+      "numbers": {
+        "axis": "weekly content output vs. brand size multiplier",
+        "anchors": [
+          {
+            "region": "minimal output",
+            "value": "1 piece per week"
+          },
+          {
+            "region": "high-volume output",
+            "value": "450 pieces per week"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "People systematically underestimate how much more competitors are working. The empirical reality is that when a competitor appears to have 2x, 5x, 10x, or 1000x more success, they are doing 2x, 5x, 10x, or 1000x more output, not executing a different strategy.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "any business domain"
+      ],
+      "mechanism": "cognitive bias (underestimating competitor effort) masks the true lever, which is volume",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when competitors are using asymmetrically better technology or a first-mover advantage in a regulatory moat"
+      ]
+    },
+    {
+      "text": "The first stage of leverage begins when founder output generates enough profit to hire replacement workers (e.g., paying two people to do flyers instead of doing them yourself) at a rate that frees up the founder's time without reducing total output.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Leverage",
+      "conditions": [
+        "founder-dependent business with repeatable, delegable tasks"
+      ],
+      "mechanism": "hiring duplicates initial task output and frees founder time; doubling output typically doubles revenue at comparable margins",
+      "numbers": {
+        "axis": "time freed vs. output multiplication",
+        "anchors": [
+          {
+            "region": "founder solo",
+            "value": "1x output, 100% of founder time"
+          },
+          {
+            "region": "founder + 2 staff",
+            "value": "2x output, ~8 hours freed per week"
+          }
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "After hiring duplicates the initial task, the next allocation decision is binary: scale identical output further (hire more staff to do flyers) or invest in innovation (change the offer, test new channels like Facebook ads). The innovation path (the 10% thing) creates greater long-term returns because it compounds.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Leverage",
+      "conditions": [
+        "company at 2x+ initial founder output with working unit economics"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to businesses without proven unit economics—hire to scale before innovating"
+      ]
+    },
+    {
+      "text": "Most small businesses mistake low volume for market volatility. The perception of sporadic sales (one sale here, two weeks later another sale) is a symptom of inadequate advertising activity, not an indicator that the market is unpredictable.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Mistaking Low Volume for Volatility",
+      "conditions": [
+        "early-stage businesses with <1 sale per week on average"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "When Alex Hormozi had his first gym, he called a mentor who owned 20 locations and asked how to advertise. The mentor said flyers. Hormozi tested with 300 flyers and saw no results. When he called back upset, the mentor asked for his test size. Hormozi learned the mentor's test size was 5,000 flyers, and after winning, they deployed 5,000 flyers daily, totaling 150,000 per month. Over the same 30 days, Hormozi had only deployed 300 flyers total. The mentor was executing roughly 500x the volume and getting proportionally better results.",
+      "claim_index": 1,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "When discussing personal brand building, Hormozi asked someone how much content they were publishing. They replied one piece per week. Hormozi provided context: his company publishes 450 pieces per week. The resulting brand size difference (450x larger) is directly attributable to the volume difference, not superior strategy or better tactics.",
+      "claim_index": 2,
+      "topic": "Volume-First Scaling"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When you first start, do the output yourself (flyers, calls, content). Once you have proof of economics and cash flow to support hiring, pay two people to do exactly what you were doing to reclaim time while maintaining or growing output.",
+      "topic": "Leverage"
+    },
+    {
+      "text": "Once doubling output via hiring is complete and you have working unit economics, allocate capital to testing innovation (new channels, new offers) rather than hiring a third person to repeat the first task again.",
+      "topic": "Leverage"
+    },
+    {
+      "text": "Calculate output volume against competitor benchmarks in your space, expressed as a multiplier (2x, 5x, 10x, 100x). If you are behind, the solution is volume, not a different strategy.",
+      "topic": "Volume-First Scaling"
+    }
+  ]
+}

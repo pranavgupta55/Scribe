@@ -1,0 +1,285 @@
+{
+  "source_file": "close_10k_local_service_jobs_live.txt",
+  "primary_speaker": "Eric Velch",
+  "concepts_addressed": [
+    "Sales Process Optimization",
+    "Sales Closing Mechanics",
+    "Meeting and Follow-Up Cadence",
+    "Availability as Conversion Multiplier",
+    "Script Compliance",
+    "Price Communication",
+    "Sales Speed and First-Contact Advantage",
+    "Founder Bottleneck",
+    "Service-First Upsell Sequencing",
+    "Cold-to-Close Sales Architecture",
+    "Before/After Proof Engine",
+    "Team Training and Scaling"
+  ],
+  "frameworks": [
+    {
+      "name": "Appointment-First Phone System",
+      "definition": "A structured inbound call protocol for local service businesses that prioritizes booking an in-person appointment over any phone-based quoting, using inspection fees and two-choice scheduling to prevent customer defection.",
+      "concept": "Sales Process Optimization"
+    },
+    {
+      "name": "Inspection Fee Waiver Close",
+      "definition": "A close mechanic that charges a flat inspection/diagnostic fee (e.g. $60) upfront, then waives it against the job total if the customer proceeds, locking in commitment and removing the competitor-shopping window.",
+      "concept": "Sales Closing Mechanics"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Eric Velch argues that for local service businesses (plumbing, HVAC, landscaping, etc.), allowing the call to end without booking an in-person appointment gives the customer the opportunity to call competitors, shop for a cheaper price, or change their mind entirely, reducing close rates significantly compared to calls that end with a confirmed appointment.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "local service businesses (plumbing, HVAC, landscaping, construction, cleaning, auto detailing)",
+        "inbound phone leads",
+        "service requiring in-person diagnosis"
+      ],
+      "mechanism": "Without a physical appointment, the customer remains in an open-decision state and can contact other providers; once physically present with a technician, switching costs rise because they have already paid or committed to an inspection.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to commodity service categories where phone-only quoting is industry standard and inspection fees are not accepted"
+      ]
+    },
+    {
+      "text": "Eric Velch asserts that closing a sale is significantly easier when the contractor is physically inside the customer's home rather than over the phone, because the technician can show the problem directly, explain consequences, and frame upsells in person, whereas customers can easily say no over the phone.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "local residential service businesses",
+        "services requiring physical inspection (plumbing, HVAC, etc.)"
+      ],
+      "mechanism": "Physical presence removes the buyer's ability to disengage instantly and enables tactile, visual demonstration of the problem; a customer who has already paid an inspection fee has a sunk-cost commitment that reduces the likelihood of refusing the recommended repair.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to fully remote or commoditized services where in-person visits are not feasible"
+      ]
+    },
+    {
+      "text": "Eric Velch asserts that a service business operator must never give a price quote over the phone because it enables the prospect to price-shop competitors before any in-person commitment is made, directly reducing close rates.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "inbound phone leads for local service businesses",
+        "services where job scope cannot be fully assessed remotely"
+      ],
+      "mechanism": "A phone quote anchors the customer to a number and gives them a reference price to compare against competitors; once the contractor is in the home the price is negotiated in context of demonstrated need, removing direct price comparison.",
+      "numbers": null,
+      "bounded_by": [
+        "Some industries with commoditized flat-rate pricing may require phone quotes as table stakes"
+      ]
+    },
+    {
+      "text": "Eric Velch uses a two-option close-ended scheduling technique (\"we can come at this time or this time, which works better?\") rather than open-ended scheduling questions, on the grounds that open-ended questions create space for customers to delay, defer to competitors, or reschedule indefinitely.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Meeting and Follow-Up Cadence",
+      "conditions": [
+        "inbound service call booking",
+        "local service businesses"
+      ],
+      "mechanism": "Two-option framing removes the implicit permission to say 'not now'; the customer is choosing between two appointment slots rather than deciding whether to book at all, shifting the cognitive frame from opt-in to opt-between.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch contends that booking a customer immediately and calling back to reschedule if necessary is strictly superior to delaying the booking while checking schedules, because the delay window enables the customer to find and book a competitor who appears more organized and responsive.",
+      "type": "conditional",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": [
+        "inbound service leads with same-day urgency",
+        "local service businesses with variable contractor availability"
+      ],
+      "mechanism": "A business that books immediately signals operational readiness; a business that asks to check its schedule signals disorganization, lowering buyer confidence and creating a time gap competitors can fill.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch charges a $60 inspection or diagnostic fee for service calls in his remote plumbing business, which is waived against the total job cost if the customer proceeds, on the grounds that this fee both qualifies serious buyers and pre-commits them to the relationship before a competitor can intervene.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": "inspection fee / call-out fee",
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "plumbing and similar licensed trade services",
+        "markets where diagnostic fees are standard practice"
+      ],
+      "mechanism": "The inspection fee creates a sunk-cost commitment: once a customer has paid $60 for a diagnosis, switching to a competitor requires paying a second inspection fee; waiving the fee upon job acceptance makes the committed path financially dominant.",
+      "numbers": {
+        "axis": "inspection fee amount",
+        "anchors": [
+          {"region": "Eric Velch's remote plumbing business", "value": "$60"},
+          {"region": "waiver condition", "value": "$60 credited toward job total if customer proceeds"}
+        ]
+      },
+      "bounded_by": [
+        "Not applicable in industries where inspection fees are not accepted practice",
+        "Some markets may have regulatory constraints on diagnostic fees"
+      ]
+    },
+    {
+      "text": "Eric Velch frames the in-home inspection fee to customers as being in their own interest rather than the company's, explaining that phone-based quotes risk overcharging or providing inaccurate estimates, and that the in-person visit ensures the customer receives a fair, precise price.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "local service inbound calls",
+        "services requiring physical diagnosis"
+      ],
+      "mechanism": "Repositioning the inspection visit as customer advocacy (accuracy and fairness) neutralizes the objection that the fee is an upsell tactic; the customer perceives the visit as protective of their interests, reducing resistance to booking.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch pushes for same-day or next-available appointments rather than scheduling multiple days out, on the grounds that speed of service delivery is the primary justification for charging premium prices on emergency or urgent service calls.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": [
+        "emergency or urgent local service calls",
+        "markets where multiple providers are available"
+      ],
+      "mechanism": "Rapid response is the value proposition that justifies premium pricing for urgent services; customers calling under urgency are paying for convenience and speed, not commodity labor, making same-day availability the key differentiator and the basis for higher ticket sizes.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to planned, non-urgent services where scheduling flexibility is expected"
+      ]
+    },
+    {
+      "text": "Eric Velch describes running his plumbing business entirely remotely from a computer, taking 40% of job revenue while a contracted tradesperson performs the physical work, demonstrating that the booking and customer-management system is separable from trade skill.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "remote plumbing business",
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "local service businesses using contractor labor models",
+        "founder handling sales and dispatch remotely"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "revenue split between remote operator and contractor",
+        "anchors": [
+          {"region": "Eric Velch (remote operator, handles booking and customer management)", "value": "40% of job revenue"},
+          {"region": "contractor (performs physical work)", "value": "60% of job revenue"}
+        ]
+      },
+      "bounded_by": [
+        "Requires licensed contractors willing to operate under this split",
+        "Revenue share ratios vary by trade and market"
+      ]
+    },
+    {
+      "text": "Eric Velch argues that once a contractor is physically inside a customer's home completing a primary repair, that visit is the highest-leverage upsell opportunity because trust is established, additional problems are visible, and the customer's decision-making friction is at its lowest.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Service-First Upsell Sequencing",
+      "conditions": [
+        "local service businesses with in-home delivery",
+        "services where adjacent problems are diagnosable on-site"
+      ],
+      "mechanism": "In-person trust established through solving the presenting problem lowers resistance to additional recommendations; the contractor can physically demonstrate secondary issues (e.g., inspect adjacent drains at no charge, then upsell a hydrojet service if problems are found) rather than asserting them over the phone.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch contends that unprofessional phone answering (casual tone, background noise, uncertainty) damages conversion on inbound service calls because customers are making a trust judgment in the first 10 seconds about whether to commit their home and money to this provider.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "inbound phone leads for local residential services"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch states that eventually handing off inbound call handling to a virtual assistant (VA) is the right scaling path for the remote service model, requiring that the call script be simplified enough that the VA does not need trade-specific knowledge to book appointments.",
+      "type": "conditional",
+      "speaker": "Eric Velch",
+      "speaker_term": null,
+      "topic": "Team Training and Scaling",
+      "conditions": [
+        "remote local service businesses at sufficient volume to justify VA cost",
+        "appointment-booking scripts stripped of technical trade language"
+      ],
+      "mechanism": "Removing trade-specific language from the booking script enables non-expert VAs to handle inbound calls at lower labor cost, allowing the founder to exit daily call handling without degrading appointment conversion.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply while call volume is low enough for founder to handle personally"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Eric Velch audits a call recording from his student Jeremiah, who started a remote HVAC company one week earlier. When the customer asked how fast the work could be done, Jeremiah responded with a question back ('How fast do you need it done?') instead of immediately proposing a specific same-day slot. He then suggested a Thursday or Friday booking on a Monday call, unnecessarily creating a multi-day gap that would allow competitors to intervene. Jeremiah also offered to accept a photo rather than booking the appointment, ending the call without a confirmed commitment. Velch flags each of these as distinct conversion failures.",
+      "claim_index": 0,
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "In a second call audited by Eric Velch, Jeremiah correctly quoted the $60 inspection fee and explained that it applies to diagnosing the issue. When the customer asked about same-day availability, Jeremiah responded 'Can I get back to you?' instead of immediately confirming a time slot. Velch explains that the customer could use that window to call a competitor who books on the spot, making the hesitation a direct cause of lost business even though the earlier part of the call was handled correctly.",
+      "claim_index": 4,
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "Eric Velch plays his own call recording from his remote plumbing business. A customer calls about a shower temperature issue. Velch tells the customer a technician can come at 7:30-8 PM and explains the $60 inspection fee, which is waived if the customer proceeds with repairs. When the customer asks for a quote over the phone, Velch declines and explains that the technician must see the issue to give an accurate price. When the customer asks for a different time the next day, Velch agrees to 1 PM without hesitation, takes the address, and confirms the appointment. Velch self-critiques his tonality as slightly flat but grades the call structure as sound.",
+      "claim_index": 5,
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Eric Velch describes a plumbing upsell scenario: a technician clears a clogged drain, then offers to inspect adjacent drainage without charge. If a secondary problem is found, the technician pitches a hydrojet service, framing it as a more permanent solution with a warranty that will save money long-term compared to repeat snaking. Velch uses this as the canonical illustration of how in-home upselling compounds revenue from a single appointment without requiring any additional customer acquisition cost.",
+      "claim_index": 9,
+      "topic": "Service-First Upsell Sequencing"
+    },
+    {
+      "text": "Eric Velch mentions a student named Nav who made $80,000 from a single landscaping job using the same remote-operator system. He also references a student named Cole who generates multiple high-ticket jobs per month in landscaping. These are cited as proof that the remote booking system transfers across service verticals beyond plumbing.",
+      "claim_index": 8,
+      "topic": "Founder Bottleneck"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Answer inbound service calls with a professional greeting that includes your name and company: 'Hey, this is [Name] speaking from [Company]. How can I help you?'",
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Once a customer describes their issue, immediately tell them the next steps and give them two appointment time options rather than asking what time works for them.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Never accept a photo as a substitute for an in-person inspection; always push for the physical appointment.",
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Frame the inspection fee as benefiting the customer by ensuring an accurate, fair price rather than a phone-based estimate that might overcharge them.",
+      "topic": "Price Communication"
+    },
+    {
+      "text": "Train the contractor to proactively inspect adjacent or related systems while on-site and offer no-charge diagnostics as a gateway to upsell opportunities.",
+      "topic": "Service-First Upsell Sequencing"
+    },
+    {
+      "text": "Simplify the inbound call script to remove trade-specific jargon so it can eventually be handed to a virtual assistant without requiring technical knowledge.",
+      "topic": "Team Training and Scaling"
+    },
+    {
+      "text": "Book the appointment first, then call the customer back if schedule changes are needed; never delay booking to check availability.",
+      "topic": "Availability as Conversion Multiplier"
+    }
+  ]
+}

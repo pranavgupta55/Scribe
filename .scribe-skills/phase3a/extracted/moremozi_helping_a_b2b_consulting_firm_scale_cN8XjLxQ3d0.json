@@ -1,0 +1,222 @@
+{
+  "source_file": "moremozi_helping_a_b2b_consulting_firm_scale_cN8XjLxQ3d0.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Process Optimization",
+    "Service Business Model Economics",
+    "Founder Bottleneck",
+    "Revenue Stage Transitions",
+    "Scaling Bottleneck Diagnosis",
+    "Supply Constraint Levers",
+    "Meeting and Follow-Up Cadence",
+    "Hiring as Capital Allocation",
+    "Sales Talent Pipeline",
+    "Volume-First Scaling"
+  ],
+  "frameworks": [
+    {
+      "name": "Conference and Outbound Pipeline Alternation",
+      "definition": "A dual-channel sales motion that alternates between conference-based lead generation (net fishing) and outbound SDR-driven pipeline building, creating a crisscross fill pattern that maintains continuous pipeline velocity.",
+      "concept": "Sales Process Optimization"
+    },
+    {
+      "name": "Event Lead and SDR Lead Stacking",
+      "definition": "A sequential hiring strategy where SDR leads initially supplement event-based leads, and over time SDR leads become the primary stable pipeline while event leads continue to stack incrementally.",
+      "concept": "Sales Talent Pipeline"
+    }
+  ],
+  "claims": [
+    {
+      "text": "For B2B services with $75k-80k deal sizes and founder-led sales, the single largest constraint is SDR capacity—not sales closing ability. Alex Hormozi (in conversation with cybersecurity consulting founder) identified that the founder was already capable of closing deals when leads reached him; the binding constraint was upstream pipeline generation and qualification.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "B2B service sales",
+        "Deal size $75k-80k",
+        "Founder currently performing sales"
+      ],
+      "mechanism": "When the founder is the primary sales vehicle and closing rate is strong, removing the constraint of lead qualification (via SDR) allows founder time to close more deals, multiplying total revenue.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to self-serve SaaS or low-ticket transactional sales where closing is not the constraint",
+        "Does not apply when founder cannot close on a couple of calls (requires strong closing ability first)"
+      ]
+    },
+    {
+      "text": "For high-ticket B2B services, conferences function as a net-fishing motion: attendees are already qualified by venue selection and cost; the sales motion is to collect as many leads as possible and structure urgency at the event to drive same-event signups.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "B2B service sales",
+        "Deal size $50k+",
+        "Founder has sales capability"
+      ],
+      "mechanism": "Conference attendees self-qualify by registering and paying to attend; this removes early-stage qualification friction. Structuring an offer with urgency (limited time, immediate enrollment bonus) at the event itself captures sale momentum before attendees leave.",
+      "numbers": null,
+      "bounded_by": [
+        "Cost per event has increased (COVID-era post-pandemic increase in conference costs and paid speaker slots)",
+        "Does not apply when founder has limited time availability (founder stated 2 events per month due to family constraints)"
+      ]
+    },
+    {
+      "text": "The cybersecurity consulting founder had shifted from founder-led outbound (conferences and personal networking) to delegating sales to a marketing person who does not perform; the founder then created rationalization that 'nobody good at marketing exists' rather than acknowledging the actual constraint was insufficient sales volume and process discipline.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "Service business in transition from founder-led to delegated sales",
+        "Revenue decline from $5M to $3.6M"
+      ],
+      "mechanism": "When founders abdicate from activities they are strong in (outbound sales) and attempt to replace them with hired staff before systematizing the activity, the hired staff appears to fail; the founder then blames the hire rather than recognizing the founder was the constraint all along.",
+      "numbers": {
+        "axis": "Revenue by year and founder involvement",
+        "anchors": [
+          {
+            "region": "2023 at peak conference-driven sales",
+            "value": "$5M revenue, 35% net margin"
+          },
+          {
+            "region": "Current state (post-delegation to marketing person)",
+            "value": "$3.6M revenue, 18% net margin"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when the constraint is genuinely a market shift (e.g., conference costs rise so much that ROI collapses); here the founder acknowledged the cost change but did not adjust strategy"
+      ]
+    },
+    {
+      "text": "Sales revenue decline combined with margin compression in a service business is often caused by two simultaneous constraint shifts: (1) change in lead cost (conference fees increased post-COVID) making the prior channel uneconomical, and (2) founder distraction into building management/hiring functions instead of continuing to drive sales, causing pipeline starvation.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "Service business at $3-5M revenue transitioning from founder-led sales to delegated operations"
+      ],
+      "mechanism": "As revenue scales, founders face increased people management and recruitment demands. Simultaneously, paid lead channels (conferences) become more expensive. The founder shifts focus away from sales to \"learn how to become a real CEO\", creating a two-front constraint: higher CAC in the old channel + reduced effort in sales altogether = revenue decline.",
+      "numbers": {
+        "axis": "Revenue and margin over time",
+        "anchors": [
+          {
+            "region": "2023 peak",
+            "value": "$5M revenue, 35% net margin, founder doing all outbound"
+          },
+          {
+            "region": "Current (post-COVID, post-CEO learning)",
+            "value": "$3.6M revenue, 18% net margin, founder building management infrastructure"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Market headwinds are real (conference costs), but founder response amplified the problem by further withdrawing from sales"
+      ]
+    },
+    {
+      "text": "For service businesses with capacity to absorb more customers and founder-capable sales, the optimal concurrent strategy is: (1) run 2 conferences per month to fill pipeline with qualified net-fish leads, and (2) simultaneously hire an SDR to handle outbound prospecting and qualification, creating a crisscross pipeline pattern where event leads and SDR leads reinforce each other.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Talent Pipeline",
+      "conditions": [
+        "Service business with $75k-80k deal size",
+        "Founder can close when leads reach him",
+        "Business has capacity to absorb more customers",
+        "Founder has 10-15 hours per month for conference attendance"
+      ],
+      "mechanism": "Conference attendance costs are fixed sunk costs; with 2 per month, the cost-per-lead drops and allows higher volume. Meanwhile, an SDR is inexpensive ($15k-30k annual) and fills the entire pipeline between conferences. The two channels create overlapping velocity: when event leads convert, SDR leads maintain pipeline depth; when event leads dry up between conferences, SDR leads spike.",
+      "numbers": {
+        "axis": "Pipeline contribution by channel over time",
+        "anchors": [
+          {
+            "region": "Event months (conference weeks)",
+            "value": "High quantity inbound leads (net-fishing spike)"
+          },
+          {
+            "region": "Non-event weeks",
+            "value": "SDR outbound leads (stable fill)"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Requires founder availability of 2 conferences per month (founder stated family constraints limit this)",
+        "SDR hire only works if the person is capable of prospecting and has a clear playbook (the founder's recruiter contact has sales potential but lacks proven SDR track record)"
+      ]
+    },
+    {
+      "text": "Thought leadership content (founder publicly articulating how they solve client problems) does not require webinars or structured content production; it is simply taking existing client work and discussing it publicly, which functions as a low-cost pipeline supplement once SDR and conference channels are running.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Service business with strong track record of client results",
+        "Founder has time for 1-2 hours per week of social posting"
+      ],
+      "mechanism": "Thought leadership works as inbound credibility because prospects see the founder solve real problems. This creates low-friction lead sourcing—inbound leads are warm and already vetted by content credibility—but only after the primary outbound channels (conference + SDR) establish volume.",
+      "numbers": null,
+      "bounded_by": [
+        "Webinars and structured content are explicitly deprioritized (Hormozi stated \"no webinars\"); this approach applies only to pull-based lead sourcing via public problem articulation",
+        "Does not replace event and SDR channels; it supplements them"
+      ]
+    },
+    {
+      "text": "The founder's recruiting consultant (brought in to solve hiring problems) has demonstrable outbound and sales experience through his prior recruiter role. Deploying him as an SDR to build the sales pipeline is higher-leverage than continuing his recruiter function, because the sales constraint is larger than the recruiting constraint at the current stage.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Hiring as Capital Allocation",
+      "conditions": [
+        "Founder has identified a qualified recruiter/sales-capable person",
+        "Sales pipeline constraint is binding (confirmed by revenue decline)",
+        "Recruiting infrastructure is in place (the recruiter already onboarded)"
+      ],
+      "mechanism": "In a $3.6M service business, lead generation (sales constraint) has higher ROI than recruiting (people-management constraint). The recruiter has demonstrated sales and prospecting skills (his prior business model); applying those skills to SDR outbound is a direct leverage reallocation.",
+      "numbers": null,
+      "bounded_by": [
+        "Only applies if the recruiter is willing to move from his preferred role (he expressed desire to learn a technical field vs stay in recruiting)",
+        "Does not apply if recruiting is the actual binding constraint (here, it is not; founder has identified specific people he is pursuing)"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The cybersecurity consulting founder reported $5M revenue in 2023 with 35% net margin by attending conferences regularly and conducting all outbound via personal relationships and networking calls. Post-COVID, conference fees increased significantly ('play to speak' now costs money). The founder shifted focus to CEO learning and hiring infrastructure instead of returning to conferences. Revenue declined to $3.6M and net margin compressed to 18% within one year. The founder rationalized this as 'nobody good at marketing exists' and created a keep-the-lights-on marketing hire instead of returning to the conference and outbound motion that had proven successful.",
+      "claim_index": 3,
+      "topic": "Revenue Stage Transitions"
+    },
+    {
+      "text": "During the conversation, the founder revealed he had hired a recruiter to solve hiring problems. The recruiter is skilled at sales and prospecting (his previous business involved cold outreach). He wants to move from recruiting into a technical field to learn something new. Hormozi identified that this person is perfectly positioned to become the SDR the business needs, because his existing skills (prospecting, outbound, persistence) directly map to the SDR role, and this allocation would address the binding constraint (pipeline generation) rather than the secondary constraint (recruiting).",
+      "claim_index": 6,
+      "topic": "Hiring as Capital Allocation"
+    },
+    {
+      "text": "The cybersecurity business handles demand well (can absorb more customers) and the founder can close 'on a couple of calls' when leads reach him. The time constraint is the gap between lead generation and closing: the founder cannot personally set and qualify enough meetings to feed his closing capacity. By hiring an SDR to handle outbound prospecting and qualification (basic research, cold calls, email sequencing), the founder shifts from a time-bound bottleneck to a leverage-bound opportunity, multiplying his closing output without changing his closing rate.",
+      "claim_index": 0,
+      "topic": "Scaling Bottleneck Diagnosis"
+    }
+  ],
+  "practices": [
+    {
+      "text": "For service businesses looking to scale beyond founder-led sales, attend 2 conferences per month in your target market, structured to run a coordinated sales motion (collect leads, schedule meetings at the event, offer same-event enrollment bonuses to create urgency).",
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Simultaneously with conference attendance, hire an SDR to run outbound prospecting (cold email, cold calling, LinkedIn outreach) and qualification. The SDR should fill the pipeline between conferences and create a stable baseline of leads that event leads supplement.",
+      "topic": "Sales Talent Pipeline"
+    },
+    {
+      "text": "When delegating sales functions, ensure the person taking the role is already skilled in the core activity (prospecting, closing, relationship building) rather than hiring someone who needs to learn the skill while performing it. Verify they have prior outbound or sales experience.",
+      "topic": "Hiring as Capital Allocation"
+    },
+    {
+      "text": "Post on LinkedIn regularly with thought leadership content (e.g., how you solved a client's problem) to establish inbound credibility. This is supplementary to conference and SDR channels, not a replacement for them.",
+      "topic": "Sales Process Optimization"
+    }
+  ]
+}

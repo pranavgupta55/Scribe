@@ -1,0 +1,158 @@
+{
+  "source_file": "moremozi_helping_an_e-commerce_company_doing_3myear_fix_their_profit_tX-KPikPrdw.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Margins",
+    "Price Communication",
+    "Service Business Model Economics",
+    "Pricing Anchoring Strategy",
+    "Premium Positioning",
+    "Supply Constraint Levers",
+    "Constraint-Based Strategy",
+    "SMB Volatility Risk",
+    "Scaling Bottleneck Diagnosis",
+    "Focus Through Subtraction"
+  ],
+  "frameworks": [
+    {
+      "name": "Pricing Waterfall Model",
+      "definition": "A tiered wholesale pricing structure where customers order at different volumes and receive correspondingly discounted rates, with revenue-based advertising requirements that scale with top-line sales.",
+      "concept": "Price Communication"
+    },
+    {
+      "name": "Wholesale vs D2C Margin Analysis",
+      "definition": "Decomposing profitability across channels to identify which layer of the business waterfall is compressing margins and requires structural fixes (pricing or cost reduction).",
+      "concept": "Margins"
+    }
+  ],
+  "claims": [
+    {
+      "text": "When wholesale is the majority revenue driver and profitability is compressed to 7%, the core issue is not advertising spend but the underlying pricing model across the wholesale and D2C layers. The solution is systematic margin improvement through a combination of price increases and cost reduction.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Margins",
+      "conditions": [
+        "Wholesale is majority revenue (>50%)",
+        "Gross margin compressed to ~7%",
+        "Multiple distribution channels (wholesale + D2C)"
+      ],
+      "mechanism": "Wholesale price compression (50% of retail) compounds across supply chain layers; raising wholesale prices forces distributor/retailer margin correction, which kills unprofitable volume and increases overall profit despite lower volume.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to pure D2C models without wholesale channel",
+        "Assumes at least 1000 stockists with distribution power"
+      ]
+    },
+    {
+      "text": "In wholesale pharmacy/baby retail channels with distributor intermediaries, enforcing MSRP (recommended retail price) is legally impossible in markets like Australia. Once product enters a distributor, control over per-unit retail pricing is surrendered, enabling aggressive retail undercutting that erodes brand premium positioning.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "SMB Volatility Risk",
+      "conditions": [
+        "Wholesale via distributor intermediaries",
+        "MSRP non-binding (Australia, New Zealand regulation)",
+        "1000+ stockist network"
+      ],
+      "mechanism": "Distributor-placed inventory reaches thousands of retail endpoints beyond brand control; individual retailers cut prices to move volume, undercutting MSRP and creating competitor pressure on all other stockists. Brand loses pricing power.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to direct wholesale relationships without intermediary",
+        "Does not apply to markets with legally binding MSRP enforcement (e.g., U.S.)"
+      ]
+    },
+    {
+      "text": "If a business raises wholesale prices by 10% and loses 50% of volume as a worst-case outcome, it still generates higher total profit due to more-than-doubling of per-unit margin. The worst-case scenario is profitable. This breaks the founder's fear-based assumption that price increases cause revenue collapse.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Price Communication",
+      "conditions": [
+        "Current wholesale gross margin ~50% of retail price",
+        "Price increase 10% absolute",
+        "Volume sensitivity unknown but tested via worst-case"
+      ],
+      "mechanism": "Doubling margin (e.g., from 7% to 14%+) more than compensates for 50% volume loss. Founder's fear that wholesalers will drop the product is not operationally true given the math. This reframes the decision from loss-avoidance to profit-optimization.",
+      "numbers": {
+        "axis": "price increase impact on total profit",
+        "anchors": [
+          {
+            "region": "base case (no price increase)",
+            "value": "profit at current 7% margin"
+          },
+          {
+            "region": "10% price increase, 50% volume loss (worst case)",
+            "value": "profit ~2.5x base case due to margin compression override"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes cost structure is fixed (no variable cost increase from higher prices)",
+        "Does not account for long-term brand damage if price increase signals lower quality"
+      ]
+    },
+    {
+      "text": "Exiting a distribution relationship that erodes brand pricing control (even when it represents thousands of units of wholesale volume) is the correct structural move if maintaining price integrity is the long-term priority. The interim revenue loss is justified by the recovery of control and the ability to subsequently raise prices on remaining stockists and D2C.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Focus Through Subtraction",
+      "conditions": [
+        "Distributor-placed volume is undercutting MSRP",
+        "Margin compression is structural rather than tactical",
+        "Business has established brand (1000 stockists already placed)",
+        "Founder has alternative channels (direct wholesale + D2C)"
+      ],
+      "mechanism": "Removing the lowest-control channel forces remaining stockists to respect pricing because the brand is backed by demand (already proven via 1000 placements). Smaller, controlled wholesale base is more profitable per unit and enables price-up leverage across both wholesale and D2C.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to early-stage businesses that cannot afford to lose volume",
+        "Does not apply if the distributor is the only path to the market"
+      ]
+    },
+    {
+      "text": "Brand leverage from established shelf presence (1000+ pharmacy and baby store stockists) creates immediate trust and demand signal that enables direct pricing power. The brand asset itself (consumer asking for product by name) is the moat, not the distributor relationship.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Premium Positioning",
+      "conditions": [
+        "Brand has been actively built for 2+ years",
+        "Awareness is driven by content, word-of-mouth, and demand",
+        "Shelf presence is >500 stockists across market"
+      ],
+      "mechanism": "When consumers ask retailers for the product by name (demand-pull), the retailer is incentivized to stock it regardless of margin. The brand, not the distributor's negotiating power, drives ordering decisions. This inverts the power dynamic.",
+      "numbers": null,
+      "bounded_by": [
+        "Only applies to categories with consumer brand awareness (baby health is one; commodity goods are not)"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A baby health product company in Australia/New Zealand with $3M annual revenue wholesale-focused to pharmacy and baby chains. Gross margin compressed to 7% due to distributor-driven retail undercutting on product MSRP ($110 retail target, $79 undercutting). Founder went from side hustle (12 years) to pro operations (7 years serious). Raised prices from $79 RRP to $109 over time. Revenue-based advertising commitment (10% of distributor sales back into marketing). In January, after three weeks of control recovery, exited the major pharmacy distributor to reclaim pricing control, sacrificing thousands of units to restore brand integrity.",
+      "claim_index": 4,
+      "topic": "Focus Through Subtraction"
+    },
+    {
+      "text": "Wholesale customers under distributor placement demand 10% of top-line sales in advertising support, creating a revenue-scaled marketing spend obligation. When distributor underbids MSRP, the brand is forced to advertise at a loss (funding retail margin erosion). The advertising cost is not the problem; the pricing model's loss of control is the root cause.",
+      "claim_index": 0,
+      "topic": "Margins"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When facing margin compression in wholesale-heavy models, systematically audit pricing across all layers (manufacturer → distributor → retailer → consumer) and identify where control is lost. Price increases on remaining controlled inventory often more than compensate for volume loss.",
+      "topic": "Margins"
+    },
+    {
+      "text": "In markets where MSRP is non-binding, exit distributor relationships that enable rogue retail pricing if brand premium positioning is the long-term goal. The short-term volume loss is recovered via price increases on remaining stockists and D2C channels.",
+      "topic": "SMB Volatility Risk"
+    },
+    {
+      "text": "Verify wholesale pricing assumptions by modeling worst-case scenarios (e.g., 50% volume loss on 10% price increase). Run the math to show founders that the feared outcome is still operationally profitable, breaking psychological barriers to price increases.",
+      "topic": "Price Communication"
+    }
+  ]
+}

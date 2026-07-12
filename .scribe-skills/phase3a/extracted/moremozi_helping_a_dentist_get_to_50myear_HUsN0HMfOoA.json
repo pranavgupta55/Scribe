@@ -1,0 +1,202 @@
+{
+  "source_file": "moremozi_helping_a_dentist_get_to_50myear_HUsN0HMfOoA.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Return on Invested Capital",
+    "Hiring as Capital Allocation",
+    "Talent Acquisition Economics",
+    "Founder Bottleneck",
+    "Service Business Unit Economics",
+    "Revenue Stage Transitions",
+    "Scaling Bottleneck Diagnosis",
+    "Growth Path Selection"
+  ],
+  "frameworks": [
+    {
+      "name": "ROIC Decision Framework",
+      "definition": "Evaluating scaling decisions by calculating return on invested capital per new location: investment cost + recruitment cost compared to annual profit generated at payoff timeline.",
+      "concept": "Return on Invested Capital"
+    },
+    {
+      "name": "Capital Redeployment Trade-off",
+      "definition": "The explicit choice between retaining profit for security (no growth) versus redeploying cash for growth (higher risk, higher upside).",
+      "concept": "Revenue Stage Transitions"
+    }
+  ],
+  "claims": [
+    {
+      "text": "At $25M annual revenue with 21% EBITDA, the dental practice owner has sufficient internally generated cash flow (approximately $5.25M in profits) to self-fund de novo office openings at $250-300K per location plus $100K in team recruitment costs, without external capital.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Return on Invested Capital",
+      "conditions": [
+        "Service business with documented unit economics",
+        "Profit margin above 20%",
+        "Repeatable location model"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "capital efficiency at revenue stage",
+        "anchors": [
+          {
+            "region": "Current state ($25M annual revenue, 10 offices)",
+            "value": "21% EBITDA = ~$5.25M profit available"
+          },
+          {
+            "region": "Per-location investment requirement",
+            "value": "$250-300K location cost + $100K recruitment = $350-400K total"
+          },
+          {
+            "region": "Office-level profitability (first year)",
+            "value": "$1.5M revenue at lower first-year margins"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not account for working capital requirements beyond the stated investment",
+        "Assumes consistent recruitment costs as the organization scales"
+      ]
+    },
+    {
+      "text": "De novo dental practice locations achieve 12-18 month payback on the $350-400K total investment (location + team recruitment), returning $500K+ in profit annually once stabilized, representing 1.4x+ ROIC within 18 months.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Return on Invested Capital",
+      "conditions": [
+        "De novo dental office model",
+        "Second-generation space leverage (existing build-out)",
+        "Functional team recruitment"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "payback timeline and ROIC on per-location investment",
+        "anchors": [
+          {
+            "region": "Year 1 performance",
+            "value": "$1.5M revenue (lower margins in first year)"
+          },
+          {
+            "region": "Stabilized performance (years 2+)",
+            "value": "$2.5M+ revenue with 20% EBITDA = $500K+ profit"
+          },
+          {
+            "region": "Payback timeline",
+            "value": "12-18 months to recover initial $350-400K investment"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Payback timeline assumes stable profitability achievement",
+        "Does not account for operator error or failed locations"
+      ]
+    },
+    {
+      "text": "At the growth velocity required ($5-6M in new office revenue annually, equivalent to 2-3 new de novo locations per year), the limiting constraint is not capital availability but rather talent acquisition velocity—specifically sourcing qualified dentists and treatment coordinators at the rate growth demands.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "De novo expansion model",
+        "2-3 new locations per year target",
+        "Service business at $25M+ stage"
+      ],
+      "mechanism": "Capital constraint is overcome by profit redeployment (profitable business can self-fund growth); talent constraint cannot be outsourced to lending sources. Dentist hiring is the core economic engine and becomes harder at scale despite podcast and community network sourcing.",
+      "numbers": {
+        "axis": "hiring velocity required per annum",
+        "anchors": [
+          {
+            "region": "New location requirement (2-3 locations/year)",
+            "value": "6 dentists per year, plus 4-5 staff per location = ~1 hire every 2 weeks"
+          },
+          {
+            "region": "Current sourcing channels",
+            "value": "Dental podcast + partner community network (informal, not systematized)"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Sourcing difficulty is self-reported; no data on actual fill rates or time-to-hire by role"
+      ]
+    },
+    {
+      "text": "A dedicated talent acquisition specialist (or small recruiting firm retained exclusively for core repeating roles) generates sufficient ROI to justify the cost when hiring velocity exceeds approximately one role every two weeks, because the reduction in time-to-fill directly compounds growth velocity.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Hiring as Capital Allocation",
+      "conditions": [
+        "Recurring role (not one-time specialist hire)",
+        "Role is core to economic engine",
+        "Hiring velocity >1 per two weeks"
+      ],
+      "mechanism": "Systematic recruiting process (sourcing, screening, offer negotiation) for core roles compounds more than outsourcing to generalist headhunters. Dedicated resource eliminates ad hoc hiring delays.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to one-time specialist hires (CFO, outside counsel) where headhunter networks have existing relationships",
+        "Assumes the organization has documented hiring criteria and onboarding processes"
+      ]
+    },
+    {
+      "text": "Profit redeployment (trading profit retention for growth) and talent velocity (hiring dedicated recruiting resources) are mathematically equivalent trade-off equations: both convert a known constraint (cash or time) into the ability to scale one additional office per period.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "Service business with repeatable unit economics",
+        "Growth constrained by two levers simultaneously"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Assumes both capital and talent decisions are discretionary (not externally forced)",
+        "The analogy breaks if one constraint is genuinely non-fungible"
+      ]
+    },
+    {
+      "text": "Dental practices fail to scale past 1 office per year (instead of the target 2-3) because founder/owner is perceived as bearing hiring and capital risk personally, rather than evaluating growth as a capital allocation problem with measurable ROIC.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "De novo dental practice expansion",
+        "Owner has described capital constraint but has actual cash available"
+      ],
+      "mechanism": "Emotional/mental constraint (fear of deploying capital, preference for external funding) overrides rational ROIC math. Owner frames self-funding as 'more risky' because bank debt feels externalized.",
+      "numbers": null,
+      "bounded_by": [
+        "The owner disputes this during conversation ('it feels less risky to use someone's money'), indicating the constraint may be partially real (bank paused funding) rather than purely psychological"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The dental practice owner operates 10 de novo offices across Florida, generating $25M in annual revenue with 21% EBITDA ($5.25M in profit). Each office costs $250-300K to open (second-gen space + equipment), plus ~$100K for team recruitment. Year 1 offices typically produce $1.5M in revenue at lower margins. Once stabilized, offices reach $2.5M revenue at 20%+ EBITDA margins ($500K+ profit), achieving full ROI in 12-18 months. The business is profitable enough to self-fund growth at 2-3 new offices annually (using 25% of profits) but the owner is uncertain whether to deploy internal capital or wait for bank funding.",
+      "claim_index": 0,
+      "topic": "Return on Invested Capital"
+    },
+    {
+      "text": "The owner sources dentists and staff through a dental podcast and a partner's deep community network connections. As the business scales from 1 office per year to 2-3 offices per year, this informal sourcing channel becomes insufficient. The hiring velocity jumps to approximately one role every two weeks (6 dentists per year + 4-5 staff per location), yet the informal podcast/network sourcing cannot fill roles at that rate. This illustrates the transition from ad hoc to systematic hiring as a growth constraint.",
+      "claim_index": 3,
+      "topic": "Hiring as Capital Allocation"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Deploy 20-25% of annual profits into de novo location expansion rather than retaining all profit as owner distributions. At $5.25M annual profit, allocating $1.3M annually enables 3-4 new locations per year with high confidence of payback within 18 months.",
+      "topic": "Return on Invested Capital"
+    },
+    {
+      "text": "Establish a dedicated internal recruiting resource (or retainer firm) focused exclusively on filling core, repeating roles (dentists, patient care coordinators, regional managers) once hiring velocity exceeds one role per two weeks. Avoid distributing recruiting effort across general headhunters unless the role is one-time specialized hiring (CFO, legal counsel).",
+      "topic": "Hiring as Capital Allocation"
+    },
+    {
+      "text": "Separate the recruitment of specialized, one-time roles (e.g., regional manager) from the recruitment of core, repeating roles (dentists, staff). Use headhunter networks for one-time positions where existing networks save time. Build internal recruiting processes for roles that appear repeatedly as the business scales.",
+      "topic": "Hiring as Capital Allocation"
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "source_file": "moremozi_what_to_do_when_people_ask_for_equity_75YTY8XbQbs.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Non-Dilutive Ownership Incentives",
+    "Deal Structure and Ownership",
+    "Perks as Retention Lever",
+    "Founder Character and Team Attraction",
+    "Conscious Trade Accounting"
+  ],
+  "frameworks": [
+    {
+      "name": "Four Dimensions of Equity",
+      "definition": "Equity comprises four independent levers: risk (downside loss participation), decision-making power (control), profit sharing (cash flow participation), and sale value (exit proceeds). Decoupling these dimensions enables custom incentive structures without diluting ownership.",
+      "concept": "Deal Structure and Ownership"
+    },
+    {
+      "name": "Profits Interest Structure",
+      "definition": "A tax-efficient alternative to traditional equity that grants employees a percentage of company profits and/or sale proceeds, structured as a sale bonus rather than stock ownership, eliminating the need for employee cash outlay and avoiding immediate income taxation.",
+      "concept": "Non-Dilutive Ownership Incentives"
+    }
+  ],
+  "claims": [
+    {
+      "text": "When employees ask for equity, they typically do not understand the tax and structural implications. Most employees do not actually want to carry the risk of ownership (downside loss participation); they want profit sharing and sale proceeds without that risk.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [],
+      "mechanism": "Employees' stated request (equity) diverges from their actual incentives because they have not calculated the tax burden of receiving non-cash compensation that counts as ordinary income.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Direct equity grants in U.S. LLCs and C Corps create immediate tax obligations for the recipient without cash proceeds. The recipient must either pay the company for the equity they receive or pay taxes on the value of the equity granted as a gift, meaning true equity transfers always require employee cash outlay.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "U.S. LLC or C Corp structure",
+        "Direct equity grant without purchase"
+      ],
+      "mechanism": "IRS treats non-purchased equity as either a sale (requiring payment) or an inheritance/gift (requiring taxes on fair market value), both creating cash requirements for the employee.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Profits interest structures in LLCs, where employees receive a percentage of company profits and/or sale proceeds as a non-dilutive bonus, eliminate the need for employee cash payment and avoid creating immediate tax liability at grant time.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Non-Dilutive Ownership Incentives",
+      "conditions": [
+        "LLC entity structure (not C Corp)",
+        "Agreement to profit-share and sale participation"
+      ],
+      "mechanism": "Profits interest is structured as a sale bonus (ordinary income at time of sale) rather than equity ownership, deferring taxation and eliminating upfront payment requirements.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to C Corp structures where different incentive alternatives exist",
+        "Does not eliminate tax obligation at the time of sale"
+      ]
+    },
+    {
+      "text": "A standard profits interest structure awards 0.25% per year up to a 1% maximum, payable only if the employee is actively employed at the time of sale. If an employee is terminated before sale, the profits interest reverts to the company ownership pool.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Non-Dilutive Ownership Incentives",
+      "conditions": [
+        "Profits interest arrangement with sale trigger",
+        "Active employment requirement at time of sale"
+      ],
+      "mechanism": "Vesting schedule and employment continuity requirement align employee retention with founder incentives by creating a financial consequence to termination before exit.",
+      "numbers": {
+        "axis": "Annual vesting and cumulative profit interest percentage",
+        "anchors": [
+          {
+            "region": "Annual vesting rate",
+            "value": "0.25% per year"
+          },
+          {
+            "region": "Maximum cumulative profit interest",
+            "value": "1%"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Contingent on active employment through sale",
+        "Reverts entirely if employee is terminated at any point"
+      ]
+    },
+    {
+      "text": "Employees receiving profits interest can also negotiate a separate profit-sharing agreement that grants them access to a percentage of company profits (cash flow) during normal operations, independent of sale proceeds, provided both parties mutually agree to the arrangement.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Non-Dilutive Ownership Incentives",
+      "conditions": [
+        "Mutual agreement between founder and employee",
+        "Formalized profit-sharing contract"
+      ],
+      "mechanism": "Separating cash flow participation (profit share) from exit participation (sale value) allows customization of employee upside based on retention value and company stage.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires written agreement that both parties sign",
+        "Profit share amount must be specified and agreed in advance"
+      ]
+    },
+    {
+      "text": "Profits interest is taxed as ordinary income (37% federal tax rate) at the time of sale rather than as capital gains (20% federal tax rate), meaning employees pay approximately 17 percentage points more tax than shareholders who hold equity.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Non-Dilutive Ownership Incentives",
+      "conditions": [
+        "Employee receives profits interest payout at sale",
+        "Federal income tax rates as stated"
+      ],
+      "mechanism": "Tax code treats sale bonuses (profits interest) as ordinary compensation rather than investment returns, resulting in higher effective tax rate for employee on sale proceeds.",
+      "numbers": {
+        "axis": "Federal tax rate comparison on sale proceeds",
+        "anchors": [
+          {
+            "region": "Profits interest (ordinary income)",
+            "value": "37%"
+          },
+          {
+            "region": "Equity (capital gains)",
+            "value": "20%"
+          },
+          {
+            "region": "Tax differential",
+            "value": "17 percentage points higher for profits interest"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes 2024+ federal tax rates; rates may change",
+        "Does not account for state taxes or alternative minimum tax"
+      ]
+    },
+    {
+      "text": "When an employee is terminated for cause (unethical behavior, culture toxicity), the profits interest reverts entirely to the founder, regardless of tenure, creating a retention mechanism that protects the founder's cap table from non-performing or culturally misaligned employees.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Non-Dilutive Ownership Incentives",
+      "conditions": [
+        "Profits interest agreement with reversion clause",
+        "Termination for cause clause in employment agreement"
+      ],
+      "mechanism": "Clawback provisions aligned to employment status incentivize behavioral and cultural adherence by creating an immediate financial consequence to rule-breaking or poor performance.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires clear definition of \"for cause\" in employment agreement",
+        "May face legal challenge if termination is disputed or not clearly for-cause"
+      ]
+    },
+    {
+      "text": "Employees may negotiate a tail provision in profits interest agreements to protect against termination immediately before a company sale, such as a requirement that the company cannot terminate the employee within a specified period before close to avoid paying the profits interest.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "Profits interest agreement with tail protection",
+        "Prospective company exit"
+      ],
+      "mechanism": "Tail protections reduce the founder's ability to time an employee termination to avoid paying out profits interests, aligning incentives by preventing bad-faith termination strategies.",
+      "numbers": null,
+      "bounded_by": [
+        "Tail periods vary by negotiation; common terms range from 30 to 180 days",
+        "Requires both parties to agree to the tail provision"
+      ]
+    },
+    {
+      "text": "Firing all sales leaders immediately before a company sale is strategically irrational because buyers conduct operational diligence and expect to retain key revenue drivers. The fear of termination before payout is psychologically common but operationally unrealistic for smart founders.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "Company sale context with buyer due diligence",
+        "Key employees (sales leaders) with revenue impact"
+      ],
+      "mechanism": "Buyer valuation of a business factors in existing revenue streams and the team's ability to execute post-sale, making the elimination of core sales staff reduce the acquisition price more than the amount of unpaid profit interests.",
+      "numbers": null,
+      "bounded_by": [
+        "Applies to material revenue-generating employees",
+        "Does not apply if the deal includes non-compete clauses that eliminate key person risk"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A sales representative who is offered 0.25% per year in profits interest (vesting to 1% maximum) understands that if the company is sold after 3 years of employment, they receive a bonus equal to 0.75% of the sale price. If the company is sold for $10 million, they receive $75,000 (0.75% of $10M), taxed as ordinary income (~$27,750 in federal taxes, netting ~$47,250). If they are terminated for any reason before the sale, they receive nothing and the 0.75% reverts to the founder.",
+      "claim_index": 3,
+      "topic": "Non-Dilutive Ownership Incentives"
+    },
+    {
+      "text": "A founder could structure a profits interest agreement with a sales leader to include both a 1% sale bonus (payable at exit) and a 5% annual profit share (payable quarterly from company cash flow). Under mutual agreement, this creates dual participation: the sales leader receives cash during operations (5% of profits) and receives an additional bonus at sale (1% of sale price), both without having to write a check for equity and without immediate taxation.",
+      "claim_index": 4,
+      "topic": "Non-Dilutive Ownership Incentives"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When an employee asks for equity, reframe the conversation by asking: 'How much of our losses are you willing to personally absorb?' to clarify whether they actually want downside risk participation or are seeking only upside.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "Use the four dimensions of equity (risk, control, profit sharing, sale value) as a diagnostic tool to separate what an employee actually wants from what they think they want, then structure a custom incentive around those actual motivations.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "For LLC-structured companies, present the profits interest structure as the default employee incentive, explaining the tax advantage (no upfront payment, no immediate taxation) over traditional equity.",
+      "topic": "Non-Dilutive Ownership Incentives"
+    },
+    {
+      "text": "Always include a reversion clause in profits interest agreements that requires active employment at the time of sale for payout, and specify whether the profits interest reverts on voluntary termination, involuntary termination, or termination for cause.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "If an employee raises fear about being terminated before sale, address it with data: buyers conduct diligence and expect key personnel to remain post-sale, making it irrational for founders to fire revenue-generating staff right before close.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "Negotiate tail provisions in profits interest agreements proactively (e.g., 90-day protection before closing) to signal good faith and reduce employee anxiety about termination timing, creating mutual alignment.",
+      "topic": "Deal Structure and Ownership"
+    }
+  ]
+}

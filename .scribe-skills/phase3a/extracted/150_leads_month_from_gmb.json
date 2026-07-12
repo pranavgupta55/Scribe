@@ -1,0 +1,317 @@
+{
+  "source_file": "150_leads_month_from_gmb.txt",
+  "primary_speaker": "unnamed host (drop-servicing operator, Toronto-based)",
+  "concepts_addressed": [
+    "Google Business Profile Optimization",
+    "Affiliate and Partner Channel Strategy",
+    "Tracking and Measurement Discipline",
+    "Volume-First Scaling",
+    "Sales Speed and First-Contact Advantage",
+    "Channel Optimization Before Expansion",
+    "Cost Arbitrage Model"
+  ],
+  "frameworks": [
+    {
+      "name": "Multi-Profile Geographic Coverage System",
+      "definition": "Spread three to ten independently verified Google Business Profile listings across a service area (roughly one per 10-mile radius) so each profile captures local search traffic without competing against the others.",
+      "concept": "Google Business Profile Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "A Google Business Profile with a verified street address ranks ahead of profiles with more reviews but no address for searchers physically close to that address, because Google's local-pack algorithm weights proximity first when a physical address is present. The host demonstrates this in a Newmarket, Ontario search where his profile (fewer reviews) outranks competitors with 2x, 5x, and 500x more reviews, all of which are listed as service-area businesses without a physical address.",
+      "type": "mechanism",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile has a verified physical street address",
+        "Searcher is geographically close to that address"
+      ],
+      "mechanism": "Google's local-pack algorithm weights geographic proximity first when a physical address is present; profiles with addresses surface to nearby searchers even with minimal reviews because the proximity signal outweighs review count at short distances.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to searchers far from the address (e.g., 30+ minutes away); a service-area-only profile without an address competes across the full metro area but loses the proximity advantage"
+      ]
+    },
+    {
+      "text": "Including the exact high-volume service keyword plus city name in the Google Business Profile name (e.g., 'Reliable Roofing Los Angeles') produces roughly five times more inbound call traffic than an optimized profile whose name does not contain that keyword phrase, because Google treats the business name as a strong relevance signal matching it to queries of the form 'service + city'.",
+      "type": "mechanism",
+      "speaker": "unnamed host",
+      "speaker_term": "name",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Local service business (roofing, plumbing, or similar trades)",
+        "Google Business Profile name is set before the profile becomes established (name changes after establishment risk suspension)"
+      ],
+      "mechanism": "Google scores a profile's relevance for a search query partly by matching query tokens to the business name field; including the exact keyword phrase in the name raises relevance score, pushing the profile higher in the local pack for those queries.",
+      "numbers": {
+        "axis": "inbound call volume relative to profile with same optimization but no keyword in name",
+        "anchors": [
+          {"region": "profile name contains exact service+city keyword", "value": "~5x more traffic"},
+          {"region": "profile name does not contain service+city keyword", "value": "baseline (1x)"}
+        ]
+      },
+      "bounded_by": [
+        "Name cannot be changed after profile is established without risking suspension; must be set correctly at creation"
+      ]
+    },
+    {
+      "text": "A single well-optimized Google Business Profile with a verified address in a high-search-volume market can generate approximately 70 inbound leads per month (44 phone calls + 130 website clicks in a recent one-month period), representing a realistic floor for a properly set-up profile in a dense urban area with meaningful search volume for the target service.",
+      "type": "quantified",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Profile is in a dense urban area with substantial monthly search volume for the target service",
+        "Profile has a verified physical address",
+        "Profile name contains target service+city keyword"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "monthly inbound lead volume per single Google Business Profile",
+        "anchors": [
+          {"region": "optimized profile in high-search urban area (host's example, May 26–June 24)", "value": "~70 leads/month (44 calls + 130 website clicks)"},
+          {"region": "profile with address in area with medium competition (host's broader estimate)", "value": "~70 leads/month as realistic target"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes high local search volume (e.g., 30,000 searches/month for the service in that metro)",
+        "Does not apply to low-population areas with sparse search volume"
+      ]
+    },
+    {
+      "text": "Operating three to ten Google Business Profiles spread across a service region, each placed roughly 10 miles apart, multiplies total inbound lead volume proportionally without profiles competing against each other, because each profile captures the searchers proximate to its own address rather than drawing from the same geographic pool.",
+      "type": "mechanism",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Profiles are spaced approximately 10 miles apart",
+        "Each profile has its own verified address in a distinct sub-area of the service region"
+      ],
+      "mechanism": "Google's proximity ranking means each profile wins traffic from searchers near it; profiles spaced sufficiently apart draw from different local pools, so they complement rather than cannibalize each other's rankings.",
+      "numbers": {
+        "axis": "number of profiles to deploy across a metro area",
+        "anchors": [
+          {"region": "minimum viable deployment", "value": "3 profiles"},
+          {"region": "recommended for maximum coverage", "value": "3–10 profiles spread ~10 miles apart"},
+          {"region": "host's illustrative 5-profile Los Angeles layout", "value": "Torrance, Lakewood, central LA, Pasadena, Beverly Hills"}
+        ]
+      },
+      "bounded_by": [
+        "Profiles must have distinct, verifiable physical addresses; overlapping placement (closer than ~10 miles) causes profiles to compete for the same searchers"
+      ]
+    },
+    {
+      "text": "Keyword research tools (the host demonstrates SEMrush) should be used to select the exact high-volume search phrase to embed in a Google Business Profile name before creation, because the highest-searched variant (e.g., 'roofing' vs. 'roofer' vs. 'roof repair' in a given city) differs by market and the name cannot be safely changed post-creation.",
+      "type": "conditional",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Decision must be made before profile creation (name change after creation risks suspension)",
+        "Applies to any local service trade where multiple keyword variants exist for the same service"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "monthly search volume comparison for roofing-related terms in Los Angeles (SEMrush, host's live demonstration)",
+        "anchors": [
+          {"region": "roofing Los Angeles", "value": "45,000 searches/month (highest)"},
+          {"region": "roof repair Los Angeles", "value": "high but lower than roofing"},
+          {"region": "roofer Los Angeles", "value": "lower than roofing"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Collecting Google reviews by paying a person five dollars per review to approach strangers at high-traffic public locations (malls, event venues, campuses) is a scalable review-acquisition method; twenty reviews can be obtained for roughly $100, which is sufficient to start generating meaningful call volume when combined with a verified address.",
+      "type": "quantified",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "New or low-review profile that needs initial social proof to compete",
+        "Local service business where early call volume is the primary revenue-generating metric"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "cost and volume of paid review collection via street canvassing",
+        "anchors": [
+          {"region": "per-review cost", "value": "$5/review"},
+          {"region": "initial target batch", "value": "20 reviews for ~$100"},
+          {"region": "minimum reviews to start receiving call volume (with verified address)", "value": "~5–30 reviews"}
+        ]
+      },
+      "bounded_by": [
+        "Review solicitation methods must comply with Google's terms of service; the host does not address policy risk explicitly"
+      ]
+    },
+    {
+      "text": "A drop-servicing operator who generates leads via Google Business Profiles and fulfills work through local contractors who retain 60% of job revenue can scale to $30,000/month in personal profit within two months of launch, because the operator incurs no advertising cost (leads are organic) and no fulfillment labor cost (contractors do the work).",
+      "type": "mechanism",
+      "speaker": "unnamed host",
+      "speaker_term": "remote servicing business",
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Leads generated entirely from organic Google Business Profile traffic (zero paid advertising cost)",
+        "Contractor fulfillment model where contractor takes 60% and operator takes 40% of job revenue",
+        "Business is in a high-demand trade service (host mentions plumbing as primary)"
+      ],
+      "mechanism": "Organic GMB traffic eliminates CAC; contractor revenue-share eliminates fulfillment labor cost; operator margin is structurally high because only the revenue-split and profile setup costs remain.",
+      "numbers": {
+        "axis": "operator profit timeline and revenue split",
+        "anchors": [
+          {"region": "operator's take per job", "value": "40% of job revenue"},
+          {"region": "contractor's take per job", "value": "60% of job revenue"},
+          {"region": "operator's reported profit at 2 months from launch", "value": "$30,000/month"}
+        ]
+      },
+      "bounded_by": [
+        "Requires finding and maintaining reliable local contractors willing to accept a 60/40 split",
+        "Revenue depends on achieving sufficient call volume across profiles; early months may be lower until profiles gain traction"
+      ]
+    },
+    {
+      "text": "Embedding the service+city keyword not only in the Google Business Profile name but also in the profile description, product listings, and services tab descriptions increases overall keyword relevance scoring and improves ranking position, because Google indexes all text fields in the profile when evaluating relevance for a given search query.",
+      "type": "mechanism",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Applies to all Google Business Profile text fields: description, products, services tabs"
+      ],
+      "mechanism": "Google indexes all text fields in a Business Profile for relevance matching; repeating the service+city keyword phrase across multiple fields increases the profile's total keyword relevance signal for that query.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Adding a website with a contact form to a Google Business Profile substantially increases total lead volume because a significant portion of searchers prefer submitting information via a form rather than calling; the form captures email and problem description, enabling asynchronous follow-up.",
+      "type": "assertion",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Local service business where inbound inquiries are the primary conversion mechanism"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Using call tracking software (the host uses CallRail) across all Google Business Profiles is the necessary measurement layer for attributing lead volume to specific profiles, enabling operators to identify which profiles are underperforming and where to concentrate optimization effort.",
+      "type": "assertion",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "Operator managing multiple Google Business Profiles simultaneously"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "call volume across two CallRail dashboards (host's reported figures, May 26–June 24)",
+        "anchors": [
+          {"region": "first CallRail dashboard (2 profiles)", "value": "110 calls in 29 days"},
+          {"region": "second CallRail dashboard (additional profiles)", "value": "additional call volume not specified exactly"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "In dense urban areas with 30,000+ monthly searches for a service category, even capturing a small fraction (below 1%) of searchers as callers produces substantial lead volume for a single profile, because the absolute size of the search pool is large enough that low capture rates still generate economically meaningful call counts.",
+      "type": "conditional",
+      "speaker": "unnamed host",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "Urban market with minimum ~30,000 monthly searches for the target service category",
+        "Profile ranks in the local pack (top 3) for nearby searchers"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "monthly search volume in the host's illustrative Los Angeles plumbing example",
+        "anchors": [
+          {"region": "monthly searches for 'plumber Los Angeles'", "value": "~30,000"},
+          {"region": "implication: even sub-1% call rate", "value": "hundreds of inbound calls per month"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to low-population or low-search-volume markets where the absolute pool is too small"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The host pulls up a live Google search for 'plumber in Newmarket' and shows that his own profile ranks first in the local pack despite having fewer reviews than the next three competitors. The second-ranked result has 2x his reviews, the third has 2x his reviews, and the fifth has 500 reviews — all three without a verified physical address. The host's profile has an address. He uses this to demonstrate that Google's proximity-to-address signal overrides review count for nearby searchers.",
+      "claim_index": 0,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The host performs a live SEMrush keyword overview search for roofing terms in Los Angeles. He initially plans to name a hypothetical profile 'The Reliable Roofer Los Angeles' but after seeing the data — 45,000 monthly searches for 'roofing Los Angeles' versus lower volume for 'roofer' — he revises the name in real time to 'Reliable Roofing Los Angeles', demonstrating the keyword research process for selecting the highest-volume variant to embed in the profile name.",
+      "claim_index": 4,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The host shows a live view of one of his Google Business Profile dashboards in Gmail, then shows CallRail logs demonstrating 110 calls from May 26 to June 24 across two profiles on one dashboard, plus additional call volume on a second dashboard. He references a single profile that pulled 44 phone calls and 130 website clicks in one month, totaling roughly 70 trackable leads from that profile alone, as evidence that a well-set-up profile in a good area is capable of generating substantial organic lead volume without paid advertising.",
+      "claim_index": 2,
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "The host describes his own operating model: he runs remote service businesses in trades such as plumbing, sets up Google Business Profiles that generate inbound calls, books appointments for local contractors who go out and do the work, and keeps 40% of the job revenue while the contractor keeps 60%. He reports scaling this model to $30,000/month in personal profit within two months of starting. He attributes the speed of scaling to zero advertising cost (organic GMB traffic) and zero fulfillment labor cost (contractor handles the work).",
+      "claim_index": 6,
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "The host illustrates the five-profile Los Angeles layout by drawing on a map in real time: one profile in Torrance, one in Lakewood, one in the center of LA, one in Pasadena, and one in Beverly Hills — each roughly 10 miles from its neighbors. He explains that this spacing ensures each profile draws from its own local search pool without overlapping coverage, so the profiles complement rather than compete with each other.",
+      "claim_index": 3,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The host describes sending his friend's younger brother to a mall to collect Google reviews from strangers by offering chocolates as an incentive. He generalizes this into a paid model: find someone via Facebook Marketplace job forums who wants side-hustle income, pay them $5 per review, send them to high-traffic public locations (malls, bar events, college campuses, World Cup watch parties), and have them ask strangers to leave a review. Twenty reviews cost approximately $100.",
+      "claim_index": 5,
+      "topic": "Google Business Profile Optimization"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Set the Google Business Profile name to include the highest-search-volume keyword phrase (service + city) before the profile is established; the name cannot be safely changed later without risking suspension.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use SEMrush Keyword Overview to compare monthly search volumes across keyword variants (e.g., 'roofing' vs. 'roofer' vs. 'roof repair' plus city name) before naming a new Google Business Profile.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Stuff the target service+city keyword into the profile description, product listings, and services tab descriptions to reinforce keyword relevance across all indexed fields.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Add authentic-looking photos of actual workers doing real work to the Google Business Profile; avoid AI-generated imagery which undermines credibility with prospective customers.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Add a website with a contact/lead form to each Google Business Profile so that prospects who prefer not to call can still convert via form submission.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use a review swap with other local non-competing businesses: leave them a review in exchange for a review on your profile.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Install CallRail (or equivalent call tracking) across all profiles from the start to attribute lead volume by profile and identify which ones underperform.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Start with at least 30 reviews and a verified address in a populated area before expecting consistent call volume from a Google Business Profile.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Manage multiple Google Business Profiles via separate Gmail accounts to keep them cleanly separated organizationally.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "When partnering with local contractors for drop-servicing, negotiate a 40/60 split (operator keeps 40%, contractor keeps 60%) as the baseline revenue-share agreement.",
+      "topic": "Affiliate and Partner Channel Strategy"
+    }
+  ]
+}

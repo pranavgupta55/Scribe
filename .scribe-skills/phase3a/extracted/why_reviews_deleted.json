@@ -1,0 +1,232 @@
+{
+  "source_file": "why_reviews_deleted.txt",
+  "primary_speaker": "unnamed host (remote plumbing lead-gen operator, self-described $30k/month profit, ~6 months operating)",
+  "concepts_addressed": [
+    "Google Business Profile Optimization",
+    "Social Proof Hierarchy in Sales",
+    "Cold-Start Trust Architecture",
+    "Before/After Proof Engine",
+    "Tracking and Measurement Discipline"
+  ],
+  "frameworks": [
+    {
+      "name": "Three-Root-Cause Framework for Google Review Deletion",
+      "definition": "Google reviews get deleted for three and only three root causes: (1) suspicious posting pattern (timing, wording similarity, velocity spike), (2) inauthentic account signals (new accounts, shared device or IP, foreign country), (3) obvious fakeness (common sense violations like all reviews from same geography or device).",
+      "concept": "Google Business Profile Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Google review deletion is caused by three detectable signal clusters: suspicious posting patterns (identical wording, same-day batching, velocity spikes), inauthentic account characteristics (new Gmail accounts, shared device or Wi-Fi, foreign country origin), and obvious fakeness (reviews purchased from bulk sellers whose accounts are linked to 20 other profiles). A profile that triggers any of these signals risks losing authentic real-customer reviews alongside the fake ones.",
+      "type": "assertion",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile (formerly Google My Business)",
+        "Local service businesses accumulating reviews at scale"
+      ],
+      "mechanism": "Google's automated detection identifies signal clusters that cannot occur in authentic review behavior (e.g., one Gmail account reviewing 20 different profiles on the same day); when a profile contains a mix of fake and real reviews, detection of the fake cluster can cause a platform-wide flag that removes all reviews.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not describe how Google's internal algorithm weights each signal",
+        "Speaker's evidence is observational, not from Google's published policy"
+      ]
+    },
+    {
+      "text": "When a Google Business Profile accumulates fake reviews alongside real ones, a platform-level flag can cause even the legitimate hard-earned reviews from real customers to be deleted, not just the fake ones.",
+      "type": "mechanism",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Profile contains a mix of authentic and inauthentic reviews",
+        "Google detects the inauthentic cluster"
+      ],
+      "mechanism": "A profile-level flag triggered by fake review patterns does not surgically remove only fake reviews; it can wipe the profile's entire review inventory, eliminating real reviews as collateral damage.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker observed this in others' profiles, not confirmed by Google's published deletion policy"
+      ]
+    },
+    {
+      "text": "Google review velocity spikes — going from roughly 2 reviews per day to a sudden large batch — are now a deletion trigger as of approximately 2024-2025, whereas previously (before Google tightened enforcement) a business profile could receive 100 reviews in two days without triggering removal.",
+      "type": "comparison",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile for local service business",
+        "Applies to approximately 2024-2025 enforcement period"
+      ],
+      "mechanism": "Google now treats sudden velocity spikes as a statistical anomaly inconsistent with organic review growth; spreading reviews consistently over time mimics authentic customer behavior.",
+      "numbers": {
+        "axis": "Review accumulation velocity",
+        "anchors": [
+          {"region": "Historical permissive enforcement (pre-2024)", "value": "100 reviews in 2 days without deletion"},
+          {"region": "Current strict enforcement (2024-2025)", "value": "Sudden velocity spike from ~2/day triggers deletion flag"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker's observation from own profiles, not from Google's published algorithm changelog"
+      ]
+    },
+    {
+      "text": "Reviews generated using AI tools from the same prompt — where 20 reviews share near-identical structure — are reliably flagged and deleted because the similarity pattern is statistically detectable as non-human and non-organic.",
+      "type": "assertion",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": "ChatGPT-ing and using the same prompt",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Reviews generated via AI (e.g., ChatGPT) from a single repeated prompt",
+        "Multiple reviews submitted to same profile"
+      ],
+      "mechanism": "AI-generated reviews from the same prompt share structural and lexical patterns that deviate from the natural variation in authentic human-written reviews; Google's detection systems flag this distributional anomaly.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not address AI reviews generated with high variation prompts"
+      ]
+    },
+    {
+      "text": "Google reviews purchased from bulk sellers in foreign countries (e.g., Pakistan, India, Europe) will reliably be deleted — either within two weeks or within two months — because the Gmail accounts originate from a country inconsistent with the business's local geography.",
+      "type": "assertion",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Business located in North America (Canada, US)",
+        "Reviews purchased from bulk sellers whose accounts are registered in a foreign country"
+      ],
+      "mechanism": "Google's location-consistency check flags a review from a Pakistan-registered Gmail account for a Canadian plumbing company as geographically inconsistent with a real local customer; the mismatch is a deletion trigger regardless of review content quality.",
+      "numbers": {
+        "axis": "Time to deletion for foreign-country purchased reviews",
+        "anchors": [
+          {"region": "Fast deletion", "value": "Within 2 weeks"},
+          {"region": "Slow deletion", "value": "Within 2 months (still eventual)"}
+        ]
+      },
+      "bounded_by": [
+        "A business that serves tourists or remote clients may legitimately receive foreign-country reviews — this claim applies to local service businesses where geographic consistency is expected"
+      ]
+    },
+    {
+      "text": "Using a single Gmail account to leave reviews for multiple different Google Business Profiles on the same day is an unambiguous non-human signal that will trigger review deletion across those profiles.",
+      "type": "assertion",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Same Gmail account used across multiple Google Business Profiles",
+        "Reviews posted on the same day"
+      ],
+      "mechanism": "A real customer cannot plausibly use the same service at multiple different business locations on the same day; Google's cross-profile behavior check identifies this as bot or purchased-review behavior.",
+      "numbers": null,
+      "bounded_by": [
+        "Spacing reviews from the same account across a few days reduces but may not eliminate detection risk"
+      ]
+    },
+    {
+      "text": "Aged Gmail accounts (accounts that have been active for years with genuine usage history) are materially more resistant to review deletion than newly created Gmail accounts, because they pass Google's account authenticity heuristics that new accounts fail.",
+      "type": "comparison",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": "age Gmails",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Applies when using non-organic review acquisition methods (friends, paid reviewers, etc.)",
+        "Aged = account has years of usage history, not just months"
+      ],
+      "mechanism": "Google infers account authenticity from account age, usage history, and profile completeness; a freshly created Gmail that immediately reviews a business then goes dormant exhibits a pattern inconsistent with a real user's account lifecycle.",
+      "numbers": null,
+      "bounded_by": [
+        "Aged accounts must also avoid the other pattern signals (same device, same Wi-Fi, same-day batching) to maintain resistance"
+      ]
+    },
+    {
+      "text": "Reviews left by multiple accounts connected to the same Wi-Fi network in a short time window are a detectable review-fraud signal, even when the reviewers might plausibly be legitimate customers at a business location.",
+      "type": "conditional",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Multiple reviewers connected to same IP or Wi-Fi network",
+        "Reviews submitted within close time window"
+      ],
+      "mechanism": "Shared network origin across multiple review submissions is a fraud signal because legitimate customers from different locations cannot plausibly all share an IP; the speaker mitigates this by using cellular data instead of shared Wi-Fi.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker notes this could theoretically happen with real customers at a physical business — but flags it as a risk signal worth mitigating regardless"
+      ]
+    },
+    {
+      "text": "Incentivized in-person review collection from real people using their own phones on cellular data (e.g., offering candy or Gatorade at college campuses in exchange for a review) produces reviews that pass Google's authenticity checks and do not get deleted, because the accounts are genuine, the devices are distinct, and the network origins are diverse.",
+      "type": "mechanism",
+      "speaker": "unnamed host (remote plumbing lead-gen operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Incentivized review collection (e.g., gift in exchange for review)",
+        "Reviewers use own phones on cellular data",
+        "Reviewers are real people with established Gmail accounts",
+        "Applied to Google Business Profile for local service business"
+      ],
+      "mechanism": "Real people leaving reviews from their own established Gmail accounts, on distinct devices, on cellular data in varied locations produce a signal distribution that is indistinguishable from organic authentic reviews; Google's fraud detection has no footprint to flag.",
+      "numbers": {
+        "axis": "Reviews obtainable per person-hour via in-person incentivized collection",
+        "anchors": [
+          {"region": "College campus or mall with candy/small incentive", "value": "~50 reviews per hour via one person handing out incentives"}
+        ]
+      },
+      "bounded_by": [
+        "May violate Google's terms of service against incentivized reviews, even if technically undetectable",
+        "Requires physical presence; not scalable for geographically distributed profiles"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The host described paying a friend's younger brother to visit college campuses and malls and hand out candy to people in exchange for leaving a Google review. This produced approximately 50 reviews per hour, all from real people using their own established Gmail accounts on their own phones over cellular data. These reviews all stuck and were not deleted. The host scaled this method and ultimately collected hundreds of reviews through this approach across multiple business profiles.",
+      "claim_index": 8,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The host described a common bulk-review purchase scenario: a seller in Pakistan sells reviews for approximately $1 each, but uses the same aged (or not) Gmail accounts to leave reviews for 20 different buyers' business profiles. The accounts get flagged because a single Gmail account cannot plausibly be a real customer of 20 different local businesses. Buyers who pay for this service eventually see all their purchased reviews deleted — some within two weeks, some within two months, but virtually all eventually.",
+      "claim_index": 4,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The host noted a surge of Google review deletions affecting the local service business community at the time of recording (approximately 2024-2025), where even legitimate business owners with real reviews had those real reviews deleted because they had also mixed in fake reviews. The host's own profiles survived the surge because they had followed the pattern and account-authenticity guidelines from the beginning, losing only a small number of reviews during the purge.",
+      "claim_index": 1,
+      "topic": "Google Business Profile Optimization"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Spread review acquisition over consistent days rather than batching many reviews in a short window; aim for steady organic-looking velocity rather than spikes.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use aged Gmail accounts (multiple years of activity) when non-organic review collection is needed; purchase or source them rather than creating new ones.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "When collecting reviews in person or via acquaintances, instruct reviewers to turn off Wi-Fi and use cellular data to avoid shared-IP flagging.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Do not use a single Gmail account to review multiple business profiles on the same day; wait at least a couple of days between reviews from the same account across different profiles.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Do not give reviewers identical or near-identical scripts; encourage varied, personal-sounding review text to avoid structural similarity flagging.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Do not purchase bulk reviews from sellers in foreign countries (Pakistan, India, Europe) for a North American business; geographic mismatch between reviewer account origin and business location guarantees eventual deletion.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Think outside standard methods: set up a table with a QR code at a college campus or mall and offer a small tangible incentive (candy, Gatorade) for people to leave a review on their own phones.",
+      "topic": "Google Business Profile Optimization"
+    }
+  ]
+}

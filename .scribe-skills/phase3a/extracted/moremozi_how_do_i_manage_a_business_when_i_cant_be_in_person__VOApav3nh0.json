@@ -1,0 +1,123 @@
+{
+  "source_file": "moremozi_how_do_i_manage_a_business_when_i_cant_be_in_person__VOApav3nh0.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Workflow Automation",
+    "Founder Bottleneck",
+    "Organizational Decentralization",
+    "Leadership Presence",
+    "Systems Design",
+    "Remote Management"
+  ],
+  "frameworks": [
+    {
+      "name": "System Design Architecture for Remote Operations",
+      "definition": "A two-route framework for designing systems in locations where the founder cannot be present: automation that triggers behavior, or a local leader that triggers behavior.",
+      "concept": "Workflow Automation"
+    },
+    {
+      "name": "Remote Leadership Delegation Pattern",
+      "definition": "When a founder cannot be on-site consistently, assign a general manager to observe operations, establish standards, and codify them into systems.",
+      "concept": "Organizational Decentralization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "A system is defined as a prompt that triggers behavior or action without relying on memory, not people remembering to do something or following undocumented guidance.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "system",
+      "topic": "Workflow Automation",
+      "conditions": [],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Not: people remembering to do something",
+        "Not: undocumented checklists in people's heads"
+      ]
+    },
+    {
+      "text": "When managing a business location where the founder cannot be present consistently, the first step is to install a general manager on-site to observe operations and staff, establish what good looks like, and watch the system.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Organizational Decentralization",
+      "conditions": [
+        "Founder is >100 miles away",
+        "Cannot be on-site regularly",
+        "Only able to visit occasionally"
+      ],
+      "mechanism": "A local leader's presence is required to demonstrate standards before systems can reliably prompt the same behavior in the founder's absence.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if founder can be present regularly"
+      ]
+    },
+    {
+      "text": "The presence of a leader matters because they demonstrate what good looks like; if the founder is absent, a delegated leader must be there consistently to establish and demonstrate that standard.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Leadership Presence",
+      "conditions": [
+        "Founder is geographically distant",
+        "Cannot model behavior in person regularly"
+      ],
+      "mechanism": "Leader presence establishes the baseline standard by demonstration; once internalized, systems can be designed to prompt that same standard without the leader present.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Once a delegated leader understands and sets the bar for what good looks like, systems can then be designed to continue prompting that behavior via automation, reminders, and checklists.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Workflow Automation",
+      "conditions": [
+        "A local leader has first established the standard in person"
+      ],
+      "mechanism": "Documented automation and reminders encode the demonstrated standard, allowing it to persist without the leader physically present.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Having eyes on the ground consistently to monitor is difficult without a local presence when the founder is far away; if the founder cannot be there, somebody must be.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": [
+        "Founder is geographically distant from operations"
+      ],
+      "mechanism": "Without consistent observation, drift accumulates and systems decay; local presence is required to catch and correct deviation in real time.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "A liquidation and resale business located 100 miles away from the owner, who can only visit occasionally, would require hiring a general manager on-site to observe staff, watch the system, and demonstrate what good looks like before the owner can design automation and checklists to manage operations remotely.",
+      "claim_index": 1,
+      "topic": "Organizational Decentralization"
+    },
+    {
+      "text": "Once a local general manager has demonstrated the standard for how items should be priced, packed, or documented in a resale business, the owner can then design a checklist-based or automated reminder system (e.g., daily prompts, audit checklists) to ensure staff continue following that standard without daily oversight from the manager or owner.",
+      "claim_index": 3,
+      "topic": "Workflow Automation"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Start with hiring or assigning a general manager on-site before trying to systematize remote operations.",
+      "topic": "Organizational Decentralization"
+    },
+    {
+      "text": "Use automation, reminders, and checklists to encode demonstrated standards and trigger behavior without relying on people remembering.",
+      "topic": "Workflow Automation"
+    },
+    {
+      "text": "If you cannot be present at a location consistently, ensure someone else is there to demonstrate and monitor what good looks like.",
+      "topic": "Leadership Presence"
+    }
+  ]
+}

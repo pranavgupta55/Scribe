@@ -1,0 +1,324 @@
+{
+  "source_file": "20k_remote_cleaning_90_days.txt",
+  "primary_speaker": "Eric (last name not given; Toronto-based lead-generation operator who teaches GMB-based remote service business models)",
+  "concepts_addressed": [
+    "Cost Arbitrage Model",
+    "Offshore Leverage Model",
+    "Availability as Conversion Multiplier",
+    "Before/After Proof Engine",
+    "Margins",
+    "Service Business Unit Economics",
+    "Cold Outreach Channels",
+    "Avatar Targeting Strategy",
+    "Continuity Upsell",
+    "Channel Optimization Before Expansion",
+    "Volume-First Scaling",
+    "Founder Removal Test",
+    "Social Proof Hierarchy in Sales",
+    "Single-Unit Mastery Before Replication",
+    "Sales Process Optimization",
+    "Geographic Expansion Sequence: Dominate Local, Then Expand"
+  ],
+  "frameworks": [
+    {
+      "name": "GMB Lead Generation Stack",
+      "definition": "A four-step system for generating organic residential cleaning leads at zero ad cost: (1) identify low-competition, high-search cities using SEMrush keyword volume data; (2) create a Google My Business profile listed at a commercial address in that city; (3) load the profile with reviews matching the third-ranked competitor; (4) apply keyword-based GMB SEO across title, description, services, and Q&A sections to outrank incumbents.",
+      "concept": "Cost Arbitrage Model"
+    },
+    {
+      "name": "Remote Cleaning Arbitrage Model",
+      "definition": "A business model where the operator generates leads via GMB, outsources all physical cleaning to independent contractors who supply their own vehicle and equipment, quotes jobs by mirroring local competitor pricing, collects payment from the customer, pays the contractor, and retains the spread — targeting 60%+ gross margin with no on-site involvement.",
+      "concept": "Cost Arbitrage Model"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In a residential cleaning business using Google My Business for lead generation with all work outsourced to independent contractors, the operator can retain over 60% gross margin without performing any cleaning, driving to any job site, purchasing vehicles, or supplying equipment, because the contractor covers all variable costs (transport, supplies) in exchange for a slightly premium hourly rate (~$30-$35 CAD/hr), while the operator charges customers at local market rates.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Residential cleaning category",
+        "Contractor is paid ~$30-$35 CAD/hr (~$20-$25 USD/hr)",
+        "Contractor provides own vehicle and supplies",
+        "Operator quotes at local market rates"
+      ],
+      "mechanism": "Operator captures the spread between what customers pay (market rate per job) and what contractors charge (hourly labor only), with no overhead for vehicles or equipment, producing a high-margin arbitrage.",
+      "numbers": {
+        "axis": "operator gross margin in remote cleaning arbitrage model",
+        "anchors": [
+          {"region": "operator take (remote GMB cleaning, contractor supplies own equipment)", "value": ">60% gross margin"},
+          {"region": "contractor pay rate (CAD)", "value": "$30-$35/hr"},
+          {"region": "contractor pay rate (USD)", "value": "$20-$25/hr"},
+          {"region": "typical job revenue", "value": "$400-$600/job"}
+        ]
+      },
+      "bounded_by": [
+        "Requires contractor to already own vehicle and supplies; if operator must supply equipment, margin compresses",
+        "Does not apply if operator takes on cleaning work personally"
+      ]
+    },
+    {
+      "text": "In Google Maps local search, the top three Google My Business profiles capture approximately 80% of all inbound calls for a given search query; profiles outside the top three receive minimal organic lead volume.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Google Maps local search for service businesses",
+        "Residential cleaning category"
+      ],
+      "mechanism": "Users clicking on Google Maps results exhibit strong position bias — the three prominently displayed profiles occupy the visual above-the-fold slot, so the vast majority of searchers call from that set without scrolling further.",
+      "numbers": {
+        "axis": "share of inbound calls by Google Maps position",
+        "anchors": [
+          {"region": "top 3 GMB profiles combined", "value": "~80% of searcher calls"},
+          {"region": "positions 4+", "value": "~20% of searcher calls"}
+        ]
+      },
+      "bounded_by": [
+        "May differ in markets with strong paid ad presence above the map pack"
+      ]
+    },
+    {
+      "text": "A Google My Business market is worth entering for a remote cleaning business when the target city shows over 300 monthly organic searches for the primary keyword (e.g., 'house cleaning [city]') and the third-ranked GMB profile has fewer than 40 reviews, because this combination indicates sufficient demand with low enough competition to reach the top three without a prohibitive review-acquisition effort.",
+      "type": "conditional",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Avatar Targeting Strategy",
+      "conditions": [
+        "Residential cleaning service category",
+        "Google My Business organic channel",
+        "City-level market assessment"
+      ],
+      "mechanism": "Search volume above 300/month ensures enough callers to generate meaningful revenue even at a 10-25% booking rate; fewer than 40 reviews at position three means a new entrant can reach the top three with modest social proof effort (roughly 25 reviews).",
+      "numbers": {
+        "axis": "market entry threshold for GMB cleaning business",
+        "anchors": [
+          {"region": "minimum viable search volume", "value": ">300 searches/month"},
+          {"region": "sweet spot search volume", "value": "500+ searches/month"},
+          {"region": "maximum third-place reviews to enter", "value": "<40 reviews"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to markets with dominant franchises or platform aggregators (e.g., Angi, Thumbtack) that displace GMB organics"
+      ]
+    },
+    {
+      "text": "A new GMB listing can realistically acquire 20-25 reviews within hours by requesting them from personal contacts (friends, family), and can acquire up to 300 reviews in a single day by paying individuals to ask strangers in public places for reviews, because reviews on Google My Business are not verified for service experience and any Google account holder can leave one.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Google My Business reviews",
+        "New business with no prior customer base"
+      ],
+      "mechanism": "Google My Business reviews require only a Google account and no proof of service experience, making them acquirable from any willing individual; social networks and paid street canvassers provide rapid large pools of willing reviewers.",
+      "numbers": {
+        "axis": "GMB review acquisition volume by method and time",
+        "anchors": [
+          {"region": "personal network outreach (1 day)", "value": "20-25 reviews"},
+          {"region": "paid street canvassing (full day, $2/review incentive)", "value": "up to 300 reviews"}
+        ]
+      },
+      "bounded_by": [
+        "Google may detect and remove inauthentic reviews over time; acquisition via unrelated strangers carries platform policy risk"
+      ]
+    },
+    {
+      "text": "In residential cleaning lead generation via GMB, converting 10% of monthly searchers and booking only 25% of those callers yields approximately 20 jobs per month from a city with 800 monthly searches; at $400-$600 per job this represents $8,000-$12,000 in gross revenue from a single city profile.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "City population ~200,000",
+        "GMB search volume ~800/month",
+        "Operator captures top-3 GMB position",
+        "Conservative booking conversion: 10% of searches call, 25% of callers book"
+      ],
+      "mechanism": "Top-3 GMB ranking captures ~80% of searcher calls; even applying conservative conversion at each funnel stage (searcher-to-call, call-to-booked) produces a viable revenue base from a single mid-sized city.",
+      "numbers": {
+        "axis": "monthly revenue per GMB city profile at conservative conversion",
+        "anchors": [
+          {"region": "monthly searches (example city ~200k population)", "value": "~800"},
+          {"region": "estimated callers at 10% searcher conversion", "value": "~80"},
+          {"region": "booked jobs at 25% call conversion", "value": "~20 jobs/month"},
+          {"region": "revenue per job", "value": "$400-$600"},
+          {"region": "gross monthly revenue from one profile", "value": "$8,000-$12,000"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes operator achieves top-3 GMB ranking; actual call-to-book rate varies with phone professionalism and quoting competitiveness"
+      ]
+    },
+    {
+      "text": "Operating 10 Google My Business profiles across 10 different cities, each with approximately 500 monthly searches, creates a total addressable pool of 5,000 potential searchers per month; this is sufficient, combined with the 80% top-3 capture rate and conservative conversion, to generate revenues consistent with a $20,000/month remote cleaning business.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "10 GMB profiles established in 10 distinct cities",
+        "Each city with ~500 searches/month",
+        "All profiles in top-3 ranking for local search",
+        "Operator outsources cleaning; uses virtual assistant for phone answering"
+      ],
+      "mechanism": "Revenue scales linearly with the number of high-ranking GMB profiles; because each profile is in a new city there is no cannibalization, and replication cost (5-min setup, review acquisition) is low relative to revenue potential.",
+      "numbers": {
+        "axis": "total monthly searcher pool by number of GMB profiles",
+        "anchors": [
+          {"region": "1 profile at 500 searches/month", "value": "500 potential searchers"},
+          {"region": "10 profiles at 500 searches/month", "value": "5,000 potential searchers/month"},
+          {"region": "reported personal revenue at this scale", "value": "$20,000+/month"}
+        ]
+      },
+      "bounded_by": [
+        "Requires sufficient cleaners in each city covered; virtual assistant or call automation required to handle multi-city inbound volume"
+      ]
+    },
+    {
+      "text": "Answering business phone calls with a professional greeting (naming yourself and the company) rather than just 'hello' is a differentiating factor in residential cleaning markets because most small operators answer unprofessionally, and customers paying $400-$600 per job use phone demeanor as a proxy for business quality and reliability.",
+      "type": "mechanism",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Residential cleaning service",
+        "Job value $400-$600",
+        "Customer calling from GMB listing"
+      ],
+      "mechanism": "At this price point, customers are selecting a trusted service provider who will enter their home; phone professionalism signals operational legitimacy and care, reducing hesitation at the quoting stage.",
+      "numbers": null,
+      "bounded_by": [
+        "Less differentiating in markets where most operators already answer professionally"
+      ]
+    },
+    {
+      "text": "Pricing residential cleaning jobs at the local market median rate — determined by surveying competitors' websites and posing as a customer on competitor calls — produces competitive quotes without any proprietary cost analysis, because local market prices already reflect the supply-demand equilibrium for that geography.",
+      "type": "assertion",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "New entrant with no established pricing history",
+        "Residential cleaning, local market"
+      ],
+      "mechanism": "Competitors' displayed and quoted prices embed local cost structure and willingness-to-pay; mirroring them avoids both underpricing (margin compression) and overpricing (lost bookings) while the operator builds volume and reviews.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if local market pricing is depressed by platform aggregators (Angi, Handy) with subsidized pricing"
+      ]
+    },
+    {
+      "text": "Adding recurring service plans (weekly or bi-weekly cleaning with card-on-file auto-billing) to an existing cleaning customer base converts one-time revenue into passive recurring income that requires no additional customer acquisition effort once the schedule is established.",
+      "type": "mechanism",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": [
+        "Existing customer who has already received at least one cleaning",
+        "Operator has billing system with card-on-file capability"
+      ],
+      "mechanism": "Recurring plans lock in revenue without repeat sales calls; with card on file, billing is automatic and the cleaner dispatches on a known schedule — removing the operator from any individual transaction after initial setup.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires customer satisfaction sufficient to commit to recurring schedule"
+      ]
+    },
+    {
+      "text": "Scaling a remote cleaning business to $85,000 revenue in three months is achievable by replicating the GMB lead-generation model across multiple city profiles while replacing the founder in customer-facing roles (phone answering, scheduling) with a virtual assistant.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": "Aria (coached client)",
+      "topic": "Founder Removal Test",
+      "conditions": [
+        "GMB-based remote cleaning model",
+        "Multiple city profiles active",
+        "Virtual assistant hired for inbound call handling",
+        "Multiple cleaners recruited in target markets"
+      ],
+      "mechanism": "Founder removal from call-answering and scheduling eliminates the personal-capacity bottleneck; revenue scales with the number of active GMB profiles and cleaners rather than the founder's available hours.",
+      "numbers": {
+        "axis": "revenue trajectory for coached GMB cleaning operator",
+        "anchors": [
+          {"region": "month 1 (founder alone, first profile)", "value": ">$1,000 first week"},
+          {"region": "months 1-3 (multi-profile + VA model, coached client named Aria)", "value": "$85,000 cumulative"}
+        ]
+      },
+      "bounded_by": [
+        "Requires finding reliable cleaners in each new city; VA phone quality must meet professional standard"
+      ]
+    },
+    {
+      "text": "Upselling additional services (window cleaning, carpet cleaning) to existing residential cleaning customers through trained cleaners who mention add-ons on-site increases revenue per customer without additional lead acquisition cost.",
+      "type": "mechanism",
+      "speaker": "Eric (Toronto-based GMB lead-generation operator, video published September 2023)",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": [
+        "Existing cleaning customer",
+        "Cleaner trained or briefed to mention add-on services"
+      ],
+      "mechanism": "The cleaner is already on-site with an established trust relationship; mentioning add-ons at the point of service has near-zero incremental acquisition cost and leverages the existing job relationship.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires either the primary cleaner to be able to perform the add-on service or a separate specialist crew for carpet/window work"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Eric described launching a residential cleaning GMB business in September as an experiment. Within the first week of conceiving the idea, he received over $1,000 in bank transfers — including a documented internet transfer and invoice from the company — by closing a job over text. He has since built this model across multiple service categories and reports consistently earning over $20,000/month operating entirely online without performing any physical work.",
+      "claim_index": 0,
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "Eric coached a client named Aria to start and scale his own residential cleaning business using the GMB arbitrage model. In Aria's first three months, he generated over $85,000 in revenue, verified on video by having Aria refresh his Stripe dashboard live on camera as a proof testimonial. This example was used to illustrate the model's revenue ceiling potential when the founder removes himself via a virtual assistant and multi-profile GMB setup.",
+      "claim_index": 9,
+      "topic": "Founder Removal Test"
+    },
+    {
+      "text": "Eric used the city of Oshawa, Ontario (population ~200,000) as a worked example for market sizing. A SEMrush search showed 'house cleaning Oshawa' receives approximately 800 monthly searches. Checking Google Maps, he found the third-ranked profile had only 29 reviews at a 4.9 star rating, confirming the market met his entry criteria (>300 searches, third-place <40 reviews). He calculated that even capturing 10% of searchers (80 callers) and booking only 25% of callers (20 jobs) at $400-$600/job yields substantial monthly revenue from a single profile.",
+      "claim_index": 4,
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "To illustrate rapid review acquisition, Eric described a tactic where he paid a friend's younger brother $2 per review to spend a day at a shopping mall asking strangers to leave a review for the GMB profile. The canvasser told shoppers the review was for his brother's or his school co-op project. Eric reported getting approximately 300 reviews in a single day using this method.",
+      "claim_index": 3,
+      "topic": "Social Proof Hierarchy in Sales"
+    }
+  ],
+  "practices": [
+    {
+      "text": "List your GMB profile at a physical commercial building address (not a service-area business listing), choosing a large building with many tenants so the address attracts no attention. You do not need to own or lease the address.",
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "To find cleaners to outsource jobs to, search Facebook Marketplace, Nextdoor, and Craigslist for independent cleaners offering hourly rates; vet for own vehicle and own supplies before committing.",
+      "topic": "Offshore Leverage Model"
+    },
+    {
+      "text": "Use SEMrush's free keyword overview tool (five free searches available) to check monthly search volume for 'house cleaning [city name]' before investing in a GMB profile for that city.",
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "Fill out all GMB profile sections (title, description, services, service area, products, Q&A, updates) with the exact keyword phrases customers search — e.g., 'house cleaning near me', 'house cleaning [city]' — to signal relevance to Google's local ranking algorithm.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "When aiming to scale beyond $20,000/month in the remote cleaning model, hire a virtual assistant to handle all inbound calls so the operator is completely removed from customer interactions.",
+      "topic": "Founder Removal Test"
+    },
+    {
+      "text": "Acquire recurring customers by asking cleaners to offer weekly or bi-weekly plans on-site; store the customer's card on file for automatic billing so no manual collection is required.",
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "Build a basic business website (AI-assisted website builders like Hostinger AI take ~2 minutes) and add a quoting widget so customers can get quotes online without calling, reducing friction.",
+      "topic": "Sales Process Optimization"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "source_file": "10k_from_1_gmb.txt",
+  "primary_speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+  "concepts_addressed": [
+    "Lead-Cost-Closeout Math",
+    "Market Selection Criteria: Growth + Pain + Targeting",
+    "Geographic Expansion Sequence: Dominate Local, Then Expand",
+    "Availability as Conversion Multiplier",
+    "Avatar Targeting Strategy",
+    "Market Saturation Narrative Is Usually a Performance Problem",
+    "Volume-First Scaling",
+    "Social Proof Hierarchy in Sales"
+  ],
+  "frameworks": [
+    {
+      "name": "GMB City Selection Framework",
+      "definition": "A two-factor evaluation system that scores candidate cities by (1) monthly search volume for the target service and (2) competition quality in the top-three GMB rankings, combining both scores to prioritize which cities to enter.",
+      "concept": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "name": "Search-Volume-to-Profit Formula",
+      "definition": "A four-variable formula (search volume / 1000 / close rate x 30 x avg profit per job) that converts monthly search volume into a projected monthly profit figure for any city-service combination.",
+      "concept": "Lead-Cost-Closeout Math"
+    }
+  ],
+  "claims": [
+    {
+      "text": "For a GMB (Google My Business) drop-service model targeting local search in the US, a city with approximately 1,000 monthly searches for a service, a 50% close rate, and $500 average profit per job yields roughly $7,500/month in profit. The formula is: (monthly search volume / 1,000) x 1 lead/day x close rate x 30 days x avg profit per job.",
+      "type": "quantified",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "GMB drop-service model (not direct brick-and-mortar)",
+        "50% close rate typical for emergency services such as plumbing",
+        "$500 average profit per job"
+      ],
+      "mechanism": "Monthly search volume acts as a direct proxy for inbound lead volume; the GMB ranking converts search impressions into phone calls and form submissions; close rate and average ticket then determine realized profit.",
+      "numbers": {
+        "axis": "monthly search volume vs. projected monthly profit",
+        "anchors": [
+          {"region": "~1,000 searches/month, 50% close, $500/job", "value": "$7,500/month profit"},
+          {"region": "Petaluma plumber: ~1,300 searches/month (net of brand queries)", "value": "assessed as viable entry point"},
+          {"region": "Ann Arbor plumber: ~5,000 searches/month", "value": "assessed as strong entry point"}
+        ]
+      },
+      "bounded_by": [
+        "Close rate drops significantly for higher-ticket services (lower urgency)",
+        "Search volume may be insufficient in small towns (example: Angwin, CA had ~10 searches — too low)",
+        "Numbers described as conservative; actual results can exceed projections"
+      ]
+    },
+    {
+      "text": "For a GMB-ranked local service listing, two out of three businesses in the top three Google Maps results having fewer than 100 reviews is the threshold the unnamed GMB instructor uses to classify a city as low enough competition to enter profitably without extensive effort.",
+      "type": "conditional",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Service-area or address-based GMB listings (not pure organic SEO)",
+        "Minimum ~1,000 monthly searches also required",
+        "Applies to niche services; high-competition categories like plumbing in major cities will fail both conditions simultaneously"
+      ],
+      "mechanism": "Review count is a direct ranking signal in Google Maps; fewer than 100 reviews on two of three competitors means a new entrant can overtake them with 30-50 targeted reviews, because review recency and count are among the top local ranking factors.",
+      "numbers": {
+        "axis": "competitor review count vs. entry viability",
+        "anchors": [
+          {"region": "2 of 3 top listings under 100 reviews", "value": "viable — enter"},
+          {"region": "top listing has 1,000-3,000 reviews (e.g., San Jose plumber)", "value": "not viable — avoid"},
+          {"region": "top listing 142 reviews, others 32 and 11 (New Orleans fence example)", "value": "borderline — manageable with 50 reviews"}
+        ]
+      },
+      "bounded_by": [
+        "Emergency services (plumbing) in large metros will almost never meet this threshold",
+        "Threshold is heuristic, not a guaranteed ranking outcome"
+      ]
+    },
+    {
+      "text": "For GMB local service listings, having a physical street address on the profile ranks higher than a service-area-only business (SAB) profile, reducing the backend effort required to achieve top-three placement.",
+      "type": "assertion",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": [
+        "Google Maps local search ranking context",
+        "All other ranking factors held roughly equal"
+      ],
+      "mechanism": "Google Maps treats a verified physical address as a stronger local-relevance signal than a service-area polygon, which raises the listing's ranking floor and reduces the reviews/keyword optimization needed to break into top three.",
+      "numbers": null,
+      "bounded_by": [
+        "An address profile is not required — SAB profiles can still rank, but require more optimization effort"
+      ]
+    },
+    {
+      "text": "For GMB local service listings, naming the business profile to exactly match the highest-volume search query for the service in that city (e.g., 'Plumber Petaluma' or 'Fence Company New Orleans') provides a significant ranking advantage over competitors using generic business names.",
+      "type": "mechanism",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": [
+        "Google Maps local pack (top-three results)",
+        "Business name must match the highest-volume keyword exactly, not just include it partially"
+      ],
+      "mechanism": "Google Maps uses the business name as a keyword match signal for local queries; an exact or near-exact name match to the top search term raises ranking relevance for that query above competitors with non-matching names, even if competitors have more reviews.",
+      "numbers": null,
+      "bounded_by": [
+        "Google has policies against keyword-stuffed business names; enforcement varies",
+        "Keyword name alone is insufficient — review count and rating also matter"
+      ]
+    },
+    {
+      "text": "For GMB local service listings, having a 5-star average review rating provides a competitive edge over incumbents with 4.3-4.7 star ratings, because the drop-service GMB model uses a non-organic review acquisition process that reliably produces 5-star profiles.",
+      "type": "assertion",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Drop-service GMB model where reviews are not from actual customers",
+        "Competitors hold ratings between 4.3 and 4.7 stars"
+      ],
+      "mechanism": "Higher star ratings increase click-through rate from the Google Maps local pack; a 5-star profile draws a disproportionate share of leads relative to volume-equivalent competitors with lower ratings, because consumers anchor on star rating as the primary quality heuristic.",
+      "numbers": {
+        "axis": "competitor review rating vs. relative ranking advantage",
+        "anchors": [
+          {"region": "Competitor at 4.0-4.3 stars", "value": "significant disadvantage vs 5-star"},
+          {"region": "Competitor at 4.5-4.7 stars", "value": "moderate disadvantage vs 5-star"},
+          {"region": "Own profile at 5.0 stars", "value": "ranking and CTR advantage"}
+        ]
+      },
+      "bounded_by": [
+        "Review count must also be competitive; 5 stars with 2 reviews loses to 4.5 stars with 200 reviews"
+      ]
+    },
+    {
+      "text": "For high-ticket service niches (e.g., asphalt contracting) using the GMB drop-service model, the binding constraint in city selection shifts from competition (which is typically low, as few businesses build strong GMB profiles in these niches) to search volume (which is often insufficient to generate meaningful lead flow in smaller markets).",
+      "type": "comparison",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Avatar Targeting Strategy",
+      "conditions": [
+        "High-ticket service niches (e.g., asphalt contracting, landscaping)",
+        "GMB drop-service model",
+        "Smaller to mid-sized cities"
+      ],
+      "mechanism": "High-ticket services are purchased infrequently; low purchase frequency translates to low monthly search volume in smaller cities. Conversely, the infrequency also means fewer businesses have invested heavily in GMB optimization, making competition low — the two constraints trade off against each other across city size.",
+      "numbers": {
+        "axis": "monthly search volume for high-ticket service vs. city size",
+        "anchors": [
+          {"region": "Asphalt contractor, Petaluma CA (small city)", "value": "~80 searches/month — insufficient"},
+          {"region": "Asphalt contractor, San Francisco CA (major city)", "value": "~310 searches/month — marginal but viable"},
+          {"region": "Landscaping, San Francisco CA", "value": "~5,000 searches/month — high volume, but competition increases"}
+        ]
+      },
+      "bounded_by": [
+        "Emergency services (plumbing, HVAC) show the inverse: competition is the binding constraint, not search volume",
+        "Major cities can resolve the volume problem for high-ticket services but reintroduce competition"
+      ]
+    },
+    {
+      "text": "For emergency-service niches (e.g., plumbing) using the GMB drop-service model, the binding constraint in city selection is competition — not search volume. Large cities have abundant search volume but are over-indexed with established competitors holding hundreds or thousands of reviews, while smaller cities have low competition but insufficient search volume.",
+      "type": "comparison",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Emergency-service niches such as plumbing",
+        "GMB drop-service model",
+        "US markets"
+      ],
+      "mechanism": "Emergency services generate high search volume in proportion to city population, but the same high-frequency demand also attracts established incumbents who have accumulated thousands of reviews over years, making top-three displacement nearly impossible without a physical address and extensive review volume.",
+      "numbers": {
+        "axis": "city size vs. competition level for plumbing GMB",
+        "anchors": [
+          {"region": "San Francisco / San Jose (major metro)", "value": "1,000-3,000 reviews in top three — not viable"},
+          {"region": "Petaluma CA (~60k population)", "value": "10-53 reviews in top three — viable"},
+          {"region": "Angwin CA (very small)", "value": "~10 searches/month — insufficient volume"}
+        ]
+      },
+      "bounded_by": [
+        "Having a physical address on the profile extends the viable city size upward — more competitive cities become accessible",
+        "High-ticket services show the opposite pattern"
+      ]
+    },
+    {
+      "text": "The GMB drop-service city research process can be delegated to a virtual assistant at approximately $5/hour (via Upwork or OnlineJobs.ph), producing a large list of candidate cities for roughly $20 of labor (approximately 4 hours of work).",
+      "type": "quantified",
+      "speaker": "unnamed GMB instructor (10k_from_1_gmb.txt)",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "City research involves manual GMB competition lookup and keyword tool volume check",
+        "Virtual assistant has been trained on the process",
+        "Platforms: Upwork or OnlineJobs.ph"
+      ],
+      "mechanism": "The research process is systematic and repeatable once the evaluation criteria (review count threshold, search volume threshold) are documented; VA-level pattern matching is sufficient to execute it without senior judgment.",
+      "numbers": {
+        "axis": "VA labor cost vs. output for city research",
+        "anchors": [
+          {"region": "4 hours at $5/hour", "value": "~$20 total; produces a large batch of candidate cities"},
+          {"region": "Founder doing it personally", "value": "$0 labor cost but burns high-value founder time; described as quick once familiar with the process"}
+        ]
+      },
+      "bounded_by": [
+        "VA must be trained on the specific evaluation framework first",
+        "AI tools are explicitly rejected for this process by the speaker — manual lookup only"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The speaker demonstrates the city selection process live for plumbing in Petaluma, CA. Searching Google Maps for plumbers in Petaluma reveals three competitors with 53, 29, and 10 reviews respectively — all under 100 reviews and all service-area businesses without a physical address. None of the competitor profiles contain the keyword 'Plumber Petaluma' in their business name. Checking a keyword tool shows approximately 1,300 monthly searches for plumbing-related queries in Petaluma (after subtracting ~140 queries directed to a branded business called Joe's Plumbing). The speaker concludes this is a strong entry opportunity: low competition, adequate volume, and an easy keyword-name advantage by registering as 'Plumber Petaluma' or 'Emergency Plumber Petaluma.'",
+      "claim_index": 1,
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "text": "The speaker compares Ann Arbor, MI and Flint, MI as candidate cities for plumbing. Ann Arbor shows approximately 5,000 monthly searches for plumbing queries alongside low competition (top three reviews: 82, 130, 82), making it a strong candidate. Flint shows lower but still meaningful search volume (estimated ~1,000+ searches) with similarly low competition. The speaker marks Ann Arbor as superior due to its 5x search volume advantage with comparable competition levels, and prioritizes it first in the listing queue.",
+      "claim_index": 6,
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "text": "The speaker demonstrates the high-ticket search volume constraint using asphalt contracting in Petaluma, CA. The competition is minimal — the top-ranked profile has only 6 reviews, others have 15, 6, and 0 reviews — yet the monthly search volume for asphalt-related queries in Petaluma is only ~80 searches/month. The speaker declares this insufficient for meaningful lead generation and pivots to San Francisco for the same niche, finding ~310 monthly searches with similarly low competition, calling it marginal but viable. He then checks landscaping in San Francisco, finding ~5,000 monthly searches but notes the competition is much higher — illustrating the volume-competition tradeoff that emerges in larger cities for high-ticket niches.",
+      "claim_index": 5,
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "The speaker references a student named Cole who entered landscaping via the GMB drop-service model and, within two months, reached $250,000 per month in revenue. The speaker uses this as an illustrative upper bound for what high-ticket, high-volume city-niche combinations can produce, contrasting it with the more conservative $7,500/month baseline from a 1,000-search plumbing market.",
+      "claim_index": 0,
+      "topic": "Lead-Cost-Closeout Math"
+    },
+    {
+      "text": "The speaker demonstrates the keyword-name ranking advantage using the New Orleans fencing example. A competitor with a 4.0-star rating and only 32 reviews is ranking second in the local pack, despite weak rating and low review count, because its business name includes 'New Orleans' and 'Fence Company' — matching the highest-volume search query exactly. This profile outranks nominally stronger profiles because of the name keyword match, illustrating how exact-match business names override review-count disadvantages at moderate competition levels.",
+      "claim_index": 3,
+      "topic": "Availability as Conversion Multiplier"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When evaluating a city for GMB entry, remove branded search queries (e.g., 'Joe's Plumbing Petaluma') and unrelated homophones (e.g., 'corn stock fence') from the raw keyword tool volume before using the number to estimate lead flow.",
+      "topic": "Lead-Cost-Closeout Math"
+    },
+    {
+      "text": "In the city research workflow, first scan competitor review counts across multiple candidate cities before checking search volume, because competition filtering eliminates more candidates and is faster to execute visually on Google Maps.",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "text": "When naming a GMB business profile, use the exact keyword phrase with the highest monthly search volume for that service-city combination (e.g., 'Plumber Petaluma') rather than a branded or generic name, to maximize ranking relevance for the primary search query.",
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "Familiarize yourself with your niche's typical close rate and average ticket before running city selection math, as emergency services have higher close rates (~50%) while high-ticket services have lower close rates — using the wrong assumption produces misleading revenue projections.",
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "When expanding to new cities, collect and score 10-15 candidate cities before listing any profiles, then prioritize them by the ratio of search volume to average competitor review count to sequence your market entries by expected ROI.",
+      "topic": "Volume-First Scaling"
+    }
+  ]
+}

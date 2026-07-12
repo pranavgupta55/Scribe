@@ -1,0 +1,299 @@
+{
+  "source_file": "rank_1_google_maps_3_step_formula.txt",
+  "primary_speaker": "the host (Plumber Done Right, Greater Toronto Area)",
+  "concepts_addressed": [
+    "Geographic Expansion Sequence: Dominate Local, Then Expand",
+    "Market Selection Criteria: Growth + Pain + Targeting",
+    "Social Proof Hierarchy in Sales",
+    "Single-Channel Domination",
+    "Volume-First Scaling",
+    "Sales Speed and First-Contact Advantage",
+    "Channel Optimization Before Expansion",
+    "Tracking and Measurement Discipline"
+  ],
+  "frameworks": [
+    {
+      "name": "Three-Step GMB Ranking Formula",
+      "definition": "A three-stage process for ranking first on Google Maps without a website: (1) market research to select cities by search volume and competition, (2) on-page GMB SEO optimization combined with review-count parity, (3) ongoing maintenance to preserve rank.",
+      "concept": "Geographic Expansion Sequence: Dominate Local, Then Expand"
+    }
+  ],
+  "claims": [
+    {
+      "text": "The host (Plumber Done Right) argues that a Google My Business (GMB) website is not the primary ranking factor for Google Maps placement; a GMB profile with as few as two three-star reviews will receive no calls regardless of how strong the associated website is. On-page GMB profile optimization and review count dominate ranking weight relative to website SEO.",
+      "type": "assertion",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "on page SEO specifically the SEO that's done on your google business profile",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Local service businesses (e.g., plumbing) in competitive urban markets",
+        "Google Maps / Google My Business ranking context"
+      ],
+      "mechanism": "Google Maps ranking algorithm weights GMB profile completeness and review signals more heavily than website domain authority for local search; website authority improves rank but is not the binding constraint.",
+      "numbers": null,
+      "bounded_by": [
+        "Website SEO and GMB profile do work together; website is not irrelevant, only not the primary constraint"
+      ]
+    },
+    {
+      "text": "For Google Maps local service ranking (e.g., plumbing in Canadian cities), a threshold of at least 400 monthly searches for the target keyword in a given city is the minimum viable market worth prioritizing. Cities below 400 monthly searches are worth entering only if competition is negligible.",
+      "type": "quantified",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "at least 400 searches per month in your city",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Local service business (e.g., plumbing) ranking via Google My Business",
+        "Canadian urban/suburban market context"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "monthly search volume for local service keyword in a city",
+        "anchors": [
+          {"region": "below minimum viable", "value": "< 400 searches/month — secondary priority, may yield only a few extra leads per month"},
+          {"region": "primary target", "value": ">= 400 searches/month — main focus; sufficient lead volume to justify GMB build-out effort"}
+        ]
+      },
+      "bounded_by": [
+        "Sub-400-search cities still worth entering if competition is negligible, as leads add up across multiple profiles at scale"
+      ]
+    },
+    {
+      "text": "To rank in the Google Maps top three for a local service keyword, a GMB profile must have a review count within approximately 20% of the third-place ranked profile's review count; below that threshold, on-page SEO improvements cannot fully compensate for the review-count gap.",
+      "type": "quantified",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "within 20% of the amount of reviews that this guy has",
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Google Maps top-three local service ranking",
+        "Competitive markets where the third-place profile has at least a few dozen reviews"
+      ],
+      "mechanism": "Google's ranking algorithm uses review count as a trust and authority signal; being too far below competitors' review counts cannot be overcome by keyword optimization alone, because review volume acts as a social-proof filter baked into the algorithm.",
+      "numbers": {
+        "axis": "review count parity threshold relative to third-place GMB competitor",
+        "anchors": [
+          {"region": "minimum viable", "value": "within 20% of third-place review count (e.g., if third place has 100 reviews, aim for at least 80)"},
+          {"region": "can compensate with SEO", "value": "60-80% of competitor reviews when on-page SEO is fully optimized (host achieved rank #2 in Oshawa with ~105 reviews vs competitor's 180 = ~58%)"}
+        ]
+      },
+      "bounded_by": [
+        "Strong on-page SEO can partially compensate for a review deficit below 20% threshold, as demonstrated by host's own Oshawa placement"
+      ]
+    },
+    {
+      "text": "When the lowest-review-count business in a Google Maps top-three result has under 100 reviews and the city has over 400 monthly searches, a new GMB profile faces a highly favorable ranking opportunity — the host describes this combination as being in a 'really good position.'",
+      "type": "conditional",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "if the top three have one of them at least has under 100 reviews you're golden",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Local service GMB ranking context",
+        "City has > 400 monthly keyword searches",
+        "Third-place or lower competitor has < 100 reviews"
+      ],
+      "mechanism": "Low review counts in the top three mean the entry bar is achievable within a short time horizon; high search volume ensures the market is worth the investment.",
+      "numbers": {
+        "axis": "competitor review count as entry-difficulty signal",
+        "anchors": [
+          {"region": "favorable entry condition", "value": "< 100 reviews in top three + > 400 monthly searches"},
+          {"region": "harder entry condition", "value": ">= 100 reviews in top three (e.g., 1,300-review first-place profile in Oshawa is described as very hard to beat)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Answering inbound phone calls from GMB profiles sends a trust and authority signal to Google's internal ranking algorithm, making the platform more likely to surface the listing to searchers. The host (Plumber Done Right) treats answering all calls personally as a ranking maintenance tactic.",
+      "type": "mechanism",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "answering your phone just kind of shows Google that you are committed to helping your customers",
+      "topic": "Sales Speed and First-Contact Advantage",
+      "conditions": [
+        "Google My Business profile maintenance phase, after initial top-three ranking is achieved"
+      ],
+      "mechanism": "Google monitors engagement signals including call response; consistent call answering signals to the algorithm that the business is actively serving customers, increasing the listing's trust score and rank stability.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker's attribution of Google's internal signal is inferred, not sourced from official Google documentation"
+      ]
+    },
+    {
+      "text": "Acquiring at least two GMB reviews per week, combined with timely replies to those reviews, is the minimum maintenance cadence to preserve a Google Maps top-three ranking after initial placement. The host (Plumber Done Right) treats this as approximately 10 minutes of weekly effort.",
+      "type": "quantified",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "get a couple reviews a week even if it's just two reviews a week and you're replying to them",
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Post-ranking maintenance phase for an established GMB profile already in the top three",
+        "Local service business (e.g., plumbing) in competitive urban markets"
+      ],
+      "mechanism": "Consistent review acquisition signals to Google's algorithm that the business is actively engaged with customers, sustaining the trust score that underpins the ranking.",
+      "numbers": {
+        "axis": "minimum weekly review acquisition for rank maintenance",
+        "anchors": [
+          {"region": "maintenance floor", "value": "2 reviews per week with replies"},
+          {"region": "time cost", "value": "approximately 10 minutes per week total for reviews + replies + occasional posts"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "The host (Plumber Done Right) operates 20 to 30 Google My Business profiles under the brand name 'Plumber Done Right' across the Greater Toronto Area, generating approximately 20 leads per week per high-performing profile and a total of several hundred leads per week organically from this GMB network.",
+      "type": "quantified",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "I have over 30 nah probably around 20 to 30 GMB profiles",
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "Local plumbing service business",
+        "Greater Toronto Area, Canada",
+        "Profiles in cities with 400+ monthly searches"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "leads generated per profile per week",
+        "anchors": [
+          {"region": "high-performing profile (e.g., Brampton, 800k+ population)", "value": "~20 leads per week"},
+          {"region": "mid-tier profile (e.g., Oshawa, 100-200k population)", "value": "~10-15 leads per week"},
+          {"region": "total network (20-30 profiles)", "value": "several hundred leads per week total"}
+        ]
+      },
+      "bounded_by": [
+        "Total counts include leads sourced across cold outreach and GMB; pure GMB-only split not isolated by speaker"
+      ]
+    },
+    {
+      "text": "A Google Maps first-place ranking for a local service keyword in a city with approximately 2,000 high-intent monthly searches generates a minimum of 3 to 5 leads per day, which at a 50% close rate translates to thousands of dollars per day in potential revenue.",
+      "type": "quantified",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "if you're ranking first in a city with 2,000 searches, you're getting at least three to five leads every single day",
+      "topic": "Single-Channel Domination",
+      "conditions": [
+        "First-place Google Maps ranking (not sponsored)",
+        "City with approximately 2,000 monthly high-intent searches for the service keyword"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "daily inbound leads from a #1 Google Maps ranking",
+        "anchors": [
+          {"region": "conservative floor at ~2,000 monthly searches", "value": "3-5 leads per day"},
+          {"region": "revenue potential at 50% close rate", "value": "thousands of dollars per day (speaker's estimate, without specifying average deal size)"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker describes the 3-5 leads/day estimate as very conservative",
+        "80% of searchers click one of the top three results, so second and third place also receive significant volume"
+      ]
+    },
+    {
+      "text": "The top three Google Maps results capture approximately 80% of all searcher clicks for a local service keyword; ranking second or third in the top three still generates substantial call volume. The host (Plumber Done Right) treats entry into the top three as the meaningful goal, not exclusively first place.",
+      "type": "quantified",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "this is where 80% of searchers are going to go to",
+      "topic": "Single-Channel Domination",
+      "conditions": [
+        "Google Maps local service search results"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "share of searcher clicks by Maps result position",
+        "anchors": [
+          {"region": "top three combined", "value": "~80% of all clicks"},
+          {"region": "position four and below", "value": "~20% of clicks (implied by speaker's framing)"}
+        ]
+      },
+      "bounded_by": [
+        "Paid sponsored results appear above the organic top three and are excluded from this claim"
+      ]
+    },
+    {
+      "text": "The host (Plumber Done Right) claims that fully completing a GMB profile — including keyword-rich description, product section, service descriptions with keywords, Q&A section, service areas with postal codes, and regular photo updates — combined with achieving review-count parity, guarantees top-three ranking regardless of city size or competition level.",
+      "type": "assertion",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "I guarantee if you do all of these things and you are within 20% of your top three, you will 100% rank there",
+      "topic": "Geographic Expansion Sequence: Dominate Local, Then Expand",
+      "conditions": [
+        "GMB profile completeness: description, products, services with keywords, Q&A, service areas, photo updates",
+        "Review count within 20% of third-place competitor",
+        "City has sufficient search volume (400+ monthly searches)"
+      ],
+      "mechanism": "Google's ranking algorithm rewards complete, keyword-optimized GMB profiles with trust and relevance signals; these signals, combined with social-proof signals from review count, produce consistent top-three placement.",
+      "numbers": null,
+      "bounded_by": [
+        "Host acknowledges sponsored/paid results rank above organic listings and cannot be overcome with this formula",
+        "Claim is based on personal experience across 20-30 profiles in Greater Toronto Area, not a controlled study"
+      ]
+    },
+    {
+      "text": "The host (Plumber Done Right) uses keyword-density analysis of competitors' GMB descriptions to identify ranking opportunities: a competitor using 'plumbing' instead of 'plumber' as a keyword phrase signals a weakness that reduces the review count needed to outrank them.",
+      "type": "mechanism",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "they don't really have very good keywords in the name, right? So they're ranking for plumbing, not plumber",
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "Google My Business on-page SEO analysis",
+        "Competitor profiling in local service market research step"
+      ],
+      "mechanism": "Search intent for local plumbing services concentrates on the term 'plumber' (noun, person-seeking) more than 'plumbing' (noun, service category); a competitor optimized for the lower-intent term loses relevance score on the higher-intent searches, reducing the review-count bar needed to outrank them.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "The host (Plumber Done Right) argues that a GMB profile can achieve top-three ranking with no associated website, or with a template website that has no SEO and even broken pages, demonstrating that the GMB profile itself — not the linked website — is the primary ranking vehicle for Google Maps in local service categories.",
+      "type": "assertion",
+      "speaker": "the host (Plumber Done Right)",
+      "speaker_term": "I quite literally had no website on this page maybe a week ago",
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "Google Maps / Google My Business local service ranking",
+        "Competitive urban markets (Greater Toronto Area plumbing)"
+      ],
+      "mechanism": "Google Maps ranking for local service queries is driven by GMB profile signals (completeness, reviews, engagement) rather than website domain authority; the website link on a GMB profile contributes marginal ranking benefit compared to the profile's own signals.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker acknowledges website and GMB profile 'do go hand in hand' — website is not irrelevant, just not the binding constraint",
+        "Website may matter more in markets with very high competition where all top-three profiles are fully optimized"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The host (Plumber Done Right) demonstrated his GMB ranking methodology live using Oshawa, Ontario as a case study. Searching 'plumber Oshawa' in SEMrush showed approximately 2,800 related monthly searches, reduced to roughly 2,000 high-intent searches after subtracting branded/company-specific queries. The top competitor had 1,300 reviews and a 4.9-star rating, which the host deemed very difficult to beat outright. The second competitor had 180 reviews and 4.8 stars. The host identified that this competitor used 'plumbing' rather than 'plumber' as their primary keyword and had inconsistent recent reviews (a week ago and two months ago), meaning the effective review bar to outrank them dropped from 180 to approximately 100 after factoring in SEO advantages. The host's own Oshawa profile had 105 reviews, ranked second overall, and generated approximately 10-15 leads per week.",
+      "claim_index": 2,
+      "topic": "Social Proof Hierarchy in Sales"
+    },
+    {
+      "text": "The host (Plumber Done Right) showed a Brampton, Ontario GMB profile ranking first for plumbing searches in a city with over 800,000 residents. He verified ownership by showing the profile phone number matched a number he controls, generating approximately 20 leads per week from that profile alone. A second unnamed profile also ranked first but was not emphasized. A Richmond Hill profile was shown managed under his GMB account with full manager access, further demonstrating the multi-profile replication model across the Greater Toronto Area.",
+      "claim_index": 6,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "The host (Plumber Done Right) acknowledged his Oshawa GMB profile had only about 58% of the review count of the third-place competitor (105 vs. 180 reviews), which fell below his stated 20% parity rule (which would require 144 reviews). He attributes his second-place ranking despite this shortfall to a superior star rating and stronger on-page keyword optimization, demonstrating that the 20% rule is a floor that SEO can partially compensate for in practice.",
+      "claim_index": 2,
+      "topic": "Social Proof Hierarchy in Sales"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Use SEMrush (or equivalent keyword tool) to look up monthly search volumes for '[service] + [city name]' in your target geography before investing in a GMB profile for that city.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Fill out every section of the GMB profile completely: description with high-intent keywords (e.g., 'plumber near me in [city]', 'emergency plumber', '24 hours'), product listings, service descriptions with keyword-rich copy, Q&A section, service areas with specific postal codes, and regular photo posts.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "Analyze the consistency of competitors' recent reviews (recency signal) when estimating the effective review count needed to outrank them; infrequent recent reviews reduce the effective bar even if total review count is high.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Post updates to your GMB profile once every one to two weeks and add new products periodically to maintain freshness signals; treat this as a 10-minute-per-week task once top-three ranking is achieved.",
+      "topic": "Geographic Expansion Sequence: Dominate Local, Then Expand"
+    },
+    {
+      "text": "Source reviews through creative low-cost means: asking friends and family with payment incentives (~$2-5 per review), hiring someone to approach people at college campuses or malls to request reviews via a shared link, rather than buying bulk reviews from overseas vendors (which are deleted by Google).",
+      "topic": "Social Proof Hierarchy in Sales"
+    },
+    {
+      "text": "Prioritize cities with high search volume and low competitor review counts first; once those are ranked, expand to lower-volume cities as a secondary tranche since even small cities add marginal leads that accumulate across a portfolio of profiles.",
+      "topic": "Geographic Expansion Sequence: Dominate Local, Then Expand"
+    }
+  ]
+}

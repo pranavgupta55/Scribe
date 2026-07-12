@@ -1,0 +1,224 @@
+{
+  "source_file": "why_gbp_gets_no_calls.txt",
+  "primary_speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto, 20+ Google Business Profile locations)",
+  "concepts_addressed": [
+    "Google Business Profile Optimization",
+    "Supply vs. Demand Constraint Diagnosis",
+    "Volume-First Scaling",
+    "Single-Channel Domination",
+    "Avatar Targeting Strategy"
+  ],
+  "frameworks": [
+    {
+      "name": "GBP Ranking Factors (Most to Least Important)",
+      "definition": "A four-factor ordered hierarchy governing Google Business Profile ranking and call volume: (1) review count, (2) average star rating, (3) title SEO keyword match, (4) on-page description SEO and website quality.",
+      "concept": "Google Business Profile Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "For local service businesses using Google Business Profile (GMB), a city search volume below 400 searches per month for the target service keyword makes generating inbound calls virtually impossible regardless of profile quality or ranking position, because there are simply not enough searchers to produce call volume.",
+      "type": "conditional",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "search volume in your city",
+      "topic": "Supply vs. Demand Constraint Diagnosis",
+      "conditions": [
+        "Local service business relying on Google Business Profile as primary inbound channel",
+        "City-level search volume for target service keyword below 400 searches per month"
+      ],
+      "mechanism": "Insufficient search volume means the total available pool of potential callers is too small to produce measurable call volume regardless of ranking; there is no way to capture demand that does not exist.",
+      "numbers": {
+        "axis": "Monthly city-level search volume for target service keyword",
+        "anchors": [
+          {"region": "below threshold", "value": "under 400 searches/month — leads unlikely regardless of ranking"},
+          {"region": "above threshold", "value": "400+ searches/month — call volume achievable with correct optimization"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to paid search channels where impressions can be purchased",
+        "Does not apply to businesses with multiple city locations that aggregate demand across a metro area"
+      ]
+    },
+    {
+      "text": "In competitive metro-area Google Business Profile rankings (e.g., downtown Toronto plumbing), businesses with more than roughly 100 reviews almost universally include fake reviews; the practice is so widespread that operators must acquire fake reviews themselves to remain competitive, as complaining is not a viable alternative to participation.",
+      "type": "assertion",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "fake reviews",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "High-competition metro area GBP market (e.g., downtown Toronto)",
+        "Businesses with 100+ reviews"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Review count threshold above which fake reviews become near-universal",
+        "anchors": [
+          {"region": "below threshold", "value": "under ~100 reviews — mix of authentic and fake plausible"},
+          {"region": "above threshold", "value": "100+ reviews — speaker states fake reviews are essentially universal"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker's observation is from Toronto plumbing market; may not generalize to lower-competition niches or smaller cities"
+      ]
+    },
+    {
+      "text": "To rank in the top three Google Business Profile positions in a city, a business needs a review count within approximately 10% of the third-place competitor; being materially below the third-place review count makes top-three ranking unlikely regardless of other optimization factors.",
+      "type": "conditional",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "within 10% of the third guy",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Target is top-three GBP ranking in a given city",
+        "Review count compared to third-place competitor"
+      ],
+      "mechanism": "Review count is directly correlated with ranking position; Google's algorithm heavily weights review quantity as a trust and relevance signal.",
+      "numbers": {
+        "axis": "Review count gap between entrant and third-place competitor",
+        "anchors": [
+          {"region": "within range", "value": "within ~10% of third-place count — top-three ranking achievable"},
+          {"region": "outside range", "value": "materially below third-place — top-three ranking unlikely"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "A Google Business Profile with an average star rating below 4.8 is extremely unlikely to rank in the top three positions in its city, effectively disqualifying it from the primary call-generating positions regardless of review count or other optimization factors.",
+      "type": "conditional",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "rating",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Target is top-three GBP ranking in a given city"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Average star rating for GBP top-three ranking eligibility",
+        "anchors": [
+          {"region": "disqualifying", "value": "below 4.8 stars — tanks profile, top-three ranking very hard"},
+          {"region": "competitive", "value": "4.8 to 5.0 stars — consistent with observed top-three profiles"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker observes this pattern empirically from Toronto market; exact threshold may vary by market"
+      ]
+    },
+    {
+      "text": "For Google Business Profile SEO, including the exact keyword phrase that searchers use (e.g., 'plumber' rather than 'plumbing', plus the city name) in the business name title directly increases the profile's ranking relevance and call volume, because search algorithms match the business name against the user's query string word-for-word.",
+      "type": "mechanism",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "title SEO",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile in a local service category",
+        "Keyword research has identified the higher-volume search term variant"
+      ],
+      "mechanism": "Search algorithms match the user's typed query against the business name as a direct relevance signal; exact keyword matches in the business name increase the profile's relevance score for those queries, boosting ranking and the share of searchers who see the listing.",
+      "numbers": {
+        "axis": "Monthly searches by keyword variant (Plumber Richmond Hill example)",
+        "anchors": [
+          {"region": "higher-volume variant", "value": "plumber Richmond Hill: 480 searches/month"},
+          {"region": "lower-volume variant", "value": "plumbing Richmond Hill: 140 searches/month"}
+        ]
+      },
+      "bounded_by": [
+        "Google's terms of service restrict purely keyword-stuffed names; business name must reflect the actual business"
+      ]
+    },
+    {
+      "text": "Multi-location Google Business Profile strategies — operating 20+ separately listed profiles within a metro area — allow a service business to capture inbound calls from a roughly one-hour geographic radius around a major city, while a single-location profile captures only a fraction of that geographic reach.",
+      "type": "comparison",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "multiple profiles",
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "Service business operating in a large metro area",
+        "Business can service customers across the metro area (e.g., by dispatching contractors)"
+      ],
+      "mechanism": "Each GBP listing ranks within a specific geographic radius; multiple listings covering different city zones collectively cover the full metro area, accumulating total call volume proportional to the number of ranked listings.",
+      "numbers": {
+        "axis": "Geographic coverage from GBP listings",
+        "anchors": [
+          {"region": "single profile", "value": "ranks within a local radius — limited geographic coverage"},
+          {"region": "20+ profiles (speaker's model)", "value": "~1-hour radius around Toronto — 300-400 calls per week total"}
+        ]
+      },
+      "bounded_by": [
+        "Requires operational infrastructure to service the full geographic area (e.g., outsourced contractor network)",
+        "A profile cannot rank two hours from its listed location"
+      ]
+    },
+    {
+      "text": "On-page description SEO in a Google Business Profile — specifically including high-volume service keywords (e.g., 'emergency services' for plumbing) in the business description — increases the profile's relevance for those search queries and improves ranking for searchers using those terms.",
+      "type": "mechanism",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "on-page SEO",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Service category with distinct high-search-volume sub-queries (e.g., 'emergency plumber')"
+      ],
+      "mechanism": "Including service-specific keywords in the GBP description signals to Google that the business is relevant to those query variants, improving ranking for searches that include those terms.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Website quality (page load speed and visual design) and off-page SEO (website SEO and backlinks) have a small but real effect on Google Business Profile ranking, but these factors are far less important than review count, rating, and title keyword match — speaker estimates top three factors account for roughly 90-95% of ranking influence.",
+      "type": "quantified",
+      "speaker": "unnamed GBP practitioner (operator of Plumber Done Right, Toronto)",
+      "speaker_term": "website conversion, backlinks",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Profile has already optimized reviews, rating, and title SEO"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Share of GBP ranking influence by factor category",
+        "anchors": [
+          {"region": "top three factors (reviews, rating, title SEO)", "value": "~90-95% of ranking influence (speaker's estimate)"},
+          {"region": "website quality and backlinks", "value": "~5-10% of ranking influence — meaningful but secondary"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker states he has multiple top-ranking profiles with poor websites and no backlinks, treating those factors as secondary"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The speaker operates Plumber Done Right with 20+ Google Business Profile locations throughout the Greater Toronto Area. By optimizing each profile for review count, star rating, and exact keyword matching (e.g., the business name includes 'plumber' and the suburb city name), these profiles consistently rank in the top three across nearly the entire city and its suburbs. The result is approximately 300-400 inbound calls per week, generated entirely through GBP without any paid advertising. The speaker demonstrates this by searching 'plumber richmond hill' live, showing Plumber Done Right ranked first, and 'plumber oshawa,' showing an off-branded location ranked second.",
+      "claim_index": 5,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "The speaker uses Semrush's keyword overview tool (free tier, ~5 searches per day) to compare 'plumber Richmond Hill' (480 monthly searches) versus 'plumbing Richmond Hill' (140 monthly searches) to demonstrate that the exact search term variant matters significantly. The higher-volume term 'plumber' is the word included in the business name; this directly contributes to more impressions and more calls because relevance to the user's search query is higher.",
+      "claim_index": 4,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "As an example of the minimum threshold for top-three ranking, the speaker cites a hypothetical competitor with 29 reviews and suggests targeting at least 25 reviews (within ~10% of the third-place profile) as the minimum to compete for a top-three slot. Without reaching that threshold, other optimization efforts have diminished impact.",
+      "claim_index": 2,
+      "topic": "Google Business Profile Optimization"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Before optimizing a Google Business Profile, use a keyword research tool (e.g., Semrush free tier) to look up search volume for your service category plus your city name. If monthly search volume is below 400 for your target keyword, there is insufficient demand to generate inbound calls from GBP regardless of optimization effort.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Set a GBP title that includes the exact keyword phrase searchers use (e.g., 'plumber' not 'plumbing') and the city or suburb name, matching the highest-volume search variant identified via keyword research.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Include high-volume service sub-category keywords (e.g., 'emergency services' for plumbing) in the GBP business description to improve relevance for those query variants.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Monitor and ensure your GBP star rating stays at 4.8 or above; anything below 4.8 will tank the profile and make top-three ranking very difficult to achieve.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Once review count, star rating, and title SEO are optimized, add website SEO and backlinks as secondary improvements; these have meaningful but marginal impact compared to the primary factors.",
+      "topic": "Google Business Profile Optimization"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "source_file": "exact_80k_dropservicing_sales_system.txt",
+  "primary_speaker": "Eric Welch",
+  "concepts_addressed": [
+    "Lead Response Time",
+    "Sales Closing Mechanics",
+    "Availability as Conversion Multiplier",
+    "Sales Process Optimization",
+    "Price Anchoring",
+    "Meeting and Follow-Up Cadence",
+    "Motivated Buyer Targeting",
+    "Sales Targeting and Lead Qualification",
+    "Before/After Proof Engine",
+    "Script Compliance"
+  ],
+  "frameworks": [
+    {
+      "name": "Paid Inspection Appointment Funnel",
+      "definition": "A four-stage sales flow for high-ticket home services: (1) answer phone instantly, (2) close a paid inspection appointment, (3) send confirmation and reminders, (4) have contractor upsell on-site and close same-day.",
+      "concept": "Sales Process Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Eric Welch, running a drop servicing business in home services (plumbing, HVAC, electrical), reports that contacting inbound leads by phone as quickly as possible — ideally on the first ring — is the primary conversion lever, because most local service businesses fail to answer their phones at all, making immediate response a near-automatic differentiator.",
+      "type": "mechanism",
+      "speaker": "Eric Welch",
+      "speaker_term": "speed",
+      "topic": "Lead Response Time",
+      "conditions": [
+        "Inbound leads from Google Business Profile listings for local home services",
+        "Drop servicing model where owner is not on a job site"
+      ],
+      "mechanism": "Most competing local service businesses are on job sites and do not answer; the first business to respond wins by default because customers are simultaneously contacting multiple providers.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when the service has a single dominant provider with no competition"
+      ]
+    },
+    {
+      "text": "Eric Welch states that for drop servicing businesses targeting $20,000+ per month in profit, the niche must be higher-ticket home services (e.g., plumbing, HVAC, electrical) rather than commodity services, because individual job sizes — furnace installations at $6,500, drain jobs at $1,000–$2,000 — are the unit through which revenue accumulates.",
+      "type": "conditional",
+      "speaker": "Eric Welch",
+      "speaker_term": "higher ticket niche",
+      "topic": "Motivated Buyer Targeting",
+      "conditions": [
+        "Drop servicing model: owner generates leads, subcontracts execution",
+        "Target monthly profit threshold: $20,000+"
+      ],
+      "mechanism": "Higher per-job revenue means fewer closed jobs are required to reach monthly profit targets; commodity services require disproportionately high volume.",
+      "numbers": {
+        "axis": "individual job revenue by service type",
+        "anchors": [
+          {"region": "furnace installation (HVAC)", "value": "$6,500"},
+          {"region": "hydro jetting (plumbing)", "value": "$1,000–$2,000"},
+          {"region": "drain snake (plumbing)", "value": "$200–$400"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to high-volume commodity services (lawn care, cleaning) where margin comes from volume, not ticket size"
+      ]
+    },
+    {
+      "text": "Eric Welch advocates pushing for a paid inspection ($60 fee, waived if service is booked) rather than a free estimate in high-ticket home service drop servicing, because paid inspections filter uncommitted leads, compensate the contractor for travel time, and reduce the pressure-selling dynamic that free estimates create.",
+      "type": "mechanism",
+      "speaker": "Eric Welch",
+      "speaker_term": "paid inspection",
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "Higher-ticket home services (plumbing, HVAC, electrical)",
+        "Drop servicing model where owner books appointments and contractor executes"
+      ],
+      "mechanism": "A free estimate signals that the contractor will try to sell aggressively once in the door; a paid inspection reframes the visit as a diagnostic service, reducing buyer resistance and pre-qualifying intent via a nominal fee.",
+      "numbers": {
+        "axis": "inspection fee structure",
+        "anchors": [
+          {"region": "paid inspection fee charged", "value": "$60"},
+          {"region": "fee if service is booked", "value": "$0 (waived, credited to service)"}
+        ]
+      },
+      "bounded_by": [
+        "In some niches a free estimate is the market norm and pushing a paid inspection loses the lead entirely"
+      ]
+    },
+    {
+      "text": "Eric Welch argues that when a lead objects that 'other companies offer free estimates,' the correct counter-frame is to position free estimates as a high-pressure sales tactic by competitors, while characterizing the paid inspection as a transparency mechanism that protects the customer from being oversold work they do not need.",
+      "type": "mechanism",
+      "speaker": "Eric Welch",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "Inbound phone inquiry for plumbing or similar home service",
+        "Prospect raises free-estimate objection before appointment is booked"
+      ],
+      "mechanism": "Reframing the competitor's free offer as a bait-and-tactic shifts the evaluation axis from price to trust; the paid inspection is repositioned as a buyer-protective service rather than a seller-benefiting charge.",
+      "numbers": null,
+      "bounded_by": [
+        "Markets where free estimates are a strong, universal norm may reject this reframe entirely"
+      ]
+    },
+    {
+      "text": "Eric Welch reports that scheduling the inspection for the same day as the initial call is materially better than scheduling for a future date, because delay gives the prospect time to contact competing providers and potentially book with one of them at a lower price.",
+      "type": "mechanism",
+      "speaker": "Eric Welch",
+      "speaker_term": null,
+      "topic": "Meeting and Follow-Up Cadence",
+      "conditions": [
+        "High-ticket home service drop servicing",
+        "Competitive market with multiple service providers"
+      ],
+      "mechanism": "Home service customers in need of urgent repairs are simultaneously contacting multiple businesses; each hour of delay increases the probability the customer finds a lower-priced alternative and cancels.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Welch describes a confirmation and reminder cadence that reduces no-shows: send a confirmation message immediately after booking, a reminder the morning of the appointment (if next-day), and a text one hour before the contractor arrives (if same-day). Updating the customer whenever the contractor is running late is treated as a competitive differentiator because most local service businesses are unreliable about communication.",
+      "type": "assertion",
+      "speaker": "Eric Welch",
+      "speaker_term": null,
+      "topic": "Meeting and Follow-Up Cadence",
+      "conditions": [
+        "Home service appointment booked via phone",
+        "Drop servicing model with VA or CRM handling confirmations"
+      ],
+      "mechanism": "Proactive communication reduces the anxiety that causes customers to cancel or seek alternatives while waiting; it also signals professionalism relative to competitors who go silent after booking.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Welch asserts that in-home upselling by the contractor — specifically presenting the permanent fix (e.g., hydro jetting at $1,000–$1,500) as cheaper over time than repeated temporary fixes (e.g., snaking at $200–$400 each, five times per year = $2,000) — is the primary mechanism for reaching $5,000–$8,000 individual job sizes.",
+      "type": "mechanism",
+      "speaker": "Eric Welch",
+      "speaker_term": "upsells",
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "Contractor is physically on-site after completing diagnostic inspection",
+        "Service has both a low-cost temporary fix and a higher-cost permanent solution"
+      ],
+      "mechanism": "Customers resist high prices but accept them when shown that the premium option is cheaper in total cost over time; the long-term cost comparison shifts the decision from price-comparison to ROI-comparison.",
+      "numbers": {
+        "axis": "drain clog solution: cost comparison across time",
+        "anchors": [
+          {"region": "snake (temporary fix, repeated)", "value": "$200–$400 per visit, ~$2,000/year if done 5x"},
+          {"region": "hydro jet (permanent fix)", "value": "$1,000–$1,500, guaranteed for ~4 years"}
+        ]
+      },
+      "bounded_by": [
+        "Contractor must not fabricate issues; upsells only valid when additional problems genuinely exist"
+      ]
+    },
+    {
+      "text": "Eric Welch uses price anchoring on-site: the contractor mentions that jobs in this category typically range from $1,000 to $5,000 before naming the actual price (e.g., $1,800), causing the customer to perceive the actual price as favorable relative to the high anchor they mentally prepared for.",
+      "type": "mechanism",
+      "speaker": "Eric Welch",
+      "speaker_term": "price anchoring",
+      "topic": "Price Anchoring",
+      "conditions": [
+        "Contractor is face-to-face with the customer at the job site",
+        "Job price falls meaningfully below the high end of the stated range"
+      ],
+      "mechanism": "Stating a high range first sets a reference point; the actual price feels like a relief or discount relative to the worst-case anchor, reducing price resistance even if the absolute price is high.",
+      "numbers": {
+        "axis": "anchor vs. actual price example",
+        "anchors": [
+          {"region": "stated range (high anchor)", "value": "$1,000–$5,000"},
+          {"region": "actual price quoted", "value": "$1,800"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Welch advises that the contractor should close and begin the job on the same visit whenever possible — at minimum collecting a deposit — because any delay between quote and work start opens a window for the customer to call another provider, find a lower price, and cancel.",
+      "type": "conditional",
+      "speaker": "Eric Welch",
+      "speaker_term": "same day",
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "Contractor has completed diagnosis and delivered quote",
+        "Customer has not yet committed to the job"
+      ],
+      "mechanism": "Price-sensitive home service customers will shop around if given time; executing same-day removes the comparison window and converts commitment to revenue.",
+      "numbers": null,
+      "bounded_by": [
+        "Jobs requiring parts not on-hand or permits cannot be started same day regardless"
+      ]
+    },
+    {
+      "text": "Eric Welch states that when a missed inbound call occurs, the follow-up sequence should be: call back immediately, call back again five minutes later if no answer, call back again five minutes after that, and after three unanswered attempts send a text — rather than emailing or giving up after one attempt.",
+      "type": "assertion",
+      "speaker": "Eric Welch",
+      "speaker_term": null,
+      "topic": "Lead Response Time",
+      "conditions": [
+        "Inbound missed call from a prospective customer",
+        "Drop servicing business where owner or VA handles lead intake"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "missed-call follow-up attempt sequence",
+        "anchors": [
+          {"region": "attempt 1 (immediate callback)", "value": "call right away"},
+          {"region": "attempt 2 (if no answer)", "value": "call again after 5 minutes"},
+          {"region": "attempt 3 (if no answer)", "value": "call again after another 5 minutes"},
+          {"region": "after 3 unanswered calls", "value": "leave voicemail and send text"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Welch reports that professional phone demeanor — speaking pleasantly, sounding like you want to help — is itself a competitive differentiator in local home services because many owner-operators answer the phone rudely or sound reluctant, and customers preference-rank providers on first interaction tone.",
+      "type": "assertion",
+      "speaker": "Eric Welch",
+      "speaker_term": "talk professionally",
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "Local home service market where owner-operators handle their own phones",
+        "Inbound phone inquiry"
+      ],
+      "mechanism": "In commoditized service markets where price and availability are similar, perceived professionalism on first contact is a primary trust signal that shifts preference toward the more pleasant provider.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Welch states that if a prospect refuses to book an appointment and insists on a phone quote, the minimum acceptable conversion step is collecting photos of the issue so a remote quote can be given — not leaving the interaction with nothing tangible scheduled or committed.",
+      "type": "conditional",
+      "speaker": "Eric Welch",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": [
+        "Prospect refuses paid inspection and requests phone quote",
+        "Some visual information about the problem is accessible to the customer"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "If prospect refuses both appointment and photos, no further conversion effort is warranted — move on"
+      ]
+    },
+    {
+      "text": "Eric Welch describes his business model as listing Google Business Profile listings for home service categories (plumbing, HVAC, etc.) in specific cities, generating inbound calls from people searching for those services, and splitting revenue with subcontractors who perform the work — a model he reports generates $80,000 per month in revenue within two months of starting, using this sales system.",
+      "type": "assertion",
+      "speaker": "Eric Welch",
+      "speaker_term": "drop servicing",
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": [
+        "Google Business Profile rankings achieved in target city/service combination",
+        "Qualified subcontractor available to execute jobs"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "revenue achieved using this sales system",
+        "anchors": [
+          {"region": "time to reach milestone", "value": "within 2 months of starting"},
+          {"region": "monthly revenue milestone", "value": "$80,000/month"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker does not disclose net margin or subcontractor revenue share percentage, so profit figure is unverifiable from this transcript"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Eric Welch describes a personal price anchoring experience: when his mother's car was damaged, a mechanic quoted $20,000 for the repair. When a second shop quoted $6,000, the $6,000 felt like relief even though it was objectively expensive — because the prior anchor of $20,000 dominated the emotional reference point. He uses this story to illustrate why contractors should name a high price range before quoting the actual job price.",
+      "claim_index": 7,
+      "topic": "Price Anchoring"
+    },
+    {
+      "text": "Eric Welch provides a plumbing-specific script illustrating how a customer call should be converted to a paid inspection appointment. When a caller reports a clogged drain, the response is: acknowledge the problem, explain that a clogged drain has many possible root causes and requires on-site diagnosis, offer to send a professional within one to two hours, state the $60 inspection fee, explain it is waived if service proceeds, and ask to confirm a time. The script closes with: 'Does this time work?' — presenting a time slot rather than asking open-endedly if they want an inspection.",
+      "claim_index": 2,
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Eric Welch gives a friend's closed deal as an example of high-ticket potential in HVAC drop servicing: the friend closed a furnace installation job for $6,500 — a single transaction — to illustrate why HVAC and similar trades produce materially more revenue per lead than lower-ticket services.",
+      "claim_index": 1,
+      "topic": "Motivated Buyer Targeting"
+    },
+    {
+      "text": "Eric Welch describes a plumbing contractor upsell scenario: a customer calls about a clogged drain. The contractor goes out, diagnoses the issue, and explains that a snake (temporary fix, ~$200–$400) may need to be repeated five times over the next year at a total cost of ~$2,000. The alternative — hydro jetting at $1,000–$1,500 — is presented as a four-year solution with a warranty. The customer sees the permanent option as cheaper over time and agrees to the higher-ticket service. This is Eric Welch's primary described mechanism for achieving $5,000–$8,000 job sizes.",
+      "claim_index": 6,
+      "topic": "Sales Closing Mechanics"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Answer the phone on the first ring; treat every unanswered ring as a lost lead in a competitive local service market.",
+      "topic": "Lead Response Time"
+    },
+    {
+      "text": "Send a booking confirmation text or email immediately after an appointment is scheduled using a CRM or VA, so the customer has written confirmation before they consider calling a competitor.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "When quoting over the phone is unavoidable, use ChatGPT to draft professional confirmation messages and objection scripts rather than writing from scratch.",
+      "topic": "Script Compliance"
+    },
+    {
+      "text": "Train contractors to speak in industry terminology and explain issues thoroughly, because perceived technical expertise increases the customer's willingness to accept the contractor's diagnosis and recommended solution.",
+      "topic": "Before/After Proof Engine"
+    },
+    {
+      "text": "Have the contractor look for additional, genuinely existing issues adjacent to the primary reported problem while on-site, and offer to inspect them — framing this as proactive risk prevention rather than upselling.",
+      "topic": "Sales Closing Mechanics"
+    }
+  ]
+}

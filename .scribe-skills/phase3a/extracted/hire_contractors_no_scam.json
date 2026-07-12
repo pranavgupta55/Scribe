@@ -1,0 +1,268 @@
+{
+  "source_file": "hire_contractors_no_scam.txt",
+  "primary_speaker": "Eric Velch",
+  "concepts_addressed": [
+    "Recruiting as Systematic Discipline",
+    "Cold-Start Trust Architecture",
+    "Channel Partner Quality",
+    "Google Business Profile Optimization",
+    "Social Proof Hierarchy in Sales",
+    "Leverage Through Risk Assumption",
+    "Meeting and Follow-Up Cadence",
+    "Tracking and Measurement Discipline",
+    "Founder Accountability Under Growth",
+    "Multi-Stage Screening for Coachability and Discipline"
+  ],
+  "frameworks": [
+    {
+      "name": "Pre-Job / Post-Job Contractor Vetting Framework",
+      "definition": "A two-phase contractor evaluation system: pre-job checks (availability, split agreement, communication quality) and post-job verification (invoice confirmation, customer callback, willingness-to-return test) to assess reliability and trustworthiness before committing to ongoing use.",
+      "concept": "Recruiting as Systematic Discipline"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Eric Velch, who built a drop-servicing business generating over $500,000 in revenue across approximately 700 jobs, asserts that contractor reliability problems (flaking, late arrival, no communication) are the primary operational risk in remote service businesses, because unreliable contractors force last-minute customer rescheduling that directly damages the service brand.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "reliability",
+      "topic": "Recruiting as Systematic Discipline",
+      "conditions": [
+        "drop-servicing or remote service business",
+        "contractor-dependent delivery model"
+      ],
+      "mechanism": "When a contractor flakes, the service owner must personally contact the customer to reschedule, creating an uncomfortable conversation that signals operational unreliability and risks customer churn.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch recommends confirming a 60-40 revenue split (contractor keeps 60%, service owner keeps 40%) before sending any contractor to a job, because a contractor who is unhappy with the split will eventually flake or act carelessly since they have no motivation to prioritize the relationship.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": "60-40 split",
+      "topic": "Channel Partner Quality",
+      "conditions": [
+        "drop-servicing business model",
+        "1-3 jobs per day volume"
+      ],
+      "mechanism": "A contractor dissatisfied with their cut has no financial incentive to maintain reliability or professionalism, leading to flaking and poor performance.",
+      "numbers": {
+        "axis": "revenue split between contractor and service owner",
+        "anchors": [
+          {"region": "contractor share", "value": "60%"},
+          {"region": "service owner minimum profit share", "value": "40%"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch asserts that in a drop-servicing business the ideal contractor relationship is a single primary contractor per service area who handles the majority of jobs, rather than spreading work across many contractors, because concentrated volume creates mutual incentive alignment where both parties are motivated to protect and grow the relationship.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "lock it in",
+      "topic": "Channel Partner Quality",
+      "conditions": [
+        "single geographic service area",
+        "drop-servicing business model"
+      ],
+      "mechanism": "When one contractor receives predictable volume they become invested in the relationship's success; dispersing volume across many contractors prevents that mutual dependency from forming.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when volume exceeds one contractor's schedule capacity"
+      ]
+    },
+    {
+      "text": "Eric Velch asserts that a contractor's character signals during a phone vetting call (politeness, coherence, low-IQ signals, rudeness) are reliable predictors of scam and reliability risk, because behavioral signals during low-stakes interactions generalize to high-stakes job performance.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "common sense character check",
+      "topic": "Multi-Stage Screening for Coachability and Discipline",
+      "conditions": [
+        "pre-job contractor vetting call",
+        "drop-servicing business"
+      ],
+      "mechanism": "Rudeness, incoherence, or obvious low engagement during a recruitment call signals the contractor will exhibit the same behavior when under job pressure, resulting in disputes or ghosting.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch asserts that transparency requirements (receipt submission for materials, invoice copies) reveal contractor trustworthiness during onboarding: a contractor who resists providing receipts is signaling intent to inflate costs or obscure billing, while a contractor who agrees readily is demonstrating alignment.",
+      "type": "conditional",
+      "speaker": "Eric Velch",
+      "speaker_term": "receipts",
+      "topic": "Cold-Start Trust Architecture",
+      "conditions": [
+        "contractor buys materials for the job",
+        "industries where material costs are part of the invoice"
+      ],
+      "mechanism": "Resistance to a low-cost transparency requirement (providing a receipt) reveals that the contractor expects to hide information for financial gain; willingness signals the opposite disposition.",
+      "numbers": null,
+      "bounded_by": [
+        "In industries with zero material costs (e.g., cleaning), receipt requirements are irrelevant"
+      ]
+    },
+    {
+      "text": "Eric Velch recommends calling the customer after the first job and posing as a bookkeeping representative to verify that the invoice amount matches what the contractor reported, because contractors can underreport the customer-facing price to pocket the difference and leave the service owner with reduced margin.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "call the customer and confirm",
+      "topic": "Tracking and Measurement Discipline",
+      "conditions": [
+        "after first job with a new contractor",
+        "scenarios where contractor invoices the customer directly"
+      ],
+      "mechanism": "A contractor who quotes the customer $1,000 but reports $400 to the service owner skims the difference; the post-job customer call is the only verification mechanism available.",
+      "numbers": null,
+      "bounded_by": [
+        "Not required when service owner invoices the customer directly",
+        "Ongoing spot-check use is sufficient after initial trust is established"
+      ]
+    },
+    {
+      "text": "Eric Velch recommends testing a new contractor's willingness to return to a job by falsely claiming the customer is unsatisfied, because a contractor who immediately offers to return or troubleshoot (even when not actually required) demonstrates the service orientation that will matter when a real issue occurs, whereas a contractor who refuses or ignores the request will likely ghost when a genuine problem arises.",
+      "type": "conditional",
+      "speaker": "Eric Velch",
+      "speaker_term": "see how they react",
+      "topic": "Multi-Stage Screening for Coachability and Discipline",
+      "conditions": [
+        "after first job with a new contractor",
+        "drop-servicing or remote service business"
+      ],
+      "mechanism": "The contractor's reaction to a low-stakes invented problem is a leading indicator of their behavior in high-stakes real problems; cooperation signals professionalism, refusal signals future ghosting.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker notes this tactic is ethically uncomfortable and he uses it sparingly"
+      ]
+    },
+    {
+      "text": "Eric Velch asserts that contractors in licensed industries (plumbing, electrical) must be both licensed and insured, and a ChatGPT-generated contractor agreement that explicitly assigns all liability for damages to the contractor provides sufficient legal protection for the service business owner, because it establishes clear contractual responsibility before any dispute arises.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "licensed and insured",
+      "topic": "Leverage Through Risk Assumption",
+      "conditions": [
+        "industries where licensing is legally required",
+        "drop-servicing model where contractor performs the physical work"
+      ],
+      "mechanism": "A signed agreement assigning contractor liability shifts legal exposure from the service owner to the performing party; without it, the service owner may be exposed to customer damage claims.",
+      "numbers": null,
+      "bounded_by": [
+        "Cleaning and similar unlicensed industries do not require this protection",
+        "Speaker reports zero damage issues across $500,000 revenue and 700 jobs, suggesting frequency of this risk is low"
+      ]
+    },
+    {
+      "text": "Eric Velch recommends placing terms-and-conditions language on the service business website stating that the business refers contractors to homeowners and is not liable for any outcomes, as a complementary customer-facing liability shield to the contractor agreement.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "terms and conditions",
+      "topic": "Founder Accountability Under Growth",
+      "conditions": [
+        "drop-servicing business with a customer-facing website",
+        "service categories involving physical work in customer property"
+      ],
+      "mechanism": "Website T&C acknowledged at booking creates a contractual acknowledgment that reduces the service owner's exposure to customer-initiated disputes.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch asserts that confirming customer satisfaction by phone before requesting a Google review prevents negative reviews, because an unsatisfied customer who receives a review request will use it as an outlet for their frustration, whereas a pre-confirmed satisfied customer converts to a positive review reliably.",
+      "type": "mechanism",
+      "speaker": "Eric Velch",
+      "speaker_term": "confirm the customer's happy",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google My Business-based marketing strategy",
+        "service businesses dependent on local search visibility"
+      ],
+      "mechanism": "A review request sent to a dissatisfied customer amplifies their frustration into a permanent public signal; pre-screening satisfaction filters this risk before the request is sent.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Eric Velch asserts that for a drop-servicing business marketing primarily through Google My Business, negative reviews are disproportionately damaging compared to other channels, because local service search results rank businesses heavily on review score and volume.",
+      "type": "assertion",
+      "speaker": "Eric Velch",
+      "speaker_term": "especially for the way that I market this with Google My Business",
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Google My Business as primary customer acquisition channel",
+        "local service market"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Less critical for businesses using paid ads or outbound as primary acquisition rather than local search"
+      ]
+    },
+    {
+      "text": "Eric Velch asserts that a contractor who proactively messages updates (confirmation, ETA, thank-you after job completion) is a reliable retention target, whereas a contractor who treats jobs as a casual favor and provides no unsolicited updates should be deprioritized, because communication behavior during the first job predicts future reliability under pressure.",
+      "type": "conditional",
+      "speaker": "Eric Velch",
+      "speaker_term": "see how much general care towards the whole process they had",
+      "topic": "Meeting and Follow-Up Cadence",
+      "conditions": [
+        "evaluation of a new contractor after their first job"
+      ],
+      "mechanism": "Proactive communication reflects intrinsic investment in the relationship; passive or absent communication reflects that the contractor views the work as disposable.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Eric Velch described a student who reported a contractor showing up to a job wearing flip-flops, illustrating that the appearance and equipment readiness of a contractor reflects on the service brand even when the service owner is not present at the job site.",
+      "claim_index": 0,
+      "topic": "Recruiting as Systematic Discipline"
+    },
+    {
+      "text": "Eric Velch described his best-performing plumber before retirement as an older immigrant gentleman with a family to feed, who was polite and trustworthy. He contrasted this with a rude, unprofessional 25-year-old on the phone as a type he would not work with, illustrating that demographic and life-circumstances signals during a vetting call correlate with trustworthiness in his experience.",
+      "claim_index": 3,
+      "topic": "Multi-Stage Screening for Coachability and Discipline"
+    },
+    {
+      "text": "Eric Velch described the specific script he uses when calling customers post-job to verify invoice amounts: he identifies as being from the service company and says he is conducting bookkeeping verification, then asks whether the customer was invoiced for a specific amount. This framing avoids triggering customer suspicion while allowing the owner to confirm the contractor did not underreport the charged amount.",
+      "claim_index": 5,
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Eric Velch cited his own business track record of $500,000 in revenue across approximately 700 jobs with zero contractor damage incidents, offered as a data point to calibrate how frequently the liability scenario actually materializes in practice, while still recommending the signed contractor agreement as a precaution.",
+      "claim_index": 7,
+      "topic": "Leverage Through Risk Assumption"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Before sending a contractor to their first job, verify that their schedule can absorb the job volume you intend to give them (1-3 jobs per day) and confirm they agree to the revenue split.",
+      "topic": "Recruiting as Systematic Discipline"
+    },
+    {
+      "text": "Confirm that the contractor speaks the same language as your customers fluently enough to communicate without friction on the job site.",
+      "topic": "Recruiting as Systematic Discipline"
+    },
+    {
+      "text": "Ask to see a contractor's Google Business Profile for negative reviews before committing to working with them.",
+      "topic": "Cold-Start Trust Architecture"
+    },
+    {
+      "text": "After a contractor completes a job, ensure they send you the invoice and any payment receipts before you consider them verified for ongoing use.",
+      "topic": "Tracking and Measurement Discipline"
+    },
+    {
+      "text": "Do not send a review request link to a customer until you have confirmed by phone that they are satisfied with the service.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use a VA to handle post-job customer satisfaction calls and review requests to reduce manual overhead at scale.",
+      "topic": "Meeting and Follow-Up Cadence"
+    },
+    {
+      "text": "Have every contractor sign a ChatGPT-generated agreement explicitly stating they are fully liable for any damages caused during the job.",
+      "topic": "Leverage Through Risk Assumption"
+    },
+    {
+      "text": "Place referral-only terms and conditions on your website stating the business connects contractors with homeowners and bears no liability for outcomes.",
+      "topic": "Founder Accountability Under Growth"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "source_file": "moremozi_how_local_businesses_can_make_more_money_gKzy9QGyKn8.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Delivery Session Compression",
+    "Avatar Targeting Strategy",
+    "Business Model Bifurcation",
+    "Supply Constraint Levers",
+    "Volume-First Scaling"
+  ],
+  "frameworks": [
+    {
+      "name": "Three Levers to Expand Local Business Revenue",
+      "definition": "A three-part framework for scaling single-location revenue: compress delivery (increase throughput per location), add distribution channels (saturate market across platforms), or replicate the model (open new locations).",
+      "concept": "Supply Constraint Levers"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Reducing class duration from 45 to 30 minutes increases throughput by roughly 1.5x per facility by eliminating breaks and compressing peak-load delivery (Alex Hormozi, gym operation example). This applies to time-slot-constrained service businesses.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Delivery Session Compression",
+      "conditions": [
+        "time-slot-constrained service businesses",
+        "group classes or appointments"
+      ],
+      "mechanism": "Removing breaks and compressing class length allows more cohorts per day without reducing availability.",
+      "numbers": {
+        "axis": "throughput multiplier from duration compression",
+        "anchors": [
+          {
+            "region": "45-minute classes",
+            "value": "baseline throughput"
+          },
+          {
+            "region": "30-minute classes",
+            "value": "1.5x throughput"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to services where duration is contractually guaranteed or quality-dependent",
+        "Does not apply when customer experience degradation results from compression"
+      ]
+    },
+    {
+      "text": "Extending operating hours increases capacity utilization of a single location without capital expansion.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Delivery Session Compression",
+      "conditions": [
+        "service businesses with fixed location capacity"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply when staffing costs exceed incremental revenue"
+      ]
+    },
+    {
+      "text": "For local businesses in A or B markets (population density >50k in 10-mile radius), a single channel is sufficient to reach $1M annual revenue. For C or D markets (<50k people in 10-mile radius), multiple channels are required because the addressable market is too small for single-channel saturation (Alex Hormozi).",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Avatar Targeting Strategy",
+      "conditions": [
+        "local service businesses",
+        "A/B markets vs. C/D markets",
+        "population density as qualification"
+      ],
+      "mechanism": "Market size determines whether a single channel can reach sufficient volume; below the threshold, you must use multiple distribution channels to saturate the available audience.",
+      "numbers": {
+        "axis": "population in 10-mile radius",
+        "anchors": [
+          {
+            "region": "A/B markets",
+            "value": ">50k people, single channel viable"
+          },
+          {
+            "region": "C/D markets",
+            "value": "<50k people, multi-channel required"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to non-local businesses (SaaS, e-commerce, national brands)"
+      ]
+    },
+    {
+      "text": "The three sequential expansion levers for single-location businesses are: (1) improve efficiency of existing location (compress sessions, extend hours), (2) add distribution channels (social media, paid media), (3) open new locations. Each lever must be exhausted before moving to the next because physical capacity is the binding constraint.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply Constraint Levers",
+      "conditions": [
+        "local service businesses",
+        "geography-constrained markets"
+      ],
+      "mechanism": "Physical location capacity (four walls) is the ultimate constraint; once saturated through operational efficiency and channel density, replication is the only scaling path.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to remote/digital businesses without physical constraints"
+      ]
+    },
+    {
+      "text": "A single location in a local service business is a $100M+ opportunity when the replicable unit model is mature. Founders often underestimate local business ceiling by conflating single-unit economics with scalability; the true opportunity is in duplicating and scaling the model across multiple locations (Alex Hormozi).",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "local service business",
+        "replicable model established"
+      ],
+      "mechanism": "Skepticism about single-location scale is a founder psychology error; the model scales multiplicatively across locations once unit economics are proven.",
+      "numbers": {
+        "axis": "location-based revenue ceiling",
+        "anchors": [
+          {
+            "region": "single location (mature model)",
+            "value": "$100M+ potential"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Assumes a replicable, systems-dependent model exists"
+      ]
+    },
+    {
+      "text": "In geographic markets with limited population density, you cannot rely solely on the one-avatar-one-product-one-channel rule (standard for non-local businesses at <$1M revenue); local businesses must distribute across multiple channels to achieve market saturation.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "the rule of one avatar, one product, one channel",
+      "topic": "Business Model Bifurcation",
+      "conditions": [
+        "local service businesses",
+        "C or D markets"
+      ],
+      "mechanism": "Market size constraint forces multi-channel distribution; single channel cannot reach sufficient volume in small addressable markets.",
+      "numbers": null,
+      "bounded_by": [
+        "Exception applies only to geography-constrained local businesses"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "At Alex Hormozi's first gym, when attendance reached overcapacity, he reduced class duration from 45 minutes to 30 minutes, eliminated breaks between classes, and kept all other variables constant. This compressed scheduling delivered 1.5x more classes per day in the same facility, increasing overall member throughput without expanding the physical space. The speaker explicitly ties this to efficiency optimization before expansion.",
+      "claim_index": 0,
+      "topic": "Delivery Session Compression"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When facing capacity constraints in a single location, first attempt to increase throughput via operational efficiency: reduce session duration, eliminate breaks, extend operating hours. Only open a new location after exhausting these efficiency improvements.",
+      "topic": "Delivery Session Compression"
+    },
+    {
+      "text": "Before expanding to multiple locations, saturate your geographic market across distribution channels (Instagram, X, YouTube, Facebook, TikTok). Test multiple channels to identify which ones resonate with your local avatar.",
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "For local service businesses, validate that the single-location model is genuinely replicable (systems-dependent, not founder-dependent) before scaling to multiple locations.",
+      "topic": "Volume-First Scaling"
+    }
+  ]
+}

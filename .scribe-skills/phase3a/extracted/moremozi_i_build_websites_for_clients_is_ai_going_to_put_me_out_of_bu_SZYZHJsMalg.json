@@ -1,0 +1,238 @@
+{
+  "source_file": "moremozi_i_build_websites_for_clients_is_ai_going_to_put_me_out_of_bu_SZYZHJsMalg.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Scaling Bottleneck Diagnosis",
+    "Constraint-Based Strategy",
+    "Cold Outreach Channels",
+    "Margins",
+    "Workflow Automation",
+    "Prepayment Cash Flow Control",
+    "Revenue Stage Transitions",
+    "Channel Optimization Before Expansion",
+    "Service Business Unit Economics",
+    "LTV-to-CAC Measurement Timeline",
+    "Lead-Cost-Closeout Math",
+    "Observable Reality Framework"
+  ],
+  "frameworks": [
+    {
+      "name": "Perceived Crisis vs. Real Metrics",
+      "definition": "A diagnostic framework that separates narrative-driven concerns (market disruption, technological threat) from actual operational metrics (churn rate, unit economics).",
+      "concept": "Observable Reality Framework"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In website-as-a-service businesses targeting small-to-medium businesses, perceived AI disruption is often narrative-driven rather than metric-driven. If churn is not escalating in meaningful measure (e.g., single-digit points per month), the AI threat is not a binding constraint; customers exist who are tech laggards and will not self-service even as AI tooling becomes available.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Observable Reality Framework",
+      "conditions": [
+        "Website-as-a-service market",
+        "Small-to-medium business customers",
+        "Churn rate not escalating meaningfully"
+      ],
+      "mechanism": "Tech-laggard customer cohort does not have visibility into or willingness to adopt AI-based DIY tooling even if it becomes easier.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if churn is rising 10% per month or more",
+        "Does not apply to customers already AI-native or tech-forward"
+      ]
+    },
+    {
+      "text": "For website-as-a-service businesses with 29-month LTV and 3.6% EBITDA margin at $20M revenue, the strategic priority is doubling down on customer acquisition (paid ads, inbound marketing) rather than product innovation or pricing changes, because LTV window is wide enough to support increased CAC.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Constraint-Based Strategy",
+      "conditions": [
+        "29-month LTV range (30-40 months is confirmed sweet spot)",
+        "Subscription revenue model",
+        "Service business with >50% headcount-driven costs",
+        "Current churn stable, not rising"
+      ],
+      "mechanism": "Wide LTV window creates cash flow runway to support higher CAC without product innovation; acquisition is the binding constraint, not product capability.",
+      "numbers": {
+        "axis": "LTV (months)",
+        "anchors": [
+          {
+            "region": "Website-as-a-service business (this cohort)",
+            "value": "29 months"
+          },
+          {
+            "region": "Optimal range for this business type",
+            "value": "30-40 months"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if LTV is <18 months",
+        "Does not apply if churn is escalating above baseline"
+      ]
+    },
+    {
+      "text": "For service businesses with people-heavy operations (>50% headcount cost ratio), a 50% headcount reduction via AI workflow automation (replacing manual delivery steps with AI-assisted tools) can improve EBITDA margin from low levels (3.6%) to sustainable levels (7%+) while maintaining service quality, enabling cash-positive acquisition without raising prices.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Workflow Automation",
+      "conditions": [
+        "Service business model with majority headcount costs",
+        "Current EBITDA margin below 5%",
+        "Deliverable services amenable to AI workflow tooling"
+      ],
+      "mechanism": "AI automation compresses labor per unit delivered; reinvested margin improvement funds CAC growth without pricing pressure on existing customer base.",
+      "numbers": {
+        "axis": "EBITDA margin improvement",
+        "anchors": [
+          {
+            "region": "Current state (website-as-a-service example)",
+            "value": "3.6% EBITDA"
+          },
+          {
+            "region": "Target post-automation",
+            "value": "7%+ EBITDA"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if workflow changes reduce perceived quality or customer satisfaction",
+        "Does not apply if headcount reduction creates churn"
+      ]
+    },
+    {
+      "text": "For subscription businesses with 29-month LTV, willingness to accept negative CAC (spending more on acquisition than recovered in first quarter) is sustainable if the acquisition spend is reinvested margin improvement; the payback window is wide enough that a single quarter of CAC-negative acquisition does not jeopardize cash flow.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "LTV-to-CAC Measurement Timeline",
+      "conditions": [
+        "29+ month LTV",
+        "Margin improvement enables cash flow resilience",
+        "Single quarter of CAC overspend (not continuous)"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "LTV payback window (months)",
+        "anchors": [
+          {
+            "region": "This business (29-month LTV)",
+            "value": "29 months to break even on single acquisition"
+          },
+          {
+            "region": "Allows negative quarter spending to",
+            "value": "1 month (1/29 of total payback)"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if LTV is <12 months",
+        "Does not apply if churn accelerates mid-quarter"
+      ]
+    },
+    {
+      "text": "Prepayment requirements (quarterly or annual upfront billing) imposed on new customers will not churn existing customers, because existing customers maintain their existing billing terms; changing payment terms only applies to new acquisition cohorts, not existing customer relationships.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "Subscription business",
+        "Existing customers on monthly or month-to-month terms",
+        "Prepayment requirement limited to new customer acquisition"
+      ],
+      "mechanism": "Existing customers do not perceive a change in their own terms; the prepayment friction applies only at the acquisition gate.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply if company retroactively changes existing customer billing terms",
+        "Does not apply if new customer cohort represents >50% of monthly acquisition volume"
+      ]
+    },
+    {
+      "text": "In subscription businesses where customers bill on credit card (90% of base) and a small cohort pays via check or ACH (10%), the 10% check/ACH cohort represents operational friction (slow processing, manual reconciliation) that is not worth servicing; prioritize credit card normalization.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Subscription business, small business customers",
+        "90% credit card, 10% alternative payment"
+      ],
+      "mechanism": "Alternative payment methods create reconciliation friction with minimal revenue concentration; standardizing payment method improves operations per dollar collected.",
+      "numbers": {
+        "axis": "Customer payment method distribution",
+        "anchors": [
+          {
+            "region": "Credit card (primary)",
+            "value": "90% of customer base"
+          },
+          {
+            "region": "Check/ACH (alternative, friction-heavy)",
+            "value": "10% of customer base"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if alternative cohort is >20% of revenue",
+        "Does not apply if alternative payers have lower churn"
+      ]
+    },
+    {
+      "text": "Cold outreach (100% of growth) as the sole customer acquisition channel creates single-channel risk; when channel decay occurs (e.g., cold calling becomes harder due to gatekeeper adoption, AI-enabled screening), the business has no backup acquisition lever and growth stalls.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Cold Outreach Channels",
+      "conditions": [
+        "Subscription business",
+        "100% customer acquisition from one channel"
+      ],
+      "mechanism": "Channel-specific friction (gatekeeper adoption, regulatory changes, platform decay) affects entire acquisition funnel when only one source exists.",
+      "numbers": {
+        "axis": "Acquisition channel concentration",
+        "anchors": [
+          {
+            "region": "Single-channel dependence",
+            "value": "100% of growth"
+          },
+          {
+            "region": "Diversified baseline (target)",
+            "value": "<50% from any single channel"
+          }
+        ]
+      },
+      "bounded_by": [
+        "Does not apply during startup phase when channel mastery is more important than diversification",
+        "Does not apply if channel decay is predictable and addressable via tactics within the channel"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "A website-as-a-service company with $450 average revenue per customer, $20M annual revenue (representing roughly 3,700 active customers), and 29-month average customer lifetime. Operating at 3.6% EBITDA despite scale because payroll represents >50% of operating costs. Founder concerns about AI-driven self-service website builders commoditizing their offering. Hormozi's diagnosis: churn is stable (not escalating 10%+ per month), meaning customer base is sticky and AI adoption is not actually breaking the business—the perceived threat is narrative rather than metric-driven.",
+      "claim_index": 0,
+      "topic": "Observable Reality Framework"
+    },
+    {
+      "text": "Same website-as-a-service company. Instead of pivoting product or launching inbound marketing (both capital-intensive), Hormozi recommends: spend six months reorganizing internal workflows to reduce headcount 50% via AI automation (e.g., replacing manual website configuration steps with AI-assisted templates, using AI to preprocess design requests before human review). Projected outcome: EBITDA margin improves from 3.6% to 7%+. With newfound margin, company can then afford to spend aggressively on paid acquisition (CAC increase acceptable because LTV window of 29 months absorbs the overspend). Implementation: willing to go CAC-negative for one quarter in year one, knowing the payback period is 29 months.",
+      "claim_index": 2,
+      "topic": "Workflow Automation"
+    }
+  ],
+  "practices": [
+    {
+      "text": "For subscription businesses evaluating billing strategy, consider prepayment (quarterly or annual) on new customer cohorts while keeping existing customers on their current terms. This captures cash flow improvement without retroactively changing existing relationships.",
+      "topic": "Prepayment Cash Flow Control"
+    },
+    {
+      "text": "When acquisition channel is decaying or facing friction (e.g., cold calling becoming harder), the priority is expanding to new channels (paid ads, inbound, referral) rather than waiting for the failing channel to recover or changing the product.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "For service businesses with high headcount costs, interrogate whether headcount can be reduced via AI automation before raising prices or pivoting to new markets.",
+      "topic": "Workflow Automation"
+    }
+  ]
+}
