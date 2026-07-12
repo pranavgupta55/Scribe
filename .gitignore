@@ -24,4 +24,8 @@ Archive/
 
 # Local batch logs (per-run scratch, don't clutter remote)
 ingest_*.log
+retry_*.log
 /tmp/scribe_*.log
+
+# Local session scratch (workflow inputs, temp lists)
+.forge_scratch/

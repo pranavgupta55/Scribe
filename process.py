@@ -1271,7 +1271,7 @@ def llm_structure(topic, claim_texts):
 # ---------------------------------------------------------------------------
 
 def _equal_slices(text, outline_sections):
-    n = max(1, min(len(outline_sections), MAX_SECTIONS) or 1)
+    n = max(1, min(len(outline_sections), MAX_SECTIONS_GLOBAL) or 1)
     words = text.split()
     per = max(1, len(words) // n)
     out = []
