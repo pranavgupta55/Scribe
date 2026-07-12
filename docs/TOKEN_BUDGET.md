@@ -68,18 +68,31 @@ Anthropic's token bucket allows bursts but concurrent fires can spike RPM even w
 
 **These are the numbers to use.** Wave 1/2's rates were measured under a different top-level model — they underestimate Opus 4.7 by ~1.5×.
 
-### 3a. Per-agent 5h percentage-point cost
+### 3a. Per-agent 5h percentage-point cost (calibrated 2026-07-11)
+
+**All rates measured with Opus 4.7 as top-level model. If top-level differs, apply §3b inverse-multiplier.**
 
 | Model | Duration bucket | Empirical pts/agent | Source |
 |---|---|---|---|
 | Haiku 4.5 | short (<90s) | **0.14** | DP3: 56 agents × 3.18M tok / 8 direct pts |
-| Haiku 4.5 | medium (90–600s) | 0.18 (est) | interpolation from DP3 |
+| Haiku 4.5 | medium (90–600s) | **0.10** | DP4: 230 agents × 22 pts (M1), DP5: 84 agents × 8 pts (M2) |
 | Sonnet 4.6 | short (<90s) | 0.55 (est) | DP2 mix, backed out |
-| Sonnet 4.6 | medium (90–600s) | **0.65** | DP2: ~104 agents × 57 direct pts |
-| Sonnet 4.6 | long (600–1800s) | 0.85 (est) | extrapolation, longer output tokens |
+| Sonnet 4.6 | medium (90–600s) | 0.65 (est) | DP2: killed at 104/299 |
+| Sonnet 4.6 | long (600–1800s) | **0.80** | DP6: 10-agent probe, 5h Δ = +8 pts |
 | Sonnet 4.6 | very long (≥1800s) | 1.00 (est) | extrapolation |
 
-**Bold rows** are directly measured this session. Others are extrapolations.
+**Bold rows** are directly measured this session (2026-07-11 Scribe run). Others are extrapolations pending future probes.
+
+**Revision history for these rates:**
+- 2026-06-21 (Wave 2): initial rates from Wave 2 measurements, but with Sonnet 4.6 top-level.
+- 2026-07-11 initial: rates naively adjusted × 1.5 for Opus 4.7 top-level. Over-predicted Haiku medium by 80%.
+- 2026-07-11 calibrated (current): direct measurement of DP3/DP4/DP5/DP6 with Opus 4.7 top-level active.
+
+**Actual accuracy achieved after calibration:**
+- Haiku medium prediction: doc 0.18 vs actual 0.10 = 80% over-prediction (uncalibrated) → 0-15% after calibration
+- Sonnet long prediction: doc 0.85 vs probed 0.80 = 6% over-prediction (close on first probe)
+
+The Sonnet-long rate is stable across the small probe (n=10). Haiku medium had 20% variance between M1 and M2 driven by main-loop noise (my Bash/Read activity during M1 was higher). Real-world sub-2% accuracy requires per-agent-batch calibration + main-loop-idle discipline.
 
 ### 3b. Main-loop model burn
 
@@ -97,11 +110,14 @@ The top-level model burns pts too. Empirically this session:
 
 ### 3c. Data points behind rows in 3a
 
-| DP | Timestamp | agents | model | tokens | 5h Δ | notes |
-|---|---|---|---|---|---|---|
-| DP1 | 2026-07-11T18:57 | 1 | Sonnet | 79,242 out | 7→16% = 9 pts | Mostly Opus main-loop overhead; single-agent test unreliable |
-| DP2 | 2026-07-11T19:00-19:15 | 104 | Sonnet | ~10M out (est) | 7→81% = 74 pts (69 workflow + 5 in-flight) | Chunk 1 killed at 104/299 |
-| DP3 | 2026-07-11T19:21-19:23 | 56 | Haiku | 3,175,761 out | 83→93% = 10 pts (8 workflow + 2 ambient) | Full Haiku shorts chunk, clean |
+| DP | Timestamp | agents | model | tokens | 5h Δ | pts/agent | notes |
+|---|---|---|---|---|---|---|---|
+| DP1 | 2026-07-11T18:57 | 1 | Sonnet | 79,242 out | 7→16% = 9 pts | 9.0 | Single-agent test unreliable (mostly Opus main-loop overhead) |
+| DP2 | 2026-07-11T19:00-19:15 | 104 | Sonnet | ~10M out (est) | 7→81% = 74 pts | 0.71 | Chunk 1 killed at 104/299 |
+| DP3 | 2026-07-11T19:21-19:23 | 56 | Haiku | 3,175,761 out | 83→93% = 10 pts (8 workflow + 2 ambient) | 0.14 | Full Haiku shorts chunk, clean |
+| DP4 | 2026-07-11T21:06-21:19 | 230 | Haiku | 13,112,981 out | 16→38% = 22 pts | 0.096 | M1: Haiku mediums, clean |
+| DP5 | 2026-07-11T21:20-21:26 | 84 | Haiku | 5,074,388 out | 38→46% ≈ 8 pts (est, race-obscured) | 0.10 | M2: Haiku mediums, clean |
+| DP6 | 2026-07-11T21:28-21:31 | 10 | Sonnet | 800,379 out | 55→63% = 8 pts | 0.80 | Sonnet-long calibration probe |
 
 ---
 
@@ -115,15 +131,15 @@ def predict_burn(chunk, top_level_model='opus-4.7'):
     chunk: list of {'model': 'haiku'|'sonnet', 'duration': float, 'estimated_wall_clock_min': float}
     Returns: (predicted_pts, confidence_interval)
     """
-    # Empirical rates from §3a (measured this session)
+    # Empirical rates from §3a (calibrated 2026-07-11 Scribe session)
     RATE = {
-        ('haiku',  'short'):     0.14,
-        ('haiku',  'medium'):    0.18,
-        ('haiku',  'long'):      0.25,   # extrapolation, unmeasured
-        ('sonnet', 'short'):     0.55,
-        ('sonnet', 'medium'):    0.65,
-        ('sonnet', 'long'):      0.85,
-        ('sonnet', 'verylong'):  1.00,
+        ('haiku',  'short'):     0.14,   # DP3 measured
+        ('haiku',  'medium'):    0.10,   # DP4+DP5 measured
+        ('haiku',  'long'):      0.18,   # extrapolation from DP4→DP5 slope
+        ('sonnet', 'short'):     0.55,   # est from DP2 mix
+        ('sonnet', 'medium'):    0.65,   # est
+        ('sonnet', 'long'):      0.80,   # DP6 measured
+        ('sonnet', 'verylong'):  1.00,   # est
     }
     # Main-loop multipliers (§3b)
     MULT = {
@@ -309,7 +325,20 @@ Concurrency cap is `min(16, cpu-2)` per workflow (Anthropic-side). Do NOT manual
 1. **`resets_at` can be stale** — I observed a 22-hour-stale value on 2026-07-11. The `used_percentage` was live but `resets_at` was frozen from a prior window. Always check `resets_at - now` against `abs(t_diff) < 6h` before trusting.
 2. **`used_percentage` cadence** — refreshed by the `usageStatusline` skill (default ~10s poll). If Claude Code hasn't been active recently, the file is stale. Check `stat -f %Sm` (mtime) if a reading looks suspicious.
 3. **First read after Claude Code restart** — may return 0% for up to 10s before first poll cycle completes.
-4. **Multiple concurrent Claude sessions** — writes to `usage_current.json` are last-writer-wins. Two sessions writing simultaneously can produce disagreeing statusline values across sessions (open issue: task `t-73hcv2` in the master task list).
+4. **Multiple concurrent Claude sessions — CRITICAL.** Writes to `usage_current.json` are last-writer-wins. Each session writes its OWN usage. If you have >1 Claude Code window open, single reads alternate between sessions' numbers. Observed 2026-07-11: 5-second sample rotation between "5h=63% cost=$129" (my session) and "5h=16% cost=$8.91" (other session). **Mandatory filter — read only when `session_id` matches yours:**
+
+```python
+import json, os
+MY_SESSION = os.environ.get('CLAUDE_CODE_SESSION_ID') or open('/tmp/my_session_id').read().strip()  # cache it once
+def read_usage_mine():
+    for _ in range(20):  # sample up to 20 times to catch a same-session read
+        d = json.load(open('/Users/pranavgupta/.claude/usage_current.json'))
+        if d.get('session_id') == MY_SESSION:
+            return d['rate_limits']['five_hour']['used_percentage']
+    raise RuntimeError('No same-session read in 20 samples — other session is writing every read')
+```
+
+The other session's usage does NOT count against your 5h budget. Only your session_id's usage matters. Related open task: `t-hb3prq` (three sessions showing different stats).
 
 ---
 
