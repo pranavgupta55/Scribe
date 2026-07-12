@@ -8,8 +8,6 @@
 - Webinar pitch: soft offer for free 'savings assessment' showing what client saves on payroll — [stop_building_10_businesses_build_one_to_10m_sRBO1pxSqK4.txt]
 - Positioning: 'Better than what you have AND costs less' - customers want both, not just cheaper — [stop_building_10_businesses_build_one_to_10m_sRBO1pxSqK4.txt]
 
-## Connections
-- Free 'savings assessment' webinars soft-pitch by showing payroll savings potential without direct closing pressure. _(connects to: Webinar Lead Generation)_
-
 ---
-_Source: stop_building_10_businesses_build_one_to_10m_sRBO1pxSqK4.txt · 4 claim(s)_
+_Topic appears in 1 source(s) · 4 claim(s) · 0 connection(s)_
+_Sources: stop_building_10_businesses_build_one_to_10m_sRBO1pxSqK4.txt_

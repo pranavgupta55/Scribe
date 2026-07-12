@@ -1,14 +1,11 @@
 # Leadership Alignment
 
-> Align incentives: compensate on net profit, not top-line revenue
-
-## Key Takeaway
-- Top-line focused leaders make growth errors that destroy margins
-- Margin-aligned compensation drives sustainable scaling
+> Owner compensates leaders on net profit, but they drive top-line regardless
 
 ## Claims
 - Sales leaders are top-line revenue driven from corporate background (hundreds of millions dollars) — [how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt]
 - Owner compensates leaders on net profit, but they drive top-line regardless — [how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt]
 
 ---
-_Source: how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt_

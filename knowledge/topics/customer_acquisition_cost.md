@@ -1,12 +1,11 @@
 # Customer Acquisition Cost
 
-> Middle market ($1500-3K/month services) is a dead zone; everyone there eventually dies trying to serve SMBs at that price
+> Sell a $1,500 upfront package to pool construction customers
 
 ## Claims
+- Sell a $1,500 upfront package to pool construction customers — [advice_to_a_17_year_old_starting_a_business_Hw1W8G6idMY.txt]
 - Middle market ($1500-3K/month services) is a dead zone; everyone there eventually dies trying to serve SMBs at that price — [smb_clients_will_quietly_bankrupt_you_3Lvhd3LIwwY.txt]
 
-## Connections
-- Middle market is dead zone; go extreme—super cheap automated ($400/mo) or high-touch premium ($5K+)—never the middle. _(connects to: Pricing And Ltv Cac Dynamics For Smbs)_
-
 ---
-_Source: smb_clients_will_quietly_bankrupt_you_3Lvhd3LIwwY.txt · 1 claim(s)_
+_Topic appears in 2 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: advice_to_a_17_year_old_starting_a_business_Hw1W8G6idMY.txt, smb_clients_will_quietly_bankrupt_you_3Lvhd3LIwwY.txt_

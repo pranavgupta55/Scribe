@@ -1,19 +1,6 @@
 # Market Opportunity
 
-> Leverage AI Adoption Gap to Serve 8 Billion Users
-
-## Key Numbers
-- 27-30% businesses in 2026 have no website
-- 30% US small businesses lack website by 2026
-
-## Actionable Advice
-- 30-day AI challenge offers refund upon completion and consistency
-
-## Why It Works
-- Upwork buyers prioritize metrics like job success rates, hours completed, and earnings when evaluating freelancers
-
-## Key Numbers
-- 30% US small businesses lack website by 2026
+> 27 to 30% of businesses in 2026 have no website
 
 ## Claims
 - The significant gap in AI adoption, with 84% of people never having used AI, creates a massive market opportunity for the 0.04% of advanced users to provide AI services to the remaining 8 billion people, making their services seem like magic. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "The AI Adoption Gap and Market Opportunity"]
@@ -26,11 +13,6 @@
 - URL used for API key — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Setting Up Instantly.ai with Claude Desktop App"]
 - 30% of US small businesses lack a website by 2026, driving a $10 million market opportunity — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Building High-Converting AI-Generated Websites"]
 
-
-
-## Connections
-- Both concepts relate to adoption. _(connects to: Ai Adoption Urgency)_
-
 ---
-_Topic appears in 1 source(s) · 9 claim(s) · 6 connection(s)_
+_Topic appears in 1 source(s) · 9 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

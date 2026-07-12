@@ -1,26 +1,6 @@
 # CRM Limitations and Manual Follow-Ups
 
-> CRM Limitations Lead to Manual Follow-Ups and Revenue Loss
-
-## Key Takeaway
-- CRM limitations hinder efficient lead management and revenue generation
-- Manual follow-ups are critical for maintaining customer engagement despite system gaps
-
-## Contradictions / Tensions
-- The agency uses DIY methods without AI, yet faces revenue challenges
-- Lack of CRM systems leads to frustration and a desire for change
-
-## Evidence & Examples
-- Gym with 2000 members uses Ignite CRM with 40-55% lead conversion rate
-- Manual follow-up for website submissions highlights inefficiency in CRM underutilization
-
-## Implications
-- Underutilized CRM systems reduce revenue potential
-- Lack of accountability and real-time tracking undermines trust in service offerings
-
-## Actionable Advice
-- Implement AI integration for lead nurturing
-- Upgrade CRM systems to address gaps in re-engagement and data utilization
+> The database contains a massive number of old customers
 
 ## Claims
 - The speaker mentions an average of 20-30 clients, with potential over 100 in their database, highlighting the need for a CRM system to organize leads and follow-ups. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "CRM Importance & Lead Generation Issues"]
@@ -36,8 +16,6 @@
 - The client's team is not leveraging data effectively, despite having access to 17,000 inactive contacts and a CRM system. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Client's Marketing Inefficiencies"]
 - The client's CRM and lead flow systems are underutilized, with limited effectiveness in converting leads to revenue. — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Client's Marketing Inefficiencies"]
 
-
-
 ---
-_Topic appears in 1 source(s) · 12 claim(s) · 6 connection(s)_
+_Topic appears in 1 source(s) · 12 claim(s) · 0 connection(s)_
 _Sources: watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt_

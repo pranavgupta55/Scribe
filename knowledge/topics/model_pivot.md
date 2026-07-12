@@ -6,4 +6,5 @@
 - Three residential salesmen sold $2.8M; founder alone with takeoff assistant already at $2.6M, outpacing commissioned team — [he_built_a_5m_paint_biz_now_he_s_stuck_FzYRdOT_rXQ.txt]
 
 ---
-_Source: he_built_a_5m_paint_biz_now_he_s_stuck_FzYRdOT_rXQ.txt · 1 claim(s)_
+_Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
+_Sources: he_built_a_5m_paint_biz_now_he_s_stuck_FzYRdOT_rXQ.txt_

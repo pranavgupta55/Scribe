@@ -1,9 +1,10 @@
 # Scribe Knowledge Index
 
-_204 source(s) · 1471 topic(s)_
+_917 source(s) · 1809 topic(s)_
 
 ## Topics
 
+- [15K Goal](topics/15k_goal.md)
 - [18 Month Opportunity Window](topics/18_month_opportunity_window.md)
 - [20 Hour Competence](topics/20_hour_competence.md)
 - [30 Day Cash Collected](topics/30_day_cash_collected.md)
@@ -33,6 +34,9 @@ _204 source(s) · 1471 topic(s)_
 - [Ad Spend Vs Retention Roi](topics/ad_spend_vs_retention_roi.md)
 - [Adaptability Factor](topics/adaptability_factor.md)
 - [Adaptability Growth From Adversity](topics/adaptability_growth_from_adversity.md)
+- [Additional Services](topics/additional_services.md)
+- [Address Verification](topics/address_verification.md)
+- [Address Verification Profile Optimization](topics/address_verification_profile_optimization.md)
 - [Advertising Metrics And Roi](topics/advertising_metrics_and_roi.md)
 - [Advertising Vs Branding](topics/advertising_vs_branding.md)
 - [Advisory Practice Tiers](topics/advisory_practice_tiers.md)
@@ -41,9 +45,11 @@ _204 source(s) · 1471 topic(s)_
 - [Affiliate Integration](topics/affiliate_integration.md)
 - [Affiliate Model](topics/affiliate_model.md)
 - [Affiliate Partnership Model](topics/affiliate_partnership_model.md)
+- [Affiliate Program](topics/affiliate_program.md)
 - [Affiliate Program Building](topics/affiliate_program_building.md)
 - [Agency Avatar Problem](topics/agency_avatar_problem.md)
 - [Agency Churn Root Cause](topics/agency_churn_root_cause.md)
+- [Agency Facebook Ads](topics/agency_facebook_ads.md)
 - [Agency Partnerships](topics/agency_partnerships.md)
 - [Agent Recruitment](topics/agent_recruitment.md)
 - [Ai Adoption Rates](topics/ai_adoption_rates.md)
@@ -67,6 +73,9 @@ _204 source(s) · 1471 topic(s)_
 - [Ai Skillset Requirements](topics/ai_skillset_requirements.md)
 - [Ai Tools](topics/ai_tools.md)
 - [Ai Training Methodology](topics/ai_training_methodology.md)
+- [Ai Website Creation](topics/ai_website_creation.md)
+- [Ai Website Makers For Quick Site Creation](topics/ai_website_makers_for_quick_site_creation.md)
+- [Ai Website Optimization](topics/ai_website_optimization.md)
 - [Aligned Incentives](topics/aligned_incentives.md)
 - [Alternative Education Path](topics/alternative_education_path.md)
 - [Alternative Mortgage Models](topics/alternative_mortgage_models.md)
@@ -76,9 +85,12 @@ _204 source(s) · 1471 topic(s)_
 - [Analysis Paralysis](topics/analysis_paralysis.md)
 - [Anchor Pricing](topics/anchor_pricing.md)
 - [Anchor Upsell](topics/anchor_upsell.md)
+- [Anmar S 60 40 Commission Method](topics/anmar_s_60_40_commission_method.md)
 - [Annual Plans](topics/annual_plans.md)
+- [Answering The Phone](topics/answering_the_phone.md)
 - [Application Page Scoring](topics/application_page_scoring.md)
 - [Arbitrage In Delayed Rewards](topics/arbitrage_in_delayed_rewards.md)
+- [Asphalt Paving Low Competition High Ticket Easy To Rank](topics/asphalt_paving_low_competition_high_ticket_easy_to_rank.md)
 - [Attendance Tracking Follow Up](topics/attendance_tracking_follow_up.md)
 - [Attention To Conversion](topics/attention_to_conversion.md)
 - [Attraction Offers](topics/attraction_offers.md)
@@ -100,7 +112,11 @@ _204 source(s) · 1471 topic(s)_
 - [Authenticity Personal Brand](topics/authenticity_personal_brand.md)
 - [Authenticity Premium](topics/authenticity_premium.md)
 - [Authenticity Vs Imitation](topics/authenticity_vs_imitation.md)
+- [Auto Detailing](topics/auto_detailing.md)
+- [Automating Google Reviews](topics/automating_google_reviews.md)
+- [Automation And Efficiency](topics/automation_and_efficiency.md)
 - [Automation Prioritization](topics/automation_prioritization.md)
+- [Automation Virtual Assistant](topics/automation_virtual_assistant.md)
 - [Availability Scheduling](topics/availability_scheduling.md)
 - [Avatar Clarity](topics/avatar_clarity.md)
 - [Avatar Clarity From Insurance Constraints](topics/avatar_clarity_from_insurance_constraints.md)
@@ -109,6 +125,7 @@ _204 source(s) · 1471 topic(s)_
 - [Avatar Selection Pain Articulation](topics/avatar_selection_pain_articulation.md)
 - [Avatar Targeting](topics/avatar_targeting.md)
 - [Avatar Targeting Strategy](topics/avatar_targeting_strategy.md)
+- [Avoid Conventional Advice](topics/avoid_conventional_advice.md)
 - [Avoiding The Direct Response Doom Loop](topics/avoiding_the_direct_response_doom_loop.md)
 - [B2B High Ticket Creators](topics/b2b_high_ticket_creators.md)
 - [B2B Partnership Integration](topics/b2b_partnership_integration.md)
@@ -116,6 +133,7 @@ _204 source(s) · 1471 topic(s)_
 - [B2C Entertainment And Educators](topics/b2c_entertainment_and_educators.md)
 - [Back Office Automation](topics/back_office_automation.md)
 - [Bait And Switch Prevention](topics/bait_and_switch_prevention.md)
+- [Balancing Full Time Job And Side Business](topics/balancing_full_time_job_and_side_business.md)
 - [Bamfam Method](topics/bamfam_method.md)
 - [Bandwidth Constraint Vs Financial Constraint](topics/bandwidth_constraint_vs_financial_constraint.md)
 - [Barbell Strategy For Future](topics/barbell_strategy_for_future.md)
@@ -136,9 +154,12 @@ _204 source(s) · 1471 topic(s)_
 - [Belief Systems Of Wealthy Vs Poor](topics/belief_systems_of_wealthy_vs_poor.md)
 - [Best Person Duplication](topics/best_person_duplication.md)
 - [Betrayal Consequences](topics/betrayal_consequences.md)
+- [Billing And Payment Processes](topics/billing_and_payment_processes.md)
 - [Billing Cycles](topics/billing_cycles.md)
 - [Biological Factors In Mental Resilience](topics/biological_factors_in_mental_resilience.md)
 - [Black Box Thinking](topics/black_box_thinking.md)
+- [Bloom Operations](topics/bloom_operations.md)
+- [Bloom Portfolio](topics/bloom_portfolio.md)
 - [Blue Ocean Strategy](topics/blue_ocean_strategy.md)
 - [Boiler Room Method](topics/boiler_room_method.md)
 - [Bonus Tier Structure](topics/bonus_tier_structure.md)
@@ -158,11 +179,14 @@ _204 source(s) · 1471 topic(s)_
 - [Brand Play Investment](topics/brand_play_investment.md)
 - [Brand Risk Perception](topics/brand_risk_perception.md)
 - [Branded Search Term Defense](topics/branded_search_term_defense.md)
+- [Branding And Domain Registration](topics/branding_and_domain_registration.md)
+- [Branding And Optimization](topics/branding_and_optimization.md)
 - [Branding Definition](topics/branding_definition.md)
 - [Branding Economics Pricing Power](topics/branding_economics_pricing_power.md)
 - [Branding Touchpoints](topics/branding_touchpoints.md)
 - [Bridge Pages And Customer Awareness Levels](topics/bridge_pages_and_customer_awareness_levels.md)
 - [Build Plan](topics/build_plan.md)
+- [Building A Community](topics/building_a_community.md)
 - [Building Framework](topics/building_framework.md)
 - [Building In Public](topics/building_in_public.md)
 - [Building Trust](topics/building_trust.md)
@@ -170,19 +194,30 @@ _204 source(s) · 1471 topic(s)_
 - [Bundle Strategy](topics/bundle_strategy.md)
 - [Business Cash Flow](topics/business_cash_flow.md)
 - [Business Excitement Curve](topics/business_excitement_curve.md)
+- [Business Expansion](topics/business_expansion.md)
 - [Business Focus And Constraints](topics/business_focus_and_constraints.md)
 - [Business Focused Content Strategy](topics/business_focused_content_strategy.md)
 - [Business Growth Constraints](topics/business_growth_constraints.md)
 - [Business Leverage More Better New](topics/business_leverage_more_better_new.md)
+- [Business Model](topics/business_model.md)
 - [Business Model Bifurcation](topics/business_model_bifurcation.md)
 - [Business Model Innovation](topics/business_model_innovation.md)
 - [Business Model Refinement](topics/business_model_refinement.md)
 - [Business Model Selection](topics/business_model_selection.md)
+- [Business Model Setup](topics/business_model_setup.md)
 - [Business Model Sustainability](topics/business_model_sustainability.md)
+- [Business Name Keyword Optimization](topics/business_name_keyword_optimization.md)
+- [Business Name Profile Creation](topics/business_name_profile_creation.md)
 - [Business Owner Mindset Shift](topics/business_owner_mindset_shift.md)
 - [Business Partnerships And Legal](topics/business_partnerships_and_legal.md)
+- [Business Profile Creation](topics/business_profile_creation.md)
+- [Business Profile Optimization](topics/business_profile_optimization.md)
+- [Business Profile Setup](topics/business_profile_setup.md)
+- [Business Profiles Address Vs Service Area](topics/business_profiles_address_vs_service_area.md)
 - [Business Rollup Strategy](topics/business_rollup_strategy.md)
+- [Business Scaling](topics/business_scaling.md)
 - [Business Scaling Roadmap](topics/business_scaling_roadmap.md)
+- [Business Setup Process](topics/business_setup_process.md)
 - [Business Stage Diagnosis](topics/business_stage_diagnosis.md)
 - [Business Swamp Constraints](topics/business_swamp_constraints.md)
 - [Buy X Get Y Free](topics/buy_x_get_y_free.md)
@@ -193,9 +228,17 @@ _204 source(s) · 1471 topic(s)_
 - [Cac Vs Ltv Math](topics/cac_vs_ltv_math.md)
 - [Cac Vs Product](topics/cac_vs_product.md)
 - [Cac Vs True Cac](topics/cac_vs_true_cac.md)
+- [Calculated Risk](topics/calculated_risk.md)
 - [Calendar Utilization](topics/calendar_utilization.md)
 - [Call Out Techniques](topics/call_out_techniques.md)
+- [Call To Action](topics/call_to_action.md)
 - [Call To Action Best Practices](topics/call_to_action_best_practices.md)
+- [Call Tracking And Virtual Assistants](topics/call_tracking_and_virtual_assistants.md)
+- [Call Tracking Setup](topics/call_tracking_setup.md)
+- [Call Volume And Scaling](topics/call_volume_and_scaling.md)
+- [Callconversion And Contractor Vetting](topics/callconversion_and_contractor_vetting.md)
+- [Callrail For Phone Number Verification](topics/callrail_for_phone_number_verification.md)
+- [Callrail For Phone Numbers](topics/callrail_for_phone_numbers.md)
 - [Capacity Building](topics/capacity_building.md)
 - [Capacity Expansion](topics/capacity_expansion.md)
 - [Capacity Maximization](topics/capacity_maximization.md)
@@ -207,9 +250,11 @@ _204 source(s) · 1471 topic(s)_
 - [Capital Leverage And Returns](topics/capital_leverage_and_returns.md)
 - [Capital Raising Channels](topics/capital_raising_channels.md)
 - [Capital Requirements For Scale](topics/capital_requirements_for_scale.md)
+- [Car Detailing Low Barrier High Ticket Recurring](topics/car_detailing_low_barrier_high_ticket_recurring.md)
 - [Career Ladder Design](topics/career_ladder_design.md)
 - [Career Path Decisions](topics/career_path_decisions.md)
 - [Career Placement Economics](topics/career_placement_economics.md)
+- [Career Transition To Health Coaching](topics/career_transition_to_health_coaching.md)
 - [Caring As Competitive Advantage](topics/caring_as_competitive_advantage.md)
 - [Case Study Close](topics/case_study_close.md)
 - [Cash Flow Management](topics/cash_flow_management.md)
@@ -249,6 +294,7 @@ _204 source(s) · 1471 topic(s)_
 - [Close Rate As Pricing Signal](topics/close_rate_as_pricing_signal.md)
 - [Close Rate Optimization](topics/close_rate_optimization.md)
 - [Close Rate Vs Pricing](topics/close_rate_vs_pricing.md)
+- [Closing Initial Appointments](topics/closing_initial_appointments.md)
 - [Cloud To Dirt Knowledge](topics/cloud_to_dirt_knowledge.md)
 - [Coaching As Moat](topics/coaching_as_moat.md)
 - [Coaching Product Scaling](topics/coaching_product_scaling.md)
@@ -263,14 +309,19 @@ _204 source(s) · 1471 topic(s)_
 - [Cold Outreach For Executives](topics/cold_outreach_for_executives.md)
 - [Cold Outreach Referral Growth](topics/cold_outreach_referral_growth.md)
 - [Cold Process On Warm Leads](topics/cold_process_on_warm_leads.md)
+- [College Friendship](topics/college_friendship.md)
 - [Comfort As Constraint](topics/comfort_as_constraint.md)
 - [Commission Based Pricing](topics/commission_based_pricing.md)
+- [Commitment](topics/commitment.md)
+- [Commitment Promises](topics/commitment_promises.md)
 - [Commitment To Business](topics/commitment_to_business.md)
 - [Commodity Problem](topics/commodity_problem.md)
 - [Communication Cadence](topics/communication_cadence.md)
 - [Communication Clarity](topics/communication_clarity.md)
 - [Communication Cycles Meetings](topics/communication_cycles_meetings.md)
 - [Communication Of Expectations](topics/communication_of_expectations.md)
+- [Communication Strategies To Funnel Leads](topics/communication_strategies_to_funnel_leads.md)
+- [Communication Systems](topics/communication_systems.md)
 - [Community Building Asset](topics/community_building_asset.md)
 - [Community Design](topics/community_design.md)
 - [Community Parasocial Relationships](topics/community_parasocial_relationships.md)
@@ -279,9 +330,12 @@ _204 source(s) · 1471 topic(s)_
 - [Comparing Early Vs Late Chapters](topics/comparing_early_vs_late_chapters.md)
 - [Compassion Through Context](topics/compassion_through_context.md)
 - [Compensation Structure](topics/compensation_structure.md)
+- [Competition Analysis](topics/competition_analysis.md)
 - [Competitive Advantage Through Persistence](topics/competitive_advantage_through_persistence.md)
+- [Competitive Area Selection](topics/competitive_area_selection.md)
 - [Competitive Moats Differentiation](topics/competitive_moats_differentiation.md)
 - [Competitive Moats Fear Inversions](topics/competitive_moats_fear_inversions.md)
+- [Competitive Positioning Through Location And Review Density](topics/competitive_positioning_through_location_and_review_density.md)
 - [Complexity Reduction](topics/complexity_reduction.md)
 - [Compliance And Law](topics/compliance_and_law.md)
 - [Composio Authentication](topics/composio_authentication.md)
@@ -309,6 +363,7 @@ _204 source(s) · 1471 topic(s)_
 - [Content Creation From Truth](topics/content_creation_from_truth.md)
 - [Content Creation With Ai](topics/content_creation_with_ai.md)
 - [Content Creator Burnout](topics/content_creator_burnout.md)
+- [Content Creator Origins](topics/content_creator_origins.md)
 - [Content Driven Ad Funnel](topics/content_driven_ad_funnel.md)
 - [Content Engineering For Proof](topics/content_engineering_for_proof.md)
 - [Content Enjoyment](topics/content_enjoyment.md)
@@ -331,15 +386,26 @@ _204 source(s) · 1471 topic(s)_
 - [Continuity Revenue Model](topics/continuity_revenue_model.md)
 - [Continuity Upsell](topics/continuity_upsell.md)
 - [Continuous Improvement Vs Outcome Fixation](topics/continuous_improvement_vs_outcome_fixation.md)
+- [Contract Terms](topics/contract_terms.md)
+- [Contractor Involvement](topics/contractor_involvement.md)
+- [Contractor Managed Pricing](topics/contractor_managed_pricing.md)
+- [Contractor Outreach And Payment Model](topics/contractor_outreach_and_payment_model.md)
+- [Contractor Recruitment](topics/contractor_recruitment.md)
+- [Contractor Reliability](topics/contractor_reliability.md)
+- [Contractor Sourcing](topics/contractor_sourcing.md)
+- [Contractor Training](topics/contractor_training.md)
 - [Contractor Vs Full Time Hiring](topics/contractor_vs_full_time_hiring.md)
 - [Contrarian Conviction](topics/contrarian_conviction.md)
 - [Control Relinquishment](topics/control_relinquishment.md)
+- [Controlling Your Luck](topics/controlling_your_luck.md)
 - [Conversion Funnel](topics/conversion_funnel.md)
 - [Conversion Funnel Design](topics/conversion_funnel_design.md)
 - [Conversion Metrics Tracking](topics/conversion_metrics_tracking.md)
 - [Conversion Rate Assumptions](topics/conversion_rate_assumptions.md)
 - [Conversion Rate Benchmarks](topics/conversion_rate_benchmarks.md)
 - [Conversion Rate Optimization](topics/conversion_rate_optimization.md)
+- [Conversion Rates In Plumbing](topics/conversion_rates_in_plumbing.md)
+- [Copywriting](topics/copywriting.md)
 - [Core Business Focus](topics/core_business_focus.md)
 - [Core Economic Arbitrage](topics/core_economic_arbitrage.md)
 - [Corporate Client Leverage](topics/corporate_client_leverage.md)
@@ -351,6 +417,8 @@ _204 source(s) · 1471 topic(s)_
 - [Courage And Fear](topics/courage_and_fear.md)
 - [Courage Risk Interval](topics/courage_risk_interval.md)
 - [Court Filter Observable Language](topics/court_filter_observable_language.md)
+- [Cpg Distribution](topics/cpg_distribution.md)
+- [Cpg Retail Launches](topics/cpg_retail_launches.md)
 - [Creative Optimization](topics/creative_optimization.md)
 - [Creative Production](topics/creative_production.md)
 - [Creative Variation Strategy](topics/creative_variation_strategy.md)
@@ -363,18 +431,22 @@ _204 source(s) · 1471 topic(s)_
 - [Cringe As Status Play](topics/cringe_as_status_play.md)
 - [Critical Thinking For Closing Deals](topics/critical_thinking_for_closing_deals.md)
 - [Criticism From Mediocrity](topics/criticism_from_mediocrity.md)
+- [Crm Implementation](topics/crm_implementation.md)
 - [Crm Limitations And Manual Follow Ups](topics/crm_limitations_and_manual_follow_ups.md)
 - [Crm Offer Positioning](topics/crm_offer_positioning.md)
+- [Crm Systems](topics/crm_systems.md)
 - [Cross Platform Retargeting](topics/cross_platform_retargeting.md)
 - [Cultural Foundation Team Setup](topics/cultural_foundation_team_setup.md)
 - [Culture Definition And Codification](topics/culture_definition_and_codification.md)
 - [Culture Execution](topics/culture_execution.md)
 - [Custom Order Strategy Positioning](topics/custom_order_strategy_positioning.md)
+- [Custom Services](topics/custom_services.md)
 - [Customer Acquisition](topics/customer_acquisition.md)
 - [Customer Acquisition Arbitrage](topics/customer_acquisition_arbitrage.md)
 - [Customer Acquisition Cost](topics/customer_acquisition_cost.md)
 - [Customer Acquisition Cost Optimization](topics/customer_acquisition_cost_optimization.md)
 - [Customer Activation](topics/customer_activation.md)
+- [Customer Avatar](topics/customer_avatar.md)
 - [Customer Avatar And Systematization](topics/customer_avatar_and_systematization.md)
 - [Customer Avatar Refinement Selection](topics/customer_avatar_refinement_selection.md)
 - [Customer Behavior Change](topics/customer_behavior_change.md)
@@ -391,6 +463,7 @@ _204 source(s) · 1471 topic(s)_
 - [Customer Referral Programs](topics/customer_referral_programs.md)
 - [Customer Retention Mechanics](topics/customer_retention_mechanics.md)
 - [Customer Retention Through Transparency](topics/customer_retention_through_transparency.md)
+- [Customer Review Management](topics/customer_review_management.md)
 - [Customer Segmentation](topics/customer_segmentation.md)
 - [Customer Segmentation Market Focus](topics/customer_segmentation_market_focus.md)
 - [Customer Segmentation Strategy](topics/customer_segmentation_strategy.md)
@@ -420,6 +493,7 @@ _204 source(s) · 1471 topic(s)_
 - [Decision Limbo And Purgatory](topics/decision_limbo_and_purgatory.md)
 - [Decision Making Frameworks](topics/decision_making_frameworks.md)
 - [Decision Theory](topics/decision_theory.md)
+- [Deck Fence Low Competition High Ticket Easy To Rank](topics/deck_fence_low_competition_high_ticket_easy_to_rank.md)
 - [Decoy Offers](topics/decoy_offers.md)
 - [Definition And Clarity](topics/definition_and_clarity.md)
 - [Delayed Gratification](topics/delayed_gratification.md)
@@ -433,11 +507,14 @@ _204 source(s) · 1471 topic(s)_
 - [Delivery Model](topics/delivery_model.md)
 - [Delivery Model Redesign](topics/delivery_model_redesign.md)
 - [Delivery Ratio Economics](topics/delivery_ratio_economics.md)
+- [Demand Analysis](topics/demand_analysis.md)
+- [Demand Competition](topics/demand_competition.md)
 - [Demand Generation Strategy](topics/demand_generation_strategy.md)
 - [Demand Problem](topics/demand_problem.md)
 - [Demand Unlocking](topics/demand_unlocking.md)
 - [Demand Vs Supply Constraint](topics/demand_vs_supply_constraint.md)
 - [Demonstration Ads](topics/demonstration_ads.md)
+- [Deposit Based Payment Structure](topics/deposit_based_payment_structure.md)
 - [Deprivation And Drive](topics/deprivation_and_drive.md)
 - [Difficulty Curve](topics/difficulty_curve.md)
 - [Diminishing Returns](topics/diminishing_returns.md)
@@ -487,6 +564,7 @@ _204 source(s) · 1471 topic(s)_
 - [Eliminating Secondary Business Lines](topics/eliminating_secondary_business_lines.md)
 - [Email Nurture Long Term Retention](topics/email_nurture_long_term_retention.md)
 - [Email Reactivation Campaigns](topics/email_reactivation_campaigns.md)
+- [Email Verification](topics/email_verification.md)
 - [Emotional Anchoring Before Price Drop](topics/emotional_anchoring_before_price_drop.md)
 - [Emotional Authenticity](topics/emotional_authenticity.md)
 - [Emotional Rigidity And Change](topics/emotional_rigidity_and_change.md)
@@ -497,6 +575,8 @@ _204 source(s) · 1471 topic(s)_
 - [Enrollment Funnel](topics/enrollment_funnel.md)
 - [Enterprise Vs Smb Pricing Strategy](topics/enterprise_vs_smb_pricing_strategy.md)
 - [Entertainment Vs Education Audiences](topics/entertainment_vs_education_audiences.md)
+- [Entrepreneur Mindset](topics/entrepreneur_mindset.md)
+- [Entrepreneur Origin Story](topics/entrepreneur_origin_story.md)
 - [Entrepreneurial Mindset And Opportunity Cost](topics/entrepreneurial_mindset_and_opportunity_cost.md)
 - [Entrepreneurial Trajectory](topics/entrepreneurial_trajectory.md)
 - [Entrepreneurship Personal Development](topics/entrepreneurship_personal_development.md)
@@ -511,6 +591,7 @@ _204 source(s) · 1471 topic(s)_
 - [Evidence Over Emotion](topics/evidence_over_emotion.md)
 - [Evolutionary Bias Toward Pessimism](topics/evolutionary_bias_toward_pessimism.md)
 - [Excuse Responsibility](topics/excuse_responsibility.md)
+- [Execution](topics/execution.md)
 - [Execution Over Planning](topics/execution_over_planning.md)
 - [Execution Rapid Iteration](topics/execution_rapid_iteration.md)
 - [Executive Titling Levels](topics/executive_titling_levels.md)
@@ -518,17 +599,25 @@ _204 source(s) · 1471 topic(s)_
 - [Existing Vehicle Optimization](topics/existing_vehicle_optimization.md)
 - [Exit Difficulty](topics/exit_difficulty.md)
 - [Exit Interviews Objection Handling](topics/exit_interviews_objection_handling.md)
+- [Expanding Niche Markets](topics/expanding_niche_markets.md)
+- [Expanding Service Areas](topics/expanding_service_areas.md)
 - [Expansion Hooks For New Markets](topics/expansion_hooks_for_new_markets.md)
 - [Expansion Without Dilution](topics/expansion_without_dilution.md)
 - [Expectation Management](topics/expectation_management.md)
 - [Expectation Setting](topics/expectation_setting.md)
+- [Expo West](topics/expo_west.md)
 - [Exponential Returns](topics/exponential_returns.md)
 - [Facebook Ads Optimization](topics/facebook_ads_optimization.md)
+- [Facebook Marketplace Method](topics/facebook_marketplace_method.md)
 - [Faceless Ads](topics/faceless_ads.md)
 - [Facility Planning](topics/facility_planning.md)
+- [Failure Response](topics/failure_response.md)
+- [Fake Reviews](topics/fake_reviews.md)
+- [Fake Signage Detection Challenges](topics/fake_signage_detection_challenges.md)
 - [Family Time Vs Growth](topics/family_time_vs_growth.md)
 - [Fast Cash Play](topics/fast_cash_play.md)
 - [Fast Cash Plays](topics/fast_cash_plays.md)
+- [Fatherhood](topics/fatherhood.md)
 - [Fear And Risk Taking](topics/fear_and_risk_taking.md)
 - [Fear As Illusion](topics/fear_as_illusion.md)
 - [Feature Downsells](topics/feature_downsells.md)
@@ -536,15 +625,20 @@ _204 source(s) · 1471 topic(s)_
 - [Feedback Loop Optimization](topics/feedback_loop_optimization.md)
 - [Feedback Loops Reinforcement](topics/feedback_loops_reinforcement.md)
 - [Feelings Vs Actions](topics/feelings_vs_actions.md)
+- [Fill Services Products](topics/fill_services_products.md)
+- [Financial Constraints And Payoff Timeline](topics/financial_constraints_and_payoff_timeline.md)
 - [Financial Discipline](topics/financial_discipline.md)
 - [Financial Modeling](topics/financial_modeling.md)
+- [Financial Outcomes](topics/financial_outcomes.md)
 - [Financial Structure](topics/financial_structure.md)
+- [Finding Contractors](topics/finding_contractors.md)
 - [Finite Productive Years](topics/finite_productive_years.md)
 - [First Party Data And Iteration](topics/first_party_data_and_iteration.md)
 - [First Party Data Learning](topics/first_party_data_learning.md)
 - [First Rule Of Entrepreneurship](topics/first_rule_of_entrepreneurship.md)
 - [First Touch Analysis](topics/first_touch_analysis.md)
 - [Five Ai Workers](topics/five_ai_workers.md)
+- [Fix Solution Approach](topics/fix_solution_approach.md)
 - [Focus And Avatar Conflict](topics/focus_and_avatar_conflict.md)
 - [Focus And Distractions Idea Management](topics/focus_and_distractions_idea_management.md)
 - [Focus As Daily Practice](topics/focus_as_daily_practice.md)
@@ -555,6 +649,7 @@ _204 source(s) · 1471 topic(s)_
 - [Follow Up Calls](topics/follow_up_calls.md)
 - [Fortitude Behavior Control](topics/fortitude_behavior_control.md)
 - [Fortitude Definition](topics/fortitude_definition.md)
+- [Founder Advice](topics/founder_advice.md)
 - [Founder Control](topics/founder_control.md)
 - [Founder Delegation](topics/founder_delegation.md)
 - [Founder Dependencies And Task Delegation](topics/founder_dependencies_and_task_delegation.md)
@@ -604,14 +699,19 @@ _204 source(s) · 1471 topic(s)_
 - [Gap Between Stimulus And Response](topics/gap_between_stimulus_and_response.md)
 - [Gatekeeper Strategy](topics/gatekeeper_strategy.md)
 - [Gbt Training Data](topics/gbt_training_data.md)
+- [General](topics/general.md)
 - [General Manager Profit Share Structure](topics/general_manager_profit_share_structure.md)
 - [Generalization Across Domains](topics/generalization_across_domains.md)
 - [Genetic Baseline And Effort](topics/genetic_baseline_and_effort.md)
 - [Geographic Expansion](topics/geographic_expansion.md)
 - [Geographic Signaling](topics/geographic_signaling.md)
+- [Getting A Job](topics/getting_a_job.md)
 - [Github Integration](topics/github_integration.md)
 - [Give Ask Ratio Management](topics/give_ask_ratio_management.md)
 - [Giveaways](topics/giveaways.md)
+- [Global Entrepreneurship](topics/global_entrepreneurship.md)
+- [Gmb Profile Setup](topics/gmb_profile_setup.md)
+- [Gmv Max](topics/gmv_max.md)
 - [Goal Clarity](topics/goal_clarity.md)
 - [Goal Worth Suffering For](topics/goal_worth_suffering_for.md)
 - [Golden Goose Principle](topics/golden_goose_principle.md)
@@ -619,6 +719,13 @@ _204 source(s) · 1471 topic(s)_
 - [Goodwill Based Upsells](topics/goodwill_based_upsells.md)
 - [Google Ads Optimization](topics/google_ads_optimization.md)
 - [Google Business Page Optimization](topics/google_business_page_optimization.md)
+- [Google Business Profile Creation](topics/google_business_profile_creation.md)
+- [Google Business Profile Setup](topics/google_business_profile_setup.md)
+- [Google Business Profiles](topics/google_business_profiles.md)
+- [Google Business Setup](topics/google_business_setup.md)
+- [Google Maps Strategy](topics/google_maps_strategy.md)
+- [Google My Business](topics/google_my_business.md)
+- [Google My Business Gmb](topics/google_my_business_gmb.md)
 - [Google My Business Optimization](topics/google_my_business_optimization.md)
 - [Grand Opening Strategy](topics/grand_opening_strategy.md)
 - [Grand Slam Offer](topics/grand_slam_offer.md)
@@ -635,24 +742,37 @@ _204 source(s) · 1471 topic(s)_
 - [Health And Longevity Benefits](topics/health_and_longevity_benefits.md)
 - [Hedgehog Concept](topics/hedgehog_concept.md)
 - [Hedonic Adaptation](topics/hedonic_adaptation.md)
+- [High Demand Services](topics/high_demand_services.md)
 - [High End Pricing Strategy](topics/high_end_pricing_strategy.md)
 - [High Fortitude Examples](topics/high_fortitude_examples.md)
+- [High Leverage Activities](topics/high_leverage_activities.md)
 - [High Leverage Fundraising](topics/high_leverage_fundraising.md)
 - [High Margin Business Model](topics/high_margin_business_model.md)
+- [High Search Volume Low Competition](topics/high_search_volume_low_competition.md)
 - [High Ticket Biz Op Risk](topics/high_ticket_biz_op_risk.md)
+- [High Ticket Local Service Arbitrage](topics/high_ticket_local_service_arbitrage.md)
+- [High Ticket Niche](topics/high_ticket_niche.md)
+- [High Ticket Niches](topics/high_ticket_niches.md)
 - [High Ticket One On One Selling](topics/high_ticket_one_on_one_selling.md)
+- [High Ticket Sales](topics/high_ticket_sales.md)
 - [High Ticket Sales Funnel](topics/high_ticket_sales_funnel.md)
 - [High Ticket Sales Pricing](topics/high_ticket_sales_pricing.md)
+- [High Ticket Services](topics/high_ticket_services.md)
 - [High Value Customer Service](topics/high_value_customer_service.md)
 - [High Vs Low Resilience](topics/high_vs_low_resilience.md)
+- [Higher Ticket Niches](topics/higher_ticket_niches.md)
+- [Higher Ticket Service Pricing](topics/higher_ticket_service_pricing.md)
 - [Hiring And Recruiting Militancy](topics/hiring_and_recruiting_militancy.md)
 - [Hiring And Talent Acquisition](topics/hiring_and_talent_acquisition.md)
 - [Hiring And Training Systematization](topics/hiring_and_training_systematization.md)
 - [Hiring Leverage](topics/hiring_leverage.md)
+- [Hiring Virtual Assistants](topics/hiring_virtual_assistants.md)
 - [Holistic Sales Approach](topics/holistic_sales_approach.md)
 - [Hook Writing Strategy](topics/hook_writing_strategy.md)
 - [Hotline Workflow Example](topics/hotline_workflow_example.md)
+- [House Cleaning Higher Search Volume Harder Verification](topics/house_cleaning_higher_search_volume_harder_verification.md)
 - [Humanoid Robots](topics/humanoid_robots.md)
+- [Hvac High Ticket Competitive Area Based](topics/hvac_high_ticket_competitive_area_based.md)
 - [Hyper Successful Traits](topics/hyper_successful_traits.md)
 - [Ideal Audience Alignment](topics/ideal_audience_alignment.md)
 - [Ideal Customer Avatar](topics/ideal_customer_avatar.md)
@@ -666,22 +786,28 @@ _204 source(s) · 1471 topic(s)_
 - [Implementation Of Training Focused Marketing](topics/implementation_of_training_focused_marketing.md)
 - [Implementation Timeline And Priority](topics/implementation_timeline_and_priority.md)
 - [In Person Sales Closing](topics/in_person_sales_closing.md)
+- [Incentivizing Local Businesses](topics/incentivizing_local_businesses.md)
 - [Income Diversification](topics/income_diversification.md)
 - [Income Growth As Primary Lever](topics/income_growth_as_primary_lever.md)
 - [Income Plateaus](topics/income_plateaus.md)
 - [Income Vs Lifestyle Discipline](topics/income_vs_lifestyle_discipline.md)
+- [Indeed For Higher Quality Leads](topics/indeed_for_higher_quality_leads.md)
 - [Independent Thinking And Agency](topics/independent_thinking_and_agency.md)
 - [Industry Averages](topics/industry_averages.md)
+- [Industry Selection](topics/industry_selection.md)
 - [Industry Standards Trap](topics/industry_standards_trap.md)
 - [Inflation And Future Dollar Value](topics/inflation_and_future_dollar_value.md)
 - [Influence And Branding Framework Spcl](topics/influence_and_branding_framework_spcl.md)
 - [Influence Stack](topics/influence_stack.md)
 - [Influencer Leverage Strategy](topics/influencer_leverage_strategy.md)
+- [Influencer Marketing](topics/influencer_marketing.md)
 - [Influencer Type Categories](topics/influencer_type_categories.md)
 - [Information Based Decision Making](topics/information_based_decision_making.md)
 - [Information Vs Curation](topics/information_vs_curation.md)
 - [Input Output Equations](topics/input_output_equations.md)
+- [Inspection Fee Value](topics/inspection_fee_value.md)
 - [Instagram Monetization Paths](topics/instagram_monetization_paths.md)
+- [Instant Verification](topics/instant_verification.md)
 - [Insurance And Risk Transfer](topics/insurance_and_risk_transfer.md)
 - [Insurance Industry Disruption](topics/insurance_industry_disruption.md)
 - [Insurance Industry Economics](topics/insurance_industry_economics.md)
@@ -698,9 +824,18 @@ _204 source(s) · 1471 topic(s)_
 - [Irresistible Offers](topics/irresistible_offers.md)
 - [Iteration Vectors](topics/iteration_vectors.md)
 - [Iterative Improvement Process](topics/iterative_improvement_process.md)
+- [Job Booking System](topics/job_booking_system.md)
+- [Job Hunting And Employment](topics/job_hunting_and_employment.md)
+- [Job Posting Process](topics/job_posting_process.md)
+- [Junk Removal Non Recurring Low Ticket Hard To Verify](topics/junk_removal_non_recurring_low_ticket_hard_to_verify.md)
 - [Kaleidoscope Creative Variations](topics/kaleidoscope_creative_variations.md)
 - [Key Man Dependency](topics/key_man_dependency.md)
 - [Key Man Risk And Business Scaling](topics/key_man_risk_and_business_scaling.md)
+- [Keyword Optimization](topics/keyword_optimization.md)
+- [Keyword Research](topics/keyword_research.md)
+- [Keyword Research And Search Volume Analysis](topics/keyword_research_and_search_volume_analysis.md)
+- [Keyword Targeting](topics/keyword_targeting.md)
+- [Keyword Tools](topics/keyword_tools.md)
 - [Knowledge Types](topics/knowledge_types.md)
 - [Landing Page Optimization](topics/landing_page_optimization.md)
 - [Landing Pages And Ctas](topics/landing_pages_and_ctas.md)
@@ -710,6 +845,7 @@ _204 source(s) · 1471 topic(s)_
 - [Large Group Training Revenue](topics/large_group_training_revenue.md)
 - [Launch Strategies](topics/launch_strategies.md)
 - [Law Firm Capacity Constraints](topics/law_firm_capacity_constraints.md)
+- [Laziness Procrastination](topics/laziness_procrastination.md)
 - [Lazy System](topics/lazy_system.md)
 - [Lead Follow Up](topics/lead_follow_up.md)
 - [Lead Gen Channels](topics/lead_gen_channels.md)
@@ -718,11 +854,17 @@ _204 source(s) · 1471 topic(s)_
 - [Lead Generation And Sales Strategy](topics/lead_generation_and_sales_strategy.md)
 - [Lead Generation Channels And Content Strategy](topics/lead_generation_channels_and_content_strategy.md)
 - [Lead Generation Marketing](topics/lead_generation_marketing.md)
+- [Lead Generation Profit Potential](topics/lead_generation_profit_potential.md)
 - [Lead Generation Scaling](topics/lead_generation_scaling.md)
+- [Lead Generation Strategies](topics/lead_generation_strategies.md)
 - [Lead Generation Strategy](topics/lead_generation_strategy.md)
+- [Lead Generation System](topics/lead_generation_system.md)
+- [Lead Generation Via Google My Business Reviews](topics/lead_generation_via_google_my_business_reviews.md)
+- [Lead Generation Via Profiles](topics/lead_generation_via_profiles.md)
 - [Lead Generation Volume](topics/lead_generation_volume.md)
 - [Lead Getter Integration](topics/lead_getter_integration.md)
 - [Lead Magnets And Offers](topics/lead_magnets_and_offers.md)
+- [Lead Monetization](topics/lead_monetization.md)
 - [Lead Nurture](topics/lead_nurture.md)
 - [Lead Nurture Definition](topics/lead_nurture_definition.md)
 - [Lead Qualification Bant Method](topics/lead_qualification_bant_method.md)
@@ -754,6 +896,7 @@ _204 source(s) · 1471 topic(s)_
 - [Leverage Mechanics](topics/leverage_mechanics.md)
 - [Leverage Through Risk](topics/leverage_through_risk.md)
 - [Liability At Scale](topics/liability_at_scale.md)
+- [Licensing And Insurance](topics/licensing_and_insurance.md)
 - [Licensing Model](topics/licensing_model.md)
 - [Licensing Vs Direct Service](topics/licensing_vs_direct_service.md)
 - [Licensing Vs Franchising](topics/licensing_vs_franchising.md)
@@ -763,10 +906,19 @@ _204 source(s) · 1471 topic(s)_
 - [Limiting Beliefs And Business Constraints](topics/limiting_beliefs_and_business_constraints.md)
 - [Live Launch Execution](topics/live_launch_execution.md)
 - [Livestock Branding History](topics/livestock_branding_history.md)
+- [Local Contractor Finding](topics/local_contractor_finding.md)
+- [Local Guide Levels](topics/local_guide_levels.md)
+- [Local Listings Address](topics/local_listings_address.md)
 - [Local Market Domination Before Expansion](topics/local_market_domination_before_expansion.md)
+- [Local Service Arbitrage](topics/local_service_arbitrage.md)
+- [Local Service Business](topics/local_service_business.md)
+- [Local Service Targeting](topics/local_service_targeting.md)
 - [Location Economics Sequencing](topics/location_economics_sequencing.md)
 - [Location Expansion Dynamics](topics/location_expansion_dynamics.md)
+- [Location Name Importance](topics/location_name_importance.md)
 - [Location Scaling](topics/location_scaling.md)
+- [Location Selection](topics/location_selection.md)
+- [Location Specific Rankings](topics/location_specific_rankings.md)
 - [Long Form Content](topics/long_form_content.md)
 - [Long Tail Distribution In Business](topics/long_tail_distribution_in_business.md)
 - [Long Term Growth Path](topics/long_term_growth_path.md)
@@ -778,6 +930,7 @@ _204 source(s) · 1471 topic(s)_
 - [Long Term Vision](topics/long_term_vision.md)
 - [Loss And Capability](topics/loss_and_capability.md)
 - [Low Fortitude Examples](topics/low_fortitude_examples.md)
+- [Low Review Competition](topics/low_review_competition.md)
 - [Low Ticket Products As Relationship Shifters](topics/low_ticket_products_as_relationship_shifters.md)
 - [Low Trust Environment Conversion](topics/low_trust_environment_conversion.md)
 - [Ltv Cac Economics](topics/ltv_cac_economics.md)
@@ -785,10 +938,13 @@ _204 source(s) · 1471 topic(s)_
 - [Ltv To Cac Validation](topics/ltv_to_cac_validation.md)
 - [Luck Surface Area](topics/luck_surface_area.md)
 - [Luxury Positioning Pricing Power](topics/luxury_positioning_pricing_power.md)
+- [Luxury Watches](topics/luxury_watches.md)
 - [Macro Opportunities](topics/macro_opportunities.md)
 - [Magical Product Experiences](topics/magical_product_experiences.md)
 - [Maintaining Behavior Under Stress](topics/maintaining_behavior_under_stress.md)
 - [Maker Vs Manager Mindset](topics/maker_vs_manager_mindset.md)
+- [Manage Updates Offers](topics/manage_updates_offers.md)
+- [Managing In College](topics/managing_in_college.md)
 - [Manufacturing Consolidation](topics/manufacturing_consolidation.md)
 - [Margin Analysis](topics/margin_analysis.md)
 - [Margin Compression](topics/margin_compression.md)
@@ -811,6 +967,8 @@ _204 source(s) · 1471 topic(s)_
 - [Market Gap Analysis And Client Transformation](topics/market_gap_analysis_and_client_transformation.md)
 - [Market Opportunity](topics/market_opportunity.md)
 - [Market Positioning And Differentiation](topics/market_positioning_and_differentiation.md)
+- [Market Research](topics/market_research.md)
+- [Market Research And Competition Analysis](topics/market_research_and_competition_analysis.md)
 - [Market Saturation Myth](topics/market_saturation_myth.md)
 - [Market Segmentation](topics/market_segmentation.md)
 - [Market Selection](topics/market_selection.md)
@@ -820,14 +978,19 @@ _204 source(s) · 1471 topic(s)_
 - [Market Timing And Land Grabs](topics/market_timing_and_land_grabs.md)
 - [Market Vs Model Issues](topics/market_vs_model_issues.md)
 - [Marketing Ad Management](topics/marketing_ad_management.md)
+- [Marketing And Seo Strategies](topics/marketing_and_seo_strategies.md)
 - [Marketing Automation](topics/marketing_automation.md)
 - [Marketing Clarity](topics/marketing_clarity.md)
 - [Marketing Distraction](topics/marketing_distraction.md)
 - [Marketing Filtration Vs Education](topics/marketing_filtration_vs_education.md)
 - [Marketing Metrics](topics/marketing_metrics.md)
+- [Marketing Ranking](topics/marketing_ranking.md)
+- [Marketing Strategies](topics/marketing_strategies.md)
 - [Marketing Strategy](topics/marketing_strategy.md)
+- [Marketing Tactics](topics/marketing_tactics.md)
 - [Marketing Volume](topics/marketing_volume.md)
 - [Marketing Vs Delivery Time Split](topics/marketing_vs_delivery_time_split.md)
+- [Marketplace Ai Hosts](topics/marketplace_ai_hosts.md)
 - [Mass Market Economics](topics/mass_market_economics.md)
 - [Mastering Rejection Shame](topics/mastering_rejection_shame.md)
 - [Mastery Depth](topics/mastery_depth.md)
@@ -837,31 +1000,46 @@ _204 source(s) · 1471 topic(s)_
 - [Membership Model Pitfalls](topics/membership_model_pitfalls.md)
 - [Membership Structuring](topics/membership_structuring.md)
 - [Memory Driven Value Framing](topics/memory_driven_value_framing.md)
+- [Mental Shift](topics/mental_shift.md)
 - [Mental Spending Barrier](topics/mental_spending_barrier.md)
 - [Mental Toughness](topics/mental_toughness.md)
 - [Menu Upsell](topics/menu_upsell.md)
 - [Messaging Framework](topics/messaging_framework.md)
 - [Messaging Positioning](topics/messaging_positioning.md)
+- [Metrics](topics/metrics.md)
+- [Metrics Search Volue Close Rate](topics/metrics_search_volue_close_rate.md)
+- [Miami Clientele](topics/miami_clientele.md)
+- [Mid Ticket Niche](topics/mid_ticket_niche.md)
 - [Million Verifier](topics/million_verifier.md)
+- [Mindset](topics/mindset.md)
 - [Model Pivot](topics/model_pivot.md)
 - [Modeling High Performers](topics/modeling_high_performers.md)
+- [Momentum Over Timing](topics/momentum_over_timing.md)
 - [Monetization Funnel](topics/monetization_funnel.md)
+- [Monetization Strategies](topics/monetization_strategies.md)
 - [Money Model Framework](topics/money_model_framework.md)
 - [Money Savings](topics/money_savings.md)
 - [Monopolistic Levers](topics/monopolistic_levers.md)
+- [Moonshot Decisions](topics/moonshot_decisions.md)
 - [More Better New Scaling](topics/more_better_new_scaling.md)
 - [Motivated Buyer Strategy](topics/motivated_buyer_strategy.md)
 - [Motivation Definition](topics/motivation_definition.md)
 - [Mountain Climbing Metaphor](topics/mountain_climbing_metaphor.md)
+- [Move Out Of Comfort Zone](topics/move_out_of_comfort_zone.md)
+- [Moving Out Of Parents House](topics/moving_out_of_parents_house.md)
 - [Multi Business Focus](topics/multi_business_focus.md)
 - [Multi Channel Acquisition Strategy](topics/multi_channel_acquisition_strategy.md)
 - [Multi Product Vs Single Product Strategy](topics/multi_product_vs_single_product_strategy.md)
+- [Multi Profile Setup](topics/multi_profile_setup.md)
 - [Multi Stage Business Scaling Roadmap](topics/multi_stage_business_scaling_roadmap.md)
 - [Multi Tiered Offer Strategy](topics/multi_tiered_offer_strategy.md)
 - [Multi Touch Complexity](topics/multi_touch_complexity.md)
+- [Multiple Accounts For Reporting](topics/multiple_accounts_for_reporting.md)
 - [Multiple Arbitrage](topics/multiple_arbitrage.md)
 - [Multiple Attack Vectors](topics/multiple_attack_vectors.md)
+- [Multiple Google Business Profiles](topics/multiple_google_business_profiles.md)
 - [Multiple Location Expansion](topics/multiple_location_expansion.md)
+- [Mutual Understanding](topics/mutual_understanding.md)
 - [Nail It Then Scale It Framework](topics/nail_it_then_scale_it_framework.md)
 - [Narrative Adaptation](topics/narrative_adaptation.md)
 - [Narrative Transparency](topics/narrative_transparency.md)
@@ -869,12 +1047,16 @@ _204 source(s) · 1471 topic(s)_
 - [Network Expansion](topics/network_expansion.md)
 - [Networking And Headhunters](topics/networking_and_headhunters.md)
 - [Networking At Scale](topics/networking_at_scale.md)
+- [Networking In Aspen](topics/networking_in_aspen.md)
+- [Networking Skepticism](topics/networking_skepticism.md)
 - [New Market Entry Strategy](topics/new_market_entry_strategy.md)
 - [New Service Launch](topics/new_service_launch.md)
 - [Next Js Frontend](topics/next_js_frontend.md)
 - [Niche Down To Scale Up](topics/niche_down_to_scale_up.md)
+- [Niche Selection](topics/niche_selection.md)
 - [Niching](topics/niching.md)
 - [No Based Close](topics/no_based_close.md)
+- [No Time Limit](topics/no_time_limit.md)
 - [Nonprofit Advantage](topics/nonprofit_advantage.md)
 - [Objection Handling](topics/objection_handling.md)
 - [Observable Behavior Specification](topics/observable_behavior_specification.md)
@@ -892,12 +1074,15 @@ _204 source(s) · 1471 topic(s)_
 - [Offer Structure](topics/offer_structure.md)
 - [Offers And Bonuses](topics/offers_and_bonuses.md)
 - [Offshore Staffing](topics/offshore_staffing.md)
+- [Omnichannel Halo Effect](topics/omnichannel_halo_effect.md)
 - [On Target Earnings Reverse Engineering](topics/on_target_earnings_reverse_engineering.md)
 - [Onboarding Activation](topics/onboarding_activation.md)
+- [Onboarding And Backup Contractors](topics/onboarding_and_backup_contractors.md)
 - [One Person Company](topics/one_person_company.md)
 - [One Time Setup Fees](topics/one_time_setup_fees.md)
 - [Ongoing Revenue Share Vs Upfront Spiff](topics/ongoing_revenue_share_vs_upfront_spiff.md)
 - [Open To Goal Work Framework](topics/open_to_goal_work_framework.md)
+- [Openclaw Ai Tool](topics/openclaw_ai_tool.md)
 - [Operating Leverage](topics/operating_leverage.md)
 - [Operational Complexity](topics/operational_complexity.md)
 - [Operational Efficiency](topics/operational_efficiency.md)
@@ -915,15 +1100,23 @@ _204 source(s) · 1471 topic(s)_
 - [Opportunity Cost Framework](topics/opportunity_cost_framework.md)
 - [Opportunity Cost Of Caution](topics/opportunity_cost_of_caution.md)
 - [Opportunity Recognition](topics/opportunity_recognition.md)
+- [Optimization Seo](topics/optimization_seo.md)
+- [Optimization Strategies](topics/optimization_strategies.md)
+- [Optimized Naming Strategies](topics/optimized_naming_strategies.md)
+- [Optimized Profile Names](topics/optimized_profile_names.md)
+- [Optimizing Google Rankings](topics/optimizing_google_rankings.md)
 - [Order Of Magnitude Thinking](topics/order_of_magnitude_thinking.md)
 - [Organic Audience Monetization Mistakes](topics/organic_audience_monetization_mistakes.md)
 - [Organic Growth Model](topics/organic_growth_model.md)
+- [Organic Lead Generation](topics/organic_lead_generation.md)
 - [Organizational Scope](topics/organizational_scope.md)
 - [Organizational Structure Hiring](topics/organizational_structure_hiring.md)
 - [Outbound Sales For Capital](topics/outbound_sales_for_capital.md)
 - [Outcome Based Compensation](topics/outcome_based_compensation.md)
 - [Outcome Vs Process Orientation](topics/outcome_vs_process_orientation.md)
 - [Outsized Returns From Contrarian Bets](topics/outsized_returns_from_contrarian_bets.md)
+- [Outsourcing](topics/outsourcing.md)
+- [Outsourcing Phone Calls](topics/outsourcing_phone_calls.md)
 - [Overestimating Downside Risk](topics/overestimating_downside_risk.md)
 - [Overexpansion Risk](topics/overexpansion_risk.md)
 - [Overhead Management](topics/overhead_management.md)
@@ -935,6 +1128,7 @@ _204 source(s) · 1471 topic(s)_
 - [Paid Advertising For Investors](topics/paid_advertising_for_investors.md)
 - [Paid Advertising Fundamentals](topics/paid_advertising_fundamentals.md)
 - [Paid Content Amplification](topics/paid_content_amplification.md)
+- [Paid Inspections](topics/paid_inspections.md)
 - [Paid Media Arbitrage Scaling Limits](topics/paid_media_arbitrage_scaling_limits.md)
 - [Paid Partnerships Collaborations](topics/paid_partnerships_collaborations.md)
 - [Pairing Products With Customer Values](topics/pairing_products_with_customer_values.md)
@@ -943,10 +1137,14 @@ _204 source(s) · 1471 topic(s)_
 - [Partner Channel Model](topics/partner_channel_model.md)
 - [Partner Quality](topics/partner_quality.md)
 - [Partner Recruitment](topics/partner_recruitment.md)
+- [Partnering With Plumbers](topics/partnering_with_plumbers.md)
 - [Partnership Requirements Framework](topics/partnership_requirements_framework.md)
+- [Partnership With Cleaners](topics/partnership_with_cleaners.md)
 - [Passion Myth](topics/passion_myth.md)
 - [Passion Vs Purpose](topics/passion_vs_purpose.md)
+- [Passive Income](topics/passive_income.md)
 - [Passive Vs Active Income Management](topics/passive_vs_active_income_management.md)
+- [Patek Philippe Nautilus](topics/patek_philippe_nautilus.md)
 - [Path Optimization](topics/path_optimization.md)
 - [Patience As Action](topics/patience_as_action.md)
 - [Patience As Behavior](topics/patience_as_behavior.md)
@@ -954,8 +1152,13 @@ _204 source(s) · 1471 topic(s)_
 - [Pay Less Now Or Pay More Later](topics/pay_less_now_or_pay_more_later.md)
 - [Pay Then Work Model](topics/pay_then_work_model.md)
 - [Payback Period](topics/payback_period.md)
+- [Payment And Communication Processes](topics/payment_and_communication_processes.md)
 - [Payment Checkout Infrastructure](topics/payment_checkout_infrastructure.md)
+- [Payment Handling Invoicing](topics/payment_handling_invoicing.md)
+- [Payment Methods](topics/payment_methods.md)
+- [Payment Methods And Scheduling](topics/payment_methods_and_scheduling.md)
 - [Payment Plan Downsells](topics/payment_plan_downsells.md)
+- [Payment Structures](topics/payment_structures.md)
 - [Perceived Likelihood](topics/perceived_likelihood.md)
 - [Perceived Likelihood Of Achievement](topics/perceived_likelihood_of_achievement.md)
 - [Performance Based Business Models](topics/performance_based_business_models.md)
@@ -963,22 +1166,32 @@ _204 source(s) · 1471 topic(s)_
 - [Perks As Retention](topics/perks_as_retention.md)
 - [Perseverance Vs Quitting](topics/perseverance_vs_quitting.md)
 - [Persistence Over Talent](topics/persistence_over_talent.md)
+- [Personal Brand](topics/personal_brand.md)
+- [Personal Branding](topics/personal_branding.md)
+- [Personal Experience And Results](topics/personal_experience_and_results.md)
 - [Personal Growth Philosophy](topics/personal_growth_philosophy.md)
+- [Personal Results And Tips](topics/personal_results_and_tips.md)
 - [Personal Standard Setting](topics/personal_standard_setting.md)
 - [Personalization Tactics](topics/personalization_tactics.md)
+- [Personalized Support And Review Acquisition](topics/personalized_support_and_review_acquisition.md)
 - [Phantom Equity Exit Incentives](topics/phantom_equity_exit_incentives.md)
+- [Phone Answering Contractor Collaboration](topics/phone_answering_contractor_collaboration.md)
+- [Phone Number And Domain Registration](topics/phone_number_and_domain_registration.md)
+- [Physical Address Verification](topics/physical_address_verification.md)
 - [Physics Based Goals](topics/physics_based_goals.md)
 - [Pick Your Price Offer Mechanics](topics/pick_your_price_offer_mechanics.md)
 - [Pivot Timing](topics/pivot_timing.md)
 - [Platform Algorithm Targeting](topics/platform_algorithm_targeting.md)
 - [Platform Monetization](topics/platform_monetization.md)
 - [Podcast Reach Limitations](topics/podcast_reach_limitations.md)
+- [Pool Cleaning Instant Approval Recurring Low Ticket](topics/pool_cleaning_instant_approval_recurring_low_ticket.md)
 - [Portfolio Company Scaling Challenges](topics/portfolio_company_scaling_challenges.md)
 - [Portfolio Vs Single Brand](topics/portfolio_vs_single_brand.md)
 - [Positioning And Value Proposition](topics/positioning_and_value_proposition.md)
 - [Positioning For Premium Markets](topics/positioning_for_premium_markets.md)
 - [Positive Vs Negative Outcomes](topics/positive_vs_negative_outcomes.md)
 - [Post Acquisition Integration](topics/post_acquisition_integration.md)
+- [Post Job Follow Up](topics/post_job_follow_up.md)
 - [Power Through Say Do](topics/power_through_say_do.md)
 - [Ppc Lead Generation](topics/ppc_lead_generation.md)
 - [Pre Framing Friction](topics/pre_framing_friction.md)
@@ -999,10 +1212,12 @@ _204 source(s) · 1471 topic(s)_
 - [Pricing And Ltv Cac Dynamics For Smbs](topics/pricing_and_ltv_cac_dynamics_for_smbs.md)
 - [Pricing And Premium Offers](topics/pricing_and_premium_offers.md)
 - [Pricing Leverage](topics/pricing_leverage.md)
+- [Pricing Over The Phone](topics/pricing_over_the_phone.md)
 - [Pricing Power In Established Markets](topics/pricing_power_in_established_markets.md)
 - [Pricing Psychology](topics/pricing_psychology.md)
 - [Pricing Psychology Anchoring](topics/pricing_psychology_anchoring.md)
 - [Pricing Recurring Content](topics/pricing_recurring_content.md)
+- [Pricing Strategies](topics/pricing_strategies.md)
 - [Pricing Strategy](topics/pricing_strategy.md)
 - [Pricing Strategy Anchoring](topics/pricing_strategy_anchoring.md)
 - [Pricing Strategy And Tiered Offers](topics/pricing_strategy_and_tiered_offers.md)
@@ -1023,12 +1238,23 @@ _204 source(s) · 1471 topic(s)_
 - [Product Market Fit](topics/product_market_fit.md)
 - [Product Market Goodwill](topics/product_market_goodwill.md)
 - [Product Positioning](topics/product_positioning.md)
+- [Product Sections And Pricing](topics/product_sections_and_pricing.md)
 - [Product Simplification](topics/product_simplification.md)
+- [Professional Phone Answering](topics/professional_phone_answering.md)
+- [Professional Phone Call Handling](topics/professional_phone_call_handling.md)
+- [Professional Phone Etiquette](topics/professional_phone_etiquette.md)
+- [Profile Completion Details](topics/profile_completion_details.md)
+- [Profile Expansion](topics/profile_expansion.md)
+- [Profile Optimization](topics/profile_optimization.md)
+- [Profile Scaling And Revenue Growth](topics/profile_scaling_and_revenue_growth.md)
 - [Profit As Unnatural](topics/profit_as_unnatural.md)
 - [Profit Concentration](topics/profit_concentration.md)
+- [Profit Margins](topics/profit_margins.md)
+- [Profit Margins Service Examples](topics/profit_margins_service_examples.md)
 - [Profit Optimization](topics/profit_optimization.md)
 - [Profit Share Pool Structure](topics/profit_share_pool_structure.md)
 - [Profit Share Structure](topics/profit_share_structure.md)
+- [Profit Sharing Models](topics/profit_sharing_models.md)
 - [Profit Vs Volume](topics/profit_vs_volume.md)
 - [Profitability Proof](topics/profitability_proof.md)
 - [Program Based Pricing](topics/program_based_pricing.md)
@@ -1039,14 +1265,17 @@ _204 source(s) · 1471 topic(s)_
 - [Proof Problem](topics/proof_problem.md)
 - [Proof Promise Plan Framework](topics/proof_promise_plan_framework.md)
 - [Proof Testimonial Acquisition](topics/proof_testimonial_acquisition.md)
+- [Proper Setup Citations](topics/proper_setup_citations.md)
 - [Proprietary Technology](topics/proprietary_technology.md)
 - [Providing Value](topics/providing_value.md)
 - [Psychological Nature Of Failure](topics/psychological_nature_of_failure.md)
 - [Psychological Principles In Sales](topics/psychological_principles_in_sales.md)
 - [Qualitative Attribution](topics/qualitative_attribution.md)
 - [Quality Of Life Variables](topics/quality_of_life_variables.md)
+- [Quoting Rules](topics/quoting_rules.md)
 - [R D Budget Model](topics/r_d_budget_model.md)
 - [Raising Capital Path](topics/raising_capital_path.md)
+- [Ranking Challenges](topics/ranking_challenges.md)
 - [Rare Pleasure Principle](topics/rare_pleasure_principle.md)
 - [Ray Dalio Fallacy](topics/ray_dalio_fallacy.md)
 - [Reach Out Communication Systems](topics/reach_out_communication_systems.md)
@@ -1054,6 +1283,7 @@ _204 source(s) · 1471 topic(s)_
 - [Real Estate Agent Arbitrage](topics/real_estate_agent_arbitrage.md)
 - [Real Estate Agent Pricing Strategy](topics/real_estate_agent_pricing_strategy.md)
 - [Real Estate Arm](topics/real_estate_arm.md)
+- [Real Reviews Via Local Verification](topics/real_reviews_via_local_verification.md)
 - [Real Time Demonstration Vs Accomplishments](topics/real_time_demonstration_vs_accomplishments.md)
 - [Reciprocity Psychology](topics/reciprocity_psychology.md)
 - [Record Breaking Execution](topics/record_breaking_execution.md)
@@ -1069,16 +1299,24 @@ _204 source(s) · 1471 topic(s)_
 - [Reference Group Association](topics/reference_group_association.md)
 - [Reference Groups](topics/reference_groups.md)
 - [Referrals](topics/referrals.md)
+- [Reflection On Life Impact](topics/reflection_on_life_impact.md)
 - [Reframing Burnout](topics/reframing_burnout.md)
 - [Reframing Difficulty](topics/reframing_difficulty.md)
 - [Reframing Hardship As Competitive Advantage](topics/reframing_hardship_as_competitive_advantage.md)
+- [Regional Market Differences](topics/regional_market_differences.md)
 - [Regrets As Inevitable](topics/regrets_as_inevitable.md)
 - [Regulatory Compliance](topics/regulatory_compliance.md)
 - [Regulatory Uncertainty](topics/regulatory_uncertainty.md)
 - [Reinforcement And Behavior](topics/reinforcement_and_behavior.md)
 - [Reinvestment Strategy](topics/reinvestment_strategy.md)
 - [Relationship Context Building](topics/relationship_context_building.md)
+- [Relationship Management](topics/relationship_management.md)
+- [Reliability And Trust](topics/reliability_and_trust.md)
+- [Remote Detailing](topics/remote_detailing.md)
+- [Removing Distractions](topics/removing_distractions.md)
 - [Replicate Before Iterate](topics/replicate_before_iterate.md)
+- [Report Review Process](topics/report_review_process.md)
+- [Reputation Leverage](topics/reputation_leverage.md)
 - [Resilience As Leverage](topics/resilience_as_leverage.md)
 - [Resilience Building](topics/resilience_building.md)
 - [Resilience Definition](topics/resilience_definition.md)
@@ -1099,11 +1337,26 @@ _204 source(s) · 1471 topic(s)_
 - [Revenue Roller Coaster Problem](topics/revenue_roller_coaster_problem.md)
 - [Revenue Scaling](topics/revenue_scaling.md)
 - [Revenue Vs Unit Economics](topics/revenue_vs_unit_economics.md)
+- [Review Acquisition](topics/review_acquisition.md)
+- [Review And Photo Collection](topics/review_and_photo_collection.md)
+- [Review Collection](topics/review_collection.md)
+- [Review Duration And Removal](topics/review_duration_and_removal.md)
+- [Review Generation](topics/review_generation.md)
+- [Review Maintenance](topics/review_maintenance.md)
+- [Review Management](topics/review_management.md)
+- [Review Optimization](topics/review_optimization.md)
 - [Review Process Gaps](topics/review_process_gaps.md)
+- [Review Quantity](topics/review_quantity.md)
+- [Review Strategies](topics/review_strategies.md)
+- [Review Strategy](topics/review_strategy.md)
+- [Reviews](topics/reviews.md)
 - [Reviews And Ai Integration](topics/reviews_and_ai_integration.md)
+- [Reviews Photos Descriptions](topics/reviews_photos_descriptions.md)
+- [Reviews Ratings](topics/reviews_ratings.md)
 - [Rfp Frame Strategy](topics/rfp_frame_strategy.md)
 - [Rich Client Dynamics](topics/rich_client_dynamics.md)
 - [Rich Mindset Vs Poor Mindset Pricing](topics/rich_mindset_vs_poor_mindset_pricing.md)
+- [Richard Mille](topics/richard_mille.md)
 - [Risk Arbitrage And Mispricing](topics/risk_arbitrage_and_mispricing.md)
 - [Risk Assessment](topics/risk_assessment.md)
 - [Risk Identification Mitigation](topics/risk_identification_mitigation.md)
@@ -1111,14 +1364,17 @@ _204 source(s) · 1471 topic(s)_
 - [Risk Prevention Outcomes](topics/risk_prevention_outcomes.md)
 - [Risk Reduction](topics/risk_reduction.md)
 - [Risk Reduction With Ai](topics/risk_reduction_with_ai.md)
+- [Risk Taking](topics/risk_taking.md)
 - [Risk Vs Reward Distribution](topics/risk_vs_reward_distribution.md)
 - [Roadmap For Ai Business](topics/roadmap_for_ai_business.md)
+- [Roi From Reviews](topics/roi_from_reviews.md)
 - [Roi On Time Freedom](topics/roi_on_time_freedom.md)
 - [Role Based To Workflow Based Thinking](topics/role_based_to_workflow_based_thinking.md)
 - [Rollover Upsell](topics/rollover_upsell.md)
 - [Romanticization Problem](topics/romanticization_problem.md)
 - [Royalties And Revenue Share](topics/royalties_and_revenue_share.md)
 - [Rpm As Quality Metric](topics/rpm_as_quality_metric.md)
+- [Rsa Business Model](topics/rsa_business_model.md)
 - [Rule Of 100](topics/rule_of_100.md)
 - [Saas And Software Business](topics/saas_and_software_business.md)
 - [Saas Misconceptions And Validation](topics/saas_misconceptions_and_validation.md)
@@ -1185,33 +1441,52 @@ _204 source(s) · 1471 topic(s)_
 - [Satisfaction Guarantee](topics/satisfaction_guarantee.md)
 - [Saving Vs Spending](topics/saving_vs_spending.md)
 - [Saying No](topics/saying_no.md)
+- [Scaling](topics/scaling.md)
 - [Scaling Ad Production](topics/scaling_ad_production.md)
 - [Scaling Beyond The Record](topics/scaling_beyond_the_record.md)
+- [Scaling Business](topics/scaling_business.md)
 - [Scaling Constraints And Growth Challenges](topics/scaling_constraints_and_growth_challenges.md)
 - [Scaling Discipline](topics/scaling_discipline.md)
 - [Scaling Existing Channels](topics/scaling_existing_channels.md)
+- [Scaling Expansion](topics/scaling_expansion.md)
 - [Scaling Limitations](topics/scaling_limitations.md)
 - [Scaling Media Buying And Keywords](topics/scaling_media_buying_and_keywords.md)
+- [Scaling Operations To New Cities](topics/scaling_operations_to_new_cities.md)
 - [Scaling Roadmap](topics/scaling_roadmap.md)
+- [Scaling Strategies](topics/scaling_strategies.md)
 - [Scaling Supply Constraints](topics/scaling_supply_constraints.md)
 - [Scaling Through Delegation](topics/scaling_through_delegation.md)
 - [Scaling Through Others](topics/scaling_through_others.md)
+- [Scaling With Multiple Profiles](topics/scaling_with_multiple_profiles.md)
 - [Scarcity](topics/scarcity.md)
 - [Scientific Attribution](topics/scientific_attribution.md)
 - [Script Design](topics/script_design.md)
 - [Script Discipline](topics/script_discipline.md)
 - [Script Enforcement](topics/script_enforcement.md)
 - [Script Optimization](topics/script_optimization.md)
+- [Search Volume Competition](topics/search_volume_competition.md)
 - [Seasonal Marketing Angles](topics/seasonal_marketing_angles.md)
 - [Self Awareness And Constraint Identification](topics/self_awareness_and_constraint_identification.md)
+- [Self Esteem And Social Comparison](topics/self_esteem_and_social_comparison.md)
 - [Self Judgment Through Action](topics/self_judgment_through_action.md)
 - [Self Linking Business Loops](topics/self_linking_business_loops.md)
 - [Self Reinforcing Patterns](topics/self_reinforcing_patterns.md)
 - [Seller Psychology](topics/seller_psychology.md)
 - [Selling By Value Ratio](topics/selling_by_value_ratio.md)
 - [Semi Private 1 On 4 Training](topics/semi_private_1_on_4_training.md)
+- [Seo](topics/seo.md)
+- [Seo And Backlinks](topics/seo_and_backlinks.md)
+- [Seo And Review Acquisition](topics/seo_and_review_acquisition.md)
+- [Seo Basics](topics/seo_basics.md)
+- [Seo Optimization](topics/seo_optimization.md)
 - [Separation Of Feeling And Action](topics/separation_of_feeling_and_action.md)
+- [Service Area Selection With Zip Codes](topics/service_area_selection_with_zip_codes.md)
+- [Service Area Setup](topics/service_area_setup.md)
+- [Service Area Targeting](topics/service_area_targeting.md)
+- [Service Area Vs Physical Address Businesses](topics/service_area_vs_physical_address_businesses.md)
+- [Service Areas Zip Codes](topics/service_areas_zip_codes.md)
 - [Service As Differentiation](topics/service_as_differentiation.md)
+- [Service Based Business Model](topics/service_based_business_model.md)
 - [Service Business Churn Patterns](topics/service_business_churn_patterns.md)
 - [Service Business Economics](topics/service_business_economics.md)
 - [Service Business Model](topics/service_business_model.md)
@@ -1222,20 +1497,26 @@ _204 source(s) · 1471 topic(s)_
 - [Service Line Prioritization](topics/service_line_prioritization.md)
 - [Service Pricing](topics/service_pricing.md)
 - [Service Quality And Premium Margins](topics/service_quality_and_premium_margins.md)
+- [Service Selection Remote Arbitrage](topics/service_selection_remote_arbitrage.md)
 - [Service To Continuity Model](topics/service_to_continuity_model.md)
 - [Service Vs Automation](topics/service_vs_automation.md)
 - [Service Vs Passive Income Management](topics/service_vs_passive_income_management.md)
 - [Session Duration Structure](topics/session_duration_structure.md)
+- [Setup Mistakes](topics/setup_mistakes.md)
+- [Setup Steps](topics/setup_steps.md)
+- [Seven Figure Business Growth](topics/seven_figure_business_growth.md)
 - [Shame As Fuel](topics/shame_as_fuel.md)
 - [Shame Vs Guilt Vs Cringe](topics/shame_vs_guilt_vs_cringe.md)
 - [Shared Knowledge Exposure](topics/shared_knowledge_exposure.md)
 - [Shiny Object Syndrome](topics/shiny_object_syndrome.md)
 - [Shop Level Decentralization](topics/shop_level_decentralization.md)
+- [Shopify Dropshipping](topics/shopify_dropshipping.md)
 - [Short Form Repurposing](topics/short_form_repurposing.md)
 - [Short Form To Long Form Conversion](topics/short_form_to_long_form_conversion.md)
 - [Short Form Vs Long Form Content](topics/short_form_vs_long_form_content.md)
 - [Short Form Vs Long Form Strategy](topics/short_form_vs_long_form_strategy.md)
 - [Situational Ethics](topics/situational_ethics.md)
+- [Skepticism Toward Mentorships](topics/skepticism_toward_mentorships.md)
 - [Skill Accumulation](topics/skill_accumulation.md)
 - [Skill Acquisition As Bridge Building](topics/skill_acquisition_as_bridge_building.md)
 - [Skill As Chained Behaviors](topics/skill_as_chained_behaviors.md)
@@ -1255,6 +1536,7 @@ _204 source(s) · 1471 topic(s)_
 - [Small Bets And Iteration](topics/small_bets_and_iteration.md)
 - [Smb Customer Volatility Problem](topics/smb_customer_volatility_problem.md)
 - [Smb Market Dangers](topics/smb_market_dangers.md)
+- [Sms Blasts With Outscraper For Lead Generation](topics/sms_blasts_with_outscraper_for_lead_generation.md)
 - [Social Profile Credibility](topics/social_profile_credibility.md)
 - [Social Proof Testimonial Acquisition](topics/social_proof_testimonial_acquisition.md)
 - [Soft Handoff](topics/soft_handoff.md)
@@ -1271,17 +1553,26 @@ _204 source(s) · 1471 topic(s)_
 - [Staffing Constraints](topics/staffing_constraints.md)
 - [Standard Elevation](topics/standard_elevation.md)
 - [Standards And Business Success](topics/standards_and_business_success.md)
+- [Starting A Business](topics/starting_a_business.md)
+- [Starting A Car Detailing Business](topics/starting_a_car_detailing_business.md)
+- [Starting A New Gmb Business](topics/starting_a_new_gmb_business.md)
+- [Starting A Remote Service Business](topics/starting_a_remote_service_business.md)
 - [Starting For Free](topics/starting_for_free.md)
 - [State Expansion Dynamics](topics/state_expansion_dynamics.md)
 - [Status Definition](topics/status_definition.md)
+- [Steps To Obtain Reviews](topics/steps_to_obtain_reviews.md)
 - [Story Ads](topics/story_ads.md)
+- [Strategic Placement](topics/strategic_placement.md)
 - [Strategic Spending](topics/strategic_spending.md)
 - [Structured Processes For Reviews Referrals Lead Re Engagement](topics/structured_processes_for_reviews_referrals_lead_re_engagement.md)
 - [Subcontractor Scalability](topics/subcontractor_scalability.md)
 - [Subscription Vs One Time Model](topics/subscription_vs_one_time_model.md)
 - [Success Metrics And Quantification](topics/success_metrics_and_quantification.md)
+- [Success Through Responsiveness](topics/success_through_responsiveness.md)
+- [Successful Cities Examples](topics/successful_cities_examples.md)
 - [Suffering As Fixed Cost](topics/suffering_as_fixed_cost.md)
 - [Suffering Fixed Cost](topics/suffering_fixed_cost.md)
+- [Summer Splash Launch](topics/summer_splash_launch.md)
 - [Supplement Sales Distribution](topics/supplement_sales_distribution.md)
 - [Supplier Terms Negotiation](topics/supplier_terms_negotiation.md)
 - [Supply And Demand](topics/supply_and_demand.md)
@@ -1289,9 +1580,11 @@ _204 source(s) · 1471 topic(s)_
 - [Supply Chain Risks](topics/supply_chain_risks.md)
 - [Supply Constraint](topics/supply_constraint.md)
 - [Supply Vs Demand Constraints](topics/supply_vs_demand_constraints.md)
+- [Support And Network Connections](topics/support_and_network_connections.md)
 - [Survival Mode Motivation](topics/survival_mode_motivation.md)
 - [Survivorship Bias](topics/survivorship_bias.md)
 - [Sustaining The Business](topics/sustaining_the_business.md)
+- [Taking Risks](topics/taking_risks.md)
 - [Talent Acquisition And Management](topics/talent_acquisition_and_management.md)
 - [Talent Acquisition Economics](topics/talent_acquisition_economics.md)
 - [Talent Acquisition Funnel](topics/talent_acquisition_funnel.md)
@@ -1306,6 +1599,8 @@ _204 source(s) · 1471 topic(s)_
 - [Talent Selection](topics/talent_selection.md)
 - [Target Audience Qualification](topics/target_audience_qualification.md)
 - [Target Avatar Selection](topics/target_avatar_selection.md)
+- [Target Cities](topics/target_cities.md)
+- [Target Partnership](topics/target_partnership.md)
 - [Task Automation Framework](topics/task_automation_framework.md)
 - [Task Delegation And Vas](topics/task_delegation_and_vas.md)
 - [Tattoo Business Model](topics/tattoo_business_model.md)
@@ -1317,6 +1612,7 @@ _204 source(s) · 1471 topic(s)_
 - [Team Personal Life](topics/team_personal_life.md)
 - [Team Scaling](topics/team_scaling.md)
 - [Technical Co Founder Strategy](topics/technical_co_founder_strategy.md)
+- [Technical Verification Processes](topics/technical_verification_processes.md)
 - [Telehealth Positioning](topics/telehealth_positioning.md)
 - [Tenant Vs Buyer Specialization](topics/tenant_vs_buyer_specialization.md)
 - [Testimonial Ads](topics/testimonial_ads.md)
@@ -1341,29 +1637,40 @@ _204 source(s) · 1471 topic(s)_
 - [The Swamp 1 3M Revenue Range](topics/the_swamp_1_3m_revenue_range.md)
 - [The Value Of Struggle](topics/the_value_of_struggle.md)
 - [The Who Game And Leadership Levels](topics/the_who_game_and_leadership_levels.md)
+- [Thinking Bigger](topics/thinking_bigger.md)
 - [Third Party Credibility Signals](topics/third_party_credibility_signals.md)
 - [Thoughts As Unreliable](topics/thoughts_as_unreliable.md)
 - [Three Content Buckets](topics/three_content_buckets.md)
 - [Three Levels Of Salesmanship](topics/three_levels_of_salesmanship.md)
+- [Three Pack Ranking](topics/three_pack_ranking.md)
+- [Three Step Process](topics/three_step_process.md)
 - [Thumbnail Headline Clarity](topics/thumbnail_headline_clarity.md)
 - [Tier Design](topics/tier_design.md)
 - [Tiered Offer Architecture](topics/tiered_offer_architecture.md)
+- [Tiktok Shop](topics/tiktok_shop.md)
 - [Tiktok Shop Opportunity](topics/tiktok_shop_opportunity.md)
+- [Tiktok Shop Summit](topics/tiktok_shop_summit.md)
 - [Time And Cash Flow Constraints](topics/time_and_cash_flow_constraints.md)
 - [Time And Resource Allocation](topics/time_and_resource_allocation.md)
 - [Time As Capital](topics/time_as_capital.md)
 - [Time Delay](topics/time_delay.md)
 - [Time Horizon And Vision](topics/time_horizon_and_vision.md)
+- [Time Investment In Mentorship](topics/time_investment_in_mentorship.md)
 - [Time Leverage Tradeoffs](topics/time_leverage_tradeoffs.md)
 - [Time Management](topics/time_management.md)
 - [Time Optimization](topics/time_optimization.md)
 - [Time To Value](topics/time_to_value.md)
 - [Time Value Of Money In Wealth Building](topics/time_value_of_money_in_wealth_building.md)
 - [Time Vs Money Earning](topics/time_vs_money_earning.md)
+- [Timely Actions](topics/timely_actions.md)
+- [Timepiece Trading](topics/timepiece_trading.md)
+- [Title S Critical Role In Seo](topics/title_s_critical_role_in_seo.md)
 - [Toads To Kiss](topics/toads_to_kiss.md)
 - [Tolerance As A Mental Toughness Component](topics/tolerance_as_a_mental_toughness_component.md)
 - [Tolerance Emotional Threshold](topics/tolerance_emotional_threshold.md)
 - [Tone And Belief](topics/tone_and_belief.md)
+- [Tool Usage](topics/tool_usage.md)
+- [Tools Like Quickbooks](topics/tools_like_quickbooks.md)
 - [Top Down Business Strategy](topics/top_down_business_strategy.md)
 - [Top Down Market Positioning](topics/top_down_market_positioning.md)
 - [Track Record Verification](topics/track_record_verification.md)
@@ -1376,6 +1683,11 @@ _204 source(s) · 1471 topic(s)_
 - [Training Precision](topics/training_precision.md)
 - [Trait Development](topics/trait_development.md)
 - [Traits As Continuums](topics/traits_as_continuums.md)
+- [Transitioning To Coaching Business](topics/transitioning_to_coaching_business.md)
+- [Transitioning To Editing Agency](topics/transitioning_to_editing_agency.md)
+- [Transitioning To Remote Work](topics/transitioning_to_remote_work.md)
+- [Transparency And Contracts](topics/transparency_and_contracts.md)
+- [Transparency In Pricing](topics/transparency_in_pricing.md)
 - [Trauma Definition](topics/trauma_definition.md)
 - [Trauma Permanent Behavior Change](topics/trauma_permanent_behavior_change.md)
 - [Trial To Activation Problem](topics/trial_to_activation_problem.md)
@@ -1395,24 +1707,33 @@ _204 source(s) · 1471 topic(s)_
 - [Unit Economics Optimization](topics/unit_economics_optimization.md)
 - [University Exclusivity Strategy](topics/university_exclusivity_strategy.md)
 - [Unreasonable Ambition](topics/unreasonable_ambition.md)
+- [Unscalable Hustle](topics/unscalable_hustle.md)
+- [Unspoken Feelings](topics/unspoken_feelings.md)
 - [Upsell Architecture](topics/upsell_architecture.md)
 - [Upsell Offers](topics/upsell_offers.md)
 - [Upselling And Referrals](topics/upselling_and_referrals.md)
+- [Upselling Permanent Solutions](topics/upselling_permanent_solutions.md)
 - [Upselling To High Ticket Customers](topics/upselling_to_high_ticket_customers.md)
 - [Upside Asymmetry](topics/upside_asymmetry.md)
 - [Upside In Uncertainty](topics/upside_in_uncertainty.md)
 - [Upwork Freelancing](topics/upwork_freelancing.md)
 - [Upwork Profile Optimization](topics/upwork_profile_optimization.md)
 - [Urgency](topics/urgency.md)
+- [Urgency Level Customization](topics/urgency_level_customization.md)
 - [Urgency Momentum](topics/urgency_momentum.md)
+- [Urgency Of Addressing Reviews](topics/urgency_of_addressing_reviews.md)
 - [Us Market Priority](topics/us_market_priority.md)
+- [Using Google Listings](topics/using_google_listings.md)
 - [Vague Terminology Problem](topics/vague_terminology_problem.md)
+- [Valid Review Criteria](topics/valid_review_criteria.md)
 - [Valuation Narrative](topics/valuation_narrative.md)
 - [Value Based Vs Cost Plus Pricing](topics/value_based_vs_cost_plus_pricing.md)
 - [Value Creation Frames](topics/value_creation_frames.md)
 - [Value Creation Through Pre Work](topics/value_creation_through_pre_work.md)
 - [Value Equation](topics/value_equation.md)
 - [Value Equation Framework](topics/value_equation_framework.md)
+- [Value Of Fake Reviews Over Keywords](topics/value_of_fake_reviews_over_keywords.md)
+- [Value Of The Chase Over Material Gain](topics/value_of_the_chase_over_material_gain.md)
 - [Value Perception And Pricing Psychology](topics/value_perception_and_pricing_psychology.md)
 - [Value Proposition Design](topics/value_proposition_design.md)
 - [Value Proposition Repositioning](topics/value_proposition_repositioning.md)
@@ -1420,10 +1741,21 @@ _204 source(s) · 1471 topic(s)_
 - [Value Vs Price Positioning](topics/value_vs_price_positioning.md)
 - [Venture Backed Scaling Illusion](topics/venture_backed_scaling_illusion.md)
 - [Venture Capital Strategy](topics/venture_capital_strategy.md)
+- [Verification Process](topics/verification_process.md)
+- [Verification Requirements](topics/verification_requirements.md)
+- [Verification Video Creation](topics/verification_video_creation.md)
+- [Verifying Google Business Profiles On Physical Addresses](topics/verifying_google_business_profiles_on_physical_addresses.md)
+- [Verifying Profiles](topics/verifying_profiles.md)
 - [Vertical Integration](topics/vertical_integration.md)
 - [Vertical Integration Vs Partnerships](topics/vertical_integration_vs_partnerships.md)
 - [Victim Mindset Vs Agency](topics/victim_mindset_vs_agency.md)
 - [Video Sales Letter Framework](topics/video_sales_letter_framework.md)
+- [Video Verification](topics/video_verification.md)
+- [Video Verification Physical Addresses](topics/video_verification_physical_addresses.md)
+- [Virtual Assistant Hiring](topics/virtual_assistant_hiring.md)
+- [Virtual Assistant Integration](topics/virtual_assistant_integration.md)
+- [Virtual Assistant Role](topics/virtual_assistant_role.md)
+- [Virtual Assistants For Automation](topics/virtual_assistants_for_automation.md)
 - [Virtual Lead Gen](topics/virtual_lead_gen.md)
 - [Visibility Of Work](topics/visibility_of_work.md)
 - [Vision Vs Plan Clarity](topics/vision_vs_plan_clarity.md)
@@ -1441,6 +1773,7 @@ _204 source(s) · 1471 topic(s)_
 - [Warm Vs Cold Sales Process Mismatch](topics/warm_vs_cold_sales_process_mismatch.md)
 - [Warranties And Guarantees](topics/warranties_and_guarantees.md)
 - [Warren Buffett Pricing Power](topics/warren_buffett_pricing_power.md)
+- [Watch Investing](topics/watch_investing.md)
 - [Watermark Vs Fixed Investment Strategy](topics/watermark_vs_fixed_investment_strategy.md)
 - [Weak To Strong Brand Progression](topics/weak_to_strong_brand_progression.md)
 - [Wealth Building Timeline](topics/wealth_building_timeline.md)
@@ -1451,7 +1784,9 @@ _204 source(s) · 1471 topic(s)_
 - [Wealth Tiers](topics/wealth_tiers.md)
 - [Webinar Lead Generation](topics/webinar_lead_generation.md)
 - [Webinar Strategy](topics/webinar_strategy.md)
+- [Website Creation](topics/website_creation.md)
 - [Website Deployment](topics/website_deployment.md)
+- [Website Optimization](topics/website_optimization.md)
 - [Wedding Cake Profit Model](topics/wedding_cake_profit_model.md)
 - [Whale Vs Minnow Economics](topics/whale_vs_minnow_economics.md)
 - [What Branding Is](topics/what_branding_is.md)
@@ -1473,11 +1808,16 @@ _204 source(s) · 1471 topic(s)_
 - [Workflow Based Organization](topics/workflow_based_organization.md)
 - [Workload Tolerance](topics/workload_tolerance.md)
 - [Worst Case Survivability](topics/worst_case_survivability.md)
+- [Youth Advantage](topics/youth_advantage.md)
+- [Youtube Automation](topics/youtube_automation.md)
 - [Youtube Multi Format Strategy](topics/youtube_multi_format_strategy.md)
 - [Zero Capital Business Selection](topics/zero_capital_business_selection.md)
+- [Zero Expense Business Model](topics/zero_expense_business_model.md)
 
 ## Sources
 
+- **1000_day_selling_leads_gmb.txt** — 14 claims · 5 sections · topics: GMB Profile Setup, Google My Business, Lead Generation System, Monetization Strategies, Niche Selection
+  - _This video teaches a step-by-step system for setting up a lead generation business using Google My Business (GMB) to acquire leads for local businesses without ads or cold calling, and then monetizing those leads by selling them or contracting the work._
 - **100m_ceo_explains_how_to_find_people_you_can_trust_k5-57282taI.txt** — 7 claims · 7 sections · topics: Trust Framework, Track Record Verification, Betrayal Consequences, Trustworthiness Maintenance, Relationship Context Building
   - _Breaks down trust as a behavioral framework involving calculated risk-taking and vulnerability, explaining four types of trust and how to both gain and maintain it._
 - **100m_leads.txt** — 24 claims · 248 sections · topics: Engaged Leads Definition, Lead Magnets and Offers, Warm Outreach Strategy, Free Content Creation, Cold Outreach Execution, Paid Advertising Fundamentals, Value Equation Framework, The Core Four Methods, Audience Targeting, Content Unit Structure, Give-Ask Ratio Management, Call-Out Techniques, Landing Pages and CTAs, Client-Financed Acquisition, More, Better, New Scaling, Customer Referral Programs, Product-Market Goodwill, Employee Training and Leverage, Agency Partnerships, Affiliate Program Building, Launch Strategies, Lead Getter Integration, Advertising Metrics and ROI, Open-to-Goal Work Framework, Business Scaling Roadmap
@@ -1486,30 +1826,77 @@ _204 source(s) · 1471 topic(s)_
   - _Three bonus chapters from Alex Hormozi's 100M Leads book covering free, discount, and premium promotional strategies for customer acquisition and lead generation._
 - **100m_money_models.txt** — 19 claims · 148 sections · topics: Attraction Offers, Win Your Money Back, Giveaways, Decoy Offers, Buy X Get Y Free, Pay Less Now Or Pay More Later, Upsell Offers, Classic Upsell, Menu Upsell, Anchor Upsell, Rollover Upsell, Payment Plan Downsells, Trial With Penalty, Feature Downsells, Continuity Bonus Offers, Continuity Discount Offers, Waived Fee Offers, Money Model Framework
   - _A comprehensive guide to money models that maximize customer value through strategically sequenced offers across four types: attraction, upsell, downsell, and continuity offers to generate profitable recurring revenue._
+- **100m_money_models_rick_roll_c6wfunUDDOs.txt** — 10 claims · 5 sections · topics: Commitment Promises, Mutual Understanding, Unspoken Feelings
+  - _A performance of the song 'Never Gonna Give You Up,' declaring unwavering romantic commitment._
 - **100m_offers.txt** — 40 claims · 148 sections · topics: Grand Slam Offer, Value Equation, Market Selection, Premium Pricing, Pricing Strategy, Commodity Problem, Dream Outcome, Perceived Likelihood, Effort & Sacrifice, Time Delay, Scarcity, Urgency, Bonuses, Guarantees, Offer Naming, Problem-Solution Framework, Niching, Sales to Fulfillment Continuum, Supply and Demand
   - _Guide to creating irresistible business offers by strategically combining pricing, value creation, guarantees, scarcity, urgency, and naming to build 'Grand Slam Offers' that generate massive profit without competing on price._
 - **100m_playbook_goated_ads.txt** — 31 claims · 22 sections · topics: Audience Awareness Pyramid, Ad Assembly Line Process, Hook Writing Strategy, Ad Creative Formats, Call-To-Action Best Practices, Scaling Ad Production, Winning Hooks From Existing Content, Expansion Hooks for New Markets, Demonstration Ads, Testimonial Ads, Education Ads, Story Ads, Faceless Ads, Creative Variation Strategy
   - _A systematic framework for creating high-converting ads at scale through an assembly-line process of hooks, creative meat, and CTAs, enabling businesses to move from ad saturation to exponential growth by producing hundreds of variations weekly._
 - **100m_playbook_lead_nurture.txt** — 12 claims · 43 sections · topics: Lead Nurture Definition, Four Pillars Framework, Availability & Scheduling, Speed to Contact, Personalization Tactics, Volume & Follow-Up, BAMFAM Method, Lead Scoring & Qualification
   - _Alex Hormozi's Lead Nurture playbook outlines four pillars (Availability, Speed, Personalization, Volume) to increase show rates for scheduled appointments, derived from analysis of 4,000+ daily appointments in his ALAN software._
+- **10k_from_1_gmb.txt** — 11 claims · 2 sections · topics: BUSINESS PROFILES (ADDRESS vs SERVICE AREA), DEMAND & COMPETITION, KEYWORD TOOLS, METRICS (SEARCH VOLUE, CLOSE RATE), SUCCESSFUL CITIES EXAMPLES
+  - _The excerpt outlines a systematic framework for identifying high-demand cities for service-based businesses, emphasizing metrics like search volume, close rates, and competition, while highlighting the importance of business profiles, review ratings, and successful city examples._
+- **150_gmb_verified_no_suspend.txt** — 10 claims · 4 sections · topics: Email Verification, Instant Verification, Video Verification
+  - _The video outlines three primary methods for verifying and listing Google Business profiles: email/phone code verification, instant verification, and video verification, emphasizing their effectiveness in different categories and regions._
+- **150_leads_month_from_gmb.txt** — 8 claims · 6 sections · topics: Address Verification, Keyword Targeting, Multi-Profile Setup, Optimized Profile Names, Review Collection
+  - _The excerpt explains how to set up multiple Google Business profiles, verify addresses, optimize profile names, collect reviews, target keywords, track calls, and partner with contractors to generate organic leads._
 - **15_brutal_truths_i_know_at_36_that_i_wish_i_knew_at_20_XGm2ERU9qtA.txt** — 42 claims · 18 sections · topics: Suffering Fixed Cost, Goal Worth Suffering For, Mastering Rejection Shame, 20-Hour Competence, Learning Through Action, Skill Transposition, Long-Term Thinking, Downside Capped Upside Uncapped, Entrepreneurship Personal Development, Delayed Gratification, The Danger Of Uncertainty Tolerance, Skill Compounding, Decision Theory
   - _A distillation of core business and life principles covering suffering as fixed cost, shamelessness, learning velocity, long-term vision, and the compound effect of commitment._
 - **15_leads_but_only_one_pays_you_HbaGDrFufmk.txt** — 6 claims · 6 sections · topics: Lead Qualification Frameworks, Funnel Friction Design, Avatar Clarity from Insurance Constraints, Application Page Scoring, Cold Lead Math, Conversion Metrics Tracking
   - _Medical consulting business with $5M revenue needs to add friction to funnel by qualifying leads on specific criteria (insurance type, wound size) rather than trying to fix targeting after the fact._
+- **15k_10_mins_work_virtual_assistants.txt** — 4 claims · 2 sections · topics: Google Business Profiles, Local Contractor Finding, Profit Margins, Virtual Assistant Hiring
+  - _The excerpt outlines the process of setting up a virtual assistant business through Google Business profiles, hiring VAs, finding local contractors, and emphasizing the importance of accents and voice recordings for effective communication._
+- **168_hrs_decisions_unseen.txt** — 45 claims · 8 sections · topics: Bloom Operations, CPG Distribution, Entrepreneur Mindset, Influencer Marketing, Personal Brand, Target Partnership, TikTok Shop
+  - _A vlog-style walkthrough of the Bloom founder's Vegas consulting trip, Austin team operations, Target pitch, and TikTok Shop launch playbook for scaling a CPG brand._
 - **1_habit_that_fixes_90_of_problems_tfWtqcYI7Zk.txt** — 6 claims · 2 sections · topics: Sleep Schedule Leverage, Risk Prevention Outcomes, Health and Longevity Benefits, Implementation Mechanism
   - _Going to bed on time is a high-leverage habit that prevents 10+ major life problems through cascading positive effects._
+- **1b_100m_deals_la_show.txt** — 26 claims · 6 sections · topics: Bloom Portfolio, Customer Avatar, Expo West, Founder Advice, Global Entrepreneurship, Relationship Management
+  - _A Bloom founder documents a weekend at Natural Products Expo West, showing how he manages his nutrition and pop portfolios, advises early-stage founders, and treats the expo as relationship-building rather than immediate sales._
+- **1b_6_decisions_20s.txt** — 32 claims · 6 sections · topics: Failure Response, Momentum Over Timing, Moonshot Decisions, Networking Skepticism, Reputation Leverage, Unscalable Hustle, Youth Advantage
+  - _Bloom Nutrition co-founder Greg Levecchia lays out six decisions—leaving comfortable 7/10 situations, refusing to become cautious after failure, building reputation as leverage, skipping networking to build, exploiting youth, and refusing early optimization—that he says determine an entrepreneur's ceiling._
+- **1b_number_1_tiktok_shop.txt** — 28 claims · 5 sections · topics: Affiliate Program, GMV Max, Omnichannel Halo Effect, Personal Branding, Summer Splash Launch, TikTok Shop, TikTok Shop Summit
+  - _Bloom's founder explains how they've cracked TikTok Shop and shares the specific affiliate strategies, creator programs, and launch tactics brands should use to scale on the platform right now._
+- **1b_secret_city_deals.txt** — 24 claims · 5 sections · topics: CPG Retail Launches, Content Creator Origins, Controlling Your Luck, Fatherhood, Networking In Aspen, Thinking Bigger
+  - _The vlogger documents a 24-hour networking trip to his new Aspen house to argue that surrounding yourself with successful people is how you control your own luck and think bigger about your business._
+- **20_google_reviews_daily_autopilot.txt** — 13 claims · 3 sections · topics: Automating Google Reviews, Incentivizing Local Businesses, OpenClaw AI Tool, Valid Review Criteria, Virtual Assistants for Automation
+  - _The excerpt teaches how to automate Google reviews by incentivizing local businesses to leave authentic reviews through strategic outreach and virtual assistants, while emphasizing the importance of meeting Google's criteria for legitimacy._
+- **20k_dropservicing_with_zero.txt** — 15 claims · 5 sections · topics: Auto Detailing, Google Business Profiles, Local Service Business, Scaling Strategies, Zero-Expense Business Model
+  - _This video teaches how to start a local service business, specifically auto detailing, with zero upfront expenses by leveraging Google Business Profiles for organic leads and finding cheap contractors, then scaling to higher-ticket services like plumbing._
+- **20k_remote_cleaning_90_days.txt** — 9 claims · 6 sections · topics: Google My Business, Lead Generation, Outsourcing, Scaling
+  - _The video teaches how to start a residential cleaning business online using Google My Business (GMB), outsourcing work, and automation to generate income with minimal physical involvement._
+- **21k_dropservicing_60_days.txt** — 15 claims · 8 sections · topics: Execution, Lead Generation, Marketing and SEO Strategies, Metrics, Payment Methods and Scheduling, Setup Steps, Target Cities
+  - _The excerpt outlines a step-by-step guide for launching a pest control business with a focus on niche selection, low competition, metric-driven revenue targets, and optimized digital presence._
 - **250k_followers_and_zero_customers_aTP0fwDESOY.txt** — 9 claims · 5 sections · topics: Content Audience Misalignment, Content Reframing, Platform Algorithm Targeting, Bait-and-Switch Prevention, Client-Centric Framing, Creator Burnout from Wrong Audience
   - _A life coach trainer with 250K Instagram followers and $3M revenue from certification programs has zero customer crossover. She's baited followers with relationship content (red flags, green flags) but attracts relationship-focused users, not life coach trainees. Reframe same content as client case studies instead—"I had a client with this problem"—to attract aspiring coaches._
 - **26_harsh_lessons_i_learned_in_2025_YONIUpk-kAs.txt** — 56 claims · 72 sections · topics: Fear and Risk-Taking, Mental Toughness, Record-Breaking Execution, Team & Personal Life, Independent Thinking and Agency, Business Partnerships and Legal, Compliance and Law, Life Stage Evolution, Decision-Making Frameworks, Business Leverage: More, Better, New, Gratification Timing, Marketing Clarity, Offers and Bonuses
   - _Alex Hormozi shares 13 critical business and personal lessons from 2025, including his $250M+ company revenue, Guinness World Record book launch generating $106M in 3 days, and his mother's death. The video covers fear management, mental toughness, relentless execution, team leadership, legal compliance, business fundamentals, and life philosophy._
+- **2M_landscaping_60_days.txt** — 8 claims · 4 sections · topics: AI Website Creation, Deposit-Based Payment Structure, Google Business Profile Setup, Keyword Optimization, Review Strategy
+  - _The excerpt teaches how to build a scalable landscaping business using organic lead generation, Google Business profiles, keyword optimization, review strategies, and deposit-based fulfillment to achieve multi-million-dollar revenue._
+- **300_every_2_min_closing_local_services.txt** — 8 claims · 3 sections · topics: Conversion Rates in Plumbing, Google Business Setup, High-Ticket Sales, Outsourcing Phone Calls, Personal Results and Tips
+  - _Eric outlines a scalable business model for high-ticket sales through Google Business profiles, emphasizing low-effort setup, conversion rates, and outsourcing phone calls to generate consistent revenue._
 - **300k_month_with_80_margins_on_instagram_organic_g2i-aBfWfvA.txt** — 10 claims · 5 sections · topics: Lead Generation Volume, Conversion Funnel, DM Setter Bottleneck, High-Margin Business Model, Lead Nurture, Staffing Constraints
   - _Info-consulting business in Argentina running $300K/month revenue ($240K profit, 80% margins). Generating 20K+ leads/month via Instagram organic but only converting 80 clients (0.3%). Bottleneck is DM setters, not sales or qualification._
+- **30k_biz_model_steal.txt** — 22 claims · 9 sections · topics: Business Model, Business Profile Optimization, CRM Implementation, Call Volume and Scaling, Industry Selection, Personalized Support and Review Acquisition, SEO and Review Acquisition, Verification Video Creation
+  - _The excerpt teaches how to create a scalable remote service arbitrage business model by selecting high-demand industries, optimizing Google Business Profiles, acquiring reviews through hustle, and verifying listings via video._
 - **30k_isn_t_luxury_it_s_cheap_Zk3xE-0jFZc.txt** — 8 claims · 8 sections · topics: Luxury Positioning & Pricing Power, Price Anchoring, Lead Qualification Funnel, VSL Pre-Framing, Offer Stacking & Upsells, Memory-Driven Value Framing
   - _A luxury wedding entertainment business is repositioned to compete on price power, not volume, by raising pricing to $100K-$250K tiers and qualifying leads through a questionnaire rather than generic form._
 - **3m_med_spa_owner_wants_to_scale_to_20m_rqJM6mFhyes.txt** — 8 claims · 5 sections · topics: Bandwidth Constraint vs. Financial Constraint, Delegation of Clinical Role, Multiple Location Expansion, Service Line Prioritization, Business Owner Mindset Shift
   - _A med-spa owner at $3M revenue with $700K+ net profit wants $20M through multiple locations but realizes the constraint is personal bandwidth, not money; solution is hiring a physician to free up time for business scaling._
+- **45_mins_first_1000_online.txt** — 9 claims · 5 sections · topics: AI Website Optimization, Contractor Outreach and Payment Model, Google Business Profile Setup, Keyword Research and Search Volume Analysis
+  - _The excerpt outlines a step-by-step process for setting up business profiles, conducting keyword research, optimizing business names, and securing contractor partnerships to generate traffic and revenue through local service listings._
+- **4_untapped_dropservicing_niches.txt** — 7 claims · 4 sections · topics: Competition Analysis, High-Ticket Niches, Lead Generation & Profit Potential
+  - _The speaker outlines four high-ticket niches (landscaping, asphalt, stucco, masonry) with specific cities, profit potential, and strategies for lead generation, emphasizing the importance of keyword optimization, competition analysis, and scalable business models._
+- **500k_dropservicing_team_hiring.txt** — 14 claims · 4 sections · topics: Communication Systems, Contractor Sourcing, Onboarding and Backup Contractors, Payment Structures
+  - _The video outlines a structured process for hiring and onboarding contractors to maximize profit margins through partnership, clear communication, and backup systems._
 - **500k_power_washing_business_stuck_on_referrals_gRQLYWfwRIA.txt** — 9 claims · 5 sections · topics: Acquisition Channels, Attribution Tracking, Door-to-Door vs Ads, Scaling Existing Channels, Margins and Metrics
   - _Power washing business ($500K revenue, $250K profit on residential) struggling with referral-only growth. Owner wants to add B2B recurring cleaning but lacks data on ad channel effectiveness._
+- **500m_watch_dealer.txt** — 34 claims · 6 sections · topics: College Friendship, Entrepreneur Origin Story, Luxury Watches, Miami Clientele, Patek Philippe Nautilus, Richard Mille, Timepiece Trading, Watch Investing
+  - _Greg visits his college best friend Sean McLaren at Timepiece Trading in Miami to interview him about how he abandoned a finance career to build a multi-hundred-thousand-dollar-a-day watch business, while also trading and trying on watches._
+- **70k_mobile_auto_detailing.txt** — 21 claims · 7 sections · topics: Additional Services, Branding and Optimization, Call Tracking and Virtual Assistants, Financial Outcomes, Profile Optimization, Profile Scaling and Revenue Growth, Review Generation, Service Area Setup
+  - _The excerpt teaches how to scale a mobile auto detailing business remotely by optimizing Google Business profiles, managing call tracking, and leveraging virtual assistants for efficiency._
+- **7k_online_this_month_quit_job.txt** — 5 claims · 3 sections · topics: Call to Action, Payment Methods, Pricing Strategies, Scaling & Expansion
+  - _The excerpt teaches how to create a scalable online business through Google Business profiles, pricing strategies, payment methods, customer reviews, and contractor partnerships, emphasizing low entry barriers and leveraging AI tools for efficiency._
+- **8_entrepreneurs_compete_for_100000_-_episode_1_zzleYxkf39k.txt** — 0 claims · 1 sections · topics: —
 - **a_lifetime_of_personal_development_in_18_minutes_PsxOnxIU274.txt** — 17 claims · 11 sections · topics: Thoughts as Unreliable, Feelings vs Actions, Situational Ethics, Ignorance as Evil, Environmental Design, Identity Through Actions, Reference Groups, Behavior Prediction, Consequence Mapping, Gap Between Stimulus and Response, Authenticity in Communication, Content Creation from Truth
   - _Personal development fundamentals: thoughts aren't inherently true, feelings don't mandate action, events have no inherent good/bad nature, ignorance is the primary enemy, changing surroundings changes behavior, and actions define identity more than past._
 - **advice_to_a_17_year_old_starting_a_business_Hw1W8G6idMY.txt** — 4 claims · 1 sections · topics: PPC Lead Generation, Sales Speed, Customer Acquisition Cost, Continuity Revenue Model
@@ -1518,38 +1905,202 @@ _204 source(s) · 1471 topic(s)_
   - _A $6M e-commerce accounting/CFO SaaS business ($55-60% gross margins, ~6-fig LTV, near-zero churn) increases affiliate activation by boosting upfront commission from $2K to $6-10K per deal, adding 30-day urgency, providing white-labeled materials, and preparing to launch ads + organic content feed to cold-acquire B2B agencies as affiliates._
 - **are_you_even_trying__deYfX6flgo.txt** — 6 claims · 4 sections · topics: Volume Underestimation, Action Per Unit Time, Content Production Scale, Compound Work, Persistence Over Talent
   - _Argues that people dramatically underestimate the volume required for success. Most don't fail due to inability but because they quit before reaching the scale that works._
+- **argument_isn_t_problem_solving_ZQKFc9Ro06I.txt** — ? claims · ? sections · topics: —
+- **artificial_intelligence_vs_human_intelligence_2015_archives_n0owiLU4EW8.txt** — ? claims · ? sections · topics: —
+- **auto_detailing_gmb_full_course.txt** — 14 claims · 4 sections · topics: Call Tracking Setup, Keyword Optimization, Multiple Google Business Profiles, Physical Address Verification, Review Optimization
+  - _The excerpt teaches how to optimize Google My Business profiles, leverage keyword optimization, review management, virtual assistant integration, call tracking, and location-based strategies to maximize lead generation and revenue._
+- **automated_50k_dropservicing.txt** — 7 claims · 2 sections · topics: Hiring Virtual Assistants, Job Posting Process, Lead Generation Strategies, Payment and Communication Processes, Transitioning to Coaching Business
+  - _The excerpt details the process of hiring and training virtual assistants to automate business operations, including job posting, call answering, scheduling, payment handling, and lead generation._
+- **be_good_at_two_things_feat_rory_sutherland_vice_chairman_of_YlsQkllMQN8.txt** — ? claims · ? sections · topics: —
+- **before_chase_success.txt** — 0 claims · 1 sections · topics: —
+- **being_extremely_logical_yet_incorrect_kSA8Lrtc8wc.txt** — ? claims · ? sections · topics: —
+- **best_friend_billion_dollar_playbook.txt** — 0 claims · 1 sections · topics: —
+- **best_worst_niches_20k.txt** — 13 claims · 4 sections · topics: Asphalt/Paving - Low Competition, High Ticket, Easy to Rank, Car Detailing - Low Barrier, High Ticket, Recurring, Deck/Fence - Low Competition, High Ticket, Easy to Rank, HVAC - High Ticket, Competitive, Area-Based, House Cleaning - Higher Search Volume, Harder Verification, Junk Removal - Non-Recurring, Low Ticket, Hard to Verify, Pool Cleaning - Instant Approval, Recurring, Low Ticket
+  - _The excerpt provides a tier list for remote service arbitrage niches, explaining the barriers to entry, ticket sizes, and competition for each niche, highlighting the best and worst options based on these factors._
+- **bloom_ceo_did_it_why_not_you.txt** — 0 claims · 1 sections · topics: —
+- **bloom_ceo_home_gym.txt** — 0 claims · 1 sections · topics: —
+- **book_5k_dropservicing_jobs_organic.txt** — 7 claims · 3 sections · topics: Fix/Solution Approach, High-Ticket Services, Organic Lead Generation, Urgency Level Customization
+  - _Eric outlines a systematic approach to organic lead generation, front-end/back-end strategies, urgency customization, fix/solution tactics, price anchoring, quick closing, and back-end research to consistently book high-ticket plumbing services._
 - **booking_100_calls_a_month_but_closing_half_Tk0e0z8h64Y.txt** — 8 claims · 5 sections · topics: Warm vs. Cold Sales Process Mismatch, Sales Motion Architecture, Cold Lead Conversion Framework, Service-to-Continuity Model, Offer Bifurcation Strategy
   - _A video testimonial agency at $6M revenue booking 100 cold outbound calls but closing only 6% learns the core issue: warm sales process applied to cold leads; fix with VSL, pre-frame, and sales training to improve close rates._
 - **brazil_s_accounting_empire_12m_revenue_1_decision_left_hbRuTx98gM0.txt** — 7 claims · 4 sections · topics: Software Economics, Technical Co-Founder Strategy, Education Business Model, SaaS Valuation Multiples, Market Distribution, Alternative Partnership Strategy
   - _Interview with Brazilian accounting education founder running $12M revenue with 100K+ students. Discusses whether to build accounting software or partner with existing software to increase valuation for exit._
+- **bring_back_the_green_cross_code_rory_sutherland_vice_chairma_6CBqGsAdFa8.txt** — ? claims · ? sections · topics: —
 - **build_a_mind_so_strong_it_scares_people_SE9_1PYsaP0.txt** — 19 claims · 16 sections · topics: Tolerance & Emotional Threshold, Fortitude & Behavior Control, Resilience & Recovery Time, Adaptability & Growth From Adversity, Trauma & Permanent Behavior Change, Separation of Feeling and Action, Daily Practice & Skill Building, Identity Reinforcement Through Behavior, Service & Character as Life Values, Biological Factors in Mental Resilience
   - _Defines mental toughness as four measurable components—tolerance, fortitude, resilience, and adaptability—and provides frameworks for developing each skill to improve life outcomes and behavior consistency under adversity._
+- **building_a_1000000_business_for_a_stranger_in_69_minutes_Wr6n_zNKvMk.txt** — 0 claims · 1 sections · topics: —
 - **building_a_12_000_000_business_for_a_stranger_in_25_minutes_MH-IMJxbUY4.txt** — 25 claims · 18 sections · topics: Demand vs Supply Constraint, UGC Content Loop, Creative Optimization, Kaleidoscope Creative Variations, Lead Scoring, Sales Dialer Efficiency, Damaging Admissions Framework, Product Avatar Diversity, Conversion Rate Optimization, Offer Structure, Distribution Channels, Team Scaling
   - _A business consulting session showing how to scale a $6.4M travel business from demand-constrained to growth-unlocked through better creative, UGC loops, improved sales process, and lead scoring._
 - **building_a_1_000_000_business_for_a_stranger_in_26_minutes_HGZOxBfnF-E.txt** — 14 claims · 17 sections · topics: Attribution & Data Problems, Customer Segmentation & Market Focus, Custom Order Strategy & Positioning, Sales Process Design & Closing Mechanics, Video Sales Letter Framework, Lead Qualification & BANT Method, Email Nurture & Long-Term Retention, Pricing Psychology & Anchoring
   - _Live business scaling session with Luis from Optimum Works (railing company at $2.5M revenue); diagnoses attribution problems, reorients strategy toward custom orders with sales process, and implements long-term email nurture to achieve 44% revenue growth ($3.6M) and 40% profit growth in one year._
+- **building_a_2300000yr_business_for_a_stranger_in_57_mins_-Koq14DPXC4.txt** — 0 claims · 1 sections · topics: —
 - **building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt** — 49 claims · 27 sections · topics: Business Stage Diagnosis, Pricing Strategy, Debt Management, Landing Page Optimization, Google Ads Optimization, Facebook Ads Optimization, Funnel Conversion Rate Optimization, Email Reactivation Campaigns, Affiliate Partnership Model, Ad Spend Scaling, Seasonal Marketing Angles, Cross-Platform Retargeting, Branded Search Term Defense, Implementation Timeline and Priority
   - _Alex Hormozi consults with Corey, an HVAC cleaning business owner doing $1.25M in revenue with $60k debt, and implements strategic improvements across pricing, funnel optimization, ads, affiliates, and email reactivation to nearly double the business to $2.3-2.5M within a year._
+- **built_1b_brand_20s.txt** — 0 claims · 1 sections · topics: —
 - **built_a_1_6m_practice_now_it_s_my_biggest_problem_G3NUEoTJ0Ec.txt** — 8 claims · 6 sections · topics: Founder Dependency, Client Transition Risk, Sales Motion Building, Warm Process Mistake, Soft Handoff, Telehealth Positioning
   - _Functional medicine practitioner at $1.6M revenue targeting $16M struggles with transitioning clients to new practitioner and must build reliable paid acquisition before handing off customers to avoid catastrophic margin collapse._
 - **buying_the_400k_machine_that_10x_s_my_business_WAkaq4BLSiw.txt** — 8 claims · 5 sections · topics: Supplier Terms Negotiation, Supply Chain Constraints, Capital Equipment Investment, Vertical Integration, Cash Flow Prioritization, Proprietary Technology
   - _A beef protein chip company at $1M revenue wants to scale to $1M/month. Manufacturer can produce 20K units/month ($280K revenue) but needs a $400K proprietary machine. Solution: negotiate better payment terms, use cash flow and pre-orders to buy the machine, then vertically integrate to own manufacturing defensibility._
+- **career_background_of_rory_sutherland_london_marketingstrateg_EOQDsaIKuZ8.txt** — ? claims · ? sections · topics: —
+- **change_your_attention_and_reality_will_follow_suit_london_ma_xRUISDsAq08.txt** — ? claims · ? sections · topics: —
+- **cheap_reliable_contractors.txt** — 3 claims · 3 sections · topics: Communication strategies to funnel leads, SMS Blasts with Outscraper for lead generation
+  - _The excerpt outlines three primary methods for finding reliable contractors: leveraging Google My Business for low-review listings, utilizing Facebook Marketplace for cheap laborers, and employing SMS blasts with Outscraper for lead generation, emphasizing the importance of verification, CRM setup, and strategic communication._
+- **close_10k_local_service_jobs_live.txt** — 14 claims · 4 sections · topics: Contractor Training, Inspection Fee Value, Job Booking System, Lead Follow-Up, Professional Phone Etiquette
+  - _The excerpt teaches that a professional job booking system, rooted in proactive customer service and inspection fee transparency, enables remote service providers to consistently generate high-value revenue through structured lead follow-up and contractor training._
+- **cole_30k_first_month_highschool.txt** — 11 claims · 3 sections · topics: Business Expansion, Marketing Tactics, Optimization Strategies, Profit Margins, Review Management, Service-Based Business Model
+  - _Cole shares how he leveraged Google Maps to rapidly grow his landscaping business with minimal initial investment._
+- **complete_local_seo_gmb_course_2026.txt** — 26 claims · 10 sections · topics: Fill Services & Products, Keyword Research, Manage Updates & Offers, Reviews & Ratings, SEO Basics, Service Areas & Zip Codes
+  - _The excerpt argues that mastering SEO for Google Business Profiles requires strategic optimization of reviews, competition, human activity, keywords, service areas, and zip codes to guarantee top-three rankings._
+- **copy_this_strategy_itll_blow_up_your_business_DaRXece2ItE.txt** — 0 claims · 1 sections · topics: —
+- **cost_is_not_a_price_it_s_a_feeling_K3fY1U0qu9g.txt** — ? claims · ? sections · topics: —
+- **creativity_is_like_a_vaccine_rory_sutherland_on_the_asymmetr_M0c222K91ZI.txt** — ? claims · ? sections · topics: —
+- **dangerously_honest_advice_to_create_generational_wealth_m-k0_pQJ1fY.txt** — 0 claims · 1 sections · topics: —
+- **digital_advertisement_is_broken_rory_sutherland_KD6kzJrTBoM.txt** — ? claims · ? sections · topics: —
+- **digital_advertising_is_broken_london_marketingpsychology_adv_QhUfGBM3d-A.txt** — ? claims · ? sections · topics: —
 - **doing_10_tasks_inside_a_3m_brand_YLLes93QigQ.txt** — 25 claims · 9 sections · topics: Paid Media Arbitrage Scaling Limits, Task Delegation and VAs, E-commerce Scaling Bottlenecks, Brand Building Strategy, Product Defensibility, Direct Response Doom Loop, Portfolio vs Single Brand, SKU Optimization, CAC and Margin Dynamics, Affiliate Model, Supply Chain Risks
   - _Discussion on scaling a $3M e-commerce paid-media business from 4 SKUs to $15M. Core issue: founder drowning in miscellaneous tasks; real bottleneck is building a defensible brand, not just optimizing media spend._
+- **don_t_design_for_average_london_advertising_marketingpsychol_y5Gp6vgtNOY.txt** — ? claims · ? sections · topics: —
 - **don_t_worry_about_what_you_re_earning_worry_about_what_you_r_dW27orkcmG4.txt** — 6 claims · 2 sections · topics: Volume Over Salary, Feedback Loop Optimization, Sales Position Types, Long-Term Learning Strategy
   - _Sales career advice emphasizing learning velocity over immediate income, prioritizing high-volume feedback loops for rapid skill development._
+- **downside_of_being_too_logical_behaviouralscience_marketingmi_lfK8WwtX6NA.txt** — ? claims · ? sections · topics: —
+- **easiest_way_of_solving_complex_problems_behaviouralscience_r_ZNe_DazDw2M.txt** — ? claims · ? sections · topics: —
+- **embracing_failure_a_masterclass_on_innovation_rory_sutherlan_--Y9gLpVcgs.txt** — ? claims · ? sections · topics: —
+- **emotions_drive_human_behaviour_london_marketingstrategy_mark_4JFPcp3AxMU.txt** — ? claims · ? sections · topics: —
 - **empty_motels_are_a_14m_goldmine_here_s_the_catch_zk5jD2uko_k.txt** — 8 claims · 6 sections · topics: Deal Flow Problem, Gatekeeper Strategy, Path Optimization, Analysis Paralysis, Blue Ocean Strategy, Content Marketing
   - _Motel-to-apartment converter at $14M targeting $30M; bottleneck is deal flow (pipeline); considering thought leadership to become gatekeepers' first call; learning: don't get paralyzed by perfect path choice—commit to any path for 18 months and you'll see results._
+- **erik_15k_84_hours_week.txt** — 4 claims · 4 sections · topics: Balancing Full-Time Job and Side Business, Expanding Niche Markets, Transitioning to Remote Work
+  - _Eric demonstrates how he achieved $15,000 monthly through remote service arbitrage while balancing a full-time job, emphasizing strategic time management and niche expertise._
+- **everything_is_a_placebo_here_s_why_this_is_rory_sutherland_2_8cMIJXw4LRM.txt** — ? claims · ? sections · topics: —
+- **everything_s_possible_in_print_rory_sutherland_keynote_5KtGip6Gn-M.txt** — ? claims · ? sections · topics: —
+- **exact_80k_dropservicing_sales_system.txt** — 17 claims · 5 sections · topics: Answering the Phone, Closing Initial Appointments, Higher-Ticket Niches, Transparency in Pricing, Upselling Permanent Solutions, Using Google Listings
+  - _The excerpt outlines a structured approach to scaling a drop servicing business through strategic phone answering, higher-ticket niche selection, appointment closure, objection handling, pricing transparency, and online listing optimization._
+- **exploring_nutritional_science_with_zoe_jonathan_wolf_sharlen_E7q_u6ggreA.txt** — ? claims · ? sections · topics: —
 - **fence_company_stuck_at_20m_here_s_why_bHOR3aMRs1U.txt** — 12 claims · 7 sections · topics: Talent Acquisition Funnel, Sales Hiring and Scaling, Leadership and Founder Capacity, Sales Academy Model, Cost of Talent vs. ROI
   - _Fence company at $20M revenue needs to build a talent acquisition funnel parallel to lead generation to scale to $50M; founder talent determines growth ceiling._
 - **fixing_a_sales_agency_with_a_40_cancellation_rate_2PfbKVGNgPM.txt** — 5 claims · 2 sections · topics: Expectation Management, Sales and Fulfillment Misalignment, Customer Retention Through Transparency, Follow-the-Leader Model
   - _A sales agency selling electricity plans faces a 40% cancellation rate because fulfillment takes 120 days; the fix is managing customer expectations upfront by committing to timeline and positioning it as a benefit._
 - **focus_is_a_daily_fight_not_a_one_time_win_-aX5ccYfVHU.txt** — 12 claims · 6 sections · topics: Focus as Daily Practice, Opportunity Cost, Saying No, Skill Accumulation, Difficulty Curve, Perseverance vs Quitting, Knowledge Types
   - _Focus is a daily practice, not a one-time decision; as you gain skills and wealth, distractions multiply; regret comes from quitting before breakthrough; long-term success requires learning declarative (knowing about) vs procedural (knowing how) knowledge._
+- **following_logic_is_dangerous_for_brands_rory_sutherland_GZcicRigTbY.txt** — ? claims · ? sections · topics: —
+- **forcing_best_friend_15k_90_days.txt** — 12 claims · 4 sections · topics: 15k Goal, Automation & Virtual Assistant, Contractor Involvement, Laziness & Procrastination, Mental Shift, Moving Out of Parents' House, Profile Expansion
+  - _The excerpt discusses overcoming laziness, expanding profiles, automating processes, and achieving a 15k goal through consistent effort and avoiding complacency._
 - **free_car_wash_made_more_than_paid_ones_zJc777yAE-w.txt** — 7 claims · 8 sections · topics: Pick-Your-Price Offer Mechanics, Goodwill-Based Upsells, Bonus Tier Structure, Free Attraction with Paid Upsell, Reciprocity Psychology, Low-Trust Environment Conversion
   - _A free car wash offer during COVID became a model for "pick your price" upsells: market the offer as free, then at checkout let customers choose donation level with bonuses at $30, $67, $99+ tiers; gyms and weight-loss coaches adapted it to reach $99 average ticket from low-barrier offers._
+- **friend_quit_job_250_day.txt** — 2 claims · 2 sections · topics: Scaling Strategies, Starting a Remote Service Business
+  - _The excerpt argues that starting a remote service business in the HVAC niche is achievable with minimal effort, emphasizing practical steps like contractor recruitment, review acquisition, and realistic expectations for scaling._
+- **fumbled_30k_deal_mistakes.txt** — 3 claims · 3 sections · topics: MARKETING/RANKING, SETUP MISTAKES
+  - _The excerpt argues that successful scaling requires meticulous setup, strategic marketing, efficient fulfillment, and disciplined scaling strategies to avoid common pitfalls and achieve financial goals._
+- **future_of_advertising_rory_sutherland_AxQN8qYcqcc.txt** — ? claims · ? sections · topics: —
+- **fyou_money_no_highschool.txt** — 24 claims · 9 sections · topics: Business Profile Creation, Contract Terms, Contractor Reliability, Location Selection, Professional Phone Answering, Quoting Rules, Review Strategies, Tool Usage, Verification Process
+  - _The excerpt argues that local service arbitrage can be achieved with minimal effort by optimizing business profiles, acquiring reviews, and using tools like CallRail, despite the challenges of verification and review acquisition._
+- **get_rich_quick_actually_worked.txt** — 31 claims · 7 sections · topics: Business Name & Keyword Optimization, Business Name & Profile Creation, Contractor Recruitment, Demand Analysis, Lead Generation, Payment Methods, Professional Phone Call Handling, Review Strategy, Service Selection & Remote Arbitrage, Virtual Assistant Integration
+  - _The excerpt teaches how to build a remote service arbitrage business by selecting low-competition, high-demand services, analyzing market demand with SEMrush, optimizing keywords for Google Business profiles, and generating leads through video ownership proof._
+- **give_me_14_minutes_and_youll_learn_how_to_be_absurdly_happy_UulLbNJMpTg.txt** — 0 claims · 1 sections · topics: —
+- **give_me_20_minutes_and_ill_give_you_back_20_years_of_your_li_3SVksBB3_YY.txt** — 0 claims · 1 sections · topics: —
+- **gmb_optimization_guide_2_weeks.txt** — 20 claims · 6 sections · topics: SEO optimization, custom services, fake reviews, review quantity, service area selection with zip codes, strategic placement, three-pack ranking, website optimization
+  - _The excerpt teaches that you can rank your Google Business profile in the three-pack without traditional SEO, by focusing on strategic placement, review quantity, fake reviews, and optimized profiles._
+- **good_or_bad_doesn_t_exist_uTSYoF-1Q2M.txt** — ? claims · ? sections · topics: —
+- **greg_short_-PykBdyU4_o.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_06iMR4RT_L4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_0SpwUkf_D2Q.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_0rEypHI49zY.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_17ZkNrQeuNo.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_1FpgWxCUtxk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_22ykPFyh2u4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_25LioIEukQ4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_2p1uwLZefqg.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_4NSdJrCgW70.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_4kkJ_HRCbrM.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_4xCecXgUeXk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_5IWRV_J6OGQ.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_68k60GHZDT8.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_6ExK9BNS2ok.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_6mHcXZ5X0Q0.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_6mM5AuGXzPk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_6zsun4wf5zQ.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_7ukMN5E0yIs.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_8tzfYnFbk18.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_9aSJk5VK0gM.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_CcRoqbUK5D0.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_CkSKz9ciPuQ.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_Dcvuvik1FNg.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_Fg-Hv-5HzXA.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_FhH8CRUnwZw.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_FqIUcq2Lo7E.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_HN8THBqQxgg.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_HvogIpx3SsY.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_IzPkhMMOGT8.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_JWqIR2w1t4U.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_KHJJYjSzf8g.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_MAtPxn5G_3E.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_N9l-snZ0VSE.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_NXbFIfZn0QE.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_OP3eDXegd34.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_OgZcHGxLEH4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_OveNJiMmMHY.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_PMXswK3pj6k.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_PoNyyG7XbeE.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_QPJ57GeJctg.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_QXie_Isr6a8.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_R5LIXUQjxfs.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_RggquHho7UM.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_SwSaubfGoiY.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_UGf9BPXlSm4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_UIu3Y9Qnfig.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_V3nBwMiSM8Y.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_VvnBlPGKMYM.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_VxYbhY9cS18.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_YaiJlkypFB4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_Zg7sEd6LKLU.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_Zp_-WIhPBtA.txt** — 0 claims · 1 sections · topics: —
+- **greg_short__PhUg8fDV8Q.txt** — 0 claims · 1 sections · topics: —
+- **greg_short__dJum_wHkJk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_aeWQn-NBMSY.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_bJCAn8ygAjU.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_bkHbK1vaHMU.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_cIc-VfgZx9I.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_e29Oo0Z272k.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_e3Y-NypkvBQ.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_egvbj1NMVME.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_eyVGlztA_HU.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_gSWZHqiZNJo.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_gfaVpfPdzUw.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_h0T5XE-5cv4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_imghCtCRqWI.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_jMZSF9tcUj4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_jeIAslyP8HE.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_mnYIUY4xIyc.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_nGMZxnpGy5E.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_nNBzvnAOTng.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_nTjvJN6J5iA.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_pEHeHdM6FG4.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_pLcJGOfLFoI.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_q5wBxKeN5Lg.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_q8JnecNosbk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_rv5k08GP4Kg.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_s3T2GqlFikQ.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_s6qML2WqqBk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_sC5mDcbnf74.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_s_6bbnJdQJA.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_s_r1mrEF44E.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_uW4HEvSTsbk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_v3SmyKSvkx0.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_wWzqYsnIx9k.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_wd2cHEzxO0M.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_yBjZ3Hsiryk.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_ymtUi8hd3Ao.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_zXNeGzA02kE.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_zXNnhsTwK40.txt** — 0 claims · 1 sections · topics: —
+- **greg_short_zycaOUzrvFM.txt** — 0 claims · 1 sections · topics: —
+- **guarantee_100k_this_year.txt** — 2 claims · 2 sections · topics: COMMITMENT
+  - _The video argues that committing to a simple business model, like dropshipping, can lead to significant income growth if one starts with dedication and avoids overthinking._
+- **gun_to_head_20k_in_30_days.txt** — 21 claims · 7 sections · topics: Address Verification & Profile Optimization, Google Business Profile Creation, Google Maps Strategy, High-Demand Services, Low Review Competition, Partnering with Plumbers, Payment Handling & Invoicing, Profit Sharing Models, RSA Business Model, Ranking Challenges, Review Strategy, Tools Like QuickBooks
+  - _The excerpt explains how to build a remote service arbitrage (RSA) business by stealing local service customers, leveraging Google Maps rankings, and converting calls into appointments through strategic pricing, review optimization, and business profile setup._
 - **gym_launch_secrets.txt** — 25 claims · 292 sections · topics: Client-Financed Acquisition, Irresistible Offers, Lead Generation & Marketing, Sales Process & Closing, Price Optimization, Membership Structuring, Billing Cycles, Capacity Maximization, Session Duration & Structure, Exercise Selection & Programming, Overhead Management, Wedding Cake Profit Model, Large-Group Training Revenue, Semi-Private (1-on-4) Training, Supplement Sales & Distribution, Internal Plays & Upsells, Retention & Attrition Reduction, Reach-Out Communication Systems, Attendance Tracking & Follow-up, Team Compensation & Incentives, Trainer Motivation & Culture, Organizational Structure & Hiring, Communication Cycles & Meetings, Member Lifecycle Management, Exit Interviews & Objection Handling
   - _Alex Hormozi's guide to transforming gym profitability through client-financed acquisition, profit levers, and retention systems that have grown 1,500+ gyms and generated $1 billion+ in revenue._
+- **habits_and_character_are_closely_intertwined_7UbJdCEcjE0.txt** — ? claims · ? sections · topics: —
+- **hacking_the_human_brain_marketing_business_entrepreneur_huma_pgrl_rvlPPs.txt** — ? claims · ? sections · topics: —
+- **harnessing_the_tiktok_boom_EKzHncU74Q0.txt** — ? claims · ? sections · topics: —
 - **he_built_a_5m_paint_biz_now_he_s_stuck_FzYRdOT_rXQ.txt** — 7 claims · 5 sections · topics: Recurring Revenue, Model Pivot, Cash Flow Management, Accounts Receivable Financing, Business Model Selection
   - _How to solve the cash conversion cycle problem when scaling to higher-margin work; use AR financing instead of changing profitable models._
 - **he_buys_businesses_but_can_t_make_them_grow_6WPNzaWuAic.txt** — 7 claims · 6 sections · topics: Acquisition vs Organic Growth, Founder Selection Bias, Portfolio Company Scaling Challenges, Deal Flow Generation, Founder Replacement Economics, Ambition-Based Founder Screening, Private Equity Growth Problems
@@ -1596,6 +2147,8 @@ _204 source(s) · 1471 topic(s)_
   - _A wildfire sprinkler company at $2.2M revenue is positioned to scale to $200M by focusing on a specific avatar and leveraging an insurance company distribution deal._
 - **helping_e_commerce_business_owners_scale_8C_6qojTA78.txt** — 41 claims · 26 sections · topics: Scaling Media Buying and Keywords, Bridge Pages and Customer Awareness Levels, Service Business Reinvestment Strategy, Direct Response vs Brand Building, Avoiding the Direct Response Doom Loop, Operational Scaling Roadmap, Founder Dependencies and Task Delegation, Contractor vs Full-Time Hiring, Multi-Product vs Single-Product Strategy, SaaS Misconceptions and Validation, Organic Audience Monetization Mistakes, Operational Leverage and Logistics, Sales Training and Behavioral Language, Hiring and Recruiting Militancy
   - _Alex Hormozi shares tactical strategies for scaling e-commerce businesses from multiple founders and entrepreneurs, covering paid media optimization, brand building, organizational scaling roadmaps, and avoiding common pitfalls like the direct response doom loop._
+- **hire_contractors_no_scam.txt** — 18 claims · 3 sections · topics: Customer Review Management, Licensing and Insurance, Post-Job Follow-Up, Reliability and Trust, Transparency and Contracts
+  - _The excerpt emphasizes the importance of reliability and trust in contractor selection, including pre-job vetting criteria, transparency through contracts, post-job follow-up, licensing, and customer review management to ensure a profitable and secure service business._
 - **hormozi_reveals_the_marketing_lie_costing_you_leads_R5Ay82ZvwWM.txt** — 7 claims · 6 sections · topics: Marketing Filtration vs Education, Avatar Targeting Strategy, Lead Quality Over Quantity, Content-to-Avatar Congruence, CAC vs LTV Math, Friction in Funnel Design, Low-Ticket Products as Relationship Shifters
   - _Marketing acts as a filtration system to find ideal buyers rather than create them. Target advanced customers through messaging and content that matches their problems, not beginners._
 - **how_a_22_year_old_built_a_2_4m_pizza_shop_pobfyHIItag.txt** — 8 claims · 6 sections · topics: Nail It Then Scale It Framework, General Manager Profit Share Structure, Founder Removal Test, Location Economics Sequencing, Data Tracking During Transition, Ownership Equity Incentive Structure, Overexpansion Risk
@@ -1604,34 +2157,58 @@ _204 source(s) · 1471 topic(s)_
   - _How acquisition.com converts raw attention into revenue through multiple monetization channels (books, courses, advisory services, real estate, ventures) while building a scalable ecosystem for business owners._
 - **how_do_i_make_my_crm_sexy_on_the_front_end_IKRBA9ALc68.txt** — 7 claims · 6 sections · topics: Ad Spend Testing, LTV CAC Economics, Channel Strategy, CRM Offer Positioning, Partner Channel Model, Funnel Optimization
   - _An online fitness coaching CRM platform owner discusses improving customer acquisition through better advertising, offer positioning, and messaging to move from $2M to $12M+ revenue._
+- **how_humans_limited_knowledge_shapes_marketing_strategies_mar_Ht8lZhyYBg0.txt** — ? claims · ? sections · topics: —
 - **how_i_diffused_a_decade_long_family_fight_l6_t_e3FIxs.txt** — 6 claims · 3 sections · topics: Understanding Over Judgment, Reinforcement and Behavior, Regrets as Inevitable, Opportunity Cost Framework, Choosing Your Regrets, Compassion Through Context
   - _Explains how understanding someone's past and reinforcement history dissolves conflict, and introduces Hitchens' concept of choosing your regrets due to unavoidable opportunity costs._
+- **how_i_finally_hit_20k_mo_at_19_after_failing_every_business.txt** — 2 claims · 2 sections · topics: Local Service Arbitrage, Passive Income
+  - _The speaker details a business model using local service arbitrage, leveraging Google Maps for client acquisition, Facebook Marketplace for pricing, and passive income through hiring professionals to handle bookings._
+- **how_i_made_8657_in_30_days_while_in_high_school.txt** — 11 claims · 4 sections · topics: Career Transition to Health Coaching, Job Hunting and Employment, Starting a Car Detailing Business, Transitioning to Editing Agency
+  - _The speaker shares their journey of transitioning from job hunting to multiple income streams, including freelancing, car detailing, and health coaching, while emphasizing the importance of adaptability and strategic planning._
 - **how_i_made_my_first_high_ticket_sale_B7P5WCVfnPE.txt** — 17 claims · 11 sections · topics: The Money Belief Gap, Rich Mindset vs. Poor Mindset Pricing, The First High-Ticket Sale, Close Rate as Pricing Signal, Emotional Anchoring Before Price Drop, Consumer vs. Business Pricing Tiers, Selling by Value Ratio, Target Audience Qualification, The Pricing Virtuous Cycle, Price as Market Signal
   - _Breaking through limiting money beliefs by selling high-ticket services; rich people buy on value-to-cost ratio (not absolute price), and close rates reveal pricing power gaps._
+- **how_it_feels_to_wire_300k_for_a_car_at_20.txt** — 13 claims · 4 sections · topics: Financial Constraints and Payoff Timeline, Reflection on Life Impact, Self-Esteem and Social Comparison, Value of the Chase Over Material Gain
+  - _The excerpt argues that buying a Lamborghini at 20 is a personal pursuit driven by motivation, financial constraints, self-esteem, and the value of the chase over material gain, despite its limited life-changing impact._
 - **how_learning_to_try_one_thing_beats_99_of_people_unkbSx2WZH0.txt** — 4 claims · 2 sections · topics: Deliberate Practice and Commitment, Generalization Across Domains, Competitive Advantage Through Persistence, Time and Resource Allocation
   - _Learning to commit fully to one thing for an extended period builds a generalizable skill that beats most competitors because few people actually persist in deliberate practice._
 - **how_long_can_you_go_through_hardship_before_you_crack_B6yMJkT7CJo.txt** — 4 claims · 2 sections · topics: Tolerance as a Mental Toughness Component, Maintaining Behavior Under Stress, Measuring Tolerance, Behavioral Consistency
   - _Tolerance is the first component of mental toughness—it measures how long you can endure hardship before your behavior changes, not about ignoring pain but maintaining intended behavior under stress._
 - **how_making_more_money_affects_your_life_W_34Zwki0W8.txt** — 9 claims · 4 sections · topics: Wealth Tier Jumps, Quality of Life Variables, Spending Skill Gap, Saving vs Spending, Diminishing Returns, Income Plateaus
   - _Wealth tiers have distinct quality-of-life impacts; jumps are smaller early ($6k-$50k), then larger ($50k-$500k to $1M+), but spending is a skill most people never master despite higher income._
+- **how_millionaires_think_diff.txt** — 0 claims · 1 sections · topics: —
+- **how_pinterest_is_turning_dreams_into_reality_insider_secrets_1PMuV9zhHAo.txt** — ? claims · ? sections · topics: —
+- **how_price_jobs_send_quotes_80k.txt** — 7 claims · 3 sections · topics: Business Scaling, Contractor-Managed Pricing, Higher-Ticket Service Pricing, Pricing Over the Phone
+  - _The excerpt outlines three pricing models for service businesses: phone-based pricing with 50% markup, contractor-managed pricing with 20% markup, and higher-ticket services requiring 20% markup, emphasizing organic marketing and business scaling._
 - **how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt** — 19 claims · 21 sections · topics: Inflation and Future Dollar Value, Income Growth as Primary Lever, Spending Discipline and Opportunity Cost, Skill Investment ROI, Time Value of Money in Wealth Building, Watermark vs. Fixed Investment Strategy, Learning Budget and Experimentation, Alternative Education Path, Skill Acquisition as Bridge Building
   - _Alex Hormozi reframes personal finance by accounting for inflation and time value of money, showing that traditional $100/month savings targets fall short, and demonstrating how increasing income through skill acquisition creates exponential compounding advantages._
 - **how_to_actually_become_successful_stop_copying_me_tDr3Ocu0VxE.txt** — 6 claims · 2 sections · topics: Authenticity vs. Imitation, Providing Value, Proof and Credibility, Starting for Free
   - _Success comes from being the most authentic version of yourself and providing value in your domain; proof comes from either past achievements or the effort itself (e.g., 2,000 videos on TikTok)._
+- **how_to_bounce_back_from_anything_fast_W2Oz2wXlh3E.txt** — ? claims · ? sections · topics: —
 - **how_to_build_unshakeable_fortitude_in_your_business_X4z_5m5_hig.txt** — 6 claims · 2 sections · topics: Fortitude Definition, Behavioral Change Scale, High Fortitude Examples, Low Fortitude Examples
   - _Technical definitions and examples of fortitude as the intensity of behavioral change after reaching a breaking point, with methods to build it._
+- **how_to_bypass_google_business_profile_video_verification_202.txt** — 3 claims · 3 sections · topics: Fake Signage Detection Challenges, Verification Requirements
+  - _The excerpt outlines the steps for verifying Google business profiles, emphasizing the importance of location, signage, and ownership, while highlighting the challenges of detecting fake signage and offering a call to action for personalized assistance._
 - **how_to_catch_up_in_life_using_logic_EonibwnAEME.txt** — 20 claims · 9 sections · topics: Capacity Building, Opportunity Recognition, Money Savings, Skill Stacking, Time Management, Audience Building, Network Expansion, Preparation and Readiness, Financial Discipline, Learning Strategy, Luck Surface Area, Early Career Foundation
   - _Six principles for building capacity before knowing what to do, designed to help ambitious people go from zero to $100k by preparing to recognize and capitalize on opportunities when they arise._
 - **how_to_change_your_life_MZPVPCIeUpg.txt** — 32 claims · 13 sections · topics: Trade-Offs and Constraints, Conscious vs Unconscious Trades, Risk Perception and Overestimation, Upside Asymmetry, Worst-Case Survivability, Genetic Baseline and Effort, Hedonic Adaptation, Decision Limbo and Purgatory, Framing Life as Happening For You, Criticism from Mediocrity, Fear as Illusion, Small Bets and Iteration
   - _Life change requires conscious trade-offs rather than wanting everything; people stay stuck because they fear losses more than value gains, but worst-case scenarios are survivable and upside is unlimited._
 - **how_to_decommoditize_a_service_business_m8m7jbuIP4U.txt** — 7 claims · 7 sections · topics: RFP Frame Strategy, Case Study Close, Value vs Price Positioning, Holistic Sales Approach, Proof Methodology
   - _Shows how service businesses can escape commodity status by shifting from price-based selling to value-based selling using case studies and RFP reframing._
+- **how_to_find_a_contractor_within_10_mins_for_your_drop_servic.txt** — 8 claims · 2 sections · topics: Anmar's 60-40 Commission Method, Indeed for Higher-Quality Leads, Marketplace AI Hosts, Regional Market Differences
+  - _The excerpt discusses strategies for finding reliable contractors with a 60-40 commission, challenges with Marketplace AI hosts, Facebook lead generation, Indeed for better leads, language barriers, and regional market differences._
 - **how_to_find_motivated_sellers_in_a_frozen_real_estate_market_960cDVNgTC8.txt** — 6 claims · 7 sections · topics: Motivated Buyer Strategy, Community Building Asset, Income Diversification, Seller Psychology
   - _Addresses how to find motivated sellers when market conditions make sellers reluctant to list, and how building community assets can create long-term business value in real estate._
+- **how_to_force_yourself_to_be_consistent_and_do_hard_things_WOZGZK7K-Jo.txt** — 0 claims · 1 sections · topics: —
+- **how_to_get_any_google_business_profile_verified_in_any_categ.txt** — 0 claims · 1 sections · topics: —
+- **how_to_get_any_suspended_google_business_profile_back_slight.txt** — 0 claims · 1 sections · topics: —
 - **how_to_get_good_at_sales_n_6TZGmck3k.txt** — 8 claims · 6 sections · topics: Sales Conviction, Trust Building, Sales Framework, Objection Handling, Tone And Belief, Sales Process Structure, No-Based Close
   - _Sales training framework emphasizing conviction, trust-building through expertise, and consultative questioning over pressure tactics._
+- **how_to_get_instant_verification_on_your_google_business_prof.txt** — 0 claims · 1 sections · topics: —
+- **how_to_get_leads_from_your_gmb_profile_fast.txt** — 13 claims · 4 sections · topics: Location-specific Rankings, No Time Limit, Optimization/SEO, Proper Setup/Citations, Reviews/Photos/Descriptions, Timely Actions
+  - _The excerpt argues that there's no fixed time frame for a GMB profile to rank, but success depends on proper optimization, reviews, and location-specific strategies._
 - **how_to_get_more_patients_for_your_dental_clinic_wTXCZLVQ0x8.txt** — 5 claims · 2 sections · topics: Content Strategy for Healthcare, Before/After Operationalization, Paid Content Amplification
   - _Dental clinics competing on price can use content strategy (before/afters) as the primary acquisition lever, operationalized by collecting photos from every patient, then run paid ads to top performers._
+- **how_to_get_unlimited_google_reviews_that_actually_stick.txt** — 7 claims · 3 sections · topics: Facebook Marketplace Method, Steps to Obtain Reviews
+  - _The excerpt argues that local business owners can effectively generate high-quality Google reviews through Facebook Marketplace by offering gift cards for tasks, ensuring legitimacy and profitability._
 - **how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt** — 20 claims · 13 sections · topics: Churn as a Leaky Bucket, Retention Benchmarks, Cohort Analysis & Time-Based Churn, Customer Feedback Loops, Engagement Optimization, Pricing Tiers, Overwhelm Reduction, Community Design, Onboarding & Activation, Owner Presence & Culture, Communication Cadence, Annual Plans
   - _Strategies to reduce churn and improve customer retention in recurring revenue businesses by tracking metrics, removing friction, and building community._
 - **how_to_get_your_first_clients_with_zero_proof_QgvX_5km_Yo.txt** — 6 claims · 3 sections · topics: Proof Problem, Service as Differentiation, Free Work Strategy, Testimonials as Currency, Aligned Incentives, Toads to Kiss
@@ -1640,6 +2217,7 @@ _204 source(s) · 1471 topic(s)_
   - _A comprehensive masterclass on the four fundamental business shapes that exist: e-commerce, service, education/info-media, and SaaS. The speaker explains the growth curve, scaling mechanics, and competitive advantages specific to each model, drawing on experience scaling $250M+ in companies._
 - **how_to_hire_the_right_leadership_team_as_you_scale_n7CYRXrdebU.txt** — 14 claims · 7 sections · topics: Leadership Hiring Strategy, Recruiting Leverage, CEO Involvement in Hiring, Networking and Headhunters, Talent Pattern Recognition
   - _Skincare company at $4.5M monthly revenue targeting $25M needs to build top-layer leadership; strategy differs by role and network, with CEO involvement in key hiring._
+- **how_to_make_10k_mo_from_1_single_google_business_profile_cho.txt** — 0 claims · 1 sections · topics: —
 - **how_to_make_progress_faster_than_everyone_yb2cLMMuMdQ.txt** — 8 claims · 6 sections · topics: Shame vs Guilt vs Cringe, Documentation of Struggle, Caring as Competitive Advantage, Cringe as Status Play, Iterative Improvement Process, Comparing Early vs Late Chapters, Building in Public
   - _Progress requires caring, documenting the struggle, and being willing to be cringe during the journey - comparing your Chapter 1 to others' Chapter 25 is unfair and why documentation of the come-up matters._
 - **how_to_outlearn_everyone_q9qBqnhdWKw.txt** — 16 claims · 18 sections · topics: Learning Definition and Intelligence, Skill Deconstruction, Success Metrics and Quantification, Black Box Thinking, Observational Learning, First-Party Data and Iteration, Speed of Learning Over Starting Point, Modeling High Performers
@@ -1648,6 +2226,8 @@ _204 source(s) · 1471 topic(s)_
   - _To raise capital from accredited investors without personal connections, use conferences/events for face-to-face trust, paid ads targeting investors, affiliate models, or content marketing._
 - **how_to_recruit_a_players_for_your_roofing_company_ls3VjXEW-R4.txt** — 7 claims · 1 sections · topics: Three Levels of Salesmanship, Sales Leadership Transition, Recruitment Framework, Compensation Structure
   - _Framework for recruiting salespeople to scale a roofing company from solo sales to a team, using three levels of sales mastery._
+- **how_to_remove_a_bad_google_review_asap.txt** — 10 claims · 4 sections · topics: Local Guide Levels, Multiple Accounts for Reporting, Report Review Process, Review Duration and Removal, Urgency of Addressing Reviews
+  - _The excerpt teaches that addressing a bad Google review promptly requires using multiple accounts, leveraging local guide levels, and maintaining persistence to ensure effective removal._
 - **how_to_say_no_to_the_wrong_opportunities_YJy7PL2apUo.txt** — 12 claims · 10 sections · topics: Grass Is Greener Bias, Downside Tolerance Framework, Existing Vehicle Optimization, Venture-Backed Scaling Illusion, Margin Improvement vs Revenue Growth, Acquisition Strategy (M&A), Licensing vs Franchising, Team Capacity Constraints
   - _Teaches how to evaluate growth opportunities using downside tolerance and existing vehicle improvement, advising against pivoting to new models when the core business can reach scale through M&A and operational efficiency._
 - **how_to_scale_a_tutoring_business_from_250k_to_1m_U8Noy9ly7A4.txt** — 8 claims · 5 sections · topics: Offer Stacking, Demand Problem, Enrollment Funnel, Continuity Upsell, Product Positioning
@@ -1660,18 +2240,26 @@ _204 source(s) · 1471 topic(s)_
   - _To sell high-ticket services ($2K+) in saturated markets, lead with content and before/after proof, then run ads to winning content with a funnel that gates traffic through live calls or webinars._
 - **how_to_sell_more_franchises_without_selling_them_0ZwRf4Dy_MM.txt** — 7 claims · 5 sections · topics: Unit Economics, Restaurant Profitability, Franchisee Recruitment, Financial Modeling, Business Model Selection, Margin Optimization
   - _How to make franchises sell themselves by fixing unit economics first; franchise demand is a symptom of restaurant profitability._
+- **how_to_speak_so_well_people_give_you_money_sGakuNs9mT4.txt** — 0 claims · 1 sections · topics: —
 - **how_to_triple_profit_without_growing_revenue_9Xmcfgf1tsc.txt** — 8 claims · 4 sections · topics: Profit Optimization, Sales Motion, Pricing Strategy, Operational Efficiency, Margin Analysis, Leadership Alignment
   - _A $15M plumbing and HVAC company can triple net profit margins from 14% to 30% by stopping top-line growth focus and optimizing sales, pricing, and operations._
 - **how_to_use_ai_in_your_business_in_2026_fr78adfAnuA.txt** — 16 claims · 11 sections · topics: AI as Tool Not Industry, Cloud to Dirt Knowledge, AI Implementation Pitfalls, Marketing Automation, Sales AI Application, Customer Support AI, Risk Reduction with AI, Content Creation with AI, Behavior Pattern Recognition, Workflow Automation, 18-Month Opportunity Window
   - _Businesses don't need to become AI companies but must use AI as a tool across all functions. AI makes operations better, faster, cheaper, and less risky when properly implemented with business acumen overlaid on technical capability._
 - **how_to_win_with_ai_in_2026_9q5ojtkqsBs.txt** — 20 claims · 18 sections · topics: AI Adoption Urgency, Workflow-Based Organization, AI Training Methodology, Revenue Per Employee Leverage, BYOA Business Model, AI Safety And Risk, Barbell Strategy For Future, Task Automation Framework, Long-Term Thinking In AI
   - _A comprehensive guide to preparing for AI disruption in business, emphasizing workflow-based thinking, training AI like employees, and adopting AI-first strategies to maintain competitive advantage._
+- **how_value_is_built_in_the_mind_i93Qu7dckn4.txt** — ? claims · ? sections · topics: —
 - **how_we_trained_sales_teams_across_thousands_of_gyms_7w1HQAvlLZk.txt** — 8 claims · 6 sections · topics: Sales Training at Scale, Boiler Room Method, Network & Community, Licensing Model, Avatar Targeting, Time to Value, Operationalization
   - _Gym Launch's approach to sales training at scale: daily boiler room role-play covering 5 script stages, network + community as core moat, and creative licensing model that didn't require 100+ account reps._
+- **huge_benefits_of_the_subconscious_mind_london_marketingpsych_HEeumf16X9Q.txt** — ? claims · ? sections · topics: —
+- **huge_limitations_of_the_conscious_mind_marketing_london_mark_VSXjEGu8fNI.txt** — ? claims · ? sections · topics: —
+- **human_being_are_on_autopilot_KRgXM5i7Tew.txt** — ? claims · ? sections · topics: —
 - **humans_overestimate_the_downside_I8YZLBYYMag.txt** — 6 claims · 3 sections · topics: Evolutionary Bias Toward Pessimism, Upside in Uncertainty, Psychological Nature of Failure, Overestimating Downside Risk, Arbitrage in Delayed Rewards, Willingness to Pay the Price
   - _Explores the evolutionary basis of human pessimism and how it limits opportunity-seeking. Argues that upside lies in uncertainty and delayed rewards, and that most failures are psychological rather than real._
+- **i_blew_up_a_business_through_3_small_changes_just_copy_me_3yAiVjcImQ4.txt** — 0 claims · 1 sections · topics: —
+- **i_blew_up_a_secret_business_to_prove_its_not_luck_SmiOK8Yun4s.txt** — 0 claims · 1 sections · topics: —
 - **i_built_an_app_and_no_one_s_using_it_-Le_gCaW_5c.txt** — 8 claims · 5 sections · topics: Trial-to-Activation Problem, Churn Root Cause Analysis, CAC vs. True CAC, Pricing & Trial Structure, Activation Incentives
   - _A fence visualization SaaS at $500K revenue with 8% monthly churn learns that poor trial-to-customer activation is the real constraint: incentivize first use rather than scaling ads._
+- **i_cant_hide_this_anymore_Z5rKn1ZIp3A.txt** — 0 claims · 1 sections · topics: —
 - **i_feel_stupid_apartment_broker_stuck_at_250k_pEKRblMK-Xg.txt** — 8 claims · 5 sections · topics: The Swamp (1-3M Revenue Range), Scaling Through Delegation, Team Hiring Strategy, Market vs. Model Issues, Time-Leverage Tradeoffs
   - _An apartment broker at $250K revenue learns he's stuck in the swamp—the $1-3M range—and needs to transition from selling himself to building a team by hiring top talent and delegating systematically._
 - **i_m_a_physics_tutor_making_80k_how_do_i_scale_bBm70Ojep80.txt** — 6 claims · 2 sections · topics: US Market Priority, Geographic Signaling, Language Optimization, Content Strategy
@@ -1684,62 +2272,529 @@ _204 source(s) · 1471 topic(s)_
   - _Skincare e-commerce company at $4.5M monthly revenue and $195k bottom line needs to stop building multi-businesses and focus deep on scaling one to $10M+._
 - **i_m_trying_to_replicate_gym_launch_in_the_pet_care_industry_pstJXCdpIio.txt** — 8 claims · 6 sections · topics: Supply vs Demand Constraints, Delivery Model Redesign, Expectation Setting, Founder Over-Delivery, Customer Segmentation, Cohort-Based Pricing, Accessibility as Differentiation
   - _Pet care coach (Dogco Launch) growing from $356k to $1.2M this year, but capped by high-touch delivery model; advice covers delivery restructuring, customer expectation management, and promoting accessibility-to-scale transition._
+- **i_q_tests_are_practically_bullsh_t_behaviouralscience_intell_lBzXZe1aQeE.txt** — ? claims · ? sections · topics: —
 - **i_want_to_grow_my_business_but_i_don_t_want_to_sacrifice_fam_iq4VNdOAfWM.txt** — 8 claims · 6 sections · topics: Trade-Off Reality, Comfort as Constraint, Family Time vs Growth, Talent Hiring Levels, Active vs Passive Assets, Opportunity Cost, Finite Productive Years
   - _Roofing/exterior remodeling owner at $6M wanting to hit $100M but facing comfort, fear of losing family time, and distraction from side businesses; core insight is that you must trade something to scale, and regret comes from imagining upside without the downside cost._
+- **i_went_from_0_to_millionaire_in_6_months_by_stealing_from_ot.txt** — 0 claims · 1 sections · topics: —
+- **ideas_that_don_t_make_sense_author_london_australia_psycholo_8d5PcMfVcqs.txt** — ? claims · ? sections · topics: —
 - **if_i_started_a_business_in_2026_i_d_do_this_uWdIgftpvBI.txt** — 26 claims · 14 sections · topics: Core Economic Arbitrage, Pricing Strategy & Anchoring, High-Ticket One-on-One Selling, Time vs. Money Earning, Tiered Offer Architecture, Value Creation & Frames, Avatar Selection & Pain Articulation, Perceived Likelihood of Achievement, Speed & Latency as Leverage, Friction Elimination, Bootstrap Scaling
   - _Foundational business strategy: sell extremely expensive to select few or cheap to everyone (avoid middle); build unscalable one-on-one premium tier to fund growth while validating value._
+- **if_i_wanted_to_create_a_business_that_runs_itself_heres_what_mr4Pw66_490.txt** — 0 claims · 1 sections · topics: —
 - **if_i_wanted_to_grow_an_audience_in_2026_i_d_do_this_Jmkq5RLjm0U.txt** — 49 claims · 105 sections · topics: What Branding Is, Branding Economics & Pricing Power, Pairing Products With Customer Values, Brand Measurement & Metrics, Content Strategy: Entertainment vs Education, Audience Targeting & Messaging, Content Format & Production, Short-Form vs Long-Form Content, Community & Parasocial Relationships, Authenticity & Personal Brand, Paid Partnerships & Collaborations, Execution & Rapid Iteration, Revenue Models & Monetization, Thumbnail & Headline Clarity
   - _Alex Hormozi teaches how to build a personal brand and grow an audience to 7.8 million followers in 40 months using six key lessons: transitioning from edutainment to education, shifting focus from the creator to the audience, narrowing topics to a specific niche, tracking revenue metrics over vanity metrics, prioritizing long-form over short-form content, and replacing assumptions with data-driven decisions._
 - **if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt** — 24 claims · 12 sections · topics: Cost Elimination, Time Optimization, Skill Selection, Learning Through Iteration, Strategic Spending, Income vs Lifestyle Discipline, Maker vs Manager Mindset, Focus Through Subtraction, First-Party Data Learning, Skill Monetization, The 4-4-4 Time Split, Bootstrapping Without Debt
   - _A six-step roadmap to earning and banking your first $100,000: cut all costs, save time, research skills people pay for, spend time learning through iteration, reinvest money strategically, and maintain discipline by not increasing lifestyle._
 - **if_i_wanted_to_scale_a_service_business_in_2026_here_s_what_N5MExtki_VI.txt** — 34 claims · 44 sections · topics: Service Business Scaling Model, Offer Architecture and Bundling, Delivery Ratio Economics, Time and Cash Flow Constraints, Customer Acquisition Cost Optimization, Lead Quality vs Lead Form Trade-offs, Conversion Funnel Design, Content and Creative Strategy, Event Strategy and Upselling, Psychological Principles in Sales, Product Simplification, Recurring Revenue Architecture, Limiting Beliefs and Business Constraints, Scaling Supply Constraints
   - _Alex Hermozi advises Kyle and Ariel (Couplepreneurs founders) on scaling their $480K/year couple-focused coaching business by redesigning their offer, changing delivery ratios, improving creative, and building recurring revenue streams._
+- **if_you_have_a_hard_life_watch_this_Avp3xh3Y1Ic.txt** — 0 claims · 1 sections · topics: —
+- **if_you_re_ambitious_but_inconsistent_please_watch_this_UDBkiBnMrHs.txt** — 0 claims · 1 sections · topics: —
+- **if_you_want_2026_to_be_the_best_year_of_your_life_please_wat_vhOV_Od0A3M.txt** — 0 claims · 1 sections · topics: —
+- **if_youre_ambitious_and_in_your_20s_or_30s_please_watch_this_ub1D6RQocRU.txt** — 0 claims · 1 sections · topics: —
+- **if_youre_ambitious_but_inconsistent_please_watch_this_UDBkiBnMrHs.txt** — 0 claims · 1 sections · topics: —
+- **if_youre_in_your_20s_or_30s_heres_how_to_win_at_anything_0lMn_-EXyhQ.txt** — 0 claims · 1 sections · topics: —
+- **if_youre_watching_this_we_did_it_q_4P7FOFEEI.txt** — 0 claims · 1 sections · topics: —
+- **innovation_and_beyond_with_rory_sutherland_8RVXVt1LZAw.txt** — ? claims · ? sections · topics: —
+- **innovation_and_not_conventional_logic_jOB-GX6YND0.txt** — ? claims · ? sections · topics: —
 - **insurance_stopped_paying_should_i_switch_to_a_membership_mod_r7AzdHfBu68.txt** — 7 claims · 5 sections · topics: Market Shift Response, Subscription vs. One-Time Model, Membership Model Pitfalls, Insurance Industry Disruption, Cash Flow Model Testing, Demand Generation Strategy
   - _How to avoid the trap of switching business models when your market shifts; test alternatives before pivoting away from a working foundation._
+- **introduction_london_australia_marketingpsychology_Npx9YFUZ6-A.txt** — ? claims · ? sections · topics: —
+- **is_data_drowning_out_the_magic_of_marketing_rory_sutherland_Hw0KgPvCfZ8.txt** — ? claims · ? sections · topics: —
+- **it_s_time_to_embrace_the_mess_rory_sutherland_A2lswudNfCg.txt** — ? claims · ? sections · topics: —
 - **it_took_me_36_years_to_realize_what_i_ll_tell_you_in_26_minu__KlZoPxbStk.txt** — 25 claims · 18 sections · topics: Passion Myth, Suffering As Fixed Cost, Rare Pleasure Principle, Passion vs Purpose, Why Meaningful Goals Matter, Reframing Difficulty, The 5% Problem, Intrinsic Meaning, Long-Term Vision, Personal Growth Philosophy
   - _An exploration of how following passion is a myth, suffering is universal, and true fulfillment comes from pursuing meaningful goals worth suffering for rather than expecting work to be enjoyable._
+- **james_1k_day_73_days.txt** — 7 claims · 2 sections · topics: Automation and Efficiency, Building a Community, Managing in College, Scaling with Multiple Profiles, Starting a Business, Verifying Profiles
+  - _The excerpt argues that starting a business requires strategic planning, community building, efficient verification, and leveraging automation to scale successfully while managing challenges in college._
 - **kill_the_customer_that_s_making_you_money_MKz81j4FsSM.txt** — 9 claims · 4 sections · topics: Avatar Focus, LTV to CAC Ratio, Customer Concentration, Operational Complexity, Revenue vs Unit Economics, Scaling Discipline
   - _Cleaning service company with two avatars (homeowners 60% revenue, vacation rentals 15%) should eliminate the lower-LTV segment and go all-in on recurring residential customers for faster scaling._
+- **launch_10k_dropservicing_72_hours.txt** — 9 claims · 4 sections · topics: Billing and Payment Processes, Contractor Recruitment, Google Business Profiles, Lead Generation, Local Service Targeting, Marketing Strategies
+  - _The excerpt outlines a step-by-step guide to launching a profitable local service business with zero capital, emphasizing Google Business profiles, lead generation, contractor recruitment, and passive income through organic listings._
+- **launch_product_no_following.txt** — 0 claims · 1 sections · topics: —
+- **lazy_people_are_incredibly_smart_DmlqRAzWxRE.txt** — ? claims · ? sections · topics: —
 - **let_my_competitor_copy_the_broke_model_pHBSA4udH8Q.txt** — 6 claims · 8 sections · topics: Unit Economics Optimization, Pricing Power in Established Markets, Competitive Moats & Fear Inversions, Free Content & Monetization Psychology
   - _A motocross training company learned to abandon unprofitable single-day tours ($300 each, bottom 40 net-negative or under $1K profit) and focus on five-day camps ($1,200, $100K+ profit each), scaling to 25 camps/year instead of 140 tours._
+- **letting_go_of_logic_and_embrace_the_irrational_yQWX10sBZUY.txt** — ? claims · ? sections · topics: —
+- **made_up_biz_model.txt** — 13 claims · 4 sections · topics: Business Setup Process, High Ticket Local Service Arbitrage, Lead Generation via Google My Business & Reviews, Profit Margins & Service Examples, Virtual Assistant Role
+  - _The excerpt argues that high-ticket local service arbitrage combines lead generation through Google My Business with cold calls to find clients, offering scalable profit margins and minimal overhead._
 - **make_an_offer_so_good_they_feel_stupid_saying_no_lpA7Uhav8qA.txt** — 6 claims · 4 sections · topics: Acquisition Structure, Multiple Arbitrage, DSO Consolidation, Coaching as Moat, Post-Acquisition Integration, Deal Mechanics
   - _Teaches how to structure acquisition offers for practice owners to consolidate into a DSO (dental support group). Shows how to align incentives by offering a 4x multiple on solo sale versus 7x with consolidation, keeping the difference._
+- **making_money_is_a_game_heres_the_cheat_code_nSQdjim8CsE.txt** — 0 claims · 1 sections · topics: —
+- **manufactured_human_biases_london_psychology_marketingpsychol_p3RmY7FzhqM.txt** — ? claims · ? sections · topics: —
+- **marketing_behavioral_breakthroughs_BoDDk8XtJsQ.txt** — ? claims · ? sections · topics: —
+- **marketing_secrets_rory_sutherland_g3_eJSS2oBA.txt** — ? claims · ? sections · topics: —
+- **melbourne_in_august_be_there_GWL5BfZMwfw.txt** — ? claims · ? sections · topics: —
+- **million_dollar_convos_serial.txt** — 0 claims · 1 sections · topics: —
+- **millionaire_at_20_copy_me.txt** — 43 claims · 12 sections · topics: Branding and Domain Registration, CRM Systems, CallConversion and Contractor Vetting, CallRail for Phone Number Verification, Finding Contractors, Google Business Profile Setup, High-Ticket Local Service Arbitrage, Market Research and Competition Analysis, Optimizing Google Rankings, Paid Inspections, Phone Number and Domain Registration, Review and Photo Collection, SEO Optimization, SEO and Backlinks, Scaling Business, Service Area vs. Physical Address Businesses, Verification Process, Website Creation
+  - _The excerpt teaches how to build a high-ticket local service arbitrage business by conducting thorough market research, verifying Google profiles, and optimizing rankings through strategic partnerships and automation._
+- **mini_mba_degree_in_advertising_with_rory_sutherland_PkgxeV8ldss.txt** — ? claims · ? sections · topics: —
+- **moremozi_13_rules_to_win_at_anything_FNi9VjkQRr4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_5_steps_to_live_the_life_you_want_m4nt60bCHN8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_a_lifetime_of_personal_development_in_18_minutes_7AK4ezrHE6s.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_a_simple_way_to_make_better_personal_decisions_9JOm_ibGcf8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_a_world-class_ea_is_a_superpower_ToWsyHoH6S8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_act_with_urgency_xhTXq26dwoA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_ads_have_changed_forever_3r-NEK4gFZ0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_ads_have_changed_forever_zCqcPGNsOFc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_advice_for_anyone_who_feels_stuck_KbYRggnQUAc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_advice_for_anyone_with_employees_2_SQTj98_Vs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_advice_for_employees_who_want_to_start_a_business_znG7v7pHgXo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_advice_for_hard_days_9LSd0QE1w7Y.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_ai_will_only_make_your_services_easier_to_deliver_XZCQCrGUQys.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_are_you_wasting_your_life_by_working_so_much_c1MA4HMubNo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_balance_is_a_myth_gj9qhJ1GQxw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_be_careful_who_you_take_advice_from_pKEvzBiR9LI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_be_resilient_qsJg8ZID3Ys.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_building_a_46m_company_cixnFmFGz_M.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_but_are_you_obsessed_TEqhCJLcTlc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_can_you_have_a_relationship_and_run_a_business_hormozi_qa_Cfe_7IszTts.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_clear_messaging_always_beats_clever_WIyY3SusttI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_competition_is_good_for_you_LlZWjsszR6M.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_defining_true_mental_toughness_ZkV6ZKtGeUo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_did_my_childhood_make_me_the_way_i_am_W8U5PkuPHnc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_do_i_need_courses_to_start_a_community_business_HgeCheYgrW0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_do_you_have_to_go_through_hell_to_become_successful_IYjn0NhjLGg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_does_enterprise_value_matter_--QEu6vZzOc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_dont_invest_in_the_sp_500_uhKggaiw3AA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_dont_open_a_new_location_until_you_do_this_EGWIa10HP4I.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_dont_open_multiple_locations_until_you_do_this_AI7vQKWIxQM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_dont_slow_down_when_it_gets_easy_mkFU-XCv8KE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_eliminate_shoulds_from_your_life_gsdqYaydqBc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_fear_vs_regret_u4QLbGZVVZY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_find_more_ways_to_win_V6X1WndkDzg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_focus_on_inputs_not_outputs_spcogiC6vwE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_go_100_all_in_on_your_goals__7EMQ9KjVI0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_go_into_the_fire_xvxXfLAsGoE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_go_out_and_fail_7PN7VviCtdQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_goals_arent_finish_lines_theyre_mile_markers_sJmQGb3Yc1U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_hard_work_is_the_goal_JUg2fj3UiNY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_have_a_conversation_with_your_older_self_luMVwQA3p3E.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_3myear_e-commerce_brand_build_a_team_t9INtrdXM08.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_b2b_consulting_firm_scale_cN8XjLxQ3d0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_b2b_manufacturer_scale_gyI1-mUG7GE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_boat_rental_company_scale_L--ldEg8A4U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_brick-and-mortar_service_business_scale_Nwu40014juQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_brick-and-mortar_service_business_scale_vHwiSEudeCQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_building_management_agency_scale_JzRl4issiQ0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_business_consultant_niche_down_uJo2TDJOyzw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_business_consultant_scale_ORSuMe3itkk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_car_rental_business_scale_Mro9NpDfzN8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_catering_company_scale_NZPpcqDQJnc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_coaching_business_scale_Aui7yNifFTg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_coffee_company_doing_4myear_scale_plV_nyqluOE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_community_owner_doing_30kmonth_scale_6dED84QH8Yc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_consulting_firm_doing_15myear_scale_as9sN7bVXTA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_corporate_training_company_hire_a-players_mtJd5Ub1nBE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_cotton_candy_manufacturer_scale_hormozi_hotline_Veo57Hr8oIU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_custom_apparel_business_get_more_qualified_leads_ks88Hl-K8JQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_dentist_get_to_50myear_HUsN0HMfOoA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_dentist_hire_better_talent_t7aSRUZXEMQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_dirt_bike_coach_scale_2wNUImfcFfE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_dropshipping_company_build_a_brand_eCCCux-QkBc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_fitness_coach_agency_get_to_1m_per_month_3A5oWQUb40Q.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_holistic_health_practice_scale_zND0i03oLio.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_home_services_company_build_a_sales_team_6Tru99awhhM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_home_services_company_get_to_200myear_yiNHqY8opxA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_junk_removal_company_scale_cZsVh6kQ2ds.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_landscaping_business_scale__9hWrmoHd3g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_law_firm_get_to_20myear_AcWxPvmyv2k.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_law_firm_hire_more_talent_idmIkZ04gdo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_marketing_agency_find_their_ideal_customer_RqlGB5R8Yzs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_marketing_agency_fix_their_pricing_RAX8Cl5YX_g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_marketing_agency_fix_their_pricing_Zpr4J4EaMYg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_marketing_agency_scale_2yqKCVHvEwI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_marketing_agency_scale_hormozi_hotline_IXvGEKZ-oNI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_medical_practice_get_to_10myear_QhgL00rAKZw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_medical_practice_scale_yb52-6PpXoY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_medspa_business_owner_scale_e4xdEQIQIZw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_medspa_company_acquire_other_medspas_Bd2cPHyT-lk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_personal_trainer_get_to_1myear_0-yqWeT6v4E.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_pest_control_company_create_career_advancement_3GIXMxy3428.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_real_estate_consultant_get_more_leads_2MUxcC3FsFY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_real_estate_developer_scale_6Ptk3cITn30.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_rental_equipment_company_scale_Oznnu_uAvtk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_restaurant_business_get_to_100m_8cw62svEXt8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_restaurant_owner_build_a_franchise_model_RvTW1c2mfcY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_saas_owner_find_his_ideal_customer_n_-pFwKsXvs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_sales_agency_fix_their_sales_process_wOjKcCodC8w.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_sales_coaching_and_lead_generation_agency_scale_YAkwOWDgFfg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_stem_cell_clinic_scale_BOlh8bnyNYw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_tax_advisory_firm_scale_DHmicoejBt4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_tiktok_shop_agency_scale_t7e4_ytUtsE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_wellness_clinic_doing_67myear_get_to_25m_snUpRK_0YAk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_wellness_clinic_scale_BS422kNTSro.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_wellness_dentistry_practice_scale_TNS8E02GR0U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_a_wholesale_business_doing_22myear_get_to_50myear_A5WvoUCwL6U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_accounting_college_in_brazil_scale_onWtR-rbXAk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_agency_fix_their_sales_process_CnInPTNi6UM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_agency_get_more_clients_hHwqMqzyW_c.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_agency_owner_build_a_sales_team_Jd3hPZw4e6k.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_ai_marketing_agency_scale_sgdLKYkCscw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-com_brand_make_better_content__PW_QEGOw9Q.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-com_brand_scale_J4tdCR_PjL4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-com_company_doing_1myear_solve_their_supply_con_HhDkTYspuxs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-commerce_brand_doing_2myear_with_recruiting_and_2IGBCUHCX8c.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-commerce_business_fix_their_margins_RTKVvHkzu88.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-commerce_business_owner_make_better_content_rSd0UPuj8SQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-commerce_company_doing_3myear_fix_their_profit_tX-KPikPrdw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_e-commerce_owner_build_a_brand_DIUP4-VAPT8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_electrical_contractor_scale_KXBOgKvqPQ4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_interior_design_company_scale_8CpaJ6JyhYg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_online_service_business_doing_30myear_get_to_100m_FViIzlFrj10.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_online_service_business_fix_their_offer_BdrzJpGMDuc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_helping_an_orthopedic_surgeon_doing_21myear_scale_m9TaWVdkJjs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_an_18_year_old_got_a_job_at_acquisitioncom_djDqESv_yIY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_do_i_manage_a_business_when_i_cant_be_in_person__VOApav3nh0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_do_i_pick_which_marketing_channel_to_advertise_on_21DcCeICYFU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_do_i_sell_training_programs_to_athletes_9KwV9tbq0wk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_balance_working_with_my_wife_dKK6a2K2VXg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_choose_which_podcasts_to_go_on_lbT-S50w3Wo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_deal_with_anxiety_vec7SBXeLEg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_deal_with_criticism_Op_-Wja49JQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_give_bonuses_to_sales_teams_bsacmMTmlQY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_learn_new_skills_2mlQd6KTY1E.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_learned_sales_v6zDEMQs2iI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_let_go_of_needing_validation_ReKhHsdjkw0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_make_content_without_getting_burned_out_No7PMFPQSS0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_met_my_wife_wdsPrHSWU3I.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_scale_companies_i_invest_in_6AmEknBxfPg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_scaled_my_first_gyms_3T7k-zVKOvg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_see_the_world_more_clearly_WFu3w0Z5m_g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_think_about_goals_Gpc5k3DeN6Q.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_think_about_growing_on_social_media_FqzMTJOxQ3s.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_think_about_investing_in_a_business_g_1SoPY4lKg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_i_think_about_making_content_VzGFf2bhVHY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_id_scale_a_restaurant__YQA9f1g5Jw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_id_sell_physical_products_using_tiktok_shop_6LNtJsaB2Bs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_local_businesses_can_make_more_money_gKzy9QGyKn8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_actually_hire_good_talent_wN0Sq8Y3HcQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_build_a_brand_Iwo_93WfmPs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_build_a_brand_pzKRhmt5jU8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_build_a_good_product_bjEOnMtf5_E.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_build_connections_with_people_ahead_of_you_1P7sQmTvTDI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_buy_skills_V4UBTMOqolo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_communicate_clearly_5NaZMLGdEiw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_create_your_own_luck_QjII6h5nNEk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_find_the_girl_youll_marry_X3N-pEpgsAk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_get_anything_you_want_Zv0YQGX-cMw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_get_better_at_youtube_lC0_WzMMRdQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_get_good_at_sales_mz7ply2oKA4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_get_high-level_talent_to_join_your_startup_0U6nqErQcRM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_get_in_shape_WEHKlZUQkSg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_give_yourself_good_advice_LZJLxsLo6_c.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_increase_show-up_rates_sobMAG-5yFs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_learn_anything_aWIb9h74E8g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_learn_anything_faster_than_99_of_people_l2pJnism6jM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_learn_anything_szjSGPDKnug.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_let_hard_times_strengthen_you_ylzfR5wwbis.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_make_better_offers_and_lead_magnets_7qY7gBMWOB4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_make_decisions__d5vB_ZSjlc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_make_hard_decisions_mL4NZTjGUGc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_make_more_money_as_an_employee_Z_hOgtlFmss.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_make_offers_people_never_churn_from_0c21D8j5aqI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_monetize_as_a_creator_in_2026_sA1Xs3ORb3Q.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_negotiate_CPCgewePK2Q.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_not_lose_money_in_a_new_opportunity_VL-8XvvkwrQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_raise_prices_based_on_close_rate_5z5TOgxaV1c.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_run_a_sales_team_UmdfdS_1FMg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_scale_a_photography_business_ViABsKH_7Ug.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_scale_outbound_sales_DJnR5Z0K4L8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_set_up_career_paths_ky2xQWLXKNk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_spot_bad_friends_SmXzGoWLOOc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_stay_focused_gMmxA5T_jAk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_think_about_competitors_who_copy_you_nzNTKY_3I_E.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_turn_your_job_into_a_business_z8_mWrBQHXc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_use_affiliates_to_grow_your_business_aNVfpSgvX4c.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_win_in_a_commoditized_business_uTKBbnBSB1s.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_win_in_saturated_markets_RY7U7XxPmMk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_win_in_the_ai_era_hormozi_qa_94XFE1lijP0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_win_with_ai_in_2026_92ReEZwYBQQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_to_win_with_ai_in_2026_jnzSkcHUUF8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_true_a_players_act_wpt-F4s13_Y.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_how_winning_works_EeFgui-T6Go.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_build_and_sell_homes_but_im_running_out_of_land_to_buy_CuCNfFHt7b0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_build_sales_teams_how_do_i_find_my_ideal_avatar_I6ulp16NPL0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_build_sales_teams_how_do_i_scale_7cEDLVP9T08.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_build_websites_for_clients_is_ai_going_to_put_me_out_of_bu_SZYZHJsMalg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_do_200kmonth_selling_stem_cells_i_need_more_qualified_lead_IlsKL1Dmpao.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_do_client_acquisition_for_high-ticket_agencies_how_do_i_ge_uzdBX8r7-zA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_have_a_construction_company_and_im_a_firefighter_should_i_Pr-zXnkPsRU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_have_an_in-person_service_business_how_do_i_switch_to_onli_VyrXZ9-8U50.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_lost_everything_twice_within_12_months_WuYqW-Ju53s.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_make_1myear_teaching_arts_and_crafts_how_do_i_scale_dgQj5lEkzns.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_make_youtube_videos_how_do_i_get_more_sponsors_BiaG-lHU0BQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_run_a_7myear_agency_how_do_i_sell_the_company_ebzHLIkxocE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_run_a_marketing_agency_how_do_i_hire_better_talent_FJXvgK6uMYw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_run_a_social_media_marketing_agency_how_do_i_get_better_ta_tDE--GLZOkM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_run_soccer_tournaments_how_do_i_scale_0mBXZfaRiu0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_sell_branded_t-shirts_and_do_6myear_how_do_i_scale_KCXmVaN4AJg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_sell_custom_luxury_home_products_how_do_i_get_more_leads_f_h4CKMIbcNh0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_sell_live_on_tiktok_shop_how_do_i_get_to_38m_per_year_vtF21Y6u3Ts.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_sell_on_amazon_how_do_i_scale_fBF8_wSAs_A.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_sell_roofing_how_do_i_get_to_10m_per_year_pcGDgMyUYmM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_i_serve_2_avatars_how_do_i_niche_down_ocWSh3g--8s.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_if_i_died_tomorrow_KVsTQjyJdGU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_if_you_cant_buy_it_twice_dont_buy_it_once_oYdvuoUfP8g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_if_you_want_to_be_exceptional_YyDvxuZnLkE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_if_youre_at_zero_heres_what_you_need_XtNIfFEccWY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_ignore_99_of_the_advice_you_hear_ZKkukqBUcmQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_im_a_dentist_how_do_i_buy_and_sell_other_dental_offices_tMQlQzEgXf0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_im_a_video_game_coach_how_do_i_scale_NT8BjyRgu_I.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_im_in_e-commerce_should_i_build_a_software_product_4CaWaI0ZNwQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_in-person_vs_remote_work_dave_ramsey_qe5Cs62Dqts.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_increasing_cash_flow_in_a_consulting_firm_B91R5CVeu3U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_is_it_possible_to_sell_high_ticket_without_1-on-1_calls_Rgd2hM9ivfk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_is_it_wrong_to_work_hard_wBqS4j5i6p8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_it_just_takes_more_work_wKrXZzRODi8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_it_just_takes_work_0D9HsJfoBV8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_it_just_takes_work_GJ6TSJHwO4E.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_it_only_takes_20_hours_to_get_good_at_something_uHBQaNRqLqA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_it_wont_get_harder_kbokSCb7z-s.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_just_get_the_first_dollar_and_youll_win_Pbxe5av1RP8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_learn_to_love_the_pain_6JHmFC1Uups.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_lessons_from_elon_musk_bQuFlmQt9Ic.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_lessons_from_my_first_business_f70dguHlNdw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_live_streaming_is_the_future_of_content_dvZPQjGDaIc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_make_sacrifices_wisely_RmkWOOGPYTI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_morning_routine_obsessed_people_make_less_money_LBePQ2kDrIc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_most_of_your_friends_are_actually_enemies_W56qaN1iJyg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_ads_stopped_working_for_my_community_business_what_should_OO1ACTnUh9U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_biggest_misconception_s6qfla-9Pkw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_biggest_mistake_in_business_DZosfCLNiyc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_goals_for_2026_dSSkbsTQJeM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_process_for_building_frameworks_MIVGM_N_8Jk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_thoughts_on_meditation_LbzLYThyd-4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_my_views_on_worklife_balance_aF4NsgnIchQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_never_underestimate_your_competition_jUWeeEvipZY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_one_solution_that_solves_99_of_problems_XFUwLqqInkk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_pain_fades_8Vn5ZyBoOWA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_passive_income_is_a_lie_2cWuvq4MoKc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_passive_income_is_overrated_KAt4xQG98u4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_poor_people_buy_stuff_ambitious_people_buy_skills_WUx9r88-IYU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_raise_your_bar_for_excellence_TbI5aI6nXN0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_risk_rejection_now_or_guarantee_rejection_later_dXJ9vRFUj7Q.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_seasons_of_learning_vs_earning_agXr1aGdsmM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_should_i_have_contractors_or_employees_PzSd5G8ln7o.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_should_you_focus_on_cash_flow_or_net_worth_krcUBz7kiUI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_should_you_make_lifestyle_content_mMU_ZfG_Nok.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_sleeping_on_the_floor_while_starting_my_first_gym_SsGrKx5rrDc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_social_media_is_changing_fMCE0xtthCA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_solve_rich_peoples_problems_they_pay_better_MdOSsbjP9rM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_start_high_ticket_then_go_mass_market_PXOEyURBzY0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_starting_a_gym_at_23_8tt2wiip4cQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_stop_getting_in_your_own_way_FIjhpXZImLo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_stop_making_excuses_9lI8kq51TrE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_stop_making_excuses_zodi78cvoj0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_stop_networking_y0MXoctKJBQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_stop_waiting_for_the_perfect_moment_to_start_zONatpYv5LE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_success_has_no_shortcuts_dFUXZ1pcu1w.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_take_responsibility_FzeRWhRJWqk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_2_types_of_employees_xOARq03-5eE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_6_stages_of_scaling_dave_ramsey_1-AHtX-aPBw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_best_offer_for_a_construction_company_cXnRN1Hw4ik.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_best_roi_for_your_business_hJMzMn-1Qn8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_biggest_influence_on_my_life_B4-LIIfsGtM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_biggest_opportunity_with_the_agency_model_mR2olH69Zto.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_difference_between_first-time_founders_and_third-time_fo_c9tDMmuZcHs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_difference_between_heroes_and_villains_Y2qMoxxKymE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_entrepreneurship_life_cycle_e_WNbl_NU9k.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_fastest_way_to_learn_a_new_skill_Vbl3zaBTmW4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_first_100k_is_the_hardest_-iOTVPDunmE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_greatest_risk_to_your_business_Le7OBs-ELnw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_hidden_cost_of_drinking_ZmhDt9M4dyA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_leader_is_always_the_problem_zJVo-CVm6ew.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_levels_of_wealth_E3Vhcp1pTvg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_lonely_chapter_XCt90FhgnVE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_million-dollar_contract_GAo-swIY-7g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_mission_for_my_life_3eW79ZV60XQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_most_expensive_debt_you_pay_kp_O07Uzic0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_only_metric_that_matters_for_short-form_content_826y4pdB86c.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_only_way_to_win_in_business_LLj3MLeu1u4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_perfect_offer_for_a_home_service_business_rWLLkEqMGak.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_problem_i_see_most_business_owners_struggle_with_OMFrsK2PvkI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_reality_of_a_patent_5aZeFDdAxvU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_reason_why_you_havent_hit_your_goals_XQmy6hhrwcA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_right_time_to_leave_your_job_R_O5WczanGs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_secret_to_getting_good_at_anything_iOnr_HKVIZo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_secret_to_staying_focused_t5_q2DMz1XY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_single_most_important_part_of_any_media_pNWl1_qEvNs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_stoic_response_to_hate_diuSdl-6F5I.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_truth_about_free_trials_2-ldIepwdt8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_type_of_content_i_watch_UKswd3tfRKg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_the_types_of_businesses_i_like_to_buy_kJQtg5Jzr44.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_there_are_2_ways_to_learn_something_-ScQMd1PX3U.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_there_are_only_2_types_of_games_in_life_NXmprOofERg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_there_are_only_3_things_you_need_to_focus_on_A5I1CyfdAVU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_think_for_yourself_or_the_world_will_think_for_you_JrvljfDXCwg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_this_mistake_cost_me_50_million_YK3icGhvxYk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_agencies_get_wrong_about_pricing_KyKUym0Ezhw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_do_you_have_to_lose_N4DoJF2ue8M.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_does_culture_mean_Y6IGtYTrioE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_i_did_when_i_was_broke_IWpIR7fVtvA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_i_think_the_meaning_of_life_is_kn_GolFQcjA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_im_focused_on_right_now_e-4qLacdTM0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_a_natural_skill__5Lsp_p8rkM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_brand_eLcwZbSFAlI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_love_mwvT8sF_OqA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_ltvcac_3rzBub2s_tk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_mental_toughness_Ui6pE7qfmUI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_my_fitness_routine_jYY4FDzf4p0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_reciprocity_pCUML2bND70.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_is_value_FgNNbkhIUMg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_it_takes_to_get_good_at_anything_Vw1tjy5i5Jo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_jobs_set_me_up_best_for_entrepreneurship_Xu_3NPULjoo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_makes_a_good_entrepreneur_bbh_H5k4-vg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_makes_a_product_exceptional_U3bf_x04swY.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_makes_goals_worth_pursuing_dave_ramsey_gPeuoFtKJHU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_makes_someone_truly_exceptional_oym1WF7t7Yo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_makes_something_valuable_O2OEMGCBrUw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_offends_you_controls_you_VknsUQqC4LI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_people_get_wrong_about_content_u76EL4JY4ro.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_to_do_when_people_ask_for_equity_75YTY8XbQbs.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_what_would_happen_if_you_lifted_6x_a_day_for_10_minutes_pbsFCdOM9eI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_whats_the_meaning_of_life_tX6iJ9EX4qE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_whats_working_right_now_for_long-form_content_JJNjq073MbE.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_when_should_the_founder_step_out_of_day-to-day_operations_oiUNB6q8_GI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_when_should_you_quit_FeJ6YxXKi58.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_which_path_should_you_take_mkx1mzw1Lc8.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_who_is_alex_hormozi_ibjqAg-NbBA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_businesses_get_stuck_at_13myear_and_how_to_get_past_it_Z-8mbADGJ0g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_creators_burn_out_and_how_to_fix_it_81lZi32cE-o.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_do_businesses_die_oLhBV46CElI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_does_life_need_to_be_meaningful_2TR1i1t4n2A.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_bought_the_ufc_headquarters_3avBSxy2kHM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_feel_called_to_give_back_g-Udl7ngzsI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_give_away_free_products_c1Xy-64oy04.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_have_high_standards_FFZ1E_RxAW0.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_like_to_work_out_BjTENiMkJiU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_love_business_GrSoheP2P7I.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_started_acq_ventures_162VCwYKG7g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_started_making_content_xaqJeQ9Uyj4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_i_work_even_though_it_doesnt_make_me_happy_ZyS5BwU1Pok.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_life_feels_difficult_7v8vRBbpyBU.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_live_streaming_is_the_future_7EjwXPmHSq4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_most_people_dont_win_IMXdoAk_bbc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_offers_eventually_stop_working_LUjY8GW5Tj4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_people_actually_buy_not_logical_vs_emotional_xbGuYFAXFrQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_you_arent_getting_as_many_leads_as_you_want_GUuVRyJn-1Y.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_you_dont_have_what_you_want_fG_hw1cwvbc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_why_youre_not_winning_youre_distracted_QQw8DJPewLM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_work_volume_leverage_LGGeMYCIswo.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_always_have_debt_5brXkXO66_k.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_can_get_to_10myear_with_any_business_4vExrtzieOM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_just_arent_doing_enough_qk-mFc0ZjF4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_know_what_to_do_do_it_bZhs6HytAbM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_must_endure_cJOEhxeV25Y.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_longer_timelines_for_your_goals_U7BjTCP3wZc.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_more_proof_iauYY6MNfRg.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_more_skills_piXf3CdXOAI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_ask_every_employee_this_question_zgAsBqZiyW4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_be_authentic_0mq0F5mHEU4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_be_exceptional_42ER6aQHy60.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_build_a_business_that_runs_without_you_KrNwDozzTPk.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_do_a_this_time_study_mriLyt2N_bw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_do_more_nvXoDtjdU5o.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_focus_W7z7CSN8peM.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_have_more_agency_jIQLIixIj78.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_hire_better_talent_9xvNzvABzuQ.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_hire_better_talent_gBJ9ijnYS7g.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_start_doing_outbound_SZ9yqgnz7mw.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_start_for_free_A70I5X-OISA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_understand_leverage_vNzXam6NerA.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_need_to_work_100x_harder_gjpEwA5zky4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_only_need_3_things_to_win_7K7c_dZlmys.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_you_only_need_3_things_to_win_C0jCxYG_bAI.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_your_self-limiting_beliefs_are_sabotaging_your_goals_1ZLaJ-ism04.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_youre_not_supposed_to_know_what_youre_doing_BH2DkcZZMl4.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_youre_right_fXRojaMAn2I.txt** — 0 claims · 1 sections · topics: —
+- **moremozi_youre_running_out_of_time_3A1f2nuHZiY.txt** — 0 claims · 1 sections · topics: —
+- **most_profitable_dropservicing_niches_2026.txt** — 2 claims · 2 sections · topics: High-Ticket Niche, Mid-Ticket Niche
+  - _The excerpt argues that high-ticket niches offer substantial rewards but require significant time and effort, while mid-ticket niches provide more consistent results and easier upselling, and low-ticket niches offer quick payments with lower risk but require higher volume._
+- **my_actual_social_media_strategy_for_2026_dMZ-n2KSlxE.txt** — 0 claims · 1 sections · topics: —
 - **my_best_store_is_dying_and_my_team_blames_the_economy_4J_Bo4Dbxjk.txt** — 8 claims · 5 sections · topics: Leadership Quality, Key Man Dependency, Market Saturation Myth, Talent Acquisition Standards, Culture & Execution
   - _A golf club retailer with a declining 36-year store and thriving beach location discovers the problem isn't market saturation—it's leadership. The departure of a "key man" revealed a culture/execution gap; better hiring and unwavering standards will fix it._
+- **my_biggest_announcement_ever_zgYQT-fdLL4.txt** — 0 claims · 1 sections · topics: —
+- **my_final_update_tGhe3sBuk34.txt** — 0 claims · 1 sections · topics: —
 - **my_messaging_is_off_hormozi_breaks_down_what_that_actually_m_EiUW4sCi23s.txt** — 9 claims · 6 sections · topics: Problem Definition, Messaging Framework, Sales Funnel Friction, VSL Strategy, Fast Cash Play, Offer Qualification, Sales Motion Components
   - _Restaurant operations consultant at $3.2M (targeting $10M) realizes messaging and sales process problems come from unclear value proposition; must build filtering funnel and fast-cash play to accelerate close._
 - **my_spiritual_coaching_offer_isn_t_converting_help_qsGvub8nxaU.txt** — 9 claims · 8 sections · topics: Language Clarity & Objectivism, Behavior-Change Framing, Sales Process Overhaul, Win-Your-Money-Back Offer, Court-Filter Observable Language, Upsell Architecture
   - _A spiritual coaching business ($97-$2K range, organic/webinar/checkout funnel, 400K followers) repositions coaching as behavior-change, drops ethereal language, adds one-to-one calls to $97 upsell, and implements a money-back offer with dual conversion (results + referral)._
+- **nature_understands_advertising_marketingpsychology_marketing_0L1FV7FvDnM.txt** — ? claims · ? sections · topics: —
+- **nav_15k_3_months.txt** — 14 claims · 4 sections · topics: Business Model, Personal Experience and Results, Skepticism Toward Mentorships, Starting a New GMB Business, Success Through Responsiveness, Support and Network Connections, Time Investment in Mentorship
+  - _Eric shares his personal experience with a mentorship program, highlighting the importance of responsiveness, time investment, and support networks in achieving business success._
 - **never_give_real_equity_do_this_instead_lqKx0GDHFX8.txt** — 7 claims · 5 sections · topics: Profit Share Structure, Equity vs. Alternatives, Risk vs. Reward Distribution, Sales Role Compensation, Future Talent Allocation
   - _How to structure incentive compensation for leadership team members without giving away actual equity, using profit share pools and performance alignment instead._
+- **oh_yeah_riding_the_schwebebahn_Yai0fiuIdBM.txt** — ? claims · ? sections · topics: —
+- **our_appreciation_of_something_is_context_dependent_marketing_CgaL9e_hcIM.txt** — ? claims · ? sections · topics: —
 - **our_cac_is_6_700_and_we_don_t_know_what_s_working_15CxTygzVio.txt** — 9 claims · 6 sections · topics: Attribution Challenge, Multi-Touch Complexity, Scientific Attribution, Directional Approach, Channel Prioritization, Sales Behavior Analysis, Skill Duplication
   - _Real estate buyers advisory service ($22M, targeting $54M) cannot identify which acquisition channels drive customers despite having data, struggling with attribution across multiple touchpoints and needing to focus on top performers._
 - **people_have_no_idea_how_hard_it_actually_is_s1MErPSWMKw.txt** — 6 claims · 2 sections · topics: Invisible Difficulty, Survivorship Bias, Narrative Transparency, Romanticization Problem
   - _Critique of 'must be nice' thinking that dismisses others' success without understanding the hidden difficulty and suffering required to achieve it._
+- **perceiving_the_world_objectively_isn_t_part_of_evolutionary_3CbWyrm7mhY.txt** — ? claims · ? sections · topics: —
 - **pick_one_sales_channel_or_stay_broke_Yjt_YfzF1kQ.txt** — 8 claims · 5 sections · topics: Sales Channel Focus, Channel Selection Criteria, Networking at Scale, Business Cash Flow, Hiring & Leverage, Market Economics at Scale
   - _A $1M junk removal business testing multiple sales channels (email, LinkedIn, social, networking) gets advice to pick one and master it. Networking is owner's strength; expand from a few events/week to several daily to hit $3M before diversifying._
+- **placebos_and_behaviour_change_rory_sutherland_EieYhaQqnTw.txt** — ? claims · ? sections · topics: —
+- **promised_myself_own_this.txt** — 0 claims · 1 sections · topics: —
+- **psychology_is_technology_london_austaralia_technology_ai_art_8p1tb8FTCPg.txt** — ? claims · ? sections · topics: —
+- **put_everything_on_line_57k.txt** — 6 claims · 3 sections · topics: Calculated Risk, Move Out of Comfort Zone, Risk Taking
+  - _The excerpt argues that overcoming complacency requires calculated risk-taking, moving out of comfort zones, and long-term perseverance to achieve financial and personal growth._
+- **quick_morning_shower_thoughts_n_ZQdLxydCY.txt** — ? claims · ? sections · topics: —
 - **raising_100m_almost_got_me_kicked_out_of_my_own_company_Uw9weyjJL1A.txt** — 7 claims · 6 sections · topics: Fundraising Strategy, Founder Control, Valuation Narrative, Risk Reduction, Investor Confidence
   - _A biotech founder discusses fundraising challenges when scaling from $24M to $500M valuation, focusing on maintaining control while raising $100M and understanding investor risk assessment._
+- **rank_1_google_maps_3_step_formula.txt** — 10 claims · 4 sections · topics: Market Research, ROI from Reviews, Review Acquisition, Review Maintenance, SEO Optimization, Three-Step Process
+  - _The excerpt argues that ranking first on Google My Business requires a three-step process: market research to identify high-search cities, SEO optimization to improve profiles, and review acquisition through creative strategies to achieve 20% of the top three rankings._
+- **rank_1_google_maps_next_week.txt** — 13 claims · 4 sections · topics: Competitive Positioning Through Location and Review Density, Title's Critical Role in SEO, Value of Fake Reviews Over Keywords, Verifying Google Business Profiles on Physical Addresses
+  - _The excerpt argues that while SEO is often overcomplicated, the most effective strategies for Google Business rankings involve optimizing reviews, location verification, title optimization, and competitive positioning through local density._
+- **ranked_1_in_4_days_using_ai.txt** — 14 claims · 7 sections · topics: Call to Action, Expanding Service Areas, Location & Name Importance, Profile Completion Details, Search Volume & Competition, Seven-figure Business Growth
+  - _The excerpt teaches that successful Google Business profile optimization requires meticulous attention to location, name consistency, search volume, competition analysis, keyword optimization, and review management, with a focus on practical, data-driven strategies._
+- **ranked_1_in_7_days_blackhat.txt** — 17 claims · 6 sections · topics: AI Website Makers for Quick Site Creation, Avoid Conventional Advice, High Search Volume & Low Competition, Optimized Naming Strategies, Real Reviews via Local Verification, Scaling Operations to New Cities, Video Verification & Physical Addresses
+  - _The excerpt argues for a non-conventional approach to business profile optimization, emphasizing local verification, strategic naming, and efficient review systems to achieve high rankings and revenue._
+- **ranking_business_models_millionaire.txt** — 18 claims · 6 sections · topics: Agency Facebook Ads, Auto Detailing, Copywriting, Remote Detailing, Shopify Dropshipping, YouTube Automation
+  - _The excerpt argues that while some business models like Shopify dropshipping and agency Facebook ads can be lucrative, they require significant experience and caution, and that successful ventures often involve learning from failures and transitioning to more scalable, less time-intensive models._
+- **raw_founder_conversations.txt** — 0 claims · 1 sections · topics: —
 - **reacting_to_my_first_videos_10_years_later_Q8xXSMe8E4Q.txt** — 6 claims · 4 sections · topics: Execution Over Planning, New Service Launch, Sales Fundamentals
   - _Reflection on early content and lessons learned about execution, planning, and launching new businesses. Teaches that detailed planning is overrated, execution matters more, and success comes from finding customers and solving their problems._
+- **reality_check_2_plus_years_online.txt** — 14 claims · 4 sections · topics: Getting a Job, High-Leverage Activities, Mindset, Removing Distractions, Service Delivery, Taking Risks
+  - _The excerpt argues that success in online monetization requires a disciplined mindset, calculated risks, high-leverage actions, elimination of distractions, and unwavering focus on service delivery, with the ultimate goal of transforming personal effort into sustainable income._
 - **reflecting_on_why_i_was_wrong_about_myself_patience_self_jud_ezN8B1d1RVw.txt** — 6 claims · 3 sections · topics: Traits as Continuums, Evidence Over Emotion, Patience as Behavior, Self-Judgment Through Action, Courage and Fear
   - _Explores how traits like patience and loyalty aren't binary or emotional states but evidence-based behaviors. Building traits requires accumulating proof through action despite not feeling the trait._
+- **remote_cleaning_19893_60_days.txt** — 9 claims · 6 sections · topics: CallRail for Phone Numbers, Lead Generation System, Partnership with Cleaners, Product Sections and Pricing, Service Area Targeting, Technical Verification Processes
+  - _The excerpt outlines a step-by-step guide for launching a remote cleaning business through organic Google lead generation, emphasizing city selection, Google Business Profile setup, optimization, fake reviews, and verification processes to achieve profitability._
+- **restarted_scratch_42k_first_month.txt** — 13 claims · 4 sections · topics: Business Model Setup, Competitive Area Selection, Lead Generation via Profiles, Local Listings & Address, Phone Answering & Contractor Collaboration, Review Strategy
+  - _The excerpt outlines strategies for launching and scaling a remote service arbitrage business, emphasizing local listings, competitive area selection, review strategies, and contractor collaboration to maximize profitability._
+- **rory_chats_to_eddy_edwards_disrupting_life_insurance_changin_CdCDOFmRVeE.txt** — ? claims · ? sections · topics: —
+- **rory_chats_with_klarna_cmo_david_sandstr_m_debunking_bnpl_my_PFgeUfkIfBo.txt** — ? claims · ? sections · topics: —
+- **rory_sutherland_answering_answers_marketing_questions_from_t_V2Ca1DldzkQ.txt** — 0 claims · 1 sections · topics: —
+- **rory_sutherland_behavioural_economics_for_ecommerce_retail_r_DkEPuRzaqIU.txt** — ? claims · ? sections · topics: —
+- **rory_sutherland_on_the_magic_of_original_thinking_y_agGCXfi4A.txt** — ? claims · ? sections · topics: —
+- **rory_sutherland_psychology_is_technology_f639vjl8DOk.txt** — ? claims · ? sections · topics: —
+- **rory_sutherland_tastes_tony_s_chocolonely_with_nicola_matthe_FGJOuEWUK6A.txt** — ? claims · ? sections · topics: —
+- **rory_sutherland_whoever_owns_the_data_owns_the_conversation_K_rwavCOG_4.txt** — ? claims · ? sections · topics: —
+- **rory_sutherland_why_innovation_is_overrated_the_hidden_force_h7zRt2ygFQs.txt** — ? claims · ? sections · topics: —
+- **rule_3_logic_can_be_too_narrow_in_business_london_marketings_mGxeXCz70b8.txt** — ? claims · ? sections · topics: —
 - **scale_any_business_with_these_3_levers_3xrL1nQcqlU.txt** — 12 claims · 7 sections · topics: Unit Economics and ROI, Ad Spend Scalability, Sales Response Time, Customer Lifetime Value, Pricing Strategy, Lead Qualification Speed
   - _Pool service company at $1.2M annual revenue with strong economics ($2,250 gross profit per $150 customer acquisition) must increase ad spend and improve sales response time._
+- **scaled_car_detailing_70k.txt** — 0 claims · 1 sections · topics: —
 - **scaling_a_22m_hemp_distributor_to_50m_85lDC9uzFWI.txt** — 5 claims · 3 sections · topics: Regulatory Uncertainty, Information-Based Decision Making, Opportunity Cost of Caution, Ray Dalio Fallacy, Pivot Timing
   - _Addresses regulatory uncertainty as a growth blocker in cannabis hemp distribution. Recommends operating normally with current information and pivoting only when regulatory change is imminent, rather than pre-emptively constraining growth._
 - **scaling_a_50m_pest_control_company_to_1b_bYGRh4ZOdUo.txt** — 9 claims · 6 sections · topics: Delivery Capacity, Talent Retention, Career Ladder Design, Promotion Velocity, Organic Growth Model, Acquisition Strategy, Perks as Retention
   - _Pest control at $50M targeting $1B (20x growth); constraint is delivery manpower retention, not recruitment; solution is creating expanded career ladder so average talent has 9–18 rungs of advancement instead of 3, keeping promotions spaced 3–6 months apart._
 - **scared_of_debt_your_business_will_stall_gOG7zvp2ub0.txt** — 7 claims · 5 sections · topics: Debt Fear, Risk Assessment, Growth vs. Safety, Capital-Intensive Business, Debt Covenants, Long-Term Strategy
   - _How to evaluate debt rationally using math instead of emotion; understand risk trade-offs between growth speed and business survival._
+- **service_area_vs_address_gmb.txt** — 0 claims · 1 sections · topics: —
 - **should_i_take_5_to_help_grow_his_business_LGbS0GOZBNE.txt** — 7 claims · 6 sections · topics: Partnership Requirements Framework, Equity vs Stake Distinction, Sales Skills vs Business Skills, Learning vs Earning Mode, Career Path Decisions, Founding vs Joining Playbooks, Goal Clarity
   - _18-year-old with sales background considering 5% equity partnership in $200K pest control business needs to understand partnership requirements and whether learning mode is better than ownership._
+- **sign_4k_clients_no_cold_calls.txt** — 0 claims · 1 sections · topics: —
+- **six_figure_dropservicing_website_5_mins.txt** — 0 claims · 1 sections · topics: —
 - **smb_clients_will_quietly_bankrupt_you_3Lvhd3LIwwY.txt** — 7 claims · 5 sections · topics: SMB Market Dangers, Customer Churn, Customer Acquisition Cost, Pricing Strategy, Delivery Model, Margins Compression, Market Segmentation
   - _Why SMB digital marketing services fail; the only viable models are ultra-cheap automated delivery or high-touch for sophisticated operators, never the middle._
 - **sounds_like_a_scam_pitching_200k_in_savings_to_ceos_Ht9u-qEXTQY.txt** — 9 claims · 7 sections · topics: Value Proposition Repositioning, Nonprofit Advantage, Sales Process Redesign, Centers of Influence, Affiliate Integration, Proof Problem, Customer Education
   - _Health benefits nonprofit at $3M selling to 50+ employee companies with 20% savings pitch sounding like scam; solution is repositioning as nonprofit model (0% profit margin vs 20% industry standard) and shifting marketing from direct-to-customer to centers of influence (CPAs, financial advisors)._
+- **speedrun_10k_remote_cleaning.txt** — 0 claims · 1 sections · topics: —
+- **speedrun_30k_service_arbitrage.txt** — 0 claims · 1 sections · topics: —
+- **spreadsheet_data_creates_an_illusion_of_certainty_london_mar_PM62GD62cKI.txt** — ? claims · ? sections · topics: —
+- **spreadsheet_data_makes_it_easier_to_win_arguments_london_uni_sXvRPYSwpmk.txt** — ? claims · ? sections · topics: —
 - **start_a_1_person_business_with_claude_4_hour_course_2026.txt** — 200 claims · 62 sections · topics: AI Adoption Rates, AI Business Opportunities, AI Operating System Setup, AI Tools, AI-Generated Websites, Build Plan, Building Framework, Building Trust, Business Excitement Curve, Claude Code, Claude Code Installation, Claude Skills, Client Acquisition Strategies, Cold Email Campaigns, Commitment to Business, Composio Authentication, Full AI Systems, GitHub Integration, Lead Generation, Market Opportunity, Million Verifier, Next.js Frontend, One-Person Company, Pricing AI Services, Roadmap for AI Business, Sales Call Strategy, Satisfaction Guarantee, Service Delivery, Sustaining the Business, Trigger.dev Automations, Upselling and Referrals, Upwork Freelancing, Upwork Profile Optimization, Website Deployment
   - _This video teaches how to build a one-person AI business using Claude Code, covering everything from setting up development tools and acquiring clients through Upwork and cold email, to building websites, automations, and full AI systems, and finally, how to price services and scale the business._
+- **steal_strategy_10k_organic_dropservicing.txt** — 0 claims · 1 sections · topics: —
 - **stop_building_10_businesses_build_one_to_10m_sRBO1pxSqK4.txt** — 13 claims · 7 sections · topics: Sales Channel Expansion, Webinar Strategy, B2B Partnership Integration, Lead Generation Scaling, Avatar Focus, Virtual Lead Gen
   - _Healthcare VA company at $7M annual revenue doing event-based lead generation needs to unlock growth beyond calendar constraint via webinars and B2B partnerships._
 - **stop_selling_done_for_you_sell_franchises_instead_2RYARn7GMek.txt** — 6 claims · 7 sections · topics: Franchise vs Done-For-You, Regulatory Compliance, Business Model Sustainability, Partner Quality, Scaling Limitations
@@ -1750,10 +2805,18 @@ _204 source(s) · 1471 topic(s)_
   - _Warns against abandoning a successful core business to chase new opportunities, using done-for-you podcast agency as example of when licensing model diverts attention from proven cash generator._
 - **stop_using_a_warm_sales_process_on_cold_leads_lPZOkIvVxPc.txt** — 8 claims · 5 sections · topics: Warm Lead Underestimation Problem, Cold Process on Warm Leads, Real Estate Agent Pricing Strategy, Market-Driven vs. Strategy-Driven Pricing
   - _Professionals (real estate, consulting, referral-based) treat warm referrals too casually and lose deals; deliver full cold sales process to every lead regardless of source, building credibility and certainty before commitment._
+- **subjective_nature_of_reality_gf_sy6nt2OY.txt** — ? claims · ? sections · topics: —
+- **super_successful_marketing_with_rory_sutherland_s7l79rq26xA.txt** — ? claims · ? sections · topics: —
+- **technological_advances_are_psychological_wfIECkFFE0o.txt** — ? claims · ? sections · topics: —
+- **ted_15k_30_days.txt** — 0 claims · 1 sections · topics: —
+- **ten_yrs_brutally_honest_brand_advice.txt** — 0 claims · 1 sections · topics: —
+- **ten_yrs_mistakes_38_min.txt** — 0 claims · 1 sections · topics: —
+- **test_probe_delete_me.txt** — 0 claims · 1 sections · topics: —
 - **the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt** — 9 claims · 4 sections · topics: Constraint Management, Capital Allocation, Manufacturing Consolidation, Sales vs Operations, Eisenhower Matrix, Facility Planning
   - _Family manufacturing business deciding between consolidating production facilities immediately or focusing on sales/marketing first. Teaches constraint management and capital allocation when facing dual competing pressures._
 - **the_10x_move_for_healthcare_service_businesses_Bt6lTDsX12s.txt** — 10 claims · 7 sections · topics: Positioning and Value Proposition, Lead Gen Channels, Webinar Lead Generation, B2B Sales Motion
   - _Healthcare service businesses like PT/OT practices should position virtual assistants as profitability multipliers, not cost cutters, to unlock franchise-like growth._
+- **the_1_thing_ranking_google.txt** — 0 claims · 1 sections · topics: —
 - **the_3_types_of_content_and_why_only_one_builds_a_business_NTm8BibjUqQ.txt** — 21 claims · 22 sections · topics: Three Content Buckets, Entertainment vs. Education Audiences, Funnel Myth Debunking, Clear vs. Vague Packaging, Proof-Promise-Plan Framework, Content Meat and Production, Effective Visuals vs. Razzle, Pre-Work Over Post-Production, RPM as Quality Metric, Short-Form vs. Long-Form Strategy, Audience Assumption Errors, Business-Focused Content Strategy
   - _Alex Hormozi analyzes three content types—entertainment, education, and edutainment—and argues that education content uniquely drives business outcomes; he shares six specific tactical changes to optimize for business owner audiences._
 - **the_4_proven_ways_to_build_wealth_in_2026_sL16tsGafcQ.txt** — 16 claims · 18 sections · topics: Bootstrapped Business Model, Raising Capital Path, Investing Path, Fund Management Path, Wealth Building Timeline, Debt Types and Trade-Offs, Equity Dilution and Control, Deal Flow and Proprietary Advantage, Capital Leverage and Returns, Wealth Compounding vs. Active Income
@@ -1766,20 +2829,37 @@ _204 source(s) · 1471 topic(s)_
   - _Clinical definition of trauma as permanent behavioral change from aversive stimulus, distinguishing positive vs negative outcomes and adaptability._
 - **the_best_business_to_start_with_no_money_C7t6IIPr4QY.txt** — 8 claims · 5 sections · topics: Performance-Based Business Models, Zero-Capital Business Selection, Recruiting Economics, Real Estate Agent Arbitrage, Customer Acquisition Arbitrage
   - _To start with zero capital, choose performance-based, no-upfront-cost businesses like recruiting or real estate agent roles. Build arbitrage by negotiating vendor discounts and selling at higher prices; start with $1,000 to fund initial advertising._
+- **the_big_data_dilemma_misleading_correlations_hidden_variable_i9ZjJ26sshU.txt** — ? claims · ? sections · topics: —
+- **the_biggest_marketing_secret_big_companies_don_t_want_you_to_bITH_13xwlg.txt** — ? claims · ? sections · topics: —
 - **the_cobbler_s_shoes_problem_killing_your_agency_growth_-G08--_mZaU.txt** — 6 claims · 7 sections · topics: Cobblers Shoes Problem, Supply Constraint, Founder Magic Decay, Reinvestment Strategy, Service Business Economics, Brand Play Investment
   - _Addresses the cobbler's shoes problem where performance marketing agencies can't run their own ads because they're fully staffed serving clients, and shows how to break through by hiring inbound marketers._
+- **the_craft_of_taking_risks_lHsWv_OzrLg.txt** — ? claims · ? sections · topics: —
+- **the_danger_with_career_cpSWMTXfa0g.txt** — ? claims · ? sections · topics: —
+- **the_future_already_exists_MzU0P96ojTA.txt** — ? claims · ? sections · topics: —
+- **the_illusion_of_choice_are_we_really_free_to_choose_rory_sut_tXeHouaerEM.txt** — ? claims · ? sections · topics: —
+- **the_illusion_of_control_how_the_future_will_change_you_anywa_b0jWU4ctHxg.txt** — ? claims · ? sections · topics: —
 - **the_lazy_way_i_make_money_with_ai_2026.txt** — 24 claims · 8 sections · topics: AI-Driven Website, Cold Outreach & Referral Growth, Critical Thinking for Closing Deals, Five AI Workers, Franchise Referrals, GBT Training Data, Lazy System, Lead Generation, Referrals
   - _The excerpt argues that building an AI agency requires a lazy system leveraging AI workers, franchise referrals, and optimized lead generation to avoid traditional marketing costs._
 - **the_lonely_chapter_xyKwap1p3rU.txt** — 12 claims · 10 sections · topics: The Lonely Chapter, Reframing Hardship as Competitive Advantage, Early-Stage Motivation and Passion Protection, Earning Your Stripes Through Mastery, The Exponential Payoff Paradox, Future-Casting Your Narrative, The Hero's Journey Mindset, Compounding Returns from Early Work, Building Under Uncertainty
   - _Explores how difficulty and hardship in entrepreneurial paths indicate you're on the right track, and the paradox that building something valuable requires protecting your passion through the lowest-reward early stages when effort matters most._
+- **the_map_is_not_the_territory_y24GfXmojdE.txt** — ? claims · ? sections · topics: —
 - **the_mathematics_of_business_explained_A_tx40lNpf8.txt** — 52 claims · 41 sections · topics: Close Rate vs Pricing, LTV to CAC Ratio, Rule of 100, Lead Response Time, Calendar Utilization, Payback Period, Gross Margins, 30-Day Cash Collected, Churn and Retention, Prepayment and Cash Flow, Industry Averages, Conversion Rate Benchmarks, Business Model Selection, Pricing Leverage, Scaling Discipline
   - _Alex Hormozi shares 12 core business rules of thumb derived from 14 years of entrepreneurship, focusing on fundamental ratios and metrics that reveal business health and guide scaling decisions._
+- **the_mind_bending_world_of_marketing_2012_secret_archives_ror_cSf-qlQ_iqM.txt** — ? claims · ? sections · topics: —
+- **the_myth_of_objective_scientist_science_humanities_psycholog_arkUV7d0We4.txt** — ? claims · ? sections · topics: —
 - **the_new_way_of_making_content_in_the_age_of_ai_XsWSvz-aewA.txt** — 12 claims · 10 sections · topics: The Risk Continuum for Creators, AI Disruption by Creator Type, Proof as Competitive Moat, Real-Time Demonstration vs. Accomplishments, Self-Linking Business Loops, Content at Scale vs. Capturing Reality, B2C Entertainment and Educators, B2B High-Ticket Creators, Third-Party Credibility Signals, Content Engineering for Proof
   - _Shows that AI will disrupt creators unevenly based on risk level; high-risk B2B creators are safe if they demonstrate real-world proof and build self-linking business loops that generate proof while serving customers._
+- **the_objectivity_trap_rory_sutherland_eoG4hCpTLp4.txt** — ? claims · ? sections · topics: —
 - **the_offer_structure_a_stranger_pitched_me_in_a_parking_lot_GMiOc8RKYEo.txt** — 25 claims · 9 sections · topics: Discount Plus Fee Structure, One-Time Setup Fees, Churn Reduction, Commission-Based Pricing, Recurring Service Monetization, Program-Based Pricing, Discount Messaging, Customer Commitment, Fee Psychology, Margin Protection, Offer Flexibility, Legal Compliance
   - _Explanation of the Discount Plus One-Time Fee offer structure: discounted first term followed by additional made-up fees that increase customer investment, reduce churn, and monetize acquisitions through commission-based pricing._
+- **the_only_mindset_video.txt** — 0 claims · 1 sections · topics: —
+- **the_power_of_ideas_in_marketing_an_interview_with_rory_suthe_WskDKQQ6osY.txt** — ? claims · ? sections · topics: —
+- **the_power_of_perception_how_customers_define_value_behaviour_VDWfjXMMDAM.txt** — ? claims · ? sections · topics: —
 - **the_pricing_rule_that_5x_d_my_profit_overnight_yBrRSS3Vsxk.txt** — 10 claims · 5 sections · topics: Pareto Pricing Tiers, Customer Wealth Distribution, Profit Concentration, Price Multiplier Strategy, Tier Design, High-Value Customer Service
   - _Pareto principle applied to pricing: 20% of customers have 14x+ the wealth of the bottom 50%. Create 4 tiers with 5-10x price gaps; expect 20% takeup per tier. Top 20% drives majority of profit despite minority of customers. Start high to build top-down brand and serve fewer high-value customers than many low-value ones._
+- **the_problem_with_marketing_marketingpsychology_marketing_LFFUnxIWFFY.txt** — ? claims · ? sections · topics: —
+- **the_psycho_logic_of_the_scroll_why_tiktok_actually_works_WgalrA92K8I.txt** — ? claims · ? sections · topics: —
+- **the_rational_aspects_of_decision_making_3Iv9KqhLTGY.txt** — ? claims · ? sections · topics: —
 - **the_real_problem_with_done_for_you_businesses_iL5v-37Vm48.txt** — 6 claims · 7 sections · topics: Fulfillment Bottleneck, Liability at Scale, Founder Dependency, Partner Recruitment, Churn and Cohort Dynamics, High-Ticket Biz-Op Risk
   - _Explains why done-for-you service businesses struggle at scale—the model inherently limits growth because delivery depends on founder, creating liability and partnership problems._
 - **the_real_reason_i_can_t_scale_two_businesses_at_once_kp68MDBTpWY.txt** — 10 claims · 6 sections · topics: Focus Tradeoff, Teaching Authority, R&D Budget Model, Coaching Product Scaling, Long-Form Content, Short-Form Repurposing
@@ -1788,20 +2868,37 @@ _204 source(s) · 1471 topic(s)_
   - _Explanation of resilience as the key factor determining whether people achieve their goals, defined as the time it takes to recover from setbacks._
 - **the_real_reason_you_haven_t_succeeded_yet_o06NDWKHFVA.txt** — 7 claims · 2 sections · topics: Victim Mindset vs. Agency, Uncertainty as Fuel, The Value of Struggle, Continuous Improvement vs. Outcome Fixation
   - _You haven't succeeded because a victim mindset ("it must be easy") causes you to externalize responsibility; real success requires accepting uncertainty and doing the work most people won't do._
+- **the_secret_used_by_pick_up_artist_humanpsychology_marketingp_BQ27ag2Qg7E.txt** — ? claims · ? sections · topics: —
+- **the_secrets_to_creating_magic_in_business_rory_sutherland_vHnBUqQvdwg.txt** — ? claims · ? sections · topics: —
 - **the_single_greatest_opportunity_for_2026_OsYAUkL6L6Y.txt** — 5 claims · 3 sections · topics: Macro Opportunities, Market Timing and Land Grabs, Skill Requirements for Opportunity, TikTok Shop Opportunity, Early-Mover Advantage
   - _Identifies macro opportunities like Internet, Web 2.0, and AI, and discusses micro opportunities like TikTok Shop. Emphasizes that capturing these requires skills and being early before markets stabilize._
+- **the_tesla_gigafactory_jSW7DHafDAE.txt** — ? claims · ? sections · topics: —
+- **the_truth_about_controlling_your_priorities_podcast_art_inte_ymIHIcdV8qo.txt** — ? claims · ? sections · topics: —
+- **the_truth_about_steve_jobs_sales_salestraining_salesmarketin_sczYZnzinc0.txt** — ? claims · ? sections · topics: —
+- **the_truth_about_trying_to_objectify_success_marketingpsychol_krmXUK82YpY.txt** — ? claims · ? sections · topics: —
 - **the_two_channels_with_the_highest_return_right_now_zb1eSorqNps.txt** — 7 claims · 6 sections · topics: Channel ROI Analysis, Instagram Monetization Paths, YouTube Multi-Format Strategy, Podcast Reach Limitations, Short-Form to Long-Form Conversion, Content Surface Area Math, Influencer Type Categories
   - _Instagram and YouTube have highest blended ROI because they balance new customer acquisition with nurturing and have multiple monetization paths, while podcasts are high-ROI but low-reach._
 - **there_s_no_easy_business_NadXwJQjBiY.txt** — 8 claims · 6 sections · topics: Supply Constraint, Operating Leverage, Offshore Staffing, AI First Strategy, Data Architecture, Marketing Distraction, Margin Expansion
   - _A CFO advisory business owner ($2.9M revenue targeting $20M) learns they're operationally constrained and need to solve supply constraints through offshoring, operating leverage, and data architecture before trying to market or sell courses._
+- **thousands_fake_5_star_reviews.txt** — 0 claims · 1 sections · topics: —
+- **thousands_reviews_never_deleted.txt** — 0 claims · 1 sections · topics: —
 - **tiktok_has_the_worst_audience_monetization_ever__9Wiua_4SJ8.txt** — 9 claims · 5 sections · topics: Content Creator Burnout, Audience Quality vs. Size, Content Enjoyment, Platform Monetization, Educational Content Strategy, Creator Sustainability
   - _A welding supply creator with 300K TikTok followers and $1.7M revenue questions whether to grow audience or pivot channels. The real issue is content burnout; fix it by reverse-engineering what you enjoy and reminding yourself that repetition serves audiences—Dave Ramsey taught the same thing for 35 years._
 - **tiktok_shop_has_a_hidden_200m_loophole_OulGPT2kZ7c.txt** — 7 claims · 6 sections · topics: Influencer Leverage Strategy, Capital Efficiency Mindset, Creator Community Network Effects, Dual Revenue Model, Market Expansion Sequencing, Focus Over Resources, Creator Influencer Power
   - _TikTok Shop creator membership and matchmaking platform doing $3.6M year 1 needs to focus on high-leverage creator influencers instead of raising capital, and use multiple revenue streams (membership + transaction fees) without adding complexity._
+- **transform_your_choices_rory_sutherland_s_game_changing_insig_HwkhaKS5sSs.txt** — ? claims · ? sections · topics: —
+- **travel_advertising_the_alchemy_of_holidays_6_oz9XsfSHA.txt** — ? claims · ? sections · topics: —
+- **two_gen_tiktok_millionaires.txt** — 0 claims · 1 sections · topics: —
+- **undisciplined_want_success.txt** — 0 claims · 1 sections · topics: —
+- **unlimited_reviews_under_1_dollar.txt** — 0 claims · 1 sections · topics: —
+- **unlocking_creativity_with_behavioural_science_BDXzJE39hxY.txt** — ? claims · ? sections · topics: —
+- **unlocking_huge_opportunity.txt** — 0 claims · 1 sections · topics: —
+- **verify_any_google_business_profile_guaranteed_using_this_met.txt** — 0 claims · 1 sections · topics: —
 - **watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt** — 108 claims · 34 sections · topics: AI-Driven Lead Generation Without Ads, AI-Driven Lead Nurturing, AI-Driven Marketing, AI-Driven Review/Referral Systems, Audience-Specific Ad Targeting, CRM Limitations and Manual Follow-Ups, Client Case Studies and Results, Client's Current Marketing Inefficiencies, Decagon Matrix Marketing, Financial Structure, Follow-Up Calls, Google Business Page Optimization, Google My Business Optimization, Implementation of Training-Focused Marketing, Investment Costs for Initial Month, Lead Follow-Up, Market Gap Analysis and Client Transformation, Marketing Strategy, Process Gaps, Reactivation Campaign, Revenue Models through Recurring Revenue, Review Process Gaps, Reviews and AI Integration, Sales Process Refinement, Service Pricing, Structured Processes for Reviews/Referrals/Lead Re-engagement
   - _The excerpt argues that the speaker is helping a business owner improve their strategy with CRM, reactivation campaigns, and marketing strategies to overcome lead generation issues and financial constraints._
 - **watch_this_if_you_have_a_service_business_jqo0lVveh98.txt** — 46 claims · 28 sections · topics: Attribution Tracking and Input-Output Equations, Lead Generation Channels and Content Strategy, Pricing and LTV-CAC Dynamics for SMBs, Service Business Churn Patterns, Supply vs. Demand Constraints, Operations and Margin Compression, Hiring and Talent Acquisition, Data-First and AI-Ready Architecture, Multi-Channel Acquisition Strategy, Founder Fulfillment vs. Business Growth, Passive vs. Active Income Management, The Who Game and Leadership Levels, Sales Funnel and Sales Academy Build-Out, Market Expansion and Geographic Scaling, Character and Vision in Team Building
   - _Alex Hormozi addresses six founders operating service businesses at various scales, providing tactical advice on growth constraints, pricing strategies, hiring talent, and the trade-offs required to scale from $2M to $100M+ in revenue._
+- **watch_this_to_generate_1000s_of_leads_in_any_niche_Mst4hreQYl0.txt** — 0 claims · 1 sections · topics: —
 - **watch_this_to_get_ahead_in_2026_spXH1kJ6q-Q.txt** — 72 claims · 42 sections · topics: Discipline vs. Liking What You Do, The Execution Gap: Why Entrepreneurs Get Stuck, Self-Awareness and Constraint Identification, Focus and Distractions (Idea Management), Time Horizon and Vision, AI and Business Fundamentals, Pricing Strategy, Sales Timing and Deprivation, Content Strategy: Declarative vs. Procedural Knowledge, Sales Training and Script Execution, Influence and Branding Framework (SPCL), Key Man Risk and Business Scaling, The Management Diamond, Culture Definition and Codification, Death Creates Clarity (Reverse Eulogy)
   - _Alex Ramosi, who runs a $250M+ portfolio, compresses a decade of business knowledge into actionable lessons on discipline, sales, AI, influence, and execution. Core insight: most entrepreneurs already know what to do but don't do it due to inability to delay gratification, poor constraint identification, and fear of uncertainty._
 - **we_broke_the_guinness_world_record_in_24_hours_u3H7CfpfwHQ.txt** — 20 claims · 14 sections · topics: Belief & Proof, Book Series Architecture, Cultural Foundation & Team Setup, Event Planning & Logistics, Risk Identification & Mitigation, Sales Operations & Training, Live Launch Execution, Multi-Tiered Offer Strategy, Marketing & Ad Management, Payment & Checkout Infrastructure, Scaling Beyond the Record
@@ -1810,28 +2907,39 @@ _204 source(s) · 1471 topic(s)_
   - _Restaurant operations consultant scaling from $3.2M to $10M revenue by fixing messaging, sales process, pricing, and fast-cash plays that let customers self-fund the engagement._
 - **we_hit_700k_then_crashed_to_200k_why__4BGku-jLh4.txt** — 12 claims · 7 sections · topics: Sales Culture and Consistency, Script Discipline, Sales Management and Leadership, Compensation Structure, Sales Training Process, Talent Screening and Onboarding
   - _Real estate wholesaler reveals why sales team performance crashes after big months, and how script discipline and sales culture are the real constraints._
+- **we_made_a_big_decision_OUI12JmD-lM.txt** — 0 claims · 1 sections · topics: —
 - **we_re_posting_and_praying_a_13m_ceo_with_no_metrics_EIlXNKmHK20.txt** — 7 claims · 5 sections · topics: Marketing Metrics, Customer Acquisition, Distribution Layer Strategy, Agency Partnerships, Churn vs. Recurring Revenue, Product Bundling
   - _How to move from episodic customer sales to a distribution model that compounds; shift focus from acquiring end customers to acquiring distributor partners._
 - **we_re_profiting_75_but_can_t_get_continuity_kYUXKevbChg.txt** — 7 claims · 6 sections · topics: Alumni Earnings Documentation, University Exclusivity Strategy, Dual-Sided Revenue Models, Customer LTV Leverage, Career Placement Economics, Trade Show Lead Generation, Academic Sales Hiring
   - _BCBA test prep business with 75% margins and $80K/month needs to document earnings of graduates, lock in exclusive university partnerships, and add career placement revenue model._
+- **website_made_100k.txt** — 0 claims · 1 sections · topics: —
+- **weird_80k_biz_model.txt** — 0 claims · 1 sections · topics: —
 - **what_branding_actually_is_and_how_to_build_one_fast_Vt4D1qgo9ic.txt** — 18 claims · 11 sections · topics: Branding Definition, Deliberate Pairing, Good vs Bad Branding, Weak to Strong Brand Progression, Premium Pricing Power, Advertising vs Branding, Brand Loyalty, Reference Group Association, Livestock Branding History, Customer Behavior Change, Ideal Audience Alignment, Warren Buffett Pricing Power
   - _Branding is deliberate pairing of a product with desired outcomes through the customer's lens; good branding changes customer behavior in your favor, commanding premium pricing and customer loyalty._
+- **what_consumer_do_reveal_their_preference_marketingpsychology_3Vi5sZNTRMc.txt** — ? claims · ? sections · topics: —
+- **what_financial_experts_are_wrong_your_gut_knows_best_gITCDY5VBIc.txt** — ? claims · ? sections · topics: —
 - **what_has_value_in_the_age_of_ai_D8mz-jmYL5M.txt** — 9 claims · 4 sections · topics: Information vs Curation, Community Value, Consumable Products, Authenticity Premium, Pricing Recurring Content
   - _Explores what remains valuable in the age of AI. Argues that information was always cheap, real value comes from curation/selection, and community combined with consumable recurring inputs._
+- **what_job_roles_will_look_like_in_10_years_RTe61ofOhzM.txt** — ? claims · ? sections · topics: —
 - **what_makes_the_perfect_business_5_things_3fsJFUvA6Ts.txt** — 14 claims · 15 sections · topics: Revenue Retention & Stickiness, Gross Margins & Economics, Market Expansion & Growth Tailwinds, Operational Leverage & Scalability, Competitive Moats & Differentiation, Customer Retention Mechanics, Brand as Competitive Advantage
   - _Framework for identifying five essential business characteristics—stickiness, high margins, expansion, operational efficiency, and competitive moat—that create scalable, profitable companies. Demonstrates how to evaluate and develop each advantage using data and strategy._
 - **when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt** — 10 claims · 4 sections · topics: Founder Desperation, Survival Mode Motivation, Skin-in-the-Game, Early Traction, Founder Reality, Market Timing
   - _Founder's journey from homeless in California to gym owner: demonstrates how visceral desperation drives action; the suffering period lasts years, not seconds, and without true skin-in-the-game forced urgency, most won't execute._
 - **why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt** — 12 claims · 9 sections · topics: Workflow Automation, Role-Based to Workflow-Based Thinking, Process Mapping, AI Agent Training, Observable Behavior Specification, Hotline Workflow Example, Automation Prioritization, Back Office Automation, Future UX Shift, Humanoid Robots, AI Skillset Requirements
   - _Explains how AI will reshape businesses by shifting from hiring roles to automating workflows, requiring leaders to map detailed processes and think in granular activities rather than job titles._
+- **why_ai_is_making_business_owners_dumber_sPtx8Rm78Mo.txt** — ? claims · ? sections · topics: —
 - **why_ambitious_people_stay_mediocre_A248pGXTSoY.txt** — 28 claims · 13 sections · topics: Industry Standards Trap, Personal Standard Setting, The Cost of Distinctiveness, Multiple Attack Vectors, Profit as Unnatural, Hedgehog Concept, Physics-Based Goals, Contrarian Conviction, Compounding Effort, Leader as Standard Holder, Unreasonable Ambition, Operational Excellence
   - _Ambitious people stay mediocre because they accept industry standards instead of holding personal high standards; the path to excellence requires rejecting normalcy through continuous work and attacking problems from many angles._
+- **why_doing_more_is_actually_making_you_less_money_hfwZwPGsbIo.txt** — 0 claims · 1 sections · topics: —
+- **why_dropping_the_price_is_the_most_expensive_mistake_you_can_bS4u6w6EZ0c.txt** — ? claims · ? sections · topics: —
+- **why_gbp_gets_no_calls.txt** — 0 claims · 1 sections · topics: —
 - **why_i_hate_the_word_mindset_5xWG6jb6vB8.txt** — 5 claims · 2 sections · topics: Language as Behavior, Behavioral Reinforcement Loops, Definition and Clarity, Vague Terminology Problem, Self-Reinforcing Patterns
   - _The term "mindset" is vague and undefined; what matters is understanding language and behavior as interconnected systems, where words reinforce actions through social feedback loops._
 - **why_i_m_rolling_up_50_med_spas_instead_of_exiting_Ok8cv-ivKIw.txt** — 9 claims · 4 sections · topics: Business Rollup Strategy, Dual Business Model, Founder Delegation, Operator Partnerships, Equity Incentive Structure, Day-to-Day Exit
   - _Med spa operator running two businesses (direct operations + consulting) plans to exit by building a 50+ location rollup through coaching and scalable operator partnerships._
 - **why_i_tell_beginners_to_cold_email_before_running_ads_MEuEEoC-9s0.txt** — 8 claims · 5 sections · topics: Cold Email vs. Paid Ads ROI, Beginner Sales Skill Development, Content as Lead Nurture, Social Profile Credibility, Deal Flow Consistency, Content Cadence Basics
   - _Cold email is the fastest ROI learning tool for beginners: teaches volume, cold selling, and lead qualification before scaling ads (which require expertise); pair with baseline content for credibility and nurture._
+- **why_logical_thinking_is_illogical_rory_sutherland_ilbMpibs6ek.txt** — ? claims · ? sections · topics: —
 - **why_money_stops_buying_happiness_after_70k_OUowG_oCbCI.txt** — 8 claims · 4 sections · topics: Time as Capital, Spending as Skill, Wealth Tiers, ROI on Time Freedom, Lifestyle Design, Founder Optimization
   - _Spending money effectively is a learnable skill; beyond $70k annually, most people don't know how to deploy capital to improve quality of life, but strategic spending on time-recovery returns significant happiness dividends._
 - **why_most_agency_founders_never_break_1m_KztNWHJLip8.txt** — 5 claims · 1 sections · topics: Brand Risk Perception, Customer Segmentation Strategy, Sales Reframing, Business Growth Constraints
@@ -1840,6 +2948,7 @@ _204 source(s) · 1471 topic(s)_
   - _Businesses fail because owners don't establish clear standards and fail to model them; leadership by example is the foundation of any successful organization._
 - **why_most_med_spa_owners_stall_at_7m_wRe3Umk2hec.txt** — 6 claims · 7 sections · topics: Founder Dependency in Spas, Location Expansion Dynamics, Margin Degradation, Sales Motion Systematization, Talent Retention Strategy
   - _Shows how med spa owners stall at 3-location expansion due to founder dependency, low margins (15%), and lack of systematized sales motion—requires fixing margins first before scaling._
+- **why_reviews_deleted.txt** — 0 claims · 1 sections · topics: —
 - **why_warren_buffett_calls_this_industry_a_scam_K9YN5sbwR94.txt** — 9 claims · 7 sections · topics: Insurance Industry Economics, Value Proposition Design, Affiliate Channel Strategy, Sales Process Optimization, Center of Influence Partnerships
   - _Nonprofit health insurance broker reveals why the insurance industry's commission model is broken, and demonstrates a better value proposition focused on centers of influence._
 - **why_watching_podcasts_is_making_you_dumber_bpkxMfNiMbA.txt** — 7 claims · 3 sections · topics: Learning Definition, Intelligence as Rate, Behavioral Change, Content Consumption Trap, Motivation Definition, Deprivation and Drive
@@ -1850,6 +2959,7 @@ _204 source(s) · 1471 topic(s)_
   - _Alex Ramosi explains wealth distribution economics and how to price products to capture it: the top 1% holds $32 of every $100 in U.S. wealth, and businesses fail by selling to the poor instead of the rich._
 - **why_you_can_t_run_two_businesses_at_once_3t6sA6OmzHA.txt** — 5 claims · 3 sections · topics: Focus and Avatar Conflict, LTV-to-CAC Validation, Whale vs. Minnow Economics, Early Acquisition Signals, Profitability Proof
   - _Advises against running two businesses with different customer avatars simultaneously. Recommends waiting to see LTV-to-CAC proof before pivoting one business, to avoid splitting focus and missing true profitability._
+- **why_you_don_t_know_how_to_sell_D_IHg9AKLsw.txt** — ? claims · ? sections · topics: —
 - **why_you_re_not_burnt_out_you_re_just_weak_85HElwKCAPY.txt** — 6 claims · 2 sections · topics: Work Capacity and Adaptation, Reframing Burnout, Work as Identity, Outcome vs. Process Orientation
   - _Burnout is a reframing problem; you're not burnt out, you're underestimating your capacity to adapt. Work capacity itself is trainable and increases with volume, just like physical fitness._
 - **why_you_re_still_the_only_closer_in_your_business_fECT6E27oi8.txt** — 8 claims · 5 sections · topics: Founder-Driven Sales, Sales Training, Sales Scalability, Script Design, Sales Process Framework
@@ -1868,6 +2978,9 @@ _204 source(s) · 1471 topic(s)_
   - _Restaurant growth is driven by product quality and customer experience, not marketing spend; 90% of diners find restaurants via word-of-mouth and reviews, making execution more valuable than advertising._
 - **why_your_sales_team_tanks_after_every_big_month_IVNuDhV1uw4.txt** — 14 claims · 7 sections · topics: Sales Culture Volatility, Process-Over-Player Philosophy, Sales Team Management, Script Enforcement, Training and Coaching, Talent Selection
   - _Real estate wholesaler experiences revenue crashes after peak months due to sales culture and discipline issues; root cause is leadership and process enforcement._
+- **work_so_hard_seem_mentally_ill.txt** — 0 claims · 1 sections · topics: —
+- **wrong_things_are_easier_to_do_unitedkingdom_london_marketing_eGXWS1FlZSM.txt** — ? claims · ? sections · topics: —
+- **you_can_make_way_more_money_than_you_think_hnmBXTyMFKI.txt** — 0 claims · 1 sections · topics: —
 - **you_don_t_have_to_feel_good_enough_to_win_HwTWXXoVm-8.txt** — 5 claims · 3 sections · topics: Action Decoupled from Feeling, Hyper Successful Traits, Early Wins Build Confidence
   - _You can feel unqualified, insecure, or "not good enough" and still win by taking the required actions; the feeling and the outcome are decoupled._
 - **you_don_t_need_2x_more_effort_you_need_10x_Qq-iYKtyF0U.txt** — 11 claims · 4 sections · topics: Input-Output Equations, Order of Magnitude Thinking, Leverage Mechanics, Control Relinquishment, Scaling Through Others, Entrepreneurial Trajectory
@@ -1884,5 +2997,10 @@ _204 source(s) · 1471 topic(s)_
   - _Growth requires pain and discomfort; each challenge you survive raises your capacity ceiling, creating inverse PTSD where you learn you can handle more than you thought._
 - **you_think_you_re_not_smart_enough_REDPMH2BMrY.txt** — 6 claims · 3 sections · topics: Intelligence as Speed, Learning Definition, Iteration Vectors, Skill as Chained Behaviors, Work Ethic Substitution
   - _Reframes intelligence as speed of learning rather than innate ability. Shows that you can compensate for fewer natural iterations through higher iteration velocity._
+- **your_biggest_advantage_is_no_one_knows_who_you_are_prj1bnTAM8A.txt** — 0 claims · 1 sections · topics: —
 - **your_business_needs_consumable_media_Pa1XNVGhzOI.txt** — 12 claims · 9 sections · topics: Consumable Media, Education Product Limitations, Recurring Revenue Model, Value Creation Through Pre-Work, Community Retention, Accountability Systems, Magical Product Experiences, Complexity Reduction, Churn Prevention
   - _Explores how to build sustainable business revenue by creating consumable media that customers repeatedly use and pay for monthly, transforming one-time educational products into recurring revenue streams._
+- **your_perception_is_your_reality_motivation_psychology_persua_IkileVOKSII.txt** — ? claims · ? sections · topics: —
+- **youre_setting_goals_wrong_XwzU4RikbGs.txt** — 0 claims · 1 sections · topics: —
+- **zain_10k_54_days.txt** — 0 claims · 1 sections · topics: —
+- **zain_72k_6_months_college.txt** — 0 claims · 1 sections · topics: —

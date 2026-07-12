@@ -1,25 +1,6 @@
 # Client Acquisition Strategies
 
-> Leverage Upwork with strategic pricing and language alignment for effective client acquisition
-
-## Key Numbers
-- $1.50 per 10 connects for proposal submission
-- 625 contacts imported without verification
-
-## Evidence & Examples
-- Snowballing effect leads to client acquisition
-- 625 contacts imported without verification
-
-## How-To / Method
-- Use verified leads for cost reduction
-- Target language-specific markets with tailored outreach
-
-## Implications
-- Language alignment enhances client acquisition success
-- Strategic pricing maximizes return on investment
-
-## Key Takeaway
-- Upwork's pricing and language focus are critical for effective client acquisition
+> Domain configuration involving environmental variables and Next Auth URL setup
 
 ## Claims
 - Videos about AI making people rich have taken the internet by storm — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Debunking Get-Rich-Quick Schemes"]
@@ -58,11 +39,6 @@
 - Work for free (design a website for them for free) — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 - Focus on marketing over technical skills — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
-
-
-## Connections
-- Leverage strategic pricing and client results together; case studies prove what messaging promises. _(connects to: Client Case Studies And Results)_
-
 ---
-_Topic appears in 1 source(s) · 35 claim(s) · 8 connection(s)_
+_Topic appears in 1 source(s) · 35 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

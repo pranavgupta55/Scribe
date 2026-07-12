@@ -8,4 +8,5 @@
 - Headhunting outreach: 'Dude, you seem perfect. Do you know anyone like you? I have this great role.' — [how_to_hire_the_right_leadership_team_as_you_scale_n7CYRXrdebU.txt]
 
 ---
-_Source: how_to_hire_the_right_leadership_team_as_you_scale_n7CYRXrdebU.txt · 3 claim(s)_
+_Topic appears in 1 source(s) · 3 claim(s) · 0 connection(s)_
+_Sources: how_to_hire_the_right_leadership_team_as_you_scale_n7CYRXrdebU.txt_

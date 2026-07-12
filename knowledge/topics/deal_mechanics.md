@@ -6,4 +6,5 @@
 - Used option for 100% of business and drag-along rights to prevent holdouts — [make_an_offer_so_good_they_feel_stupid_saying_no_lpA7Uhav8qA.txt]
 
 ---
-_Source: make_an_offer_so_good_they_feel_stupid_saying_no_lpA7Uhav8qA.txt · 1 claim(s)_
+_Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
+_Sources: make_an_offer_so_good_they_feel_stupid_saying_no_lpA7Uhav8qA.txt_

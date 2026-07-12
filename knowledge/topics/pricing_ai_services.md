@@ -1,22 +1,6 @@
 # Pricing AI Services
 
-> Pricing AI services involves tiered models with ROI-focused pricing and client-specific packages
-
-## Key Takeaway
-- Milestone payments align with 5x ROI rule for client satisfaction
-- Tiered pricing ensures profitability by balancing call limits and software costs
-
-## Key Numbers
-- $5,000 saved = $1 per dollar saved pricing model
-- $240,000 lifetime value per client via result-based pricing
-- Call limits: 100, 1,000, 5,000, 5,000+
-
-## Evidence & Examples
-- Tiered pricing avoids excessive software costs for larger clients
-
-## Caveats & Limits
-- Larger clients billed separately for custom infrastructure
-- Bundled pricing benefits smaller clients
+> Shiny.ai uses result-based pricing for lead reactivations, achieving $240,000 in lifetime value per client by charging $1 per conversation and tracking results.
 
 ## Claims
 - 25 25 25 milestone payment structure — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Applying to Upwork Jobs Effectively"]
@@ -29,12 +13,6 @@
 - Tiers are used to manage revenue streams, with plans 1-3 offering different call limits and a higher-tier plan for increased capacity, ensuring consistent profitability. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Profitability, Tiers, and Software Costs"]
 - A call should focus on the current problems a client faces and the promised savings, rather than emphasizing AI features or pricing. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Selling Value, Not AI Features"]
 
-
-
-## Connections
-- AI is a leverage tool, not an industry; it compounds existing business advantages. _(connects to: Ai Driven Marketing)_
-- AI-driven websites boost revenue via personalized ads and funnels; pricing AI services uses tiered ROI-focused models. _(connects to: Ai Driven Website)_
-
 ---
-_Topic appears in 1 source(s) · 9 claim(s) · 4 connection(s)_
+_Topic appears in 1 source(s) · 9 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

@@ -8,4 +8,5 @@
 - When business owner returns (after you free up capacity), give them ego-saving way to come back in — [i_m_trying_to_build_an_empire_hormozi_stops_her_cold_xrZH29ut-LY.txt]
 
 ---
-_Source: i_m_trying_to_build_an_empire_hormozi_stops_her_cold_xrZH29ut-LY.txt · 3 claim(s)_
+_Topic appears in 1 source(s) · 3 claim(s) · 0 connection(s)_
+_Sources: i_m_trying_to_build_an_empire_hormozi_stops_her_cold_xrZH29ut-LY.txt_

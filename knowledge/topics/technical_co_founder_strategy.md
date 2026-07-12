@@ -6,4 +6,5 @@
 - If building software, need technical co-founder with meaningful equity and reserve equity for other engineers — [brazil_s_accounting_empire_12m_revenue_1_decision_left_hbRuTx98gM0.txt]
 
 ---
-_Source: brazil_s_accounting_empire_12m_revenue_1_decision_left_hbRuTx98gM0.txt · 1 claim(s)_
+_Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
+_Sources: brazil_s_accounting_empire_12m_revenue_1_decision_left_hbRuTx98gM0.txt_

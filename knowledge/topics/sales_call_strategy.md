@@ -1,9 +1,6 @@
 # Sales Call Strategy
 
-> Structured Sales Calls with 5x ROI Through Problem-Solution Closing
-
-## Key Takeaway
-- Claim 5 emphasizes booking same day
+> Always book next call on same call to reduce ghosting and increase conversion rates
 
 ## Claims
 - Meeting Booking & Closing involves the process of scheduling and closing client meetings, which is critical for converting leads into clients. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Course Outline and Key Focus Areas"]
@@ -15,13 +12,6 @@
 - The 5x return on investment is promised by highlighting the pain points and outcomes, not the features or AI technology. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Selling Value, Not AI Features"]
 - Spend four hours daily on marketing — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
-
-
-## Connections
-- Structured sales calls with problem-outcome-solution framing scale $97 offers to $3K while delivering 5x ROI. _(connects to: Sales Process Overhaul)_
-- Structured sales calls with clear process beat ad hoc closing; order of operations matters. _(connects to: Sales Motion Fundamentals)_
-- Structured sales calls achieve 5x ROI; sales process constraints matter more than offer or leads. _(connects to: Sales Process Redesign)_
-
 ---
-_Topic appears in 1 source(s) · 8 claim(s) · 3 connection(s)_
+_Topic appears in 1 source(s) · 8 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

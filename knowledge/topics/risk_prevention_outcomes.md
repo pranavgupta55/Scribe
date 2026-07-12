@@ -1,16 +1,11 @@
 # Risk Prevention Outcomes
 
-> Sleep schedule prevents major life disruptions
-
-## Examples
-- Prevents DUIs from late-night drinking
-- Avoids early pregnancy from poor judgment
-- Prevents work sabotage from hangover appearance
-- Reduces mugging and accident risk
+> For ages 20–35, consistent sleep prevents DUIs, early pregnancy, work sabotage, and career stalling
 
 ## Claims
 - For ages 20–35, consistent sleep prevents DUIs, early pregnancy, work sabotage, and career stalling — [1_habit_that_fixes_90_of_problems_tfWtqcYI7Zk.txt]
 - Going to bed on time reduces likelihood of being mugged and being in car accidents — [1_habit_that_fixes_90_of_problems_tfWtqcYI7Zk.txt]
 
 ---
-_Source: 1_habit_that_fixes_90_of_problems_tfWtqcYI7Zk.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: 1_habit_that_fixes_90_of_problems_tfWtqcYI7Zk.txt_

@@ -7,4 +7,5 @@
 - If you sell to rich people long enough, they will make you one of them — [stop_selling_from_your_own_wallet_yEmM9JygeEo.txt]
 
 ---
-_Source: stop_selling_from_your_own_wallet_yEmM9JygeEo.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: stop_selling_from_your_own_wallet_yEmM9JygeEo.txt_

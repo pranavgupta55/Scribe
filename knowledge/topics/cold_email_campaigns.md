@@ -1,26 +1,6 @@
 # Cold Email Campaigns
 
-> Optimize Cold Email Campaigns with Automation and Targeting
-
-## Key Numbers
-- 64% of emails are classified as good emails in the cold email campaign report.
-- The instantly.ai platform builds a campaign with a 5.1% reply rate for roofers in Sweden.
-
-## How-To / Method
-- Use Cloud Code for automation, pre-warmed domains for health, and integrate a lost revenue calculator.
-- Claude Code generates a campaign with an email free offer and SEO optimization for Swedish roofers.
-
-## Evidence & Examples
-- The campaign named 'Rufus Sweden' targets Swedish roofers with pain points of slow coding and few reviews.
-- Before importing leads into Instantly.ai, run them through Million Verifier to ensure email validity.
-
-## Why It Works
-- Pre-warmed domains and automation (Cloud Code) enhance campaign performance.
-- The lost revenue calculator integrates into the campaign structure for Swedish roofers.
-
-## Implications
-- Ensure email validity with Million Verifier to avoid domain blacklisting.
-- 60% of targeting dentists achieves a completion rate with initial and follow-up emails.
+> Pre-warmed domains with 100% health score (Cold Email Campaigns)
 
 ## Claims
 - Cold email campaigns using Cloud Code can rapidly acquire clients by targeting blue countries with Instantly.ai, which automates 90% of the process. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Cold Emailing for Client Acquisition"]
@@ -35,12 +15,6 @@
 - 64% of emails are classified as good emails in the cold email campaign report. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Launching Cold Email Campaigns"]
 - Use cold email and Upwork proposals — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Roadmap: Learn, Land Clients, Sustain, Scale"]
 
-
-
-## Connections
-- One-to-one cold outreach via email, phone, or direct mail generates engaged leads at scale. _(connects to: Cold Outreach Execution)_
-- Cold email teaches foundational sales psychology fastest; experts scale via ads while beginners build via email first. _(connects to: Cold Email Vs Paid Ads Roi)_
-
 ---
-_Topic appears in 1 source(s) · 11 claim(s) · 1 connection(s)_
+_Topic appears in 1 source(s) · 11 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

@@ -1,20 +1,6 @@
 # Multiple Attack Vectors
 
-> Solve problems by trying many different approaches; if one doesn't work, it's not that it's unsolvable but that you weren't skilled enough.
-
-## Framework
-- Not about doing same thing 100 times but 100 different iterations
-- Try from angles: underneath, poison the tree, find bounties, hire recruiters, fly people in for training, use senior folks
-
-## Examples
-- Needed 15 reps in one month: hire 5/month plan became leverage two senior guys to onboard 3-5 each
-- Gained $4 million extra quarterly profit just from higher standard on timeline
-
-## Common Mistakes
-- Trying Facebook ads once then saying it didn't work
-- Making content once then abandoning it
-- Hiring one salesman and declaring the channel doesn't work
-- Not realizing your lack of skill, not the problem's difficulty
+> What choice are we choosing not to bear that we could bear to make the investment to pull our future forward
 
 ## Claims
 - A portfolio company needed 15 sales reps for Q1 goals; instead of hiring 5/month as planned, they hired all 15 in one month, gaining $4 million in extra profit — [why_ambitious_people_stay_mediocre_A248pGXTSoY.txt]
@@ -24,4 +10,5 @@
 - What choice are we choosing not to bear that we could bear to make the investment to pull our future forward — [why_ambitious_people_stay_mediocre_A248pGXTSoY.txt]
 
 ---
-_Source: why_ambitious_people_stay_mediocre_A248pGXTSoY.txt · 5 claim(s)_
+_Topic appears in 1 source(s) · 5 claim(s) · 0 connection(s)_
+_Sources: why_ambitious_people_stay_mediocre_A248pGXTSoY.txt_

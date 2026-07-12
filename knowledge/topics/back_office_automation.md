@@ -1,20 +1,10 @@
 # Back Office Automation
 
-> Administrative workflows are ready now: invoicing, receivables, payables, lead nurture require no custom AI.
-
-## Key Takeaway
-- Already available, already functional, use today
-
-## Examples
-- Invoicing and billables matching
-- Receivables management
-- Lead nurture sequences
+> Back office automation (invoicing, billables matching, receivables, lead nurture) is already mature and available now; these should be immediate candidates for automation.
 
 ## Claims
 - Back office automation (invoicing, billables matching, receivables, lead nurture) is already mature and available now; these should be immediate candidates for automation. — [why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt]
 
-## Connections
-- Admin workflows ready now; automation and dashboards enable one-person business scalability. _(connects to: Full Ai Systems)_
-
 ---
-_Source: why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt · 1 claim(s)_
+_Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
+_Sources: why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt_

@@ -1,25 +1,6 @@
 # Service Delivery
 
-> Efficient Service Delivery through Automation and Contextual Listening
-
-## Key Takeaway
-- Automation of Clients' Businesses enables scalable AI operations via AI tools
-- Claw Listening In captures context during meetings to build AI operating systems
-
-## Key Takeaway
-- Verified leads ensure high-quality email delivery and reduce unnecessary spending
-- Email accounts initially inactive but become active after acquisition for campaign success
-
-## Key Takeaway
-- Three-level website-building framework supports scalable deployment with form integration
-- UI customization (light/dark modes) and shadow/gradient removal enhance user experience
-
-## Key Takeaway
-- System escalates issues but requires manual refreshes for proper functionality
-- Demonstrating solutions through demos helps customers evaluate value before pricing decisions
-
-## Key Takeaway
-- Website-building framework addresses solo freelancers and agencies' needs with modular design
+> Accessing meeting summaries and transcripts through Fathom MCP tools
 
 ## Claims
 - Claw Listening In is a technique used to capture context during meetings, allowing the speaker to start building the AI operating system before the meeting ends. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Course Outline and Key Focus Areas"]
@@ -33,12 +14,9 @@
 - Build both light and dark modes for the dashboard — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Refining the Dashboard Design"]
 - Modify UI elements to remove unwanted shadows and gradients — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Refining the Dashboard Design"]
 - The system escalates issues but requires manual refreshes for proper functionality — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Deploying the AI System Frontend"]
-
-
-
-## Connections
-- Service automation through systems and listening scales delivery; most low-price services can't scale without automation. _(connects to: Service Vs Automation)_
+- The speaker leverages their natural ability to secure customers by focusing on high-quality service delivery in multiple business domains. — [reality_check_2_plus_years_online.txt § "High-Leverage Activities"]
+- The speaker emphasizes high-quality service delivery as a key factor in their success. — [reality_check_2_plus_years_online.txt § "High-Leverage Activities"]
 
 ---
-_Topic appears in 1 source(s) · 11 claim(s) · 5 connection(s)_
-_Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_
+_Topic appears in 2 source(s) · 13 claim(s) · 0 connection(s)_
+_Sources: reality_check_2_plus_years_online.txt, start_a_1_person_business_with_claude_4_hour_course_2026.txt_

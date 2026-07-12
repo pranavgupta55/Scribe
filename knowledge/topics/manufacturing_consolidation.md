@@ -8,4 +8,5 @@
 - Consolidating production gets tax improvements and reduces costs — [the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt]
 
 ---
-_Source: the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt · 3 claim(s)_
+_Topic appears in 1 source(s) · 3 claim(s) · 0 connection(s)_
+_Sources: the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt_

@@ -1,17 +1,6 @@
 # Focus and Distractions (Idea Management)
 
-> Business wisdom: focus and patience. Manage ideas obsessively to prevent them from killing your business.
-
-## Framework
-- Maintain a 'Big List of Ideas' document; flush out ideas fully with memos, then only revisit when team is well-rested and smiling
-- Use the 'shirt test': if you're still thinking about an idea 1-2 weeks later, pursue it; otherwise let it go
-
-## Key Numbers
-- Jeff Bezos can generate 100 ideas in 30 minutes that would destroy his company
-
-## Common Mistakes
-- Ideas feel huge while being developed but often terrible with distance
-- Talent/manpower is almost always the real limiter; good people don't want to work for early-stage entrepreneurs, so earn the right through proof
+> Business wisdom boils down to two things: focus and patience.
 
 ## Claims
 - Business wisdom boils down to two things: focus and patience. — [watch_this_to_get_ahead_in_2026_spXH1kJ6q-Q.txt]
@@ -25,4 +14,5 @@
 - The distance between where you are and where you want to be equals the number of hard conversations you're willing to have. — [watch_this_to_get_ahead_in_2026_spXH1kJ6q-Q.txt]
 
 ---
-_Source: watch_this_to_get_ahead_in_2026_spXH1kJ6q-Q.txt · 9 claim(s)_
+_Topic appears in 1 source(s) · 9 claim(s) · 0 connection(s)_
+_Sources: watch_this_to_get_ahead_in_2026_spXH1kJ6q-Q.txt_

@@ -7,4 +7,5 @@
 - Voice automation is close to ready (almost there in 2024-2025), text automation is already functional, and a gym's chat interface (ask hours/pricing) shows text agents working. — [why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt]
 
 ---
-_Source: why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: why_ai_agents_will_replace_your_next_hire_rMf-JuikR-Q.txt_

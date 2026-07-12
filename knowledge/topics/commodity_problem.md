@@ -1,23 +1,11 @@
 # Commodity Problem
 
-> Commoditization destroys margins; differentiation enables value-driven (not price-driven) purchases and premium pricing.
-
-## Why It Fails
-- Commodities valued at point of market efficiency (break-even pricing)
-- All competitors look the same, forcing price-based comparison
-- Customers always choose cheapest if products appear equal
-- Business makes just enough to keep lights on; owner becomes employee
-
-## Solution
-- Create differentiation through Grand Slam Offer components
-- Make offer incomparable (category of one) to anything else
-- Shift prospect mindset from comparison to unique value perception
-- Enable premium pricing without customer resistance
+> Commoditized products are price-driven purchases; differentiated products are value-driven purchases with no price comparison.
 
 ## Claims
 - Most entrepreneurs price at market efficiency (just above break-even); this is the wrong approach and leads to barely surviving. — [100m_offers.txt]
 - Commoditized products are price-driven purchases; differentiated products are value-driven purchases with no price comparison. — [100m_offers.txt]
 
-
 ---
-_Source: 100m_offers.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: 100m_offers.txt_

@@ -1,13 +1,10 @@
 # Integrity Over Opportunity
 
-> Refuse compromises that violate core values, even for premium access.
-
-## Examples
-- Premium network asked to lie about partnership; refused and rejected membership
-- Treated business partnership as package deal - no individual elevation
+> Premium network asked speaker to lie to join; refused and rejected membership rather than compromise integrity, treating partnership as package deal.
 
 ## Claims
 - Premium network asked speaker to lie to join; refused and rejected membership rather than compromise integrity, treating partnership as package deal. — [why_we_refused_to_join_the_100k_club_j7JGiFKooD4.txt]
 
 ---
-_Source: why_we_refused_to_join_the_100k_club_j7JGiFKooD4.txt · 1 claim(s)_
+_Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
+_Sources: why_we_refused_to_join_the_100k_club_j7JGiFKooD4.txt_

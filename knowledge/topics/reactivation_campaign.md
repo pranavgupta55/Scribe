@@ -1,27 +1,6 @@
 # Reactivation Campaign
 
-> AI-driven reactivation campaigns boost conversion rates and reduce costs.
-
-## Key Takeaway
-- AI converts 40-80 of the 2,000 leads with a training-specific offer
-- Costs $3,000/month with 0.25 cents per message
-
-## Key Numbers
-- 2% conversion rate of 2,000 leads
-- 40-80 leads converted via AI-driven follow-ups
-- $3,000/month campaign cost
-
-## Why It Works
-- AI tracks missed opportunities and converts leads via AI-driven follow-ups
-- Automates processes to reduce human error
-
-## Implications
-- $3,000/month cost and 20% conversion rate suggest efficiency but require careful planning
-- 12-month agreement for $3,000/month implies long-term commitment
-
-## Caveats & Limits
-- 20% conversion estimate is an AI-driven estimation, results may vary
-- Costs include text messaging fees at 0.25 cents per message
+> The company hasn't been actively working with the customer's database, missing potential opportunities
 
 ## Claims
 - The company hasn't been actively working with the customer's database, missing potential opportunities — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Neglect of Customer Databases"]
@@ -32,10 +11,6 @@
 - The reactivation campaign includes reviews, referrals, and database reactivation, with a 12-month agreement for $3,000/month — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Lead Acquisition Process"]
 - AI handles outbound follow-ups for re-engaged leads, converting 40-80 of the 2,000 leads with a training-specific offer — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Lead Acquisition Process"]
 
-
-## Connections
-- AI is a leverage tool, not an industry; it compounds existing business advantages. _(connects to: Email Reactivation Campaigns)_
-
 ---
-_Topic appears in 1 source(s) · 7 claim(s) · 3 connection(s)_
+_Topic appears in 1 source(s) · 7 claim(s) · 0 connection(s)_
 _Sources: watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt_

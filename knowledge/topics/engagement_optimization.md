@@ -8,4 +8,5 @@
 - Ask customers what one thing they would fight for if everything else was deleted, and what one thing they'd be okay removing — [how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt]
 
 ---
-_Source: how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt · 3 claim(s)_
+_Topic appears in 1 source(s) · 3 claim(s) · 0 connection(s)_
+_Sources: how_to_get_your_customers_to_stay_forever_-j8_YCWZ05Q.txt_

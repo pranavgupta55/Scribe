@@ -7,4 +7,5 @@
 - Identify yourself as collector of skills and asset - as you accumulate pieces, dollars follow across the bridge into your pocket. — [how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt]
 
 ---
-_Source: how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt_

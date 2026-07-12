@@ -1,15 +1,6 @@
 # Dual Business Model
 
-> Coaching business enables rollup by identifying and recruiting operators
-
-## Key Numbers
-- Direct ops: $1.2M+ revenue
-- Coaching: $6,000/year per client package
-- Better unit economics in coaching than operations
-
-## Key Takeaway
-- Dual model is temporary strategy
-- End state is coaching/platform ownership, not direct operations
+> Coaching business has better unit economics than direct operations
 
 ## Claims
 - Business 1: Med spa at $1.2M revenue, on track for more — [why_i_m_rolling_up_50_med_spas_instead_of_exiting_Ok8cv-ivKIw.txt]
@@ -18,4 +9,5 @@
 - Coaching business has better unit economics than direct operations — [why_i_m_rolling_up_50_med_spas_instead_of_exiting_Ok8cv-ivKIw.txt]
 
 ---
-_Source: why_i_m_rolling_up_50_med_spas_instead_of_exiting_Ok8cv-ivKIw.txt · 4 claim(s)_
+_Topic appears in 1 source(s) · 4 claim(s) · 0 connection(s)_
+_Sources: why_i_m_rolling_up_50_med_spas_instead_of_exiting_Ok8cv-ivKIw.txt_

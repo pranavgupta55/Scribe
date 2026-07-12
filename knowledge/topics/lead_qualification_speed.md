@@ -8,4 +8,5 @@
 - Offer bonus to trainer: cut training from 6 weeks to 2 weeks, get $500 bonus; trainer certifies new hire's work — [scale_any_business_with_these_3_levers_3xrL1nQcqlU.txt]
 
 ---
-_Source: scale_any_business_with_these_3_levers_3xrL1nQcqlU.txt · 3 claim(s)_
+_Topic appears in 1 source(s) · 3 claim(s) · 0 connection(s)_
+_Sources: scale_any_business_with_these_3_levers_3xrL1nQcqlU.txt_

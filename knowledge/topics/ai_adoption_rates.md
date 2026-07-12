@@ -1,6 +1,6 @@
 # AI Adoption Rates
 
-> AI Adoption Remains Low Globally
+> The speaker got into this space a little over three years ago
 
 ## Claims
 - Learning how to use AI should become a number one priority, assuming any rate of improvement over any reasonable time period. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "The Massive Opportunity of AI for Graduates"]
@@ -13,11 +13,6 @@
 - Companies in these emerging markets are ready and understand the need for AI implementation into their businesses. — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Expanding Global AI Markets"]
 - Verified connection by listing campaigns — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Setting Up Instantly.ai with Claude Desktop App"]
 
-
-
-## Connections
-- AI adoption remains low while capability improves; early adopters gain competitive advantage against the 99% who delay. _(connects to: Ai Adoption Urgency)_
-
 ---
-_Topic appears in 1 source(s) · 9 claim(s) · 1 connection(s)_
+_Topic appears in 1 source(s) · 9 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

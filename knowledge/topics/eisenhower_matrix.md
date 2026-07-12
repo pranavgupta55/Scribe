@@ -1,12 +1,10 @@
 # Eisenhower Matrix
 
-> Facility move is important but not urgent - defer until cash flow improves.
-
-## Key Takeaway
-- Non-urgent important tasks can be parallelized with urgent work
+> Moving facility is non-urgent but important (Eisenhower matrix)
 
 ## Claims
 - Moving facility is non-urgent but important (Eisenhower matrix) — [the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt]
 
 ---
-_Source: the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt · 1 claim(s)_
+_Topic appears in 1 source(s) · 1 claim(s) · 0 connection(s)_
+_Sources: the_0_decision_that_saves_my_family_business_byOtAjKH-RA.txt_

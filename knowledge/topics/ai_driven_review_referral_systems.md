@@ -1,20 +1,6 @@
 # AI-Driven Review/Referral Systems
 
-> AI-Driven Systems Enhance Review Engagement and Lead Conversion
-
-## Key Takeaway
-- AI-driven text messages prompt feedback with free membership rewards for reviews
-- AI offers free membership rewards for submitting Google Business reviews
-
-## Key Numbers
-- The company's database contains 12,000 leads but lacks a strategy to re-engage or convert them
-
-## Implications
-- Reactivating the database leads to improved marketing outcomes
-- Reactivating the database enables the creation of capital
-
-## Why It Works
-- An AI-driven process to automate reviews, referrals, and re-engagement was introduced to address a lack of structured processes in the gym's current operations
+> Reactivating the database leads to improved marketing outcomes
 
 ## Claims
 - AI-driven text messages prompt feedback with free membership reward for reviews — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Lead Follow-Up and Referral Programs"]
@@ -30,12 +16,6 @@
 - A structured script enhances referral potential by simplifying the follow-up process and increasing engagement — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Optimizing Paid Ads"]
 - An easy-to-follow script boosts referral rates by aligning with the speaker's strategy to maximize engagement and conversions — [watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt § "Optimizing Paid Ads"]
 
-
-
-## Connections
-- AI systems boost conversion through personalized experiences; review engagement and website personalization both increase revenue. _(connects to: Ai Driven Website)_
-- AI-driven review and referral engagement enhance conversion; AI systems automate work to one-person scale. _(connects to: Full Ai Systems)_
-
 ---
-_Topic appears in 1 source(s) · 12 claim(s) · 6 connection(s)_
+_Topic appears in 1 source(s) · 12 claim(s) · 0 connection(s)_
 _Sources: watch_me_close_1_000_000_in_just_10_ai_sales_calls_live.txt_

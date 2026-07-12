@@ -1,16 +1,6 @@
 # Business Model Refinement
 
-> Current model is dependent on founder's social media; standalone model needs work
-
-## Key Numbers
-- 25% profit margins vs. 43%+ for well-run salons
-- Labor at 50% (optimized from 70%)
-- Never spent a dime on ads in 5 years - all organic
-
-## Common Mistakes
-- Assuming model is good because salon is fully booked
-- Not separating brand magic from business systems
-- Training difficulty is the hard problem, not a blocker
+> Nail salon owner doing $1.5M from single San Antonio location with 25% profit margins
 
 ## Claims
 - Nail salon owner doing $1.5M from single San Antonio location with 25% profit margins — [helping_a_1_5m_nail_salon_owner_stop_doing_too_much_I1NYJ8dm4Jk.txt]
@@ -19,4 +9,5 @@
 - Training is the hard problem for nail salon franchises, but solving it unlocks $100M+ value — [helping_a_1_5m_nail_salon_owner_stop_doing_too_much_I1NYJ8dm4Jk.txt]
 
 ---
-_Source: helping_a_1_5m_nail_salon_owner_stop_doing_too_much_I1NYJ8dm4Jk.txt · 4 claim(s)_
+_Topic appears in 1 source(s) · 4 claim(s) · 0 connection(s)_
+_Sources: helping_a_1_5m_nail_salon_owner_stop_doing_too_much_I1NYJ8dm4Jk.txt_

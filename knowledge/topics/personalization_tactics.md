@@ -7,4 +7,5 @@
 - Push incentives (give gift upfront for reciprocity) work as well as pull incentives (A/B choices assuming attendance); both increase show rates through social contract — [100m_playbook_lead_nurture.txt]
 
 ---
-_Source: 100m_playbook_lead_nurture.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: 100m_playbook_lead_nurture.txt_

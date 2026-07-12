@@ -7,4 +7,5 @@
 - Wealthiest people track fixed monthly investment targets rather than watermarks - commit to 'I will invest $2K/month' rather than 'invest surplus above $5K.' — [how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt]
 
 ---
-_Source: how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: how_the_top_1_actually_think_about_money_6BQ3whjWG3M.txt_

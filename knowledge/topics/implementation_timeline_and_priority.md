@@ -1,25 +1,6 @@
 # Implementation Timeline and Priority
 
-> 8-step roadmap: 2-week quick wins (pricing, funnel, ads) followed by medium-term (email, retargeting) and 2026 expansion (affiliate, HOA outbound).
-
-## Key Numbers
-- Step 1 (10% price raise): 25% profit gain
-- Step 3-4 (funnel + ads): 2-3x potential return
-- Step 6 (email): 20-30% lift, all profit
-- Step 8 (outbound HOA): uncapped, potentially $10-20M exit velocity
-- Actual 12-month outcome: $1.25M → $2.3-2.5M (nearly 2x), lead flow 120 → 200/month
-
-## How-To / Method
-- Week 1-2: (1) 10% price raise, (2) debt payoff continuation, (3) funnel redesign, (4) ad fixes (organic + variety)
-- Concurrent: (5) increase ad spend, (6) email reactivation setup
-- Post-month-1: (7) cross-platform retargeting + branded search
-- 2026: (8) outbound HOA program (requires full-time hire)
-
-## Key Takeaway
-- Steps 1-4 = incremental, low-risk improvements with high payoff
-- Email reactivation compound as revenue grows; compounds long-term
-- Affiliate/HOA programs require dedicated headcount; defer to 2026
-- One proven affiliate partner pays for entire affiliate program cost; uncapped upside
+> Steps 1-4 can be completed in 2 weeks; email reactivation happens concurrently with step 5.
 
 ## Claims
 - Implementation order: (1) 10% price raise, (2) continue debt payoff, (3) change funnel/landing page, (4) fix ads (organic + variety), (5) increase ad spend, (6) email reactivation, (7) cross-platform retargeting + branded search, (8) outbound HOA strategy. — [building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt]
@@ -33,4 +14,5 @@
 - Future expansion plans include opening a second location within 12 months, facilitated by scaling the current operation. — [building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt]
 
 ---
-_Source: building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt · 9 claim(s)_
+_Topic appears in 1 source(s) · 9 claim(s) · 0 connection(s)_
+_Sources: building_a_2_500_000_business_for_a_stranger_in_36_minutes_OQf2Ba-Lp_4.txt_

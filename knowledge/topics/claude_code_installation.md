@@ -1,26 +1,6 @@
 # Claude Code Installation
 
-> Install Claude Code with Visual Studio and API keys
-
-## Key Takeaway
-- Install Claude Code via Visual Studio Code installer
-- Use Cloud Code commands for Mac/Windows
-- Add OpenAI API key to environment variables
-
-## How-To / Method
-- Drag installer to desktop and create 'shiny' folder
-- Run Cloud Code installation commands
-- Fix knowledge base issue by re-adding OpenAI key
-
-## Implications
-- API key setup required for functionality
-- Cloud Code confirms installation location
-- OpenAI key resolves knowledge base issues
-
-## Actionable Advice
-- Create API key in Claude desktop app
-- Add OpenAI key to environment variables
-- Fix knowledge base issue by re-adding key
+> Fixing knowledge base issue by adding OpenAI key again
 
 ## Claims
 - Install Visual Studio Code by dragging the installer to other apps, creating a 'shiny' folder on the desktop, and placing the AI operating system in the 'shiny' folder — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Setting Up Claude Code in Visual Studio Code"]
@@ -34,8 +14,6 @@
 - Adding OpenAI API key to environment variables — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Testing and Refining the AI Support System"]
 - Fixing knowledge base issue by adding OpenAI key again — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Testing and Refining the AI Support System"]
 
-
-
 ---
-_Topic appears in 1 source(s) · 10 claim(s) · 1 connection(s)_
+_Topic appears in 1 source(s) · 10 claim(s) · 0 connection(s)_
 _Sources: start_a_1_person_business_with_claude_4_hour_course_2026.txt_

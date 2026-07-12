@@ -1,18 +1,11 @@
 # Founder Desperation
 
-> True desperation forces action that conventional motivation cannot
-
-## Key Takeaway
-- Showed up with $0, slept in gym, lived on naps
-- Visceral proof of commitment resonates more than inspirational stories
-
-## Why It Works
-- Founder backed into corner; no escape route
-- Only option was success or humiliation
+> Lived on naps for first 6 months; homeless people slept in parking lot
 
 ## Claims
 - Founder arrived in California with nothing, slept in friend's gym, later gym floor under parking garage — [when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt]
 - Lived on naps for first 6 months; homeless people slept in parking lot — [when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt]
 
 ---
-_Source: when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt · 2 claim(s)_
+_Topic appears in 1 source(s) · 2 claim(s) · 0 connection(s)_
+_Sources: when_i_showed_up_with_0_in_california_wlZmj97Irtk.txt_

@@ -1,19 +1,6 @@
 # Claude Skills
 
-> Portable Skills Enable Efficient Automation with Drives Platform
-
-## Key Takeaway
-- Portable Cloud Skills Enable Efficient Automation with Drives Platform
-- Skills Require Time and Effort, Valued by Users
-
-## Why It Works
-- Mechanism: Portable Format and Sub-Agents for Context Retrieval
-
-## How-To / Method
-- Steps: Use Drives Platform's 'Create Skill' to Generate Generic Skills for Mini Automation Tools
-
-## Implications
-- Skill Development Value: Time and Effort Invested by Users, Demonstrated Through Skill Creation
+> Portable Cloud Skills that can be given to Claude Code (tool: Claude Skills, mechanism: portable format)
 
 ## Claims
 - Portable Cloud Skills that can be given to Claude Code (tool: Claude Skills, mechanism: portable format) — [start_a_1_person_business_with_claude_4_hour_course_2026.txt § "Installing and Managing Claude Skills"]

@@ -1,22 +1,6 @@
 # Income vs Lifestyle Discipline
 
-> The final step is not increasing lifestyle after income increases; bank the money, don't spend it.
-
-## Key Numbers
-- Know guys making $40K/month for years who spent every dollar
-- Friends who didn't save until their 40s regret it deeply
-- First $100K in bank is the first unlock for psychological freedom
-
-## Framework
-- Want to be rich, not look rich
-- Measure: everything minus food and shelter is profit
-- Day you stop learning is day you stop growing
-- Maslow's hierarchy: can't think long-term while paying rent
-
-## Examples
-- Making $20K/month from gym but staying in $400/month room
-- Saving for opening new locations and conferences, not upgrading lifestyle
-- With $100K saved for two people, can survive 3.5 years doing nothing
+> Everything minus food and shelter is profit; keep measuring that gap and widen it before you increase lifestyle
 
 ## Claims
 - The first $100K unlock is psychological not numerical; it lets you stop worrying about rent and think long-term instead of day-to-day survival — [if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt]
@@ -27,9 +11,6 @@
 - Everything minus food and shelter is profit; keep measuring that gap and widen it before you increase lifestyle — [if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt]
 - Most people can't think about changing the world until basic needs like rent and food are secured; Maslow's hierarchy applies — [if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt]
 
-## Connections
-- Income discipline is not increasing spending; beyond basics, intentional categories improve QoL. _(connects to: Lifestyle Design)_
-- Growing income unlocks compounding; the final step is not increasing lifestyle, bank the money. _(connects to: Income Growth As Primary Lever)_
-
 ---
-_Source: if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt · 7 claim(s)_
+_Topic appears in 1 source(s) · 7 claim(s) · 0 connection(s)_
+_Sources: if_i_wanted_to_make_my_first_100k_in_2026_i_d_do_this_jfW6gL6hKhk.txt_
