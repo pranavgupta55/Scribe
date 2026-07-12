@@ -1,0 +1,446 @@
+{
+  "source_file": "rory_sutherland_behavioural_economics_for_ecommerce_retail_r_DkEPuRzaqIU.txt",
+  "primary_speaker": "Rory Sutherland",
+  "concepts_addressed": [
+    "Observable Reality Framework",
+    "Distinctiveness Requires Active Effort",
+    "Constraint-Based Strategy",
+    "Undefined Words Create Mythology and Prevent Clear Thinking",
+    "Environmental Design for Behavior Change",
+    "Scarcity as Value Driver",
+    "Price as Expectation and Quality Frame",
+    "Asymmetric Bet Framework",
+    "Brand as Behavioral Pairing",
+    "Behavioral Reinforcement Loops",
+    "E-Commerce Business Model Economics",
+    "Scaling Performance Marketing Compresses Margins Until Breakeven",
+    "High-Value Customers Are Less Demanding Per Dollar",
+    "Perceived Success Likelihood",
+    "Contrarian Conviction as Outsized Return Driver",
+    "Customer Retention Mechanics",
+    "Brand Effect on Customer Behavior and WTP",
+    "Emotion-Action Decoupling",
+    "Learning as Measurable Behavior Change"
+  ],
+  "frameworks": [
+    {
+      "name": "Kano Model",
+      "definition": "A framework mapping how product/service features translate into customer satisfaction, identifying four zones: negative features (add functionality but reduce satisfaction), table-stakes (absence destroys trust, presence is neutral), indifferent (investment with no noticed effect), one-dimensional (proportionate satisfaction), and delight attributes (tangential features that deliver outsized loyalty).",
+      "concept": "Distinctiveness Requires Active Effort"
+    },
+    {
+      "name": "SCARF Model",
+      "definition": "David Rock's neuroscience framework identifying five dimensions that people deeply care about but that are unmeasurable in SI units: Status, Certainty, Autonomy, Relatedness, and Fairness. Loyalty programs and service design can play to all five.",
+      "concept": "Observable Reality Framework"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Rory Sutherland argues that behavioural (observed) data is approximately an order of magnitude more predictive than attitudinal (self-reported) data, because people do not think what they feel, do not say what they think, and do not do what they say. Data about actual behaviour is therefore vastly more reliable than data about stated intentions.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "behavioural data vs attitudinal data",
+      "topic": "Observable Reality Framework",
+      "conditions": ["marketing and customer research contexts"],
+      "mechanism": "Self-report is filtered through social desirability and motivated reasoning; observed behaviour bypasses both.",
+      "numbers": {
+        "axis": "predictive value of data type",
+        "anchors": [
+          {"region": "attitudinal data (say / think)", "value": "baseline"},
+          {"region": "behavioural data (do)", "value": "order of magnitude higher"}
+        ]
+      },
+      "bounded_by": ["Behavioural data alone, without understanding the why, can lead to systematically wrong inferences"]
+    },
+    {
+      "text": "Rory Sutherland argues that knowing what customers do (the what) without knowing why they do it is dangerous, because the logical inference from behavioural data can be exactly backwards. In the coffee shop case: sales data showing demand tailing off before closing time looks like evidence of low late-day demand, but the real cause is staff discouraging customers by mopping floors and stacking chairs. Acting on the data without the psychology causes managers to close earlier when they should stay open later.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "the what without the why",
+      "topic": "Observable Reality Framework",
+      "conditions": ["when behavioural data is collected from a context where staff or system behaviour influences customer behaviour"],
+      "mechanism": "Staff signals (mops, upturned chairs) suppress customer arrival, creating an apparent demand pattern that is actually a supply-side artefact. Managers reading only the demand signal act on a false signal.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland asserts that businesses systematically misdirect resources because quantifiable, engineering-style solutions are career-safe (easy to justify), while psychological or creative interventions are career-risky (hard to justify) even when they are cheaper and more effective. As Keynes noted, it is better for the reputation to fail conventionally than to succeed unconventionally.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "easier to get fired for being irrational than for being unimaginative",
+      "topic": "Contrarian Conviction as Outsized Return Driver",
+      "conditions": ["large institutions and publicly accountable organisations"],
+      "mechanism": "Institutional incentives punish visible weirdness more than invisible mediocrity, so decision-makers optimise for justifiability rather than effectiveness.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland claims that the correct framing of the Eurostar problem was not how to make the train faster, but how to make train travel more attractive than flying. Because planes are always faster, competing on speed is permanently losing ground; competing on quality of time (Wi-Fi, table space, no airport security theatre) can be achieved at a fraction of the cost and potentially produces the same or greater behavioural shift toward train travel.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "quality of time vs quantity of time",
+      "topic": "Constraint-Based Strategy",
+      "conditions": ["modal transport competition where the incumbent (plane) has an irreversible physical advantage on speed"],
+      "mechanism": "Travellers evaluate transport holistically including door-to-door time and quality of in-journey experience; improving quality of time is easier than closing a physics-constrained speed gap.",
+      "numbers": {
+        "axis": "cost of intervention to achieve comparable desirability shift",
+        "anchors": [
+          {"region": "new track London-Folkestone (speed improvement)", "value": "~£6 billion"},
+          {"region": "Wi-Fi on existing trains (time quality improvement)", "value": "~0.01% of £6bn (Sutherland's estimate)"}
+        ]
+      },
+      "bounded_by": ["Does not apply when the speed differential is irrelevant to the traveller's decision, e.g. for freight"]
+    },
+    {
+      "text": "Rory Sutherland asserts that physical changes produce diminishing returns because they run up against laws of physics, whereas psychological interventions can produce 10x improvements (moonshot gains) because the psychological system has butterfly effects: tiny changes in framing or context can produce disproportionately large changes in behaviour or emotional state.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "psychological 10x is much easier than physical 10x",
+      "topic": "Asymmetric Bet Framework",
+      "conditions": ["any domain where customer behaviour, not physical output, is the relevant outcome variable"],
+      "mechanism": "Psychology is a complex non-linear system with asymmetric leverage points; engineering is a Newtonian proportional system. The same unit of effort produces dramatically different output sizes depending on which system you operate in.",
+      "numbers": null,
+      "bounded_by": ["Psychological interventions are harder to predict in advance and cannot always be modelled; their unpredictability is a feature but also a planning constraint"]
+    },
+    {
+      "text": "Rory Sutherland argues that Kano delight attributes (features that are tangential to the core function of a product or service) deliver customer satisfaction and loyalty in disproportionate amounts, but are consistently targeted for elimination by finance directors because they look frivolous. The Doubletree hotel cookie and the 1980s cassette deck eject mechanism are his canonical examples.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "delight attributes",
+      "topic": "Distinctiveness Requires Active Effort",
+      "conditions": ["product and service categories where functional differentiation is low or hard to communicate"],
+      "mechanism": "Delight attributes signal care and distinctiveness precisely because no rational cost-benefit analysis would predict them. Their irrationality is what makes them credible as signals of quality, generating outsized emotional response.",
+      "numbers": null,
+      "bounded_by": ["Delight attributes lose their power once they become industry standard, at which point they become table stakes"]
+    },
+    {
+      "text": "Rory Sutherland claims that increasing customer certainty about service delivery (e.g. showing where a car or parcel is in real time via a tracking map) changes the quality of waiting time from anxious to relaxed, even when the quantity of waiting time is unchanged. This is the principle behind the Uber map: no reduction in actual wait time, but dramatic reduction in perceived wait-time dissatisfaction.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "you don't change the quantity of waiting time, you change the quality",
+      "topic": "Price as Expectation and Quality Frame",
+      "conditions": ["any service with inherent wait time and outcome uncertainty"],
+      "mechanism": "The human brain does not register absolute wait durations; it registers expectation gaps. Transforming an unknown wait into a known wait eliminates the primary source of dissatisfaction (uncertainty), not the secondary source (duration).",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland asserts that setting a delivery expectation higher than actual delivery time eliminates complaints and generates gratitude, even when the actual service quality and speed are unchanged. An insurance company that took 10 days to pay claims but told customers to expect 14 days eliminated virtually all complaints and began receiving thank-you calls.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "in the human brain, there's no such thing as fast and slow. There's faster than you expect and slower than you expect.",
+      "topic": "Price as Expectation and Quality Frame",
+      "conditions": ["any service with a quantifiable delivery time that customers do not independently know"],
+      "mechanism": "Customer satisfaction is driven by the gap between expectation and reality, not by absolute performance. Widening the expectation gap upward (promise 14 days, deliver in 10) converts the same outcome from a disappointment trigger to a delight trigger.",
+      "numbers": {
+        "axis": "complaint volume from claims payment",
+        "anchors": [
+          {"region": "tell customers 10-day turnaround, deliver in 10 days", "value": "complaints present"},
+          {"region": "tell customers 14-day turnaround, deliver in 10 days", "value": "virtually all complaints eliminated, some thank-you calls received"}
+        ]
+      },
+      "bounded_by": ["Only works when the expectation is set before the service event, not retroactively"]
+    },
+    {
+      "text": "Rory Sutherland argues that giving people a choice of delivery courier (rather than assigning one on their behalf) produces measurably higher customer satisfaction even when the actual delivery outcome is identical, and additionally shifts blame for failed deliveries from the retailer to the consumer. Three distinct mechanisms operate: autonomy increases satisfaction with any outcome chosen; people have strong and heterogeneous courier preferences; and self-chosen failure is psychologically attributed to self, not vendor.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "people are just happier with any shit they get to choose",
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": ["e-commerce delivery, particularly where the consumer is paying for delivery"],
+      "mechanism": "Autonomy (the act of choosing) generates positive affect independent of the option chosen; additionally, choice transfers moral responsibility for outcomes to the chooser.",
+      "numbers": null,
+      "bounded_by": ["Offering choice adds complexity; requires retailer to integrate with multiple courier systems"]
+    },
+    {
+      "text": "Rory Sutherland argues that a one-in-six chance of a free meal (a gamble with expected value equal to a 16.6% discount) is not psychologically equivalent to a 16.6% discount and is dramatically more effective at driving behaviour change including early visit timing and increased order size. The Dishoom loyalty programme dice mechanic is his primary example, which he claims generated excitement even among high-net-worth customers who would not have crossed the street for a 16.6% discount.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "to an economist, that's identical to a 16.6% discount. Trust me, to the human brain, it is not identical.",
+      "topic": "Asymmetric Bet Framework",
+      "conditions": ["restaurant loyalty programmes targeting off-peak periods (Monday-Thursday, before 6pm)"],
+      "mechanism": "Variable reward schedules (gambling-style) activate disproportionate engagement relative to their expected monetary value because of the peak emotional experience of winning versus the flat hedonic response to a percentage discount; additionally, a possible free meal changes ordering behaviour (consumers order more) in ways a discount does not.",
+      "numbers": {
+        "axis": "psychological engagement relative to monetary equivalence",
+        "anchors": [
+          {"region": "16.6% discount on every bill", "value": "low behavioural engagement; would not motivate travel to venue or changed ordering"},
+          {"region": "1-in-6 chance of free meal (same expected value)", "value": "high engagement; customers took colleague with 'hot hand', visited more frequently, ordered more freely"}
+        ]
+      },
+      "bounded_by": ["Economist-equivalent value calculation only holds in expectation; a small sample of dice rolls may not converge to 16.6%"]
+    },
+    {
+      "text": "Rory Sutherland argues that most new product or behaviour adoption follows a sigmoid (S-curve) pattern, not a linear one, because the two dominant default human behaviours are habit (repeat what has worked before) and social copying (do what others do). New behaviours therefore penetrate slowly at first, then accelerate once social proof accumulates, then plateau.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "two default modes of human behaviour: habit and social copying",
+      "topic": "Behavioral Reinforcement Loops",
+      "conditions": ["any new product, service, or technology competing with established behaviours"],
+      "mechanism": "Habit and social copying are adaptive heuristics: habit leverages past survival evidence; social copying leverages others' past experience. Both are conservative, producing resistance to first adoption but rapid acceleration once sufficient social proof exists.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland claims that stickiness (whether customers repeat a behaviour after first use) is a more strategically important metric than acquisition volume, and is largely unmeasured. Using Hungry House (acquired by Just Eat for £220 million) and Ocado as examples, he argues that the critical diagnostic question is not whether people try a product, but whether first-time users repeat. Investors who ignored Hungry House failed to ask this question.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "stickiness is the thing we should measure much more",
+      "topic": "Customer Retention Mechanics",
+      "conditions": ["new technology or service category where initial adoption is uncertain and usage habits are not yet formed"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "acquisition outcome",
+        "anchors": [
+          {"region": "Hungry House (food ordering online) at Dragon's Den pitch stage", "value": "rejected by Dragons who doubted people would order online"},
+          {"region": "Hungry House eventual acquisition", "value": "£220 million (by Just Eat)"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland asserts that once a behaviour is repeated several times in quick succession, it transitions from System 2 (conscious, effortful) to System 1 (automatic, effortless), after which the cognitive cost of the behaviour falls dramatically and the probability of repetition increases. Ocado's online grocery strategy exploits this: the first online grocery shop is extremely effortful, but after three or four orders, customers convert permanently because the task becomes automatic.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "system one rather than system two",
+      "topic": "Learning as Measurable Behavior Change",
+      "conditions": ["any behaviour that requires learning a new interface or sequence of steps (e.g. online ordering, driving, software tools)"],
+      "mechanism": "Repeated practice encodes procedural memory, reducing conscious cognitive load to near zero. Once encoded as System 1, the behaviour becomes the path of least resistance rather than a deliberate choice.",
+      "numbers": {
+        "axis": "number of repetitions to reach System 1 automaticity (Ocado example)",
+        "anchors": [
+          {"region": "first online grocery shop", "value": "cognitively very effortful (Sutherland: easier to crawl to supermarket over broken glass)"},
+          {"region": "after ~3 completed online shops", "value": "Ocado's own metric for customer conversion to permanent loyalty"}
+        ]
+      },
+      "bounded_by": ["Rate of automaticity varies by task complexity and individual; 3 is an Ocado-specific empirical threshold, not a universal law"]
+    },
+    {
+      "text": "Rory Sutherland argues that at category level, all electric car brands competing on range extension are collectively self-defeating because they keep consumer attention focused on the one genuine disadvantage of electric vehicles relative to petrol. The correct category-level question is not which brand has a 5-mile range advantage, but whether EVs are sticky (whether buyers who switch stay switched). His claim is that the switch-back rate is very low, suggesting legislative mandates may be unnecessary.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "category questions vs brand questions",
+      "topic": "E-Commerce Business Model Economics",
+      "conditions": ["nascent product categories competing with incumbent alternatives where the new category has one salient disadvantage"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": ["Applies specifically to category-level advertising strategy; individual brands still face competitive incentives to differentiate on range"]
+    },
+    {
+      "text": "Rory Sutherland argues that American Express's practice of printing membership tenure (e.g. Member Since 09) on replacement cards that show the correct year delivers measurable emotional value to customers; when American Express mistakenly issued replacement cards showing Member Since 23 instead of Member Since 09, more than half of affected customers contacted the company to request corrected cards. Finance, which views tenure as irrelevant to current transactions, systematically undervalues this dimension.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "member since 09",
+      "topic": "Brand Effect on Customer Behavior and WTP",
+      "conditions": ["loyalty programmes for financial or subscription products with long customer tenure"],
+      "mechanism": "Human social psychology attaches strong meaning to recognised tenure and relationship history; finance models treat each transaction as independent but customers integrate their entire history into their sense of the relationship's value.",
+      "numbers": {
+        "axis": "complaint rate from incorrect tenure display on replacement card",
+        "anchors": [
+          {"region": "correct tenure shown on replacement card", "value": "no complaints"},
+          {"region": "incorrect tenure (Member Since 23 instead of 09) on replacement card", "value": "more than half of affected customers complained and requested correction"}
+        ]
+      },
+      "bounded_by": ["Effect specific to customers with long tenure who have invested identity in the relationship; unlikely to matter for new customers"]
+    },
+    {
+      "text": "Rory Sutherland argues that physical retail converts at approximately 10% versus online retail's approximately 1%, and generates approximately one-tenth the volume of returns. He contends that the industry has prematurely written off physical retail by comparing it on the metric of efficiency (cost per transaction) rather than effectiveness (conversion rate and return economics), and that efficiency and effectiveness are not the same metric.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "physical retail vs online retail; efficiency vs effectiveness",
+      "topic": "Scaling Performance Marketing Compresses Margins Until Breakeven",
+      "conditions": ["retail businesses evaluating the relative value of physical vs online channels"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "conversion rate and return rate by channel",
+        "anchors": [
+          {"region": "physical retail conversion rate", "value": "~10%"},
+          {"region": "online retail conversion rate", "value": "~1%"},
+          {"region": "physical retail return volume", "value": "~1/10th of online return volume"}
+        ]
+      },
+      "bounded_by": ["Conversion rate comparison may vary substantially by category and brand; premium or experiential categories likely show larger physical advantage"]
+    },
+    {
+      "text": "Rory Sutherland argues that direct mail achieves response rates of approximately 6% from a single mailing, with roughly 3% additional response from a follow-up mailing, orders of magnitude higher than digital display advertising at 0.01%, even accounting for direct mail's higher per-unit cost. His assertion is that marketers apply targeting intelligence correctly (knowing who your customer is) but then communicate via the cheapest channel rather than the highest-impact channel, negating the value of targeting.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "direct mail vs digital; targeting but communicating cheaply",
+      "topic": "Scaling Performance Marketing Compresses Margins Until Breakeven",
+      "conditions": ["B2C and B2B direct marketing to identified high-probability prospects"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "response rate by channel for identified high-probability prospects",
+        "anchors": [
+          {"region": "digital display (e.g. banner retargeting)", "value": "~0.01%"},
+          {"region": "direct mail single mailing (e.g. American Express)", "value": "~6-7%"},
+          {"region": "direct mail second mailing to same list", "value": "additional ~3-3.5%"}
+        ]
+      },
+      "bounded_by": ["Direct mail response rates vary by category, list quality, and offer; Sutherland cites American Express as source"]
+    },
+    {
+      "text": "Rory Sutherland argues that a prospect-level four-day test drive offered by Range Rover to approximately 20,000 identified hot prospects approximately 15 years ago converted approximately 5% of recipients to a purchase, representing an exceptionally high return relative to digital display retargeting of the same audience. The mechanism is that high-investment communication with a correctly identified prospect signals seriousness and creates an experience that digital cannot replicate.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "Range Rover four-day test drive",
+      "topic": "High-Value Customers Are Less Demanding Per Dollar",
+      "conditions": ["high-consideration purchases (premium/luxury automotive or similar) where identified hot prospects have been qualified"],
+      "mechanism": "High-investment communication matches the scale of the purchase decision; the test drive creates lived experience that resolves uncertainty in a way no content or creative can, dramatically raising willingness to commit.",
+      "numbers": {
+        "axis": "conversion rate from identified hot prospect to sale",
+        "anchors": [
+          {"region": "Range Rover four-day family test drive offer to ~20,000 hot prospects", "value": "~5% conversion to purchase"}
+        ]
+      },
+      "bounded_by": ["High absolute cost per contact; requires sufficient margin per unit to justify the programme cost"]
+    },
+    {
+      "text": "Rory Sutherland argues that the typical e-commerce delivery model will reach a cognitive maximum at which consumers have too many concurrent outstanding deliveries to manage, creating stress rather than convenience. He identifies Christmas peak as the likely early signal of this ceiling, where online growth may plateau despite continued category growth, suggesting a structural limit to the current door-to-door delivery model independent of any logistical bottleneck.",
+      "type": "conditional",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "cognitive limit to e-commerce as currently practised",
+      "topic": "E-Commerce Business Model Economics",
+      "conditions": ["e-commerce consumers managing multiple concurrent orders with uncertain delivery windows"],
+      "mechanism": "Working memory and attentional resources are finite; each outstanding delivery occupies a slot of monitoring attention. Beyond a threshold, the cognitive overhead of managing deliveries outweighs the convenience benefit of home delivery.",
+      "numbers": null,
+      "bounded_by": ["Locker delivery or consolidation networks would raise this cognitive ceiling; Sutherland presents locker delivery as the structural solution"]
+    },
+    {
+      "text": "Rory Sutherland argues that behavioural framing (how an instruction is presented) can achieve the same behavioural outcome as a direct prohibition at a fraction of the psychological cost, and sometimes reverses the emotional response from resentment to pride. A restaurant in Saint-Aignan, France, posted a sign ostensibly aimed at departing guests reminding them to turn off their phones as they left; this made compliance feel like conformity to a sophisticated social norm rather than submission to a rule, achieving the same no-phones outcome without triggering reactance.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "in engineering, the opposite of a good idea is a bad idea. In psychology, the opposite of a good idea is often another good idea.",
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": ["any setting where a behaviour change is desired from customers who have high autonomy and are paying for an experience"],
+      "mechanism": "Psychological reactance theory: direct prohibitions trigger resistance proportional to the perceived threat to autonomy. Framing the same constraint as a social norm the customer voluntarily upholds bypasses reactance and converts compliance into identity expression.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland asserts that many large-scale infrastructure investments create value not through physical construction but through cognitive reorganisation: making existing resources comprehensible and usable. The London Overground gained massive ridership primarily by being added to the Tube map, not through new track or rolling stock. He estimates this created approximately £3 billion of infrastructure value largely through ink (the printed map).",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "the creation of £3 billion worth of infrastructure, mostly using ink",
+      "topic": "Constraint-Based Strategy",
+      "conditions": ["existing infrastructure that is physically present but cognitively invisible or incomprehensible to potential users"],
+      "mechanism": "Value requires perception; unutilised capacity is economically worthless regardless of physical existence. Adding a mental model (a map, a metaphor, a category label) that integrates existing resources into users' journey planning creates economic value without physical change.",
+      "numbers": {
+        "axis": "value created by London Overground",
+        "anchors": [
+          {"region": "prior to inclusion on Tube map (pre-2007)", "value": "near-zero ridership on existing network"},
+          {"region": "post-Tube-map inclusion", "value": "Sutherland estimates ~£3 billion equivalent infrastructure value created"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland argues that call-back systems (where a customer requests a call rather than waiting on hold) produce substantially better commercial outcomes than hold queues, despite identical call content. He estimates the probability of upsell, cross-sell, or retention may be three to four times higher for a called-back customer than one who waited, because the emotional state of the customer is fundamentally different: a supplicant who waited versus a valued customer who was called.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "the chance of upselling them, cross-selling them, or retaining them might be three or four times greater if you call them back",
+      "topic": "Perceived Success Likelihood",
+      "conditions": ["inbound customer service calls in service businesses with significant upsell or retention opportunity"],
+      "mechanism": "Waiting on hold signals low customer value to the customer themselves, creating a hostile emotional frame for the subsequent conversation. Being called back signals that the company values the customer's time, creating a positive frame.",
+      "numbers": {
+        "axis": "probability of commercial outcome (upsell / cross-sell / retention) by call delivery method",
+        "anchors": [
+          {"region": "customer waited on hold (identical call content)", "value": "baseline"},
+          {"region": "customer received call-back (identical call content)", "value": "Sutherland estimate: 3-4x higher probability of upsell, cross-sell, or retention"}
+        ]
+      },
+      "bounded_by": ["Estimate is Sutherland's theoretical prediction; he acknowledges it has not been tested because call centres are managed as cost centres not brand opportunities", "Israeli law mandates call-back within 2 hours after 20-second hold, providing a natural experiment opportunity he references"]
+    },
+    {
+      "text": "Rory Sutherland claims that the way marketers and data scientists use targeting is internally contradictory: they correctly invest resources to identify the highest-probability customers (targeting intelligence) and then communicate with those customers via the cheapest possible digital channels (execution cheapness), when logic suggests that correctly identified high-value prospects should receive the highest-investment communications, not the lowest.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "two things which are independently intelligent but which are kind of dumb in combination",
+      "topic": "Scaling Performance Marketing Compresses Margins Until Breakeven",
+      "conditions": ["digital-first marketing organisations that combine audience targeting with programmatic or display advertising"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Rory Sutherland describes coffee shops and tea shops closing too early as a data misinterpretation example. If a coffee shop closes at 4pm, its sales data shows demand tailing off from 3:30pm, which looks like evidence of low late-day demand. But the real cause is that staff signal imminent closure by mopping floors and stacking chairs, which drives away customers. One source told Sutherland that simply placing one chair upside down on another is sufficient to reduce new customer arrivals to zero. The actionable lesson is opposite to the data-driven conclusion: stay open later and ban chair-stacking before closing time.",
+      "claim_index": 1,
+      "topic": "Observable Reality Framework"
+    },
+    {
+      "text": "Rory Sutherland proposes a thought experiment (corroborated by an unnamed senior employee at a large multinational food company): put 50% extra free on a product, but simultaneously raise the price by 50%, making the promotion economically neutral. The multinational employee confirmed this happens accidentally several times a year and generates unexpectedly large sales because consumers respond to the attentional salience of the promotional label (50% extra free) rather than performing a price-per-unit calculation. The employee said the revenue figures were unbelievable.",
+      "claim_index": 9,
+      "topic": "Asymmetric Bet Framework"
+    },
+    {
+      "text": "Rory Sutherland describes Marks & Spencer's dine-in-for-two-for-£10 as a masterclass in reference-point framing. M&S cannot compete with Lidl or Tesco on grocery price, so instead frames its price against a restaurant meal, making £10 feel like a bargain relative to the alternative reference class (dining out) rather than a premium relative to cheaper grocers. A second M&S example: the three-for-seven-pounds dip offer causes most customers to buy three items without calculating the per-unit price, responding instead to the salience of the deal signal and loss aversion (not wanting to miss the offer).",
+      "claim_index": 9,
+      "topic": "Asymmetric Bet Framework"
+    },
+    {
+      "text": "Rory Sutherland describes the Doubletree hotel's warm cookie at check-in as a canonical Kano delight attribute. The cookie is childish, patently unrelated to the core product (a hotel room), and the finance director has repeatedly tried to eliminate it. The marketing director reportedly responds by making the cookies larger. The cookie works as a delight attribute precisely because no rational cost-benefit analysis would predict it; its apparent irrationality signals genuine care.",
+      "claim_index": 5,
+      "topic": "Distinctiveness Requires Active Effort"
+    },
+    {
+      "text": "Rory Sutherland describes the cassette deck eject mechanism of the 1980s as the textbook Kano delight attribute from Kano's original consumer electronics research. Build quality and sound reproduction were the obvious one-dimensional quality dimensions. But what actually drove consumer delight and purchase decisions was a damped, counterbalanced, hissing eject mechanism. The mechanism was so effective as a delight signal that Kano found DVD player manufacturers later added remote-controlled disc drawer opening, whose only plausible purpose was to allow owners to demonstrate the quality of the mechanism from across the room.",
+      "claim_index": 5,
+      "topic": "Distinctiveness Requires Active Effort"
+    },
+    {
+      "text": "Rory Sutherland describes the Dishoom dice loyalty programme. Dishoom was quiet before 6pm Monday to Thursday. Rather than offering a 16.6% discount for early dining (the economically equivalent incentive), the programme issued a die at bill payment: roll a six, and the meal is free. High-net-worth customers from William Blair Associates (a Chicago private investment bank) spontaneously told Sutherland that visiting Dishoom before 6pm and bringing a colleague with a reputedly hot hand at dice was the most exciting thing they did when visiting London, and that two occasions of winning a free meal were memorable highlights. They would not have crossed the street for a 16.6% discount.",
+      "claim_index": 9,
+      "topic": "Asymmetric Bet Framework"
+    },
+    {
+      "text": "Rory Sutherland describes learning to drive as an illustration of System 1/System 2 transition. A new driver consciously executes every element of the task (mirror, signal, manoeuvre, brake, clutch) as explicit System 2 steps. After sufficient practice, the same actions become fully automatic, to the point where experienced drivers sometimes have no conscious memory of the past 10-15 minutes of driving. The cognitive cost of driving falls to near zero once automatic. Ocado applies the same logic: the first online grocery order is extremely demanding, but habitual customers execute it without conscious effort.",
+      "claim_index": 12,
+      "topic": "Learning as Measurable Behavior Change"
+    },
+    {
+      "text": "Rory Sutherland recounts David Ogilvy's estate agent experience as an example of intermediaries doing two jobs simultaneously: satisfying stated client criteria AND finding buyers for eccentric inventory no one else will buy. Ogilvy, a Scotsman living in New York, was buying a house in Paris. His intended purchase sold while he was crossing the Atlantic. His estate agent, rather than showing Paris alternatives, drove Ogilvy four hours to Poitiers and then 20 miles further to show him a 14th-century chateau with 50 bedrooms. Ogilvy bought it. The agent assessed both what the client said he wanted and what kind of buyer could be matched to a property that had been on the books for approximately eight years.",
+      "claim_index": -1,
+      "topic": "Observable Reality Framework"
+    },
+    {
+      "text": "Rory Sutherland describes the Grand Canyon cafe incident as a lighthearted illustration of the autonomy effect: a waiter at a café overlooking the Grand Canyon asked Sutherland and his companion whether they preferred a window seat with a canyon view or a window seat with a car park view. The joke revealed a genuine insight: the waiter's perspective (canyon view as commonplace after years of work) differed entirely from the tourist's. But the broader principle holds: the act of choosing between options, even absurd ones, creates positive affect independent of which option is selected.",
+      "claim_index": 8,
+      "topic": "Environmental Design for Behavior Change"
+    }
+  ],
+  "practices": [
+    {
+      "text": "If you run a call centre, offer customers a call-back option rather than making them wait on hold. The emotional state of the customer when they receive a call-back is categorically more positive than when they finally reach you after waiting, improving the commercial outcome of the conversation.",
+      "topic": "Perceived Success Likelihood"
+    },
+    {
+      "text": "When innovating or testing a new product or service, prioritise measuring repeat usage rate (stickiness) over first-purchase acquisition rate. The strategic question is not whether people try it but whether they use it again.",
+      "topic": "Customer Retention Mechanics"
+    },
+    {
+      "text": "To induce new technology adoption at category level, identify the minimum number of uses required for the behaviour to become System 1 automatic, and design the acquisition funnel to guarantee that minimum number of completions. For Ocado, the target was three completed grocery orders.",
+      "topic": "Learning as Measurable Behavior Change"
+    },
+    {
+      "text": "When designing loyalty programme incentives, consider variable reward schedules (probabilistic rewards) rather than fixed-percentage discounts for equivalent expected monetary value. Probabilistic rewards generate higher emotional engagement and, for meal contexts, incentivise larger orders.",
+      "topic": "Asymmetric Bet Framework"
+    },
+    {
+      "text": "Set customer expectations for service delivery time above the time you actually deliver, so that actual performance consistently beats expectation. Do not set expectations at your typical delivery time.",
+      "topic": "Price as Expectation and Quality Frame"
+    },
+    {
+      "text": "Before solving a business problem through engineering or logistics, ask whether the problem is actually a marketing or psychology problem in disguise. Many problems defined as requiring physical investment can be resolved via cognitive reframing at a small fraction of the cost.",
+      "topic": "Constraint-Based Strategy"
+    },
+    {
+      "text": "When you have identified a high-probability prospect using targeting intelligence, communicate with that prospect via the highest-impact channel available (phone, personal letter, experiential test drive), not the cheapest digital channel. Targeting value should increase communication investment, not justify communication cheapness.",
+      "topic": "Scaling Performance Marketing Compresses Margins Until Breakeven"
+    },
+    {
+      "text": "Give e-commerce customers a choice of delivery courier rather than assigning one. This increases satisfaction with the outcome, shifts blame for failure from retailer to consumer, and accommodates strong heterogeneous preference patterns (e.g. some consumers refuse certain couriers for privacy reasons).",
+      "topic": "Environmental Design for Behavior Change"
+    }
+  ]
+}

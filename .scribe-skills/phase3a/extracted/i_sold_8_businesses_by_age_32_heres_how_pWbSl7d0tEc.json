@@ -1,0 +1,477 @@
+{
+  "source_file": "i_sold_8_businesses_by_age_32_heres_how_pWbSl7d0tEc.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Deal Structure and Ownership",
+    "Founder Bottleneck",
+    "Revenue Stage Transitions",
+    "Long-Term Horizon Advantage",
+    "Tradeoffs & Conscious Sacrifice",
+    "Sales Process Optimization",
+    "Pipeline Constraint Over Execution",
+    "Founder Control and Equity Structure",
+    "Opportunity Cost Framework",
+    "Growth Path Selection",
+    "Scaling Bottleneck Diagnosis",
+    "Worst-Case Crystallization",
+    "Founder Removal Test",
+    "Volume-First Scaling",
+    "Conscious Trade Accounting"
+  ],
+  "frameworks": [
+    {
+      "name": "Business Sale Phase Framework",
+      "definition": "A four-phase sequence for selling a business at institutional scale: Phase 0 prerequisites (deal-killer checklist), Phase 1 prep (banker selection and materials), Phase 2 marketing (teaser, NDA, data room, IOIs), Phase 3 close (LOIs, diligence, purchase agreement, escrow).",
+      "concept": "Deal Structure and Ownership"
+    },
+    {
+      "name": "Enterprise Value Equation",
+      "definition": "Enterprise value equals a discount applied to all future sales; the discount rate reflects the probability those sales will actually occur, meaning high enterprise value requires both large projected sales and high certainty of execution.",
+      "concept": "Revenue Stage Transitions"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that the median M&A multiple for institutional deals of $5M+ in trailing twelve months is approximately 6.7x trailing twelve months revenue; the vast majority of private business sales occur at 1x-3x because the businesses are not reliable enough for institutional buyers.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "institutional buyers",
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "institutional buyer (private equity or family office)",
+        "deal size $5M+"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "sale multiple on trailing twelve months revenue",
+        "anchors": [
+          {"region": "institutional deals ($5M+, PE/FO buyers)", "value": "~6.7x TTM"},
+          {"region": "private deals (non-institutional, asset-level)", "value": "1x-3x TTM"}
+        ]
+      },
+      "bounded_by": [
+        "Rare outlier deals at 20x+ do occur and get press but are not representative"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that most businesses are unsellable at institutional prices because they fail at least one of the following deal-killer conditions: business too small, customer concentration (too few customers representing too much revenue), no defined repeatable customer acquisition process, insufficient outreach to potential acquirers, wrong timing, owner overvaluing the business, insufficient TAM or growth story, key man risk, or single-channel customer acquisition dependence.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "deal killers",
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "seller targeting institutional buyers (PE, family offices)",
+        "deal size $5M+"
+      ],
+      "mechanism": "Institutional investors underwrite future cash flow probability; any structural fragility reduces that probability and thus the valuation or kills the deal entirely.",
+      "numbers": null,
+      "bounded_by": [
+        "Retail investors and individual buyers will still acquire smaller, riskier businesses — but at very low multiples"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that key man risk — where the founder is the primary relationship manager, rainmaker, or fulfillment resource — dramatically reduces or eliminates enterprise value, because when the founder exits the business, the value that buyers are paying for disappears with them.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "key man risk",
+      "topic": "Founder Removal Test",
+      "conditions": [
+        "institutional sale target",
+        "founder is primary sales, delivery, or client relationship holder"
+      ],
+      "mechanism": "Buyers are purchasing future cash flows; if those flows are dependent on the seller remaining present, the purchase price is effectively renting the seller rather than buying a business, which is not an investment thesis institutional buyers accept.",
+      "numbers": null,
+      "bounded_by": [
+        "Acquisition.com specifically works with founder-dependent companies and takes 3-5 years to reduce key man risk before an institutional exit"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that selling a business with single-channel customer acquisition dependence (only one source of new customers) receives a massive valuation discount or no institutional offer at all, because investors extrapolate the risk of that channel shutting off to zero revenue.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "single channel dependence",
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "institutional sale target",
+        "business has only one customer acquisition channel"
+      ],
+      "mechanism": "Institutional buyers model worst-case scenarios; a single channel failing means 100% customer acquisition loss, which converts to a zero-revenue scenario that institutional investors will not accept.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that sellers who contact only 10 potential acquirers will not get a good multiple; the institutional sale process requires contacting approximately 500 potential buyers to produce the funnel math needed for a competitive offer: roughly 98 NDAs, 14-15 IOIs (indications of interest), 6-7 management presentations, 2-4 LOIs (letters of intent), and ultimately one signed deal.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "bankers",
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "institutional sale process ($5M+ deal)"
+      ],
+      "mechanism": "Each funnel stage filters by roughly 85%; without sufficient top-of-funnel volume (500 contacts), the downstream LOI competition needed for price leverage does not materialize.",
+      "numbers": {
+        "axis": "funnel stages in institutional M&A buyer outreach",
+        "anchors": [
+          {"region": "initial contacts", "value": "~500"},
+          {"region": "NDAs signed", "value": "~98 (~20%)"},
+          {"region": "IOIs received", "value": "~14-15 (~15% of NDA signers)"},
+          {"region": "LOIs received", "value": "2-4 (~30% of IOI submitters)"},
+          {"region": "signed deal", "value": "1"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the total timeline from deciding to sell to receiving payment is typically 12-18 months: approximately 12 weeks to find and select bankers, 20 weeks for the marketing and IOI process, and 60-90 days for due diligence — and that bankers will consistently underestimate this timeline because they are incentivized to make the process sound fast.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "bankers",
+      "topic": "Long-Term Horizon Advantage",
+      "conditions": [
+        "institutional sale ($5M+ deal)",
+        "seller starts from a business already meeting prerequisites"
+      ],
+      "mechanism": "Bankers are incentivized to tell sellers the timeline is short to win the mandate; buyers extend diligence at their own pace regardless of stated timelines.",
+      "numbers": {
+        "axis": "calendar time from sale decision to cash receipt",
+        "anchors": [
+          {"region": "banker selection", "value": "~12 weeks"},
+          {"region": "marketing, IOI, and LOI process", "value": "~20 weeks"},
+          {"region": "due diligence", "value": "60-90 days"},
+          {"region": "total minimum timeline", "value": "12 months"},
+          {"region": "typical range", "value": "12-18 months"}
+        ]
+      },
+      "bounded_by": [
+        "Some deals do close faster, but Hormozi cites personal examples where stated 30-day close became 112 days"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that sellers must select bankers whose recent deal history (within approximately 12-24 months) matches both the seller's industry vertical and deal size range, because buyers a banker knows are sized proportionally to that banker's historical deal sizes and will not write checks outside that range.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "bankers",
+      "topic": "Pipeline Constraint Over Execution",
+      "conditions": [
+        "institutional sale",
+        "seller seeking best multiple"
+      ],
+      "mechanism": "Investment funds size their checks proportionally to fund size; a banker who primarily does $500M+ deals does not have relationships with buyers who will write $10M checks, making them useless for smaller sellers even if they have relevant industry knowledge.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that in institutional M&A negotiations, buyers will not move on terms unless the seller explicitly states that failure to meet a specific point will kill the deal; absent a credible walk-away threat, institutional buyers systematically ignore negotiating points and default to their standard terms.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "institutional buyers",
+      "topic": "Worst-Case Crystallization",
+      "conditions": [
+        "institutional M&A negotiation",
+        "buyer is PE or family office (professional negotiators who buy businesses daily)"
+      ],
+      "mechanism": "Institutional buyers are experienced negotiators who know a first-time seller is emotionally committed and unlikely to walk away; only a credible exit threat changes their calculation because losing the deal entirely exceeds their negotiating upside on any single term.",
+      "numbers": null,
+      "bounded_by": [
+        "Works for non-fundamental deal terms; fundamental warranty indemnities (you actually own the company, no hidden liabilities) cannot be walked away from"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that bankers' incentive is to close a deal (any deal) rather than to get the best deal for the seller, because a closed deal at a lower price still pays them whereas a failed deal pays nothing — making the seller's interests and the banker's interests structurally misaligned.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "bankers",
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "banker-seller relationship in institutional M&A"
+      ],
+      "mechanism": "Banker fees are contingent on close, not on maximizing seller price; the marginal commission difference from a higher multiple is smaller than the risk of losing the entire fee from a failed deal, so bankers optimize for deal closure.",
+      "numbers": null,
+      "bounded_by": [
+        "Performance ratchets partially align incentives but are insufficient to fully overcome the closure bias"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that the headline enterprise value in an M&A deal bears little relationship to the cash a seller actually receives, because deductions from the headline price include: earn-outs (contingent on future performance), seller financing (debt the buyer owes the seller), rolled equity (paper, not cash), transition bonuses to the management team, closing fees and escrow fees, and taxes at approximately 30%, such that a seller who announces a $100M exit may net $17M in after-tax cash.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "enterprise value",
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "institutional M&A deal",
+        "deal involves earn-outs, seller financing, rolled equity, and management bonuses"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "cash received as fraction of headline enterprise value",
+        "anchors": [
+          {"region": "headline enterprise value example", "value": "$100M"},
+          {"region": "after earn-outs ($25M), seller financing ($25M), rolled equity ($20M)", "value": "$30M cash"},
+          {"region": "after management bonuses ($6M)", "value": "$24M"},
+          {"region": "after taxes (~30%)", "value": "~$17M actual cash received"}
+        ]
+      },
+      "bounded_by": [
+        "Hormozi himself had no earn-out, no seller financing, and no transition services agreement in his Gym Launch sale — these deductions are negotiable"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that strategic buyers (companies in the same or adjacent space who can realize synergies) provide higher multiples than financial buyers (PE, family offices) because they can generate more revenue from the acquired business than a generic acquirer, meaning sellers should prioritize strategic acquirers even though financial buyers are more numerous.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "strategic buyer",
+      "topic": "Growth Path Selection",
+      "conditions": [
+        "institutional M&A sale"
+      ],
+      "mechanism": "A strategic buyer already has systems, distribution, and infrastructure the acquired business can leverage immediately; the incremental revenue they extract from the acquisition exceeds what a financial buyer can extract, allowing them to pay more and still hit their return targets.",
+      "numbers": null,
+      "bounded_by": [
+        "Financial buyers outnumber strategic buyers significantly, so finding a strategic buyer requires more outreach"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that sellers should negotiate banker fees off the cash they receive rather than off the total enterprise value, because paying fees on the full enterprise value (including earn-outs, seller financing, and rolled equity they have not yet received) drastically overpays the banker relative to actual cash in hand.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "banker fees",
+      "topic": "Founder Control and Equity Structure",
+      "conditions": [
+        "deal includes earn-outs, seller financing, or rolled equity",
+        "banker fee is a percentage of deal value"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "effective fee paid on $100M deal at 4% with earn-outs and equity rollover",
+        "anchors": [
+          {"region": "fee on total enterprise value ($100M)", "value": "$4M"},
+          {"region": "cash actually received by seller ($30M)", "value": "fee = $4M / $30M = ~13% of actual cash received"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that a seller should write down their acceptable exit price before starting the sale process with bankers, because bankers and buyer competition will psychologically inflate the seller's expectations during the process, making them unwilling to accept prices they would have been thrilled with before the process began.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Conscious Trade Accounting",
+      "conditions": [
+        "institutional M&A sale",
+        "seller who has not yet received offers"
+      ],
+      "mechanism": "Bankers pitch high valuations to win mandates; competitive IOIs anchor seller expectations upward; by the time LOIs arrive at lower prices, sellers feel cheated even if the number exceeds their original goal — a bias from anchoring to the inflated ceiling rather than the original floor.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that buyers systematically use the promise of a fast close as a negotiating lever to extract worse terms from sellers, and that sellers who accept lower terms in exchange for speed consistently do not receive a fast close — in his experience a stated 30-day close took 112 days.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "institutional M&A diligence and close phase"
+      ],
+      "mechanism": "Buyers have no contractual obligation to close quickly and bear no penalty for diligence extension; speed is a false promise used to extract real concessions.",
+      "numbers": {
+        "axis": "stated close timeline vs. actual close timeline in Hormozi's observed deals",
+        "anchors": [
+          {"region": "buyer's stated 30-day close promise", "value": "30 days"},
+          {"region": "actual close time in Hormozi's example transaction", "value": "112 days"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that definitions within a purchase agreement's definitions section carry more negotiating leverage than fighting specific clauses, because redefining one term propagates through the entire document and can change the effective meaning of the agreement more efficiently than clause-by-clause negotiation.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "purchase agreement negotiation",
+        "seller has an attorney"
+      ],
+      "mechanism": "Contract terms reference the definitions section repeatedly; changing how a defined term is scoped (e.g., narrowing the scope of a non-compete to exclude adjacent markets) runs through every clause that references that term simultaneously.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that non-compete clauses must be negotiated with explicit knowledge of the seller's next planned business activity because: (a) the scope may be written so broadly as to exclude adjacent opportunities (e.g., skincare sale prevents all beauty work), and (b) rolled equity can extend the effective non-compete period beyond the contractual term, since the equity holder agreement may contain a perpetual non-compete lasting as long as the seller holds that equity.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "non-competes",
+      "topic": "Founder Control and Equity Structure",
+      "conditions": [
+        "seller rolls equity into the acquiring entity",
+        "seller has a planned next business in an adjacent space"
+      ],
+      "mechanism": "Articles of incorporation for the acquiring entity can bind all equity holders to non-compete, which is separate from and potentially longer than the purchase agreement non-compete; breaching the equity-based non-compete requires forfeiting the rolled equity in addition to any contractual penalty.",
+      "numbers": null,
+      "bounded_by": [
+        "If the seller's next business is genuinely unrelated to the sold business, non-compete scope is less contentious"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that the seller should negotiate escrow holdback below 10% of the deal price, and that shorter escrow release schedules (e.g., 90 days then 12 months vs. 24 months) are a meaningful financial outcome because escrowed funds are unavailable to the seller and serve only as buyer insurance against post-close liabilities.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "escrow",
+      "topic": "Deal Structure and Ownership",
+      "conditions": [
+        "institutional M&A close",
+        "purchase agreement stage"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "escrow holdback as percentage of deal price",
+        "anchors": [
+          {"region": "target threshold for seller", "value": "under 10%"},
+          {"region": "buyer's typical opening ask", "value": "unspecified, often 20%+"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that an institutional buyer's due diligence includes direct interviews with the seller's customers and employees, and that a buyer may spend $250,000 or more on primary research to verify whether the business would survive without the founder, making pre-sale customer satisfaction and employee independence essential to deal completion.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Removal Test",
+      "conditions": [
+        "institutional due diligence phase",
+        "deal in the tens of millions range"
+      ],
+      "mechanism": "Buyers are purchasing future cash flows, not historical ones; customer sentiment and employee independence are the most direct proxies for whether those cash flows will continue post-acquisition.",
+      "numbers": {
+        "axis": "buyer research spend on customer and employee diligence",
+        "anchors": [
+          {"region": "Hormozi's estimate for APG's purchase of Gym Launch", "value": "~$250,000"}
+        ]
+      },
+      "bounded_by": [
+        "Buyers interview only people who already know about the deal — not general customer/employee population"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that selling a business is one of the most emotionally difficult processes a founder undergoes because it involves selling part of their identity, and that this emotional vulnerability is exploited by professional institutional buyers who are experienced at manipulating seller emotions to extract lower prices.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Conscious Trade Accounting",
+      "conditions": [
+        "founder who built the business personally",
+        "institutional buyer (PE/FO) on the other side"
+      ],
+      "mechanism": "Institutional buyers buy businesses every day; sellers sell once or a handful of times. The asymmetry in emotional attachment and experience gives professional buyers a structural negotiating advantage.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the best negotiating position in a business sale is to genuinely not want or need to sell, because indifference to the outcome removes the emotional leverage buyers exploit; a seller who would happily continue owning the business negotiates from strength whereas a seller who wants to exit at any price capitulates.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Worst-Case Crystallization",
+      "conditions": [
+        "institutional M&A negotiation"
+      ],
+      "mechanism": "Negotiating leverage derives from having alternatives; a seller who genuinely does not need to sell can credibly threaten to walk away from any term, which is the only signal that moves institutional buyers.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that a business in a declining revenue trajectory is effectively unsellable to institutional buyers because investors extrapolate even small declines to infinity, while businesses showing even modest growth receive disproportionately positive projections — making sustaining growth for 12-18 months before initiating a sale process essential for maximizing multiple.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "institutional sale targeting PE or family office",
+        "seller deciding when to initiate process"
+      ],
+      "mechanism": "Investors apply discounted cash flow logic; a declining trend reduces both the expected future cash flows and the certainty discount rate (it becomes harder to project a turnaround), compressing the multiple on both dimensions simultaneously.",
+      "numbers": null,
+      "bounded_by": [
+        "Older businesses at flat revenue are still more valuable than younger businesses at the same revenue due to track record reducing uncertainty"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that the minimum deal size for institutional buyers (PE and family offices) is approximately $5M in enterprise value, below which no real institutional capital is available, and that there is a qualitative distinction between these institutional deals and smaller private deals (dry cleaner, gym acquisitions) which are transacted at dramatically lower multiples and will not produce life-changing wealth.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "institutional buyers",
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "private equity or family office as buyer"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "minimum viable deal size for institutional buyers",
+        "anchors": [
+          {"region": "smallest institutional deal (PE/FO)", "value": "$5M enterprise value"},
+          {"region": "private retail investor deals (dry cleaner, small gym)", "value": "sub-$5M, 1-3x multiple, asset sales"}
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi sold Gym Launch (a gym licensing business) and Prestige Labs together in 2021 for $46.2 million. He structured the deal with no earn-out, no seller financing, no transition services agreement, and no consulting obligation — he rolled 34% equity back into the acquiring company (APG) and exited the remaining 66%. This deal structure was negotiated upfront as a condition of the sale because Hormozi did not want to remain involved. The acquiring company APG spent approximately $1 million in due diligence to verify the business would survive without him, including interviewing customers and employees and conducting primary research. The escrow and deposit were released in tranches (90-day and 12-month). The actual escrow signing was anticlimactic — the attorneys signed the final documents over approximately 6 hours on the sellers' behalf, and the funds were deposited electronically to all predefined parties simultaneously.",
+      "claim_index": 9,
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "On one of his earlier business sales (not Gym Launch), Hormozi accepted worse deal terms in exchange for a buyer's promise of a 30-day close. The actual close took 112 days. He identifies this as the lesson that taught him to treat buyer-promised speed as a fabricated negotiating lever rather than a genuine commitment, and in all subsequent deals he told buyers to take as much time as they needed, which he asserts returned negotiating power to him because the business continued growing during the extended diligence period.",
+      "claim_index": 13,
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "An acquaintance of Hormozi's had two separate nine-figure deals blow up in different years because the business was not in regulatory compliance with FTC requirements. The acquaintance believed the non-compliance was a source of competitive advantage and refused to remediate it. In both cases, legal diligence during the sale process surfaced the non-compliance and killed the deal. Hormozi uses this as an example of how legal fragility in the prerequisite stage can destroy institutional deals regardless of revenue size or growth trajectory.",
+      "claim_index": 1,
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "During the Gym Launch / Prestige Labs sale, Hormozi's CFO pushed the bankers to follow up again with a buyer who had initially passed. That buyer ultimately became the final acquirer at the agreed price. Hormozi uses this example to illustrate that bankers doing the minimum amount of work to close will drop warm leads unless the seller actively monitors outreach activity and insists on follow-up.",
+      "claim_index": 4,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "Hormozi describes the mechanics of a hypothetical $100M deal where the seller announces a $100M exit but actually receives approximately $17M in after-tax cash: $25M is in earn-outs contingent on future revenue targets, $25M is seller financing (debt to be collected over time), $20M is rolled equity in the acquiring entity, leaving $30M cash. From that $30M, management bonuses and equity distributions to team members total approximately $6M, leaving $24M. Federal taxes at approximately 30% reduce the take to roughly $17M after closing fees and escrow. Hormozi is explicit that he had none of these deductions in the Gym Launch deal.",
+      "claim_index": 9,
+      "topic": "Deal Structure and Ownership"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Before starting the business sale process, write down the minimum exit number you would accept and the reasons you would accept it; seal it before talking to bankers or receiving offers to prevent expectation inflation from distorting judgment.",
+      "topic": "Conscious Trade Accounting"
+    },
+    {
+      "text": "Negotiate banker fees off the cash proceeds you actually receive, not off the total enterprise value; this prevents paying 13% effective fees on cash when the headline deal includes earn-outs and seller financing.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "Ask every banker candidate: how many deals similar to yours (industry vertical and deal size) have they completed in the past 12-24 months? Reject bankers whose recent history does not match your company's type and scale.",
+      "topic": "Pipeline Constraint Over Execution"
+    },
+    {
+      "text": "Know what your next business will be before negotiating non-compete language; specify that next business explicitly in the non-compete definition to carve it out of the restricted activity scope.",
+      "topic": "Founder Control and Equity Structure"
+    },
+    {
+      "text": "Read the definitions section of every purchase agreement; fight scope at the definition level rather than the clause level to propagate favorable meanings throughout the entire agreement.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "Keep working capital in the business as low as reasonably possible before the sale process; excess working capital gets treated as included in the deal and transferred to the buyer rather than paid out to the seller.",
+      "topic": "Deal Structure and Ownership"
+    },
+    {
+      "text": "Sustain visible revenue growth for at least 12-18 months before initiating a sale process to maximize the growth-story multiple buyers are willing to pay.",
+      "topic": "Revenue Stage Transitions"
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "source_file": "he_makes_600000000yr_selling_bacon_orMbq2LtzKE.txt",
+  "primary_speaker": "Mike Salguero",
+  "concepts_addressed": [
+    "Equity Dilution and Founder Displacement",
+    "Profitability Over VC Speed",
+    "Continuity Upsell",
+    "Affiliate and Partner Channel Strategy",
+    "Service Business Margin Targets",
+    "Unit Economics and Profit Focus",
+    "Recruiting High-Leverage Talent",
+    "Focus Through Subtraction",
+    "Cohort-Based Churn Analysis",
+    "Early Profitability Proof",
+    "Offer Value Architecture",
+    "Channel Partner Quality",
+    "Founder Bottleneck",
+    "Prepayment Cash Flow Control",
+    "Debt-Free Bootstrap Path"
+  ],
+  "frameworks": [
+    {
+      "name": "Dollars Per Box Focus",
+      "definition": "A unit-economics operating discipline in which every employee and decision is anchored to the net profit generated per box shipped, including all variable costs (meat, packaging, dry ice, shipping, credit card fees), rather than top-line revenue.",
+      "concept": "Unit Economics and Profit Focus"
+    },
+    {
+      "name": "Barbell Hiring Strategy",
+      "definition": "A talent acquisition model that recruits at two extremes: recent graduates or early-career workers (hungry, high learning velocity) and experienced retirees (domain expertise, legacy-driven), deliberately avoiding mid-career professionals who optimize for title and resume advancement over output.",
+      "concept": "Recruiting High-Leverage Talent"
+    },
+    {
+      "name": "For Life Offer Stack",
+      "definition": "A retention architecture in which subscribers accumulate multiple ongoing product perks (e.g., free bacon for life, free ground beef for life) tied to continuous subscription, making cancellation progressively costlier as perk count grows.",
+      "concept": "Continuity Upsell"
+    },
+    {
+      "name": "Trojan Horse Influencer Outreach",
+      "definition": "An influencer acquisition tactic in which the brand leads with a genuine value exchange (featuring the influencer's recipes in shipped boxes) to earn a reply, then converts the conversation into a promotional partnership, paying the influencer in currency they prefer (fame/reach) rather than upfront cash.",
+      "concept": "Affiliate and Partner Channel Strategy"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Mike Salguero (ButcherBox, 2015-present) built a $550M+ annual revenue subscription meat business without any venture capital by maintaining strict per-box profitability from day one, targeting a $20 net profit per $129 box at launch and never allowing marketing spend to destroy that unit margin.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": "dollars per box",
+      "topic": "Unit Economics and Profit Focus",
+      "conditions": [
+        "Direct-to-consumer subscription box model",
+        "Physical consumable product with high shipping and cold-chain costs"
+      ],
+      "mechanism": "Keeping the entire team anchored to per-unit profit prevents the common VC-backed trap of growing revenue while destroying margin, ensuring the business is self-funding from the first shipment.",
+      "numbers": {
+        "axis": "ButcherBox revenue growth trajectory",
+        "anchors": [
+          {"stage": "Launch 2015", "revenue": "$0; $20 target net profit per $129 box"},
+          {"stage": "Scale", "revenue": "$550M+ annual revenue; ~30% gross margin; ~6% net margin"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to businesses requiring large upfront capital infrastructure (e.g., rocket manufacturing)",
+        "ButcherBox's gross margin (~30%) is structurally lower than software; net margin (~6%) reflects heavy marketing reinvestment"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) found that adding free bacon as a perpetual subscription perk ('bacon for life') reduced monthly churn and increased customer lifetime value more than the $4 cost of the bacon per box, because subscribers were unwilling to forfeit a recurring benefit they had already claimed.",
+      "type": "mechanism",
+      "speaker": "Mike Salguero",
+      "speaker_term": "bacon for life",
+      "topic": "Continuity Upsell",
+      "conditions": [
+        "Physical consumable subscription business",
+        "Perk must be meaningful enough that its loss creates real perceived cost at cancellation time"
+      ],
+      "mechanism": "Once a subscriber has claimed a 'for life' perk, cancellation requires forfeiting that perk permanently, raising the psychological cost of churn above the rational economic cost of the monthly subscription.",
+      "numbers": {
+        "axis": "Cost-benefit of bacon for life perk",
+        "anchors": [
+          {"item": "Cost of bacon per box", "value": "~$4"},
+          {"item": "CAC reduction from adding perk", "value": "CAC drops by more than $4 when bacon for life is added to offer"}
+        ]
+      },
+      "bounded_by": [
+        "Perk must be genuinely desirable; nominal perks (e.g., a discount coupon) do not create the same retention effect",
+        "Salguero later switched some 'for life' offers to 'for a year' as the economics tightened"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) stacked multiple 'for life' offers horizontally across different products over time, selling existing subscribers additional perpetual perks (e.g., ground beef for life at a one-time $50 fee) to deepen retention lock-in; ButcherBox's most loyal original subscribers accumulated six or seven such lifetime perks by 2024.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": "for life offers",
+      "topic": "Continuity Upsell",
+      "conditions": [
+        "Multi-SKU consumable subscription box",
+        "Business must have sufficient margin on perk items to sustain perpetual delivery"
+      ],
+      "mechanism": "Each additional stacked perk raises the switching cost incrementally, making the bundle progressively harder to replicate at any competitor and converting month-to-month subscribers into effectively permanent customers.",
+      "numbers": {
+        "axis": "For life offer accumulation by subscriber tenure",
+        "anchors": [
+          {"cohort": "Standard subscriber", "perks": "1 (bacon for life from original tech glitch)"},
+          {"cohort": "Longest-tenured original subscribers", "perks": "6-7 stacked for life offers"}
+        ]
+      },
+      "bounded_by": [
+        "Gross margin compression in inflationary periods (2021-2023) forced ButcherBox to shift some new perk offers from 'for life' to 'for a year'"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox, 2015) used Kickstarter as a capital-efficient pre-sale mechanism rather than raising venture capital, generating $210,000 in pre-sales from 1,100 boxes before shipping a single unit, which validated demand and funded initial inventory without equity dilution.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": "pre-sale",
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "Physical product with uncertain demand",
+        "Founder unwilling or unable to raise VC funding",
+        "Product category with existing passionate community (health/grass-fed beef)"
+      ],
+      "mechanism": "Pre-selling through Kickstarter shifts inventory risk to post-demand-confirmation, eliminates the need for equity capital, and provides a real demand test before committing to supply chain infrastructure.",
+      "numbers": {
+        "axis": "ButcherBox Kickstarter 2015 results",
+        "anchors": [
+          {"metric": "Fundraising target", "value": "$25,000"},
+          {"metric": "Day 1 actual sales", "value": "$40,000"},
+          {"metric": "Total pre-sales", "value": "$210,000 from 1,100 boxes"}
+        ]
+      },
+      "bounded_by": [
+        "Requires a product category with existing audience interest in the problem being solved",
+        "Kickstarter platform dynamics (verified badge) amplified results; same approach on a less-trafficked platform would have lower organic reach"
+      ]
+    },
+    {
+      "text": "Mike Salguero (CustomMade.com, 2008-2015) described how VC investors' incentives are structurally misaligned with founder profitability: VC firms earn management fees on deployed capital, creating pressure to raise and spend as much as possible as fast as possible, regardless of whether the business model supports that spend rate.",
+      "type": "mechanism",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Profitability Over VC Speed",
+      "conditions": [
+        "Traditional LP-funded VC structure with management fees on AUM",
+        "Founder retains operational control but faces social/reputational pressure from investors"
+      ],
+      "mechanism": "VC firms charge management fees (typically 2%) on committed capital regardless of returns, so deploying capital faster increases near-term fee income; this creates a structural incentive to push founders to raise larger rounds and spend them quickly, even when the unit economics do not support that pace.",
+      "numbers": {
+        "axis": "CustomMade.com burn rate at VC-backed scale",
+        "anchors": [
+          {"stage": "Pre-VC", "burn": "Approximately breakeven at $60k/month revenue"},
+          {"stage": "Post-$18M raise", "burn": "$500,000/month"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to VC firms that invest primarily via carried interest rather than management fees",
+        "Some founders successfully resist spend pressure; CustomMade's founders negotiated to retain voting rights but still lost culture"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) found that influencers in the health and wellness space (circa 2016) responded to commission-per-subscriber structures ($10-$15/month per retained subscriber) rather than upfront flat fees, allowing ButcherBox to remain profitable on box one while paying affiliates only on proven retention.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": "commissions for life",
+      "topic": "Affiliate and Partner Channel Strategy",
+      "conditions": [
+        "Health and wellness influencer market, circa 2016",
+        "Subscription business with monthly recurring revenue",
+        "Influencers who had not yet established strong monetization norms and were open to revenue-share structures"
+      ],
+      "mechanism": "Paying per retained subscriber (not per click or signup) aligns influencer incentives with subscriber quality rather than raw volume, and the monthly structure means ButcherBox pays only when the customer stays.",
+      "numbers": {
+        "axis": "ButcherBox influencer commission structure",
+        "anchors": [
+          {"format": "Per subscriber retained per month", "rate": "$10-$15/month"},
+          {"profitability": "Box one profit with influencer commission", "value": "Still profitable (penny or more) at $20 gross profit per box"}
+        ]
+      },
+      "bounded_by": [
+        "Dedicated email blasts to influencer audiences converted; tweets and Facebook posts did not",
+        "Influencers always needed an offer (e.g., $20 off, free bacon) combined with a last-chance urgency element to drive conversions",
+        "This structure was available in 2016 before influencer pricing matured; current rates are substantially higher"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) attributed a large share of ButcherBox's supply chain profitability to hiring the former head of operations from Omaha Steaks, whose domain expertise immediately identified cost savings far exceeding his salary; specifically, a meat purchasing hire identified that ButcherBox could ship three pounds of chicken instead of one at the same cost, delivering 6x the value improvement over the $0.25/pound target.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Recruiting High-Leverage Talent",
+      "conditions": [
+        "Physical product business with commodity input costs (meat, protein)",
+        "Founder lacks category domain expertise",
+        "Business shipping sufficient volume (60,000+ lbs/month) to justify senior expert hire"
+      ],
+      "mechanism": "Industry experts carry embedded knowledge of pricing norms, supplier leverage points, and specification gaps that take founders decades to accumulate; hiring the expert buys that knowledge instantly at a cost far below its value.",
+      "numbers": {
+        "axis": "Meat purchasing savings from expert hire",
+        "anchors": [
+          {"target": "Minimum savings to justify hire", "value": "$0.25/lb savings on 60,000 lb/month"},
+          {"actual": "Savings delivered", "value": "$1.50/lb (6x target); enabled 3x chicken quantity increase at same cost"}
+        ]
+      },
+      "bounded_by": [
+        "Expert must be post-non-compete; Mike specifically waited for the Omaha Steaks operations head's non-compete to expire",
+        "Barbell strategy works when the expert's domain is genuinely separable from the founder's core competency"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) maintains a 60% year-one retention rate on subscribers as of 2024, which he describes as best-in-class for a physical consumable subscription; this compares favorably to Shopify's cited 60% annual retention for new merchant customers.",
+      "type": "comparison",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Cohort-Based Churn Analysis",
+      "conditions": [
+        "Physical consumable subscription (meat delivery)",
+        "~430,000 active subscribers as of 2024"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Year-one customer retention benchmarks",
+        "anchors": [
+          {"company": "ButcherBox", "retention": "~60% year-one"},
+          {"company": "Shopify (merchant cohort)", "retention": "~60% annual"},
+          {"metric": "Implied monthly churn at 60% year-one retention", "value": "~3% per month"}
+        ]
+      },
+      "bounded_by": [
+        "Retention metric reflects all subscribers, not segmented by acquisition channel or perk tier",
+        "At 430,000 subscribers and 3% monthly churn, ButcherBox must acquire ~12,000 new subscribers/month just to hold flat"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) structured the company's entire physical supply chain as third-party partnerships (farming, processing, pick-pack-ship, distribution), retaining direct ownership only for dry ice production because dry ice supply is the single point of failure that would halt all shipments.",
+      "type": "conditional",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Focus Through Subtraction",
+      "conditions": [
+        "Physical subscription box business with complex cold-chain logistics",
+        "Single critical input whose failure would immediately halt 100% of revenue"
+      ],
+      "mechanism": "Owning every supply chain node absorbs management bandwidth without proportional strategic benefit; outsourcing to best-in-class specialists who compete on domain expertise delivers better quality at lower internal overhead, except at the one node whose failure is existential.",
+      "numbers": null,
+      "bounded_by": [
+        "ButcherBox conducts robust safety audits on all food-handling partners; partnership does not mean abdication of quality standards",
+        "Works for businesses where the supply chain can be held to spec via contracts; does not apply where proprietary process is the core competitive advantage"
+      ]
+    },
+    {
+      "text": "Mike Salguero (CustomMade.com) observed that raising venture capital and giving investors a compelling narrative (marketplace/Airbnb framing) locked the company into pursuing that model even after internal evidence showed it would not work, because investors threatened reputational consequences if management deviated from the funded thesis.",
+      "type": "mechanism",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Equity Dilution and Founder Displacement",
+      "conditions": [
+        "VC-backed company with LP narrative commitment (marketplace framing)",
+        "Founders retain legal voting control but are socially constrained by investor relationships"
+      ],
+      "mechanism": "VC firms enforce the funded thesis through network effects rather than voting rights: blacklisting from future rounds, damage to founder reputation with other institutional investors, and cultural pressure to hit the milestones that justified the valuation at which money was raised.",
+      "numbers": {
+        "axis": "CustomMade equity dilution over funding rounds",
+        "anchors": [
+          {"round": "Seed $500k convertible", "founder_ownership": "~93%"},
+          {"round": "Series A $1.9M at $7M pre-money", "founder_ownership": "~73%"},
+          {"round": "Series B $4M at $16M pre-money", "founder_ownership": "~60%"},
+          {"round": "Series C $18M ($10M equity + $4M debt + $4M secondary)", "founder_ownership": "~8% by exit"}
+        ]
+      },
+      "bounded_by": [
+        "Some founders negotiate super-voting structures or board composition to retain real control; CustomMade's founders had strong legal rights but insufficient board leverage",
+        "Salguero acknowledges CustomMade did grow from $35k/year to $60k/month revenue, so the VC capital did create growth; the problem was strategic lock-in at the model level"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) reverse-engineered Thrive Market's influencer list by concatenating predictable URL partner slugs (slash partner slash 1, 2, 3...) to build a list of ~400 health and wellness influencers, then contacted each with a genuine value exchange (recipe feature) rather than a cold sponsorship pitch.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": "reverse engineer",
+      "topic": "Affiliate and Partner Channel Strategy",
+      "conditions": [
+        "Early-stage DTC brand with no influencer relationships",
+        "Target influencer pool is concentrated in a competitor's or adjacent brand's affiliate program with public-facing URLs"
+      ],
+      "mechanism": "Competitor affiliate programs publicly expose their partners via predictable URL patterns; systematically enumerating those patterns yields a warm lead list of vetted influencers who have already demonstrated willingness to promote in the category.",
+      "numbers": {
+        "axis": "Influencer list built via reverse engineering",
+        "anchors": [
+          {"source": "Thrive Market affiliate URL enumeration", "list_size": "~400 influencers"},
+          {"conversion": "Trojan horse recipe outreach response rate", "value": "Not stated; described as sufficient to scale influencer channel to primary growth engine"}
+        ]
+      },
+      "bounded_by": [
+        "Works only when competitor affiliate programs use sequential or predictable URL patterns",
+        "Requires a genuine value exchange (recipe inclusion) to earn initial reply; cold sponsorship pitches without this hook had lower response rates"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) built a barbell hiring model that deliberately avoided mid-career professionals (roughly ages 30-45), finding that very early career workers and experienced retirees both produced higher output and engagement because both groups were motivated by the work itself rather than title advancement or resume building.",
+      "type": "assertion",
+      "speaker": "Mike Salguero",
+      "speaker_term": "barbell strategy",
+      "topic": "Recruiting High-Leverage Talent",
+      "conditions": [
+        "High-growth startup environment requiring long hours and ownership mindset",
+        "Roles where domain expertise matters more than political navigation"
+      ],
+      "mechanism": "Early-career workers maximize learning velocity and are grateful for any meaningful opportunity; retirees seek legacy and usefulness, not titles. Both orientations produce high discretionary effort. Mid-career workers optimize for label acquisition (VP title, brand-name company) and treat the role as a three-year resume line, creating misaligned incentives.",
+      "numbers": null,
+      "bounded_by": [
+        "Not universally true; some mid-career professionals with startup motivation perform at the barbell extremes",
+        "Barbell works better in roles where output is easily measurable; less applicable in functions requiring mid-career institutional relationships (e.g., enterprise sales)"
+      ]
+    },
+    {
+      "text": "Mike Salguero (CustomMade.com) described how rapidly replacing the original founding team with investor-recommended hires destroyed company culture, because the new hires had no tribal knowledge, no cultural values had been documented, and the founder was left surrounded by mercenaries rather than missionaries, resulting in an inability to enter the office at all in the final months.",
+      "type": "mechanism",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Profitability Over VC Speed",
+      "conditions": [
+        "VC-backed company under investor pressure to upgrade team",
+        "Cultural values not written down prior to first hires"
+      ],
+      "mechanism": "Replacing multiple team members simultaneously eliminates the social fabric that transmits culture implicitly; without documented values, new hires have no anchor and default to mercenary behavior (optimize for personal career, not company mission).",
+      "numbers": {
+        "axis": "CustomMade team replacement timeline",
+        "anchors": [
+          {"event": "Investor-recommended team audit", "result": "Tech, product, and marketing leads all replaced within ~1 year"},
+          {"outcome": "Founder psychological state", "value": "Unable to enter office; described as the lowest point of 8-year tenure"}
+        ]
+      },
+      "bounded_by": [
+        "Salguero acknowledged some original hires may have genuinely needed replacing; the problem was the pace and completeness of replacement, not the act of replacing"
+      ]
+    },
+    {
+      "text": "Alex Hormozi (Acquisition.com) noted that for DTC subscription brands, a Kickstarter pre-sale serves as a product-market fit test and a financing mechanism simultaneously: if no one pre-buys, the founder avoids building inventory for a product nobody wants; if they do buy, the deposits finance initial production without dilution.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "pre-sale",
+      "topic": "Early Profitability Proof",
+      "conditions": [
+        "Physical product with upfront inventory cost",
+        "Founder willing to wait for confirmed demand before committing to supply",
+        "Product category where consumers accept lead time (Kickstarter-trained expectations)"
+      ],
+      "mechanism": "Pre-selling decouples the demand test from the supply commitment; a failed pre-sale costs only the campaign setup effort, not inventory write-downs or sunk production costs.",
+      "numbers": null,
+      "bounded_by": [
+        "Works for physical products and some digital products; does not apply to service businesses where delivery begins at sale",
+        "Kickstarter-specific: buyers are trained to accept delivery delays; other platforms may set shorter expectation windows"
+      ]
+    },
+    {
+      "text": "Mike Salguero (ButcherBox) maintained ButcherBox's gross margin at approximately 30%, with net margin around 6-6.5%; the spread is consumed by roughly 10% of revenue going to operations (salaries, technology) and approximately 14% to marketing.",
+      "type": "quantified",
+      "speaker": "Mike Salguero",
+      "speaker_term": null,
+      "topic": "Service Business Margin Targets",
+      "conditions": [
+        "Physical consumable subscription box at $550M annual revenue",
+        "CPG model with heavy ongoing customer acquisition marketing"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "ButcherBox P&L structure as % of revenue",
+        "anchors": [
+          {"line": "Gross margin", "value": "~30%"},
+          {"line": "Operations (salaries + technology)", "value": "~10%"},
+          {"line": "Marketing", "value": "~14% (implied from 30% gross minus 6% net minus 10% ops)"},
+          {"line": "Net margin (EBITDA-ish)", "value": "~6-6.5%"}
+        ]
+      },
+      "bounded_by": [
+        "Gross margin compressed from ~30% to ~25% during 2021-2023 inflationary period, before two price increases partially restored it",
+        "Variable box contents (ribeye-heavy vs. cheaper cuts) cause per-box gross margin to vary significantly around the 30% average",
+        "Does not reflect capital return to shareholders; distributions are separate from operating margin"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "When ButcherBox launched on Kickstarter in 2015, a tech bug caused the system to include free bacon in every new subscriber's first box, not just as an explicit offer. Rather than fix the bug, Mike Salguero and his team decided to make free bacon a permanent marketing offer. Two years later, they escalated the offer to 'bacon for life' (free bacon in every box as long as the subscriber remained active), which became one of ButcherBox's strongest acquisition and retention tools. The accident that became policy seeded the entire 'for life' offer architecture that ButcherBox later systematized across multiple products.",
+      "claim_index": 1,
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "Mike Salguero identified the former head of operations at Omaha Steaks after the man's non-compete had expired, reached out via LinkedIn, and asked him to make supply chain introductions for ButcherBox. The single most important piece of advice that contact gave was to run the entire company on a 'dollars per box' metric: every person at Omaha Steaks knew how much money came off the line per box. Salguero adopted this as ButcherBox's operating religion from day one, which he credits as a primary driver of profitability at scale.",
+      "claim_index": 0,
+      "topic": "Unit Economics and Profit Focus"
+    },
+    {
+      "text": "To build their influencer outreach list, ButcherBox staff observed that Thrive Market's affiliate URLs followed a predictable sequential pattern (slash partner slash 1, slash partner slash 2, etc.). A VA systematically concatenated every possible URL in the sequence, visited each one, and extracted contact information for each influencer. This produced a list of ~400 vetted health-and-wellness influencers who had already opted into category promotion, at a cost of cents per record. ButcherBox then contacted each influencer not with a sponsorship pitch but with an offer to feature their recipe in the physical boxes, earning a reply before pitching ButcherBox itself.",
+      "claim_index": 10,
+      "topic": "Affiliate and Partner Channel Strategy"
+    },
+    {
+      "text": "Mike Salguero hired Nick Graham at $10/hour plus a $5 per-subscriber spiff to manually phone all 1,100 Kickstarter backers after the first shipment and ask if they wanted to become recurring subscribers. Roughly 40% (about 440 people) converted to subscription. Salguero noted he himself would never have made those calls and that the business would not exist without them, illustrating the principle that founders must invest in people to do the unscalable work the founder is unwilling or unable to do.",
+      "claim_index": 6,
+      "topic": "Recruiting High-Leverage Talent"
+    },
+    {
+      "text": "At CustomMade.com, Mike Salguero raised $1.9M by pitching the company as a marketplace (framing it as the potential 'Airbnb for custom goods'), when the actual business was a woodworker listing site. The marketplace framing generated investor excitement but locked the company into a pivot that required standing in the middle of highly customized transactions (often 60+ back-and-forth exchanges), extracting a 10% fee that made the economics unworkable. When management tried to abandon the marketplace model, investors threatened reputational consequences. The company eventually went through a friendly foreclosure after burning $500,000/month at peak.",
+      "claim_index": 9,
+      "topic": "Equity Dilution and Founder Displacement"
+    },
+    {
+      "text": "ButcherBox controls exactly one element of its supply chain internally: dry ice production, via two owned dry ice plants. Every other component (farming, meat processing, pick-pack-ship, last-mile delivery) is handled by third-party best-in-class partners held to tight specifications. Salguero explained the decision rule: if losing the capability would immediately halt 100% of revenue, own it; otherwise, outsource to specialists who know the function better than ButcherBox ever could.",
+      "claim_index": 8,
+      "topic": "Focus Through Subtraction"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Before taking a business to market, mentally switch sides of the table: imagine you just bought your own business today and identify every flaw you would immediately fix. Then fix those things first.",
+      "topic": "Unit Economics and Profit Focus"
+    },
+    {
+      "text": "When building early influencer relationships, pay in the currency the influencer values most (fame, reach, co-branding) rather than defaulting to cash; lead with a genuine value exchange before making any promotional ask.",
+      "topic": "Affiliate and Partner Channel Strategy"
+    },
+    {
+      "text": "Always find and enlist the person who has already built the business you are trying to build; buy their decades of accumulated knowledge through a hire or relationship rather than re-living their learning curve yourself.",
+      "topic": "Recruiting High-Leverage Talent"
+    },
+    {
+      "text": "When founding a capital-light startup, define the single 'kill shot' constraint that would end the business if unsolved (e.g., how to ship perishable meat) and resolve that constraint before committing resources to anything else.",
+      "topic": "Focus Through Subtraction"
+    },
+    {
+      "text": "For subscription businesses, evaluate per-unit profitability with all variable costs fully loaded (materials, packaging, shipping, payment processing, consumables) rather than using a stripped-down gross profit figure.",
+      "topic": "Unit Economics and Profit Focus"
+    }
+  ]
+}

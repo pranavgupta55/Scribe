@@ -1,0 +1,423 @@
+{
+  "source_file": "10_millionaires_asked_me_how_to_get_richer_6m6DCQMASEM.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Sales Process Optimization",
+    "Close Rate as Pricing Calibration Signal",
+    "Offer Value Architecture",
+    "Continuity Upsell",
+    "Script Compliance",
+    "Sales Team Scaling and Leadership",
+    "Training Culture Gap",
+    "Daily Sales Role-Play as Training Cadence",
+    "Top Performer Behavior Codification",
+    "Hiring as Capital Allocation",
+    "Activity-Based Time Valuation",
+    "Revenue Stage Transitions",
+    "Supply vs. Demand Constraint Diagnosis",
+    "Observable Reality Framework",
+    "Shame vs. Guilt: Navigating Social Signals",
+    "Ad Spend Optimization",
+    "Affiliate and Partner Channel Strategy",
+    "Distribution Channel Selection",
+    "Service Business Unit Economics",
+    "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+    "Founder Bottleneck",
+    "Partnership Value Test",
+    "Wealth-Relative Value Perception"
+  ],
+  "frameworks": [
+    {
+      "name": "Assume-Close Supplement Upsell Sequence",
+      "definition": "A two-stage upsell where a nutrition consult is booked 48 hours after the initial sale, then supplements are baked into the habit plan via assumed close (\"I need you to take this at this time\"), with billing charged to card on file.",
+      "concept": "Continuity Upsell"
+    },
+    {
+      "name": "Insult vs. Criticism Distinction",
+      "definition": "An insult attacks someone's character; a criticism states the gap between what was said and what happened. Using this distinction converts performance conflicts into actionable observable-reality statements.",
+      "concept": "Observable Reality Framework"
+    },
+    {
+      "name": "Vendor-First Channel Cracking Playbook",
+      "definition": "When entering any new acquisition channel, buy agency expertise first, use the agency period to train an in-house person, then transition to consulting relationship until in-house performance exceeds agency baseline.",
+      "concept": "Distribution Channel Selection"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi argues that selling fitness programs by goal (e.g., 40 weeks at $129/week to lose 40 pounds) converts at a materially higher rate than selling by program tier (e.g., 2k/3k/5k packages), because the customer is buying a guaranteed outcome rather than a time block.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "diagnostic sale",
+      "topic": "Offer Value Architecture",
+      "conditions": [
+        "fitness or body-transformation coaching",
+        "goal is measurable and time-bound (e.g., pounds lost)"
+      ],
+      "mechanism": "Pricing to goal anchors the purchase to the customer's desired outcome rather than to a product label, reducing perceived risk and increasing commitment to buy.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires that the coach can credibly set a weekly rate of progress (e.g., ~1 lb/week)"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that adding a supplement affiliate line to a fitness business typically increases revenue by roughly 50%, with zero additional delivery burden, because clients actively want product recommendations from their coach and the coach simply hands them the product and collects the margin split.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "affiliate thing for supplements",
+      "topic": "Affiliate and Partner Channel Strategy",
+      "conditions": [
+        "fitness coaching business with recurring clients",
+        "supplements sold on second appointment (not the first intake)"
+      ],
+      "mechanism": "Clients trust the coach's recommendation and want the products; the coach adds no delivery work because the supplier ships directly.",
+      "numbers": {
+        "axis": "incremental revenue lift from supplement affiliate sales",
+        "anchors": [
+          {"region": "no supplement affiliate line", "value": "baseline revenue"},
+          {"region": "with supplement affiliate line", "value": "~+50% of baseline"}
+        ]
+      },
+      "bounded_by": [
+        "Only introduced at second appointment to avoid overwhelming the initial sale"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that before switching advertising platforms when LTV-to-CAC is unsatisfactory (e.g., 3:1 on Meta), the correct first move is to raise LTV through a performance component or pricing change, because the same ad spend that yields 3:1 would yield 12:1 after a 3-4x LTV improvement, making platform saturation irrelevant.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "add in that performance thing",
+      "topic": "Ad Spend Optimization",
+      "conditions": [
+        "Meta ad spend with 3:1 LTV-to-CAC or similar sub-optimal ratio",
+        "diminishing returns already experienced at higher spend levels"
+      ],
+      "mechanism": "Raising LTV multiplies the effective return on every dollar already being spent; even with the same diminishing returns curve, the absolute return per dollar remains far higher after the LTV fix.",
+      "numbers": {
+        "axis": "LTV-to-CAC ratio before and after adding performance component",
+        "anchors": [
+          {"region": "current state (no performance add-on)", "value": "3:1"},
+          {"region": "after adding performance component", "value": "~12:1"},
+          {"region": "after adding performance + hitting diminishing returns", "value": "~9:1"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes the performance component can realistically be added to the offer"
+      ]
+    },
+    {
+      "text": "Alex Hormozi states that approximately 95% of companies do not know how to train salespeople effectively, instead hiring people and hoping they improve, with zero measurable training output.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "95 companies",
+      "topic": "Training Culture Gap",
+      "conditions": [],
+      "mechanism": null,
+      "numbers": {
+        "axis": "share of companies with effective sales training programs",
+        "anchors": [
+          {"region": "companies with real measurable sales training", "value": "~5%"},
+          {"region": "companies with no real training (hope-based)", "value": "~95%"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that salespeople improve through two mechanisms: (1) watching game tape of high performers to model behavior, analogous to how children learn, and (2) immediate corrective role-play on a single script element until the rep can execute it without thinking, then moving to the next element. Drilling one piece at a time frees cognitive capacity during live calls.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "game tape",
+      "topic": "Daily Sales Role-Play as Training Cadence",
+      "conditions": [
+        "sales teams where reps are underperforming relative to a top-performer benchmark"
+      ],
+      "mechanism": "Reps who must consciously recall what to say next cannot listen actively; automating each script section through drilling removes that cognitive load and improves call quality.",
+      "numbers": null,
+      "bounded_by": [
+        "Only works if a script already exists and is enforced; irrelevant if reps are not following any script"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that the first step in turning around a struggling sales team is script compliance, not training improvement, because training is irrelevant if no one follows the script to begin with. Only after universal script adoption can script tweaks affect team-wide outcomes.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "script becomes the Bible",
+      "topic": "Script Compliance",
+      "conditions": [
+        "sales team where each rep uses a personal selling style rather than a shared script"
+      ],
+      "mechanism": "If reps each say something different, changing the script does not change behavior; once all reps follow the same script, any script change propagates uniformly and becomes measurable.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that top sales closers are typically bad sales managers because the personality profile that creates sales killers (aggressive, competitive, self-oriented) is opposite to the one that creates effective coaches (attentive, caring, wants to invest in others). Sales directors should love teaching, not closing.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "killer ... trying to farm",
+      "topic": "Sales Team Scaling and Leadership",
+      "conditions": [
+        "when promoting from a sales team to a sales manager or director role"
+      ],
+      "mechanism": "Killers optimize for personal performance; coaches optimize for team performance. The motivational driver of a closer (win the deal) conflicts with the motivational driver of a trainer (win for someone else).",
+      "numbers": null,
+      "bounded_by": [
+        "Alex Hormozi cites Jacob (formerly at Gym Launch) as an exception: a top closer who also genuinely cared about coaching others, attributable to a specific combination of competitiveness and empathy"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that a founder with a sales-driven business should understand sales at a deep operational level themselves, because any sales director or manager gains leverage over the founder if the founder cannot evaluate their work, and can use that leverage to demand pay increases under threat of leaving.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "leverage over you",
+      "topic": "Sales Team Scaling and Leadership",
+      "conditions": [
+        "founder-led business where sales is the primary revenue driver",
+        "founder does not personally understand how to run sales"
+      ],
+      "mechanism": "Ignorance of core functions creates dependency; dependency creates negotiating leverage for the person with the knowledge.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that when a co-founder relationship has a performance gap (one person not executing on their stated role), the productive intervention is to state the gap factually as criticism (observed behavior vs. stated commitment) rather than as character attack, and to make the consequence explicit: either behavior changes or the partnership structure changes.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "insult versus criticism",
+      "topic": "Observable Reality Framework",
+      "conditions": [
+        "co-founder or senior partner relationship",
+        "one party not delivering on a stated responsibility (e.g., outbound sales)"
+      ],
+      "mechanism": "Framing as observable gap (you said X, reality is Y) removes the emotional charge of personal attack and makes the conversation solvable; the other party can respond to facts but not to character judgments.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires genuine willingness to follow through on the stated consequence"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a cannabis paid advertising agency generating $600k in top-line revenue but only $90k in profit does not have a people problem; it has a model problem, and needs to either 10x its price per customer or 10x delivery efficiency before hiring is viable.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "model problem",
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "solo-founder service agency",
+        "revenue-to-profit ratio heavily compressed by delivery overhead"
+      ],
+      "mechanism": "The founder is the highest-value employee; until the business generates significantly more profit than the founder needs to live on, there is no financial room to hire without destroying unit economics.",
+      "numbers": {
+        "axis": "annual profit needed before first hire is viable",
+        "anchors": [
+          {"region": "current state ($90k profit, $600k revenue)", "value": "no room to hire"},
+          {"region": "viable hire threshold (Hormozi estimate)", "value": "~$900k profit equivalent, or 10x current"}
+        ]
+      },
+      "bounded_by": [
+        "Applies to service businesses with high founder-delivery load; less applicable to SaaS or productized models"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that when acquiring a new company, simply raising price by 50% (not changing product or sales script, only the number stated at close) increased both the close rate and revenue, because the business was mispriced below market-clearing level. All the price increase flows directly to the bottom line.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "we increased the price by 50%",
+      "topic": "Close Rate as Pricing Calibration Signal",
+      "conditions": [
+        "business with above-market close rates indicating underpricing",
+        "no change to offer, script, or positioning"
+      ],
+      "mechanism": "High close rates are a signal of underpricing (demand exceeds supply at current price); raising price moves toward market-clearing level and can paradoxically increase both close rate (qualified buyers replace unqualified ones) and revenue.",
+      "numbers": {
+        "axis": "price increase applied to acquired company",
+        "anchors": [
+          {"region": "initial target (Hormozi preference)", "value": "2x (100% increase)"},
+          {"region": "negotiated outcome with founder", "value": "50% increase"},
+          {"region": "close rate outcome", "value": "went up after 50% price increase"}
+        ]
+      },
+      "bounded_by": [
+        "Worked because the business had a high close rate indicating underpricing; would not apply to businesses with low close rates driven by pricing"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that for local service businesses at ~$5-7M revenue with strong cash flow, the highest-leverage hire is someone with deep financial discipline (a controller or CFO-type) because they will identify cost savings large enough to fund their own salary within 90 days, and create room for subsequent operational hires.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "find your salary",
+      "topic": "Hiring as Capital Allocation",
+      "conditions": [
+        "local service business at $5-10M revenue",
+        "founder lacks financial discipline in tracking expenses"
+      ],
+      "mechanism": "A financially disciplined operator identifies overhead waste the founder is too busy to see; the savings both fund the hire and reveal capacity for additional strategic hires.",
+      "numbers": {
+        "axis": "expected cost savings from first financial hire",
+        "anchors": [
+          {"region": "Hormozi estimate for ~$5-7M revenue business", "value": "~$250k/year from top-line review"},
+          {"region": "expected timeline to identify savings", "value": "within 90 days"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes the founder has not already applied financial discipline",
+        "Most applicable to businesses that have grown rapidly without a finance function"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that for a founder who has never paid a high-cost employee (e.g., $250k+/year), the constraint is belief, not economics, analogous to media buyers who have never spent more than $5k/day; each new compensation level is a psychological threshold, not a financial one, once the business generates the revenue.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "new territories",
+      "topic": "Activity-Based Time Valuation",
+      "conditions": [
+        "founder at revenue stage where high-cost operational or financial talent is warranted"
+      ],
+      "mechanism": "Founders pattern-match to the highest salary they have previously paid and treat exceeding it as uniquely risky; the actual unit economics of a high-quality hire at 2-3x a current employee's salary are often superior.",
+      "numbers": {
+        "axis": "annual salary thresholds founders perceive as psychological barriers",
+        "anchors": [
+          {"region": "first barrier for media buyers (parallel)", "value": "$5k/day in ad spend"},
+          {"region": "second barrier", "value": "$10k/day"},
+          {"region": "salary parallel", "value": "$250k/year, $500k/year, $1M/year"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that for local service businesses, Meta ads require creative refreshment every 21 days because creative fatigue in local markets is rapid; this necessitates an in-house creative function, since agencies cannot sustainably produce sufficient creative volume for local campaigns.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "creative gets tired in local market",
+      "topic": "Ad Spend Optimization",
+      "conditions": [
+        "Meta/Facebook paid social ads",
+        "local market (single city or metro area)"
+      ],
+      "mechanism": "Local audiences are small and audiences see the same creative multiple times quickly; ad fatigue accelerates relative to national campaigns where fresh audiences can absorb the same creative longer.",
+      "numbers": {
+        "axis": "creative refresh cycle for local Meta ads",
+        "anchors": [
+          {"region": "national campaigns", "value": "longer cycle (not specified)"},
+          {"region": "local Meta ads", "value": "~21 days before creative fatigue"}
+        ]
+      },
+      "bounded_by": [
+        "Applies to Meta/social; PPC (Google search) operates differently and can be managed via agency without this constraint"
+      ]
+    },
+    {
+      "text": "Alex Hormozi recommends a vendor-first approach when entering any new acquisition channel: buy the agency first to learn, then hire an in-house person during the agency engagement, then transition from done-for-you to consulting until the in-house team outperforms the agency baseline; if in-house never outperforms, the consulting relationship continues indefinitely.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "whenever I do anything in a new thing I start with vendors",
+      "topic": "Distribution Channel Selection",
+      "conditions": [
+        "founder entering a marketing channel they do not yet understand operationally"
+      ],
+      "mechanism": "Agency first provides immediate results and operational knowledge; in-house hire is trained during that window; transition to consulting preserves the relationship while shifting economics to the founder's favor.",
+      "numbers": null,
+      "bounded_by": [
+        "Transition timing depends on in-house hire's ramp speed; the shift to consulting only makes sense when the hire is capable of handling the channel independently"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that for a dental practice with measurably strong outcomes and a long patient history (10-15 years), the immediate lever is to raise prices, not improve the offer or marketing, because prices set by surveying the market and charging slightly less structurally underprice the practice relative to its delivered value. He illustrates this with his own father's practice, which is booked 9 years out yet prices at market rate, leaving the same volume deliverable at double the revenue.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "just raise your price",
+      "topic": "Close Rate as Pricing Calibration Signal",
+      "conditions": [
+        "professional practice with strong demand signals (long wait list, high close rate)",
+        "pricing set by competitive survey (charge less than market)"
+      ],
+      "mechanism": "Demand far exceeding supply is a direct signal of underpricing; the practice is rationing its limited supply at below-market rates, meaning price increases absorb directly to profit with no volume loss.",
+      "numbers": {
+        "axis": "price multiplier available without volume loss when demand far exceeds supply",
+        "anchors": [
+          {"region": "practice booked 9 years out, price at market", "value": "current revenue"},
+          {"region": "practice booked 9 years out, price doubled", "value": "2x revenue, same workload"}
+        ]
+      },
+      "bounded_by": [
+        "Conditional on having a genuine demand surplus (strong close rate or long waitlist)",
+        "Does not apply to practices with active conversion problems"
+      ]
+    },
+    {
+      "text": "Alex Hormozi argues that for e-commerce brands building original IP (characters, universes), the economic engine (product revenue) should fund the media/IP investment, and the two should be designed as a symbiotic system where media drives brand love and product sales, rather than treated as alternatives. He cites Gary Vaynerchuk's VFriends as a current-era parallel to Disney's model.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "symbiotic relation",
+      "topic": "Attention-to-Revenue Funnel",
+      "conditions": [
+        "e-commerce brand with existing product revenue and an IP/universe-building ambition"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Requires that the IP investment produce measurable audience growth or purchase-intent signals to justify continued reinvestment; if more media spend does not attract more buyers, the model is not working"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi described a company he acquired where he proposed doubling the price; after nine calls the founder would not agree, so they settled on a 50% price increase. The sales team was told only to say a new number at the close, with no other script changes. Close rates went up and revenue increased significantly because the business had been mispriced below market-clearing level.",
+      "claim_index": 10,
+      "topic": "Close Rate as Pricing Calibration Signal"
+    },
+    {
+      "text": "Alex Hormozi referenced Jacob, a former Gym Launch rep who started on the call floor and worked up through setting to closing, eventually beating adult gym owners at sales despite being young. Jacob was able to become an effective sales manager because his motivation was to help his teammates, not just close deals personally. This illustrated the rare case of a top closer who can also coach.",
+      "claim_index": 6,
+      "topic": "Sales Team Scaling and Leadership"
+    },
+    {
+      "text": "Alex Hormozi described a used car dealership owner who had grown his lot from 15 to 100 vehicles, added a service shop, and was considering commercial vans because van margins were $6k-$12k versus $2k for typical cars. Hormozi recommended prioritizing a financial hire to carve out $250k in recoverable overhead before adding any new business line, because the bandwidth to pursue the van opportunity would only exist after the operational and financial foundation was solid.",
+      "claim_index": 11,
+      "topic": "Hiring as Capital Allocation"
+    },
+    {
+      "text": "Alex Hormozi described a paid advertising agency owner in cannabis who had $600k in top-line revenue but only $90k in profit, working all hours to serve clients. Hormozi diagnosed this as a model problem rather than a people problem: the owner needed to either charge 10x more or make delivery 10x more efficient before hiring anyone, because the founder is always the highest-value employee and there was no financial room to add staff.",
+      "claim_index": 9,
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "Alex Hormozi used a fitness coaching case to demonstrate goal-based pricing: rather than offering 2k/3k/5k program tiers, he suggested telling a client who wants to lose 40 pounds that it will take 40 weeks at 1 pound per week, priced at $129 per week, totaling $5,160 automatically. The client is buying the result (becoming 160 lbs) not a program, with a guarantee to continue until the goal is hit. Hormozi noted this closes at much higher rates than program-tier pricing.",
+      "claim_index": 0,
+      "topic": "Offer Value Architecture"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Sell supplements to fitness clients on their second appointment (nutrition consult), not the first sale. At the consult, bake supplements into their daily habits using an assumed close, then charge the card already on file.",
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "When a co-founder or partner is not executing on their stated role, have a direct conversation that names the specific gap (you said X, we have Y) and states the consequence clearly rather than avoiding it or softening it.",
+      "topic": "Partnership Value Test"
+    },
+    {
+      "text": "When building a sales team, cut the script by roughly half; most scripts are twice as long as necessary, and simpler scripts get higher compliance and are easier to train on.",
+      "topic": "Script Compliance"
+    },
+    {
+      "text": "For high-ticket professional service businesses (e.g., dental implants), raise prices first before optimizing the offer or improving marketing, especially when demand exceeds capacity.",
+      "topic": "Close Rate as Pricing Calibration Signal"
+    },
+    {
+      "text": "For agency owners who anticipate clients bringing services in-house, pre-address this at contract stage by framing the transition path: move from done-for-you to consulting when they are ready, and stay on a consulting basis until their team outperforms your baseline.",
+      "topic": "Distribution Channel Selection"
+    },
+    {
+      "text": "For local paid social campaigns (Meta), plan to refresh creative every 21 days and build an in-house creative capability rather than relying on an agency for this specific function.",
+      "topic": "Ad Spend Optimization"
+    },
+    {
+      "text": "For local PPC and SEO, start with a specialist agency rather than hiring in-house; use the agency engagement to train an in-house person who will eventually take over.",
+      "topic": "Distribution Channel Selection"
+    },
+    {
+      "text": "When a sales team is underperforming, do not start with training; start with universal script enforcement. Only after everyone follows the same script does training or script iteration produce measurable team-wide results.",
+      "topic": "Script Compliance"
+    }
+  ]
+}

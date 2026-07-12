@@ -1,0 +1,387 @@
+{
+  "source_file": "speedrun_30k_service_arbitrage.txt",
+  "primary_speaker": "Eric (unnamed host of service arbitrage channel)",
+  "concepts_addressed": [
+    "Cost Arbitrage Model",
+    "Google Business Profile Optimization",
+    "Market Selection Criteria: Growth + Pain + Targeting",
+    "Lead-Cost-Closeout Math",
+    "Avatar Targeting Strategy",
+    "Volume-First Scaling",
+    "Cold-Start Trust Architecture",
+    "Service Business Unit Economics",
+    "Margins",
+    "Single-Channel Domination",
+    "Channel Partner Quality",
+    "Founder Bottleneck"
+  ],
+  "frameworks": [
+    {
+      "name": "Remote Service Arbitrage Model",
+      "definition": "Create keyword-optimized Google Business Profile listings in high-demand, low-competition service markets; collect inbound leads; dispatch pre-sourced contractors at a 20% markup; pocket the spread without doing any physical labor.",
+      "concept": "Cost Arbitrage Model"
+    },
+    {
+      "name": "GBP Ranking Formula",
+      "definition": "Three inputs determine Google Business Profile rank: (1) exact-match keywords in the business name, (2) total review count exceeding the current top-ranked competitor, and (3) geographic specificity of service area targeting.",
+      "concept": "Google Business Profile Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In the remote service arbitrage model (Google Business Profile-based lead generation for high-ticket home services such as deck building, HVAC, and asphalt paving), a target of $30,000 per month in profit requires approximately $150,000 in gross revenue at a 20% operator margin, which in turn requires roughly 75 qualified inbound leads and 15 closed jobs per month, assuming an average job value of $10,000-$18,000.",
+      "type": "quantified",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "service arbitrage business",
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "Google Business Profile-based lead generation",
+        "High-ticket home services ($10k-$18k average job value)",
+        "Operator taking 20% margin",
+        "Three ranked profiles across distinct geographic sub-markets"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Monthly revenue targets and required inputs",
+        "anchors": [
+          {"region": "Gross revenue target", "value": "$150,000/month"},
+          {"region": "Operator profit at 20% margin", "value": "$30,000/month"},
+          {"region": "Leads required (estimated)", "value": "~75 leads/month"},
+          {"region": "Closed jobs required", "value": "~15 jobs/month"},
+          {"region": "Average job value (deck building, Toronto)", "value": "$10,000-$18,000"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes contractor availability and ability to close quotes",
+        "Assumes profiles rank in top three Google Business Profile results",
+        "Does not account for seasonal demand variation"
+      ]
+    },
+    {
+      "text": "In Google Business Profile (GBP) local pack rankings for home services, including exact-match keywords (service type + city) in the business profile name is a stronger ranking signal than review count alone; a profile with four reviews and a keyword-optimized name can outrank a competitor with 60 reviews and a generic name.",
+      "type": "mechanism",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "keyword-optimized names",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Maps local pack ranking",
+        "Home service categories (deck building, HVAC, plumbing)",
+        "Markets with fewer than ~150 total competitor reviews"
+      ],
+      "mechanism": "Google's local ranking algorithm uses name-to-query match as a primary relevance signal; when a business name contains the exact search phrase, Google interprets the business as maximally relevant to that query and ranks it above competitors with higher review counts but generic names.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply once competitors also use keyword-optimized names at higher review counts",
+        "Effectiveness decreases in ultra-competitive markets where all top-three already use optimized names"
+      ]
+    },
+    {
+      "text": "For a Google Business Profile in a home-service market, the minimum review count needed to rank in the top three is approximately equal to the review count of the current top-ranked competitor plus a small buffer (roughly 10-15%); in lower-competition suburban markets this threshold is as low as 20-35 reviews, while in high-demand city-center markets it can be 100+ reviews.",
+      "type": "quantified",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "recommended review count",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Home service GBP listings in Canadian/North American metro areas",
+        "Service area business profiles (no physical address listed)"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Review count threshold to rank top-three by market size",
+        "anchors": [
+          {"region": "Small suburban market (e.g., Scarborough deck builders)", "value": "~20 reviews"},
+          {"region": "Mid-size suburban market (e.g., Mississauga deck builders)", "value": "~35 reviews"},
+          {"region": "Large city-center market (e.g., Toronto deck builders)", "value": "~100 reviews"}
+        ]
+      },
+      "bounded_by": [
+        "Review count alone is insufficient if business name lacks keyword optimization",
+        "Applies only when all other GBP optimizations (description, service area, photos) are completed"
+      ]
+    },
+    {
+      "text": "For Google Business Profile local search rankings in home services, a service-area business profile (no physical address, service radius only) is easier and faster to verify than a location-based profile, and is sufficient to rank competitively in markets where competitors have fewer than ~150 reviews.",
+      "type": "assertion",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "service area business",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Home service verticals (deck building, HVAC, plumbing, asphalt)",
+        "Markets where top competitors have fewer than ~150 reviews"
+      ],
+      "mechanism": "Google requires a physical address verification video only for location-based profiles; service-area profiles require only a basic verification video showing street sign, company signage, and vehicle, making them accessible to operators without a physical storefront.",
+      "numbers": null,
+      "bounded_by": [
+        "Location-based profiles rank slightly better than service-area profiles when both exist in the same market",
+        "Does not apply in ultra-competitive markets where physical address is a differentiator"
+      ]
+    },
+    {
+      "text": "In remote service arbitrage for high-ticket home services, the operator margin (the spread between what the customer pays and what the subcontractor charges) is typically 20% of gross job value; the contractor must be aware of and accept this markup as a condition of the partnership.",
+      "type": "assertion",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "20% cut",
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Home service arbitrage model",
+        "High-ticket services ($5,000-$20,000+ job values)",
+        "Contractor sourced via Facebook Marketplace or Facebook groups"
+      ],
+      "mechanism": "The operator provides the contractor with job leads and handles all customer-facing communication; in return, the contractor accepts a lower effective job price so the operator can add the 20% markup before presenting the quote to the customer.",
+      "numbers": {
+        "axis": "Revenue split per closed job",
+        "anchors": [
+          {"region": "Operator take (20% of job value)", "value": "e.g., $2,000 on a $10,000 job"},
+          {"region": "Contractor receives (80% of job value)", "value": "e.g., $10,000 on a $12,000 quoted job"}
+        ]
+      },
+      "bounded_by": [
+        "Contractor must agree to the arrangement upfront",
+        "Customer must accept the marked-up quote; does not apply if customer negotiates price down"
+      ]
+    },
+    {
+      "text": "In remote service arbitrage (Google Business Profile lead gen + contractor dispatch), the operator should collect a deposit equal to their full profit margin at the point of job approval, before the contractor begins work; the contractor is paid their portion only after job completion.",
+      "type": "assertion",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "take a deposit for the job which is going to be your profit",
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "Home service arbitrage with a subcontractor",
+        "Job value sufficient to justify a deposit request (typically $5,000+ jobs)"
+      ],
+      "mechanism": "Collecting the operator margin upfront as a customer deposit eliminates the risk of the contractor completing work and the operator failing to collect; the contractor's payment is contingent on job completion, aligning their incentives with delivery.",
+      "numbers": {
+        "axis": "Cash flow timing on a $10,000 job (quoted at $12,000)",
+        "anchors": [
+          {"region": "Job approval: operator collects deposit", "value": "$2,000 (operator profit, Day 0)"},
+          {"region": "Job completion: contractor paid", "value": "$10,000 (contractor fee, Day N)"}
+        ]
+      },
+      "bounded_by": [
+        "Requires customer willingness to pay a deposit, which is standard in high-ticket home services but not universal"
+      ]
+    },
+    {
+      "text": "In Google Business Profile local search for home services, for every 1,000 monthly searches for a relevant keyword in a given city, an optimized and top-ranked profile can expect approximately one inbound lead per day; a single well-ranked profile in a city with 3,000 relevant monthly searches should generate approximately three leads per day.",
+      "type": "quantified",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "one lead per day",
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "Google Business Profile ranked in top three",
+        "Inbound search (not paid ads)",
+        "High-intent search queries (service type + city)"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Monthly search volume to daily lead conversion rate",
+        "anchors": [
+          {"region": "1,000 monthly searches", "value": "~1 lead/day"},
+          {"region": "3,000 monthly searches (Toronto deck builder example)", "value": "~3 leads/day (conservative)"},
+          {"region": "10,000+ monthly searches (full Toronto keyword cluster)", "value": "up to 10 leads/day (theoretical max with multiple profiles)"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes top-three ranking, not just listed",
+        "Seasonal variation in home service search demand not accounted for",
+        "Assumes conversion from searcher to caller consistent with local search norms"
+      ]
+    },
+    {
+      "text": "Facebook Marketplace is a reliable source for finding subcontractors willing to work on a lead-dispatch arrangement because contractors who post there typically lack consistent inbound lead flow and will accept job referrals at a 20% discount off their normal rate rather than sitting idle.",
+      "type": "mechanism",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "Facebook Marketplace",
+      "topic": "Channel Partner Quality",
+      "conditions": [
+        "Home service trades (deck building, HVAC, plumbing, asphalt)",
+        "Contractors who self-promote on Facebook Marketplace or Facebook groups"
+      ],
+      "mechanism": "Contractors posting on Facebook Marketplace are doing so because they lack a reliable inbound lead source; their willingness to accept a discounted job rate (80% of job value) is rational because any revenue at 80% is preferable to zero revenue from sitting idle.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to contractors with full backlogs or established referral networks",
+        "Quality of contractors found this way is variable; vetting is required"
+      ]
+    },
+    {
+      "text": "In Google Business Profile-based service arbitrage, targeting multiple distinct sub-markets (separate city profiles) rather than one broad service area profile produces better lead volume because Google ranks profiles higher for searches in the specific city when the profile targets only that city.",
+      "type": "mechanism",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "designated business profile according to each area",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Service area business profiles (no physical address)",
+        "Metropolitan areas with distinct suburban sub-markets (e.g., Toronto, Mississauga, Scarborough)"
+      ],
+      "mechanism": "Google's local ranking algorithm weights geographic relevance of the service area; a profile targeting only Mississauga ranks better for 'deck builder Mississauga' searches than a profile targeting the whole GTA, because geographic specificity signals stronger local relevance.",
+      "numbers": null,
+      "bounded_by": [
+        "Requires creating and verifying separate GBP profiles per sub-market, increasing setup time",
+        "Each profile needs its own phone number (e.g., via CallRail) to avoid Google account flags"
+      ]
+    },
+    {
+      "text": "Incentivizing real people at high-foot-traffic locations (college campuses, festivals, events) to leave Google Business Profile reviews in exchange for small gifts ($3-$5 value items) produces reviews that are less likely to be removed by Google than purchased reviews from offshore review farms, because the accounts are authentic local Google accounts with normal usage history.",
+      "type": "comparison",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "real people who are leaving their reviews on their real gmail accounts",
+      "topic": "Cold-Start Trust Architecture",
+      "conditions": [
+        "Google Business Profile review acquisition",
+        "Local geographic market where real users are physically accessible"
+      ],
+      "mechanism": "Google's review spam detection uses account authenticity signals (account age, geographic consistency, usage patterns); reviews from established local accounts with normal browsing history pass these filters at much higher rates than bulk-purchased reviews from newly created or offshore accounts.",
+      "numbers": {
+        "axis": "Review acquisition approach comparison",
+        "anchors": [
+          {"region": "Purchased offshore reviews", "value": "High deletion rate (Google removes most)"},
+          {"region": "Incentivized real local accounts (chips, Gatorade, $5 Amazon card)", "value": "Low deletion rate; estimated 100 reviews per 2 hours of campus outreach"}
+        ]
+      },
+      "bounded_by": [
+        "Incentivizing reviews violates Google's terms of service; business could be delisted if flagged",
+        "Effectiveness depends on geographic density of foot traffic at chosen locations"
+      ]
+    },
+    {
+      "text": "In service arbitrage for high-ticket home services (e.g., deck building), the niche selection criterion is that the service must be high-ticket enough to achieve $1,000/day in profit within 30 days; services with average job values below ~$1,000 require too many closed jobs per month to be viable for a solo operator starting from zero.",
+      "type": "conditional",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "go something relatively high ticket",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Solo operator, starting from zero",
+        "Target: $1,000/day profit within 30 days",
+        "Google Business Profile as primary lead channel"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Average job value viability threshold",
+        "anchors": [
+          {"region": "Low-ticket services (<$1,000 avg job)", "value": "Too many jobs required; not viable for 30-day sprint"},
+          {"region": "High-ticket services ($10,000-$18,000 avg job, e.g., deck building)", "value": "15 closed jobs = $30,000/month at 20% margin; viable"}
+        ]
+      },
+      "bounded_by": [
+        "Applies only when operator cannot run multiple profiles at extremely high volume",
+        "Does not apply if operator already has established contractor network and can scale job volume"
+      ]
+    },
+    {
+      "text": "In Google Business Profile service arbitrage, market selection should favor industries and geographic areas where the current top-three competitors have low review counts (under 150) and non-keyword-optimized names, because these signals indicate the market is uncontested and can be captured with moderate review acquisition effort.",
+      "type": "conditional",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "low competition and high search demand",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Google Business Profile local pack",
+        "Home service verticals",
+        "New operator with no existing reviews or brand"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Competitor review count as market entry difficulty signal",
+        "anchors": [
+          {"region": "Top competitors with <50 reviews and generic names", "value": "Easy entry; ~20-50 reviews needed"},
+          {"region": "Top competitors with 100-150 reviews and optimized names", "value": "Moderate difficulty; 150+ reviews needed to rank"},
+          {"region": "Top competitor with >500 reviews", "value": "Hard entry; avoid unless search volume is very high"}
+        ]
+      },
+      "bounded_by": [
+        "Search demand must also be sufficient; low competition in low-demand markets is not valuable"
+      ]
+    },
+    {
+      "text": "Running three Google Business Profile listings across three distinct sub-markets simultaneously (rather than one large profile) is a scalable framework for a solo service arbitrage operator to reach 75+ inbound leads per month because the aggregate search demand across the three sub-markets is sufficient even if each individual market alone is not.",
+      "type": "assertion",
+      "speaker": "Eric (unnamed host of service arbitrage channel)",
+      "speaker_term": "three business profiles in good areas",
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "Metropolitan area with multiple distinct suburbs (Toronto/Mississauga/Scarborough example)",
+        "Each sub-market has 500-3,500 relevant monthly searches",
+        "All three profiles optimized and ranked in top three"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Combined lead volume from three sub-market GBP profiles",
+        "anchors": [
+          {"region": "Toronto profile (3,000+ monthly searches)", "value": "~3 leads/day"},
+          {"region": "Scarborough profile (~550 monthly searches)", "value": "~0.5 leads/day"},
+          {"region": "Mississauga profile (~3,500 monthly searches)", "value": "~1-2 leads/day"},
+          {"region": "Combined conservative estimate", "value": "4-6 leads/day, 100+ leads/month"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes all three profiles achieve top-three ranking",
+        "Does not include seasonal demand variation"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The speaker references his own HVAC arbitrage business (Rapid HVAC Solutions, North York) as proof that the Google Business Profile ranking strategy works in practice. The profile ranks second for 'HVAC North York' search queries and generates real inbound calls that are tracked via CallRail, with call recordings showing conversations lasting multiple minutes, indicating genuine customer intent rather than bot traffic.",
+      "claim_index": 1,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "During the speedrun, the speaker observed that a deck builder in the Toronto market with only four reviews was outranking competitors with 27 and 60 reviews. The four-review business had an exact-match keyword phrase ('deck builder Toronto') in its name, while the higher-review competitors used generic company names. This live example illustrates the dominance of name-keyword optimization over review count in GBP local pack ranking.",
+      "claim_index": 1,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "A student of the speaker went to a World Cup watch party at a bar and used the occasion to collect Google reviews in exchange for asking patrons for a favor. This illustrates how any crowded social gathering serves as a venue for incentivized review acquisition, and how the method can produce a large volume of authentic local reviews in a short time.",
+      "claim_index": 9,
+      "topic": "Cold-Start Trust Architecture"
+    },
+    {
+      "text": "The speaker describes a Facebook Marketplace listing where he offered a $25 Amazon gift card in exchange for getting five people to leave a review, without stating the nature of the task in the public listing description. He received a large volume of messages from people interested in the offer, demonstrating that Facebook Marketplace is a viable channel for coordinating incentivized review campaigns at scale.",
+      "claim_index": 9,
+      "topic": "Cold-Start Trust Architecture"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Use SEMrush (or a comparable keyword volume tool) to verify that the target service + city keyword combination has sufficient monthly search volume before investing time in creating and verifying a Google Business Profile; aim for at least 1,000 monthly searches across relevant intent-matched terms.",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "text": "Name each Google Business Profile using the format: [Brand] + [Service Type] + [City Name] (e.g., 'Expert Deck Builder and Repairs Mississauga'); include the exact keyword phrase people search for and add the city name directly in the business name, not just in the service area settings.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use CallRail (or equivalent call-tracking software) to assign a unique phone number to each Google Business Profile so that call volume per market can be tracked separately and all calls are forwarded to a single answering number.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "When creating a Google Business Profile verification video, include: (1) the local street sign near the mailing address, (2) a printed business name sign affixed to a vehicle, and (3) business tools or equipment in the vehicle; start the car to show authorization. The video is only used for verification and is never shown publicly.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Set the service area for each GBP profile to a tight 10-mile radius (10 zip/postal codes) around the designated sub-market address; do not expand the service area to cover multiple cities in one profile, as geographic precision improves local ranking.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use ChatGPT to generate an SEO-optimized GBP description that includes the target keyword (service type + city) in every sentence; keep the description under 750 characters.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "When sourcing subcontractors via Facebook Marketplace or contractor Facebook groups, pitch the arrangement as: you generate all the leads and handle customer communication in exchange for 20% of the job value; emphasize that the contractor pays nothing upfront and only earns money when jobs close.",
+      "topic": "Channel Partner Quality"
+    },
+    {
+      "text": "When answering inbound calls as a service arbitrage operator, book a contractor site visit for an accurate quote rather than giving a price on the first call; frame this as standard professional practice ('to give you an accurate estimate, we'd send one of our professionals out').",
+      "topic": "Founder Bottleneck"
+    },
+    {
+      "text": "Acquire GBP photos by searching for a comparable company in a non-competing geographic market (e.g., Seattle for a Toronto-based deck building profile) and using screenshots of their work photos; avoid photos with identifiable faces.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Build and optimize business profiles one sub-market at a time, reaching the target review count and achieving a top-three ranking in the first market before moving to the second; this sequencing produces faster revenue results than building all three simultaneously.",
+      "topic": "Volume-First Scaling"
+    }
+  ]
+}
