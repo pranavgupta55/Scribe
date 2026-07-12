@@ -1,3 +1,5 @@
+> **BEFORE FIRING ANY WORKFLOW:** read `docs/TOKEN_BUDGET.md` and run the pre-fire checklist in §4. The 2026-07-11 miscalc (task `t-o0fev7`) burned 3× the estimate — the fix lives in that doc.
+
 # Graph Rebuild — Plan
 
 This is the durable plan for rebuilding the Scribe knowledge graph. Every sub-agent dispatched during this rebuild reads the appropriate slice of this document plus its phase-specific brief. Read this file end-to-end before launching any phase.
