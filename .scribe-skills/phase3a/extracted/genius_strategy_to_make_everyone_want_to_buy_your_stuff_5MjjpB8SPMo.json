@@ -1,0 +1,390 @@
+{
+  "source_file": "genius_strategy_to_make_everyone_want_to_buy_your_stuff_5MjjpB8SPMo.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Offer Value Architecture",
+    "Avatar Targeting Strategy",
+    "Continuity Upsell",
+    "Pricing Anchoring Strategy",
+    "Before/After Proof Engine",
+    "Activation as Primary Churn Lever",
+    "Content-Offer Congruence",
+    "Tiered Offer Pricing",
+    "Recurring Service Pricing Structure",
+    "Customer Retention Mechanics",
+    "Promise-Delivery Gap",
+    "Distinctiveness Requires Active Effort",
+    "Founder Bottleneck",
+    "Educational vs Entertainment Content",
+    "Attention-to-Revenue Funnel",
+    "Sales Targeting and Lead Qualification",
+    "Unit Economics and Profit Focus"
+  ],
+  "frameworks": [
+    {
+      "name": "Epiphany Bridge Testimonial Template",
+      "definition": "A structured interview format capturing before/after results along two axes (internal and external) at three stages (before, decision moment, after) to produce testimonial content that doubles as lifecycle ads.",
+      "concept": "Before/After Proof Engine"
+    },
+    {
+      "name": "Willingness-to-Pay Feature Buckets",
+      "definition": "A four-bucket framework for recurring community offers identifying the features with highest observed willingness to pay: exclusive access, exclusive content, exclusive events, and exclusive newsletter/publication.",
+      "concept": "Offer Value Architecture"
+    },
+    {
+      "name": "Bonus Rent Test",
+      "definition": "Each bonus in an offer must independently justify the full price of the offer on its own; any bonus that fails this test is cut, forcing consolidation to only the highest-value items.",
+      "concept": "Offer Value Architecture"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that people do not buy because of aggregate value stacking; they buy because one specific item in the offer is worth the price to them. A buyer only needs a single reason to purchase, so each bonus in an offer must independently justify the full price rather than contributing fractional value to a sum.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer Value Architecture",
+      "conditions": [],
+      "mechanism": "A buyer only needs one reason to say yes; any single item that alone exceeds the price clears the purchase threshold, making aggregate value irrelevant to the conversion decision.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that within a recurring community or membership offer, the four features with the highest observed willingness to pay are exclusive access (e.g., direct access to the host), exclusive content, exclusive events, and exclusive newsletter or publication. Other features such as exclusive merch, discounts, and priority support had lower willingness to pay in the same research study.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer Value Architecture",
+      "conditions": ["recurring community or membership offer context"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "willingness-to-pay rank among recurring community features",
+        "anchors": [
+          {"region": "highest willingness to pay", "value": "exclusive access, exclusive content, exclusive events, exclusive newsletter"},
+          {"region": "lower willingness to pay", "value": "exclusive merch, discounts, priority support"}
+        ]
+      },
+      "bounded_by": ["applies within a recurring community context; willingness-to-pay ranking may differ for non-community product types"]
+    },
+    {
+      "text": "Alex Hormozi claims that at Gym Launch, offering daily live Q&A calls (60 minutes, structured question format) where members could talk to him directly was a major conversion boost for sales reps, because personal access to the founder is a compelling sales narrative. However, he reduced call frequency gradually over 12 months (5 days/week to 4, 3, 2, 1 day/week) as he replaced himself with other hosts, and call attendance roughly halved before stabilizing.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": ["recurring community with a high-profile founder", "founder removal is gradual over 12+ months"],
+      "mechanism": "Customers value access to the specific high-credibility individual; removing the founder abruptly destroys perceived value, but a slow 12-month replacement with heavy edification and training maintains most of the attendance floor.",
+      "numbers": {
+        "axis": "founder call frequency during extraction timeline",
+        "anchors": [
+          {"region": "start of extraction", "value": "5 days/week"},
+          {"region": "full removal at ~12 months", "value": "1 day/week, then zero"},
+          {"region": "attendance impact", "value": "roughly halved, then stabilized"}
+        ]
+      },
+      "bounded_by": ["does not apply when team members can genuinely answer questions better than the founder; in that case, audience will naturally shift"]
+    },
+    {
+      "text": "Alex Hormozi states that customers are bloodhounds for value: if members go to the founder rather than the team for answers, it is because the founder provides more value, not because of familiarity alone. The only sustainable substitution paths are full founder removal (forcing use of the team) or a slow, edification-heavy transition where the team is coached to demonstrate superior competence on specific topics.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Founder Bottleneck",
+      "conditions": ["membership or community business with live Q&A or support calls"],
+      "mechanism": "Customers self-select toward the highest-value source of answers; artificial routing fails unless the alternative genuinely surpasses the founder on the specific question domain.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi argues that upsells happen at the point of greatest need, not the point of greatest satisfaction. Presenting an upsell immediately after an event (when members have just consumed a massive amount of value) is poorly timed because the prospect is satisfied and their marginal appetite for more is near zero; the better timing is before the next value delivery when they are anticipating the next thing.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": ["event-based or cohort-based community or program"],
+      "mechanism": "Satisfaction temporarily suppresses demand; the optimal upsell moment is when the customer is hungry for the next result, not immediately after their most recent win. Open-looping the next event keeps desire elevated.",
+      "numbers": null,
+      "bounded_by": ["timing matters less for purely transactional offers with no fulfillment component"]
+    },
+    {
+      "text": "Alex Hormozi observed that churn spiked after a major event at which he spent approximately $2 million creating an exceptional experience, because attendees felt satisfied and complete. Churn going into the event went down, suggesting that anticipation of an upcoming event suppresses churn more effectively than delivering a great event already completed.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Customer Retention Mechanics",
+      "conditions": ["recurring membership or subscription with live events"],
+      "mechanism": "Anticipated future events function as churn suppressors because members want to stay to access the upcoming thing; past events provide no forward-looking retention hook once completed.",
+      "numbers": {
+        "axis": "churn rate relative to event timing",
+        "anchors": [
+          {"region": "going into a major event", "value": "churn went down"},
+          {"region": "immediately after the event", "value": "churn spiked"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi recommends that event upsells should be structured so that access to the next event is locked behind a 6-to-12-month milestone, making it something members earn rather than receive freely. This transforms the event from something members are missing out on into something they are looking forward to earning, which improves both retention and upsell conversion.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": ["recurring membership with in-person or virtual events"],
+      "mechanism": "Locking the event behind tenure converts FOMO (fear of missing out on something already happening) into anticipatory desire (excited to earn access to a future thing), shifting the emotional valence from anxiety to motivation.",
+      "numbers": {
+        "axis": "event lock-in period recommendation",
+        "anchors": [
+          {"region": "minimum lock-in", "value": "6 months"},
+          {"region": "optimal lock-in", "value": "12 months"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi contends that if you want to attract better customers you must be willing to turn away worse customers; selectively excluding lower-quality avatars through your bonuses, messaging, and funnel design is a prerequisite for upgrading the customer base. Attempting to take all comers while complaining about low-quality customers is an unresolvable contradiction.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Avatar Targeting Strategy",
+      "conditions": ["information products, communities, or coaching programs with tiered buyer quality"],
+      "mechanism": "Bonuses and promises act as a filter; designing them for the best-fit avatar naturally repels lower-fit avatars, because what appeals to one psychographic repels another. Changing the filter changes the inbound population.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi describes a case from Gym Launch where his business earned 70 times more profit than a competitor with the same customer acquisition cost and similar sales volume. The key difference was customer lifetime value: his customers were worth approximately $42,000 each versus the competitor's approximately $5,000 per customer. The competitor ran broad fitness ads; Hormozi ran ads requiring gym owners to have a signed lease, at least one employee, and at least 30 members.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Avatar Targeting Strategy",
+      "conditions": ["B2B coaching or services with a segmented buyer pool"],
+      "mechanism": "Qualification requirements in ads pre-filter to the highest-LTV segment of the market; broader targeting reaches more people but the average LTV of those people is far lower, destroying profit even at equal acquisition volume.",
+      "numbers": {
+        "axis": "customer lifetime value and resulting profit comparison",
+        "anchors": [
+          {"region": "Hormozi (qualified avatar)", "value": "$42,000 LTV, 70x more profit"},
+          {"region": "competitor (broad avatar)", "value": "$5,000 LTV, same CAC"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the primary reason the information marketing industry has a reputation for scamming is not the content taught but the promises made. Operators get in trouble by making specific income promises (e.g., you will make $10,000 per month in 30 days) that the vast majority of buyers fail to achieve. Dave Ramsey avoids scam accusations by making only mathematically inarguable promises: if you save $2,000 per month, you will have $2,000 more per month.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Promise-Delivery Gap",
+      "conditions": ["education, coaching, or information products with income-related outcomes"],
+      "mechanism": "The reputational liability comes entirely from the gap between promised outcomes and delivered outcomes at the population level; promises that are trivially true for any buyer who follows the advice cannot generate refund disputes or public accusations.",
+      "numbers": null,
+      "bounded_by": ["applies specifically to income-promise framing; non-income educational promises (e.g., learn a skill) have a different failure mode"]
+    },
+    {
+      "text": "Alex Hormozi argues that Dave Ramsey grows faster by purely providing value without making explicit outcome claims, because when content provides value without ask, the audience grows at a much faster rate and then people want to buy more on their own volition. He frames free content as evidence that the paid content is worth purchasing.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Educational vs Entertainment Content",
+      "conditions": ["information business with both free and paid content products"],
+      "mechanism": "High-quality free content functions as proof of paid content quality; a reader who receives genuine value without a pitch concludes that the paid tier must be proportionally better, reducing sales resistance.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that when responding to public negativity or hit pieces, the correct strategy is to ignore it entirely and become 10 times louder with positive content, rather than engaging or buying fake positive threads. Engagement amplifies the critic's reach by introducing the criticism to the speaker's own audience.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Distinctiveness Requires Active Effort",
+      "conditions": ["any public-facing information or education business"],
+      "mechanism": "Negative content holds a fixed share of total mind space about a brand; increasing positive output volume mathematically shrinks the proportion of attention the criticism occupies. Acknowledging criticism does the opposite: it redistributes the speaker's own audience to the critic's content.",
+      "numbers": null,
+      "bounded_by": ["buying Reddit threads or directly countering hit pieces is explicitly called out as ineffective because new threads will replace them"]
+    },
+    {
+      "text": "Alex Hormozi argues that as long as price points are not too close together, a low-ticket and high-ticket product can coexist without cannibalization, because the right type of customer for a high-ticket product simply wants more support and implementation help and is willing to pay for it. The clear differentiator between tiers should be implementation access (high marginal cost) versus unlimited scalable content (zero marginal cost).",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Tiered Offer Pricing",
+      "conditions": ["coexisting low-ticket and high-ticket product lines with clearly separated price points"],
+      "mechanism": "Cannibalization only occurs when the value distinction between tiers is unclear; when the high-ticket tier offers implementation that is genuinely scarce (limited by team time), it attracts a different psychographic than the unlimited-access low-ticket tier.",
+      "numbers": null,
+      "bounded_by": ["does not apply when price points are too close together, creating perceived equivalence"]
+    },
+    {
+      "text": "Alex Hormozi concludes from the Gym Launch experience that recurring service pricing must be set at or below a customer's worst-month affordability threshold, not calibrated to average revenue or average-month affordability. Gym Launch priced at $4,000 per month for gym owners who took home an average of $30,000 per year; even though the service generated an average of $120,000 in additional profit annually, customers would cancel during a bad month when the $4,000 payment exceeded their cash position.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Recurring Service Pricing Structure",
+      "conditions": ["recurring services sold to owner-operated SMBs with variable monthly cash flow"],
+      "mechanism": "SMB owner cash flow is highly variable; a price that is affordable in an average month becomes unaffordable in a bad month, triggering cancellation. Pricing at or below the worst-month affordability floor removes this cash-triggered churn entirely, making retention a function of value rather than cash timing.",
+      "numbers": {
+        "axis": "price vs. customer worst-month affordability at Gym Launch",
+        "anchors": [
+          {"region": "Gym Launch price", "value": "$4,000/month ($48,000/year)"},
+          {"region": "average gym owner take-home", "value": "$30,000/year"},
+          {"region": "value delivered by service", "value": "$120,000 in additional annual profit on average"},
+          {"region": "competitor pricing achieving 36-40+ month LTV", "value": "$800-$1,200/month"}
+        ]
+      },
+      "bounded_by": ["does not apply to enterprise buyers with stable, predictable monthly cash flows; primarily relevant to owner-operated SMBs"]
+    },
+    {
+      "text": "Alex Hormozi observed that competitors selling a similar service to gym owners at $800-$1,200 per month achieved 36-to-40-plus month LTV, while Gym Launch at $4,000 per month had significantly shorter LTV despite generating more absolute value per customer. He concluded the $800-$1,200 range was sustainable because it was below the gym owner's worst monthly income floor, ensuring the subscription survived bad months.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Recurring Service Pricing Structure",
+      "conditions": ["recurring coaching or service subscription sold to SMB owners, fitness industry context"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "price point vs. LTV comparison in gym owner market",
+        "anchors": [
+          {"region": "Gym Launch (high price)", "value": "$4,000/month, shorter LTV"},
+          {"region": "UK competitor (sustainable price)", "value": "$800-$1,200/month, 36-40+ month LTV"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that revenue numbers alone are highly misleading in the information and community business: a person making $400,000 per month in pure profit with no ads and minimal team (such as Hamza, who employs only a sibling and lives at home) can have higher absolute profit than someone reporting $1,000,000 per month in revenue who spends heavily on ads, a sales team, and operations.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Hamza",
+      "topic": "Unit Economics and Profit Focus",
+      "conditions": ["information product or community business where marketing spend varies widely"],
+      "mechanism": null,
+      "numbers": {
+        "axis": "revenue vs. profit comparison for lean vs. spend-heavy operators",
+        "anchors": [
+          {"region": "lean operator (Hamza)", "value": "~$200,000/month revenue (estimated), ~$400,000/month profit potential via affiliates"},
+          {"region": "spend-heavy operator", "value": "$1,000,000/month revenue, profit potentially less than $400,000 after ads, sales team, and ops"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi describes a lifecycle ad format called Epiphany Bridge Testimonials that captures success story interviews along a structured two-axis (internal/external), three-stage (before/decision moment/after) template. The interview documents what obstacles the customer mentally overcame in the purchase decision process, making the testimonial persuasive specifically to prospects who share the same objections. The resulting interview content functions simultaneously as testimonial, motivational content, and a retargetable ad.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "Lifecycle Ads",
+      "topic": "Before/After Proof Engine",
+      "conditions": ["any business with documented customer results and a sales-resistance problem at the prospect level"],
+      "mechanism": "The decision-moment section of the interview directly mirrors the prospect's internal objections (e.g., I didn't know if it was legit; I found someone with a model like mine); hearing a past customer articulate and then overcome those exact objections is more persuasive than any direct pitch because it comes from a non-selling third party.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi contends that transitioning from a low-ticket front-end model to adding a high-ticket tier should only be done after enough successful low-ticket graduates self-identify as ready for a next level by asking for something more. Launching the high-ticket offer prematurely (before demand signals emerge organically from graduates) results in poor-fit customers and weak retention at the higher tier.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Continuity Upsell",
+      "conditions": ["education or coaching business where front-end graduates are the target for high-ticket upsell"],
+      "mechanism": "Organic demand signals from existing successful customers are proof that the high-ticket tier solves a real next problem; building the tier before that demand signal exists means building for a market that hasn't demonstrated it wants the thing yet.",
+      "numbers": null,
+      "bounded_by": ["once demand is demonstrated, the activation point can be engineered (award system, milestone trigger) to systematize the identification of qualified upgrade candidates without broadcasting to the whole community"]
+    },
+    {
+      "text": "Alex Hormozi argues that the low-ticket front-end of a community business remains the primary economic engine even after a high-ticket tier is added; the front-end generates the demand pool from which high-ticket members are sourced. This means investment and attention should remain concentrated on the front-end offer quality, not shifted to optimizing the high-ticket tier.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Attention-to-Revenue Funnel",
+      "conditions": ["community or membership business with a tiered offer structure"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi states that at events with a mixed-qualification audience, converting 80% of attendees is achievable if everyone in the room is qualified; the relevant conversion metric is not the percentage of total audience but the percentage of qualified attendees. A 10% conversion rate from 100 attendees may represent poor offer-audience fit, while 80% conversion from 20 qualified attendees in the same room represents exceptional performance.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Targeting and Lead Qualification",
+      "conditions": ["live event upsell context with mixed-qualification audience"],
+      "mechanism": "Qualification is the binding variable for close rate at events; the offer, pitch length, and presentation quality are secondary to whether the audience member has the means, the need, and the readiness to buy.",
+      "numbers": {
+        "axis": "close rate as a function of audience qualification at live events",
+        "anchors": [
+          {"region": "fully qualified room", "value": "up to 80% close rate"},
+          {"region": "unqualified or mixed room", "value": "low close rate regardless of offer quality"}
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi described how he ran daily Zoom calls for gym owner members at Gym Launch, 60 minutes each day, using a strict structured format: members submitted questions in a specific chat format (revenue, new members per month, main constraint, what they had tried) and he answered over 100 questions per hour by skipping anyone who did not follow the format. He did this mid-day because gym owners had free time between morning and afternoon peak hours. He credits this as a major boost in sales conversions because reps could say you can talk to Alex every day. Over 12 months he gradually reduced from 5 days/week to 0, replacing himself with other hosts; attendance roughly halved before stabilizing.",
+      "claim_index": 2,
+      "topic": "Founder Bottleneck"
+    },
+    {
+      "text": "A participant in Hormozi's workshop ran a credit repair business. Her fastest-result hack was removing a negative mark in 24 to 72 hours. She said that the moment she named that specific timeline in her offer, prospects stopped caring about everything else and just wanted to buy. This illustrates Hormozi's point that a single high-value bonus can override all other factors in the purchase decision.",
+      "claim_index": 0,
+      "topic": "Offer Value Architecture"
+    },
+    {
+      "text": "Alex Hormozi spent approximately $2 million on a major event, making it exceptional. Immediately after the event, churn spiked. But churn going into the event had gone down. He concluded the right model is to always have a next event announced, so members are always anticipating the next one rather than reflecting on having just consumed the last one. He now recommends locking event access behind a 6-to-12-month tenure to make it something members earn.",
+      "claim_index": 5,
+      "topic": "Customer Retention Mechanics"
+    },
+    {
+      "text": "Alex Hormozi did a consulting day with another gym business coach who had the same sales velocity (same number of units sold, similar CAC) but Hormozi's business made 70 times more profit. The competitor's customers were worth $5,000; Hormozi's were worth $42,000. The competitor ran broad ads to anyone in fitness who wanted to make money. Hormozi's ads required the prospect to already be a gym owner with a signed lease, at least one employee, and at least 30 members. He discovered this avatar profile by analyzing the top 20% of his customers and codifying what they had in common, then making those traits the qualification filter embedded throughout the entire funnel.",
+      "claim_index": 8,
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "Alex Hormozi described the School Games winner for the month who was a high-ticket operator selling a $10,000 coaching package on insurance topics. The person joined School wanting the recorded content prize and simply called his existing customers to offer a $999/year School community membership instead. He got three people on quickly and found the sales were so easy that he switched his model entirely, signing up 50 people into the lower-ticket School community in about 20 days.",
+      "claim_index": 12,
+      "topic": "Tiered Offer Pricing"
+    },
+    {
+      "text": "Dave Ramsey was cited by Alex Hormozi as the exemplar of building an information business without scam accusations. Ramsey sells courses, events, an app, and coaching, yet is never accused of fraud because his promises are mathematically inarguable: if you save money, you have more money. Hormozi contrasts this with operators who promise $10,000 per month in 30 days and notes that the vast majority of buyers fail to achieve this, creating the gap that generates refund disputes and public accusations.",
+      "claim_index": 9,
+      "topic": "Promise-Delivery Gap"
+    },
+    {
+      "text": "Alex Hormozi described Gym Launch's pricing history to illustrate the worst-month pricing principle. At $4,000 per month, Gym Launch delivered on average $120,000 in additional annual profit to gym owners who took home only $30,000 per year on average. Despite quadrupling owner income, customers still cancelled during bad months because $4,000 exceeded their available cash in those months. Competitors in the UK selling at $800-$1,200 per month achieved 36-to-40-plus month LTV on similar services by pricing below the worst-month cash floor.",
+      "claim_index": 13,
+      "topic": "Recurring Service Pricing Structure"
+    }
+  ],
+  "practices": [
+    {
+      "text": "For any event, always announce the next event before the current one ends and lock access to the next event behind 6-to-12 months of tenure so it becomes something members earn.",
+      "topic": "Continuity Upsell"
+    },
+    {
+      "text": "At your own events, only you (the host) should sell; keep pitches short because attendees already like you and a short direct offer presentation is more effective than a long pitch. Time the pitch before a break so sales reps can close while attendees are primed.",
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Identify your top 20% of customers, determine what they have in common, and turn those common attributes into hard qualification requirements embedded in every level of the funnel: ads, landing pages, sales calls, and onboarding messaging.",
+      "topic": "Avatar Targeting Strategy"
+    },
+    {
+      "text": "Run success story interviews using the Epiphany Bridge template (internal/external axes, before/decision/after stages) to produce content that simultaneously serves as testimonials, community motivation, and lifecycle retargeting ads.",
+      "topic": "Before/After Proof Engine"
+    },
+    {
+      "text": "Apply the bonus rent test to every element of your offer: ask if you removed everything else and only offered this one bonus, would people still buy for it alone? Use this as the standard for whether to include or cut a bonus.",
+      "topic": "Offer Value Architecture"
+    },
+    {
+      "text": "Do not publicly acknowledge hit pieces or negative content about your business; instead, increase positive output volume to mathematically shrink the proportion of mind space the criticism occupies.",
+      "topic": "Distinctiveness Requires Active Effort"
+    },
+    {
+      "text": "When segmenting an event room for upsell, focus conversion metrics on qualified attendees only, not total attendees; sort and measure upsell results only within the qualified subset.",
+      "topic": "Sales Targeting and Lead Qualification"
+    },
+    {
+      "text": "Offer high-ticket coaching or implementation access only to front-end members who have demonstrably hit an objective success milestone (e.g., $1M revenue, 1,000 subscribers); let the milestone trigger the conversation rather than broadcasting the high-ticket offer to the whole community.",
+      "topic": "Continuity Upsell"
+    }
+  ]
+}

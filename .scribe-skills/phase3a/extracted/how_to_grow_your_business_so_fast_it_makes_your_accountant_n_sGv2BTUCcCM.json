@@ -1,0 +1,457 @@
+{
+  "source_file": "how_to_grow_your_business_so_fast_it_makes_your_accountant_n_sGv2BTUCcCM.txt",
+  "primary_speaker": "Alex Hormozi",
+  "concepts_addressed": [
+    "Supply vs. Demand Constraint Diagnosis",
+    "Supply Constraint Levers",
+    "Scaling Bottleneck Diagnosis",
+    "Founder Bottleneck",
+    "Price Communication",
+    "Tiered Offer Pricing",
+    "Margins",
+    "Sales Process Optimization",
+    "Avatar Targeting Strategy",
+    "Channel Optimization Before Expansion",
+    "Focus Through Subtraction",
+    "Offer and Audience Pruning",
+    "Constraint Identification",
+    "Revenue Stage Transitions",
+    "Pricing Anchoring Strategy"
+  ],
+  "frameworks": [
+    {
+      "name": "Supply vs. Demand Triage",
+      "definition": "A binary diagnostic framework that classifies every business growth problem as either supply-constrained (too few capacity to serve existing demand) or demand-constrained (too few customers for existing capacity) before prescribing any intervention.",
+      "concept": "Supply vs. Demand Constraint Diagnosis"
+    },
+    {
+      "name": "Three Supply Levers",
+      "definition": "For supply-constrained businesses, three ordered levers: (1) raise prices substantially to reduce load and increase margin, (2) change the service-to-delivery ratio from one-on-one to one-to-many, (3) hire and train additional staff to parallel the founder's capacity.",
+      "concept": "Supply Constraint Levers"
+    },
+    {
+      "name": "Accordion Constraint Cycle",
+      "definition": "The natural business dynamic where solving a demand constraint creates a supply constraint and vice versa; growth stalls when founders fail to recognize which constraint is currently binding and keep working on the one they already solved.",
+      "concept": "Constraint Identification"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Alex Hormozi asserts that every business has exactly one of two core problems at any given time: too few customers (demand constraint) or too little capacity (supply constraint), and that a business cannot have both simultaneously.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "supply constrained or demand constrained",
+      "topic": "Supply vs. Demand Constraint Diagnosis",
+      "conditions": [],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "The restaurant example illustrates a mispriced business that exhibits both patterns at different times of week, though the underlying constraint in any given slot is still one or the other."
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that the single-question diagnostic test for constraint type is: if you doubled your ad budget, outreach, or content output tomorrow, would you double your sales or create chaos you could not handle? If doubling marketing would create chaos, the business is supply-constrained; if it would double sales, the business is demand-constrained.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply vs. Demand Constraint Diagnosis",
+      "conditions": [
+        "Business must be capable of doubling marketing input in practice for the test to be diagnostic"
+      ],
+      "mechanism": "A supply-constrained business has more potential customers than capacity; adding demand accelerates the queue without increasing throughput, creating fulfillment breakdown.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that for supply-constrained service businesses, raising prices is the fastest and strongest lever available, and that the increase must be large (50-100%) rather than marginal, because most operators are too afraid of losing customers to raise prices by enough to matter.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "raise prices by a lot",
+      "topic": "Supply Constraint Levers",
+      "conditions": [
+        "Business is supply-constrained (demand exceeds current capacity)",
+        "Service business with a founder or team directly delivering work"
+      ],
+      "mechanism": "A large price increase reduces the number of clients served, freeing capacity while maintaining or increasing revenue; this simultaneously solves the capacity problem and generates margin to invest in real capacity expansion.",
+      "numbers": {
+        "axis": "price increase magnitude for supply-constrained service businesses",
+        "anchors": [
+          {"region": "insufficient increase", "value": "small increments such as $0.25 on shipping"},
+          {"region": "recommended increase", "value": "50-100% (singles and doubles)"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to commodity markets where price is externally set",
+        "Does not apply to demand-constrained businesses where raising price reduces already-thin revenue"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that if a supply-constrained consultant raises prices by 100% (doubling them) and loses 30% of clients as a result, the net effect is higher total revenue with fewer clients served, freeing both income and time simultaneously.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply Constraint Levers",
+      "conditions": [
+        "Consultant-type service business where revenue is a function of number of clients times price per client",
+        "Baseline: fully booked at existing price"
+      ],
+      "mechanism": "Price doubles while volume drops by 30%, yielding 70% of previous client count at 2x price: net revenue = 0.70 x 2.0 = 1.4x previous revenue with 30% fewer clients and correspondingly less time worked.",
+      "numbers": {
+        "axis": "net revenue effect of 100% price increase with client attrition",
+        "anchors": [
+          {"region": "clients lost at 100% price increase", "value": "~30%"},
+          {"region": "net revenue change", "value": "+40% with 30% fewer clients"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes price elasticity of approximately -30% for a 100% price increase; actual attrition varies by market and client relationship quality"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that for a restaurant running at 10% margins, a 20% price increase on its two peak days (Friday and Saturday) would triple the profit on those days, and if those two days generate half of weekly revenue, the result is a 1.5x increase in total business profit.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Margins",
+      "conditions": [
+        "Restaurant-type business with 10% net margin",
+        "Peak days (Friday and Saturday) are supply-constrained: tables are full and customers are turned away",
+        "Friday and Saturday generate approximately 50% of total weekly revenue"
+      ],
+      "mechanism": "At a 10% margin, revenue and cost are nearly equal; a 20% revenue increase on fixed costs expands the margin layer from 10% to 30% of the new revenue base, tripling the profit dollars on those days.",
+      "numbers": {
+        "axis": "profit impact of 20% price increase on peak days for a 10%-margin restaurant",
+        "anchors": [
+          {"region": "profit increase on peak days alone", "value": "3x (triple)"},
+          {"region": "total business profit increase if peak days = 50% of revenue", "value": "1.5x (50% increase)"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes variable cost structure is fixed and no meaningful volume loss from the price increase on peak days",
+        "Does not apply to restaurants with higher baseline margins where the amplification effect is smaller"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that when a business is supply-constrained at peak times, framing the same price differential as a weekday discount rather than a weekend surcharge produces equivalent economic results while avoiding customer resentment.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "weekdays are 20% less",
+      "topic": "Price Communication",
+      "conditions": [
+        "Applies to businesses with time-varying demand (restaurants, service businesses) where peak-pricing psychology matters",
+        "Full-price baseline is the weekend (peak) price, not the discounted weekday price"
+      ],
+      "mechanism": "Customers perceive getting a discount positively even though the net price paid is identical to paying a surge price on a different anchor; loss aversion makes discounts feel better than equivalent surcharges.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that the constraint driving business stagnation often cycles: solving a demand constraint creates a supply constraint, and solving a supply constraint creates a demand constraint; the reason businesses stay stuck for years is that founders keep working on whichever constraint they solved previously rather than recognizing the constraint has shifted.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "accordion",
+      "topic": "Constraint Identification",
+      "conditions": [],
+      "mechanism": "When a founder successfully increases demand (supply constraint resolved), the resulting customer volume exceeds capacity, creating a supply constraint. If the founder then expands capacity without pulling back on demand generation, they flip to demand-constrained. Founders who do not track which constraint is currently binding continue applying the wrong solution, creating systemic drag.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that approximately two thirds of small business owners he surveys report being stuck at the same revenue level for two or more years, which he attributes primarily to misdiagnosis of the binding constraint rather than fundamental market or capability limitations.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Self-reported by business owners who engage with Alex Hormozi or Acquisition.com content or services",
+        "Applies to established businesses, not early-stage startups"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "share of business owners stuck at same revenue for 2+ years",
+        "anchors": [
+          {"region": "stuck at same revenue 2+ years", "value": "~two thirds (informal survey)"},
+          {"region": "primary attributed cause", "value": "constraint misdiagnosis, not market failure"}
+        ]
+      },
+      "bounded_by": [
+        "Sample is self-selected among business owners who seek out Hormozi content and coaching; not a randomized population study"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that software companies with low churn and high customer satisfaction should redirect investment from product development to marketing when they are demand-constrained, because adding product features does not generate new customers when awareness is the binding limit.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "SaaS or software business",
+        "Existing customers have near-zero churn (product is working)",
+        "Business is demand-constrained: market does not know the product exists",
+        "Competitor spending on marketing is 4-6x the company's own spending (e.g., 20-30% vs 5%)"
+      ],
+      "mechanism": "When a product has strong retention, the marginal product improvement compounds less than the marginal marketing dollar, because without new customers the improvement serves only the existing base. Reallocating from product to marketing creates new revenue without changing costs.",
+      "numbers": {
+        "axis": "marketing spend as percentage of revenue: case company vs. competitors",
+        "anchors": [
+          {"region": "case software company (demand-constrained)", "value": "5% of revenue on marketing"},
+          {"region": "competitors in the same category", "value": "20-30% of revenue on marketing"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply if product churn is high; product must be fixed before marketing investment makes sense",
+        "Does not apply to viral products where social referral (not marketing spend) is the primary acquisition vector"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that products often become worse with the addition of features, and that some of the best business periods he has experienced have been when he stepped back from active product involvement and let teams improve organically through repetition rather than constant change.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Focus Through Subtraction",
+      "conditions": [
+        "Applies to established businesses with functioning product and delivery teams",
+        "Not applicable to early-stage businesses where the product does not yet work"
+      ],
+      "mechanism": "Constant change erodes consistency and mastery in customer-facing and delivery roles; the compounding of team skill improvement through repetition often outpaces the value of incremental product modifications.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to businesses where product-market fit is not yet established and the core offering needs iteration"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that home services businesses (such as plumbing companies) that are technically fully booked but marginally profitable are often misdiagnosed as supply-constrained when their true constraint is average revenue per job, because technicians complete jobs without offering additional services, upgrades, or memberships while already on-site.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "supply problem with their sales skills",
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Home services business (plumbing, HVAC, electrical, etc.) where technicians travel to customers",
+        "Business is technically fully booked with all technicians working at or over capacity",
+        "Gross margins are thin due to overtime costs or operating leverage limitations"
+      ],
+      "mechanism": "The marginal cost of a technician making an upsell offer while already on-site is near zero; the revenue from additional services (membership, adjacent repairs, maintenance schedule) is nearly pure margin because the fixed travel and setup cost is already sunk.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that if a home services business trains technicians to offer one additional service per completed job and achieves a 50% upsell rate, revenue increases by 50% while costs remain approximately constant, producing a disproportionate margin expansion at the bottom line.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Offer and Audience Pruning",
+      "conditions": [
+        "Home services business with technicians completing discrete service calls",
+        "Fixed cost structure per job (travel, labor) already paid at time of upsell",
+        "Upsell offers are adjacent services the business already delivers"
+      ],
+      "mechanism": "Because the marginal cost of the upsell is near zero (technician is already on-site), each additional sale contributes at very high gross margin; when operating leverage is tight, this incremental margin drops almost entirely to net profit.",
+      "numbers": {
+        "axis": "revenue and profit impact of 50% upsell rate on completed home service jobs",
+        "anchors": [
+          {"region": "upsell rate achieved", "value": "50% of completed jobs convert to a second service"},
+          {"region": "revenue impact", "value": "+50% total revenue"},
+          {"region": "profit impact", "value": "disproportionately higher than 50% due to near-zero marginal cost of on-site upsell"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes technicians can be trained to sell (a non-trivial behavioral change requiring scripting and role-play practice)"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a demand-constrained business with a sales close rate of 2 out of 500 demonstrations (0.4%) has a sales process problem, not a demand-generation problem, and that doubling the sales team is the wrong fix; fixing the close rate to even 20% would produce a 50x improvement in revenue without any new lead generation.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Sales Process Optimization",
+      "conditions": [
+        "B2B enterprise software or complex service sale",
+        "Business has adequate outbound reach and lead volume but cannot convert demonstrations to deals",
+        "98%+ revenue retention among existing clients (product is validated)"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "close rate improvement potential for a 0.4%-closing enterprise software business",
+        "anchors": [
+          {"region": "actual close rate", "value": "2 deals per 500 demonstrations (0.4%)"},
+          {"region": "target close rate", "value": "100 deals per 500 demonstrations (20%)"},
+          {"region": "revenue improvement at target rate", "value": "50x without any additional lead generation"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that in complex B2B sales where the economic decision-maker (building owner) and the operational decision-maker (building manager) are different people, closing the economic buyer while ignoring the operational buyer results in near-zero conversion because the operational buyer controls implementation and has no financial incentive to cooperate.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": "principal agent problem",
+      "topic": "Avatar Targeting Strategy",
+      "conditions": [
+        "B2B sale involving operational change at the buyer's organization",
+        "Decision-maker (authority to approve budget) is not the person who must execute or live with the change",
+        "Operational buyer receives no salary or bonus increase from the change"
+      ],
+      "mechanism": "The operational buyer (building manager) controls implementation without sharing the financial upside; approval by the economic buyer creates a mandate the operational buyer has no reason to execute enthusiastically, blocking adoption.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that a demand-constrained digital course business that raises its main course price from $1,000 to $3,000 and simultaneously introduces a $10,000 premium tier can nearly triple revenue even if unit sales drop 15-20%, because the price-tier revenue math dominates the volume reduction.",
+      "type": "quantified",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Pricing Anchoring Strategy",
+      "conditions": [
+        "Digital course or information product business with near-zero marginal cost per additional student",
+        "Business is demand-constrained: it could serve more students without operational friction",
+        "Existing price is below market willingness-to-pay (evidenced by thin margins despite zero delivery cost)"
+      ],
+      "mechanism": "Tripling the core price to $3,000 on 80-85% of prior unit volume yields roughly 2.5x the revenue; adding a $10,000 tier purchased by 10% of buyers adds another $1,000 per average sale (0.10 x $10,000), for a blended average ticket of ~$4,000 vs. the original $1,000.",
+      "numbers": {
+        "axis": "revenue impact of price increase plus premium tier introduction for a digital course",
+        "anchors": [
+          {"region": "original core price", "value": "$1,000"},
+          {"region": "new core price", "value": "$3,000"},
+          {"region": "premium tier price", "value": "$10,000"},
+          {"region": "premium tier take rate", "value": "~10% of buyers"},
+          {"region": "volume decline at new price", "value": "15-20%"},
+          {"region": "net blended average ticket", "value": "~$4,000 (vs. $1,000 original)"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes the market has willingness-to-pay at $3,000; does not apply to commoditized information markets with transparent price ceilings",
+        "Requires a credible premium differentiation for the $10,000 tier"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that investing time and resources into website redesign or non-conversion-critical improvements while operating in a demand-constrained state is equivalent to adding a lane to a one-lane highway that feeds into four lanes downstream: throughput does not increase because the downstream constraint is unaffected.",
+      "type": "comparison",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Scaling Bottleneck Diagnosis",
+      "conditions": [
+        "Demand-constrained business where conversion rate or lead volume is the binding limit",
+        "Founder is allocating time to non-constraint improvements (website aesthetics, product features) rather than acquisition"
+      ],
+      "mechanism": "Increasing capacity upstream of the actual bottleneck adds no throughput; the bottleneck determines system output regardless of slack elsewhere in the system.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Alex Hormozi asserts that for physical product businesses, supply chain excellence is the core competency, not marketing or product quality; if marketing or product is strong, supply chain will inevitably become the binding constraint, and failing to build supply chain depth (multiple vendors, redundant sourcing) creates catastrophic fragility.",
+      "type": "assertion",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Supply Constraint Levers",
+      "conditions": [
+        "Physical product e-commerce or manufacturing business",
+        "Business has achieved some marketing or product quality competency"
+      ],
+      "mechanism": "Strong marketing and good product pull demand that outpaces any single-vendor supply arrangement; a single supplier failure turns marketing success into order cancellations and reputation damage.",
+      "numbers": null,
+      "bounded_by": [
+        "Does not apply to digital product businesses where supply is infinite"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that a supply-constrained e-commerce business that cannot fulfill orders should immediately sell intangible products (warranties, software subscriptions, affiliate-sourced products) to generate cash that can then be used to pay vendors premium prices to jump the fulfillment queue, rather than continuing to market the core physical product.",
+      "type": "conditional",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Revenue Stage Transitions",
+      "conditions": [
+        "Physical product e-commerce business in a supply-constrained episode",
+        "Vendors are willing to prioritize orders in exchange for premium payment",
+        "Business has an existing customer base with trust and purchasing history"
+      ],
+      "mechanism": "Selling intangible or affiliate products generates immediate cash flow without consuming physical inventory; that cash is then deployed to vendors at above-market rates to accelerate fulfillment of the core physical product, turning a supply problem into a financing-and-prioritization problem.",
+      "numbers": {
+        "axis": "vendor priority premium estimate",
+        "anchors": [
+          {"region": "premium required to jump vendor queue", "value": "~20% above standard rate (Hormozi example)"}
+        ]
+      },
+      "bounded_by": [
+        "Hormozi explicitly frames this as a short-term or one-time play, not a strategic business pivot"
+      ]
+    },
+    {
+      "text": "Alex Hormozi asserts that fixing the wrong constraint is not merely neutral but actively harmful: succeeding at demand generation when supply-constrained creates chaos, unhappy customers, and reputation damage; succeeding at operations when demand-constrained produces polished execution with no revenue.",
+      "type": "mechanism",
+      "speaker": "Alex Hormozi",
+      "speaker_term": null,
+      "topic": "Constraint Identification",
+      "conditions": [],
+      "mechanism": "When demand generation is maximized in a supply-constrained business, more customers enter than can be served, lengthening queues, degrading service quality, and generating negative reviews that compound into reputation damage lasting beyond the supply fix.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Alex Hormozi described a fully booked consultant working 60 hours a week who had stopped growing income despite being fully booked. The consultant's instinct was to run more ads and create more content to get more leads. Hormozi's diagnosis was that the consultant had a supply problem, not a demand problem. By raising prices substantially (e.g., doubling them), the consultant would likely lose roughly 30% of clients but end up making more total revenue while working with fewer people and having time freed to either expand delivery ratio or hire and train additional consultants. The result would be both more money and more time with one lever pulled.",
+      "claim_index": 3,
+      "topic": "Supply Constraint Levers"
+    },
+    {
+      "text": "Alex Hormozi described a software company that helps service businesses schedule appointments whose CEO was constantly adding product features, confident the product was best-in-class. The company had near-zero churn (customers loved the product and stayed), but growth was flat. Investigation revealed the company was spending only 5% of revenue on marketing while competitors spent 20-30%. The product worked; awareness was the constraint. Hormozi's prescription: stop adding features, stop the CEO from messing with the product, and reallocate resources to customer acquisition. The product was already good enough to double the customer base without any changes.",
+      "claim_index": 8,
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "Alex Hormozi described a steakhouse with 90-plus-minute waits on Fridays and Saturdays but empty tables on Tuesday afternoons. The owner's instinct was to run more ads, which would only make weekends worse. Hormozi's diagnosis: mispriced, leading to misallocated demand. The three proposed fixes were (1) charge a different menu price on weekends (or equivalently, offer a weekday discount), (2) allow customers to pay extra to skip the line on weekends, and (3) extend operating hours into the later evening since customers were still in line at closing time. Combined, these three changes could produce roughly 100% profit increases without any new marketing spend.",
+      "claim_index": 0,
+      "topic": "Supply vs. Demand Constraint Diagnosis"
+    },
+    {
+      "text": "Alex Hormozi described a home fitness equipment e-commerce company during COVID whose sales increased 4x overnight as gyms closed. Instead of stopping ads and focusing on supply chain, the company kept marketing, presold units it could not deliver, and saw shipping times extend from two weeks to eight weeks. Bad reviews flooded in, customer service was overwhelmed, and each new sale made the situation worse because the root problem (supply chain) was not addressed. Hormozi used this as the canonical example of supply-constrained businesses that harm themselves by continuing demand-generation activities.",
+      "claim_index": 0,
+      "topic": "Supply vs. Demand Constraint Diagnosis"
+    },
+    {
+      "text": "Alex Hormozi described a plumbing company booking every calendar slot, with technicians working overtime and profits compressing despite being fully booked. On investigation, the constraint was not number of clients or number of technicians but average revenue per job: plumbers were completing jobs quickly but never offering additional services, checking other units in the house, or pitching the maintenance membership. Training plumbers with a two- to three-line upsell script and running daily role-play would, in Hormozi's model, convert 50% of completed jobs to a second service, increasing revenue 50% with nearly the same cost structure.",
+      "claim_index": 11,
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "Alex Hormozi described a founder who had been stuck at the same enterprise software revenue level for eight years. The business provided cleaning and efficiency services for commercial buildings. Outbound reach was healthy: the company ran roughly 500 demonstrations per year but closed only 2 deals, a 0.4% close rate. The leadership's proposed fix was to double the sales team. Hormozi's counter-prescription was to fix the close rate from 0.4% to 20%, which would be a 50x revenue increase with zero additional lead generation. On diagnosis, the root cause was identified as presenting to building managers (who had implementation authority but no financial upside) rather than building owners (who had budget authority). Re-scripting to elevate the building manager's status unlocked growth.",
+      "claim_index": 13,
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Alex Hormozi described a YouTuber selling a digital course who was breaking even despite zero marginal delivery cost. The founder's instinct was to spend more on ads and build fancier funnels. Hormozi diagnosed the issue as a pricing problem and potentially an ad quality/quantity problem. His proposed fix: raise the core course price from $1,000 to $3,000 and introduce a $10,000 premium tier. With 15-20% volume drop from the price increase but the blended ticket rising from $1,000 to roughly $4,000 (accounting for the $10,000 tier at 10% take rate), total revenue would nearly triple while costs held flat.",
+      "claim_index": 14,
+      "topic": "Pricing Anchoring Strategy"
+    }
+  ],
+  "practices": [
+    {
+      "text": "To diagnose whether a business is supply- or demand-constrained, answer four yes/no questions: (1) If more customers showed up tomorrow, could you serve them at your standard? (2) Are you turning away business or maintaining waiting lists? (3) Are your most profitable time slots or products always sold out? (4) Do you run out of inventory or have long shipping delays? Any yes answer indicates a supply problem.",
+      "topic": "Supply vs. Demand Constraint Diagnosis"
+    },
+    {
+      "text": "For supply-constrained service businesses: (1) raise prices first (fastest fix), (2) add capacity through technology (one person doing 5x the work), (3) train existing staff from level B to level A performance, or (4) hire additional staff at the same skill level to run parallel capacity.",
+      "topic": "Supply Constraint Levers"
+    },
+    {
+      "text": "For demand-constrained businesses: fix the acquisition channel first (outreach, ads, affiliates, content), then fix conversion rate at each funnel stage (lead capture, show rate, close rate), then fix offer and pricing if the demand leak is at those stages.",
+      "topic": "Scaling Bottleneck Diagnosis"
+    },
+    {
+      "text": "When organic content has generated confirmed sales, take the best-performing organic content, add a five-second CTA at the end, and run it as a paid ad rather than producing bespoke creative for paid channels.",
+      "topic": "Channel Optimization Before Expansion"
+    },
+    {
+      "text": "For physical product businesses in a supply constraint episode, reach out to existing customers and sell intangible products (warranties, software subscriptions, affiliate-sourced digital products) to generate cash that can be used to pay vendors a premium (approximately 20%) to jump the fulfillment queue.",
+      "topic": "Revenue Stage Transitions"
+    },
+    {
+      "text": "Train home services technicians with a two- to three-line upsell script and conduct daily role-play to track upsell percentage; measure what percentage of completed jobs convert to a second service and iterate the script until the rate reaches 50% or above.",
+      "topic": "Offer and Audience Pruning"
+    },
+    {
+      "text": "In complex B2B sales where the economic decision-maker and the operational decision-maker are different people, re-script the sales process to focus on elevating the status and self-interest of the operational decision-maker, not just securing approval from the economic buyer.",
+      "topic": "Avatar Targeting Strategy"
+    }
+  ]
+}

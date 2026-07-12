@@ -1,0 +1,284 @@
+{
+  "source_file": "rory_sutherland_psychology_is_technology_f639vjl8DOk.txt",
+  "primary_speaker": "Rory Sutherland",
+  "concepts_addressed": [
+    "Brand as Behavioral Pairing",
+    "Environmental Design for Behavior Change",
+    "Behavioral Reinforcement Loops",
+    "Undefined Words Create Mythology and Prevent Clear Thinking",
+    "Distinctiveness Requires Active Effort",
+    "Intelligence as Learning Rate",
+    "Learning as Measurable Behavior Change",
+    "Contrarian Conviction as Outsized Return Driver",
+    "Observable Reality Framework",
+    "Asymmetric Bet Framework"
+  ],
+  "frameworks": [
+    {
+      "name": "Proactive Libertarianism",
+      "definition": "A stance that goes beyond protecting existing choices to actively creating new choices people did not know they had, treating invisible or unnamed options as a design failure.",
+      "concept": "Environmental Design for Behavior Change"
+    },
+    {
+      "name": "System One vs System Two Design",
+      "definition": "A two-mode behavioral model in which System One is automatic, instinctive, and heuristic-driven while System Two is deliberate and rational; Rory Sutherland argues most policy and product design optimises for System Two while actual behavior runs on System One.",
+      "concept": "Behavioral Reinforcement Loops"
+    },
+    {
+      "name": "Deferred Prescription Choice Architecture",
+      "definition": "A three-option antibiotic prescription model (immediate, deferred, none) that reveals how the binary framing of a choice can encode implicit bias toward one option, and that a third path reduces over-prescription from ~80% to ~16%.",
+      "concept": "Environmental Design for Behavior Change"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Rory Sutherland argues that the properties of human behaviour and the brain are a legitimate domain of technological inquiry, equivalent to understanding properties of materials like silicon or steel; advances in behavioural technology should follow the same discovery logic as physical technology.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "psychology is technology",
+      "topic": "Brand as Behavioral Pairing",
+      "conditions": [],
+      "mechanism": "All technology advances by understanding the properties of a medium; human behaviour is a medium with properties that can be understood and exploited.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland claims that organisations systematically hand problems to economists and engineers first, who redefine the problem in terms of their preferred solution type (incentives or engineering), crowding out behavioural and psychological approaches that could be more effective.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking",
+      "conditions": ["applies to organisational problem-solving in government, health, and business contexts"],
+      "mechanism": "It is easier to be fired for appearing irrational than for being unimaginative, so rational-seeming (economic/engineering) framings dominate by default; alternative framings never get considered.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland argues that in complex systems, including human behaviour, the scale of an intervention bears no necessary relationship to the scale of its effect; a tiny intervention (renaming, reframing) can produce effects vastly larger than a proportionate physical intervention.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "mono-ideas",
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": [],
+      "mechanism": "Human behaviour is a complex system, not a Newtonian mechanical one; trace-element logic applies (small stimulus can flip large systemic effect), unlike the linear cause-effect model that guides engineering and economic interventions.",
+      "numbers": null,
+      "bounded_by": ["Does not apply to purely physical constraints where the Newtonian model is correct"]
+    },
+    {
+      "text": "Rory Sutherland asserts that when people are presented with poorly designed choices, they do not recognise the choice is bad; they simply make a bad decision and attribute the error to themselves, not to the choice architecture.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": [],
+      "mechanism": "Most decisions on evolutionary timescales were real-time and constrained to available options; hypothesising alternative choice structures (e.g. moving a sign) was not a cognitive strength selected for, so the brain treats available options as given rather than critiquing the option set itself.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland claims that naming something creates the perception that it is a norm; when a word or name is coined for a behaviour, people infer that the behaviour is common and acceptable, which itself drives adoption.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking",
+      "conditions": [],
+      "mechanism": "The existence of a named concept implies that instances of the concept exist and are socially recognised; absence of a name signals absence of a social norm.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "When UK doctors were given a deferred prescription option (prescription valid after 4 days) for upper respiratory tract infections, antibiotic uptake fell from approximately 98% (immediate prescription) to approximately 33% (deferred), and from approximately 15% (no prescription, but patients return for second appointment) to 33%; Rory Sutherland calculates this reduced unnecessary antibiotic prescriptions from roughly 80% of cases to roughly 16%.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "deferred prescription",
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": ["upper respiratory tract infection", "UK GP context"],
+      "mechanism": "Immediate prescription activates sunk-cost bias (patient pays ~£8 at a pharmacy located immediately adjacent to the surgery and therefore takes the pills); deferred prescription removes that proximity and cost trigger, so patients self-select based on actual symptom persistence.",
+      "numbers": {
+        "axis": "antibiotic uptake rate by prescription type",
+        "anchors": [
+          {"region": "immediate prescription", "value": "~98%"},
+          {"region": "deferred prescription (live after 4 days)", "value": "~33%"},
+          {"region": "no prescription (patient must return)", "value": "~15%"}
+        ]
+      },
+      "bounded_by": ["UK primary-care context with pharmacy co-located with surgery; results may differ where pharmacy access requires separate trip"]
+    },
+    {
+      "text": "Rory Sutherland argues that an immediate antibiotic prescription contains a hidden bias in its choice architecture: the pharmacy is physically adjacent to the GP surgery, the patient has already made an effort to attend, and once they pay for the pills, sunk-cost bias ensures they take them; this explains the near-100% uptake rate, not patient preference for antibiotics.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "biased choice architecture",
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": ["UK GP surgery with adjacent pharmacy"],
+      "mechanism": "Physical proximity of pharmacy to surgery + pre-existing patient effort + ~£8 sunk cost at prescription redemption activates sunk-cost bias, making taking the antibiotics the path of least resistance; the 98% uptake rate reflects the architecture, not a free patient decision.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland observes that restaurant wine-list design is a case of biased choice architecture: wine glasses are pre-set on tables, the drinks list is framed as a wine list with ~9 pages of wine and one page for other drinks, and a single list is shared for the table, meaning one person's wine choice binds everyone; this illustrates that perceived freedom of choice can coexist with heavily constrained actual choice.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "choice architecture",
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": ["full-service restaurant context"],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland asserts that making choices available, visible, and named can create large uptake effects independent of any change in the underlying product or service, as demonstrated by London Overground ridership tripling after the line was added to the Tube map, renamed, and coloured orange, despite most of the route having existed for 20+ years as Silverlink Metro.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Environmental Design for Behavior Change",
+      "conditions": ["urban transit, London Overground/Silverlink Metro context"],
+      "mechanism": "People only make choices they know they can make; an unnamed, unmapped option is functionally non-existent to most decision-makers; naming and mapping creates the cognitive availability of the choice.",
+      "numbers": {
+        "axis": "ridership change from making a route available on the Tube map",
+        "anchors": [
+          {"region": "before renaming and mapping (Silverlink Metro, 20+ years)", "value": "baseline ridership"},
+          {"region": "after adding to Tube map, renaming Overground, colouring orange", "value": "3x baseline ridership"}
+        ]
+      },
+      "bounded_by": ["Route infrastructure was largely unchanged; result reflects cognitive availability effect, not service improvement"]
+    },
+    {
+      "text": "Rory Sutherland argues that System One (instinctive) solutions to behaviour change are often superior to System Two (rational counting) solutions, because System One solutions are self-reinforcing, harder to self-deceive around, and socially enforceable, while System Two solutions require deliberate monitoring under conditions (e.g., intoxication) that impair deliberate thought.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "system one solution",
+      "topic": "Behavioral Reinforcement Loops",
+      "conditions": ["behaviour change for alcohol consumption or dieting"],
+      "mechanism": "Abstinence rules (e.g., no alcohol three days per week) are binary and observable, making self-deception structurally harder; unit-counting rules are continuous and require arithmetic under conditions (mild intoxication) that degrade numerical cognition; additionally, abstinence days can be socially coordinated with a partner, creating mutual accountability, whereas unit limits cannot be socially enforced.",
+      "numbers": null,
+      "bounded_by": ["Speaker acknowledges that abstinence heuristics break the clean epidemiological causal chain from study data to recommendation; they may not be optimal by the underlying science even if behaviourally superior"]
+    },
+    {
+      "text": "Rory Sutherland asserts that product properties which signal efficacy through discomfort (bad taste, bad smell, small size) exploit a deep System One heuristic: if it is unpleasant to me, it must be potent against the target; rational product design optimising for pleasantness removes this efficacy signal and destroys credibility.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Brand as Behavioral Pairing",
+      "conditions": ["consumer products where efficacy (not pleasure) is the purchase driver, e.g. energy drinks, cleaning products, medicines"],
+      "mechanism": "System One uses sensory unpleasantness as a proxy for potency; a pleasant-tasting energy drink or pleasant-smelling fly spray generates cognitive dissonance (feels too nice to work), reducing perceived efficacy and purchase intent.",
+      "numbers": null,
+      "bounded_by": ["Does not apply to products where pleasure is the primary value proposition (food, perfume, leisure)"]
+    },
+    {
+      "text": "Rory Sutherland argues that nature builds structural inefficiency and randomness into biological systems (e.g., a proportion of bees that ignore the waggle dance) because without it, systems get trapped in local maxima and cannot adapt when conditions change; the same principle applies to business and policy: optimising for a single correct answer eliminates the serendipitous variation needed to discover better solutions.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "built-in randomness",
+      "topic": "Distinctiveness Requires Active Effort",
+      "conditions": [],
+      "mechanism": "Without random non-compliant agents, a system converges on and then gets locked into the current best-known solution; when the environment shifts, the system has no exploratory agents to discover new optima and faces existential failure; variation is the search mechanism for adaptive systems.",
+      "numbers": null,
+      "bounded_by": ["Applies to complex adaptive systems; does not imply randomness is valuable in closed deterministic systems"]
+    },
+    {
+      "text": "Rory Sutherland contends that being naively wrong or unconventional in business can be a structural advantage because it leads actors to attempt things that no rational analysis would sanction, some fraction of which succeed and generate outsized returns; luck is convex in business in a way it is not in academia.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Contrarian Conviction as Outsized Return Driver",
+      "conditions": ["competitive commercial markets"],
+      "mechanism": "Rational gatekeeping in academia eliminates low-probability high-upside bets ex ante; commercial markets deliver returns on any successful bet regardless of its prior probability; stupidity and luck are thus a legitimate discovery mechanism in business.",
+      "numbers": null,
+      "bounded_by": ["Does not apply to domains with high technical failure costs (e.g. aviation, pharmaceuticals) where rational safety screening is necessary"]
+    },
+    {
+      "text": "Rory Sutherland argues that innovations from unexpected sources (e.g. e-cigarettes from Chinese entrepreneurs, not pharmaceutical companies) are systematically discredited or banned not because they fail to work but because they do not come from institutionally recognised origins; this is a structural bias that discards the most serendipitous discoveries.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": null,
+      "topic": "Contrarian Conviction as Outsized Return Driver",
+      "conditions": ["regulated health/policy domains where institutional credibility is required for adoption"],
+      "mechanism": "Gatekeepers use source credibility as a proxy for validity; when a solution originates outside approved institutions, the default response is rejection via post-hoc rationalisation (e.g. concerns about image, role-modelling) rather than evaluation on evidence.",
+      "numbers": null,
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "The Harvard behavioural science team coined the phrase 'designated driver' and seeded it into soap opera and sitcom plotlines in the late 20th century. Because a word existed for the behaviour, viewers inferred it was a recognised social norm, which drove adoption. Sutherland cites this as evidence that naming a behaviour creates the perception it is normal, which is itself a powerful adoption mechanism distinct from any direct instruction or incentive.",
+      "claim_index": 4,
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking"
+    },
+    {
+      "text": "The UK A&E department name change from 'Accident and Emergency' to 'A&E' illustrates Sutherland's naming-drives-behaviour claim: the original phrase encoded its conditions of use (accident, emergency) and created appropriate usage thresholds; the abbreviation lost that encoding and, Sutherland argues, contributed to inappropriate attendance. A further behavioural intervention he proposes is to allow realistic sound/imagery of emergency distress to appear in A&E waiting areas as a natural deterrent, in lieu of any explicit message.",
+      "claim_index": 4,
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking"
+    },
+    {
+      "text": "Ocado's green delivery-van nudge: when a delivery van was already in an area, Ocado did not reduce the price of time-flexible delivery slots. Instead they made the icon for those slots green. Customers who were indifferent to exact delivery time chose the green slot because it felt slightly better. Ocado reported the nudge was far more effective than they anticipated. Sutherland cites this as an example of a System One intervention (visual positive signal) outperforming a System Two intervention (price discount) at no additional cost.",
+      "claim_index": 9,
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "Red Bull is Sutherland's canonical example of designing for System One rather than System Two: it tastes unpleasant, is expensive relative to mainstream soft drinks, and comes in a small can -- the exact opposite of what economic analysis would prescribe (nicer taste, lower cost, larger container). Sutherland argues that the unpleasant taste signals efficacy (if it's unpleasant to me, it must work), and that no rational competitor would have designed this product, which is precisely why it succeeded where conventional competitors failed.",
+      "claim_index": 10,
+      "topic": "Brand as Behavioral Pairing"
+    },
+    {
+      "text": "The M20 motorway signage near the M25 junction illustrates Sutherland's claim that bad choice architecture is invisible to the people experiencing it. Sutherland missed the turnoff five or more times before spending seven or eight minutes on Google Street View to reconstruct what happened: the first sign had no distance indicator, 'London' on both sides, and referenced Swanley (the name of the interchange, not a destination). The lanes diverged before a driver could read the second sign, making correction impossible without an illegal manoeuvre. Despite Sutherland having spent a decade studying choice architecture, he did not notice the sign was badly designed while driving -- he simply made a bad decision.",
+      "claim_index": 3,
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "Immanuel Kant's pipe-size inflation is Sutherland's illustration that self-imposed unit limits are subject to self-deception even for the world's foremost ethical philosopher: Kant limited himself to one pipe per day, but his pipes grew progressively larger over his lifetime. Sutherland uses this as evidence that rule-based abstinence (zero vs. non-zero) is structurally harder to game than unit-counting rules.",
+      "claim_index": 9,
+      "topic": "Behavioral Reinforcement Loops"
+    },
+    {
+      "text": "The London Overground (formerly Silverlink Metro) ridership case: most of the route existed for 20+ years as Silverlink Metro and was structurally identical to what became the Overground. When Transport for London added it to the Tube map, gave it the name 'Overground', coloured it orange, and made minor service and rolling stock improvements, ridership tripled. The infrastructure was essentially unchanged; the cognitive availability of the choice was the driver of the increase.",
+      "claim_index": 8,
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "The disappearance of sherry in the UK is Sutherland's example of a choice becoming invisible without any change in the underlying product. Britain consumed approximately 100 million bottles per year roughly 30-40 years ago; today almost nobody considers sherry when buying wine. Sutherland attributes this to the loss of the consumption occasion (sherry as aperitif/post-dinner drink) from social repertoires, not to any decline in quality, illustrating that choices people do not think to make effectively cease to exist.",
+      "claim_index": 8,
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "The bee waggle-dance non-compliance model: a mathematical model of hive foraging found that a proportion of bees that ignore the waggle dance (the signal pointing to the best-known pollen source) and forage randomly is necessary for hive survival. Without those random foragers, the hive converges on the current best pollen source, fails to discover new sources when that source depletes, and starves. Sutherland uses this as a proof-of-concept that built-in inefficiency and non-compliance is a required feature of adaptive systems, not a flaw.",
+      "claim_index": 11,
+      "topic": "Distinctiveness Requires Active Effort"
+    },
+    {
+      "text": "The four-gang extension lead travel insight: Sutherland accumulated five separate adapter plugs for international travel as each new Apple device required a new one. After several years it suddenly occurred to him that he needed only one adapter plus a four-gang extension lead, which also solved the problem of hotel rooms with a single socket. He reported this in The Spectator and received approximately 100 reader emails saying it had never occurred to them. He uses this as an example of a proactive choice that was invisible until named (nobody had ever been presented with the option), and that is obvious only in retrospect.",
+      "claim_index": 2,
+      "topic": "Environmental Design for Behavior Change"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When designing health or behaviour-change interventions, redesign the choice architecture so the desired behaviour is the path of least resistance rather than relying on information campaigns or financial incentives.",
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "Test counter-intuitive, non-rational product and policy designs alongside rational ones; do not pre-screen out ideas because they lack a clean causal chain from epidemiological or economic theory.",
+      "topic": "Contrarian Conviction as Outsized Return Driver"
+    },
+    {
+      "text": "When offering employees compensation increases, always present the option of taking part or all of the increase as additional leisure time rather than money; without the explicit offer, most employees will never self-generate the request.",
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "To reduce unnecessary antibiotic prescriptions, issue deferred prescriptions (valid after 4 days) rather than immediate ones or no prescription; this alone reduces unnecessary antibiotic uptake from approximately 80% to approximately 16%.",
+      "topic": "Environmental Design for Behavior Change"
+    },
+    {
+      "text": "To improve medication completion rates, use colour-coded pill separation (e.g. 20 white pills followed by 4 red pills) so the patient has a simple binary rule rather than a counting task.",
+      "topic": "Behavioral Reinforcement Loops"
+    },
+    {
+      "text": "For behaviour-change goals (alcohol reduction, dietary compliance), prefer abstinence-based heuristics (no X on Y days) over unit-counting rules: abstinence is binary, self-deception-resistant, and socially enforceable.",
+      "topic": "Behavioral Reinforcement Loops"
+    },
+    {
+      "text": "In system or policy design, deliberately retain a proportion of random or non-compliant variation; do not optimise all agents toward the current best-known solution, as this creates fragility when conditions change.",
+      "topic": "Distinctiveness Requires Active Effort"
+    }
+  ]
+}

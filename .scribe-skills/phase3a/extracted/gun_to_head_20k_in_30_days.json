@@ -1,0 +1,391 @@
+{
+  "source_file": "gun_to_head_20k_in_30_days.txt",
+  "primary_speaker": "Ericvelch (unnamed Canadian RSA practitioner)",
+  "concepts_addressed": [
+    "Cost Arbitrage Model",
+    "Google Business Profile Optimization",
+    "Motivated Buyer Targeting",
+    "Lead-Cost-Closeout Math",
+    "Market Selection Criteria: Growth + Pain + Targeting",
+    "Availability as Conversion Multiplier",
+    "Sales Closing Mechanics",
+    "Avatar Targeting Strategy",
+    "Before/After Proof Engine",
+    "Sales Speed and First-Contact Advantage",
+    "Affiliate and Partner Channel Strategy",
+    "Cold Outreach Channels",
+    "Geographic Expansion Sequence: Dominate Local, Then Expand",
+    "Channel Optimization Before Expansion",
+    "Prepayment Cash Flow Control"
+  ],
+  "frameworks": [
+    {
+      "name": "Remote Service Arbitrage (RSA)",
+      "definition": "A three-part system: (1) create a Google Business Profile for a local service in a low-competition city, (2) rank it in the top-3 via keyword-matched name and review volume, (3) book inbound calls as appointments and forward jobs to a sub-contracted service provider at a 60/40 split — keeping 40% as commission.",
+      "concept": "Cost Arbitrage Model"
+    },
+    {
+      "name": "City Selection Matrix",
+      "definition": "A two-axis evaluation framework — monthly search volume (minimum 1,000/mo via SEMrush) versus competitor review count in the top 3 (target under 100 reviews) — used to identify cities where ranking in the top-3 Google Maps position is achievable without a physical address.",
+      "concept": "Market Selection Criteria: Growth + Pain + Targeting"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In the RSA (Remote Service Arbitrage) business model, plumbing is the highest-earning niche because the jobs are urgent (customers need same-day service), the average residential ticket is approximately $850, and individual jobs can reach $20,000 — producing a 40% commission of $4,000 from a single call. The urgency means customers will not price-shop aggressively, enabling a higher close rate than non-urgent services.",
+      "type": "assertion",
+      "speaker": "Ericvelch",
+      "speaker_term": "RSA",
+      "topic": "Motivated Buyer Targeting",
+      "conditions": [
+        "Residential plumbing service",
+        "Same-day or urgent need (clogged drain, non-functional toilet)",
+        "Commission-based arbitrage model at 40% of job value"
+      ],
+      "mechanism": "Urgency removes the customer's ability to delay decision or compare multiple quotes; they need the service resolved immediately, which compresses price sensitivity.",
+      "numbers": {
+        "axis": "Plumbing job ticket size",
+        "anchors": [
+          {"region": "Average residential small job", "value": "~$850"},
+          {"region": "Large job example (Austin case)", "value": "$20,000 job yielding $4,000 commission at 40%"}
+        ]
+      },
+      "bounded_by": [
+        "Non-urgent services (cleaning, landscaping) allow comparison shopping and do not command the same urgency-driven close rate"
+      ]
+    },
+    {
+      "text": "To hit $20,000/month in profit using RSA at a 40% commission rate on plumbing, the operator needs to book approximately two jobs per day at an average ticket of $850, which requires generating approximately four inbound calls per day. Across five target cities with a combined monthly search volume of 4,000–6,000 for the target service, ranking in the top-3 Google Maps position is sufficient to achieve those four daily calls.",
+      "type": "quantified",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Lead-Cost-Closeout Math",
+      "conditions": [
+        "40% commission split with sub-contractor",
+        "Average plumbing ticket ~$850",
+        "Top-3 Google Maps ranking maintained",
+        "Combined search volume of 4,000–6,000/month across target cities"
+      ],
+      "mechanism": "Search volume converts to calls at a predictable rate when a listing holds the top-3 position; four calls per day is achievable from 4,000 monthly searchers.",
+      "numbers": {
+        "axis": "Daily revenue requirements to hit $20k/month",
+        "anchors": [
+          {"region": "Revenue needed per day", "value": "$666/day"},
+          {"region": "Gross job bookings needed per day at 40% cut", "value": "$1,665/day in jobs"},
+          {"region": "Jobs per day at $850 average ticket", "value": "~2 jobs/day"},
+          {"region": "Calls needed to close 2 jobs", "value": "~4 calls/day"}
+        ]
+      },
+      "bounded_by": [
+        "Assumes 50% call-to-appointment conversion rate; two of four callers will not convert due to price shopping or refusal to book without a phone quote"
+      ]
+    },
+    {
+      "text": "In Google Maps local search, a business profile whose name exactly matches the highest-volume search query for that city (e.g., 'Plumber Chicago' or 'Plumbing Chicago') ranks higher than profiles with more reviews but mismatched names. This keyword-in-name advantage can override a 185-review differential, as evidenced by a 2-review profile outranking a 187-review profile when the 2-review profile's name matched the dominant search term.",
+      "type": "mechanism",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Maps local search (not Google Ads / sponsored)",
+        "Business profiles without a verified physical address",
+        "City-level searches for a commodity local service"
+      ],
+      "mechanism": "Google's relevance ranking gives disproportionate weight to name-to-query string match; a profile named 'Plumber Waukegan' is treated as maximally relevant when someone searches 'plumber Waukegan,' overriding review-count signals up to a significant differential.",
+      "numbers": {
+        "axis": "Review count vs name-match ranking outcome",
+        "anchors": [
+          {"region": "Name-matched profile (2 reviews, 3-star)", "value": "Ranks above competitor with 187 reviews"},
+          {"region": "Non-matched high-review profile (187 reviews)", "value": "Ranks below name-matched 2-review profile"}
+        ]
+      },
+      "bounded_by": [
+        "Sponsored (paid) listing slots are immune to this organic ranking mechanism",
+        "In major high-competition cities (e.g., Milwaukee), top-3 competitors have thousands of reviews and the name-match advantage is insufficient to break through"
+      ]
+    },
+    {
+      "text": "A city is viable for RSA entry if (a) the top-3 organic Google Maps results include at least two profiles with under 100 reviews, and (b) the service-plus-city search term on SEMrush shows at least 1,000 monthly searches. When two of the three top-3 competitors have under 100 reviews, a new profile can reach parity and enter the top-3 by accumulating 40–50 reviews.",
+      "type": "conditional",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Google Maps local search for a service-plus-city query",
+        "No verified physical address on the entrant profile",
+        "Organic (non-sponsored) top-3 results only"
+      ],
+      "mechanism": "Review count is the primary ranking signal after name-to-query match; if the competition threshold is under 100 reviews, a new operator can reach competitive parity within days through active review solicitation.",
+      "numbers": {
+        "axis": "Entry threshold by competitor review count",
+        "anchors": [
+          {"region": "Viable market: two of top-3 under 100 reviews", "value": "40–50 new reviews sufficient to enter top-3"},
+          {"region": "High-competition market: top-3 have 1,000+ reviews", "value": "Not viable for no-address RSA entry; Milwaukee example"}
+        ]
+      },
+      "bounded_by": [
+        "Minimum 1,000 monthly searches required; below that, four daily calls are not achievable even with top-3 ranking"
+      ]
+    },
+    {
+      "text": "Refusing to quote a price over the phone and insisting a technician must inspect in person before quoting is the primary conversion tactic when booking RSA plumbing calls. Operators who quote over the phone lose the booking to a cheaper competitor; operators who decline to quote and book an inspection appointment (with a $60 inspection fee that applies toward the service) convert approximately 90% of inspection-booked jobs to paid work, because once a technician arrives, the customer rarely declines and calls another company.",
+      "type": "quantified",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Sales Closing Mechanics",
+      "conditions": [
+        "Inbound calls from Google Maps listings for plumbing or similar urgent local service",
+        "$60 inspection deposit collected at booking to confirm commitment",
+        "Customer is calling due to an urgent need"
+      ],
+      "mechanism": "If a customer has already paid a $60 deposit and a technician arrives, walking away means forfeiting the deposit and still calling another company that will charge a similar inspection fee — a sunk-cost dynamic that keeps job conversion near 90%.",
+      "numbers": {
+        "axis": "Conversion rate from call to closed job",
+        "anchors": [
+          {"region": "Calls where operator quotes over phone", "value": "Lost to cheaper competitor — rate not specified"},
+          {"region": "Calls where operator books inspection with $60 deposit", "value": "~90% conversion to paid job once technician arrives"}
+        ]
+      },
+      "bounded_by": [
+        "Approximately 2 out of 4 callers decline to book an inspection without a phone quote and do not convert at all — total call-to-appointment conversion is roughly 50%"
+      ]
+    },
+    {
+      "text": "Finding local service sub-contractors willing to accept a 60/40 revenue split (60% to contractor, 40% to RSA operator) requires contacting approximately 30 providers; roughly 5 out of 30 will agree, creating a bench of 5 available workers to ensure no booked job goes unfulfilled. The ideal prospects are contractors actively advertising on platforms like Facebook Marketplace, signaling they lack work and are motivated to accept job referrals.",
+      "type": "quantified",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Affiliate and Partner Channel Strategy",
+      "conditions": [
+        "RSA operator representing themselves as a company paying for advertising and providing pre-booked appointments",
+        "Commission split on profit excluding material costs",
+        "Contractors selected specifically because they are currently underbooked"
+      ],
+      "mechanism": "Underbooked contractors have low opportunity cost; a pre-booked appointment with all marketing costs absorbed by the RSA operator is attractive because it delivers hourly earnings (e.g., $300/hour for a $500 job) without any marketing overhead.",
+      "numbers": {
+        "axis": "Sub-contractor recruitment conversion rate",
+        "anchors": [
+          {"region": "Providers contacted", "value": "30 outreach messages"},
+          {"region": "Providers who agree to the split", "value": "~5 out of 30 (~17%)"}
+        ]
+      },
+      "bounded_by": [
+        "Fully booked contractors will not accept the arrangement; only actively advertising or underemployed contractors are viable targets"
+      ]
+    },
+    {
+      "text": "A Google Business Profile without a physical address should be optimized by (a) embedding the service-plus-city keyword in the business name, (b) repeating that keyword in the business description, all product listings, and all service listings, and (c) completing every available profile section. A fully completed, keyword-dense profile ranks higher because Google favors active, complete profiles over sparse ones for the same query.",
+      "type": "mechanism",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile without a verified physical address",
+        "Service-based local business listed on Google Maps",
+        "Competing against profiles with under ~100 reviews"
+      ],
+      "mechanism": "Google's local ranking algorithm gives preference to profile completeness and keyword relevance across all profile sections; repeating the target keyword in name, description, products, and services multiplies relevance signals across the profile.",
+      "numbers": null,
+      "bounded_by": [
+        "Keyword stuffing alone does not override a large review-count gap in high-competition markets",
+        "Sponsored placements are unaffected by organic profile optimization"
+      ]
+    },
+    {
+      "text": "Google Maps rankings in local service searches are heavily influenced by geographic proximity: searching from within a neighborhood returns entirely different top-3 results than searching for the same service city-wide. A profile with a verified physical address benefits from proximity ranking, while a no-address profile must rely on keyword match and review count to appear across the whole city.",
+      "type": "mechanism",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Maps local service search with 'search this area' triggered or by searcher's physical location",
+        "Organic (non-sponsored) listings only"
+      ],
+      "mechanism": "Google prioritizes physical proximity as a ranking signal; a business at the searcher's location will outrank a higher-reviewed business that is miles away for the same query, analogous to restaurant search behavior.",
+      "numbers": null,
+      "bounded_by": [
+        "The proximity advantage applies only to searchers near the address; a no-address profile loses this signal and competes on name match and reviews alone",
+        "For the no-address RSA approach, targeting small cities (not large metros) compensates because the competitor review counts are low enough to rank on other signals"
+      ]
+    },
+    {
+      "text": "To generate 100 Google reviews within a day for a new RSA business profile, operators can physically visit high-traffic public locations (malls, beaches, populated streets) and ask people in person in exchange for small incentives (snacks, $2 per review). Alternatively, operators can hire high school students via Facebook groups to solicit reviews, paying $2 per review obtained. A 3-hour mall visit can yield 50–100 reviews.",
+      "type": "quantified",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Before/After Proof Engine",
+      "conditions": [
+        "New Google Business Profile needing rapid review accumulation to reach competitive parity",
+        "Reviews are not from verified customers of the actual service"
+      ],
+      "mechanism": "Review count is the primary organic ranking signal after name-match; reaching parity with competitors requires matching their review count within days, not months — making in-person mass solicitation the fastest path to competitive parity.",
+      "numbers": {
+        "axis": "Reviews obtainable per time investment in public solicitation",
+        "anchors": [
+          {"region": "3-hour mall visit (self-operated)", "value": "50–100 reviews"},
+          {"region": "Student labor cost per review", "value": "$2/review"}
+        ]
+      },
+      "bounded_by": [
+        "YouTube platform policies restrict explicit endorsement of fake reviews; practitioner uses the phrase 'non-authentic reviews' to describe this approach",
+        "Google's review detection systems may flag sudden large review spikes on new profiles"
+      ]
+    },
+    {
+      "text": "Ericvelch reports reaching $30,000/month in profit in his second month of operating the RSA model, starting the business in approximately October 2025 and achieving this result by December 2025. His first verified income screenshot shows $10,000 via Stripe in December 2025, with additional transactions on Square and in other payments.",
+      "type": "quantified",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "RSA model applied to plumbing niche",
+        "Canadian operator, initially targeting local area before expanding"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Monthly profit by month of operation",
+        "anchors": [
+          {"region": "Month 1 (October 2025)", "value": "Started business"},
+          {"region": "Month 2 (December 2025)", "value": "$30,000 in profit (Stripe: $10,000 + Square + other transactions)"}
+        ]
+      },
+      "bounded_by": [
+        "Single practitioner data point; no cohort comparison provided"
+      ]
+    },
+    {
+      "text": "For Google Business Profile video verification, Google requires the operator to visually demonstrate that the business exists at the submitted address. Practitioners can satisfy this requirement by creating physical props: a printed logo matching the profile name affixed to a car door or front door, printed business cards, a computer showing a basic website or fake dashboard, and random tools. Google's video review process passes most submissions that clearly show a matching sign, the surrounding area, the vehicle, and some business equipment.",
+      "type": "assertion",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile verification video submission for a service-based business",
+        "Business does not have a genuine physical premises"
+      ],
+      "mechanism": "The video review process checks for visual consistency between the profile name on signage and the submitted profile, plus evidence of a business environment; it does not verify that the tools shown are industry-specific or that the address is authentic.",
+      "numbers": null,
+      "bounded_by": [
+        "The mailing address entered during setup must be within the target city; a Chicago address must be in Chicago even if the business has no physical location there"
+      ]
+    },
+    {
+      "text": "When an RSA operator cannot answer an inbound service call in real time, that call is permanently lost — the customer calls the next business on the Google Maps list immediately. Answering every call is therefore the single non-negotiable operation in the RSA model; at scale, the operator hires a call-answering person or forwards calls to a virtual receptionist rather than missing calls.",
+      "type": "assertion",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Availability as Conversion Multiplier",
+      "conditions": [
+        "Inbound calls from Google Maps listings for urgent local services",
+        "Competing against other top-3 listings the customer can call immediately"
+      ],
+      "mechanism": "Customers with urgent needs (clogged drain, broken heating) will call the next provider immediately if one does not answer; there is no callback dynamic because their urgency drives them to the next available provider.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "For the RSA model, operators should target a combined total of 4,000–6,000 monthly searches across five cities rather than attempting to rank in a single large city with 10,000+ monthly searches, because high-volume cities have proportionally higher review counts in the top-3 making entry prohibitively difficult. A higher combined search volume across easier-to-rank cities produces more calls at lower competitive cost.",
+      "type": "conditional",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Channel Optimization Before Expansion",
+      "conditions": [
+        "No-address RSA Google Business Profile strategy",
+        "Operator targets multiple smaller cities rather than one large metro"
+      ],
+      "mechanism": "Large metros have high search volume but also high incumbent review counts; targeting five smaller cities where competitors have under 100 reviews enables top-3 ranking at the cost of ~40 reviews each — far cheaper than the thousands needed in a major metro.",
+      "numbers": {
+        "axis": "Optimal combined monthly search volume target",
+        "anchors": [
+          {"region": "Conservative minimum for 4 calls/day", "value": "4,000–6,000 combined monthly searches across 5 cities"},
+          {"region": "Single large city (e.g., Milwaukee)", "value": "10,000+ searches but top-3 require 1,000+ reviews — not viable for no-address RSA"}
+        ]
+      },
+      "bounded_by": [
+        "Each individual city must still exceed 1,000 monthly searches; below that, the ranking position does not yield enough calls even from a top-3 position"
+      ]
+    },
+    {
+      "text": "A $60 inspection deposit collected at call booking serves two functions in RSA operations: it commits the customer financially (reducing no-show rate) and provides a fallback payment to compensate the sub-contractor for travel time if the customer declines the job quote on-site. Without the deposit, a customer who declines on-site costs the sub-contractor wasted time with no compensation.",
+      "type": "mechanism",
+      "speaker": "Ericvelch",
+      "speaker_term": null,
+      "topic": "Prepayment Cash Flow Control",
+      "conditions": [
+        "RSA plumbing or similar urgent service model",
+        "Sub-contractor dispatched before full job price is confirmed with customer"
+      ],
+      "mechanism": "The inspection deposit aligns customer commitment with contractor dispatch; the customer has already invested $60 (which applies to the service if they proceed), creating sunk-cost commitment; if they decline, the contractor still receives compensation for time via the forfeited deposit.",
+      "numbers": {
+        "axis": "Inspection deposit amount and its role in the booking flow",
+        "anchors": [
+          {"region": "Standard inspection deposit", "value": "$60, applied toward service if customer proceeds"},
+          {"region": "Rate of customers who decline after technician arrival", "value": "~10% (one in ten)"}
+        ]
+      },
+      "bounded_by": []
+    }
+  ],
+  "examples": [
+    {
+      "text": "Ericvelch describes a client named Austin who is one of the people he coaches hands-on through the RSA model. As an example of the earning potential of a single large plumbing job, he notes that Austin made $4,000 in commission from a single job that was worth $20,000 total — illustrating that even at 20% commission (or 40% on profit after materials), a single large job can pay significantly more than the average residential ticket of $850.",
+      "claim_index": 0,
+      "topic": "Motivated Buyer Targeting"
+    },
+    {
+      "text": "In a live demonstration during the video, Ericvelch searches 'Plumber Waukegan' on Google Maps and finds that a profile with only 2 reviews and a 3-star rating appears above a profile with 187 reviews. He explains the discrepancy: the 2-review profile has 'Plumber Waukegan' in its business name, which exactly matches the searcher's query, while the 187-review profile does not. This single name-match signal overrides 185 reviews' worth of ranking advantage in Google's algorithm.",
+      "claim_index": 2,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Ericvelch demonstrates the city selection process using Racine, Wisconsin as an example. On SEMrush he finds Racine has 3,200 monthly searches for 'Plumber Racine.' On Google Maps, the top-3 organic results include a business with only 22 reviews in first place. He contrasts this with Milwaukee, which has ~10,000 monthly searches but competitors with thousands of reviews — concluding that Racine is the correct target city despite its lower raw search volume, because the entry cost (in reviews needed) is proportionally much lower.",
+      "claim_index": 3,
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "text": "Ericvelch describes the exact phone script used when a customer calls: 'Hey, this is Eric from 24-7 Plumber Chicago, how can I help you?' After the customer describes their problem, the rep responds: 'There could be a ton of reasons why your drain is clogged. That is something a technician would need to come out to inspect. We can have somebody there within one to two hours. It is $60 for the inspection, but that goes toward the service.' The rep never quotes a job price, deflects all technical questions by saying a technician must inspect first, and collects the $60 deposit to confirm the appointment.",
+      "claim_index": 4,
+      "topic": "Sales Closing Mechanics"
+    },
+    {
+      "text": "Ericvelch shares screenshots from his own RSA operation showing multiple payment transfers from a sub-contractor named 'Thomas Wellington Mechanical.' Individual transfers shown include $1,200, $800, and $400 in commission payments, illustrating the income variability across individual jobs within the same day or week from a single partnered contractor.",
+      "claim_index": 9,
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "Ericvelch describes his approach to sub-contractor recruitment: he sends a message on Facebook Marketplace or similar platforms saying, 'Hey, I have a local plumbing company. I get around 5-10 calls a day. I'm not able to take them all. I'm looking for someone who might be able to take a few extra jobs a day.' He does not disclose the GMB arbitrage structure; instead he represents himself as a company paying for ads that generates more leads than his team can handle, and proposes a commission split presented as 60/40 (contractor 60%, operator 40%). He shared a screenshot of his actual outreach messages from October 2025.",
+      "claim_index": 5,
+      "topic": "Cold Outreach Channels"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Use SEMrush's keyword overview tool (SEO tab > Keyword Overview) to check monthly search volume for a service-plus-city search term. Exclude branded searches (searches for specific company names) and look for a minimum of 1,000 organic searches per month before targeting a city.",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting"
+    },
+    {
+      "text": "Register the Google Business Profile name as the primary domain (e.g., 247plumberchicago.com) and verify the domain is unregistered before listing it on the profile; listing a taken domain will link to a competitor's website.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use CallRail (~$50/month) to buy a forwarding phone number for each city's profile so that the number can be re-forwarded to a call-answer hire without changing the public-facing number on the listing.",
+      "topic": "Availability as Conversion Multiplier"
+    },
+    {
+      "text": "After a contractor takes payment on-site from a customer, call the customer immediately to verify the amount charged — framing the check-in as an account system issue (e.g., 'Our QuickBooks had an issue, just confirming you were charged $X'). This prevents undisclosed upcharging without confronting the contractor directly.",
+      "topic": "Affiliate and Partner Channel Strategy"
+    },
+    {
+      "text": "Compile review text that includes the service-plus-city keyword naturally (e.g., 'I hired these guys to send a plumber out to my house in Chicago — they fixed my drain within two hours'). This embeds geo-relevant keyword signals into the review text, which reinforces Google Maps ranking for that location.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Maintain a shared Google Calendar or daily morning text with the primary sub-contractor so that at the time of call booking, the operator already knows whether that contractor is available for the requested time slot — preventing over-booking or delayed dispatch.",
+      "topic": "Affiliate and Partner Channel Strategy"
+    },
+    {
+      "text": "When filling in Google Business Profile sections (description, products, services), use ChatGPT to generate keyword-rich content incorporating the service-plus-city phrase throughout every available text field.",
+      "topic": "Google Business Profile Optimization"
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "source_file": "unlimited_reviews_under_1_dollar.txt",
+  "primary_speaker": "unnamed YouTube creator (remote plumbing GMB operator, Canada, age 19 at time of recording)",
+  "concepts_addressed": [
+    "Google Business Profile Optimization",
+    "Cold-Start Trust Architecture",
+    "Offshore Leverage Model",
+    "Activity-Based Time Valuation",
+    "Cost Arbitrage Model",
+    "Social Proof Hierarchy in Sales",
+    "Availability as Conversion Multiplier"
+  ],
+  "frameworks": [
+    {
+      "name": "Five Review Failure Modes",
+      "definition": "Five categories of review-acquisition tactics that Google's AI reliably detects and deletes: offshore accounts, non-local accounts, double-reviews on same Gmail, bulk new Gmail accounts, and same-device-same-WiFi sessions.",
+      "concept": "Google Business Profile Optimization"
+    },
+    {
+      "name": "Three Sticking-Review Channels",
+      "definition": "Three channels the speaker validated as producing reviews that survive Google's detection: (1) purchased same-country Gmail accounts used one-review-per-device, (2) in-person incentivized review solicitation at high-traffic public venues, (3) virtual-assistant-driven online group outreach using review-for-review exchange.",
+      "concept": "Google Business Profile Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Google My Business reviews acquired from Fiverr-style offshore providers (accounts operated in India or Pakistan) delete reliably within one to two weeks of posting, because Google's algorithm identifies that a single account left reviews on 20 different businesses within a single 24-to-48-hour window — a behavioral pattern inconsistent with genuine customer activity.",
+      "type": "mechanism",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": "Indian reviews",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Reviews sourced from offshore Fiverr-style providers",
+        "Accounts based in a different country from the GMB's target market"
+      ],
+      "mechanism": "Google's AI detects a single account reviewing 20 different businesses in 24-48 hours, which is incompatible with authentic customer behavior, triggering deletion.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker reports GMB profile itself was never suspended — only the fake reviews were deleted"
+      ]
+    },
+    {
+      "text": "Google My Business reviews from accounts based outside the target country delete at a higher rate than reviews from same-country accounts. The speaker observed that reviews sourced from Canada for US-based GMB profiles had approximately 30% deletion (roughly 70% retention), whereas reviews from outside neighboring countries were substantially less reliable.",
+      "type": "quantified",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Reviews left by accounts based in a neighboring country (e.g., Canada for US profiles)",
+        "Does not apply to reviews left from geographically distant countries (e.g., China, India)"
+      ],
+      "mechanism": "Google infers geographic inconsistency between reviewer location and the local business being reviewed, increasing deletion probability.",
+      "numbers": {
+        "axis": "Review retention rate by reviewer geography relative to target GMB country",
+        "anchors": [
+          {"region": "Same country as GMB", "value": "~100% stick rate (speaker's reported outcome across thousands of reviews)"},
+          {"region": "Neighboring country (Canada for US profiles)", "value": "~70% stick rate"},
+          {"region": "Distant country (India, Pakistan)", "value": "~0% stick rate within 2 weeks"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker has not tested non-English neighboring country pairs (e.g., Japan-China)"
+      ]
+    },
+    {
+      "text": "Leaving two reviews for two different GMB profiles within the same day from a single Gmail account causes both reviews to be deleted within one to two weeks, because Google interprets one account reviewing multiple businesses of the same type in rapid succession as inauthentic.",
+      "type": "mechanism",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": "double reviews",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Same Gmail account used for two reviews",
+        "Both reviews posted within the same day or close temporal window"
+      ],
+      "mechanism": "One Gmail account reviewing two businesses in the same category within the same day is flagged as behaviorally implausible for a genuine customer.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker says spacing reviews by approximately one week on the same account reduces deletion risk"
+      ]
+    },
+    {
+      "text": "Reviews left from multiple Gmail accounts on the same physical device and the same WiFi network are detectable by Google and will be deleted, because device fingerprint and network IP create an unambiguous correlation signal even when accounts differ.",
+      "type": "mechanism",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Multiple distinct Gmail accounts used to leave reviews",
+        "All accounts accessed from the same device and same WiFi connection"
+      ],
+      "mechanism": "Google correlates device fingerprint and IP address across review sessions; identical device-IP combinations across multiple accounts are treated as a single actor.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker acknowledges there are more complex techniques to leave reviews from a single device that avoid detection, but does not disclose them publicly in this video"
+      ]
+    },
+    {
+      "text": "Sending a young person (ages approximately 13-18) to a shopping mall food court or college campus to verbally request Google reviews from strangers yields approximately 20 genuine local reviews per hour, because the demographic match between solicitor and target audience generates a high acceptance rate of roughly 90%, and each review takes under 20 seconds for the reviewer to complete.",
+      "type": "quantified",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Solicitor is in the 13-18 age range",
+        "Target venue is a high-foot-traffic public location (mall food court or college campus)",
+        "Solicitor is actively approaching people rather than waiting passively"
+      ],
+      "mechanism": "Peer-age social dynamics increase willingness to help; the review task is low-friction (under 20 seconds via phone search); local device and account diversity means reviews pass Google's geographic and behavioral checks.",
+      "numbers": {
+        "axis": "Reviews obtained per hour via in-person solicitation",
+        "anchors": [
+          {"region": "Active solicitation at mall food court or campus by age-matched solicitor", "value": "~20 reviews/hour"},
+          {"region": "Target total in a 4-hour session", "value": "~70-80 reviews"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker notes this approach is not universally feasible (requires access to a young person willing to do the work and proximity to a dense public venue)"
+      ]
+    },
+    {
+      "text": "Paying a young solicitor $25 per hour (or $1-2 per review) to collect in-person Google reviews at a mall or campus yields a cost of approximately $1-1.25 per review — materially lower than the $5-10 per review charged by offshore Fiverr-style providers — while producing reviews that stick rather than delete.",
+      "type": "comparison",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Solicitor is paid $25/hour or $1-2/review",
+        "Solicitor achieves approximately 20 reviews/hour"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Cost per GMB review that actually sticks, by acquisition method",
+        "anchors": [
+          {"region": "Offshore Fiverr-style provider", "value": "$5-10 per review; 0% stick rate after ~2 weeks"},
+          {"region": "In-person youth solicitor at mall/campus ($25/hour, 20/hour)", "value": "~$1.25 per review; ~100% stick rate"},
+          {"region": "Virtual assistant online group outreach ($2-3/hour, ~5 reviews/hour)", "value": "~$0.50-0.60 per review (VA cost); total with review-for-review overhead ~$0.50-$1 per review"}
+        ]
+      },
+      "bounded_by": [
+        "Indeed-sourced workers churned quickly; speaker reports getting only ~30-40 reviews per Indeed hire before they quit"
+      ]
+    },
+    {
+      "text": "Hiring a virtual assistant at $2-3 per hour to direct-message members of niche-relevant Facebook groups, Reddit communities, and Discord servers offering a review-for-review exchange yields approximately 5 genuine local reviews per hour of VA work, because community members with existing account history are willing to exchange reviews and their accounts pass Google's authenticity checks.",
+      "type": "quantified",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Offshore Leverage Model",
+      "conditions": [
+        "VA is messaging members of groups relevant to the business niche",
+        "Exchange offer is review-for-review (VA leaves a review on their profile in return)",
+        "VA works for at least 3-4 hours per session"
+      ],
+      "mechanism": "Community members have established Google accounts with prior review history and local IP addresses, so their reviews pass Google's behavioral authenticity filters. The VA's reciprocal review does not need to actually stick — the screenshot of the VA's review is sent to the community member to trigger their reciprocal review.",
+      "numbers": {
+        "axis": "Reviews obtained per hour of VA outreach effort",
+        "anchors": [
+          {"region": "VA active messaging in online groups (review-for-review)", "value": "~5 reviews/hour"},
+          {"region": "3-hour VA session at $2-3/hour", "value": "~15 reviews; total cost ~$6-9"}
+        ]
+      },
+      "bounded_by": [
+        "The VA's reciprocal reviews for community members may not stick (VA using same account to leave many reviews), but the speaker treats this as acceptable since the community member receives a screenshot as social proof"
+      ]
+    },
+    {
+      "text": "In the speaker's experience running 20+ Google My Business profiles for a remote plumbing contracting business, 90% of reviews acquired through local in-person solicitation methods have remained live for multiple months without deletion, whereas 100% of offshore-purchased reviews deleted within two weeks.",
+      "type": "comparison",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Local in-person reviews: solicited at mall/campus from local residents on their personal devices",
+        "Offshore reviews: purchased from Fiverr-style providers with accounts based outside the target country"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Long-term review survival rate by acquisition method",
+        "anchors": [
+          {"region": "Local in-person solicitation", "value": "~90% still live after months"},
+          {"region": "Offshore Fiverr-style purchase", "value": "~0% surviving after 2 weeks"}
+        ]
+      },
+      "bounded_by": [
+        "Based on speaker's own portfolio of 20+ GMB profiles with 100-300 reviews each; no controlled comparison group"
+      ]
+    },
+    {
+      "text": "Buying fake Google reviews does not risk Google My Business profile suspension — the speaker's profiles were never suspended despite acquiring hundreds of artificial reviews — but the reviews themselves will be deleted, making the spend wasteful rather than dangerous.",
+      "type": "assertion",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Reviews are artificial but not accompanied by other policy violations",
+        "Based on speaker's direct experience with 20+ GMB profiles"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Speaker acknowledges widespread belief that fake reviews cause GMB suspension; this is their personal counter-evidence, not a guarantee",
+        "Google's enforcement policies may change"
+      ]
+    },
+    {
+      "text": "Framing a review-solicitation job posting on Indeed as a 'survey job' (rather than asking people to solicit Google reviews) attracts applicants willing to work at $15/hour, but these workers exhibit high churn, typically abandoning the role after producing only 30-40 reviews, making them less cost-effective than a trusted personal contact for sustained volume.",
+      "type": "assertion",
+      "speaker": "unnamed YouTube creator (remote plumbing GMB operator)",
+      "speaker_term": null,
+      "topic": "Activity-Based Time Valuation",
+      "conditions": [
+        "Job posted on Indeed framed as survey work",
+        "Workers paid $15/hour",
+        "Task involves approaching strangers at malls or campuses"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Reviews produced before worker churn by recruitment channel",
+        "anchors": [
+          {"region": "Indeed-sourced worker at $15/hour", "value": "30-40 reviews before quitting"},
+          {"region": "Personal contact (e.g., friend's sibling) at $25/hour or $1-2/review", "value": "70+ reviews in a 4-hour session with much lower churn"}
+        ]
+      },
+      "bounded_by": [
+        "Speaker did not report Indeed-sourced workers across a large sample; this may reflect a small number of observations"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The speaker sent a friend's younger sibling to a mall or college campus with a simple script — 'Hey, do you have 20 seconds to help me out? I just started this business, could you leave me a Google review?' — and reported that approximately 90% of approached individuals (predominantly in the 18-25 age range) agreed. In a single 4-hour session at $100 total pay, the solicitor reliably delivered 70+ reviews. The speaker described this as their single highest-volume review acquisition method, accounting for the majority of the several hundred reviews per day seen in their GMB notification screenshots.",
+      "claim_index": 4,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The speaker experimented with giving away free energy drinks at a college campus they previously attended in exchange for Google reviews, using an NFC tag or QR code to make the review flow take under 10 seconds. This produced local reviews on varied personal devices with diverse accounts, and the reviews stuck. The speaker noted this worked but requires physical presence and setup, making it less scalable than the VA-outreach or paid-solicitor methods for high-volume needs.",
+      "claim_index": 5,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "A virtual assistant hired at $2-3/hour was sent into cleaning-business Facebook groups, Reddit communities, and Discord servers to direct-message members with a review-for-review proposal. The VA would leave a review on the community member's business page and screenshot it, then the community member would return the favor. The speaker estimated approximately 5 such exchanges completed per hour of VA work, yielding roughly 15 reviews from a $6-10 three-hour VA session. The VA's reciprocal reviews often did not stick themselves (same account leaving many reviews), but this did not prevent the community member from honoring the exchange.",
+      "claim_index": 6,
+      "topic": "Offshore Leverage Model"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Use an NFC tag or QR code when soliciting in-person reviews so the reviewer can complete the review in under 10 seconds from their own phone, dramatically reducing drop-off during the solicitation.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "When purchasing Gmail accounts for review purposes, buy same-country accounts, log in one at a time, leave no more than one review per account per session, and space the account's next review use by approximately one week.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "When hiring a VA for review outreach, target groups whose members share a business niche with the GMB being reviewed (e.g., cleaning-business Facebook groups for a cleaning company GMB) so the offer of reciprocal reviews is credible.",
+      "topic": "Offshore Leverage Model"
+    },
+    {
+      "text": "For in-person solicitation, pair the youth solicitor with a co-visitor initially to maintain their motivation, or offer a clear per-review bonus ($1-2 per review) so they have a self-tracking incentive without needing oversight.",
+      "topic": "Activity-Based Time Valuation"
+    },
+    {
+      "text": "Do not leave two reviews for two different GMBs from the same Gmail account on the same day; wait at least one week between reviews on a given account to avoid triggering Google's behavioral anomaly detection.",
+      "topic": "Google Business Profile Optimization"
+    }
+  ]
+}

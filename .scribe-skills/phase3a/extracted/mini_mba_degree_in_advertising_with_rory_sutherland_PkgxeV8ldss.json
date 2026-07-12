@@ -1,0 +1,377 @@
+{
+  "source_file": "mini_mba_degree_in_advertising_with_rory_sutherland_PkgxeV8ldss.txt",
+  "primary_speaker": "Rory Sutherland",
+  "concepts_addressed": [
+    "Wealth-Relative Value Perception",
+    "Distinctiveness Requires Active Effort",
+    "Brand as Behavioral Pairing",
+    "Price Anchoring",
+    "Pricing Anchoring Strategy",
+    "Customer Awareness Levels",
+    "Scarcity as Value Driver",
+    "Activation as Primary Churn Lever",
+    "Observable Reality Framework",
+    "Undefined Words Create Mythology and Prevent Clear Thinking",
+    "Brand Effect on Customer Behavior and WTP",
+    "Motivation Source",
+    "Risk Misprice Arbitrage",
+    "Premium Positioning",
+    "Marketing Clarity Over Production Quality"
+  ],
+  "frameworks": [
+    {
+      "name": "Psychophysics of Relative Perception",
+      "definition": "Human perception of price, pleasure, heat, pain, and volume is entirely relativistic — there are virtually no absolute internal measures; every judgment depends on the comparison context presented.",
+      "concept": "Wealth-Relative Value Perception"
+    },
+    {
+      "name": "Affirmation Bias First-Impression Lock",
+      "definition": "The first impression or decision entered into the brain closes it to contradictory evidence, causing every subsequent evaluation to skew toward confirming the initial judgment.",
+      "concept": "Customer Awareness Levels"
+    },
+    {
+      "name": "Praxeology-First Economics (von Mises)",
+      "definition": "Ludwig von Mises argued that human action and psychology (praxeology) is a prior science to economics; economics is merely the study of human action under conditions of scarcity, making psychological framing a prerequisite for economic analysis.",
+      "concept": "Observable Reality Framework"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Rory Sutherland argues that nearly all human perception of price, pleasure, pain, heat, and volume is entirely relativistic — there are virtually no absolute internal measures. A cup of tea at home costs roughly 2p while the same tea on the street costs £1.80, yet the street version is not 90 times more enjoyable; the context determines willingness to pay. The only known exceptions are 1–2% of people with perfect pitch.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "relativity",
+      "topic": "Wealth-Relative Value Perception",
+      "conditions": [],
+      "mechanism": "Human brains have no absolute internal scale for pleasure (the hedone) nor a fixed exchange rate between currency and enjoyment; all valuation is anchored to available reference points in the immediate context.",
+      "numbers": {
+        "axis": "price paid for an equivalent cup of tea by context",
+        "anchors": [
+          {"region": "at home", "value": "~2p"},
+          {"region": "on the street", "value": "£1.80"},
+          {"region": "ratio", "value": "~90x, with no corresponding 90x pleasure difference"}
+        ]
+      },
+      "bounded_by": ["1–2% of people with perfect pitch do retain an absolute pitch reference"]
+    },
+    {
+      "text": "Rory Sutherland argues that value is fundamentally subjective — it depends entirely on the mindset, frame of mind, and frame of reference of the buyer, not on any objective property of the product. As evidence, Canadian diamond-shaped Shreddies (identical cereal reformulated only in shape) drove sales increases, and some consumers reported that diamond Shreddies tasted different from square ones.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "value is subjective",
+      "topic": "Wealth-Relative Value Perception",
+      "conditions": [],
+      "mechanism": "There is no objective measure of the value of a product; perceived value is created by presentation, context, and complementarity — which are inseparable from the physical product itself, per Ludwig von Mises.",
+      "numbers": null,
+      "bounded_by": ["The Austrian school (von Mises) is the primary intellectual source cited; mainstream neoclassical economics disagrees"]
+    },
+    {
+      "text": "Rory Sutherland argues that what you compare something to completely determines human perception of value — the same object acquires radically different valuations based solely on its comparison set. When a £2 lager and a £1 lager are the only options, 67% of buyers choose the £2 option. Adding a 30p bargain lager shifts 20% of buyers down to the midrange Carling (£2 drops to 47% share). Replacing the 30p option with a £4 premium brand shifts nearly all buyers to the midrange (10% buy premium, 90% buy midrange, nobody buys the £1 option).",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "context effect on preference",
+      "topic": "Price Anchoring",
+      "conditions": ["in-store lager purchase decision"],
+      "mechanism": "Without an absolute internal measure of value, buyers use available options as anchors. Introducing a lower-priced option pulls attention and share toward the middle; introducing a higher-priced option pushes attention upward and makes the midrange feel like the sensible choice.",
+      "numbers": {
+        "axis": "share of buyers by price tier as comparison set changes",
+        "anchors": [
+          {"region": "2-option shelf (£1, £2)", "value": "67% buy £2"},
+          {"region": "3-option shelf with 30p bargain added", "value": "47% buy £2 Carling, 30p option unsold"},
+          {"region": "3-option shelf with £4 premium added", "value": "10% premium, 90% midrange, 0% £1"}
+        ]
+      },
+      "bounded_by": ["In-store retail context; online environments may produce different anchoring dynamics"]
+    },
+    {
+      "text": "Rory Sutherland argues that changing the framing of a £3,000 discount from off the purchase price to on the trade-in value — economically identical for a rational agent — produced such a large uplift in conversion that in one European country it accounted for the sale of an additional 20,000 cars for a non-leading automotive brand.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "framing effect",
+      "topic": "Price Anchoring",
+      "conditions": ["automotive new-car purchase", "non-leading brand", "£3,000 discount available"],
+      "mechanism": "£3,000 on a £7,000 trade-in feels proportionally large; £3,000 off a £22,000 purchase feels proportionally small. The brain evaluates gains and losses relative to the reference price, not in absolute terms.",
+      "numbers": {
+        "axis": "incremental unit sales attributable to framing change",
+        "anchors": [
+          {"region": "£3,000 off purchase price", "value": "baseline conversion"},
+          {"region": "£3,000 on trade-in value", "value": "+20,000 cars sold in one country"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland argues that displaying products in a high-price-anchor context inflates perceived value of lower-priced items. Expensive cars sold at boat and plane shows — where attendees have been browsing Learjets — convert better than at car shows, because the car price feels modest relative to the aviation context. Similarly, selling an $800 television on a high-end holiday website (where users have spent 20–30 minutes browsing $3,000–$4,000 holidays) makes the TV feel cheap by comparison.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "context determines value",
+      "topic": "Pricing Anchoring Strategy",
+      "conditions": ["high-consideration consumer goods", "luxury or high-spend browsing context immediately prior to exposure"],
+      "mechanism": "Human valuation is relative to the most recently processed reference point; embedding a product purchase in a higher-spend context lowers its perceived price and raises conversion by shifting the comparison anchor upward.",
+      "numbers": null,
+      "bounded_by": ["Does not apply when the buyer is fully committed to a category decision in advance and arrives with a fixed budget already determined"]
+    },
+    {
+      "text": "Rory Sutherland argues that Red Bull successfully charged three times more than Coca-Cola for a beverage by making the can smaller, which prevented buyers from framing it as a soda and instead placed it in a different product category. Had Red Bull launched in a large Coke-sized can, the standard soda frame would have capped willingness to pay.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "category frame",
+      "topic": "Brand as Behavioral Pairing",
+      "conditions": ["energy drink launch", "existing dominant beverage category with established price norms"],
+      "mechanism": "The frame of reference (comparison category) is a key determinant of willingness to pay; deliberately shrinking pack size signals a category shift, removing the default soda pricing anchor and enabling a new, higher-priced comparison set.",
+      "numbers": {
+        "axis": "price premium over comparable Coca-Cola product",
+        "anchors": [
+          {"region": "Coca-Cola standard can", "value": "baseline price"},
+          {"region": "Red Bull smaller can", "value": "~3x Coca-Cola price"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland argues that Nespresso succeeds in charging the equivalent of approximately £150 per large jar of coffee — which buyers would refuse if presented that way — because the pod format causes buyers to compare the per-serving cost to Starbucks (~26p per pod feels like a bargain) rather than to Nescafe (which makes it appear grotesquely expensive). The frame of comparison, not the absolute price, determines perceived value.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "frame of reference",
+      "topic": "Price Anchoring",
+      "conditions": ["premium coffee product sold in pod/capsule format"],
+      "mechanism": "Packaging that breaks a product into small per-unit increments shifts the buyer's comparison point from the bulk-jar category (Nescafe) to the per-serving café category (Starbucks), enabling a price 50–100x higher than the bulk benchmark.",
+      "numbers": {
+        "axis": "implied price per large jar equivalent",
+        "anchors": [
+          {"region": "Nescafe large jar (buyer's reference if sold that way)", "value": "~£5–10"},
+          {"region": "Nespresso pods annualized to jar equivalent", "value": "~£150"}
+        ]
+      },
+      "bounded_by": ["Only applies when an alternative comparison category (café pricing) is salient and accessible to the buyer"]
+    },
+    {
+      "text": "Rory Sutherland argues that changing an e-commerce checkout button label from Register or Sign In to Continue increased annual sales by $300 million for the retailer. Buyers are willing to buy first and register afterward, but deeply resist being required to register before purchasing. The two flows are rationally identical in total steps yet psychologically very different in conversion.",
+      "type": "quantified",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "order matters",
+      "topic": "Activation as Primary Churn Lever",
+      "conditions": ["e-commerce checkout funnel", "account required for purchase"],
+      "mechanism": "Sequencing determines psychological resistance: being asked to register before buying frames the gate as an obligation imposed on the buyer; being asked to register after buying frames it as a minor completion step after the desired action is already done.",
+      "numbers": {
+        "axis": "annual sales impact from button text change",
+        "anchors": [
+          {"region": "Register or Sign In button", "value": "baseline revenue"},
+          {"region": "Continue button", "value": "+$300 million annual sales"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland argues that Amazon Prime succeeds precisely because users pay for it: the exclusivity and the fact of payment are what give the benefit (free next-day delivery) its psychological meaning. Offering the same delivery free to all customers would destroy the sense of value, because a discount available to everyone is not a meaningful discount.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "exclusivity of saving",
+      "topic": "Scarcity as Value Driver",
+      "conditions": ["subscription-based loyalty program with delivery benefit"],
+      "mechanism": "Psychological value of a benefit is partially derived from its exclusivity and from the sacrifice (payment) made to access it. A freely available benefit has no scarcity signal and therefore no perceived premium status.",
+      "numbers": null,
+      "bounded_by": ["Rationalist economists predicted that free delivery for all would be superior; this framing shows why that logic fails in psychological markets"]
+    },
+    {
+      "text": "Rory Sutherland argues that Spotify's unlimited-tracks pricing model is a psychological mistake because nobody knows what infinite music is worth, making it impossible to anchor value. Imposing an artificial limit of 180 tracks per month gives buyers a concrete reference point (approximately 15 CDs at ~£6–7 each, or ~£100 value), against which $9.99/month feels clearly worthwhile. Unlimited supply prevents value anchoring and thereby suppresses perceived value.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "inability to make a comparison",
+      "topic": "Price Anchoring",
+      "conditions": ["digital music subscription service", "unlimited catalog available"],
+      "mechanism": "Human value perception requires comparison anchors. When a product (infinite music) has no historical reference price, buyers cannot establish willingness to pay; introducing an artificial scarcity (unit cap) creates a comparison to an existing category (CD purchases) and activates standard reference-price anchoring.",
+      "numbers": {
+        "axis": "implied monthly music value vs. subscription price",
+        "anchors": [
+          {"region": "unlimited tracks — no anchor available", "value": "value unclear to buyer"},
+          {"region": "180 tracks/month cap — comparable to ~15 CDs", "value": "~£100 market reference; $9.99 feels like a bargain"}
+        ]
+      },
+      "bounded_by": ["Sutherland notes that no research participant would logically suggest reducing utility, so this insight requires behavioral economics insight rather than conventional research"]
+    },
+    {
+      "text": "Rory Sutherland argues that the first impression in a service experience acts as an affirmation-bias lock that colors every subsequent evaluation, regardless of whether later experiences are logically related. A hotel guest's satisfaction with every measurable element of their stay — cleanliness, food, quietness, service, the ice sculpture in the garden — was almost entirely determined by whether their check-in experience took under 3 minutes or over 15–20 minutes.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "affirmation bias",
+      "topic": "Customer Awareness Levels",
+      "conditions": ["hotel stay", "first service touchpoint is check-in"],
+      "mechanism": "Charlie Munger's observation: the human brain, like a fertilized egg, closes down to new stimuli once the first impression is established. A good check-in leads the brain to seek confirmatory evidence for its good-hotel hypothesis; a bad check-in causes systematic negative distortion of unrelated evaluations (e.g., the ice sculpture).",
+      "numbers": {
+        "axis": "check-in wait time and its effect on total stay satisfaction ratings",
+        "anchors": [
+          {"region": "check-in within 3 minutes", "value": "all subsequent satisfaction dimensions rated positively"},
+          {"region": "check-in queue of 15–20 minutes", "value": "all satisfaction dimensions rated negatively, including unrelated elements like garden ice sculpture"}
+        ]
+      },
+      "bounded_by": ["The Nashville hotel study is a single case; the mechanism (affirmation bias) is well-documented but the specific magnitude of halo effect may vary by service category"]
+    },
+    {
+      "text": "Rory Sutherland argues that teleconferencing has failed to achieve adoption proportionate to its economic value because it was framed as a poor substitute for air travel rather than as a premium form of telephone call. By positioning it as inferior to flying, it became an embarrassment signal — what you offered someone when you did not trust them with a real trip — instead of a high-status tool. Framing, not functionality, determined the product's adoption ceiling.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "framing effect",
+      "topic": "Brand as Behavioral Pairing",
+      "conditions": ["enterprise video conferencing product", "business travel as established comparison"],
+      "mechanism": "When a product is positioned relative to a superior comparison, it inherits the inferior-substitute frame (margarine to butter, pager to mobile phone). The product's functional quality becomes irrelevant because buyers perceive it as what you use when you cannot afford or deserve the real thing.",
+      "numbers": null,
+      "bounded_by": ["Remote work normalization post-2020 may have partially broken this frame; Sutherland's talk predates that shift"]
+    },
+    {
+      "text": "Rory Sutherland argues that attitudinal change is neither a necessary nor a sufficient precursor to behavioral change — and that in many cases the causal arrow runs the other way. The French doctor example illustrates: even professional medical knowledge about smoking's harms does not predict cessation behavior. Effective quit attempts are triggered by opportunistic timing (onset of flu or a heavy cold), not by attitude conversion.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "attitudinal change precursor",
+      "topic": "Motivation Source",
+      "conditions": [],
+      "mechanism": "Humans follow Bob Dylan's observation: people do what is convenient, then repent. The brain functions less like a rational decision-maker and more like a press office issuing post-hoc rationalizations for emotionally driven decisions made prior.",
+      "numbers": null,
+      "bounded_by": ["Sutherland explicitly notes this as a common mistake by the environmental movement; the inverse — behavioral change driving attitude change — is not universally true either"]
+    },
+    {
+      "text": "Rory Sutherland argues that breaking a task into chunked sub-goals with visible intermediate milestones substantially increases completion rate versus presenting the same task as a single undifferentiated block. Applied to antibiotic compliance: replacing 24 identical white pills with 20 white pills plus 4 blue pills — and instructing patients to take the white pills first, then the blue ones — significantly increases completion of the full course.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "chunking",
+      "topic": "Activation as Primary Churn Lever",
+      "conditions": ["multi-step task requiring sustained behavior over time", "intermediate milestones are structurally distinguishable"],
+      "mechanism": "Any task broken into intermediate objectives is more likely to be completed because each sub-goal provides a salient completion signal that sustains motivation through the full sequence.",
+      "numbers": null,
+      "bounded_by": ["Applied in antibiotic adherence context; generalized to task design broadly"]
+    },
+    {
+      "text": "Rory Sutherland argues that businesses led predominantly by finance, engineering, and management consultancy backgrounds — with no meaningful representation of marketing or human psychology — systematically underperform their value-creation potential because their entire worldview is based on rational mechanistic models that misspecify how humans actually make decisions.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "aspergic or anorak-ish organizations",
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking",
+      "conditions": ["large organizations with majority-engineering-economics board composition"],
+      "mechanism": "Engineering and economics training instills a horror of ambiguity and a belief in precise, numerical, perfectible models; this cognitive profile produces absolutist thinking and systematic blindness to the psychological dimensions of buyer behavior that actually drive value creation.",
+      "numbers": null,
+      "bounded_by": ["Sutherland is not arguing against engineering or finance skills per se — only against their monopoly representation at the decision-making level"]
+    },
+    {
+      "text": "Rory Sutherland argues that waste and inefficiency can function as credible trust signals. Peacocks demonstrate genetic fitness through the gratuitous waste of their tail; historic corporate architecture (e.g., Chrysler Building, 1929) similarly communicated financial strength through conspicuous expenditure. Organizations or people who demonstrably have resources to spare — and therefore short time horizons of need — are more trusted as long-term exchange partners.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "gratuitous waste",
+      "topic": "Distinctiveness Requires Active Effort",
+      "conditions": ["contexts where trustworthiness of a long-term counterparty is uncertain"],
+      "mechanism": "A party that can afford conspicuous waste signals that they are not desperate, have surplus resources, and lack the short time horizons that make exchange partners unreliable. Efficiency extremes undermine this trust signal by removing the demonstration of surplus.",
+      "numbers": null,
+      "bounded_by": ["The mechanism is more salient in trust-uncertain B2B or interpersonal contexts; less applicable in commodity purchasing where price dominance overrides trust signals"]
+    },
+    {
+      "text": "Rory Sutherland argues that the 3G spectrum auction failure was caused by operators' inability to anticipate the psychological pricing frame that mobile data users would bring to data consumption. Because home broadband had already conditioned users to expect incremental data to be free, operators overestimated willingness to pay for metered mobile data — leading to catastrophically inflated bids that created financial distress for major European carriers.",
+      "type": "mechanism",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "psychological frame",
+      "topic": "Customer Awareness Levels",
+      "conditions": ["new product category where an adjacent category has already established a pricing norm"],
+      "mechanism": "Buyers import the pricing frame from the most analogous product they already use. When voice calls established pay-per-minute norms, data bids were reasonable. When home broadband established a flat-rate/free-increment norm, the metered data model became psychologically untenable to buyers regardless of technical value delivered.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "Rory Sutherland argues that high-speed rail investment of $24 billion to save 30 minutes of journey time is a poor trade-off because human memory and satisfaction are driven by the beginning and end of experiences — not their duration. Investing a fraction of that budget in Wi-Fi or onboard experience improvements would generate higher hedonic return per dollar because duration is spectacularly unimportant to memory and likelihood of repeat use.",
+      "type": "comparison",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "hedonic opportunity cost",
+      "topic": "Risk Misprice Arbitrage",
+      "conditions": ["public infrastructure investment decisions", "commuter or intercity rail"],
+      "mechanism": "Humans remember the peak and the end of an experience (peak-end rule) and not much of the middle. A 30-minute duration reduction changes the middle of the journey, which is mostly forgotten. Onboard experience improvements change the quality of the remembered portion, yielding higher satisfaction and return intent per pound spent.",
+      "numbers": {
+        "axis": "investment magnitude vs. hedonic return from journey time vs. experience quality",
+        "anchors": [
+          {"region": "$24B for 30-minute journey reduction", "value": "low hedonic ROI (duration is forgotten)"},
+          {"region": "Wi-Fi installation or onboard experience", "value": "~1% of cost; likely higher hedonic ROI per pound"}
+        ]
+      },
+      "bounded_by": ["Sutherland's argument applies specifically to memory-driven satisfaction; does not address cases where 30-minute savings creates economic value through increased trips or reduced operating costs"]
+    },
+    {
+      "text": "Rory Sutherland argues that impulse saving tools are vastly underexplored relative to impulse spending mechanisms. While millions of impulse-spend opportunities are embedded in daily consumer experience, banks have historically made saving as friction-heavy as possible. A Westpac New Zealand iPhone app that instantly saves $5 with a single button press demonstrated that applying impulse design to saving can capture the same behavioral reflex that drives impulse spending.",
+      "type": "assertion",
+      "speaker": "Rory Sutherland",
+      "speaker_term": "impulse save",
+      "topic": "Activation as Primary Churn Lever",
+      "conditions": ["retail banking context", "mobile-first consumer"],
+      "mechanism": "Individual rational actors do not sit down and decide to save; savings behavior is triggered by the same situational and emotional dynamics as spending. Designing a frictionless save trigger mimics the low-resistance mechanics that make impulse spending pervasive.",
+      "numbers": null,
+      "bounded_by": ["Sutherland notes banks structurally oppose this because they profit from reduced savings; implementation requires overcoming institutional incentive misalignment"]
+    }
+  ],
+  "examples": [
+    {
+      "text": "Rory Sutherland describes the Canadian diamond Shreddies campaign: Post Foods in Canada reformulated the shape of their square Shreddies cereal — an entirely cosmetic change, with the same 100% whole grain wheat — into a diamond shape. Sales increased, and some consumers in research claimed the diamond-shaped Shreddies tasted different from the square ones. The campaign became a real-world proof that the presentation and perceived novelty of an identical product can create measurable economic value, illustrating the core claim that value is subjective and context-dependent.",
+      "claim_index": 1,
+      "topic": "Wealth-Relative Value Perception"
+    },
+    {
+      "text": "Rory Sutherland cites the Chrysler Building (1929) as historical corporate architecture functioning as a trust and financial-strength signal. He contrasts it with modern equivalents (accountants and annual reports), arguing that the shift from conspicuous architectural expenditure to invisible financial reporting has stripped a valuable signaling mechanism from corporate behavior. The building communicated surpluses in a way that could not be faked — spending tens of millions on a decorative skyscraper demonstrably signals that you are not desperate.",
+      "claim_index": 14,
+      "topic": "Distinctiveness Requires Active Effort"
+    },
+    {
+      "text": "Rory Sutherland describes the Nashville hotel customer satisfaction study: a hotel's management shared satisfaction data showing that virtually every element of guest satisfaction — food, cleanliness, quietness, service, quality of gardens, the ice sculpture — was determined almost entirely by the quality of the check-in experience. Guests who checked in within 3 minutes rated all other elements positively; guests who waited 15–20 minutes rated all elements negatively, including the ice sculpture — an element logically unrelated to queuing time. This demonstrates affirmation bias (first impression locks all subsequent perception).",
+      "claim_index": 10,
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "Rory Sutherland describes the Westpac New Zealand impulse-save iPhone app: the app allowed users to save $5 instantly with a single button press — no forms, no additional screens. This was designed via BBDO as a behavioral economics intervention to exploit the same impulse-action mechanics that drive impulse spending. Traditional banks require multi-step forms before a savings account deposit, effectively making saving structurally harder than spending. The app's existence proved the concept even if widespread adoption data was not cited.",
+      "claim_index": 17,
+      "topic": "Activation as Primary Churn Lever"
+    },
+    {
+      "text": "Rory Sutherland recounts the antibiotic compliance intervention: replacing a standard 24-pill course (all white, identical) with 20 white pills and 4 blue pills — with instructions to take the white pills first, then the blue ones — substantially improved course completion rates. The blue pills signal a visible sub-goal and endpoint, applying the principle that any task broken into intermediate objectives is more likely to be completed. The insight came through BBDO, where Sutherland was able to suggest it to a pharmaceutical client.",
+      "claim_index": 12,
+      "topic": "Activation as Primary Churn Lever"
+    },
+    {
+      "text": "Rory Sutherland describes the 3G spectrum auction: European telecoms operators bid catastrophically high amounts for 3G licenses because their analysts assumed that buyers would pay for mobile data by the megabyte, in the same way that voice calls were priced by the minute. They failed to anticipate that by the time mobile data was commercially available, home broadband had already conditioned consumers to expect flat-rate or free-increment data pricing. The psychological frame imported from broadband made metered mobile data unacceptable to consumers at the prices operators needed to recoup their auction bids, creating financial distress across the sector.",
+      "claim_index": 15,
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "Rory Sutherland describes the sociological research by Gambetta and Hertog on the overrepresentation of engineers in Islamist terrorist organizations. Notable members include Osama bin Laden (civil engineering), Umar Farooq Abdulmutallab (mechanical engineering), Mohammed Atta (architectural engineering), and Khalid Sheikh Mohammed (mechanical engineering). The researchers argue this is not because bombs require engineering skills — these individuals were mostly in strategy, not execution — but because engineering culture instills an absolutist mindset that is intolerant of ambiguity and compromise, making engineers disproportionately susceptible to totalistic ideologies. Sutherland uses this as evidence that engineering cognitive style can create blind spots when applied to human systems.",
+      "claim_index": 13,
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking"
+    },
+    {
+      "text": "Rory Sutherland presents the chessboard optical illusion: squares A and B on a standard checkerboard pattern appear to be different shades — A appears clearly darker. After covering both with a neutral connector strip and waiting 15 seconds, both squares are revealed to be the exact same shade of gray. Even after being shown this, viewers cannot consciously override the perception — A continues to look darker than B. This demonstrates that human perception is relativistic and context-bound, not absolute, and that rational knowledge cannot override perceptual frames.",
+      "claim_index": 0,
+      "topic": "Wealth-Relative Value Perception"
+    }
+  ],
+  "practices": [
+    {
+      "text": "When designing a new product for a price-sensitive market, place it in a context where buyers have recently been exposed to higher-priced alternatives in adjacent categories (e.g., sell expensive cars at boat shows, not car shows; sell premium TVs on luxury holiday websites rather than electronics stores).",
+      "topic": "Pricing Anchoring Strategy"
+    },
+    {
+      "text": "Never frame a new communications technology (e.g., video conferencing) as a substitute for a superior incumbent (e.g., air travel); instead frame it as an upgrade of an inferior incumbent (e.g., a premium phone call). Inferior-good framing suppresses adoption regardless of the product's functional capabilities.",
+      "topic": "Brand as Behavioral Pairing"
+    },
+    {
+      "text": "When introducing a discount or price incentive, present it as a gain on the trade-in or existing asset (e.g., £3,000 on your trade-in) rather than as a reduction on the new purchase price, even when the economic value is identical. The gain frame on a smaller reference amount creates greater perceived value.",
+      "topic": "Price Anchoring"
+    },
+    {
+      "text": "Introduce an artificial unit limit on an otherwise unlimited digital product (e.g., 180 tracks/month on a music service) to enable buyers to anchor value against a familiar reference category (e.g., CD purchases) rather than leaving value indeterminate because of the unlimited ceiling.",
+      "topic": "Price Anchoring"
+    },
+    {
+      "text": "Invest disproportionately in the first touchpoint of a customer experience (e.g., check-in, onboarding, first call), because affirmation bias causes the first impression to dominate all subsequent satisfaction ratings — including those for unrelated elements of the experience.",
+      "topic": "Customer Awareness Levels"
+    },
+    {
+      "text": "To improve completion of multi-step behavioral programs (medication courses, onboarding sequences, training curricula), break the task into visually distinguishable sub-goals with clear intermediate milestones, even when the underlying task content is unchanged.",
+      "topic": "Activation as Primary Churn Lever"
+    },
+    {
+      "text": "Inject psychology or behavioral economics expertise into organizational boards and decision-making bodies alongside finance, engineering, and management consultancy representation, because boards dominated by quantitative backgrounds systematically underweight psychological determinants of customer value.",
+      "topic": "Undefined Words Create Mythology and Prevent Clear Thinking"
+    }
+  ]
+}

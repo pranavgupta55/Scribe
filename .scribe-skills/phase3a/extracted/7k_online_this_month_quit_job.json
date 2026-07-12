@@ -1,0 +1,306 @@
+{
+  "source_file": "7k_online_this_month_quit_job.txt",
+  "primary_speaker": "Eric (last name unknown; YouTube host of this channel, self-described auto detailing / drop-servicing operator based in Toronto, Canada; video published late 2025 or early 2026)",
+  "concepts_addressed": [
+    "Cost Arbitrage Model",
+    "Service Business Unit Economics",
+    "Social Proof Hierarchy in Sales",
+    "Cold Outreach Channels",
+    "Affiliate and Partner Channel Strategy",
+    "Sales Process Optimization",
+    "Volume-First Scaling",
+    "Tiered Offer Pricing",
+    "Founder Bottleneck",
+    "Market Selection Criteria: Growth + Pain + Targeting",
+    "Workflow Automation"
+  ],
+  "frameworks": [
+    {
+      "name": "Remote Auto Detailing Model",
+      "definition": "A three-part arbitrage system: (1) list Google Business profiles for a mobile car detailing service, (2) receive inbound calls from nearby searchers, (3) dispatch a contracted detailer at roughly half the customer price and pocket the spread — all managed remotely without performing any physical labor.",
+      "concept": "Cost Arbitrage Model"
+    }
+  ],
+  "claims": [
+    {
+      "text": "In the remote auto detailing drop-service model, a single optimized Google Business Profile in a dense urban area can generate 5 to 7 inbound calls per day, which — at a 2-to-3 booking conversion rate per day — yields approximately $6,000 to $10,000 per month in gross revenue for the operator.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "business profile",
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Urban or dense suburban area with existing demand for mobile car detailing",
+        "Profile has at least 20 reviews and keyword-optimized name and description",
+        "Operator charges $200–$250 per job",
+        "Contractor paid approximately $100–$150 per job"
+      ],
+      "mechanism": "Google Maps proximity ranking surfaces the profile to nearby searchers without paid ads; inbound demand is pre-qualified because the customer is actively searching for the service.",
+      "numbers": {
+        "axis": "daily inbound calls and resulting monthly revenue per single Google Business Profile",
+        "anchors": [
+          {"region": "calls per day target", "value": "5–7 calls/day"},
+          {"region": "bookings per day target", "value": "2–3 jobs/day"},
+          {"region": "resulting monthly revenue", "value": "$6,000–$10,000/month"}
+        ]
+      },
+      "bounded_by": [
+        "One profile alone is unlikely to sustain $7k/month without 100+ reviews or exceptional location",
+        "Does not apply to low-density areas (towns of ~5,000 people) where the operator should target the nearest large city instead"
+      ]
+    },
+    {
+      "text": "Google Business Profile proximity ranking means a listing with 20 reviews can outrank a competing listing with 281 reviews if it is geographically closer to the searcher, because Google Maps surfaces the nearest result first for local service searches.",
+      "type": "mechanism",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": null,
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Local service category search (e.g., 'car detailing near me')",
+        "Google Maps business listing context"
+      ],
+      "mechanism": "Google Maps local search ranks listings primarily by proximity to the searcher, not by aggregate review count; a closer listing with fewer reviews therefore outranks a distant listing with more reviews.",
+      "numbers": {
+        "axis": "review count vs. ranking position for Google Maps local service search",
+        "anchors": [
+          {"region": "nearby listing with lower review count", "value": "59 reviews — ranks above"},
+          {"region": "farther listing with higher review count", "value": "100 reviews — ranks below"},
+          {"region": "another nearby listing", "value": "20 reviews — ranks above"},
+          {"region": "another farther listing", "value": "281 reviews — ranks below"}
+        ]
+      },
+      "bounded_by": [
+        "Applies specifically to Google Maps local proximity search, not to organic Google web search where domain authority dominates"
+      ]
+    },
+    {
+      "text": "In a drop-service arbitrage business using Google Business Profiles for auto detailing, the operator retains approximately $100 per job by charging the customer $200–$250 and paying the contracted detailer $100–$150, with the spread being the operator's gross profit per transaction.",
+      "type": "quantified",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "split the profit usually in half",
+      "topic": "Service Business Unit Economics",
+      "conditions": [
+        "Mobile auto detailing service category",
+        "Contracted detailer sourced from Facebook Marketplace at below-market rates",
+        "Operator charges $200–$250 per job"
+      ],
+      "mechanism": "Contractors sourced from Facebook Marketplace are actively seeking jobs and accept lower per-job rates; Google-driven inbound leads accept higher prices because the operator appears at the top of their local search results, creating a perception of credibility and premium standing.",
+      "numbers": {
+        "axis": "per-job economics in the remote auto detailing model",
+        "anchors": [
+          {"region": "customer-facing price", "value": "$200–$250 per job"},
+          {"region": "contractor payment", "value": "$100–$150 per job"},
+          {"region": "operator gross profit target", "value": "~$100 per job minimum"}
+        ]
+      },
+      "bounded_by": [
+        "Profit per job varies; some jobs yield $50, others more than $100",
+        "Does not account for phone-number platform costs (approximately $3/month per profile at scale)"
+      ]
+    },
+    {
+      "text": "Contractors sourced from Facebook Marketplace for drop-service gigs accept lower per-job rates than market because they are actively competing for work and need volume; this acceptance rate is stable because the operator's referral volume (e.g., 10+ jobs per month) makes defection uneconomical for the contractor.",
+      "type": "mechanism",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "begging for jobs",
+      "topic": "Cold Outreach Channels",
+      "conditions": [
+        "Contractor sourced from Facebook Marketplace gig-listing posts",
+        "Operator provides recurring job volume to the same contractor"
+      ],
+      "mechanism": "Contractors listing on Facebook Marketplace are supply-side-constrained and compete on price; once an operator provides steady volume (e.g., enough to generate $10,000/month for the contractor), the contractor's retention incentive is stronger than the incentive to defect for any single job's margin.",
+      "numbers": null,
+      "bounded_by": [
+        "Finding a reliable contractor who shows up on time may take several attempts"
+      ]
+    },
+    {
+      "text": "Scaling the remote auto detailing model from a single profile generating ~$6k–$10k/month to $20k–$30k/month requires deploying multiple Google Business Profiles spaced approximately 10 minutes apart geographically, each using a unique phone number, so that each profile captures a distinct local audience.",
+      "type": "conditional",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "expand this into multiple business profiles",
+      "topic": "Volume-First Scaling",
+      "conditions": [
+        "Operator has validated that the single-profile model generates inbound calls",
+        "Each new profile requires its own unique phone number (e.g., via CallRail at ~$3/month per number)"
+      ],
+      "mechanism": "Each Google Business Profile captures proximity-ranked searchers in its immediate area; spacing profiles ~10 minutes apart ensures minimal geographic overlap and maximizes total call volume across the network.",
+      "numbers": {
+        "axis": "revenue vs. number of Google Business Profiles deployed",
+        "anchors": [
+          {"region": "1 profile", "value": "$6,000–$10,000/month (gross)"},
+          {"region": "~20 profiles (operator's reported scale)", "value": "$20,000+/month (gross)"}
+        ]
+      },
+      "bounded_by": [
+        "Each additional profile requires a unique phone number and a separate Google verification",
+        "At 20+ profiles, phone-number platform costs reached ~$200/month for the speaker"
+      ]
+    },
+    {
+      "text": "In the remote auto detailing model, including the exact search keyword (e.g., 'Mobile Car Detailing Toronto') in the Google Business Profile name, description, and review replies causes the profile to rank higher in Google Maps search results for that keyword.",
+      "type": "mechanism",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "keyword",
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "Google Business Profile for a local service business",
+        "Keyword matches the exact phrase customers are searching"
+      ],
+      "mechanism": "Google Maps ranks local business profiles partly on relevance signals extracted from the profile name, description, and response text; embedding the searched keyword in these fields increases relevance score for that query.",
+      "numbers": null,
+      "bounded_by": [
+        "Proximity to searcher remains the dominant ranking signal; keyword optimization is secondary"
+      ]
+    },
+    {
+      "text": "Accumulating 20 reviews on a new Google Business Profile — sourced from friends, family, campus outreach, in-person requests, or paid review acquisition — is sufficient to generate the social proof signal needed for the profile to begin receiving inbound calls at a material rate.",
+      "type": "conditional",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "get 20 reviews",
+      "topic": "Social Proof Hierarchy in Sales",
+      "conditions": [
+        "New Google Business Profile with no prior review history",
+        "Profile is in a geographically proximate position to target searchers"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "minimum review threshold for Google Business Profile to generate inbound call volume",
+        "anchors": [
+          {"region": "below threshold (0–19 reviews)", "value": "minimal inbound calls expected"},
+          {"region": "at threshold (20 reviews)", "value": "profile begins generating calls materially"}
+        ]
+      },
+      "bounded_by": [
+        "100+ reviews enables a single profile to generate enough calls to approach $7k/month on its own"
+      ]
+    },
+    {
+      "text": "Auto detailing is a lower-barrier-to-entry category for the remote drop-service model than plumbing or other trades because it requires no licensing, no insurance, and Google Business Profile approval is more lenient for detailing listings, reducing time-to-first-call.",
+      "type": "comparison",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "barrier to entry is very, very low",
+      "topic": "Market Selection Criteria: Growth + Pain + Targeting",
+      "conditions": [
+        "Operator is using Google Business Profile as the primary traffic source",
+        "Comparison is between auto detailing and regulated trades (e.g., plumbing)"
+      ],
+      "mechanism": "Regulated trades require licensing and insurance documentation; Google's verification and listing-approval process is more rigorous for licensed-trade categories; auto detailing has no such licensing requirement, making listing creation and approval faster.",
+      "numbers": null,
+      "bounded_by": [
+        "The speaker's highest revenue ($30k/month) came from plumbing, not detailing, suggesting higher-barrier niches can yield larger revenue at scale once regulatory/licensing hurdles are resolved"
+      ]
+    },
+    {
+      "text": "In the remote auto detailing model, a two-tier pricing menu — interior detail only ($199) and interior plus exterior ($249) — converts customers at high rates because the price is in the range where customers searching on Google for a mobile service expect to pay, while Facebook Marketplace contractors accept jobs at roughly $100–$150, preserving the spread.",
+      "type": "assertion",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "pricing structure",
+      "topic": "Tiered Offer Pricing",
+      "conditions": [
+        "Mobile car detailing service in a Canadian or US urban market",
+        "Operator listed at or near the top of Google Maps for the searcher's location"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "customer-facing price tiers for mobile car detailing",
+        "anchors": [
+          {"region": "interior only", "value": "$199"},
+          {"region": "interior plus exterior", "value": "~$249 ($199 + $50 add-on)"}
+        ]
+      },
+      "bounded_by": [
+        "Pricing may need adjustment in markets with significantly different median income or existing competition"
+      ]
+    },
+    {
+      "text": "Once the remote auto detailing system is fully operational with a reliable contractor and optimized profiles, the operator's active workload reduces to answering inbound calls and routing job details to the contractor — a task that can itself be delegated to a hired phone answerer, making the operation effectively passive.",
+      "type": "conditional",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "completely hands off",
+      "topic": "Workflow Automation",
+      "conditions": [
+        "System is operational: profiles live, contractor relationship established",
+        "Revenue is sufficient to justify hiring a phone answerer"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Early-stage setup is active work: creating profiles, sourcing contractors, securing first reviews",
+        "Fully passive operation requires hiring phone answering staff, which is only economical at higher call volumes"
+      ]
+    },
+    {
+      "text": "For operators scaling the remote drop-service model into higher-ticket categories (e.g., plumbing rather than auto detailing), the same Google Business Profile proximity-ranking mechanism applies but the per-job price and contractor cost are both higher, enabling monthly gross revenue of $30,000 or more compared to the $20,000 ceiling the speaker observed for detailing at scale.",
+      "type": "comparison",
+      "speaker": "Eric (Toronto-based drop-servicing operator, video published late 2025 / early 2026)",
+      "speaker_term": "higher ticket industries",
+      "topic": "Cost Arbitrage Model",
+      "conditions": [
+        "Operator has already proven the model with auto detailing",
+        "Higher-ticket trade requires navigating licensing/insurance hurdles or partnering with licensed contractors"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "monthly gross revenue ceiling by service category in the drop-service model",
+        "anchors": [
+          {"region": "auto detailing (speaker's observed scale)", "value": "~$20,000/month"},
+          {"region": "plumbing (speaker's reported first month at scale)", "value": "$30,000/month"}
+        ]
+      },
+      "bounded_by": [
+        "Plumbing has significantly higher barrier to entry due to licensing requirements"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "In September (year not specified, but consistent with the speaker's pre-YouTube-channel period), the speaker received inbound calls from a Google Business Profile he had set up in Winnipeg while living in Toronto. He had not yet lined up a contractor and scrambled to find one on Facebook Marketplace. He messaged a detailer, agreed on a $150 contractor price against a $250 customer charge, dispatched the contractor, found the work satisfactory, and continued sending the same contractor (referred to as Abdul) repeated jobs. Over the same month, Abdul sent the speaker money multiple times as jobs were completed, demonstrating the repeatability of the payment flow.",
+      "claim_index": 3,
+      "topic": "Cold Outreach Channels"
+    },
+    {
+      "text": "The speaker showed a CallRail billing screenshot revealing he was paying approximately $2,200 per month for phone numbers alone at peak scale — because he had roughly 22 profiles each requiring a unique $3/month number across multiple cities. He noted that a more disciplined operator could achieve similar revenue (~$20k/month) with approximately 20 profiles and ~$200/month in phone-number costs.",
+      "claim_index": 4,
+      "topic": "Volume-First Scaling"
+    },
+    {
+      "text": "The speaker showed a Google Business Profile analytics dashboard for a profile he had not actively managed in months, which was still generating 628 customer interactions, 48 inbound calls, and a high rate of website form submissions in a recent period — illustrating the passive, durable nature of a well-optimized proximity-ranked listing.",
+      "claim_index": 9,
+      "topic": "Workflow Automation"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Name the Google Business Profile with the format: [Brand Name] + 'Mobile Car Detailing' + [City] (e.g., 'Shine Boss Mobile Car Detailing Toronto') so that the search keyword is embedded in the listing name itself.",
+      "topic": "Social Proof Hierarchy in Sales"
+    },
+    {
+      "text": "Use a random commercial building or apartment address (not your personal home address) when registering the business location on Google Business Profile to indicate area proximity without creating complaints.",
+      "topic": "Cost Arbitrage Model"
+    },
+    {
+      "text": "Reply to all Google Business Profile reviews using the target keyword phrase (e.g., 'mobile car detailing Toronto') to reinforce relevance signals for that search term.",
+      "topic": "Social Proof Hierarchy in Sales"
+    },
+    {
+      "text": "When messaging contractors on Facebook Marketplace, tell them you are paying for ads (even though you are not) so they feel the operator's lead-generation effort justifies the 50% revenue split.",
+      "topic": "Affiliate and Partner Channel Strategy"
+    },
+    {
+      "text": "Collect the following job details before dispatching a contractor: customer name, address, time of appointment, and customer phone number — then forward this as a single message to the detailer.",
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Set up a booking-enabled website (using an AI website builder) that allows customers to pay directly or submit a phone-number form, so that non-callers who click from the Google Business Profile can still convert.",
+      "topic": "Sales Process Optimization"
+    },
+    {
+      "text": "Accept all common payment methods — cash (via contractor relay), e-transfer, Stripe, Square, Zelle, Venmo — to remove friction from customer payment, increasing booking completion rates.",
+      "topic": "Service Business Unit Economics"
+    },
+    {
+      "text": "Space each additional Google Business Profile approximately 10 minutes' drive apart from existing profiles so that each captures a distinct geographic audience rather than competing with your own listings.",
+      "topic": "Volume-First Scaling"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "source_file": "gmb_optimization_guide_2_weeks.txt",
+  "primary_speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+  "concepts_addressed": [
+    "Google Business Profile Optimization",
+    "Before/After Visual Proof as Highest-ROI Acquisition Channel",
+    "Social Proof Hierarchy in Sales",
+    "Specialization Reduces Commoditization",
+    "Geographic Monopoly: Fix State Before Expanding",
+    "Audience Targeting via Platform Tools",
+    "Static Content and Daily Organic Posting Outperforms Video",
+    "Content-Led Sales Strategy",
+    "Lead Qualification Friction",
+    "Single-Channel Domination"
+  ],
+  "frameworks": [
+    {
+      "name": "GMB Three-Pack Ranking Blueprint",
+      "definition": "A five-element system for ranking a Google Business Profile into the local three-pack: (1) strategic placement in low-competition, high-search-volume areas, (2) review quantity matching or exceeding the third-place profile, (3) profile metric superiority on rating and completeness, (4) title-and-description SEO with primary keyword, (5) sustained human activity signals.",
+      "concept": "Google Business Profile Optimization"
+    }
+  ],
+  "claims": [
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that the Google Business profile title accounts for approximately 90% of the SEO impact needed to rank in the local three-pack, with the description and all other on-page optimizations contributing the remaining 10%. The title must contain the primary service keyword and city name (e.g., 'Plumber Oshawa') matching the highest-volume search term for that service-city combination.",
+      "type": "quantified",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile (not traditional website SEO)",
+        "Local service business competing for three-pack placement",
+        "All other ranking factors — reviews, activity, profile completeness — already in place"
+      ],
+      "mechanism": "Google's local ranking algorithm weights the business name/title field more heavily than other text fields because it is the most structured, machine-readable signal of what the business does and where it operates.",
+      "numbers": {
+        "axis": "Share of SEO impact on GMB three-pack ranking",
+        "anchors": [
+          {"region": "Title (service + city keyword)", "value": "~90%"},
+          {"region": "Description and all other on-page fields", "value": "~10%"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply when reviews and activity signals have not yet been established — title alone cannot overcome a large review deficit"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that reviews represent approximately 75% of the ranking weight in Google's local three-pack algorithm, making review quantity the single most important lever a business can pull — more impactful than SEO, website quality, or profile completeness combined.",
+      "type": "quantified",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile local three-pack ranking",
+        "All competing profiles have at least some reviews"
+      ],
+      "mechanism": "Google interprets review quantity as a proxy for business legitimacy and customer satisfaction, which directly serves Google's stated objective of surfacing the best solution for a searcher's problem.",
+      "numbers": {
+        "axis": "Share of GMB ranking weight by factor",
+        "anchors": [
+          {"region": "Reviews (quantity + rating + recency)", "value": "~75%"},
+          {"region": "All other factors (SEO, activity, completeness)", "value": "~25%"}
+        ]
+      },
+      "bounded_by": [
+        "Estimate is based on the speaker's empirical observation across dozens of profiles, not a published Google study"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that in competitive local markets, every top-three Google Business Profile in large cities accumulates reviews that are predominantly fake. To compete, a new profile must acquire fake reviews because the volume required to match established competitors is practically unachievable through organic customer reviews alone.",
+      "type": "assertion",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Large or competitive city markets",
+        "Categories where top profiles have 1,000+ reviews",
+        "New or low-review-count profiles attempting to enter the three-pack"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Speaker acknowledges this is against Google's terms of service",
+        "In lower-competition markets with sub-100-review three-packs, organic reviews alone may suffice"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that a Google Business Profile with a rating below 4.8 stars generates significantly fewer customer calls than profiles rated 4.8 or above, regardless of ranking position, because consumers use star rating as a fast trust filter before clicking or calling.",
+      "type": "conditional",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Local service business GMB profile",
+        "Consumer-facing categories where trust is a primary decision factor"
+      ],
+      "mechanism": "A sub-4.8 rating signals unresolved negative experiences; consumers performing fast heuristic comparisons across three-pack results use rating as a disqualifying filter before reading reviews or clicking through.",
+      "numbers": {
+        "axis": "GMB star rating threshold for call conversion",
+        "anchors": [
+          {"region": "Below 4.8 stars", "value": "low call volume (disqualified by consumers)"},
+          {"region": "4.8 stars and above", "value": "competitive call volume"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that a Google Business Profile set to 24/7 business hours ranks higher across all hours compared to a profile with restricted hours, because Google factors active availability into its local ranking signals and penalizes profiles shown as 'closed.'",
+      "type": "mechanism",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile local ranking",
+        "Service categories where 24/7 availability is plausible (e.g., emergency plumbing)"
+      ],
+      "mechanism": "Google demotes profiles that are marked as 'closed' in real-time search results because a closed business cannot fulfill the searcher's immediate need, reducing its relevance score at that moment. A 24/7 profile is never demoted for being closed.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker notes that even if the phone is not answered, the open status alone helps ranking — applies to ranking, not necessarily to conversion"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that for local service businesses targeting a city, using specific zip codes as service areas instead of city names produces more targeted ranking and higher three-pack placement in the targeted sub-area, because zip-code targeting narrows the competitive radius and concentrates ranking signals.",
+      "type": "mechanism",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile listed as a service-area business (not storefront)",
+        "Targeting a specific metro area or neighborhood rather than a broad region"
+      ],
+      "mechanism": "City-level service area declarations force a profile to compete across a larger radius; zip-code declarations concentrate ranking authority in a smaller geographic cluster, making the profile more relevant for searches originating within those zip codes.",
+      "numbers": {
+        "axis": "Recommended service area radius for zip-code targeting",
+        "anchors": [
+          {"region": "Ideal targeting radius", "value": "7-mile radius (~15-20 zip codes)"},
+          {"region": "Maximum zip codes allowed by Google", "value": "20 zip codes"}
+        ]
+      },
+      "bounded_by": [
+        "Does not apply to storefront businesses with a physical address — zip-code service area targeting is specific to service-area businesses"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that the minimum monthly search volume threshold for a service-city keyword combination worth targeting for a new Google Business Profile is 400 searches per month, below which the traffic upside does not justify the effort of building the profile to three-pack rank.",
+      "type": "conditional",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Lead-generation-focused GMB profile (not a brick-and-mortar service business locked into geography)",
+        "Using SEMrush keyword overview to validate search volume",
+        "Service keyword verified as clearly relevant (not mixed with unrelated searches)"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Monthly search volume for service + city keyword",
+        "anchors": [
+          {"region": "Below 400 searches/month", "value": "not worth targeting for new profile"},
+          {"region": "400+ searches/month", "value": "minimum viable target"},
+          {"region": "Example: 2,700 searches/month (plumber + city)", "value": "strong target"}
+        ]
+      },
+      "bounded_by": [
+        "Service business owners locked into their actual geographic service area cannot select by search volume — they must work with whatever volume exists in their location"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that a new Google Business Profile entering a three-pack where two of the three incumbent profiles have fewer than 100 reviews is in a high-probability-of-success market, because the review gap needed to compete is achievable within weeks.",
+      "type": "conditional",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "New or low-review-count Google Business Profile",
+        "Lead-generation-focused GMB setup where geographic flexibility exists"
+      ],
+      "mechanism": "A three-pack where two of three profiles hold under 100 reviews means the competitive bar for review quantity is low enough that a concentrated acquisition effort (organic or fake) can reach parity within weeks, enabling the new profile to qualify on all other ranking factors.",
+      "numbers": {
+        "axis": "Incumbent review count as market competitiveness signal",
+        "anchors": [
+          {"region": "Two of three three-pack profiles under 100 reviews", "value": "high-opportunity market — enter"},
+          {"region": "Three-pack profiles with 1,000+ reviews each", "value": "highly competitive — requires fake review strategy to compete"}
+        ]
+      },
+      "bounded_by": [
+        "Not applicable to service businesses constrained to a specific geography"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that a Google Business Profile website does not meaningfully affect local three-pack ranking, and that a business can rank first using an unedited website template with a mismatched domain, contradicting conventional SEO advice that a high-quality, keyword-rich website is a prerequisite for local ranking.",
+      "type": "comparison",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile local three-pack ranking (not traditional organic website ranking)",
+        "All primary GMB ranking signals — reviews, title, activity — are already optimized"
+      ],
+      "mechanism": "Google's local three-pack ranking algorithm evaluates GMB-specific signals (reviews, profile completeness, title, activity) primarily; the linked website is a tertiary signal that matters only when GMB-native signals are roughly equal between competitors.",
+      "numbers": null,
+      "bounded_by": [
+        "Speaker acknowledges website quality affects conversion rate (calls generated) even if it has minimal effect on ranking position",
+        "Backlinks and citations to the website can improve ranking incrementally once all GMB-native signals are optimized"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that a Google Business Profile's description should use its primary service and city keywords two to three times across 750 characters, generated via ChatGPT with explicit keyword instructions, and that keyword stuffing in both the description and title should be avoided because it degrades profile credibility.",
+      "type": "assertion",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile description field (750 character limit)",
+        "Service-based local business"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Keyword density in GMB description",
+        "anchors": [
+          {"region": "Below 2 uses of primary keyword", "value": "underoptimized — misses ranking signal"},
+          {"region": "2-3 uses of primary keyword per 750 characters", "value": "recommended — signals relevance without stuffing"},
+          {"region": "Keyword stuffing (excessive repetition)", "value": "degrades credibility, risks profile penalty"}
+        ]
+      },
+      "bounded_by": []
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that a new entrant targeting a three-pack should set their minimum review acquisition target at the review count held by the third-place profile in that three-pack, not the first-place profile, because reaching third-place parity combined with the other ranking factors is sufficient to displace an incumbent.",
+      "type": "conditional",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "New Google Business Profile entering an established three-pack",
+        "Other ranking factors (title SEO, activity, profile completeness) are fully optimized"
+      ],
+      "mechanism": "Google's algorithm competes profiles against each other on a composite score; a profile that matches the weakest three-pack incumbent on reviews while outperforming on other factors creates a composite score sufficient to displace that incumbent.",
+      "numbers": null,
+      "bounded_by": []
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) asserts that placing the city name as far to the left as possible in the Google Business Profile title improves local ranking, based on his anecdotal observation across multiple profiles, though he cannot verify this as a confirmed Google ranking signal.",
+      "type": "assertion",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": null,
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Google Business Profile title field",
+        "Service + city keyword combination"
+      ],
+      "mechanism": null,
+      "numbers": null,
+      "bounded_by": [
+        "Speaker explicitly states this is anecdotal and cannot verify it as a confirmed ranking factor — should be treated as low-confidence observation, not a proven mechanism"
+      ]
+    },
+    {
+      "text": "The GMB consultant (gmb_optimization_guide_2_weeks.txt) describes a lead-generation business model where an operator ranks Google Business Profiles for local service categories (plumbing) in multiple cities, then partners with a local service provider who fulfills the jobs, with revenue split between the profile operator and the service provider. He claims this model generates $80,000 per month in revenue.",
+      "type": "quantified",
+      "speaker": "GMB Consultant (unnamed, gmb_optimization_guide_2_weeks.txt)",
+      "speaker_term": "remote plumbing company",
+      "topic": "Google Business Profile Optimization",
+      "conditions": [
+        "Operator has capacity to rank and manage multiple GMB profiles across different cities",
+        "Local service partner (plumber) is willing to fulfill leads on a revenue-share basis"
+      ],
+      "mechanism": null,
+      "numbers": {
+        "axis": "Monthly revenue from GMB lead-generation profile model",
+        "anchors": [
+          {"region": "Speaker's reported revenue (multiple plumbing profiles, multiple cities)", "value": "$80,000/month"},
+          {"region": "Service business clients he manages", "value": "$200,000-$300,000/month organically"}
+        ]
+      },
+      "bounded_by": [
+        "Revenue figure is self-reported and unverified",
+        "Requires ongoing management of multiple profiles and maintenance of fake review counts",
+        "Model viability depends on Google not penalizing fake-review profiles"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "text": "The speaker demonstrates his ranking results using three live Google Search screenshots: for 'plumber Newmarket,' his profile appears first organically; for 'plumber Richmond Hill,' his profile again appears first; for 'plumber Oshawa,' his profile appears second behind a competitor with 1,400 reviews. He states these are three of dozens of profiles he has ranked using the same method.",
+      "claim_index": 0,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "To illustrate the review-parity targeting strategy, the speaker uses a live example: his own profile in a city where he holds 70 reviews and ranks first. He shows two competitor profiles in the same three-pack. He explains that a new entrant wanting to break into this three-pack would need approximately 29 reviews — the count held by the third-place profile — as a minimum viable starting point before the other optimization factors take over.",
+      "claim_index": 10,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "To refute the claim that website quality is necessary for ranking, the speaker navigates live to the website linked from one of his first-ranking plumbing profiles. He shows it is an unedited template site with a mismatched domain name, yet the profile ranks first in a competitive city. He uses this as direct evidence that Google's local three-pack algorithm does not weight website quality heavily.",
+      "claim_index": 8,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The speaker opens SEMrush's keyword overview tool live on screen and searches for a plumbing keyword in a target city, finding 2,700 monthly searches. He then shows how to evaluate keyword variants — 'plumber' vs. 'plumbing' — to identify the highest-volume term (plumber, at roughly 480 vs. 260 searches), explaining this determines which variant to use in the GMB profile title.",
+      "claim_index": 6,
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "The speaker demonstrates the 'products' section workaround on a car detailing Google Business Profile: instead of adding physical products, he adds services (e.g., 'interior detail') as product listings, each with a ChatGPT-generated keyword-rich description. This fills an additional GMB profile section with indexable keyword content that most competitors leave blank.",
+      "claim_index": -1,
+      "topic": "Google Business Profile Optimization"
+    }
+  ],
+  "practices": [
+    {
+      "text": "Use ChatGPT to generate all GMB description copy by specifying the character limit and instructing it to use target keywords two to three times in a human-sounding way. Apply this same prompt pattern to service descriptions, product listings, review replies, and profile update posts.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Add a second business category to the GMB profile that is adjacent to the primary category (e.g., 'contractor' as secondary for a plumbing profile). Avoid listing the profile under a category that does not match the primary service — a plumber listed as HVAC will rank for neither.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Reply to every Google review using the same target keywords (service name, city, high-search modifiers like 'emergency' and 'near me') within the reply text. Google indexes review replies, and this creates additional keyword-density signals in the profile.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Add custom services to the GMB profile beyond the default options, and include a keyword-rich description for each individual service. Most competitors leave service descriptions blank, creating a completeness gap a new entrant can exploit.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Aim for at least one new review per week to demonstrate to Google that the business is active and has ongoing customer interactions, even if the review count is already competitive.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Ensure review quality by encouraging detailed, photo-attached reviews from real customers (or ensuring fake reviews mimic this pattern) — avoiding reviews that appear to be generic, low-detail, or associated with obviously fake profiles.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Use SEMrush keyword overview to identify the higher-volume variant between closely related terms (e.g., 'plumber' vs. 'plumbing') before finalizing the GMB profile title, and use that variant as the primary title keyword.",
+      "topic": "Google Business Profile Optimization"
+    },
+    {
+      "text": "Fill out every available section of the GMB profile — business description, services, products, service areas, photos, updates, and Q&A — because profile completeness is a ranking signal Google uses when all other factors are roughly equal between competitors.",
+      "topic": "Google Business Profile Optimization"
+    }
+  ]
+}
