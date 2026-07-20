@@ -25,6 +25,7 @@ Google Gemini (free tier) via the `google-genai` SDK.
 import json
 import os
 import re
+import sys
 import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -32,6 +33,18 @@ from pathlib import Path
 SCRIPT_DIR  = Path(__file__).parent.resolve()
 CHROMA_DIR  = SCRIPT_DIR / ".chroma"
 PORT        = 8765
+
+# v2 modules (graph-augmented retrieval + XML prompt assembly) live under scripts/
+sys.path.insert(0, str(SCRIPT_DIR / "scripts"))
+try:
+    import retrieval_v2 as _rv2
+    import prompt_v2 as _pv2
+    _V2_AVAILABLE = True
+except ImportError as _e:
+    _rv2 = None
+    _pv2 = None
+    _V2_AVAILABLE = False
+    _V2_IMPORT_ERR = str(_e)
 
 EMBED_MODEL   = "nomic-embed-text"
 # Gemini generation models (primary, then fallback if the primary is unavailable).
@@ -619,6 +632,68 @@ def build_prompt(query, context):
             f"Question: {query}\n\nAnswer:")
 
 
+def _v2_chat_flow(query: str) -> dict:
+    """v2 graph-augmented retrieval → XML prompt.
+
+    Returns:
+      {
+        'topics':      [ {name, slug, source, count}, ... ],  # for SSE 'nodes' event
+        'sources':     [source_filename, ...],                # for SSE 'sources' event
+        'system':      str,                                    # system prompt override
+        'user_message': str,                                   # XML-formatted user turn
+        'sub_queries': [str, ...],
+        'debug': {                                             # for /debug SSE event
+          'retrieval_meta': {...},
+          'prompt_stats':   {...},
+        }
+      }
+    """
+    retrieval = _rv2.retrieve_v2(query)
+
+    # Surface consulted topics for the graph-viewer node highlight. Dedup by name.
+    topic_names = []
+    seen_names = set()
+    for f in retrieval.get("facts", []):
+        t = f.get("topic")
+        if t and t not in seen_names:
+            seen_names.add(t)
+            topic_names.append(t)
+    topics = [{"name": t, "slug": _slug(t), "source": None, "count": 1} for t in topic_names[:MAX_TOPICS]]
+
+    # Sources: union of fact attribution + chunk sources.
+    sources = []
+    seen_src = set()
+    for f in retrieval.get("facts", []):
+        try:
+            attr = json.loads(f.get("attribution_json", "[]")) if isinstance(f.get("attribution_json"), str) else []
+        except Exception:
+            attr = []
+        for a in attr:
+            s = a.get("source_file") if isinstance(a, dict) else None
+            if s and s not in seen_src:
+                seen_src.add(s)
+                sources.append(s)
+    for c in retrieval.get("chunks", []):
+        s = c.get("source")
+        if s and s not in seen_src:
+            seen_src.add(s)
+            sources.append(s)
+
+    system_prompt, user_message = _pv2.assemble_prompt(query, retrieval)
+
+    return {
+        "topics":       topics,
+        "sources":      sources,
+        "system":       system_prompt,
+        "user_message": user_message,
+        "sub_queries":  retrieval.get("sub_queries") or [query],
+        "debug": {
+            "retrieval_meta": retrieval.get("meta", {}),
+            "prompt_stats":   _pv2.compute_prompt_stats(retrieval),
+        },
+    }
+
+
 def assemble_wire(system, entries):
     """Render the full wire payload that goes to the model as a single
     flat string for the Dev panel. Surfaces system prompt + every history
@@ -779,18 +854,21 @@ def _entries_to_gemini_contents(entries):
     ]
 
 
-def generate_stream(client, entries):
+def generate_stream(client, entries, system=None):
     """Yield generated text chunks from Gemini, trying the primary model then
     the fallback. `entries` is the compacted message history (list of
-    {role, content, ...}). Raises on hard failure (after fallback also fails)."""
+    {role, content, ...}). `system` overrides _SYSTEM (v2 flow passes its own
+    XML-aware system prompt). Raises on hard failure (after fallback fails)."""
     from google.genai import types
 
+    if system is None:
+        system = _SYSTEM
     contents = _entries_to_gemini_contents(entries)
 
     last_err = None
     for model in (GEMINI_MODEL, GEMINI_MODEL_FALLBACK):
         try:
-            kwargs = dict(system_instruction=_SYSTEM, temperature=0.2,
+            kwargs = dict(system_instruction=system, temperature=0.2,
                           max_output_tokens=2048)
             # Disable "thinking" on 2.5-flash — otherwise it can spend the entire
             # output budget reasoning and return ZERO visible text (the empty-reply
@@ -814,13 +892,16 @@ def generate_stream(client, entries):
     raise RuntimeError(str(last_err) if last_err else "Gemini generation failed.")
 
 
-def qwen_stream(entries):
+def qwen_stream(entries, system=None):
     """Local fallback generation — stream from Ollama qwen3:1.7b. `entries` is
-    the compacted message history. Used when Gemini is rate-limited or
+    the compacted message history. `system` overrides _SYSTEM (v2 flow passes
+    its own XML-aware system prompt). Used when Gemini is rate-limited or
     unavailable so the chat still answers."""
     import ollama
     import re as _re
-    messages = [{"role": "system", "content": "/no_think\n" + _SYSTEM}]
+    if system is None:
+        system = _SYSTEM
+    messages = [{"role": "system", "content": "/no_think\n" + system}]
     for e in entries:
         messages.append({"role": e["role"], "content": e["content"]})
     stream = ollama.chat(
@@ -908,6 +989,7 @@ class Handler(SimpleHTTPRequestHandler):
             query = (body.get("query") or "").strip()
             gemini_only = bool(body.get("gemini_only", False))
             qwen_only = bool(body.get("qwen_only", False))
+            use_v2 = bool(body.get("use_v2", False))
             history = body.get("history") or []  # [{role, content, sources?}]
             if not isinstance(history, list):
                 history = []
@@ -915,6 +997,7 @@ class Handler(SimpleHTTPRequestHandler):
             query = ""
             gemini_only = False
             qwen_only = False
+            use_v2 = False
             history = []
 
         # Sources already attached in prior turns — filter them out of this
@@ -941,9 +1024,31 @@ class Handler(SimpleHTTPRequestHandler):
             return
 
         # ── Retrieve (skipped for trivial / greeting messages) ──
+        # `use_v2` swaps in graph-augmented retrieval + XML prompt assembly.
+        # v1 path unchanged when use_v2 is False.
+        if use_v2 and not _V2_AVAILABLE:
+            self._sse({"type": "notice",
+                       "text": f"use_v2=true requested but v2 modules unavailable ({_V2_IMPORT_ERR}) — falling back to v1."})
+            use_v2 = False
+
         if _is_trivial(query):
             topics, context, sub_queries, sources_used = [], "", [query], []
+            v2_flow = None
+        elif use_v2:
+            try:
+                v2_flow = _v2_chat_flow(query)
+                topics = v2_flow["topics"]
+                sub_queries = v2_flow["sub_queries"]
+                sources_used = v2_flow["sources"]
+                context = ""  # v2 puts context inside the user_message; no separate block
+            except Exception as e:
+                self._sse({"type": "error",
+                           "message": f"v2 retrieval failed ({e}). "
+                                      f"Is .chroma/ rebuilt via rebuild_chroma_v2.py?"})
+                self._sse({"type": "done"})
+                return
         else:
+            v2_flow = None
             try:
                 topics, context, sub_queries, sources_used = retrieve(query, seen_sources=seen_sources)
             except Exception as e:
@@ -959,7 +1064,32 @@ class Handler(SimpleHTTPRequestHandler):
         self._sse({"type": "sources", "sources": sources_used})
 
         # Build the compacted message list (history + current question).
-        entries, total_tokens = build_chat_entries(history, query, context)
+        if v2_flow is not None:
+            # v2: replace system prompt + inject the XML-formatted user message.
+            # Skip build_chat_entries' context injection since v2 already embedded it.
+            entries = []
+            for turn in history or []:
+                role = turn.get("role")
+                content = turn.get("content") or ""
+                if role not in ("user", "assistant") or not content:
+                    continue
+                entries.append({
+                    "role": role,
+                    "content": content,
+                    "tokens": _approx_tokens(content),
+                    "compressed": bool(turn.get("compressed", False)),
+                })
+            entries.append({
+                "role": "user",
+                "content": v2_flow["user_message"],
+                "tokens": _approx_tokens(v2_flow["user_message"]),
+                "compressed": False,
+            })
+            total_tokens = sum(e["tokens"] for e in entries)
+            active_system = v2_flow["system"]
+        else:
+            entries, total_tokens = build_chat_entries(history, query, context)
+            active_system = _SYSTEM
 
         # ── Debug round-trip (Dev panel): the exact strings we send ──
         # `prompt` is the FULL wire payload (system + every turn + current
@@ -967,14 +1097,19 @@ class Handler(SimpleHTTPRequestHandler):
         # panel show exactly what the model receives. `system_tokens` and
         # `total_tokens` let the client compute a live conversation-total
         # token counter under the chat input.
-        self._sse({"type": "debug",
-                   "system": _SYSTEM,
-                   "context": context,
-                   "prompt": assemble_wire(_SYSTEM, entries),
-                   "sub_queries": sub_queries,
-                   "system_tokens": _approx_tokens(_SYSTEM),
-                   "history_tokens": total_tokens,
-                   "history_msgs": len(entries)})
+        debug_payload = {
+            "type": "debug",
+            "system": active_system,
+            "context": context,
+            "prompt": assemble_wire(active_system, entries),
+            "sub_queries": sub_queries,
+            "system_tokens": _approx_tokens(active_system),
+            "history_tokens": total_tokens,
+            "history_msgs": len(entries),
+        }
+        if v2_flow is not None:
+            debug_payload["v2"] = v2_flow["debug"]
+        self._sse(debug_payload)
 
         # Empty KB AND non-trivial query AND no prior context = nothing to answer
         # from. Trivial greetings can go through to the model and answer naturally.
@@ -991,7 +1126,7 @@ class Handler(SimpleHTTPRequestHandler):
             self._sse({"type": "backend", "backend": "qwen"})
             _record_qwen_used()
             try:
-                for tok in qwen_stream(entries):
+                for tok in qwen_stream(entries, system=active_system):
                     self._sse({"type": "token", "text": tok})
             except BrokenPipeError:
                 return
@@ -1036,7 +1171,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self._sse({"type": "backend", "backend": "qwen"})
                 _record_qwen_used()
                 try:
-                    for tok in qwen_stream(entries):
+                    for tok in qwen_stream(entries, system=active_system):
                         self._sse({"type": "token", "text": tok})
                 except BrokenPipeError:
                     return
@@ -1050,7 +1185,7 @@ class Handler(SimpleHTTPRequestHandler):
             yielded = False
             try:
                 self._sse({"type": "backend", "backend": "gemini"})
-                for tok in generate_stream(client, entries):
+                for tok in generate_stream(client, entries, system=active_system):
                     yielded = True
                     self._sse({"type": "token", "text": tok})
                 if yielded:
@@ -1103,7 +1238,7 @@ class Handler(SimpleHTTPRequestHandler):
                 # Local fallback after Gemini empty/error
                 self._sse({"type": "backend", "backend": "qwen"})
                 _record_qwen_used()
-                for tok in qwen_stream(entries):
+                for tok in qwen_stream(entries, system=active_system):
                     self._sse({"type": "token", "text": tok})
         except BrokenPipeError:
             return
