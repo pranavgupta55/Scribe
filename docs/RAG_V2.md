@@ -2,7 +2,7 @@
 
 > Engineering-facing design document for the Scribe chatbot's v2 retrieval
 > pipeline. For the architectural decision record see
-> [`docs/adr/0001-graph-augmented-rag.md`](adr/0001-graph-augmented-rag.md).
+> [`adrs/decisions/0009-graph-augmented-rag.md`](../ADRs/decisions/0009-graph-augmented-rag.md).
 
 ---
 
@@ -600,7 +600,7 @@ This file is the input for Phase 6 quality eval (deferred; see §11).
 
 ## 12. Related
 
-- **ADR:** [`docs/adr/0001-graph-augmented-rag.md`](adr/0001-graph-augmented-rag.md) — decision + alternatives + rationale
+- **ADR:** [`adrs/decisions/0009-graph-augmented-rag.md`](../ADRs/decisions/0009-graph-augmented-rag.md) — decision + alternatives + rationale
 - **Tasks:** `t-pprrm1` (this rebuild), `t-fokp1z` (Phase 6 quality eval)
 - **Source scripts:**
   - `scripts/rebuild_chroma_v2.py` — main rebuild

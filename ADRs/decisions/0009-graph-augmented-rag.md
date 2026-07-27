@@ -1,9 +1,10 @@
-# 0001 — Graph-Augmented RAG for Scribe Chatbot
+# ADR 0009 — Graph-Augmented RAG for Scribe Chatbot
 
 - **Status:** Accepted
 - **Date:** 2026-07-26
-- **Deciders:** pranavgupta55
-- **Related:** t-pprrm1 (rebuild task), t-fokp1z (Phase 6 eval), [docs/RAG_V2.md](../RAG_V2.md)
+- **Authors:** pgupta@kisotechnology.com
+- **Related code:** `server.py`, `scripts/rebuild_chroma_v2.py`, `scripts/rebuild_chroma_v2_resume_chunks.py`, `scripts/retrieval_v2.py`, `scripts/prompt_v2.py`, `scripts/eval_v1_vs_v2.py`, [`docs/RAG_V2.md`](../../docs/RAG_V2.md)
+- **Related tasks:** t-pprrm1 (rebuild), t-fokp1z (Phase 6 eval, deferred)
 
 ---
 
