@@ -100,11 +100,13 @@
     body[data-view="graph"] #dev-toggle,
     body[data-view="graph"] #status-pill,
     body[data-view="graph"] #gemini-only-btn,
-    body[data-view="graph"] #qwen-only-btn { display: none; }
+    body[data-view="graph"] #qwen-only-btn,
+    body[data-view="graph"] #use-v2-btn { display: none; }
     body[data-view="copy"]  #dev-toggle,
     body[data-view="copy"]  #status-pill,
     body[data-view="copy"]  #gemini-only-btn,
     body[data-view="copy"]  #qwen-only-btn,
+    body[data-view="copy"]  #use-v2-btn,
     body[data-view="copy"]  #center-btn,
     body[data-view="copy"]  #right-toggle { display: none; }
     body[data-view="chat"]  #center-btn { display: none; }
@@ -112,7 +114,8 @@
     body:not([data-view]) #dev-toggle,
     body:not([data-view]) #status-pill,
     body:not([data-view]) #gemini-only-btn,
-    body:not([data-view]) #qwen-only-btn { display: none; }
+    body:not([data-view]) #qwen-only-btn,
+    body:not([data-view]) #use-v2-btn { display: none; }
 
     /* ── Left: graph canvas ── */
     #left {
@@ -1206,6 +1209,41 @@
     }
     #qwen-only-btn.on .qo-indicator { background: #56d364; }
 
+    /* v2-RAG toggle (graph-augmented retrieval, experimental) */
+    #use-v2-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      font-family: inherit;
+      color: #666;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0;
+      padding: 6px 12px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+      user-select: none;
+      white-space: nowrap;
+    }
+    #use-v2-btn:hover { color: var(--text-main); border-color: #4a90e266; }
+    #use-v2-btn.on {
+      color: var(--text-main);
+      background: #4a90e215;
+      border-color: #4a90e266;
+    }
+    .v2-indicator {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: #333;
+      transition: background 0.15s;
+    }
+    #use-v2-btn.on .v2-indicator { background: #4a90e2; }
+
     /* ── Copy-paste view: high-contrast red-on-black layout ──
        Surface rules: pure black for background/data surfaces, saturated red
        for action surfaces (prompt cell, copy buttons, send). No drop shadows. */
@@ -1807,6 +1845,10 @@
         <button id="qwen-only-btn" title="Skip Gemini and use local qwen3 only">
           <span class="qo-indicator"></span>
           Qwen only
+        </button>
+        <button id="use-v2-btn" title="Graph-augmented RAG v2 retrieval (experimental): typed-edge fact expansion, contradiction surfacing, XML-tagged prompt">
+          <span class="v2-indicator"></span>
+          v2 RAG
         </button>
         <button id="center-btn" title="Fit all nodes in view">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">

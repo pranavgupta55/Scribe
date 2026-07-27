@@ -1274,6 +1274,22 @@ if (qwenOnlyBtn) {
   });
 }
 
+// ── v2-RAG toggle ─────────────────────────────────────────────────────────────
+// Sends `use_v2: true` on POST /api/chat, which routes the request through
+// scripts/retrieval_v2.py (graph-augmented) and scripts/prompt_v2.py
+// (XML-tagged) instead of the v1 flat-cosine flow. Persisted in localStorage
+// so refreshing doesn't silently drop the choice.
+const useV2Btn = document.getElementById('use-v2-btn');
+let useV2 = localStorage.getItem('scribe_use_v2') === 'true';
+if (useV2Btn) {
+  useV2Btn.classList.toggle('on', useV2);
+  useV2Btn.addEventListener('click', () => {
+    useV2 = !useV2;
+    useV2Btn.classList.toggle('on', useV2);
+    localStorage.setItem('scribe_use_v2', useV2 ? 'true' : 'false');
+  });
+}
+
 let _lastStatusData = null;
 let _statusTickInterval = null;
 
@@ -1653,6 +1669,7 @@ async function sendChat(opts = {}) {
         query: text,
         gemini_only: geminiOnly,
         qwen_only: qwenOnly,
+        use_v2: useV2,
         history: chatHistory,
       }),
     });
