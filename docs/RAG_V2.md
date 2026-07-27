@@ -16,10 +16,9 @@ builds-on, hosts, illustrates, practices, related) that the v1 chatbot path
 could not see. v2 surfaces those relationships — especially contradictions —
 in every answer.
 
-Status as of 2026-07-26: `facts_v2` collection is complete; `chunks_v2`
-embed is in progress (resume-safe via
-`scripts/rebuild_chroma_v2_resume_chunks.py --resume`). The v1 path is
-fully intact and continues to serve until `use_v2=true` is passed.
+Status as of 2026-07-26: `facts_v2` (6055 rows) and `chunks_v2` (3551 rows)
+are both complete. The v1 path is fully intact and continues to serve
+until `use_v2=true` is passed. See §9 for the client flag.
 
 ---
 
@@ -105,7 +104,7 @@ expansion kinds point to the same neighbor node).
 | v1 `.chroma/` | Snapshot source for chunk text + metadata |
 
 Only the 917 sources already in the v1 database are embedded in this build.
-Processing the remaining ~379 new transcripts is deferred (see §11).
+Processing the remaining ~1080 unprocessed transcripts is deferred (see §10).
 
 ### 4.2 Scripts
 
@@ -501,8 +500,7 @@ sub-object:
 }
 ```
 
-The dev panel (frontend) can surface these stats. `eval_v1_vs_v2.py`
-captures them for offline comparison.
+The dev panel (frontend) can surface these stats.
 
 ---
 
@@ -543,71 +541,29 @@ missing; it simply cannot serve `use_v2=true` requests.
 
 ---
 
-## 10. Eval Harness
-
-`scripts/eval_v1_vs_v2.py` runs a side-by-side evaluation of v1 vs v2
-against a running `server.py` instance.
-
-**Usage:**
-
-```bash
-# Against the default local server:
-python3 scripts/eval_v1_vs_v2.py
-
-# Against a different host:
-python3 scripts/eval_v1_vs_v2.py --server http://localhost:8765
-
-# Custom query set (one query per line):
-python3 scripts/eval_v1_vs_v2.py --queries path/to/queries.txt
-```
-
-**Built-in queries** (6 queries covering single-topic, multi-topic, and
-opinion/contradiction prompts):
-
-```
-How does Hormozi think about founder focus and attention?
-What's the difference between building a business and building an audience?
-When should I raise prices vs add a guarantee?
-What do successful entrepreneurs say about mentorship?
-Compare hiring virtual assistants to hiring local employees.
-Is drop-servicing a real business or just arbitrage?
-```
-
-**Output:** `.forge_scratch/scribe_rag_v2/eval_v1_v2.json`
-
-Per-query capture:
-
-- `v1`: consulted topics, source count, first 400 chars of answer, wall ms.
-- `v2`: retrieval meta, prompt stats (n_facts, n_chunks, n_contradictions,
-  total_chars), first 400 chars of answer, wall ms.
-
-This file is the input for Phase 6 quality eval (deferred; see §11).
-
----
-
-## 11. Deferred / Open Items
+## 10. Deferred / Open Items
 
 | Item | Notes |
 |------|-------|
-| **Phase 6 quality eval** | Run `eval_v1_vs_v2.py` once both collections are complete; score answer quality. Tracked in task `t-fokp1z`. Was deferred while 7d rate limit was near cap. |
-| **Process 379 new transcripts** | The v2 build covers the 917 sources already in v1. New transcripts need `process.py` / `claudeProcess.py` first, then a `chunks_v2` incremental add. |
-| **Reranker** | No reranker in v2. Candidates: BGE-reranker-v2-m3 (local), or a Gemini/Claude LLM reranker. Deferred until baseline quality is measured. |
-| **Config knob sweeps** | `MAX_CONTRADICTS`, `MAX_AGREES`, `SIM_DEDUP_THRESHOLD`, `SIDE_EFFECT_SIM_THRESHOLD`, `N_FACTS_PER_SQ`, `N_CHUNKS_PER_SQ` are all tunable. Eval harness supports this; sweeps deferred. |
-| **`claim_ids[]` in chunks_v2 metadata** | Deferred at build time; chunk side-effect works via runtime cosine. Precomputing at build time would speed up query-time expansion but requires a separate build pass. |
-| **chunks_v2 rebuild completion** | Task `t-pprrm1` is still active pending full `chunks_v2` completion. |
+| **Process unprocessed transcripts** | The v2 build covers the 917 sources already in v1. ~1080 additional transcripts sit in `transcripts/` unfolded. Need `claudeProcess.py` (Anthropic) or `process.py` (Gemini) run, then re-export `graph_v2.json`, then incremental add to `facts_v2` + `chunks_v2`. |
+| **Graph ↔ chroma alignment** | `facts_v2` contains 6055 claim IDs (from `merged_claims.jsonl`); `graph_v2.json` has only 1809 `claim:` nodes. ~86% of retrieved facts have no graph expansion available at runtime — the "graph-augmented" value prop is degraded. Fix: rebuild `facts_v2` keyed on the graph node IDs (all node types), or re-run phase 4 with the full claim set. |
+| **Reranker** | No reranker in v2. Candidates: BGE-reranker-v2-m3 (local) or an LLM reranker. Deferred until baseline quality is measured. |
+| **Config knob sweeps** | `MAX_CONTRADICTS`, `MAX_AGREES`, `SIM_DEDUP_THRESHOLD`, `SIDE_EFFECT_SIM_THRESHOLD`, `N_FACTS_PER_SQ`, `N_CHUNKS_PER_SQ` are all tunable. Sweeps deferred pending a real eval harness. |
+| **`claim_ids[]` in chunks_v2 metadata** | Deferred at build time; chunk side-effect works via runtime cosine. Precomputing would speed up query-time expansion but requires a separate build pass. |
+| **Quality eval** | The original v1-vs-v2 harness (`scripts/eval_v1_vs_v2.py`) was removed on 2026-07-26 — no judge, no CI, never run. See [`../adrs/decisions/0010-remove-v1-v2-eval-harness.md`](../adrs/decisions/0010-remove-v1-v2-eval-harness.md). A real eval (rubric + judge + ground-truth query set) is deferred until we have a specific quality question to answer. |
 
 ---
 
-## 12. Related
+## 11. Related
 
-- **ADR:** [`adrs/decisions/0009-graph-augmented-rag.md`](../ADRs/decisions/0009-graph-augmented-rag.md) — decision + alternatives + rationale
-- **Tasks:** `t-pprrm1` (this rebuild), `t-fokp1z` (Phase 6 quality eval)
+- **ADRs:**
+  - [`adrs/decisions/0009-graph-augmented-rag.md`](../adrs/decisions/0009-graph-augmented-rag.md) — original v2 decision + alternatives + rationale
+  - [`adrs/decisions/0010-remove-v1-v2-eval-harness.md`](../adrs/decisions/0010-remove-v1-v2-eval-harness.md) — removal of the eval script
 - **Source scripts:**
   - `scripts/rebuild_chroma_v2.py` — main rebuild
   - `scripts/rebuild_chroma_v2_resume_chunks.py` — resume-friendly chunks-only rebuild
   - `scripts/retrieval_v2.py` — `retrieve_v2()` function
   - `scripts/prompt_v2.py` — `assemble_prompt()` + `SYSTEM_PROMPT_V2`
-  - `scripts/eval_v1_vs_v2.py` — v1-vs-v2 eval harness
   - `server.py` — `_v2_chat_flow()`, `use_v2` body flag, `generate_stream(system=)`, `qwen_stream(system=)`
 - **Data:**
   - `graph/graph_v2.json` — 5477 nodes, 19154 links
@@ -615,4 +571,3 @@ This file is the input for Phase 6 quality eval (deferred; see §11).
   - `.chroma/` — v2 ChromaDB (facts_v2, chunks_v2)
   - `.chroma_v1_backup_*/` — timestamped v1 backup (never deleted)
   - `.forge_scratch/scribe_rag_v2/rebuild_errors.log` — build error log
-  - `.forge_scratch/scribe_rag_v2/eval_v1_v2.json` — eval output
