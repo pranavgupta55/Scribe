@@ -3,8 +3,9 @@
 - **Status:** Accepted
 - **Date:** 2026-07-26
 - **Authors:** pgupta@kisotechnology.com
-- **Related code:** `server.py`, `scripts/rebuild_chroma_v2.py`, `scripts/rebuild_chroma_v2_resume_chunks.py`, `scripts/retrieval_v2.py`, `scripts/prompt_v2.py`, `scripts/eval_v1_vs_v2.py`, [`docs/RAG_V2.md`](../../docs/RAG_V2.md)
-- **Related tasks:** t-pprrm1 (rebuild), t-fokp1z (Phase 6 eval, deferred)
+- **Related code:** `server.py`, `scripts/rebuild_chroma_v2.py`, `scripts/rebuild_chroma_v2_resume_chunks.py`, `scripts/retrieval_v2.py`, `scripts/prompt_v2.py`, [`docs/RAG_V2.md`](../../docs/RAG_V2.md)
+- **Related tasks:** t-pprrm1 (rebuild)
+- **Superseded in part by:** [`0010-remove-v1-v2-eval-harness.md`](0010-remove-v1-v2-eval-harness.md) — removes the eval harness this ADR originally shipped.
 
 ---
 
@@ -142,7 +143,7 @@ the graph was built is deferred; they require a new graph phase run first.
 | Option | Description | Decision |
 |--------|-------------|----------|
 | **(A) No reranker** ✓ | Retrieval ordered by cosine similarity + graph expansion only. | **Chosen (for now).** No eval data yet to measure reranker lift; adds latency and complexity. |
-| (B) BGE-reranker-v2-m3 local | Cross-encoder rerank of the combined fact + chunk set before prompt assembly. | Deferred. Likely to improve precision; needs Phase 6 eval data to justify. |
+| (B) BGE-reranker-v2-m3 local | Cross-encoder rerank of the combined fact + chunk set before prompt assembly. | Deferred pending a real quality measurement (see ADR 0010). |
 | (C) LLM reranker | Ask Gemini/Claude to score relevance for each retrieved item. | Rejected for v2. Adds 1–3 seconds of latency and significant token cost per query. |
 
 ### A7. Answer generation model
@@ -170,7 +171,6 @@ the graph was built is deferred; they require a new graph phase run first.
   (better edge weights, new edge kinds) to propagate without a schema change.
 - `compute_prompt_stats()` + `retrieval_meta` in the `debug` SSE event give
   a clear observability surface for tuning.
-- `eval_v1_vs_v2.py` enables a real eval loop for comparing retrieval quality.
 
 ### Negative
 
@@ -192,9 +192,9 @@ the graph was built is deferred; they require a new graph phase run first.
 
 ### Neutral
 
-- Opens up a concrete eval loop for tuning `MAX_CONTRADICTS`,
-  `SIM_DEDUP_THRESHOLD`, `SIDE_EFFECT_SIM_THRESHOLD`, and per-kind caps
-  via `eval_v1_vs_v2.py` once Phase 6 is run.
+- Config knobs (`MAX_CONTRADICTS`, `SIM_DEDUP_THRESHOLD`,
+  `SIDE_EFFECT_SIM_THRESHOLD`, per-kind caps) are tunable but currently
+  hand-set. Sweeping them requires a real eval design (see ADR 0010).
 - The `qwen3-embedding:8b` 4096-d space is a superset of the 768-d
   `nomic-embed-text` space. Cross-collection similarity (v1 chunks vs v2
   facts) is not meaningful; the two systems are intentionally isolated.

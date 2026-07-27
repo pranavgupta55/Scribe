@@ -17,6 +17,7 @@ ADRs are **immutable once accepted**. New decisions that change a prior choice c
 | [0007](decisions/0007-exec-python-in-serve-sh.md) | `exec python3` in `serve.sh` so the wrapper bash PID doesn't linger | Accepted | 2026-06-21 |
 | [0008](decisions/0008-repo-restructure-and-gitignore-cleanup.md) | Repo restructure: consolidate ADR dirs, gitignore heavy phase artifacts, setup.sh pulls qwen3-embedding:8b | Accepted | 2026-06-21 |
 | [0009](decisions/0009-graph-augmented-rag.md) | Graph-augmented RAG v2: rebuild ChromaDB in v2 schema, typed-edge fact expansion, XML prompt with kind-labeled tags, `use_v2` body flag on `/api/chat` | Accepted | 2026-07-26 |
+| [0010](decisions/0010-remove-v1-v2-eval-harness.md) | Remove `eval_v1_vs_v2.py`: no judge, no CI, never run — quality eval needs a real design | Accepted | 2026-07-26 |
 
 ## Conventions
 
