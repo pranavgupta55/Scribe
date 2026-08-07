@@ -1,0 +1,92 @@
+[
+  {
+    "node_id": "claim:2816",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Row1 fails: subject is 'a person' with no named individual/case, making the claim an unanchored generic principle (vague-blanket)."
+  },
+  {
+    "node_id": "claim:1607",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker, specific mechanism (pre-commitment checkbox), falsifiable 16% lift claim with source attribution; passes all required rows."
+  },
+  {
+    "node_id": "claim:1291",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Row1 fails: 'a service business' and implied founder are generic role-words, no named company/case despite the $4M-$15M revenue-band condition."
+  },
+  {
+    "node_id": "claim:321",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Row1 fails: 'a founder' is a generic role-word, no named individual or company anchoring the claim."
+  },
+  {
+    "node_id": "claim:701",
+    "level": "L2b",
+    "type": "comparison",
+    "scores": { "1": false, "2": true, "3": null, "4": null, "5": null, "6": true, "7": true },
+    "passing": false,
+    "failure_modes": ["A4", "A15"],
+    "notes": "Row1 fails: 'a founder' is generic with no named case; also treats revenue-scale correlation as a reliable causal proxy for operator quality (A15) despite row6's numeric anchors ($3M vs $20M) being fine."
+  },
+  {
+    "node_id": "claim:1337",
+    "level": "L2a",
+    "type": "assertion",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": false },
+    "passing": false,
+    "failure_modes": ["A4", "A11"],
+    "notes": "Row7 fails outright: speaker is 'Unknown', unlookupable; row1 also fails since 'the subconscious mind' is a generic, unnamed subject."
+  },
+  {
+    "node_id": "claim:43",
+    "level": "L2b",
+    "type": "quantified",
+    "scores": { "1": false, "2": true, "3": null, "4": null, "5": null, "6": false, "7": true },
+    "passing": false,
+    "failure_modes": ["A4", "A18"],
+    "notes": "Row1 fails: 'service businesses'/'people' are generic actors with no named case; row6 fails because the comparison baseline is explicitly 'not specified,' leaving the 85-90% figure without a real anchor point."
+  },
+  {
+    "node_id": "claim:2834",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker and named comparator companies (Uber vs Lyft), clear falsifiable mechanism with anchored ~10x comparison; passes all required rows."
+  },
+  {
+    "node_id": "claim:105",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Row1 fails: 'a given audience' / 'narrower target audiences' are generic role-words with no named case or campaign anchoring the claim."
+  },
+  {
+    "node_id": "claim:1946",
+    "level": "L2",
+    "type": "conditional",
+    "scores": { "1": false, "2": true, "3": true, "4": false, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Row1 fails: 'the worker' is a generic, unnamed actor; row4 also fails since 'conditional' is not one of the declared role labels (assertion/mechanism/anecdote/etc.) and the content reads as a plain assertion mislabeled."
+  }
+]

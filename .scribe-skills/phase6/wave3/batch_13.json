@@ -1,0 +1,336 @@
+{
+ "batch_id": 13,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:1337",
+   "level": "L2a",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "The subconscious mind controls most critical survival behaviors instinctively and unconsciously\u2014such as avoiding cliffs and jumping out of the way of buses\u2014rather than through conscious control. Conscious reason cannot will autonomic functions like heartbeat acceleration or pupil dilation.",
+   "type": "assertion",
+   "speaker": "Unknown",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": "Autonomic nervous system operates independently of conscious override; instinctive survival responses evolved before conscious reasoning capacity.",
+   "numbers": null,
+   "bounded_by": [
+    "Conscious mind can nudge or redirect unconscious impulses but cannot override fundamental instincts",
+    "Does not apply to learned behaviors acquired through conscious training"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2356",
+   "level": "L2a",
+   "topic": "Environmental Design for Behavior Change",
+   "text": "Rory Sutherland describes a counterintuitive test result for manufacturer websites: making the button routing buyers to a third-party retailer (Amazon, John Lewis) green and the manufacturer's own direct-purchase button grey -- routing buyers toward the lower-margin channel -- can in some cases result in higher total revenue overall, because it coheres with customers' instinctive preference for third-party purchase environments.",
+   "type": "conditional",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "paving the cow paths",
+   "conditions": [
+    "e-commerce manufacturer websites",
+    "product categories where consumers instinctively prefer buying from trusted third-party retailers over manufacturer direct"
+   ],
+   "mechanism": "When the design of choices coheres with instinctive consumer urges, a far higher proportion of visitors click through to buy; the volume uplift on the intermediary channel can exceed the per-unit margin loss, yielding higher total revenue even though the proportion of direct sales falls.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply universally; depends on the gap between consumer instinct and channel margin; must be tested per product category"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1871",
+   "level": "L2a",
+   "topic": "Before/After Proof Engine",
+   "text": "Ruth Snowden-Gough (CMO, Hain Celestial UK) asserts that continuous free trial via sampling is a necessary demand-generation tactic in stigmatized food categories because trial is the primary mechanism for overcoming category preconceptions that cannot be resolved through advertising alone.",
+   "type": "mechanism",
+   "speaker": "Ruth Snowden-Gough",
+   "speaker_term": "risk-free trial",
+   "conditions": [
+    "FMCG categories with historical negative perception (frozen food, plant-based meat, low-alcohol)",
+    "products where taste is the primary adoption barrier"
+   ],
+   "mechanism": "Consumers hold category preconceptions formed by previous (worse) product experiences; advertising cannot override a sensory memory. Direct trial resets the sensory reference and removes the prior negative anchor.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when the adoption barrier is price or distribution, not taste perception"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2763",
+   "level": "L2b",
+   "topic": "Brand Attribution Window",
+   "text": "Alex Hormozi argues that brand investment generates a higher return on ad spend than direct-response performance marketing over a 6-to-12-month attribution window, but appears inferior when measured on a 30-to-60-day window \u2014 so DTC operators who use short attribution windows systematically underinvest in brand.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "branding",
+   "conditions": [
+    "Business operating at national or international scale",
+    "Comparison is over a 12-month measurement window for brand vs. 30-day window for direct response",
+    "DTC brand with sufficient scale to afford brand-building spend",
+    "DTC founder currently optimizing purely for 30-60 day ROAS",
+    "Marketing organisations that require direct attribution of spend to outcome before approving budget",
+    "attribution measured over 6-12 month horizon vs. 30-60 day horizon",
+    "brand at revenue plateau caused by margin compression from performance-only spend",
+    "marketing investment decisions over multi-year horizons",
+    "marketing organizations measuring effectiveness through last-click or short-window attribution models"
+   ],
+   "mechanism": "Brand spend builds cumulative audience associations that lower CPAs and raise conversion rates progressively; these effects compound over months but are invisible in a 30-day ROAS window, causing operators to cut brand spend prematurely.",
+   "numbers": {
+    "axis": "attribution window length and apparent ROAS of brand vs. direct-response spend",
+    "anchors": [
+     {
+      "region": "30-60 day window (typical performance marketer)",
+      "value": "brand spend appears negative ROAS"
+     },
+     {
+      "region": "6-12 month window (brand-aware allocator)",
+      "value": "brand spend shows superior return on capital"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply to businesses that cannot survive 6-12 months without immediate ROAS payback",
+    "Does not apply to direct response channels where attribution is fast and clean (e.g., direct mail with a promo code)",
+    "Local businesses have longer runway before this applies \u2014 they can run Google or Meta ads generating leads without major brand investment for several more years",
+    "Requires sufficient cash reserves to fund brand investment before the 6-12 month payback period",
+    "Requires sufficient cash runway to fund brand spend before the long-horizon return materializes"
+   ],
+   "n_sources": 4
+  },
+  {
+   "node_id": "claim:1832",
+   "level": "L2b",
+   "topic": "Capital Deployment Paths",
+   "text": "Alex Hormozi argues that he has personal network examples of friends who gave 30% equity to franchise sales organizations and then sold their franchisors for nine figures, demonstrating that the equity stakes in franchisors carry large realized enterprise value.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "franchise sales organizations that received equity in growing franchisors"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "exit value of franchisor after franchise sales org involvement",
+    "anchors": [
+     {
+      "region": "equity stake given to franchise sales org",
+      "value": "30% of franchisor"
+     },
+     {
+      "region": "franchisor exit value",
+      "value": "nine figures ($100M+)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Based on personal network examples cited by Hormozi, not a systematic cohort study"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2306",
+   "level": "L2",
+   "topic": "Brand as Competitive Moat",
+   "text": "Alex Hormozi asserts that being able to build a brand and get paid to do it via social media remains an extraordinary opportunity that he finds mind-boggling still exists, even in the mature era of social media.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Creator must be skilled enough to build audience in competitive social media environment"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1899",
+   "level": "L2",
+   "topic": "Avatar Targeting Strategy",
+   "text": "Alex Hormozi stated that a healthcare VA business targeting PT/OT/SLP practice owners with 5+ locations exhibits a natural volume-expansion pattern where a single client starts with 2 VAs and scales to 5 and eventually 20 as confidence grows, meaning the unit economics improve non-linearly as client tenure increases.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Healthcare VA service with per-VA pricing",
+    "Target avatar: PT/OT/SLP practice with 5+ locations"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "VAs purchased per client over tenure",
+    "anchors": [
+     {
+      "region": "Initial purchase",
+      "value": "2 VAs"
+     },
+     {
+      "region": "Repeat expansion",
+      "value": "5 VAs"
+     },
+     {
+      "region": "Mature client",
+      "value": "20 VAs"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Dependent on delivering measurable results that justify expansion",
+    "Specific to healthcare practice operators who trust the VA quality after first deployment"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1580",
+   "level": "L2b",
+   "topic": "Offer and Audience Pruning",
+   "text": "Alex Hormozi recounts that when he responded to a competitor threat at Gym Launch by cutting his recurring product price (reducing top-line by roughly $500,000 per month) while adding more value, his churn rate did not change \u2014 meaning the revenue reduction was entirely unrecoverable loss with no retention benefit.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "established recurring subscription product",
+    "price reduction made in response to a competitor entering with lower pricing"
+   ],
+   "mechanism": "The customer's churn decision was driven by factors other than price; the existing price was already past the threshold where reductions affect cancellation rates, so revenue was reduced with zero corresponding retention improvement.",
+   "numbers": {
+    "axis": "revenue impact of defensive price reduction at Gym Launch",
+    "anchors": [
+     {
+      "region": "monthly top-line reduction",
+      "value": "approximately $500,000/month"
+     },
+     {
+      "region": "annualized top-line reduction",
+      "value": "approximately $6 million/year"
+     },
+     {
+      "region": "estimated total profit loss at time of business sale",
+      "value": "approximately $50 million (multiplied by exit multiple)"
+     },
+     {
+      "region": "churn change",
+      "value": "zero"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply to commodity products where churn is highly price-elastic",
+    "Specific to a product already priced above the elastic threshold where price affects churn"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2142",
+   "level": "L2",
+   "topic": "Observable Reality Framework",
+   "text": "Educational institutions create a bias by teaching science-y subjects (maths, physics, chemistry) as rational and unambiguous (like Olympic judging with 100-metre standards\u2014a clear winner, no subjectivity), while treating arts subjects as vague and woolly. This school-based bias misrepresents what good science actually requires.",
+   "type": "assertion",
+   "speaker": "Unknown",
+   "speaker_term": null,
+   "conditions": [
+    "comparing STEM to humanities instruction",
+    "in school settings"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "refers to school-level science education, not professional research practices"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1925",
+   "level": "L2",
+   "topic": "Founder Control and Equity Structure",
+   "text": "Alex Hormozi asserts that raising capital forces founders to serve two customers simultaneously\u2014the end customer and the investors or VCs\u2014which can produce competing demands and reduce strategic clarity.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "raising capital",
+   "conditions": [
+    "company has accepted equity investment from outside investors"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2442",
+   "level": "L2a",
+   "topic": "Founder Character and Team Attraction",
+   "text": "Alex Hormozi argues that the binding constraint preventing most small-to-mid-market founders from attracting world-class talent is not compensation level but the credibility of the vision; world-class talent evaluates the size of the opportunity and the founder's demonstrated character before accepting an offer, making vision scale and founder reputation the primary hiring levers.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "they don't want to work for you",
+   "conditions": [
+    "Has not achieved an exit or large brand sufficient to attract top talent by reputation alone",
+    "Recruiting executives who have non-financial alternatives",
+    "Small business founder",
+    "Small businesses where founders have not yet achieved significant scale or notoriety",
+    "founder trying to hire above current company size",
+    "sub-$50M revenue businesses"
+   ],
+   "mechanism": "World-class talent at the $500K+ level has abundant options; they evaluate whether the founder's vision is large enough to accommodate their own aspirations and whether the founder's character (consistency, no emotional volatility) makes them a safe bet to follow; insufficient vision or character credibility is the bottleneck, not compensation budget.",
+   "numbers": null,
+   "bounded_by": [
+    "At $100M+ revenue, compensation and enterprise validation can substitute for some vision credibility",
+    "Does not apply in specialized technical roles where skill scarcity makes candidates less selective about vision",
+    "Does not apply to founders who have achieved large-scale exits or have a recognized brand (e.g., Steve Jobs, Richard Branson) where world-class talent actively seeks them out"
+   ],
+   "n_sources": 3
+  },
+  {
+   "node_id": "claim:871",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi argues that when a B2B service business has a low close rate, the true problem is almost always upstream of the sales call \u2014 in avatar clarity, offer structure, positioning, or messaging \u2014 not in the close mechanics themselves.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "B2B service business",
+    "founder attributes close-rate problem to sales technique"
+   ],
+   "mechanism": "Weak upstream inputs (vague avatar, unstructured offer, poor positioning) mean the wrong prospects reach the sales call, making close rate a symptom rather than the root cause.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1837",
+   "level": "L2a",
+   "topic": "Pricing Anchoring Strategy",
+   "text": "Alex Hormozi recommends that the upsell in any offer stack should be priced at 5 to 10 times the core offer price, as long as the seller is willing to deliver that much more value.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "upsell",
+   "conditions": [
+    "1-on-1 or 1-to-many selling contexts",
+    "any bundled offer",
+    "seller has an upsell offer",
+    "seller is willing to deliver 5-10x more value for 5-10x the price"
+   ],
+   "mechanism": "A 5-10x upsell anchor reframes the core offer as a bargain by comparison, lifting core offer conversion rates even when most buyers decline the upsell.",
+   "numbers": {
+    "axis": "upsell price as multiple of core offer price",
+    "anchors": [
+     {
+      "region": "minimum anchor",
+      "value": "5x core offer price"
+     },
+     {
+      "region": "target anchor",
+      "value": "10x core offer price"
+     }
+    ]
+   },
+   "bounded_by": [
+    "If the seller cannot deliver 5-10x more value, the fix is to reduce scope rather than lower the price",
+    "In 1-on-1 selling, ask for the sale first; bonuses are introduced only if the prospect declines; do not lead with bonuses in one-on-one context"
+   ],
+   "n_sources": 2
+  }
+ ]
+}

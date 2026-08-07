@@ -1,0 +1,326 @@
+{
+ "batch_id": 10,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:2360",
+   "level": "L2b",
+   "topic": "Price Communication",
+   "text": "Rory Sutherland describes the Save More Tomorrow pension mechanism developed by Shlomo Benartzi and Richard Thaler: participants pledge to allocate a fixed percentage of future pay rises to their pension rather than contributing from current income. The result was twice as many people signing up and, for each participant, average contributions of twice as much as under conventional pension design.",
+   "type": "quantified",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "Save More Tomorrow",
+   "conditions": [
+    "defined-contribution pension schemes",
+    "employees receiving periodic pay rises"
+   ],
+   "mechanism": "People are more virtuous about future income than current income (hyperbolic discounting), and psychologically distinguish between getting less rich (reduced gain: acceptable) and getting poorer (actual loss: aversive). Contributions from a pay rise increment feel like a reduced gain, not a loss, eliminating the primary psychological barrier to pension saving.",
+   "numbers": {
+    "axis": "pension participation rate and per-participant contribution amount vs. conventional pension design",
+    "anchors": [
+     {
+      "region": "conventional pension design",
+      "value": "baseline participation, baseline contribution"
+     },
+     {
+      "region": "Save More Tomorrow design",
+      "value": "twice as many participants; each saving twice as much on average"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Mechanism relies on contributions from increments only, not existing salary",
+    "Requires employer to offer periodic pay rises"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2221",
+   "level": "L2a",
+   "topic": "Educational vs Entertainment Content",
+   "text": "Kartoon Weiss argues that culture drives consumption: her observation that streaming behavior (on platforms like Spotify) transitions into commercial and commerce behavior on platforms like TikTok reflects a mechanism where cultural engagement precedes and enables purchase intent.",
+   "type": "mechanism",
+   "speaker": "Kartoon Weiss",
+   "speaker_term": "culture drives consumption",
+   "conditions": [],
+   "mechanism": "Cultural engagement on streaming or content platforms creates familiarity and affinity with products and lifestyles, which converts into commerce intent; users who engage culturally are already primed to transact.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2055",
+   "level": "L2",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Rory Sutherland argues that putting a 20%-lower-fat label on a biscuit causes the product to taste worse in consumer perception, even though blind taste tests show no detectable difference. The labeling changes the psychological frame, and humans cannot compartmentalize the knowledge from the sensory experience \u2014 perception is a blurry composite of all available signals.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "applies when packaging or labeling provides information that is schema-inconsistent with high sensory pleasure"
+   ],
+   "mechanism": "Human perception integrates multi-channel signals into a unified experience rather than processing them independently; a cue that signals reduced-indulgence (lower fat) primes the taste system to perceive reduced richness, even when the food is physically identical.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2291",
+   "level": "L2a",
+   "topic": "Constraint-Based Strategy",
+   "text": "Rory Sutherland argues that logic is an organizational liability when applied exclusively to solving persistent problems, because truly persistent problems are likely to be logic-proof: if a conventional rational solution existed, rational actors (consultants, finance teams, regulators) who have already been trying would have found it. Therefore, persistent problems signal that a non-rational or counterintuitive solution is required.",
+   "type": "conditional",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to business and human-behaviour problems",
+    "Does not apply to closed formal systems (pure maths, physics with known constraints)",
+    "decision-making constrained to logical sense only",
+    "organizations with abundant rational talent (McKinsey, finance departments, boards)",
+    "problems that remain unsolved despite sustained rational attention",
+    "seeking innovation or breakthrough solutions"
+   ],
+   "mechanism": "Rational actors converge on rational solutions; if a rational solution existed it would already have been found; persistence of the problem implies the solution space excludable by logic has been exhausted.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not address incremental improvements or optimization within existing paradigms",
+    "Does not apply in safety-critical domains where testing illogical models is harmful",
+    "Does not apply to newly-encountered problems where rational approaches have not yet been tried",
+    "Does not apply when prior domain knowledge is well-calibrated",
+    "Does not apply when the actual barrier is price; some problems are straightforwardly economic",
+    "Does not specify what counts as 'non-conventional' or 'innovation'",
+    "High school maths problems with complete data and a single correct answer are genuine exceptions"
+   ],
+   "n_sources": 6
+  },
+  {
+   "node_id": "claim:351",
+   "level": "L2a",
+   "topic": "Behavior-Change Framing",
+   "text": "Alex Hormozi argues that to improve low fortitude, the most effective reframe is to feel more upset about losing control of one\u2019s behavior than about the triggering event itself. The mechanism is that placing higher negative valence on behavioral loss than on the external cause redirects attention inward and severs the automatic link between feeling and acting out.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "fortitude",
+   "conditions": [
+    "Person has already changed behavior against their goals in response to an adverse event"
+   ],
+   "mechanism": "Redirecting negative emotional weight from the external trigger to the internal behavior change breaks the automatic stimulus-response link and returns agency to the individual.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1029",
+   "level": "L2b",
+   "topic": "Attention-to-Revenue Funnel",
+   "text": "Milka Privodanova asserts that Pinterest has 17 million regular monthly users in the UK and that 10 million ideas are saved on the platform in the UK every day, illustrating the scale of commercial intent being expressed before users reach a buying decision.",
+   "type": "quantified",
+   "speaker": "Milka Privodanova",
+   "speaker_term": null,
+   "conditions": [
+    "United Kingdom market",
+    "as of approximately 2023"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "Pinterest usage scale in the UK",
+    "anchors": [
+     {
+      "region": "UK monthly active users",
+      "value": "17 million"
+     },
+     {
+      "region": "UK daily ideas saved",
+      "value": "10 million"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1769",
+   "level": "L2a",
+   "topic": "Margins",
+   "text": "Alex Hormozi states that a digital marketing agency targeting the low-price automated model will still face a customer acquisition cost challenge: a large initial setup cost must be offset by a long-tail of small monthly recurring payments, so the economics only work if CAC stays low.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "big head, long tail",
+   "conditions": [
+    "DTC e-commerce brand",
+    "SMB clients",
+    "digital marketing agency",
+    "low-cost automated delivery model (\u2264$400/month)",
+    "reliant on paid performance marketing",
+    "revenue ~$10M",
+    "white-label or undifferentiated products"
+   ],
+   "mechanism": "A one-time setup fee (big head) plus a small monthly recurring fee (long tail) requires volume to generate acceptable returns; if CAC rises, the unit economics collapse because the margin per month is too small to absorb higher acquisition cost.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to businesses with proprietary distribution channels",
+    "Does not apply to high-touch premium model where monthly fee is large enough to absorb higher CAC",
+    "Does not apply when product differentiation is defensible on its own merits"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1972",
+   "level": "L2",
+   "topic": "Growth Path Selection",
+   "text": "Alex Hormozi asserts that when starting a business with little or no capital, the two non-negotiable criteria are: (1) the business must be performance-based (pay-for-performance), so no capital is required before earning, and (2) the business must have no upfront cost to operate.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pay for performance",
+   "conditions": [
+    "founder has little or no starting capital",
+    "founder is selecting a business model"
+   ],
+   "mechanism": "Without capital, a founder cannot absorb operating losses while waiting to earn; performance-based models eliminate that risk because the founder only gets paid after delivering results.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2048",
+   "level": "L2b",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Rory Sutherland claims that the reduction of uncertainty \u2014 knowing when something will happen \u2014 is more valuable to human wellbeing than an equivalent improvement in the underlying metric. London Underground dot-matrix arrival displays increased passenger satisfaction more per pound spent than any physical improvement (faster trains, more frequent service, better rolling stock), because people prefer waiting 9 minutes with certainty over waiting 6 minutes in uncertainty.",
+   "type": "comparison",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "any service with unavoidable wait times or delays",
+    "applies in contexts where the service timeline is opaque to the consumer",
+    "on-demand service businesses where wait time is unavoidable"
+   ],
+   "mechanism": "Uncertainty activates a chronic stress state that compounds over time; a known wait, even if longer, allows the brain to cease monitoring and return to baseline, reducing total psychological cost.",
+   "numbers": {
+    "axis": "wait time vs. psychological experience",
+    "anchors": [
+     {
+      "region": "6 minutes uncertain wait",
+      "value": "higher distress"
+     },
+     {
+      "region": "9 minutes certain wait",
+      "value": "lower distress, higher satisfaction"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Cases where the stated duration turns out to be wrong \u2014 inaccurate specificity can be worse than honest uncertainty",
+    "Does not apply when the actual wait substantially exceeds communicated wait (the promise is broken)",
+    "Services where wait time is so short that uncertainty is irrelevant (under 30 seconds)"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:825",
+   "level": "L2",
+   "topic": "Recruiting High-Leverage Talent",
+   "text": "Alex Hormozi recommends running national recruitment ads with a generous relocation package as an unlock for hiring scarce specialist talent in geographically constrained markets (e.g., Bozeman, Montana), framing the relocation package as a structured signing bonus paid in two tranches.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "business has margin to fund relocation",
+    "scarce specialist talent in a small local market"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "relocation/signing bonus structure",
+    "anchors": [
+     {
+      "region": "tranche 1",
+      "value": "$25k at hire"
+     },
+     {
+      "region": "tranche 2",
+      "value": "$25k at month 6"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:485",
+   "level": "L2a",
+   "topic": "Long-Term Horizon Advantage",
+   "text": "Rory Sutherland argues that in multiplicative systems, a series of consistent moderate gains compounding over time produces a higher terminal value than a higher-variance sequence with the same arithmetic mean, because a single severe loss in a multiplicative chain wipes out prior accumulated gains. For example, 2x2x2x2x2x2 equals 64, while 1x3x1x3x1x3 equals only 27, despite both having the same arithmetic mean of 2. This makes variance reduction a mathematically rational strategy, not merely a psychological bias.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "time average growth rate",
+   "conditions": [
+    "multiplicative systems",
+    "repeated exposure to same risk"
+   ],
+   "mechanism": "In a multiplicative chain, a single near-zero or negative term collapses the entire product; arithmetic mean does not capture this because it treats gains and losses as additive and order-independent.",
+   "numbers": {
+    "axis": "terminal value of multiplicative sequence vs. additive sequence with same mean",
+    "anchors": [
+     {
+      "sequence": "consistent moderate (2x2x2x2x2x2)",
+      "value": "64"
+     },
+     {
+      "sequence": "alternating high-low (1x3x1x3x1x3)",
+      "value": "27"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply in purely additive systems where order of gains and losses is irrelevant"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2809",
+   "level": "L2",
+   "topic": "Leverage Mechanics",
+   "text": "Alex Hormozi asserts that the correct first step before scaling input is to define the input-output equation: the specific action that moves you toward your goal. Working without a defined input-output equation means you are working toward no goal and cannot know whether increased volume is accomplishing anything.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "input-output equation",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:38",
+   "level": "L2b",
+   "topic": "Pay-Less-Now Upsell Architecture",
+   "text": "Alex Hormozi argues that switching a front-end offer from a nominal price (e.g., $0.01) to free typically reduces lead cost by 5x or more, based on four independent split tests across ten representative gym markets each.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "free front end",
+   "conditions": [
+    "front-end offer, not the core premium offer",
+    "gym/fitness market",
+    "local market with finite addressable eyeballs"
+   ],
+   "mechanism": "A free offer generates a higher proportion of raised hands per ad impression because it removes the purchase friction entirely, reducing cost-per-lead proportionally.",
+   "numbers": {
+    "axis": "lead cost multiplier vs. non-free front end",
+    "anchors": [
+     {
+      "region": "non-free premium front end",
+      "value": "baseline lead cost"
+     },
+     {
+      "region": "free front end",
+      "value": "~5x lower lead cost (or more)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply if the free offer itself has a hard per-unit cost that makes high volume unprofitable",
+    "Premium offers outperform on lead quality and per-sale profit even if lead cost is higher"
+   ],
+   "n_sources": 1
+  }
+ ]
+}

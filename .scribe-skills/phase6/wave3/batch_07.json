@@ -1,0 +1,320 @@
+{
+ "batch_id": 7,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:883",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi states that the correct messaging fix for a four-problem business (avatar, offer, positioning, messaging) is to use messaging as the communication vehicle for all three upstream improvements simultaneously \u2014 meaning tighter avatar focus, productized offer, and global-cost positioning must all be reflected in the messaging before messaging work alone will help.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "business has avatar, offer, and positioning gaps simultaneously"
+   ],
+   "mechanism": "Messaging is downstream of the other three; fixing messaging without fixing avatar, offer, and positioning produces better-worded communications of a weak underlying value proposition, which cannot lift conversion.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2662",
+   "level": "L2a",
+   "topic": "Overexpansion Risk",
+   "text": "Alex Hormozi describes a consistent multi-location degradation pattern: the first location is founder-driven and highly profitable; the second location splits founder attention and earns lower margins; the third location is smaller by design and more efficient but has lower top-line revenue \u2014 resulting in roughly the same aggregate net profit as the first location alone, despite twice the liability.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "founder magic",
+   "conditions": [
+    "Founder-operated service business",
+    "Sequential multi-location expansion without talent backfill"
+   ],
+   "mechanism": "Splitting founder attention across locations reduces the quality of founder-driven delivery and sales at each location, causing margins to fall roughly in proportion to the reduction in founder presence; the net result is higher total liability for nearly unchanged total profit.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply if the founder has already hired a replacement operator before opening the second location"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:36",
+   "level": "L2b",
+   "topic": "Affiliate and Partner Channel Strategy",
+   "text": "Alex Hormozi argues that the three-tier affiliate payout structure (25% of max CAC at entry, 50% upon activation, 100% upon sustained performance) produces a blended payout significantly below the maximum allowable CAC when 60% of sales come from tier-3 affiliates and 20% each from tiers 1 and 2. In his example with a maximum allowable CAC of $40, this blended payout structure yields $30 per acquisition versus $40 maximum, improving LTGP:CAC from 3:1 to 4:1 and potentially adding 10-20% more net profit at year end.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "60% of affiliate sales come from top-tier activated affiliates",
+    "tiered activation structure in place"
+   ],
+   "mechanism": "Most affiliates produce little volume but are cheap to pay at entry; a small number drive the majority of revenue and earn the full CAC; the blended average is therefore substantially below the maximum, preserving margin.",
+   "numbers": {
+    "axis": "blended affiliate payout vs. maximum allowable CAC",
+    "anchors": [
+     {
+      "payout_cap": "$40 max CAC",
+      "blended_payout": "$30 (mix: 20% tier-1, 20% tier-2, 60% tier-3)"
+     },
+     {
+      "ltgp_cac_without_tiering": "3:1"
+     },
+     {
+      "ltgp_cac_with_tiering": "4:1"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1962",
+   "level": "L2",
+   "topic": "Risk Misprice Arbitrage",
+   "text": "Alex Hormozi asserts that very smart, very hardworking people almost never have earnings that correlate with those traits, but earnings do strongly correlate with how much risk a person is willing to accept; risk tolerance is a better predictor of compensation than intelligence or effort.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Hormozi acknowledges this is observation-based, not a controlled study"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2455",
+   "level": "L2",
+   "topic": "AI as Execution Leverage, Not Business Model Shift",
+   "text": "Alex Hormozi asserts that AI will not change the fundamental rules of business (what makes a good offer, what drives sales, how organizations scale) but will change the tools available to competitors, increasing output leverage \u2014 and frames the transition as man-plus-better-tools vs. man-plus-better-tools, the same competitive dynamic that has always existed.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "until AI can compete directly against humans as an autonomous agent rather than a tool"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "If AI can fully replace human agency in a domain, the framework changes \u2014 but Hormozi treats this as not yet the current condition"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1119",
+   "level": "L2",
+   "topic": "Intermediary as Primary Customer",
+   "text": "A broker's podcast that brings target-avatar owners on as guests is an underutilized community-seeding asset: past podcast guests are a natural founding cohort for a private community because they have already granted the broker social proximity, and the community invitation can be positioned as an exclusive continuation of that relationship.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Broker already runs a podcast where target-avatar owners appear as guests",
+    "Community is positioned as invite-only for past guests"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2225",
+   "level": "L2a",
+   "topic": "Risk Misprice Arbitrage",
+   "text": "Rory Sutherland contends that because human behaviour is a complex system, small, cheap, apparently trivial interventions can produce disproportionately large effects, and organisations systematically under-invest in them because their low cost makes them hard to charge for and easy to dismiss.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "dare to be trivial",
+   "conditions": [],
+   "mechanism": "In complex systems with human actors, butterfly effects operate: small inputs can tip a non-linear system. The low cost of the intervention is uncorrelated with its leverage because impact is determined by where the system is sensitive, not by the magnitude of the input.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to purely mechanical systems where output is proportional to input"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2738",
+   "level": "L2",
+   "topic": "Script Compliance",
+   "text": "Alex Hormozi asserts that a sales script should give the prospect the absolute minimum amount of information required to make a purchasing decision, and that reps should only answer questions related to the sale, not questions about the product's mechanics.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "B2B service business with hired sales reps",
+    "Rep does not have deep product expertise"
+   ],
+   "mechanism": "Minimizing script length reduces the domain knowledge reps must possess to execute; directing reps away from product-detail questions keeps the conversation focused on the prospect's pain and the decision to buy.",
+   "numbers": null,
+   "bounded_by": [
+    "Product-question escalation still requires a human fallback or a secondary call with a specialist for highly technical offers"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:386",
+   "level": "L2a",
+   "topic": "Scaling Bottleneck Diagnosis",
+   "text": "Alex Hormozi asserted that at the $2-3M revenue stage, a business operator must know their attribution data as well as they know the back of their hand, because without per-channel attribution, the optimization choices required to grow from $3M to $10M are impossible to make correctly.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Multi-channel paid acquisition",
+    "Revenue stage $2M-$10M growth phase"
+   ],
+   "mechanism": "As a business moves toward colder and colder audiences (scaling beyond its warm network), each incremental dollar of spend has lower baseline conversion. Without attribution, the operator cannot identify which cold-audience channels are working and which are burning budget, making systematic improvement impossible.",
+   "numbers": null,
+   "bounded_by": [
+    "Single-channel or purely organic businesses do not face this constraint at the same urgency"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1120",
+   "level": "L2a",
+   "topic": "Alternative Financing Structures",
+   "text": "Alex Hormozi argues that commission income in real estate cannot be directly pulled forward because it is psychologically and contractually tied to a completed transaction, but a broker can restructure income by selling an annual consulting retainer that includes a dramatically discounted commission rate, effectively collecting recurring cash upfront while clients perceive overall transaction cost as lower.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Broker has repeat clients or a pool of potential clients who transact more than once",
+    "Real estate or commission-based professional service"
+   ],
+   "mechanism": "Transaction-based income is locked to deal close; consulting retainer income is not \u2014 by decoupling the cash flow from the transaction and subsidizing the retainer with a commission discount, the broker captures recurring revenue while the client's perceived net cost remains acceptable.",
+   "numbers": {
+    "axis": "consulting retainer vs. transaction commission structure",
+    "anchors": [
+     {
+      "region": "Consulting retainer (annual)",
+      "value": "$8,000 per client per year (example figure)"
+     },
+     {
+      "region": "Commission discount offered to retainer clients",
+      "value": "90% off transaction fee (example figure)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply to one-off transactional clients with no expectation of future deals",
+    "Requires a client base willing to pay upfront for consulting access before transacting"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1319",
+   "level": "L2a",
+   "topic": "Delivery Model Polarization",
+   "text": "Alex Hormozi suggests that the optimal individual strategy for AI adoption is a barbell: fully commit to AI-first operations on one extreme (high risk, high reward), while on the other extreme invest in industries whose demand is structurally independent of AI development such as health, food, and entertainment, because human bodies, the need for calories, and leisure time will persist regardless of AI capability.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "barbell strategy",
+   "conditions": [
+    "medium-term planning horizon where AI trajectory is uncertain"
+   ],
+   "mechanism": "Barbell avoids concentration risk in the uncertain middle; high-AI-exposure bets capture upside if AI advances quickly, while stable-need bets provide downside protection if AI disrupts labor markets faster than expected.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not address the catastrophic scenario (full societal collapse) because in that case no strategy matters"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2875",
+   "level": "L2",
+   "topic": "Churn and Retention",
+   "text": "Alex Hormozi asserts that retaining an existing customer is significantly less work than acquiring a new one, and that solving for churn via consumable monthly value is a higher-leverage use of operator effort than running more customer acquisition.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "finding new customers \u2014 way more work",
+   "conditions": [
+    "Any recurring-revenue business",
+    "B2B SaaS sold through intermediary channel vs. sold direct to end user",
+    "Intermediary has its own ongoing client relationship with the end users",
+    "Recurring membership or subscription businesses",
+    "Recurring-revenue businesses with at least two price tiers",
+    "SaaS business at any stage",
+    "Three-year comparison horizon",
+    "Upgrade path exists from lower to higher tier",
+    "attempting to evaluate long-term business quality",
+    "business has 40%+ gross margins",
+    "clients are on 12-month agreements",
+    "clients are renewing past the 12-month term",
+    "community/membership platforms",
+    "consumer online services",
+    "customers are deeply integrated into the software (CRM or workflow-level integration)",
+    "customers' underlying businesses grow over time",
+    "investment of approximately $10/month per member in retention spend",
+    "local medical practice with recurring-service model",
+    "membership gym starting at 10% monthly churn",
+    "membership or subscription business with meaningful existing base",
+    "microgym competing with big-box facilities",
+    "no change to new patient acquisition rate or ad spend",
+    "not insurance or home-service contracts",
+    "recurring-membership gym",
+    "recurring-revenue or membership businesses",
+    "starting churn: ~50% annually"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Assumes local market is not saturated such that new patient acquisition declines",
+    "Assumes new patient acquisition volume stays constant",
+    "Community + consumables stickiness requires sustained content and community investment; neglect causes both drivers to decay simultaneously",
+    "Does not apply to insurance premiums or alarm/home-service contracts whose churn dynamics differ structurally",
+    "Early-stage SaaS with fast growth can temporarily mask poor revenue retention through aggressive new customer acquisition; this eventually fails when churn exceeds acquisition",
+    "Requires a meaningfully higher-priced tier; does not apply to single-tier pricing models",
+    "Requires customers' businesses to be growing so they can expand spend",
+    "Requires deep workflow integration, not surface-level software",
+    "Requires that the intermediary has a live client base they are actively serving; inactive or transactional intermediaries do not produce the same stickiness",
+    "Structural churn (death, relocation, business closure) prevents true 100% logo retention in practice"
+   ],
+   "n_sources": 9
+  },
+  {
+   "node_id": "claim:2370",
+   "level": "L2a",
+   "topic": "Cold-Start Trust Architecture",
+   "text": "Rory Sutherland argues that trust in commercial relationships is an instinctive (System 1) process primarily driven by costly and irreversible signals: marble bank buildings, the London taxi knowledge (2-4 years of effort to acquire), brand advertising spend, and long business tenure all function as credible signals of trustworthiness precisely because they are expensive to acquire and would be forfeited if the provider defected.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to anyone relaunching or pivoting to a new service category where prior proof does not directly transfer",
+    "Consumer is evaluating whether to invest in a new platform ecosystem where switching costs apply",
+    "any commercial transaction where the buyer cannot directly verify seller quality before purchase",
+    "applies in any context where the signaler has private information about quality that cannot be directly verified by the receiver",
+    "consumer evaluating a new or unfamiliar service provider with no prior relationship",
+    "consumer evaluating an unfamiliar product with no direct quality information",
+    "end-client testimonials unavailable due to NDA or confidentiality concerns",
+    "founder selling a marketing or lead-generation service",
+    "high-stakes one-off or infrequent transactions",
+    "no existing client results or testimonials",
+    "referral intermediaries who serve the same end-customer base",
+    "referral partners have existing credibility and trust with the target audience",
+    "service with NDA-constrained client testimonials",
+    "value proposition that complements the intermediary's existing service (e.g., CPA advising on tax efficiency)"
+   ],
+   "mechanism": "Sunk costs and irreversible investments signal trustworthiness because a provider who has invested heavily has far more to lose from defection than from honest dealing; the investment acts as a hostage. The brain unconsciously reads these signals without explicit calculation, producing trust from costly commitment rather than from verified track record.",
+   "numbers": null,
+   "bounded_by": [
+    "Adjacent proof (e.g., digital marketing agency experience) can be leveraged as partial credibility when launching into a new but related category like AI automation",
+    "Costly signalling only works when the cost is genuinely high relative to the gain from defection; cheap or easily faked signals (such as badges purchased online) do not convey trust",
+    "Does not apply to non-marketing service businesses where self-application is not expected (e.g., accountants, lawyers)",
+    "Does not apply to products that sell on word-of-mouth alone (e.g., iPhone in early adoption phase)",
+    "Does not apply where signal cost is not visible to the receiver",
+    "Does not apply where the receiver does not understand or process costly signaling heuristics",
+    "Does not work if the affiliate has not personally experienced the service.",
+    "Requires the affiliate to have adequate credibility with their own client base.",
+    "Requires the service to deliver measurable value to the intermediary directly, not just to the intermediary's clients",
+    "Signal is weakened when advertising can be funded by investors rather than product revenue (e.g. venture-backed pre-revenue startups)",
+    "Trust from sunk-cost signals can be overridden by direct negative experience (as in the airport taxi firm anecdote where refusing one off-script request terminated all future business)"
+   ],
+   "n_sources": 10
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "batch_id": 4,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:2299",
+   "level": "L2a",
+   "topic": "Monetizing Pre-Processed Complexity",
+   "text": "Rory Sutherland argues that the order of decisions in a process can have an order-of-magnitude effect on behavior \u2014 a change that purely economic or rational models would never reveal because they treat the sequence as irrelevant to the underlying choice.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "multi-step consumer or policy processes where the sequence of decisions creates friction or prerequisite barriers"
+   ],
+   "mechanism": "Requiring proof of outcome B before granting access to the precondition for B creates a logical impossibility that blocks behavior; reversing the order removes the barrier entirely. Rational analysis of the individual steps misses the interaction effect of their sequence.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:97",
+   "level": "L2",
+   "topic": "Ad Creative Assembly and Variation",
+   "text": "Alex Hormozi asserts that the meat (body) of an ad requires only 3-5 variations per weekly recording session because fewer people see the body than the hook, meaning the body gets used up more slowly and therefore needs less frequent rotation.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "three to five per weekly recording session is more than enough",
+   "conditions": [
+    "assembly-line production model",
+    "paid social video advertising"
+   ],
+   "mechanism": "Impression depth decreases past the hook; body content experiences lower consumption frequency per impression and therefore saturates more slowly than hook variants.",
+   "numbers": {
+    "axis": "body (meat) variations needed per week",
+    "anchors": [
+     {
+      "region": "hooks (high attrition, high rotation)",
+      "value": "50 per week"
+     },
+     {
+      "region": "meat (lower attrition, lower rotation)",
+      "value": "3-5 per week"
+     },
+     {
+      "region": "CTAs (minimal rotation)",
+      "value": "1-3 per session"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:511",
+   "level": "L2a",
+   "topic": "Execution and Rapid Adjustment Over Planning",
+   "text": "Alex Hormozi recommends committing to a thought-leadership content strategy for a minimum of 18 months before evaluating whether it is working, because deal flow from content compounds slowly and the signal of failure is only visible on long time horizons.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "give yourself 18 months",
+   "conditions": [
+    "business involves capital aggregation or long sales cycles",
+    "content/thought-leadership path selected for deal flow"
+   ],
+   "mechanism": "Short time horizons produce false negatives on content strategies because compounding reach and trust take longer to translate into deal flow than direct outreach; premature abandonment forfeits the compounding already banked.",
+   "numbers": {
+    "axis": "minimum evaluation horizon for content-driven deal flow",
+    "anchors": [
+     {
+      "region": "typical impatient operator expectation",
+      "value": "90 days"
+     },
+     {
+      "region": "Hormozi-recommended minimum before evaluating result",
+      "value": "18 months"
+     },
+     {
+      "region": "Hormozi's personal YouTube commitment horizon",
+      "value": "10 years"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not apply when cash position forces a path that produces faster returns"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:525",
+   "level": "L2",
+   "topic": "Differentiation and Premium Positioning",
+   "text": "Rory Sutherland argues that there are only two ways to create a valuable product: innovation (find what people really want and build a way to deliver it) or marketing (find what you can make and find a way to make people want it). These are equivalent strategies, and no sensible distinction can be made between them because both create economic value. This mirrors Peter Drucker's framing that innovation and marketing are the only two sources of value creation in a company, with everything else being a cost.",
+   "type": "assertion",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "innovation and marketing",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Attributed to Drucker as grounded in Austrian School economics tradition"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:630",
+   "level": "L2a",
+   "topic": "Free-to-Paid Funnel Architecture",
+   "text": "Alex Hormozi observes that the Pick Your Price mechanism pulls on generosity and reciprocity rather than imposing a demand, making buyers feel 100% in control of the outcome, which he claims reduces sales resistance compared to standard priced offers.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "low-trust or low-brand environments",
+    "service or experience businesses"
+   ],
+   "mechanism": "Choice architecture (pick your own price) activates autonomy rather than compliance; buyers who feel in control are less likely to resist the transaction and more likely to pay the highest tier to signal their values.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2773",
+   "level": "L2",
+   "topic": "Supply Constraint Levers",
+   "text": "Alex Hormozi argues that the four SPCL components (Status, Power, Credibility, Likeness) each independently produce influence, but stacking all four produces influence that is multiplicatively greater than any single component alone. A content creator who has only one component (e.g., inherited wealth = status only) produces materially less audience compliance than one who has two or more components stacked.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to content creators and personal brand builders"
+   ],
+   "mechanism": "Each component independently signals trustworthiness on a different axis (resource control, track record, observable evidence, perceived similarity); stacking them closes every skeptical objection a prospective audience member might have.",
+   "numbers": null,
+   "bounded_by": [
+    "Labels (tolerance, fortitude, etc.) matter less than the behavior they measure"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:2578",
+   "level": "L2",
+   "topic": "Margins",
+   "text": "Alex Hormozi identifies specific business categories as having structurally low gross margins: grocery stores, farming, and restaurants. He attributes this pattern to food being one of the most elastic and commoditized product categories. By contrast, media (podcast ad reads), information products, education, community platforms, data, software, pharmaceuticals, and supplements (lotions and potions) have high gross margins because the marginal cost of an additional unit approaches zero.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": "Commodity products (especially food) have thin margins because buyers can easily substitute alternatives; digital and information products have near-zero marginal cost per unit delivered, allowing margin to approach 100% of price.",
+   "numbers": null,
+   "bounded_by": [
+    "Individual companies within low-margin categories can achieve higher margins through brand or differentiation; this describes structural category averages, not ceiling values"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2440",
+   "level": "L2a",
+   "topic": "Founder Character and Team Attraction",
+   "text": "Alex Hormozi asserts that scaling a business from $6M to $100M without the founder increasing working hours is possible but requires accepting a short-term profitability reduction in order to hire the caliber of talent that can run growth independently; the trade is short-term profit for long-term growth trajectory.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "the who game",
+   "conditions": [
+    "founder unwilling to increase working hours",
+    "founder who has operationally removed themselves from delivery",
+    "target: grow from $6M-$10M toward $100M"
+   ],
+   "mechanism": "High-caliber growth talent commands premium compensation (six-figure to seven-figure salaries); funding that compensation from current profit temporarily compresses margins; the leverage of that talent then drives revenue growth that restores and expands margin over a multi-year horizon.",
+   "numbers": null,
+   "bounded_by": [
+    "Assumes the business already has operationally stable delivery so that new hires can focus on growth rather than firefighting",
+    "Does not apply if the founder's character and vision are not compelling enough to attract high-caliber talent"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1591",
+   "level": "L2",
+   "topic": "Cost Arbitrage Model",
+   "text": "Alex Hormozi asserts that a dental practice consolidation roll-up completes roughly three-quarters of the integration work that a traditional private equity roll-up requires, because the coaching platform has already unified systems, pricing, protocols, and training across practices before the formal acquisition; this makes the resulting DSO substantially more valuable than a group of unintegrated practices.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "practice owners have been coached on unified systems, price points, and protocols by the consolidator prior to acquisition",
+    "the coaching-to-consolidation model (not a standalone PE roll-up)"
+   ],
+   "mechanism": "Traditional PE roll-up value creation comes primarily from post-acquisition integration (systems unification, pricing rationalization, brand alignment); a coaching-first consolidator accomplishes that integration as a byproduct of the coaching relationship before any legal acquisition, compressing the time and capital required.",
+   "numbers": {
+    "axis": "integration work completed relative to standard PE roll-up",
+    "anchors": [
+     {
+      "region": "standard PE roll-up (post-acquisition integration)",
+      "value": "100% integration work done post-deal"
+     },
+     {
+      "region": "coaching-first DSO model",
+      "value": "~75% integration work done pre-deal via coaching relationship"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Requires that coaching clients actually adopt the standardized systems, not just consume educational content"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:11",
+   "level": "L2",
+   "topic": "Trust & Integrity Framework",
+   "text": "Alex Hormozi argues that relationship depth functions like a tree cut from its nutrient vine: when trust is betrayed, the visible structure of the relationship may persist for a long time, but the internal flow of honest information stops immediately, and the relationship is functionally dead even though it appears intact.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2614",
+   "level": "L2a",
+   "topic": "Persistence as Competitive Advantage",
+   "text": "Alex Hormozi contends that the number of attack vectors deployed to solve a problem is the observable proxy for the height of someone's standards: a person with high standards tries to accomplish the same goal from a hundred different angles before concluding it is impossible, while a low-standards actor tries one or two approaches and stops.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "attack vectors",
+   "conditions": [],
+   "mechanism": "A problem that resists one approach often yields to a different approach; accumulating approaches compresses the time to breakthrough and increases the probability of success on any given goal.",
+   "numbers": {
+    "axis": "number of approaches tried before declaring a goal impossible",
+    "anchors": [
+     {
+      "region": "low standards actor",
+      "value": "1-2 approaches"
+     },
+     {
+      "region": "high standards actor",
+      "value": "~100 different angles"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not mean repeating the same action 100 times; iteration across angles, not repetition of the same vector, is the mechanism."
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:461",
+   "level": "L2a",
+   "topic": "Observable Reality Framework",
+   "text": "The widespread belief that advertising is 'perfectible, attributable, quantifiable, and measurable' persists because people want it to be true, not because evidence supports it. The appeal of a world where advertising results are perfectly knowable is psychologically compelling enough to sustain false consensus.",
+   "type": "mechanism",
+   "speaker": "Unknown (London Marketing Psychology speaker)",
+   "speaker_term": null,
+   "conditions": [
+    "contexts where quantification confers credibility",
+    "digital advertising marketing"
+   ],
+   "mechanism": "Desire for a certain world (advertising as perfectly measurable) shapes belief formation; truth-seeking becomes secondary to belief-maintenance.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not explain why non-consensual beliefs (e.g., contrarian takes on advertising) fail to spread despite evidence"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1274",
+   "level": "L2a",
+   "topic": "Market Saturation Narrative Is Usually a Performance Problem",
+   "text": "Alex Hormozi argues that in a market with many undifferentiated providers (e.g., wedding photographers), lead quality from Google Ads is structurally worse than in less saturated verticals, because the sheer number of competing providers means a high share of searchers are merely price-shopping rather than ready to buy at a premium.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Google Ads as traffic source",
+    "market with high provider density (wedding photographer space)"
+   ],
+   "mechanism": "Abundant provider supply inflates searcher optionality, allowing low-commitment comparison shopping that depresses the proportion of high-intent, purchase-ready leads.",
+   "numbers": null,
+   "bounded_by": [
+    "Applies specifically to Google Ads in commoditized provider categories; may not hold for markets with regulated or scarce supply"
+   ],
+   "n_sources": 1
+  }
+ ]
+}

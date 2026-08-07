@@ -1,0 +1,230 @@
+{
+ "batch_id": 1,
+ "kind": "sonnet-audit",
+ "claims": [
+  {
+   "node_id": "claim:2816",
+   "level": "L2",
+   "topic": "Motivation Source",
+   "text": "Alex Hormozi argues that the source of a person's motivation \u2014 whether it is shame, a negative past, deprivation, or positive aspiration \u2014 is irrelevant to outcomes; what matters is only that the available emotional fuel is used to drive the required actions.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1607",
+   "level": "L2a",
+   "topic": "Cold-to-Close Sales Architecture",
+   "text": "Alex Hormozi states that adding a simple pre-qualifying checkbox (e.g., 'I want a VIP ticket') to an opt-in page produced a 16% increase in sales of the corresponding upsell on the next page, because the checkbox functions as a pre-commitment device that primes the prospect to accept the subsequent offer.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pre-framing",
+   "conditions": [
+    "opt-in funnel with a multi-step page sequence",
+    "upsell offer present on a downstream page"
+   ],
+   "mechanism": "Checking a box expressing intent creates a micro-commitment that is cognitively consistent with then purchasing the corresponding product on the next page, reducing resistance at the point of offer.",
+   "numbers": {
+    "axis": "sales conversion lift from pre-commitment checkbox",
+    "anchors": [
+     {
+      "region": "no checkbox (baseline)",
+      "value": "baseline conversion"
+     },
+     {
+      "region": "checkbox added (VIP opt-in)",
+      "value": "+16% conversion"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Checkbox produced no change to the subsequent page or process \u2014 the lift came purely from the pre-framing effect"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1291",
+   "level": "L2a",
+   "topic": "Constraint Identification",
+   "text": "Alex Hormozi claims that a service business pursuing rapid top-line growth without a strong CFO function will accumulate structural margin erosion through operational errors and pricing inconsistency that only becomes visible in the profit line once compounded over multiple growth stages.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Growth driven by externally-hired revenue leaders without matching finance capability",
+    "Service business growing from $4M to $15M within 2-3 years"
+   ],
+   "mechanism": "Fast revenue growth expands the number of transactions and service lines simultaneously; without real-time per-line margin data and a finance function to enforce pricing discipline, errors and pricing gaps accumulate and are only detected after the fact in the net profit line.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:321",
+   "level": "L2",
+   "topic": "Business Model Financial Rules Divergence",
+   "text": "Alex Hormozi warns that a founder who adds software without achieving the specific SaaS economics (viral growth, high gross margin, net negative churn) will not receive a software valuation multiple at exit. The business will be valued on its existing service/education economics regardless of the software component.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "software multiple",
+   "conditions": [
+    "founder adds software to an existing service or education business",
+    "software lacks viral growth, high gross margins, and net negative churn"
+   ],
+   "mechanism": "Acquirers value businesses based on the revenue characteristics they demonstrate, not the category label. A software product that behaves like a service (high marginal cost, low retention) will be valued like a service.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:701",
+   "level": "L2b",
+   "topic": "Talent Acquisition Standards",
+   "text": "Alex Hormozi argues that the scale a founder achieves pre-acquisition is a reliable proxy for their growth ambition and capability; a founder who scaled to $20M ARR before selling is probably a fundamentally better operator than one who capped at $3M and sold.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "bigger businesses with the right talent",
+   "conditions": [
+    "buy-and-hold acquisition strategy",
+    "intent to scale portfolio companies post-acquisition"
+   ],
+   "mechanism": "Pre-sale revenue scale is an observable output of the founder's skill and ambition over multiple years, not a single data point; it reflects compounded decision quality and therefore predicts post-acquisition performance more reliably than any interview or advisory relationship.",
+   "numbers": {
+    "axis": "founder pre-sale revenue scale as ambition proxy",
+    "anchors": [
+     {
+      "region": "low ambition signal",
+      "value": "caps at $3M ARR and sells"
+     },
+     {
+      "region": "high ambition signal",
+      "value": "$20M ARR before exit"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1337",
+   "level": "L2a",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "The subconscious mind controls most critical survival behaviors instinctively and unconsciously\u2014such as avoiding cliffs and jumping out of the way of buses\u2014rather than through conscious control. Conscious reason cannot will autonomic functions like heartbeat acceleration or pupil dilation.",
+   "type": "assertion",
+   "speaker": "Unknown",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": "Autonomic nervous system operates independently of conscious override; instinctive survival responses evolved before conscious reasoning capacity.",
+   "numbers": null,
+   "bounded_by": [
+    "Conscious mind can nudge or redirect unconscious impulses but cannot override fundamental instincts",
+    "Does not apply to learned behaviors acquired through conscious training"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:43",
+   "level": "L2b",
+   "topic": "Sales Closing Mechanics",
+   "text": "Alex Hormozi asserts that discount front-end offers substantially eliminate appointment no-shows in service businesses because people consistently show up for things they have paid for, at roughly 85-90% or higher show rates, compared to lower rates for free-offer appointments.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "discount offer",
+   "conditions": [
+    "gym running 6-week challenge front-end program",
+    "halfway check-in meeting scheduled as mandatory",
+    "service business where appointment time has a real cost (e.g., doctor, consultant)",
+    "small upfront payment collected at booking, card on file"
+   ],
+   "mechanism": "Financial commitment creates sunk-cost motivation to attend; people who have paid something feel a loss if they skip, while free-offer prospects have no financial stake in showing up.",
+   "numbers": {
+    "axis": "appointment show rate",
+    "anchors": [
+     {
+      "region": "free front-end offer",
+      "value": "lower show rate (baseline not specified)"
+     },
+     {
+      "region": "discount front-end offer (any payment collected)",
+      "value": "~85-90%+ show rate"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Requires a mandatory halfway meeting to achieve these rates; no-shows dramatically reduce conversion",
+    "Requires actual card charge or pre-authorized fee, not merely a verbal commitment",
+    "Show rate improvement assumes fee is non-trivial relative to prospect's perceived value"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:2834",
+   "level": "L2a",
+   "topic": "Compound Work Payoff",
+   "text": "Alex Hormozi argues that from a relative competitive standpoint, being the best produces exponential rather than linear returns, because the gap between first and second place in a market can be an order-of-magnitude difference in size, analogous to the gap between Uber and Lyft.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "any market where the leader captures category definition",
+    "platform or network-effect markets"
+   ],
+   "mechanism": "Category leadership enables premium pricing, default customer mindshare, and compounding brand advantage; the second-place player competes on features rather than category ownership, limiting its ceiling.",
+   "numbers": {
+    "axis": "market size ratio between rank-1 and rank-2 competitors",
+    "anchors": [
+     {
+      "region": "Uber (rank 1)",
+      "value": "~10x larger than Lyft"
+     },
+     {
+      "region": "Lyft (rank 2)",
+      "value": "baseline comparison"
+     }
+    ]
+   },
+   "bounded_by": [
+    "The analogy applies to markets with strong network effects or winner-take-most dynamics; in fragmented commodity markets the gap between rank 1 and rank 2 may be much smaller"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:105",
+   "level": "L2",
+   "topic": "Audience Building & Call-Out Mechanics",
+   "text": "Alex Hormozi asserts that meme-format hooks attract the largest possible percentage of a given audience because memes are culturally recognized shorthand; for narrower target audiences, niche-specific memes function the same way within that subgroup, acting as a high-penetration entry point for a broader ad.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "like a moth to a flame",
+   "conditions": [
+    "advertiser targeting either broad or niche audiences",
+    "social media paid advertising"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1946",
+   "level": "L2",
+   "topic": "Conscious Trade Accounting",
+   "text": "Alex Hormozi asserts that the worker must accept \u2014 as a non-negotiable psychological premise \u2014 that they will never receive credit for effort, and that this acceptance is a prerequisite for sustaining the level of work required to achieve goals.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to anyone pursuing high-output goals in competitive domains"
+   ],
+   "mechanism": "Seeking credit for effort creates dependency on external validation that is never delivered, which breaks the motivational loop; accepting the absence of credit removes that dependency and sustains the behavior.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

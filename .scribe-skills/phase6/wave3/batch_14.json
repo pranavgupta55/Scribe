@@ -1,0 +1,320 @@
+{
+ "batch_id": 14,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:2591",
+   "level": "L2a",
+   "topic": "Cold-Start Trust Architecture",
+   "text": "Alex Hormozi claims that his first 29 gym members signed in the first two weeks before the gym opened were acquired through pity \u2014 not through sales skill or charisma \u2014 and that the amount they paid matched his rent exactly, implying that visible desperation and credible commitment to the space (sleeping there) substituted for conventional persuasion in zero-credibility cold-start conditions.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pity",
+   "conditions": [
+    "founder has no equipment or proof of product quality",
+    "founder has zero prior credibility or track record",
+    "founder is visibly desperate and fully committed (physically present at all times)"
+   ],
+   "mechanism": "Physical impossibility of exit (sleeping at the location) combined with visible desperation created a credible aligned-incentive signal: prospects perceived the founder could not afford to fail them, substituting for conventional social proof.",
+   "numbers": {
+    "axis": "members acquired before gym opened",
+    "anchors": [
+     {
+      "region": "pre-opening two-week window",
+      "value": "29 members"
+     },
+     {
+      "region": "first month revenue matching rent exactly",
+      "value": "$4,972"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Hormozi explicitly attributes this to pity, not a replicable sales tactic; does not claim this works when the founder has any other option available to them"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2834",
+   "level": "L2a",
+   "topic": "Compound Work Payoff",
+   "text": "Alex Hormozi argues that from a relative competitive standpoint, being the best produces exponential rather than linear returns, because the gap between first and second place in a market can be an order-of-magnitude difference in size, analogous to the gap between Uber and Lyft.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "any market where the leader captures category definition",
+    "platform or network-effect markets"
+   ],
+   "mechanism": "Category leadership enables premium pricing, default customer mindshare, and compounding brand advantage; the second-place player competes on features rather than category ownership, limiting its ceiling.",
+   "numbers": {
+    "axis": "market size ratio between rank-1 and rank-2 competitors",
+    "anchors": [
+     {
+      "region": "Uber (rank 1)",
+      "value": "~10x larger than Lyft"
+     },
+     {
+      "region": "Lyft (rank 2)",
+      "value": "baseline comparison"
+     }
+    ]
+   },
+   "bounded_by": [
+    "The analogy applies to markets with strong network effects or winner-take-most dynamics; in fragmented commodity markets the gap between rank 1 and rank 2 may be much smaller"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1345",
+   "level": "L2",
+   "topic": "Risk Misprice Arbitrage",
+   "text": "Alex Hormozi claims that all meaningful upside in life is located on the other side of uncertainty and delay, and these are the only two prices the market systematically refuses to pay. Because both uncertainty (not knowing the outcome) and delay (not knowing how long one must persist) feel unbearable to most people, they represent the primary source of arbitrage for anyone willing to bear them.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Liquid capital that could alternatively be deployed in growth assets",
+    "Long-duration prediction (10+ years) about systemic risk"
+   ],
+   "mechanism": "Uncertainty and delay thin out competitors; the people who persist through both capture the upside that the majority exits before reaching.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when the protective position has a bounded, defined cost (e.g., insurance premium)",
+    "Does not apply when the risk is imminent with confirmed signals"
+   ],
+   "n_sources": 4
+  },
+  {
+   "node_id": "claim:72",
+   "level": "L2",
+   "topic": "Free-to-Paid Funnel Architecture",
+   "text": "Alex Hormozi reports that the Pay Less Now or Pay More Later offer structure \u2014 where customers choose between paying full price later with a conditional guarantee, or paying a discounted price now with bonuses \u2014 should have a pay-now discount of 20-50%, and that if more than 10% of pay-later customers cancel before billing, the guarantee conditions are too low, the price is too high, or the promise was overstated.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "Pay Less Now or Pay More Later",
+   "conditions": [
+    "digital product or short-duration service context"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "pay-now discount percentage and cancellation rate diagnostic threshold",
+    "anchors": [
+     {
+      "region": "recommended pay-now discount",
+      "value": "20-50% off pay-later price"
+     },
+     {
+      "region": "acceptable pay-later cancellation rate",
+      "value": "<10%"
+     },
+     {
+      "region": "trigger for offer redesign",
+      "value": ">10% cancellation rate"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Offer requires a clear, trackable yes/no result deliverable within the pay-later window; cannot be used when promise is ambiguous or subjective"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:346",
+   "level": "L2",
+   "topic": "Supply Constraint Levers",
+   "text": "Alex Hormozi defines fortitude as the magnitude of behavior change once a person\u2019s tolerance threshold is exceeded. Low fortitude produces a large, steep drop in behavior quality (e.g., quitting a job, major life disruptions); high fortitude produces only a small, imperceptible shift before the person regains normal behavior.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "fortitude",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1919",
+   "level": "L2",
+   "topic": "Founder Control and Equity Structure",
+   "text": "Alex Hormozi asserts that the primary advantage of bootstrapping is retaining full control and equity: the founder keeps 100% of the pie, decides pace and strategy, and can exit on their own time horizon or never exit.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "bootstrapped",
+   "conditions": [
+    "business is funded solely from personal savings and reinvested profits",
+    "no equity sold to outside investors"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2395",
+   "level": "L2b",
+   "topic": "Tracking and Measurement Discipline",
+   "text": "Rory Sutherland contends that in the bee foraging model, maintaining approximately 20% of agents as random explorers rather than waggle-dance followers prevents the entire system from getting trapped in a local maximum when a known pollen source is exhausted; he argues that digital marketing is over-indexed on exploit (hunting known customers) and under-indexed on explore (finding new donor segments).",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "exploit and explore",
+   "conditions": [
+    "applicable to marketing budget allocation decisions",
+    "complex adaptive systems with changing resource distribution"
+   ],
+   "mechanism": "100% exploit over-optimizes on past conditions; when those conditions change or deplete, the system has no map for alternatives and collapses. A standing ~20% random exploration pool continuously refreshes the option set and prevents starvation.",
+   "numbers": {
+    "axis": "proportion of bee foragers that ignore waggle dance",
+    "anchors": [
+     {
+      "region": "short-term optimal (all exploit)",
+      "value": "0% explorers \u2014 maximum pollen collected now; catastrophic when source depletes"
+     },
+     {
+      "region": "observed bee behavior",
+      "value": "~20% explorers \u2014 lower short-term yield; long-term system resilience"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Value of exploration only realized if explorers share discoveries with the exploiting majority"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2616",
+   "level": "L2",
+   "topic": "Distinctiveness Requires Active Effort",
+   "text": "Alex Hormozi claims that industry standards function as a competitive handicap that a company voluntarily imposes on itself: competitors who measure themselves by industry averages believe they are performing well at what is actually a mediocre absolute level, which is an advantage for any operator who ignores those averages and uses physics as the ceiling instead.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "handicap",
+   "conditions": [],
+   "mechanism": "When all competitors compete toward the same average, any operator who raises their internal standard gains unclaimed performance space because peers are not pursuing it.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:653",
+   "level": "L2b",
+   "topic": "Delivery Session Compression",
+   "text": "Alex Hormozi asserts that running 45-minute back-to-back sessions (instead of 60-minute sessions with a 15-minute break) increases a gym's daily session capacity by 33% on its own and by 66% when combined with the 3x/week membership switch, with no increase in payroll.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "45-minute session switch",
+   "conditions": [
+    "gym currently running 60-minute sessions with 15-minute breaks",
+    "two peak session windows per day (morning + evening)"
+   ],
+   "mechanism": "Eliminating the 15-minute break allows a second session to start immediately, turning two session slots per window into four across a morning/evening schedule.",
+   "numbers": {
+    "axis": "daily session count before and after",
+    "anchors": [
+     {
+      "region": "before: 3 morning + 3 evening = 6 sessions/day",
+      "value": "6 sessions"
+     },
+     {
+      "region": "after: 4 morning + 4 evening = 8 sessions/day",
+      "value": "8 sessions (+33%)"
+     },
+     {
+      "region": "combined with 3x/week fix",
+      "value": "66% capacity increase"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:970",
+   "level": "L2b",
+   "topic": "Free-to-Paid Funnel Architecture",
+   "text": "Alex Hormozi asserts that Acquisition.com's School investment (a co-founded community platform) serves as a low-barrier-entry conversion mechanism at approximately $9/month, capturing audience members who are not yet ready for the Advisory Practice or ACQ Network while still monetizing that segment of attention.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "School",
+   "conditions": [
+    "applies to sub-$500k/year entrepreneurs and knowledge monetizers who are not yet advisory-practice-ready"
+   ],
+   "mechanism": "Low price point removes purchase friction; the platform simultaneously serves as a community product for the audience and generates equity value and distributions back to Acquisition.com as a co-founder.",
+   "numbers": {
+    "axis": "School entry price",
+    "anchors": [
+     {
+      "region": "paid tier",
+      "value": "$9/month"
+     },
+     {
+      "region": "free trial entry",
+      "value": "$0"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2626",
+   "level": "L2a",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Alex Hormozi claims that a person can be conditioned, without conscious awareness, to emit a response (such as anger) that reliably terminates an aversive stimulus (a partner's crying), and will repeat that response even when the original intent was comfort. The conditioned response is learned from outcomes, not from intentions.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Interpersonal relationship context where emotional expression produces a detectable behavioral response in the other party",
+    "The accidental response (e.g., anger) reliably terminates the aversive stimulus",
+    "The aversive behavior (e.g., crying) is persistent and does not terminate with initial comfort attempts"
+   ],
+   "mechanism": "Negative reinforcement: the anger response is strengthened because it reliably removes the aversive stimulus (the crying), even though the behavior was never consciously chosen as a strategy.",
+   "numbers": null,
+   "bounded_by": [
+    "Requires the reinforcement pattern to repeat over multiple trials before the conditioned response hardens"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:717",
+   "level": "L2",
+   "topic": "Constraint Identification",
+   "text": "Alex Hormozi recommends that the first strategic hire for a ~$3M HRT practice trying to fix churn should be a customer success professional from the software/SaaS world \u2014 someone experienced in building systematic customer success pathways, not a sales or marketing hire.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "customer success person",
+   "conditions": [
+    "business at ~$3M revenue",
+    "no existing systematic customer success function",
+    "primary constraint diagnosed as churn, not lead generation"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Only the correct hire sequence if churn is diagnosed as the binding constraint; if the constraint is lead generation, the hire sequence changes"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1653",
+   "level": "L2",
+   "topic": "Volume-First Scaling",
+   "text": "Alex Hormozi claims that doubling total acquisition spending across all existing channels will produce proportional revenue growth for a service business even without resolved attribution clarity, because the macro-level volume effect overrides per-channel attribution uncertainty at the scale of doubling.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "business has sufficient cash reserves to sustain increased ad spend (stated as 4 months OPEX)",
+    "existing channels are already producing customers",
+    "no single channel has been identified as non-performing"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Attribution data remains necessary for long-run efficiency optimization; doubling spend without attribution only delays the efficiency problem"
+   ],
+   "n_sources": 1
+  }
+ ]
+}

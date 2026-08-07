@@ -1,0 +1,349 @@
+{
+ "batch_id": 15,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:1237",
+   "level": "L2a",
+   "topic": "Margins",
+   "text": "Alex Hormozi asserts that in price-controlled industries (such as insurance-reimbursed healthcare), operational efficiency and cost-of-goods reduction are the only levers available for profit growth, because the operator cannot raise prices. This makes margin improvement through operational work a higher-priority focus than geographic expansion or model pivots.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "insurance-reimbursed or regulated-price industry",
+    "operator cannot set own pricing"
+   ],
+   "mechanism": "When revenue per unit is fixed by a third party (insurer or regulator), the only path to profit expansion is cost reduction; any capital or attention spent on new models diverts from this highest-leverage activity.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to businesses that can set their own prices"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1681",
+   "level": "L2",
+   "topic": "Four Investor Acquisition Channels",
+   "text": "To prepare a large fundraising round, a founder should have early conversations with a large pool of potential investors (approximately 10x the target number) to map what each one needs to believe in order to invest, then filter out unrealistic demands and focus on the subset of needs-to-believe that are both achievable and affordable to demonstrate.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "needs to believe",
+   "conditions": [
+    "Planning a round 12-24 months in advance",
+    "Targeting institutional or high-net-worth investors"
+   ],
+   "mechanism": "Pre-mapping investor requirements identifies the lowest-cost de-risking actions that unlock the most capital; filtering out outlier demands avoids wasting resources on conditions that will never be satisfied.",
+   "numbers": {
+    "axis": "Investor pipeline size relative to target close count",
+    "anchors": [
+     {
+      "region": "Optimal early pipeline",
+      "value": "10x the number of investors you plan to close"
+     },
+     {
+      "region": "Final close target",
+      "value": "the filtered subset whose needs are achievable"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Assumes sufficient time horizon (12+ months) to conduct discovery before the round closes",
+    "Does not apply to emergency bridge rounds where speed overrides preparation"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:957",
+   "level": "L2b",
+   "topic": "Restaurant Profitability",
+   "text": "Alex Hormozi observes that a 30% net profit margin in fast-casual pizza and ice cream is an exceptional result, implying the business has pricing and cost discipline significantly above the fast-casual industry average.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Fast-casual restaurant",
+    "Pizza and ice cream category"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "Net profit margin for fast-casual restaurant",
+    "anchors": [
+     {
+      "region": "This business (as described in the conversation)",
+      "value": "30%"
+     },
+     {
+      "region": "Implied industry standard (Hormozi reaction)",
+      "value": "materially lower \u2014 Hormozi called it 'great' as an exceptional result"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Hormozi did not state the precise industry average; the comparison is directional from his reaction, not from a cited benchmark"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:141",
+   "level": "L2",
+   "topic": "Persistence as Competitive Advantage",
+   "text": "Alex Hormozi argues that mastering three tolerances unlocks the ability to beat 99% of competitors in any domain: (1) the shame of rejection, (2) the boredom of repetition, and (3) the pain of feedback. He frames these as learnable skills rather than personality traits, not predispositions.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "never stop",
+    "start",
+    "take feedback to get better"
+   ],
+   "mechanism": "Most competitors exit the field when they encounter rejection, boredom, or painful feedback; the rare person who tolerates all three faces exponentially fewer remaining competitors with each milestone.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:2557",
+   "level": "L2",
+   "topic": "Learning as Measurable Behavior Change",
+   "text": "Rory Sutherland argues that behavioral change follows a sigmoid (S-curve) pattern: slow initial uptake due to the gravitational forces of habit and social copying, then rapid acceleration when both habit and social norm shift simultaneously. Many valuable innovations are abandoned prematurely because business expects linear growth and treats the slow initial phase as evidence of failure rather than evidence of normal adoption dynamics.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "novel behavior categories where habit and social norms must shift together"
+   ],
+   "mechanism": "Habit formation and social norm adoption are independent but mutually reinforcing forces; until both pass a threshold simultaneously, visible uptake is slow. When both cross threshold together, adoption accelerates non-linearly.",
+   "numbers": null,
+   "bounded_by": [
+    "Incremental product improvements in established categories without habitual or social friction"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:119",
+   "level": "L2",
+   "topic": "Before/After Proof Engine",
+   "text": "Alex Hormozi found that personalizing proof to match the lead's demographics (age, gender, ethnicity, situation) increases motivation to attend the appointment; the closer the match between the proof case study and the lead's profile, the stronger the effect.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "personalized proof",
+   "conditions": [
+    "lead nurture stage \u2014 after scheduling, before the appointment"
+   ],
+   "mechanism": "Matched proof activates the lead's self-identification with the success story, reducing skepticism and increasing perceived relevance; mismatched proof feels generic and fails to motivate attendance.",
+   "numbers": null,
+   "bounded_by": [
+    "proof must be compliant with local regulations on testimonials and results claims, which vary by state and country"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:679",
+   "level": "L2",
+   "topic": "Authenticity in Communication",
+   "text": "Khartoon Weiss (TikTok, 2022) asserts that brands performing best on TikTok do not over-engineer their content; they release their existing brand voice in an authentic, unpolished format rather than producing perfection-oriented packaged campaigns. Brands that attempt to replicate traditional campaign formats on TikTok underperform brands that let the creative breathe in the platform's native idiom.",
+   "type": "assertion",
+   "speaker": "Khartoon Weiss",
+   "speaker_term": null,
+   "conditions": [
+    "Advertisers entering the platform from traditional campaign backgrounds",
+    "Brand content on TikTok"
+   ],
+   "mechanism": "TikTok's community culture is built around realness and imperfection; over-produced content signals inauthenticity, which disrupts the community experience and reduces engagement. Authentic content blends into the native content stream and benefits from the platform's discovery algorithm.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2071",
+   "level": "L2a",
+   "topic": "Affiliate and Partner Channel Strategy",
+   "text": "The Gym Members Now founder claims that acquiring a single high-quality franchise client and over-delivering for them can generate a self-sustaining referral pipeline within that franchise network \u2014 he signed over 200 gym owners without cold outreach because one Anytime Fitness owner with 12 locations referred him to his advisory board and hundreds of fellow franchise owners after seeing results.",
+   "type": "mechanism",
+   "speaker": "Gym Members Now founder",
+   "speaker_term": "franchise referral network",
+   "conditions": [
+    "agency delivered measurable results first",
+    "franchise gym owner niche",
+    "initial client had multiple locations and sat on franchise advisory boards"
+   ],
+   "mechanism": "Franchise owners share a non-competing network (different geographic markets) and communicate results through advisory boards and private groups; a referral from a franchise peer is a pre-sold lead because the identical business model has already proven results.",
+   "numbers": {
+    "axis": "clients acquired without cold outreach via single franchise referral cascade",
+    "anchors": [
+     {
+      "region": "initial franchise client",
+      "value": "1 Anytime Fitness owner with 12 locations (Jeff O'Meara, 2019)"
+     },
+     {
+      "region": "downstream referrals from that client",
+      "value": "200+ gym owners referred"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Applies specifically to franchise networks where owners do not compete geographically",
+    "Requires delivering measurable results before the referral cascade begins"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:575",
+   "level": "L2b",
+   "topic": "Hiring as Capital Allocation",
+   "text": "Alex Hormozi frames investing in a salesperson as a capital-allocation decision with a measurable ROI: in a home-services business with roughly $1M gross profit per salesperson and $200K all-in annual compensation, the investment yields approximately a 5:1 gross-profit-to-cost ratio, plus an estimated 8x enterprise value multiplier on the incremental gross profit generated.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "cost to acquire talent versus lifetime gross profit per employee",
+   "conditions": [
+    "$5M top-line revenue",
+    "50% gross margin on $2M per salesperson revenue",
+    "Agency is supply constrained",
+    "Business has sufficient retained profit to fund operations without the owner's salary redirected",
+    "Business is considering whether to use an external recruiter vs. build an internal recruiting function",
+    "Done-for-you client-acquisition agency",
+    "Gross profit per salesperson approximately $1M (50% gross margin on $2M revenue per rep)",
+    "Hire is a leadership role expected to generate measurable business output",
+    "Hire is intended to generate incremental revenue",
+    "Home-services business at approximately $20M revenue",
+    "Low capex service business",
+    "Owner has end-of-year profit to allocate",
+    "Owner is taking a medical director draw approximately equal to market rate for a replacement physician",
+    "Owner is unwilling to raise prices",
+    "Salesperson compensation approximately $200K/year (top performers)",
+    "Sufficient existing cash flow to fund hire",
+    "context: investor evaluating founder-led company",
+    "founder at $1M-$10M revenue",
+    "founder currently producing $4M personally",
+    "founder is the primary value-creator in the business",
+    "founder unwilling to increase personal working hours",
+    "high-margin services where each deal is significant",
+    "home-services business with $20M revenue",
+    "incremental hires reach full productivity and are retained",
+    "professional services firm valued at ~8x EBITDA multiple",
+    "sales director managing ~3 agency clients",
+    "team of 7+ agents each capable of incremental improvement",
+    "~31 clients paying ~$150k/year each"
+   ],
+   "mechanism": "When viewed as a capital investment rather than a headcount cost, each salesperson hire converts $200K of cost into $1M of gross profit, with enterprise value creation multiplying the economics further.",
+   "numbers": {
+    "axis": "gross-profit-to-salesperson-cost ratio",
+    "anchors": [
+     {
+      "region": "Salesperson cost (top performer, annual)",
+      "value": "$200K"
+     },
+     {
+      "region": "Gross profit generated per salesperson",
+      "value": "~$1M"
+     },
+     {
+      "region": "GP-to-cost ratio",
+      "value": "~5:1"
+     },
+     {
+      "region": "Enterprise value multiplier on incremental GP (estimated 8x)",
+      "value": "~$8M per $200K invested"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Assumes 8x EBITDA multiple holds at exit",
+    "Assumes deal size is sufficient that 7 incremental deals exceed $1M total; specific to high-ticket professional services",
+    "Assumes gross margin is correctly measured (cost of goods at ~50%)",
+    "Assumes the sales director successfully manages ~3 client accounts",
+    "Does not apply if founder is willing to personally increase time invested",
+    "Does not apply if margins are too thin to absorb the salary before payback",
+    "Does not apply if replacement physician market rate significantly exceeds owner's current draw",
+    "Does not apply when building an in-house recruiting team is more cost-effective for recurring, high-volume hiring needs",
+    "Enterprise value multiplier depends on business being valued on EBITDA basis and current multiple holding",
+    "Gross profit figure, not revenue \u2014 margin assumptions not stated",
+    "Illustrative math based on a $20M home-services business with 10 salespeople; actual ratios vary by gross margin and compensation structure",
+    "Only applies when the founder is the binding growth constraint, not capital or distribution",
+    "Requires the owner's market-rate draw to approximately equal replacement hire cost",
+    "Tax treatment of enterprise value gain differs from cash flow gains (referred to as 'tax-free' in transcript but depends on deal structure)"
+   ],
+   "n_sources": 10
+  },
+  {
+   "node_id": "claim:441",
+   "level": "L2a",
+   "topic": "Asymmetric Bet Framework",
+   "text": "Rory Sutherland argues that a significant fraction of bee colonies (~20%, varying by proximity to equator and foliage density) ignore the waggle dance communication of known food sources and explore independently, and that this has persisted over 20 million years of evolution because it prevents the colony from becoming trapped in a local maximum when the environment changes.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "rogue bees",
+   "conditions": [
+    "Proportion of rogue bees varies with proximity to equator and foliage density"
+   ],
+   "mechanism": "Exploratory bees find novel food sources the waggle-dance-following bees do not know about; if the known sources disappear (cows eat the field), only colonies with exploratory bees survive. Exploration prevents catastrophic optimization on a disappearing food source (local maximum trap).",
+   "numbers": {
+    "axis": "Proportion of bees ignoring the waggle dance",
+    "anchors": [
+     {
+      "region": "Approximate population-wide average",
+      "value": "~20%"
+     },
+     {
+      "region": "Variation range",
+      "value": "varies by latitude and foliage density"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2195",
+   "level": "L2a",
+   "topic": "Offer Value Architecture",
+   "text": "Rory Sutherland argues that a product attribute perceived as central to its function can be entirely psychosomatic: a silent fan that cooled as effectively as a noisy one was rejected by consumers because the absence of noise made them feel it was not working. The perceived signal of function (fan noise) had become part of the functional experience itself.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to products where a sensory cue has become associated with the functional outcome through learned conditioning"
+   ],
+   "mechanism": "Consumers have learned through repeated experience that fan noise accompanies cooling; removing the noise while preserving the function creates cognitive dissonance that overrides objective measurement. The sensory cue IS part of the product experience, not merely accompaniment to it.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1186",
+   "level": "L2",
+   "topic": "Founder-Led Executive Recruiting",
+   "text": "Alex Hormozi asserts that a CEO should be personally involved in the interview and selection process for C-suite hires but not for director- or manager-level roles, because the stakes and organizational impact of C-suite mishire are too high to delegate.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "CEO has the capacity to conduct interviews without abandoning core business activities",
+    "Company is at a scale where a dedicated C-suite layer is being built"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Directors and managers: CEO involvement is not required and should be delegated"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:278",
+   "level": "L2a",
+   "topic": "Price Communication",
+   "text": "Rory Sutherland claims that the introduction of a medium-sized shopping trolley converted shoppers who would otherwise have taken only a basket into trolley users \u2014 and thus higher-spend shoppers \u2014 without those shoppers being consciously aware they were being converted, by exploiting the Goldilocks (middle-option) preference.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "Goldilocks effect",
+   "conditions": [
+    "UK grocery retail context, prior to medium trolley introduction only basket and full-size trolley were available"
+   ],
+   "mechanism": "Human beings default to the middle option when three tiers are present (Goldilocks effect); adding a medium trolley made the large trolley the extreme option, causing shoppers to upgrade from basket to medium trolley without perceiving the move as an upgrade.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

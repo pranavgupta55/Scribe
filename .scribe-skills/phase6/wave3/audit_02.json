@@ -1,0 +1,208 @@
+{
+ "batch_id": 2,
+ "kind": "sonnet-audit",
+ "claims": [
+  {
+   "node_id": "claim:36",
+   "level": "L2b",
+   "topic": "Affiliate and Partner Channel Strategy",
+   "text": "Alex Hormozi argues that the three-tier affiliate payout structure (25% of max CAC at entry, 50% upon activation, 100% upon sustained performance) produces a blended payout significantly below the maximum allowable CAC when 60% of sales come from tier-3 affiliates and 20% each from tiers 1 and 2. In his example with a maximum allowable CAC of $40, this blended payout structure yields $30 per acquisition versus $40 maximum, improving LTGP:CAC from 3:1 to 4:1 and potentially adding 10-20% more net profit at year end.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "60% of affiliate sales come from top-tier activated affiliates",
+    "tiered activation structure in place"
+   ],
+   "mechanism": "Most affiliates produce little volume but are cheap to pay at entry; a small number drive the majority of revenue and earn the full CAC; the blended average is therefore substantially below the maximum, preserving margin.",
+   "numbers": {
+    "axis": "blended affiliate payout vs. maximum allowable CAC",
+    "anchors": [
+     {
+      "payout_cap": "$40 max CAC",
+      "blended_payout": "$30 (mix: 20% tier-1, 20% tier-2, 60% tier-3)"
+     },
+     {
+      "ltgp_cac_without_tiering": "3:1"
+     },
+     {
+      "ltgp_cac_with_tiering": "4:1"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2121",
+   "level": "L2a",
+   "topic": "Activation as Primary Churn Lever",
+   "text": "Rory Sutherland states that Amazon Prime works because the act of paying an upfront annual fee creates a psychological commitment device that (a) transfers a large portion of future purchase consideration to already-sunk cost and (b) converts behavioral loyalty into emotional loyalty over time, with the latter eventually becoming self-sustaining.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "commitment device",
+   "conditions": [
+    "subscription with upfront annual payment"
+   ],
+   "mechanism": "Prepayment eliminates marginal-cost reasoning at each subsequent purchase decision; the sunk annual fee functions as a repeated nudge toward Amazon, accumulating behavioral data that the brain interprets as loyalty, which then produces genuine affective attachment.",
+   "numbers": null,
+   "bounded_by": [
+    "Would not produce the same effect if pricing were per-transaction or could be cancelled with zero penalty"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2581",
+   "level": "L2a",
+   "topic": "Brand as Competitive Moat",
+   "text": "Alex Hormozi argues that capital expenditure (capex) can function as a competitive moat, not just a cost, when it erects genuine barriers to entry that competitors cannot afford to replicate. He uses a shovel-vs-bare-hands analogy: anyone competing to dig holes who buys a shovel outcompetes all who do not. More extreme examples are power plants and NVIDIA chip manufacturing, where capex and proprietary technical skill jointly create a moat that explains NVIDIA's position among the seven most valuable companies in the world.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Capex becomes a moat only when: (1) the capital investment is large enough that competitors cannot easily replicate it, and (2) return on invested capital (ROIC) justifies the investment"
+   ],
+   "mechanism": "High required capex raises the minimum capital threshold to compete, reducing the pool of potential entrants; combined with proprietary technical skills (as in NVIDIA chips or nuclear energy), the moat becomes nearly insurmountable.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to low-capex commodity service businesses where entry barriers remain negligible",
+    "Pure capital moats (without proprietary skill) are not indefensible; well-capitalized incumbents can replicate capex-only moats"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:609",
+   "level": "L2a",
+   "topic": "Long-Term Horizon Advantage",
+   "text": "Rory Sutherland claims that important changes in consumer behavior and society happen on a 'gradually then suddenly' trajectory \u2014 they are invisible while they accumulate slowly, then appear to happen overnight at the threshold crossing; examples include the shift in English provincial city food quality and the normalization of eating out.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "gradually then suddenly",
+   "conditions": [
+    "change is driven by behavioral normalization or network effects rather than a single event"
+   ],
+   "mechanism": "Slow changes accumulate below the threshold of media noticeability and therefore do not trigger correction or competition; by the time they become visible they have already compounded to a decisive advantage or shift.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1972",
+   "level": "L2",
+   "topic": "Growth Path Selection",
+   "text": "Alex Hormozi asserts that when starting a business with little or no capital, the two non-negotiable criteria are: (1) the business must be performance-based (pay-for-performance), so no capital is required before earning, and (2) the business must have no upfront cost to operate.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pay for performance",
+   "conditions": [
+    "founder has little or no starting capital",
+    "founder is selecting a business model"
+   ],
+   "mechanism": "Without capital, a founder cannot absorb operating losses while waiting to earn; performance-based models eliminate that risk because the founder only gets paid after delivering results.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:630",
+   "level": "L2a",
+   "topic": "Free-to-Paid Funnel Architecture",
+   "text": "Alex Hormozi observes that the Pick Your Price mechanism pulls on generosity and reciprocity rather than imposing a demand, making buyers feel 100% in control of the outcome, which he claims reduces sales resistance compared to standard priced offers.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "low-trust or low-brand environments",
+    "service or experience businesses"
+   ],
+   "mechanism": "Choice architecture (pick your own price) activates autonomy rather than compliance; buyers who feel in control are less likely to resist the transaction and more likely to pay the highest tier to signal their values.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1348",
+   "level": "L2a",
+   "topic": "Uncertainty Tolerance as Capacity Ceiling",
+   "text": "Alex Hormozi claims that most people refuse to pursue uncertain opportunities not because the downside is genuinely catastrophic but because they cannot tolerate not knowing (a) how bad the worst case will be and (b) how long they will have to endure before a resolution. The refusal to bear this double uncertainty is the primary mechanism by which they trade real possible upside for phantom safety.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Founder has a growth-positive path available under current conditions",
+    "Uncertainty is external (regulatory, market) and not yet resolved"
+   ],
+   "mechanism": "The unknown magnitude and unknown duration of pain are more aversive than the pain itself; people exit before reaching the upside because they cannot pre-commit to an open-ended unknown cost.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to activities where the outcome is trivially guaranteed \u2014 the claim only holds for uncertain, difficult endeavors.",
+    "Does not apply when a pivot requires long lead times that cannot be compressed at the moment of confirmed regulatory change",
+    "Does not apply when the downside risk is catastrophic and irreversible (company insolvency, criminal liability)"
+   ],
+   "n_sources": 5
+  },
+  {
+   "node_id": "claim:1237",
+   "level": "L2a",
+   "topic": "Margins",
+   "text": "Alex Hormozi asserts that in price-controlled industries (such as insurance-reimbursed healthcare), operational efficiency and cost-of-goods reduction are the only levers available for profit growth, because the operator cannot raise prices. This makes margin improvement through operational work a higher-priority focus than geographic expansion or model pivots.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "insurance-reimbursed or regulated-price industry",
+    "operator cannot set own pricing"
+   ],
+   "mechanism": "When revenue per unit is fixed by a third party (insurer or regulator), the only path to profit expansion is cost reduction; any capital or attention spent on new models diverts from this highest-leverage activity.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to businesses that can set their own prices"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2614",
+   "level": "L2a",
+   "topic": "Persistence as Competitive Advantage",
+   "text": "Alex Hormozi contends that the number of attack vectors deployed to solve a problem is the observable proxy for the height of someone's standards: a person with high standards tries to accomplish the same goal from a hundred different angles before concluding it is impossible, while a low-standards actor tries one or two approaches and stops.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "attack vectors",
+   "conditions": [],
+   "mechanism": "A problem that resists one approach often yields to a different approach; accumulating approaches compresses the time to breakthrough and increases the probability of success on any given goal.",
+   "numbers": {
+    "axis": "number of approaches tried before declaring a goal impossible",
+    "anchors": [
+     {
+      "region": "low standards actor",
+      "value": "1-2 approaches"
+     },
+     {
+      "region": "high standards actor",
+      "value": "~100 different angles"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Does not mean repeating the same action 100 times; iteration across angles, not repetition of the same vector, is the mechanism."
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:525",
+   "level": "L2",
+   "topic": "Differentiation and Premium Positioning",
+   "text": "Rory Sutherland argues that there are only two ways to create a valuable product: innovation (find what people really want and build a way to deliver it) or marketing (find what you can make and find a way to make people want it). These are equivalent strategies, and no sensible distinction can be made between them because both create economic value. This mirrors Peter Drucker's framing that innovation and marketing are the only two sources of value creation in a company, with everything else being a cost.",
+   "type": "assertion",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "innovation and marketing",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Attributed to Drucker as grounded in Austrian School economics tradition"
+   ],
+   "n_sources": 1
+  }
+ ]
+}

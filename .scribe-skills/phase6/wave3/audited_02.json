@@ -1,0 +1,92 @@
+[
+  {
+    "node_id": "claim:36",
+    "level": "L2b",
+    "type": "quantified",
+    "scores": { "1": true, "2": true, "3": null, "4": null, "5": null, "6": true, "7": true },
+    "passing": true,
+    "failure_modes": ["A18"],
+    "notes": "Axis fully anchored ($30 blended vs $40 max CAC, 3:1 to 4:1 LTGP:CAC) and source-grounded; the trailing '10-20% more net profit' figure is a hedged vague comparative (A18) but does not break the required rows since the primary axis has a concrete comparison point."
+  },
+  {
+    "node_id": "claim:2121",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Concrete named product (Amazon Prime), self-contained causal mechanism, load-bearing, correctly typed as mechanism, falsifiable via loyalty-metric comparisons, and attributed to Sutherland."
+  },
+  {
+    "node_id": "claim:2581",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": false, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A16"],
+    "notes": "Fails row 4: the node bundles a general assertion (capex-as-moat), a separate metaphor (shovel-vs-bare-hands), and two illustrative examples (power plants, NVIDIA) under a single 'mechanism' label, mixing grains that should be distinct node types (A16 mixed-grain)."
+  },
+  {
+    "node_id": "claim:609",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": false, "7": true, "6": null },
+    "passing": false,
+    "failure_modes": ["A1", "A9"],
+    "notes": "Fails row 1 ('English provincial city' and 'normalization of eating out' have no named city or time period, so the referent is unresolvable) and row 5 ('gradually then suddenly' is a post-hoc narrative pattern that fits almost any change, making it effectively unfalsifiable/tautological, A9)."
+  },
+  {
+    "node_id": "claim:1972",
+    "level": "L2",
+    "type": "conditional",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Fails row 1: 'the founder' and 'a business' are unresolved generic role-words rather than named identities (this is the exact vague-blanket pattern the rubric flags as failing, A4); the rest of the claim is otherwise sound."
+  },
+  {
+    "node_id": "claim:630",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named, specific mechanism ('Pick Your Price'), standalone and load-bearing, correctly typed, falsifiable via A/B conversion comparisons, and attributed to Hormozi."
+  },
+  {
+    "node_id": "claim:1348",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Fails row 1: the subject is 'most people,' a generic universalized actor with no resolvable referent (A4 vague-blanket); despite 5 sources, the claim itself never names a specific population or case."
+  },
+  {
+    "node_id": "claim:1237",
+    "level": "L2a",
+    "type": "assertion",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named industry class with concrete example (insurance-reimbursed healthcare), standalone, load-bearing, correctly typed as assertion, falsifiable (and arguably incomplete since volume is also a lever, but that omission doesn't break falsifiability), and attributed to Hormozi."
+  },
+  {
+    "node_id": "claim:2614",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A4"],
+    "notes": "Fails row 1: 'a person with high standards' and 'a low-standards actor' are generic role-words with no resolvable identity (A4 vague-blanket), even though the mechanism and attribution are otherwise clear."
+  },
+  {
+    "node_id": "claim:525",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Both named sources (Sutherland, Drucker) are given, the dichotomy is standalone and load-bearing, correctly typed as assertion, falsifiable via counterexample (e.g. operational cost-cutting as a value source), and source-grounded."
+  }
+]

@@ -530,6 +530,116 @@ def retrieve_structured(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
     return {"topics": topics, "sources": sources, "sub_queries": sub_queries}
 
 
+# v2 collections + embedding model for the copy-paste view. The v1 "facts"/"chunks"
+# collections were replaced by facts_v2/chunks_v2 (qwen3-embedding:8b, 4096-d) during the
+# Wave 3 graph rebuild, so retrieve_structured (nomic, 768-d) crashes with
+# "Collection [facts] does not exist". This is the aligned v2 port.
+_V2_EMBED_MODEL  = "qwen3-embedding:8b"
+_V2_QWEN_PREFIX  = "Instruct: Retrieve semantically similar text.\nQuery: "
+
+
+def retrieve_structured_v2(query, n_facts=RAG_N_FACTS, n_chunks=RAG_N_CHUNKS,
+                           max_topics=RAG_MAX_TOPICS):
+    """v2 copy-paste-view retrieval against facts_v2 + chunks_v2 (qwen3 space).
+
+    Same return shape as retrieve_structured. chunks_v2 keeps the v1 chunk schema
+    (source, section_title), so passages group by source directly. facts_v2 has no
+    `source` field — source is recovered from the first entry of attribution_json.
+    """
+    import chromadb, ollama
+    from collections import OrderedDict, Counter
+
+    sub_queries = _decompose_query(query)
+
+    client = chromadb.PersistentClient(path=str(CHROMA_DIR))
+    facts_col  = client.get_collection("facts_v2")
+    chunks_col = client.get_collection("chunks_v2")
+
+    def _q(col, n, emb):
+        c = col.count()
+        if c == 0:
+            return {"documents": [[]], "metadatas": [[]]}
+        return col.query(query_embeddings=[emb], n_results=min(n, c))
+
+    def _fact_source(meta):
+        try:
+            aj = json.loads(meta.get("attribution_json") or "[]")
+            if aj and isinstance(aj, list):
+                return aj[0].get("source_file") or "?"
+        except Exception:
+            pass
+        return "?"
+
+    fact_results, chunk_results = [], []
+    for sq in sub_queries:
+        emb = ollama.embeddings(model=_V2_EMBED_MODEL,
+                                prompt=_V2_QWEN_PREFIX + sq)["embedding"]
+        fr = _q(facts_col, n_facts, emb)
+        cr = _q(chunks_col, n_chunks, emb)
+        fact_results.append((fr["documents"][0], fr["metadatas"][0]))
+        chunk_results.append((cr["documents"][0], cr["metadatas"][0]))
+
+    fact_docs, fact_metas, fact_qidxs   = _merge_chroma_results(fact_results, n_facts)
+    chunk_docs, chunk_metas, chunk_qidxs = _merge_chroma_results(chunk_results, n_chunks)
+
+    topics, seen = [], set()
+    for meta in fact_metas:
+        t = meta.get("topic")
+        if not t:
+            continue
+        disp = _topic_display(t)
+        if disp and disp.lower() not in seen:
+            seen.add(disp.lower())
+            topics.append(disp)
+    topics = topics[:max_topics]
+
+    src_qi_hits = {}
+    for meta, qidxs in zip(chunk_metas, chunk_qidxs):
+        s = meta.get("source", "?")
+        src_qi_hits.setdefault(s, Counter())
+        for qi in qidxs:
+            src_qi_hits[s][qi] += 1
+    for meta, qidxs in zip(fact_metas, fact_qidxs):
+        s = _fact_source(meta)
+        src_qi_hits.setdefault(s, Counter())
+        for qi in qidxs:
+            src_qi_hits[s][qi] += 1
+
+    by_src = OrderedDict()
+    for doc, meta in zip(chunk_docs, chunk_metas):
+        s = meta.get("source", "?")
+        by_src.setdefault(s, {"passages": [], "facts": []})
+        by_src[s]["passages"].append({
+            "section_title": meta.get("section_title", ""),
+            "text": doc,
+        })
+    for doc, meta in zip(fact_docs, fact_metas):
+        s = _fact_source(meta)
+        by_src.setdefault(s, {"passages": [], "facts": []})
+        by_src[s]["facts"].append(doc)
+
+    try:
+        src_meta = json.loads((SCRIPT_DIR / "knowledge" / "sources.json").read_text())
+    except Exception:
+        src_meta = {}
+    sources = []
+    for s, blk in by_src.items():
+        meta = src_meta.get(s, {})
+        hits = src_qi_hits.get(s, Counter())
+        primary_idx = hits.most_common(1)[0][0] if hits else 0
+        sources.append({
+            "name": s,
+            "title": meta.get("title", ""),
+            "video_summary": meta.get("video_summary", ""),
+            "url": meta.get("url", ""),
+            "primary_query_idx": primary_idx,
+            "query_indices": sorted(hits.keys()),
+            **blk,
+        })
+    sources.sort(key=lambda s: s["primary_query_idx"])
+    return {"topics": topics, "sources": sources, "sub_queries": sub_queries}
+
+
 def retrieve(query, seen_sources=None):
     """Return (consulted_topic_names, context_block, sub_queries, source_names).
     `seen_sources`: iterable of source filenames already attached to prior turns
@@ -970,8 +1080,8 @@ class Handler(SimpleHTTPRequestHandler):
                 })
                 return
             try:
-                res = retrieve_structured(query, n_facts=k_facts,
-                                          n_chunks=k_chunks, max_topics=max_topics)
+                res = retrieve_structured_v2(query, n_facts=k_facts,
+                                             n_chunks=k_chunks, max_topics=max_topics)
             except Exception as e:
                 self._json_response({"error": f"Retrieval failed: {e}"}, status=500)
                 return
@@ -989,7 +1099,9 @@ class Handler(SimpleHTTPRequestHandler):
             query = (body.get("query") or "").strip()
             gemini_only = bool(body.get("gemini_only", False))
             qwen_only = bool(body.get("qwen_only", False))
-            use_v2 = bool(body.get("use_v2", False))
+            # Default to v2 retrieval: the v1 "facts"/"chunks" collections were replaced
+            # by facts_v2/chunks_v2 during the Wave 3 rebuild, so the v1 path now crashes.
+            use_v2 = bool(body.get("use_v2", True))
             history = body.get("history") or []  # [{role, content, sources?}]
             if not isinstance(history, list):
                 history = []
@@ -997,7 +1109,7 @@ class Handler(SimpleHTTPRequestHandler):
             query = ""
             gemini_only = False
             qwen_only = False
-            use_v2 = False
+            use_v2 = True
             history = []
 
         # Sources already attached in prior turns — filter them out of this

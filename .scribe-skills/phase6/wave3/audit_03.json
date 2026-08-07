@@ -1,0 +1,206 @@
+{
+ "batch_id": 3,
+ "kind": "sonnet-audit",
+ "claims": [
+  {
+   "node_id": "claim:2150",
+   "level": "L2a",
+   "topic": "Reality-Sourced Content",
+   "text": "Alex Hormozi asserts that B2B expert creators must engineer their existing business operations to generate proof automatically, rather than staging separate content creation sessions, because capturing real activity is both more credible and more scalable than fabricated demonstrations.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "feed the proof machine",
+   "conditions": [
+    "Creator operating in B2B or higher-stakes content categories where audiences require real-world demonstration"
+   ],
+   "mechanism": "When proof is extracted from live customer interactions, audits, and events, it is simultaneously authentic (not staged) and low marginal cost, because the business activity would have happened regardless of content capture.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2153",
+   "level": "L2",
+   "topic": "Social Proof Hierarchy in Sales",
+   "text": "Alex Hormozi asserts that Erica Taught Me and Vivian Tu command large audiences in the personal finance content space specifically because they carry real-world professional credentials (attorney and Wall Street finance background respectively), which reduces the perceived risk for audiences acting on their financial advice, relative to non-credentialed creators in the same space.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "B2C prosumer content category (personal finance, savings, investing)"
+   ],
+   "mechanism": "Third-party professional credentials (law degree, Wall Street background) act as risk-reduction signals; audiences are more willing to act on advice when they can point to an external proof source beyond the creator's personal assertion.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1274",
+   "level": "L2a",
+   "topic": "Market Saturation Narrative Is Usually a Performance Problem",
+   "text": "Alex Hormozi argues that in a market with many undifferentiated providers (e.g., wedding photographers), lead quality from Google Ads is structurally worse than in less saturated verticals, because the sheer number of competing providers means a high share of searchers are merely price-shopping rather than ready to buy at a premium.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Google Ads as traffic source",
+    "market with high provider density (wedding photographer space)"
+   ],
+   "mechanism": "Abundant provider supply inflates searcher optionality, allowing low-commitment comparison shopping that depresses the proportion of high-intent, purchase-ready leads.",
+   "numbers": null,
+   "bounded_by": [
+    "Applies specifically to Google Ads in commoditized provider categories; may not hold for markets with regulated or scarce supply"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2187",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi argues that making a one-time fee clearly named and rationale-explained (even if the rationale is entirely fabricated) is not morally problematic as long as the fee disclosure is transparent, and the seller delivers on whatever the fee is described as funding.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "seller actually does what they say the fee funds",
+    "seller names the fee and provides a stated purpose"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Requires legal advertising compliance per jurisdiction"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:11",
+   "level": "L2",
+   "topic": "Trust & Integrity Framework",
+   "text": "Alex Hormozi argues that relationship depth functions like a tree cut from its nutrient vine: when trust is betrayed, the visible structure of the relationship may persist for a long time, but the internal flow of honest information stops immediately, and the relationship is functionally dead even though it appears intact.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2486",
+   "level": "L2a",
+   "topic": "Lead Qualification Friction",
+   "text": "Alex Hormozi asserts that adding good qualification friction to inbound funnels increases revenue and return on ad spend (ROAS) even though it raises cost per call, because it improves sales efficiency by removing unqualified leads who consume rep time without converting.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "good friction",
+   "conditions": [
+    "Business running paid ads to generate sales calls",
+    "Offer price is high-ticket (example given: $10,000)",
+    "Sales team has finite capacity",
+    "at least two independently-measurable qualification variables",
+    "leads sortable before dial",
+    "outbound phone sales team"
+   ],
+   "mechanism": "Removing unqualified prospects reduces wasted sales-rep time; remaining prospects have higher intent and convert at a higher rate, so total revenue rises even as call volume falls.",
+   "numbers": {
+    "axis": "cost per call vs ROAS after adding qualification friction",
+    "anchors": [
+     {
+      "region": "before qualification friction",
+      "value": "$200 cost per call, 3x ROAS"
+     },
+     {
+      "region": "after adding qualification friction",
+      "value": "$500 cost per call, 6x ROAS"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Bad friction (slow pages, arbitrary walls) blocks all leads and does not produce this effect",
+    "Requires the ability to collect qualification data (credit card spend, vacation spend) at opt-in; not applicable if qualification data is unavailable before the call"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1345",
+   "level": "L2",
+   "topic": "Risk Misprice Arbitrage",
+   "text": "Alex Hormozi claims that all meaningful upside in life is located on the other side of uncertainty and delay, and these are the only two prices the market systematically refuses to pay. Because both uncertainty (not knowing the outcome) and delay (not knowing how long one must persist) feel unbearable to most people, they represent the primary source of arbitrage for anyone willing to bear them.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Liquid capital that could alternatively be deployed in growth assets",
+    "Long-duration prediction (10+ years) about systemic risk"
+   ],
+   "mechanism": "Uncertainty and delay thin out competitors; the people who persist through both capture the upside that the majority exits before reaching.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when the protective position has a bounded, defined cost (e.g., insurance premium)",
+    "Does not apply when the risk is imminent with confirmed signals"
+   ],
+   "n_sources": 4
+  },
+  {
+   "node_id": "claim:1029",
+   "level": "L2b",
+   "topic": "Attention-to-Revenue Funnel",
+   "text": "Milka Privodanova asserts that Pinterest has 17 million regular monthly users in the UK and that 10 million ideas are saved on the platform in the UK every day, illustrating the scale of commercial intent being expressed before users reach a buying decision.",
+   "type": "quantified",
+   "speaker": "Milka Privodanova",
+   "speaker_term": null,
+   "conditions": [
+    "United Kingdom market",
+    "as of approximately 2023"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "Pinterest usage scale in the UK",
+    "anchors": [
+     {
+      "region": "UK monthly active users",
+      "value": "17 million"
+     },
+     {
+      "region": "UK daily ideas saved",
+      "value": "10 million"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2809",
+   "level": "L2",
+   "topic": "Leverage Mechanics",
+   "text": "Alex Hormozi asserts that the correct first step before scaling input is to define the input-output equation: the specific action that moves you toward your goal. Working without a defined input-output equation means you are working toward no goal and cannot know whether increased volume is accomplishing anything.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "input-output equation",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2871",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi argues that when measuring the value of a consumable membership deliverable, two components must be quantified: (1) the money the member would lose attempting to test and find what works on their own, and (2) the direct revenue gain from using the pre-vetted deliverable. The membership fee is justified by the sum of both components.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "approximation of two things",
+   "conditions": [
+    "member would incur testing costs without the service",
+    "membership with a consumable media component"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

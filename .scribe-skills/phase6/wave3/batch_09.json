@@ -1,0 +1,295 @@
+{
+ "batch_id": 9,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:1607",
+   "level": "L2a",
+   "topic": "Cold-to-Close Sales Architecture",
+   "text": "Alex Hormozi states that adding a simple pre-qualifying checkbox (e.g., 'I want a VIP ticket') to an opt-in page produced a 16% increase in sales of the corresponding upsell on the next page, because the checkbox functions as a pre-commitment device that primes the prospect to accept the subsequent offer.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pre-framing",
+   "conditions": [
+    "opt-in funnel with a multi-step page sequence",
+    "upsell offer present on a downstream page"
+   ],
+   "mechanism": "Checking a box expressing intent creates a micro-commitment that is cognitively consistent with then purchasing the corresponding product on the next page, reducing resistance at the point of offer.",
+   "numbers": {
+    "axis": "sales conversion lift from pre-commitment checkbox",
+    "anchors": [
+     {
+      "region": "no checkbox (baseline)",
+      "value": "baseline conversion"
+     },
+     {
+      "region": "checkbox added (VIP opt-in)",
+      "value": "+16% conversion"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Checkbox produced no change to the subsequent page or process \u2014 the lift came purely from the pre-framing effect"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2581",
+   "level": "L2a",
+   "topic": "Brand as Competitive Moat",
+   "text": "Alex Hormozi argues that capital expenditure (capex) can function as a competitive moat, not just a cost, when it erects genuine barriers to entry that competitors cannot afford to replicate. He uses a shovel-vs-bare-hands analogy: anyone competing to dig holes who buys a shovel outcompetes all who do not. More extreme examples are power plants and NVIDIA chip manufacturing, where capex and proprietary technical skill jointly create a moat that explains NVIDIA's position among the seven most valuable companies in the world.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Capex becomes a moat only when: (1) the capital investment is large enough that competitors cannot easily replicate it, and (2) return on invested capital (ROIC) justifies the investment"
+   ],
+   "mechanism": "High required capex raises the minimum capital threshold to compete, reducing the pool of potential entrants; combined with proprietary technical skills (as in NVIDIA chips or nuclear energy), the moat becomes nearly insurmountable.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to low-capex commodity service businesses where entry barriers remain negligible",
+    "Pure capital moats (without proprietary skill) are not indefensible; well-capitalized incumbents can replicate capex-only moats"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2563",
+   "level": "L2",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Rory Sutherland argues that in a call center context, engineering a callback option \u2014 where a customer requests a call back rather than waiting on hold \u2014 makes cross-selling and upselling an order of magnitude easier than if the customer waited on hold. The mechanism is a psychological shift: waiting makes the customer feel like a supplicant, while being called back makes them feel like a valued customer. He acknowledges he does not have empirical proof of the magnitude but regards this as a testable hypothesis with high prior probability.",
+   "type": "conditional",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "call centers with outbound callback capability",
+    "contexts involving upsell or cross-sell during service interactions"
+   ],
+   "mechanism": "Status psychology (SCARF: Status dimension) determines receptivity in sales conversations; a customer who waited on hold is in a subordinate, irritated state; a customer who received a proactive callback perceives themselves as valued, lowering defensive resistance.",
+   "numbers": null,
+   "bounded_by": [
+    "Callbacks must occur within a promised timeframe or the benefit is reversed",
+    "Speaker explicitly notes he lacks empirical proof; this is a stated hypothesis requiring testing"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:87",
+   "level": "L2b",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi asserts that in offer naming, the same bundled product with a different name can achieve 2x, 3x, or even 10x the response rate in advertising. The name itself is the marketing wrapper and is the first variable to change when ads fatigue, long before changing the core offer structure.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "wrapper",
+   "conditions": [
+    "local and national advertising contexts"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "response rate multiplier from offer renaming alone",
+    "anchors": [
+     {
+      "region": "poorly named offer",
+      "value": "baseline response rate"
+     },
+     {
+      "region": "well-named offer (same bundle)",
+      "value": "2x-10x response rate"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:617",
+   "level": "L2",
+   "topic": "Brand Effect on Customer Behavior and WTP",
+   "text": "Rory Sutherland argues that loyalty data showing repeat purchase rates is far more valuable than data showing volume of first purchases, because repeat purchasing reveals whether a product has genuine habitual-adoption potential \u2014 the signal that separates passing novelty from durable category-creating behavior.",
+   "type": "comparison",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "supermarket or retail context with loyalty card data"
+   ],
+   "mechanism": "First purchases are driven by curiosity, promotion, or in-store placement; repeat purchases require that the product delivered on its promise and created a habitual substitution. The ratio of repeat to first purchases is therefore the cleanest signal of genuine product-market fit.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:701",
+   "level": "L2b",
+   "topic": "Talent Acquisition Standards",
+   "text": "Alex Hormozi argues that the scale a founder achieves pre-acquisition is a reliable proxy for their growth ambition and capability; a founder who scaled to $20M ARR before selling is probably a fundamentally better operator than one who capped at $3M and sold.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "bigger businesses with the right talent",
+   "conditions": [
+    "buy-and-hold acquisition strategy",
+    "intent to scale portfolio companies post-acquisition"
+   ],
+   "mechanism": "Pre-sale revenue scale is an observable output of the founder's skill and ambition over multiple years, not a single data point; it reflects compounded decision quality and therefore predicts post-acquisition performance more reliably than any interview or advisory relationship.",
+   "numbers": {
+    "axis": "founder pre-sale revenue scale as ambition proxy",
+    "anchors": [
+     {
+      "region": "low ambition signal",
+      "value": "caps at $3M ARR and sells"
+     },
+     {
+      "region": "high ambition signal",
+      "value": "$20M ARR before exit"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:106",
+   "level": "L2",
+   "topic": "Creative Variation Strategy",
+   "text": "Alex Hormozi asserts that new customers enter a market every day, so even a previously shown ad will be seen for the first time by segments of a target audience, meaning advertisers should not retire proven hooks out of personal boredom; the first-time impression for the viewer is what matters, not whether the advertiser is tired of the creative.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "don't get bored repeating the same stuff",
+   "conditions": [
+    "Paid ad campaign that had previously generated qualified leads",
+    "Same targeting, same audience, declining performance",
+    "paid advertising at scale",
+    "sufficiently large target market"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Eventually audiences do exhaust; the point is that creative retirement should be data-driven (declining CTR or rising CPM), not driven by the advertiser's aesthetic fatigue"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1393",
+   "level": "L2a",
+   "topic": "Deal Flow Generation",
+   "text": "Alex Hormozi recommended that Easy Dwell (Shemaine) pursue exclusivity agreements with existing wholesalers as the fastest path to tripling deal flow: specifically, contacting every wholesaler they had transacted with in the prior year and asking 'what would it take to be your exclusive person to get all of the deals that you're doing?'",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "deal flow, not capital or execution, is the binding constraint",
+    "operator has existing wholesaler relationships from prior transactions",
+    "operator has strong unit economics that allow offering a yield premium to wholesalers"
+   ],
+   "mechanism": "Existing transaction history creates a trust foundation; a premium offer (sharing some return with the wholesaler) makes exclusivity economically rational for the wholesaler because they trade deal distribution complexity for a guaranteed buyer at a known yield.",
+   "numbers": null,
+   "bounded_by": [
+    "Requires operator to be willing to accept slightly lower returns (e.g., 45-50% instead of 60%) to fund the exclusivity premium"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2401",
+   "level": "L2a",
+   "topic": "Brand as Behavioral Pairing",
+   "text": "Rory Sutherland contends that the air fryer failed to reach its full market potential partly because it was named 'fryer' \u2014 deterring health-conscious consumers who avoid fried food \u2014 and because it was merchandised alongside deep-fat fryers in stores, placing it in a physical and conceptual context that repelled its most natural buyers.",
+   "type": "assertion",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "health-oriented kitchen appliance targeting health-conscious segment"
+   ],
+   "mechanism": "Product naming and shelf placement determine the mental category into which a buyer files the product; placement with deep-fat fryers makes the air fryer invisible to shoppers who would never browse that section.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:84",
+   "level": "L2b",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi asserts that adding a strong guarantee can increase offer conversion 2-4x without reducing net revenue, because even if the refund rate doubles (e.g., from 5% to 10%), the increase in sales volume more than compensates. He provides the math: 130 sales at 10% refund = 117 net sales vs. 100 sales at 5% refund = 95 net sales, a 23% net increase.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "guarantee",
+   "conditions": [
+    "High-stakes outcome service (exam preparation, competitive scoring)",
+    "Provider confident in delivery quality and average client retention",
+    "Score is measurable and externally verifiable",
+    "guarantee is credible and tied to real deliverable",
+    "service or product with refund ability"
+   ],
+   "mechanism": "Risk reversal reduces the prospect's perceived downside of purchase; this lowers the decision threshold for fence-sitters, pulling additional buyers who would not have purchased without the safety net.",
+   "numbers": {
+    "axis": "net sales (after refunds) with and without strong guarantee",
+    "anchors": [
+     {
+      "region": "no strong guarantee (baseline)",
+      "value": "100 sales, 5% refund rate = 95 net sales"
+     },
+     {
+      "region": "strong guarantee (illustrative)",
+      "value": "130 sales, 10% refund rate = 117 net sales (+23%)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Guarantee must be backed by genuine product delivery; using a guarantee to mask a poor product accelerates refunds until net revenue falls",
+    "Hormozi acknowledges the fear: what if students keep studying for years without improving; he counters that this is empirically rare",
+    "Providers with high churn in early weeks will find this guarantee costly",
+    "Very high-cost-of-fulfillment services should use conditional rather than unconditional guarantees to avoid eating fulfillment cost on top of refund"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1932",
+   "level": "L2",
+   "topic": "Capital Deployment Paths",
+   "text": "Alex Hormozi asserts that there is no lack of capital in the world, only a lack of good deals, meaning that if a founder has a genuinely high-probability opportunity with mitigated risks, capital will appear without the founder needing a pre-existing investor network.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "opportunity has a credible and specific case for high return probability",
+    "risks are explicitly articulated and addressed"
+   ],
+   "mechanism": "Investors are continuously searching for deployment opportunities; deal scarcity (not capital scarcity) is the actual bottleneck, so a compelling deal self-attracts capital.",
+   "numbers": null,
+   "bounded_by": [
+    "Using the word 'guaranteed' is a red flag that causes sophisticated capital to flee; language must be probabilistic not promissory"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1255",
+   "level": "L2a",
+   "topic": "Affiliate and Partner Channel Strategy",
+   "text": "Alex Hormozi asserted that distributor agencies in a white-label model who are not treated with a customer journey \u2014 specifically without reading and applying the affiliate-management strategy in $100M Leads \u2014 will exhibit high churn regardless of service quality.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "you do not treat them like a customer",
+   "conditions": [
+    "Distributor agencies receiving service to resell",
+    "White-label or affiliate distribution model"
+   ],
+   "mechanism": "Distributors who receive no onboarding, no activation journey, and no ongoing engagement have no established habit of using the service; without a usage habit, perceived value is low and churn is high.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1946",
+   "level": "L2",
+   "topic": "Conscious Trade Accounting",
+   "text": "Alex Hormozi asserts that the worker must accept \u2014 as a non-negotiable psychological premise \u2014 that they will never receive credit for effort, and that this acceptance is a prerequisite for sustaining the level of work required to achieve goals.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to anyone pursuing high-output goals in competitive domains"
+   ],
+   "mechanism": "Seeking credit for effort creates dependency on external validation that is never delivered, which breaks the motivational loop; accepting the absence of credit removes that dependency and sustains the behavior.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}
