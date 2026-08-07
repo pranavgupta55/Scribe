@@ -1,0 +1,269 @@
+{
+ "batch_id": 12,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:2187",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi argues that making a one-time fee clearly named and rationale-explained (even if the rationale is entirely fabricated) is not morally problematic as long as the fee disclosure is transparent, and the seller delivers on whatever the fee is described as funding.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "seller actually does what they say the fee funds",
+    "seller names the fee and provides a stated purpose"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Requires legal advertising compliance per jurisdiction"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:321",
+   "level": "L2",
+   "topic": "Business Model Financial Rules Divergence",
+   "text": "Alex Hormozi warns that a founder who adds software without achieving the specific SaaS economics (viral growth, high gross margin, net negative churn) will not receive a software valuation multiple at exit. The business will be valued on its existing service/education economics regardless of the software component.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "software multiple",
+   "conditions": [
+    "founder adds software to an existing service or education business",
+    "software lacks viral growth, high gross margins, and net negative churn"
+   ],
+   "mechanism": "Acquirers value businesses based on the revenue characteristics they demonstrate, not the category label. A software product that behaves like a service (high marginal cost, low retention) will be valued like a service.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2468",
+   "level": "L2b",
+   "topic": "Reverse Eulogy as Values Clarity Tool",
+   "text": "Alex Hormozi argues that death creates clarity about what actually matters, specifically because eulogies \u2014 which must fit 500 to 1,000 words \u2014 reveal that most of what people stress about and most professional achievements they strive for are not included; the universal themes that survive are service and character.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": {
+    "axis": "eulogy word count",
+    "anchors": [
+     {
+      "region": "typical eulogy length",
+      "value": "500 to 1,000 words"
+     },
+     {
+      "region": "content that survives the length constraint",
+      "value": "service and character; professional achievements get one sentence"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1815",
+   "level": "L2",
+   "topic": "Before/After Proof Engine",
+   "text": "Alex Hormozi argues that a service operator who has repeatedly launched other experts' businesses from zero has more credibility to build their own brand than they perceive, because their track record of 13+ launches is itself the proof of competence that an audience requires.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "aspiring education business operator",
+    "creator selling business skill education",
+    "founder has zero existing client results",
+    "founder is personally delivering the service",
+    "high-touch B2B service business",
+    "operator is considering launching their own brand",
+    "service operator who has built multiple businesses for clients",
+    "with choice between starting now vs. building proof first"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "number of business launches as credibility signal",
+    "anchors": [
+     {
+      "region": "zero launches",
+      "value": "no credibility"
+     },
+     {
+      "region": "13+ launches across categories",
+      "value": "sufficient proof to launch own brand"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Alignment incentive argument weakens once the founder has a large client base and no longer needs individual testimonials",
+    "Already-proven practitioners who have the track record should not wait longer; the advice applies to those at the beginning of their career choosing between educating now vs. building operator credentials first",
+    "Does not apply to self-serve SaaS or marketplace platforms where founder accessibility is not a scaling mechanism",
+    "Requires an actual pre-brand track record that can be documented; does not apply to first-time creators without prior results"
+   ],
+   "n_sources": 5
+  },
+  {
+   "node_id": "claim:629",
+   "level": "L2a",
+   "topic": "Sales Targeting and Lead Qualification",
+   "text": "Alex Hormozi recommends that for ongoing service relationships (not transactional ones like a car wash), the Pick Your Price process should include confrontational qualifying questions to screen for long-term commitment, because the ideal client pays willingly and thinks reciprocally.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "not transactional one-time services",
+    "relational service businesses (ongoing client work)"
+   ],
+   "mechanism": "Qualifying questions during the free-offer stage weed out low-commitment prospects before operational cost is incurred; reciprocally-minded clients generate better long-term LTV.",
+   "numbers": null,
+   "bounded_by": [
+    "Qualifying step is not applicable to one-time transactional contexts like a car wash"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1143",
+   "level": "L2",
+   "topic": "Customer Retention Mechanics",
+   "text": "Alex Hormozi asserts that overwhelm is the primary reason customers churn from recurring-revenue and community products, outside of price objections. Customers churn not because they dislike the product but because they cannot keep up with or use all of its content and features, leading them to feel they are extracting low value despite the abundance.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "number one reason people churn outside of price",
+   "conditions": [
+    "community and membership platforms",
+    "content-rich or feature-rich recurring services"
+   ],
+   "mechanism": "When a customer pays for five features but uses only one, they perceive they are getting 20% of the value; offering only that one feature at the same price makes them feel they are getting 100% of the value, eliminating the felt underutilization that triggers cancellation.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1521",
+   "level": "L2a",
+   "topic": "Premium Positioning",
+   "text": "Rory Sutherland argues that video conferencing failed to achieve mass adoption for decades because it was positioned as the low-status substitute for air travel rather than the high-status tool it could have been; status is a primary driver of technology adoption that product designers systematically ignore.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "poor man's British Airways",
+   "conditions": [
+    "Business communication technologies in B2B contexts where status signals are load-bearing"
+   ],
+   "mechanism": "Positioning a product as what you use when you cannot afford the real thing embeds low-status association at launch; this suppresses adoption among status-sensitive decision-makers who drive organizational standards.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1916",
+   "level": "L2",
+   "topic": "Debt-Free Bootstrap Path",
+   "text": "Alex Hormozi asserts that bootstrapping is typically the slowest of the four wealth-building paths (bootstrapping, raising capital, investing, fund management) because the business must simultaneously generate capital and deploy it for growth, analogous to building a car factory inside the car being manufactured.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "bootstrapped",
+   "conditions": [
+    "business self-funds from personal savings and reinvested profits",
+    "no outside investors"
+   ],
+   "mechanism": "Growing via reinvested profits requires the machine generating capital to also be the machine deploying capital, which slows compounding relative to paths that inject outside capital.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when the founder already has meaningful personal wealth that can substitute for outside capital"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2377",
+   "level": "L2a",
+   "topic": "Intermediary as Primary Customer",
+   "text": "Package holidays can deliver a lower all-in price than self-assembled equivalents because hotels cannot publicly drop their rack rate below a floor level, so the only mechanism by which a hotel can fill rooms is to subsidize the flight or car hire component within the package, burying the discount invisibly in the bundle.",
+   "type": "mechanism",
+   "speaker": "Nick Horry",
+   "speaker_term": null,
+   "conditions": [
+    "Holiday packages including hotel plus flight components",
+    "Hotels with published rack-rate floors they cannot publicly breach"
+   ],
+   "mechanism": "Hotels face channel-conflict constraints that prevent public rate reductions below rack rate. The package structure allows them to transfer equivalent value to the customer via flight or car subsidy without visibly discounting the room, enabling the operator to pass a lower total price.",
+   "numbers": null,
+   "bounded_by": [
+    "All-inclusive packages amplify the effect further by including food and drink",
+    "Does not apply when hotels have no rack-rate floor constraint"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1602",
+   "level": "L2a",
+   "topic": "Talent Acquisition Standards",
+   "text": "Alex Hormozi asserts that when hiring to fill a gap, business owners should hire because they genuinely want the person, not because they want to relieve the pain of being short-staffed. Hiring from desperation (pain-removal motivation) reliably produces lower-caliber hires than hiring from desire (attraction motivation).",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pulled rather than thinking like I'm in pain",
+   "conditions": [
+    "Applies to any owner-operator filling a key role under pressure",
+    "Applies when a key team member has just departed"
+   ],
+   "mechanism": "Pain-removal motivation lowers the acceptance threshold; owners accept candidates that would be rejected if evaluated against a desire standard, reducing average hire quality.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1571",
+   "level": "L2",
+   "topic": "Offer and Audience Pruning",
+   "text": "Alex Hormozi compares a cleaning service choosing between homeowners (recurring, high LTV:CAC, abundant supply) and vacation rental hosts (higher frequency but lower LTV:CAC, fewer customers, more price-conscious) to a yoga studio adding a chocolate factory: both are classic cases of chasing adjacent revenue before maxing out the primary segment, producing complexity without proportionate returns.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "service business below $10M revenue",
+    "two segments with materially different unit economics"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:413",
+   "level": "L2a",
+   "topic": "Cold-to-Close Sales Architecture",
+   "text": "Alex Hormozi observes that a book launch he ran was structured for people who had never heard of him, so that knowledgeable attendees were not offended and unknown attendees were grateful, demonstrating that a cold sales process is the universally safe default regardless of audience familiarity.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Large live or virtual events with mixed audiences (some familiar, some unfamiliar with the presenter)",
+    "Sales or educational content structured for maximum conversion"
+   ],
+   "mechanism": "People already familiar with a speaker are not harmed by foundational framing designed for strangers; strangers benefit significantly from it. Structuring for the cold audience maximizes total sales without alienating the warm audience.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:532",
+   "level": "L2",
+   "topic": "Distinctiveness Requires Active Effort",
+   "text": "Rory Sutherland argues that creating economic value through psychological framing and context (changing the story) is a more environmentally efficient method of value creation than manufacturing: no raw materials are consumed, nothing is chopped down or burned. The Austrian School would endorse this as equivalent to manufacturing value because the economic outcome (willingness to pay) is identical.",
+   "type": "assertion",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "efficient value creation",
+   "conditions": [
+    "Applies when comparing sectors by revenue per unit of environmental footprint"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Does not account for the energy cost of digital distribution infrastructure",
+    "Mainstream neoclassical economics would reject this framing because it treats value as intrinsic"
+   ],
+   "n_sources": 2
+  }
+ ]
+}

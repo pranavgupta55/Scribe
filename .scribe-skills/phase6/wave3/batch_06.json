@@ -1,0 +1,260 @@
+{
+ "batch_id": 6,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:2150",
+   "level": "L2a",
+   "topic": "Reality-Sourced Content",
+   "text": "Alex Hormozi asserts that B2B expert creators must engineer their existing business operations to generate proof automatically, rather than staging separate content creation sessions, because capturing real activity is both more credible and more scalable than fabricated demonstrations.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "feed the proof machine",
+   "conditions": [
+    "Creator operating in B2B or higher-stakes content categories where audiences require real-world demonstration"
+   ],
+   "mechanism": "When proof is extracted from live customer interactions, audits, and events, it is simultaneously authentic (not staged) and low marginal cost, because the business activity would have happened regardless of content capture.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1360",
+   "level": "L2a",
+   "topic": "Meeting and Follow-Up Cadence",
+   "text": "Alex Hormozi advises Drew to book a live onboarding session immediately after a trial signup and use BAMFAM (book a meeting from a meeting) to ensure the user attempts the activation action under guided support, because a supported first use is far more likely to succeed than an unguided self-serve attempt.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "BAMFAM, like right to an onboarding",
+   "conditions": [
+    "SaaS where the value requires a field action (e.g., showing a client a visualization in their yard)",
+    "User needs guided setup or demonstration to complete first activation"
+   ],
+   "mechanism": "Scheduled onboarding creates a commitment device and ensures hands-on guidance during the highest-risk dropout window (the first 10 days); completion of the guided session dramatically increases the probability of the user reaching the first-value moment.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2816",
+   "level": "L2",
+   "topic": "Motivation Source",
+   "text": "Alex Hormozi argues that the source of a person's motivation \u2014 whether it is shame, a negative past, deprivation, or positive aspiration \u2014 is irrelevant to outcomes; what matters is only that the available emotional fuel is used to drive the required actions.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1992",
+   "level": "L2",
+   "topic": "Modeling High Performers",
+   "text": "Rory Sutherland argues that in the Sally Clark double-infanticide case in the UK, Oxford professor Roy Meadows committed multiple compounding statistical errors: multiplying the probability of a single cot death by itself to get a joint probability (ignoring genetic correlation between siblings), failing to adjust for shared environmental factors in the same home, and not comparing the resulting probability against the equally rare probability of double infanticide \u2014 transforming what should have been approximately 2-to-1 odds in favor of innocence into a declaration of near-certain guilt.",
+   "type": "mechanism",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "joint probability calculation for correlated events in family settings"
+   ],
+   "mechanism": "Statistical errors compound: assuming independence between siblings' cot death risk ignores genetic correlation; ignoring shared environment ignores a common-cause variable; omitting the comparison denominator (probability of double infanticide) violates the correct Bayesian framing that requires comparing two competing hypotheses, not a hypothesis against a 1.0 baseline.",
+   "numbers": {
+    "axis": "apparent probability of guilt given Roy Meadows' flawed calculation vs. correct Bayesian framing",
+    "anchors": [
+     {
+      "region": "Roy Meadows' stated odds against double cot death",
+      "value": "approximately 80 million to one"
+     },
+     {
+      "region": "correct Bayesian odds given competing hypotheses and correlated risk factors",
+      "value": "approximately 2 to 1 in favor of innocence"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Specific to cases involving joint rare-event probability with correlated causal factors; less relevant to independent-event joint probabilities"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2169",
+   "level": "L2a",
+   "topic": "Constraint-Based Strategy",
+   "text": "Rory Sutherland asserts that the explosion of behavioral economics research creates an opportunity for marketers and advertisers to reclaim strategic influence over governments and organizations that economists and accountants had captured through spreadsheet-based decision-making, because recessions force institutions to look for ways to do more with less rather than simply more of the same.",
+   "type": "conditional",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "behavioural economics",
+   "conditions": [
+    "Applies in post-boom environments where efficiency gains from pure capital scaling are exhausted",
+    "Applies when psychology and framing are demonstrably superior levers to financial engineering for the same outcome"
+   ],
+   "mechanism": "Periods of abundance allow the illusion that scale and capital are sufficient; constraint forces decision-makers to consider psychological and behavioral interventions as cost-effective alternatives.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1733",
+   "level": "L2a",
+   "topic": "Perks as Retention Lever",
+   "text": "Alex Hormozi recommends that each rung of an expanded career ladder should alternate between a title upgrade and a tangible perk (e.g., no Saturday nights, better truck, calendar choice, preferred parking), rather than offering only title bumps, because title alone does not change day-to-day behavior or perceived quality of life; a pairing of title with a concrete perk makes each promotion feel materially different.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "alternating title slash perks",
+   "conditions": [
+    "Expanded multi-rung career ladder already in place",
+    "Frontline or repeated individual contributor roles"
+   ],
+   "mechanism": "A title bump alone is emotionally discounted (employees will still go out and celebrate briefly then feel the same). Coupling it with a daily-life improvement (scheduling freedom, equipment upgrade) creates a persistent reminder of advancement and sustains motivation between promotions.",
+   "numbers": null,
+   "bounded_by": [
+    "Perks must be genuinely valued by the employee population; generic perks may not hold in all labor markets"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1411",
+   "level": "L2a",
+   "topic": "Promise-Delivery Gap",
+   "text": "Alex Hormozi asserts that founders over-deliver beyond their contractual promise primarily because of insecurity about whether clients will receive enough value, not because of genuine contractual obligation. This insecurity causes them to keep hopping on extra calls that were never part of the original agreement.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Early-stage coaching or consulting business",
+    "Founder is sole delivery resource"
+   ],
+   "mechanism": "Founder insecurity about value delivery leads to offering access and responsiveness beyond what was contracted, inflating real delivery cost without changing the price or formal scope.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:57",
+   "level": "L2a",
+   "topic": "Downsell Tier Creation",
+   "text": "Alex Hormozi argues that when a customer declines an offer, the response should never be reducing the price of the same product, because each downward price change on the same product destroys trust and causes the customer to retroactively question the legitimacy of all prior prices, ultimately jeopardizing the original sale itself.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "sales context where customer said no to an offer"
+   ],
+   "mechanism": "Price reduction on the same product signals that the original price was arbitrary, causing the customer to question whether they were being overcharged; once trust is broken it extends backwards to all prices offered by that seller.",
+   "numbers": null,
+   "bounded_by": [
+    "Offering a different product at a lower price is acceptable and does not trigger the same trust erosion"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2382",
+   "level": "L2a",
+   "topic": "Intermediary as Primary Customer",
+   "text": "The internet disintermediated travel agents by outsourcing their coordination role to the consumer, creating a hidden cost: when any single component of a self-assembled itinerary fails, the consumer bears full responsibility for remedying the cascade of dependencies (car hire, onward accommodation, etc.) with no systemic support.",
+   "type": "mechanism",
+   "speaker": "Nick Horry",
+   "speaker_term": null,
+   "conditions": [
+    "Any component (flight, transfer) failing or being rerouted",
+    "Self-assembled travel bookings"
+   ],
+   "mechanism": "Disintermediation removes the single coordinator who previously managed all supplier relationships. When a flight is rerouted, the consumer must independently contact unrelated suppliers (car hire, hotel) with no contractual leverage, a task that was previously handled systemically by a travel agent or tour operator.",
+   "numbers": null,
+   "bounded_by": [
+    "In the best-case scenario (no disruption), self-assembly works well"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:410",
+   "level": "L2a",
+   "topic": "Deal Structure and Ownership",
+   "text": "Alex Hormozi recommends a partial or graduated client transition rather than a 100% immediate handoff: the founder stays lightly in the loop (sharing notes, messaging contact, no live calls) while the new practitioner handles delivery, to reduce both client churn risk and the risk of the new hire leaving with the entire client base.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "soft touch",
+   "conditions": [
+    "New practitioner hire who could feasibly leave and take clients",
+    "Paid acquisition not yet proven as a replacement pipeline",
+    "Service business where clients have strong loyalty to the founding practitioner"
+   ],
+   "mechanism": "Clients perceive continued proximity to the founder even as day-to-day delivery shifts to the new hire, reducing churn. Retaining the founder as a nominal backstop also reduces the new hire's leverage to leave and take clients, because the client relationship is still anchored to the practice rather than the individual hire.",
+   "numbers": null,
+   "bounded_by": [
+    "Requires the founder to accept a reduced but not zero ongoing operational role during the transition period"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1797",
+   "level": "L2b",
+   "topic": "Cold Email as Skill Foundation",
+   "text": "Albert (Shiny.ai) reports that his cold email campaign targeting dentists achieved a 5.1% reply rate from approximately 1,000 sent emails (including follow-ups), yielding 6 interested leads \u2014 and argues that generating one interested lead every two days is sufficient to build an AI services business.",
+   "type": "quantified",
+   "speaker": "Albert",
+   "speaker_term": null,
+   "conditions": [
+    "5-email domain setup sending up to 100 emails/day",
+    "B2B cold email to SMBs",
+    "pre-warmed email domains at 100% health score"
+   ],
+   "mechanism": null,
+   "numbers": {
+    "axis": "Cold email performance (Albert's Shiny.ai campaign, dentists, 2026)",
+    "anchors": [
+     {
+      "region": "typical cold email reply rate",
+      "value": "~0.5%"
+     },
+     {
+      "region": "Albert's campaign reply rate",
+      "value": "5.1% (50 replies from ~1,000 emails)"
+     },
+     {
+      "region": "interested leads from 50 replies",
+      "value": "6 (approximately 12% of replies)"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Industry-specific; dentists may have higher reply rates than other verticals"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1197",
+   "level": "L2",
+   "topic": "Courage",
+   "text": "Alex Hormozi claims that people who judge others for caring or trying hard are, at root, judging themselves for lacking the commitment to try anything seriously. The question to ask someone who calls something cringe is not whether it is cringe, but whether they hate the person for committing or themselves for lacking the guts to commit to anything.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "who do you really hate",
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1288",
+   "level": "L2a",
+   "topic": "Sales Team Scaling and Leadership",
+   "text": "Alex Hormozi asserts that compensating revenue-facing leaders on top-line revenue metrics when the business goal is profitability will predictably cause those leaders to optimize for revenue growth at the expense of net margin, even if net margin is what the owner actually cares about.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Executive compensation tied to top-line revenue",
+    "Owner has delegated revenue leadership to hired executives"
+   ],
+   "mechanism": "Incentive structures determine behavior; a leader compensated on top-line revenue will pursue volume regardless of margin because that is what they are rewarded for.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

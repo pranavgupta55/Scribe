@@ -1,0 +1,332 @@
+{
+ "batch_id": 5,
+ "kind": "haiku-score",
+ "claims": [
+  {
+   "node_id": "claim:43",
+   "level": "L2b",
+   "topic": "Sales Closing Mechanics",
+   "text": "Alex Hormozi asserts that discount front-end offers substantially eliminate appointment no-shows in service businesses because people consistently show up for things they have paid for, at roughly 85-90% or higher show rates, compared to lower rates for free-offer appointments.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "discount offer",
+   "conditions": [
+    "gym running 6-week challenge front-end program",
+    "halfway check-in meeting scheduled as mandatory",
+    "service business where appointment time has a real cost (e.g., doctor, consultant)",
+    "small upfront payment collected at booking, card on file"
+   ],
+   "mechanism": "Financial commitment creates sunk-cost motivation to attend; people who have paid something feel a loss if they skip, while free-offer prospects have no financial stake in showing up.",
+   "numbers": {
+    "axis": "appointment show rate",
+    "anchors": [
+     {
+      "region": "free front-end offer",
+      "value": "lower show rate (baseline not specified)"
+     },
+     {
+      "region": "discount front-end offer (any payment collected)",
+      "value": "~85-90%+ show rate"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Requires a mandatory halfway meeting to achieve these rates; no-shows dramatically reduce conversion",
+    "Requires actual card charge or pre-authorized fee, not merely a verbal commitment",
+    "Show rate improvement assumes fee is non-trivial relative to prospect's perceived value"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:2396",
+   "level": "L2",
+   "topic": "Long-Term Horizon Advantage",
+   "text": "Rory Sutherland argues that charities that measure marketing experimentation with short-term income metrics will always conclude that exploration looks inefficient compared to exploitation, because exploratory tests \u2014 unless lucky \u2014 yield less than optimized existing approaches; the correct evaluation frame is long-term value (does it find something that makes the rest of fundraising 10% better once every three years?).",
+   "type": "conditional",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to publicly traded companies subject to quarterly earnings pressure",
+    "Marketing departments operating under direct marketing budgets with mandatory attribution requirements",
+    "Relationship has ongoing long-term value to both parties",
+    "Requires financial stability sufficient to tolerate uncertainty; people with unpaid bills cannot realistically hold long time horizons",
+    "The signaling context involves a purchase or commitment where the buyer faces risk of default or abandonment by the seller",
+    "applies to digital-native businesses optimizing on last-click or near-purchase attribution models",
+    "businesses competing in the same category",
+    "capital-intensive business subject to cyclical demand",
+    "charity fundraising budget evaluation",
+    "consumer packaged goods or physical food and drink products",
+    "fund management context with compounding multi-year returns",
+    "long-duration industry with 20+ year time horizon",
+    "owner has a 20-30+ year commitment to the same industry",
+    "time horizon must be reverse-engineered to at least some grounding in reality, not purely fantasy"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply if the owner intends to exit within 3-5 years, where faster growth may maximize sale price",
+    "Does not apply to brand-budget silos where attribution is explicitly not required",
+    "Does not apply to family-owned or founder-controlled businesses with multi-decade time horizons",
+    "Does not apply to purely digital products or platforms where network effects can create genuine sudden inflections",
+    "Does not apply to purely transactional purchases where no ongoing relationship is expected",
+    "Does not apply when the buyer has direct verification mechanisms (verified reviews, escrow) that substitute for inferred trust",
+    "Does not apply where the relationship has no long-term value to the betrayer",
+    "Long-term thinking is inaccessible without at minimum covering basic survival needs first",
+    "Single case comparison; not a controlled study of restaurant chains",
+    "The argument applies to compounding multi-year contexts; it does not apply to one-year single-shot competitions where consistency is irrelevant",
+    "Vision length is constrained by financial security: it is very difficult to plan 10 years out when you have bills to pay; basic financial stability must come first"
+   ],
+   "n_sources": 10
+  },
+  {
+   "node_id": "claim:2381",
+   "level": "L2a",
+   "topic": "Value Bifurcation in Subscription Pricing",
+   "text": "Consumers have a finite ceiling on the total number of active subscriptions they are willing to hold simultaneously; travel subscription models launched in the 2019-2024 window may have faced market saturation from prior subscription commitments (Sky, mobile operators, streaming, software), not from any intrinsic flaw in the subscription concept for travel.",
+   "type": "mechanism",
+   "speaker": "Nick Horry",
+   "speaker_term": null,
+   "conditions": [
+    "Consumer subscription market",
+    "Post-2015 proliferation of subscription products"
+   ],
+   "mechanism": "As the number of recurring direct debits accumulates, each additional subscription competes against a diminishing marginal willingness to commit, eventually reaching a saturation threshold regardless of the product category's merits.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2486",
+   "level": "L2a",
+   "topic": "Lead Qualification Friction",
+   "text": "Alex Hormozi asserts that adding good qualification friction to inbound funnels increases revenue and return on ad spend (ROAS) even though it raises cost per call, because it improves sales efficiency by removing unqualified leads who consume rep time without converting.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "good friction",
+   "conditions": [
+    "Business running paid ads to generate sales calls",
+    "Offer price is high-ticket (example given: $10,000)",
+    "Sales team has finite capacity",
+    "at least two independently-measurable qualification variables",
+    "leads sortable before dial",
+    "outbound phone sales team"
+   ],
+   "mechanism": "Removing unqualified prospects reduces wasted sales-rep time; remaining prospects have higher intent and convert at a higher rate, so total revenue rises even as call volume falls.",
+   "numbers": {
+    "axis": "cost per call vs ROAS after adding qualification friction",
+    "anchors": [
+     {
+      "region": "before qualification friction",
+      "value": "$200 cost per call, 3x ROAS"
+     },
+     {
+      "region": "after adding qualification friction",
+      "value": "$500 cost per call, 6x ROAS"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Bad friction (slow pages, arbitrary walls) blocks all leads and does not produce this effect",
+    "Requires the ability to collect qualification data (credit card spend, vacation spend) at opt-in; not applicable if qualification data is unavailable before the call"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:2603",
+   "level": "L2",
+   "topic": "AI Implementation Maturity Mismatch",
+   "text": "Alex Hormozi asserts that the mistake most operators make with AI is believing AI cannot do what a human does, when the correct framing is that AI must be trained on each discrete task with the same care used to train a human employee. Bringing in a human employee and telling them nothing while expecting good output is as irrational as expecting an untrained AI to perform well.",
+   "type": "comparison",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "AI system that has not received equivalent training time and SOP input as the human workflow it replaces"
+   ],
+   "mechanism": "Both human and AI performance is bounded by quality of instruction; performance failure reflects inadequate training, not inherent incapability.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:880",
+   "level": "L2",
+   "topic": "Value-Based Pricing and Margin Optimization",
+   "text": "Alex Hormozi argues that in a tiered-pricing bundle structure, businesses should lead customers toward the most profitable option rather than presenting all options neutrally \u2014 because the goal is margin optimization, not option-presentation fairness.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "lead customers to the option that ideally is the most profitable",
+   "conditions": [
+    "AI origin must not be disclosed",
+    "B2B service company with differentiated outcomes (e.g., speed, risk reduction)",
+    "Sales cycle: long (enterprise procurement)",
+    "True enterprise clients accustomed to $500K broadcast commercial budgets",
+    "business offers multiple tiers or bundles",
+    "buyer using procurement / RFP process",
+    "tiers have materially different margin profiles"
+   ],
+   "mechanism": "Presenting options neutrally leaves margin capture to chance; guided sales flows increase the percentage of buyers who choose higher-margin bundles, raising average revenue per transaction without changing the offer itself.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply if the enterprise client requires disclosure of production method",
+    "Does not help if the seller has no differentiated outcomes to demonstrate",
+    "Enterprise clients who would accept AI-produced work if quality is equivalent",
+    "Regulated industries with mandated cost-transparent bidding may require cost-plus disclosure",
+    "Requires the seller to genuinely understand the buyer's broader business economics"
+   ],
+   "n_sources": 3
+  },
+  {
+   "node_id": "claim:531",
+   "level": "L2a",
+   "topic": "Brand as Behavioral Pairing",
+   "text": "Rory Sutherland asserts that contextual framing can reverse the perceived quality of food: KFC served on a white China plate with fresh vegetables at an organic food fair in the Netherlands was praised for its authenticity and quality by attendees who did not know what they were eating. Conversely, Michelin-starred food served in a restaurant that smells of sewage will not be enjoyed. Framing and context dominate intrinsic quality in determining experienced value.",
+   "type": "assertion",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "context dominates intrinsic quality",
+   "conditions": [],
+   "mechanism": "Context creates the story around a product; the story generates meaning; meaning generates the emotional and sensory experience. When context is premium, the same product is experienced as premium.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:82",
+   "level": "L2a",
+   "topic": "Scarcity as Value Driver",
+   "text": "Alex Hormozi argues that scarcity increases the desire to purchase because humans are more motivated by fear of loss than by desire for gain. Limiting supply keeps unmet demand in the market; unmet demand compounds into higher desire and faster purchasing on subsequent offers.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "scarcity",
+   "conditions": [
+    "any service or product with controllable supply"
+   ],
+   "mechanism": "Unmet desire compounds: prospects who could not access an offer in one window will act faster and pay more in the next window because desire was not satisfied; satisfied desire (full supply) eliminates this compounding dynamic.",
+   "numbers": null,
+   "bounded_by": [
+    "If supply is set to zero indefinitely, demand eventually dissipates; optimal position keeps satisfaction below demand, not at zero"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2209",
+   "level": "L2b",
+   "topic": "Pareto Pricing: Four-Tier Structure at 5-10x Gaps",
+   "text": "Alex Hormozi asserts that a four-tier pricing structure set at 10x intervals with 20% take-up per tier (800 customers at tier 1, 200 at tier 2, 40 at tier 3, 8 at tier 4) reflects the actual distribution of spending power across a customer base.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "starting customer base of ~1,000"
+   ],
+   "mechanism": "Tier take-up follows the Pareto wealth distribution: each step up in price filters out the customers who cannot afford it, leaving only the wealthiest fraction to ascend.",
+   "numbers": {
+    "axis": "customers per tier in a 1,000-customer base at 10x price intervals",
+    "anchors": [
+     {
+      "region": "Tier 1 ($10/mo)",
+      "value": "~800 customers"
+     },
+     {
+      "region": "Tier 2 ($100/mo)",
+      "value": "~200 customers"
+     },
+     {
+      "region": "Tier 3 ($1,000/mo)",
+      "value": "~40 customers"
+     },
+     {
+      "region": "Tier 4 ($10,000/mo)",
+      "value": "~8 customers"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1538",
+   "level": "L2",
+   "topic": "Systemic vs Segment Risk Diagnosis",
+   "text": "Alex Hormozi argues that switching an entire business model is the worst-case option and should be treated as a last resort (the Armageddon button), because there are almost always intermediate fixes\u2014such as finding better-covered customers or improving the sales close process\u2014that address the symptom without destroying the existing revenue engine.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "Armageddon button",
+   "conditions": [
+    "Revenue is declining due to an external market shift, not a fundamental product-market fit failure",
+    "The business has existing customers and a functioning acquisition channel"
+   ],
+   "mechanism": "Pivoting the entire model destroys proven unit economics and forces the business to rebuild customer acquisition from scratch in an unfamiliar segment, compounding risk without removing the root cause.",
+   "numbers": null,
+   "bounded_by": [
+    "If the market shift is confirmed systemic (all carriers nationwide, not just California), a model-level change may be warranted"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2194",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Rory Sutherland argues that when evaluating infrastructure investments, the engineering reflex is to reduce measurable journey time \u2014 but the correct consumer-value frame would measure the quality and utility of the journey experience. Spending the same capital on in-journey Wi-Fi or other experience improvements would often generate more consumer value than reducing travel time by 30 minutes.",
+   "type": "comparison",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "Applies to infrastructure and product decisions where time reduction is the engineering default",
+    "Most relevant when marginal time savings are below threshold of behavioral significance (e.g., 30 minutes on a 3-hour journey)"
+   ],
+   "mechanism": "Humans value experience quality and utility of time spent, not just elapsed time. A 3-hour journey made productive or pleasant may be preferable to a 2.5-hour journey that is miserable or idle.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when journey time is itself the dominant consumer preference (e.g., emergency travel, commuting where time cost is quantified and high)"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1084",
+   "level": "L2a",
+   "topic": "Luck Surface Area",
+   "text": "Alex Hormozi argues that expanding one's luck surface area through daily in-person activity (coffee shops, gyms, events) compounds serendipity exposure: each day of active presence multiplies the probability of a high-value encounter relative to staying home.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "luck surface area",
+   "conditions": [],
+   "mechanism": "Random valuable encounters are a function of total social exposure; daily presence in public venues increases the surface area over which serendipitous events can land.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:854",
+   "level": "L2b",
+   "topic": "Service Business Margin Targets",
+   "text": "Alex Hormozi asserts that a nail salon labor cost of 50% of revenue still results in a below-target profit margin, and that the path to a viable franchise model requires reducing labor cost from the prior 70% level to a structurally lower ratio, while maintaining technician pay high enough to sustain loyalty.",
+   "type": "quantified",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Labor-intensive personal-service business (nail salon)",
+    "Technician compensation is a primary retention lever"
+   ],
+   "mechanism": "In nail salons, technician compensation is both the dominant cost and the primary retention mechanism; the margin improvement pathway is raising prices, not cutting pay, because high-paying salons retain loyal technicians who in turn retain loyal customers.",
+   "numbers": {
+    "axis": "Labor cost as percentage of nail salon revenue",
+    "anchors": [
+     {
+      "region": "prior state (unprofitable)",
+      "value": "70% of revenue to labor"
+     },
+     {
+      "region": "current state (25% net margin)",
+      "value": "50% of revenue to labor"
+     },
+     {
+      "region": "benchmark nail salon chain Hormozi evaluated (43% net margin)",
+      "value": "implied <40% effective labor ratio at higher price points"
+     }
+    ]
+   },
+   "bounded_by": [],
+   "n_sources": 1
+  }
+ ]
+}

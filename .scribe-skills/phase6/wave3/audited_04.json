@@ -1,0 +1,92 @@
+[
+  {
+    "node_id": "claim:2563",
+    "level": "L2",
+    "type": "conditional",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker with a testable causal mechanism (status psychology) and an explicit hedge acknowledging lack of empirical proof; all required rows hold."
+  },
+  {
+    "node_id": "claim:1769",
+    "level": "L2a",
+    "type": "conditional",
+    "scores": { "1": false, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A1", "A4"],
+    "notes": "Row 1 fails: 'a digital marketing agency' is a generic role-word standing in for what is likely a specific portfolio example, not a resolvable named identity."
+  },
+  {
+    "node_id": "claim:883",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Prescriptive claim tied to Hormozi's named four-problem framework; testable (would messaging-only fixes fail to lift conversion) and properly attributed."
+  },
+  {
+    "node_id": "claim:1912",
+    "level": "L2",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Clear causal mechanism (in-group signaling excludes cold viewers) correctly labeled, falsifiable via watch-time/conversion data, and attributed to Hormozi."
+  },
+  {
+    "node_id": "claim:1916",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Comparative claim across a named four-path taxonomy with a concrete mechanism (capital-generation vs deployment conflict); testable and sourced."
+  },
+  {
+    "node_id": "claim:2591",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": false, "4": false, "5": true, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A13", "A4"],
+    "notes": "Row 4/3 fail: the node is a single non-repeated anecdote labeled and leveled as a generalizable mechanism/claim, while its own bounded_by note explicitly disclaims replicability ('not a replicable sales tactic') — a self-contradicted universalized anecdote."
+  },
+  {
+    "node_id": "claim:2048",
+    "level": "L2b",
+    "type": "comparison",
+    "scores": { "1": true, "2": true, "3": null, "4": null, "5": null, "6": false, "7": true },
+    "passing": false,
+    "failure_modes": ["A18", "A20"],
+    "notes": "Row 6 fails: the text's headline quantified claim ('more satisfaction per pound than any physical improvement') is an unanchored superlative with no cost/magnitude figure — the numbers field only anchors the illustrative 6-vs-9-minute example, not the actual per-pound comparison being asserted."
+  },
+  {
+    "node_id": "claim:1962",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Population-level correlational claim (not asserted as causal), self-flagged as observation-based, still falsifiable against compensation data and properly attributed."
+  },
+  {
+    "node_id": "claim:628",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": true, "6": null, "7": true },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Concrete, testable sales-close mechanism tied to a named offer structure (Pick Your Price), correctly typed and sourced."
+  },
+  {
+    "node_id": "claim:532",
+    "level": "L2",
+    "type": "assertion",
+    "scores": { "1": true, "2": true, "3": true, "4": true, "5": false, "6": null, "7": true },
+    "passing": false,
+    "failure_modes": ["A10"],
+    "notes": "Row 5 fails: the claim that 'The Austrian School would endorse this as equivalent' is an unfalsifiable speculative counterfactual attribution, not an empirically settleable claim, even though the environmental-efficiency framing itself is coherent."
+  }
+]

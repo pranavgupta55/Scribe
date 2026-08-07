@@ -1,0 +1,230 @@
+[
+  {
+    "node_id": "claim:265",
+    "level": "L2",
+    "type": "assertion",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": false,
+      "6": null,
+      "7": false
+    },
+    "passing": false,
+    "failure_modes": [
+      "A4",
+      "A11"
+    ],
+    "notes": "Row 1: actors are generic (higher education systems, societies) not named entities. Row 5: falsifiability unclear given vague scope. Row 7: speaker=null, no attribution."
+  },
+  {
+    "node_id": "claim:51",
+    "level": "L2",
+    "type": "conditional",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "All required rows pass. Specific speaker (Hormozi), concrete examples (gyms, dentists), clear conditions, mechanism, and falsifiable."
+  },
+  {
+    "node_id": "claim:1823",
+    "level": "L2a",
+    "type": "assertion",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Hormozi), specific roles (franchise sales org), resolvable entities, load-bearing claim about equity value."
+  },
+  {
+    "node_id": "claim:2203",
+    "level": "L2b",
+    "type": "comparison",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": null,
+      "4": true,
+      "5": null,
+      "6": true,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Sutherland), numbers anchored ($8.99 vs $21.99) with comparison points, standalone, axis clear."
+  },
+  {
+    "node_id": "claim:2426",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": {
+      "1": false,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": false,
+    "failure_modes": [
+      "A1"
+    ],
+    "notes": "Row 1: actor identified as Jacob but parenthetical explicitly states unnamed-in-transcript; insufficient actor resolution despite name given."
+  },
+  {
+    "node_id": "claim:844",
+    "level": "L2",
+    "type": "assertion",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Hormozi), specific geography (Texas), clear sequencing, load-bearing strategy claim, falsifiable."
+  },
+  {
+    "node_id": "claim:334",
+    "level": "L2",
+    "type": "conditional",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Sutherland), concrete examples (cycling, tech startup vs Pizza Hut), mechanism clear, falsifiable via status-perception studies."
+  },
+  {
+    "node_id": "claim:93",
+    "level": "L2b",
+    "type": "quantified",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": null,
+      "4": true,
+      "5": null,
+      "6": false,
+      "7": true
+    },
+    "passing": false,
+    "failure_modes": [
+      "A3"
+    ],
+    "notes": "Row 6: numbers (36:1 ROAS, $1.5M/month) lack comparison points; each is a single assertion without anchoring context or benchmark."
+  },
+  {
+    "node_id": "claim:2153",
+    "level": "L2",
+    "type": "assertion",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Hormozi), named creators (Erica Taught Me, Vivian Tu), specific credentials (attorney, Wall Street), load-bearing."
+  },
+  {
+    "node_id": "claim:483",
+    "level": "L2a",
+    "type": "mechanism",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Sutherland), concrete system (train), specific contrast (100 standing 10% vs 10 standing 100%), mechanism clear."
+  },
+  {
+    "node_id": "claim:1034",
+    "level": "L2",
+    "type": "assertion",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Privodanova), specific platform (Pinterest), named categories (SMEs, Etsy retailers), load-bearing claim about discovery mechanisms."
+  },
+  {
+    "node_id": "claim:1688",
+    "level": "L2",
+    "type": "assertion",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Hormozi), specific service (Gym Launch), concrete metric (3 gyms month one), load-bearing origin story."
+  },
+  {
+    "node_id": "claim:690",
+    "level": "L2",
+    "type": "assertion",
+    "scores": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": null,
+      "7": true
+    },
+    "passing": true,
+    "failure_modes": [],
+    "notes": "Named speaker (Khartoon Weiss), specific platform (TikTok), dated (2022), concrete mechanism (comment-disabling feature), load-bearing."
+  }
+]

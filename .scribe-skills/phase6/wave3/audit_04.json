@@ -1,0 +1,224 @@
+{
+ "batch_id": 4,
+ "kind": "sonnet-audit",
+ "claims": [
+  {
+   "node_id": "claim:2563",
+   "level": "L2",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Rory Sutherland argues that in a call center context, engineering a callback option \u2014 where a customer requests a call back rather than waiting on hold \u2014 makes cross-selling and upselling an order of magnitude easier than if the customer waited on hold. The mechanism is a psychological shift: waiting makes the customer feel like a supplicant, while being called back makes them feel like a valued customer. He acknowledges he does not have empirical proof of the magnitude but regards this as a testable hypothesis with high prior probability.",
+   "type": "conditional",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "call centers with outbound callback capability",
+    "contexts involving upsell or cross-sell during service interactions"
+   ],
+   "mechanism": "Status psychology (SCARF: Status dimension) determines receptivity in sales conversations; a customer who waited on hold is in a subordinate, irritated state; a customer who received a proactive callback perceives themselves as valued, lowering defensive resistance.",
+   "numbers": null,
+   "bounded_by": [
+    "Callbacks must occur within a promised timeframe or the benefit is reversed",
+    "Speaker explicitly notes he lacks empirical proof; this is a stated hypothesis requiring testing"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1769",
+   "level": "L2a",
+   "topic": "Margins",
+   "text": "Alex Hormozi states that a digital marketing agency targeting the low-price automated model will still face a customer acquisition cost challenge: a large initial setup cost must be offset by a long-tail of small monthly recurring payments, so the economics only work if CAC stays low.",
+   "type": "conditional",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "big head, long tail",
+   "conditions": [
+    "DTC e-commerce brand",
+    "SMB clients",
+    "digital marketing agency",
+    "low-cost automated delivery model (\u2264$400/month)",
+    "reliant on paid performance marketing",
+    "revenue ~$10M",
+    "white-label or undifferentiated products"
+   ],
+   "mechanism": "A one-time setup fee (big head) plus a small monthly recurring fee (long tail) requires volume to generate acceptable returns; if CAC rises, the unit economics collapse because the margin per month is too small to absorb higher acquisition cost.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply to businesses with proprietary distribution channels",
+    "Does not apply to high-touch premium model where monthly fee is large enough to absorb higher CAC",
+    "Does not apply when product differentiation is defensible on its own merits"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:883",
+   "level": "L2",
+   "topic": "Offer Value Architecture",
+   "text": "Alex Hormozi states that the correct messaging fix for a four-problem business (avatar, offer, positioning, messaging) is to use messaging as the communication vehicle for all three upstream improvements simultaneously \u2014 meaning tighter avatar focus, productized offer, and global-cost positioning must all be reflected in the messaging before messaging work alone will help.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "business has avatar, offer, and positioning gaps simultaneously"
+   ],
+   "mechanism": "Messaging is downstream of the other three; fixing messaging without fixing avatar, offer, and positioning produces better-worded communications of a weak underlying value proposition, which cannot lift conversion.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1912",
+   "level": "L2",
+   "topic": "Attention-to-Revenue Funnel",
+   "text": "Alex Hormozi asserts that content created assuming viewer familiarity with the creator (inside jokes, self-referential titles, unexplained references) systematically excludes new viewers and limits audience growth, because first-time viewers placed on the outside of an implied in-group will not engage or buy.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "assume more",
+   "conditions": [
+    "cold audience targeting",
+    "creator goal: grow audience with new viewers"
+   ],
+   "mechanism": "Insider references signal group membership; viewers who lack the context feel excluded. Humans avoid in-group signals they cannot match, reducing watch time and eliminating purchase intent for first-time viewers.",
+   "numbers": null,
+   "bounded_by": [
+    "Warm audience members benefit from reminders of shared context; the change is that cold-audience accessibility should not be sacrificed for warm-audience comfort"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:1916",
+   "level": "L2",
+   "topic": "Debt-Free Bootstrap Path",
+   "text": "Alex Hormozi asserts that bootstrapping is typically the slowest of the four wealth-building paths (bootstrapping, raising capital, investing, fund management) because the business must simultaneously generate capital and deploy it for growth, analogous to building a car factory inside the car being manufactured.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "bootstrapped",
+   "conditions": [
+    "business self-funds from personal savings and reinvested profits",
+    "no outside investors"
+   ],
+   "mechanism": "Growing via reinvested profits requires the machine generating capital to also be the machine deploying capital, which slows compounding relative to paths that inject outside capital.",
+   "numbers": null,
+   "bounded_by": [
+    "Does not apply when the founder already has meaningful personal wealth that can substitute for outside capital"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2591",
+   "level": "L2a",
+   "topic": "Cold-Start Trust Architecture",
+   "text": "Alex Hormozi claims that his first 29 gym members signed in the first two weeks before the gym opened were acquired through pity \u2014 not through sales skill or charisma \u2014 and that the amount they paid matched his rent exactly, implying that visible desperation and credible commitment to the space (sleeping there) substituted for conventional persuasion in zero-credibility cold-start conditions.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": "pity",
+   "conditions": [
+    "founder has no equipment or proof of product quality",
+    "founder has zero prior credibility or track record",
+    "founder is visibly desperate and fully committed (physically present at all times)"
+   ],
+   "mechanism": "Physical impossibility of exit (sleeping at the location) combined with visible desperation created a credible aligned-incentive signal: prospects perceived the founder could not afford to fail them, substituting for conventional social proof.",
+   "numbers": {
+    "axis": "members acquired before gym opened",
+    "anchors": [
+     {
+      "region": "pre-opening two-week window",
+      "value": "29 members"
+     },
+     {
+      "region": "first month revenue matching rent exactly",
+      "value": "$4,972"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Hormozi explicitly attributes this to pity, not a replicable sales tactic; does not claim this works when the founder has any other option available to them"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:2048",
+   "level": "L2b",
+   "topic": "Behavioral Reinforcement Loops",
+   "text": "Rory Sutherland claims that the reduction of uncertainty \u2014 knowing when something will happen \u2014 is more valuable to human wellbeing than an equivalent improvement in the underlying metric. London Underground dot-matrix arrival displays increased passenger satisfaction more per pound spent than any physical improvement (faster trains, more frequent service, better rolling stock), because people prefer waiting 9 minutes with certainty over waiting 6 minutes in uncertainty.",
+   "type": "comparison",
+   "speaker": "Rory Sutherland",
+   "speaker_term": null,
+   "conditions": [
+    "any service with unavoidable wait times or delays",
+    "applies in contexts where the service timeline is opaque to the consumer",
+    "on-demand service businesses where wait time is unavoidable"
+   ],
+   "mechanism": "Uncertainty activates a chronic stress state that compounds over time; a known wait, even if longer, allows the brain to cease monitoring and return to baseline, reducing total psychological cost.",
+   "numbers": {
+    "axis": "wait time vs. psychological experience",
+    "anchors": [
+     {
+      "region": "6 minutes uncertain wait",
+      "value": "higher distress"
+     },
+     {
+      "region": "9 minutes certain wait",
+      "value": "lower distress, higher satisfaction"
+     }
+    ]
+   },
+   "bounded_by": [
+    "Cases where the stated duration turns out to be wrong \u2014 inaccurate specificity can be worse than honest uncertainty",
+    "Does not apply when the actual wait substantially exceeds communicated wait (the promise is broken)",
+    "Services where wait time is so short that uncertainty is irrelevant (under 30 seconds)"
+   ],
+   "n_sources": 2
+  },
+  {
+   "node_id": "claim:1962",
+   "level": "L2",
+   "topic": "Risk Misprice Arbitrage",
+   "text": "Alex Hormozi asserts that very smart, very hardworking people almost never have earnings that correlate with those traits, but earnings do strongly correlate with how much risk a person is willing to accept; risk tolerance is a better predictor of compensation than intelligence or effort.",
+   "type": "assertion",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Hormozi acknowledges this is observation-based, not a controlled study"
+   ],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:628",
+   "level": "L2a",
+   "topic": "Sales Closing Mechanics",
+   "text": "Alex Hormozi claims that the standard close at the end of a Pick Your Price offer should be: name the accepted payment methods and then stay silent; the prospect will announce which tier they want because it is psychologically difficult to say no to a free offer that has already been framed as a choice.",
+   "type": "mechanism",
+   "speaker": "Alex Hormozi",
+   "speaker_term": null,
+   "conditions": [
+    "Pick Your Price offer",
+    "seller has already delivered the free tier framing"
+   ],
+   "mechanism": "The free base offer removes the primary objection (cost); naming payment methods and going silent forces the prospect to declare a tier choice rather than reject, because rejection is psychologically harder when the offer was positioned as a gift.",
+   "numbers": null,
+   "bounded_by": [],
+   "n_sources": 1
+  },
+  {
+   "node_id": "claim:532",
+   "level": "L2",
+   "topic": "Distinctiveness Requires Active Effort",
+   "text": "Rory Sutherland argues that creating economic value through psychological framing and context (changing the story) is a more environmentally efficient method of value creation than manufacturing: no raw materials are consumed, nothing is chopped down or burned. The Austrian School would endorse this as equivalent to manufacturing value because the economic outcome (willingness to pay) is identical.",
+   "type": "assertion",
+   "speaker": "Rory Sutherland",
+   "speaker_term": "efficient value creation",
+   "conditions": [
+    "Applies when comparing sectors by revenue per unit of environmental footprint"
+   ],
+   "mechanism": null,
+   "numbers": null,
+   "bounded_by": [
+    "Does not account for the energy cost of digital distribution infrastructure",
+    "Mainstream neoclassical economics would reject this framing because it treats value as intrinsic"
+   ],
+   "n_sources": 2
+  }
+ ]
+}
