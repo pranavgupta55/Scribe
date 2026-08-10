@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 from collections import defaultdict, Counter
 
-ROOT = Path("/Users/pranavgupta/VSCode Projects/Scribe")
+ROOT = Path(__file__).parent.resolve()
 OUT_DIR = ROOT / "graph"
 OUT_DIR.mkdir(exist_ok=True)
 OUT = OUT_DIR / "graph_v2.json"
